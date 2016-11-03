@@ -49,8 +49,6 @@
    
  ---
 ####3、SDK资源下载地址   
->  [sdk下载地址](https://github.com/myz1104/FitCloud-SDK.git)
-
 >  [demo下载地址](https://github.com/myz1104/FCDemo.git)
 
 ---
@@ -62,7 +60,9 @@
 
 3.SDK使用了蓝牙功能，需要在工程中链接上CoreBluetooth.framework。
 
-4.蓝牙需要后台同步，请设置背后模式
+4.在building setting中设置Other linker Flags为-ObjC
+
+5.蓝牙需要后台同步，请设置背后模式
 ![Alt text](http://p1.bqimg.com/1949/cd775744c0cf1ba8.png)
 
 ---
