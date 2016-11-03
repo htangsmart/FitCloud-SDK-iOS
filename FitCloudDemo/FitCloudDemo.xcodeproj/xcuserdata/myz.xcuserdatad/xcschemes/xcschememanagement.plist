@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>FitCloudDemo.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>6B5DD24C1DC8A4E100788BDA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B5DD2651DC8A4E200788BDA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B5DD2701DC8A4E200788BDA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

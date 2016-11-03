@@ -1,0 +1,685 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B5DD2521DC8A4E100788BDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DD2511DC8A4E100788BDA /* main.m */; };
+		6B5DD2551DC8A4E200788BDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DD2541DC8A4E200788BDA /* AppDelegate.m */; };
+		6B5DD25B1DC8A4E200788BDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5DD2591DC8A4E200788BDA /* Main.storyboard */; };
+		6B5DD25D1DC8A4E200788BDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B5DD25C1DC8A4E200788BDA /* Assets.xcassets */; };
+		6B5DD2601DC8A4E200788BDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5DD25E1DC8A4E200788BDA /* LaunchScreen.storyboard */; };
+		6B5DD26B1DC8A4E200788BDA /* FitCloudDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DD26A1DC8A4E200788BDA /* FitCloudDemoTests.m */; };
+		6B5DD2761DC8A4E200788BDA /* FitCloudDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DD2751DC8A4E200788BDA /* FitCloudDemoUITests.m */; };
+		6B5DD2B31DC8A95600788BDA /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DD2A41DC8A95600788BDA /* MBProgressHUD.m */; };
+		6B5DD2B41DC8A95600788BDA /* DailyAlarmClockController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DD2A71DC8A95600788BDA /* DailyAlarmClockController.m */; };
+		6B5DD2B51DC8A95600788BDA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DD2A91DC8A95600788BDA /* MainViewController.m */; };
+		6B5DD2B61DC8A95600788BDA /* RealTimeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DD2AB1DC8A95600788BDA /* RealTimeTestViewController.m */; };
+		6B5DD2B71DC8A95600788BDA /* ScanListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DD2AD1DC8A95600788BDA /* ScanListViewController.m */; };
+		6B5DD2B81DC8A95600788BDA /* SyncHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DD2AF1DC8A95600788BDA /* SyncHistoryViewController.m */; };
+		6B5DD2B91DC8A95600788BDA /* AlarmClockCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DD2B21DC8A95600788BDA /* AlarmClockCell.m */; };
+		6B5DD2C31DC8A97A00788BDA /* FCAlarmModel+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DD2BC1DC8A97A00788BDA /* FCAlarmModel+Category.m */; };
+		6B5DD2C41DC8A97A00788BDA /* FitCloud+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DD2BE1DC8A97A00788BDA /* FitCloud+Category.m */; };
+		6B5DD2C51DC8A97A00788BDA /* MBProgressHUD+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DD2C01DC8A97A00788BDA /* MBProgressHUD+Category.m */; };
+		6B5DD2C61DC8A97A00788BDA /* NSObject+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DD2C21DC8A97A00788BDA /* NSObject+HUD.m */; };
+		6BF7E0991DC8D2B40052073C /* libFitCloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF7E0981DC8D2B40052073C /* libFitCloud.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B5DD2671DC8A4E200788BDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B5DD2451DC8A4E100788BDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B5DD24C1DC8A4E100788BDA;
+			remoteInfo = FitCloudDemo;
+		};
+		6B5DD2721DC8A4E200788BDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B5DD2451DC8A4E100788BDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B5DD24C1DC8A4E100788BDA;
+			remoteInfo = FitCloudDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6B5DD24D1DC8A4E100788BDA /* FitCloudDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitCloudDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B5DD2511DC8A4E100788BDA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6B5DD2531DC8A4E100788BDA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6B5DD2541DC8A4E200788BDA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6B5DD25A1DC8A4E200788BDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6B5DD25C1DC8A4E200788BDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6B5DD25F1DC8A4E200788BDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6B5DD2611DC8A4E200788BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B5DD2661DC8A4E200788BDA /* FitCloudDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitCloudDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B5DD26A1DC8A4E200788BDA /* FitCloudDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FitCloudDemoTests.m; sourceTree = "<group>"; };
+		6B5DD26C1DC8A4E200788BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B5DD2711DC8A4E200788BDA /* FitCloudDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitCloudDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B5DD2751DC8A4E200788BDA /* FitCloudDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FitCloudDemoUITests.m; sourceTree = "<group>"; };
+		6B5DD2771DC8A4E200788BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B5DD2A01DC8A95600788BDA /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		6B5DD2A31DC8A95600788BDA /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		6B5DD2A41DC8A95600788BDA /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		6B5DD2A61DC8A95600788BDA /* DailyAlarmClockController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyAlarmClockController.h; sourceTree = "<group>"; };
+		6B5DD2A71DC8A95600788BDA /* DailyAlarmClockController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyAlarmClockController.m; sourceTree = "<group>"; };
+		6B5DD2A81DC8A95600788BDA /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		6B5DD2A91DC8A95600788BDA /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		6B5DD2AA1DC8A95600788BDA /* RealTimeTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealTimeTestViewController.h; sourceTree = "<group>"; };
+		6B5DD2AB1DC8A95600788BDA /* RealTimeTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealTimeTestViewController.m; sourceTree = "<group>"; };
+		6B5DD2AC1DC8A95600788BDA /* ScanListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanListViewController.h; sourceTree = "<group>"; };
+		6B5DD2AD1DC8A95600788BDA /* ScanListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanListViewController.m; sourceTree = "<group>"; };
+		6B5DD2AE1DC8A95600788BDA /* SyncHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyncHistoryViewController.h; sourceTree = "<group>"; };
+		6B5DD2AF1DC8A95600788BDA /* SyncHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyncHistoryViewController.m; sourceTree = "<group>"; };
+		6B5DD2B11DC8A95600788BDA /* AlarmClockCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmClockCell.h; sourceTree = "<group>"; };
+		6B5DD2B21DC8A95600788BDA /* AlarmClockCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmClockCell.m; sourceTree = "<group>"; };
+		6B5DD2BB1DC8A97A00788BDA /* FCAlarmModel+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FCAlarmModel+Category.h"; sourceTree = "<group>"; };
+		6B5DD2BC1DC8A97A00788BDA /* FCAlarmModel+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FCAlarmModel+Category.m"; sourceTree = "<group>"; };
+		6B5DD2BD1DC8A97A00788BDA /* FitCloud+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FitCloud+Category.h"; sourceTree = "<group>"; };
+		6B5DD2BE1DC8A97A00788BDA /* FitCloud+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FitCloud+Category.m"; sourceTree = "<group>"; };
+		6B5DD2BF1DC8A97A00788BDA /* MBProgressHUD+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Category.h"; sourceTree = "<group>"; };
+		6B5DD2C01DC8A97A00788BDA /* MBProgressHUD+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Category.m"; sourceTree = "<group>"; };
+		6B5DD2C11DC8A97A00788BDA /* NSObject+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HUD.h"; sourceTree = "<group>"; };
+		6B5DD2C21DC8A97A00788BDA /* NSObject+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HUD.m"; sourceTree = "<group>"; };
+		6BF7E0981DC8D2B40052073C /* libFitCloud.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFitCloud.a; path = "lib/Debug-iphoneos/libFitCloud.a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B5DD24A1DC8A4E100788BDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BF7E0991DC8D2B40052073C /* libFitCloud.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B5DD2631DC8A4E200788BDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B5DD26E1DC8A4E200788BDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B5DD2441DC8A4E100788BDA = {
+			isa = PBXGroup;
+			children = (
+				6B5DD24F1DC8A4E100788BDA /* FitCloudDemo */,
+				6B5DD2691DC8A4E200788BDA /* FitCloudDemoTests */,
+				6B5DD2741DC8A4E200788BDA /* FitCloudDemoUITests */,
+				6B5DD24E1DC8A4E100788BDA /* Products */,
+				6BF7E0971DC8D2B40052073C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6B5DD24E1DC8A4E100788BDA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B5DD24D1DC8A4E100788BDA /* FitCloudDemo.app */,
+				6B5DD2661DC8A4E200788BDA /* FitCloudDemoTests.xctest */,
+				6B5DD2711DC8A4E200788BDA /* FitCloudDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B5DD24F1DC8A4E100788BDA /* FitCloudDemo */ = {
+			isa = PBXGroup;
+			children = (
+				6B5DD2BA1DC8A97A00788BDA /* Category */,
+				6B5DD29E1DC8A95600788BDA /* Helper */,
+				6B5DD29F1DC8A95600788BDA /* Marco */,
+				6B5DD2A11DC8A95600788BDA /* Models */,
+				6B5DD2A21DC8A95600788BDA /* Verdor */,
+				6B5DD2A51DC8A95600788BDA /* ViewControllers */,
+				6B5DD2B01DC8A95600788BDA /* Views */,
+				6B5DD2531DC8A4E100788BDA /* AppDelegate.h */,
+				6B5DD2541DC8A4E200788BDA /* AppDelegate.m */,
+				6B5DD2591DC8A4E200788BDA /* Main.storyboard */,
+				6B5DD25C1DC8A4E200788BDA /* Assets.xcassets */,
+				6B5DD25E1DC8A4E200788BDA /* LaunchScreen.storyboard */,
+				6B5DD2611DC8A4E200788BDA /* Info.plist */,
+				6B5DD2501DC8A4E100788BDA /* Supporting Files */,
+			);
+			path = FitCloudDemo;
+			sourceTree = "<group>";
+		};
+		6B5DD2501DC8A4E100788BDA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B5DD2511DC8A4E100788BDA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B5DD2691DC8A4E200788BDA /* FitCloudDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B5DD26A1DC8A4E200788BDA /* FitCloudDemoTests.m */,
+				6B5DD26C1DC8A4E200788BDA /* Info.plist */,
+			);
+			path = FitCloudDemoTests;
+			sourceTree = "<group>";
+		};
+		6B5DD2741DC8A4E200788BDA /* FitCloudDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6B5DD2751DC8A4E200788BDA /* FitCloudDemoUITests.m */,
+				6B5DD2771DC8A4E200788BDA /* Info.plist */,
+			);
+			path = FitCloudDemoUITests;
+			sourceTree = "<group>";
+		};
+		6B5DD29E1DC8A95600788BDA /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		6B5DD29F1DC8A95600788BDA /* Marco */ = {
+			isa = PBXGroup;
+			children = (
+				6B5DD2A01DC8A95600788BDA /* Macro.h */,
+			);
+			path = Marco;
+			sourceTree = "<group>";
+		};
+		6B5DD2A11DC8A95600788BDA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6B5DD2A21DC8A95600788BDA /* Verdor */ = {
+			isa = PBXGroup;
+			children = (
+				6B5DD2A31DC8A95600788BDA /* MBProgressHUD.h */,
+				6B5DD2A41DC8A95600788BDA /* MBProgressHUD.m */,
+			);
+			path = Verdor;
+			sourceTree = "<group>";
+		};
+		6B5DD2A51DC8A95600788BDA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6B5DD2A61DC8A95600788BDA /* DailyAlarmClockController.h */,
+				6B5DD2A71DC8A95600788BDA /* DailyAlarmClockController.m */,
+				6B5DD2A81DC8A95600788BDA /* MainViewController.h */,
+				6B5DD2A91DC8A95600788BDA /* MainViewController.m */,
+				6B5DD2AA1DC8A95600788BDA /* RealTimeTestViewController.h */,
+				6B5DD2AB1DC8A95600788BDA /* RealTimeTestViewController.m */,
+				6B5DD2AC1DC8A95600788BDA /* ScanListViewController.h */,
+				6B5DD2AD1DC8A95600788BDA /* ScanListViewController.m */,
+				6B5DD2AE1DC8A95600788BDA /* SyncHistoryViewController.h */,
+				6B5DD2AF1DC8A95600788BDA /* SyncHistoryViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6B5DD2B01DC8A95600788BDA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6B5DD2B11DC8A95600788BDA /* AlarmClockCell.h */,
+				6B5DD2B21DC8A95600788BDA /* AlarmClockCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6B5DD2BA1DC8A97A00788BDA /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				6B5DD2BB1DC8A97A00788BDA /* FCAlarmModel+Category.h */,
+				6B5DD2BC1DC8A97A00788BDA /* FCAlarmModel+Category.m */,
+				6B5DD2BD1DC8A97A00788BDA /* FitCloud+Category.h */,
+				6B5DD2BE1DC8A97A00788BDA /* FitCloud+Category.m */,
+				6B5DD2BF1DC8A97A00788BDA /* MBProgressHUD+Category.h */,
+				6B5DD2C01DC8A97A00788BDA /* MBProgressHUD+Category.m */,
+				6B5DD2C11DC8A97A00788BDA /* NSObject+HUD.h */,
+				6B5DD2C21DC8A97A00788BDA /* NSObject+HUD.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		6BF7E0971DC8D2B40052073C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BF7E0981DC8D2B40052073C /* libFitCloud.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6B5DD24C1DC8A4E100788BDA /* FitCloudDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B5DD27A1DC8A4E200788BDA /* Build configuration list for PBXNativeTarget "FitCloudDemo" */;
+			buildPhases = (
+				6B5DD2491DC8A4E100788BDA /* Sources */,
+				6B5DD24A1DC8A4E100788BDA /* Frameworks */,
+				6B5DD24B1DC8A4E100788BDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FitCloudDemo;
+			productName = FitCloudDemo;
+			productReference = 6B5DD24D1DC8A4E100788BDA /* FitCloudDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6B5DD2651DC8A4E200788BDA /* FitCloudDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B5DD27D1DC8A4E200788BDA /* Build configuration list for PBXNativeTarget "FitCloudDemoTests" */;
+			buildPhases = (
+				6B5DD2621DC8A4E200788BDA /* Sources */,
+				6B5DD2631DC8A4E200788BDA /* Frameworks */,
+				6B5DD2641DC8A4E200788BDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B5DD2681DC8A4E200788BDA /* PBXTargetDependency */,
+			);
+			name = FitCloudDemoTests;
+			productName = FitCloudDemoTests;
+			productReference = 6B5DD2661DC8A4E200788BDA /* FitCloudDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6B5DD2701DC8A4E200788BDA /* FitCloudDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B5DD2801DC8A4E200788BDA /* Build configuration list for PBXNativeTarget "FitCloudDemoUITests" */;
+			buildPhases = (
+				6B5DD26D1DC8A4E200788BDA /* Sources */,
+				6B5DD26E1DC8A4E200788BDA /* Frameworks */,
+				6B5DD26F1DC8A4E200788BDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B5DD2731DC8A4E200788BDA /* PBXTargetDependency */,
+			);
+			name = FitCloudDemoUITests;
+			productName = FitCloudDemoUITests;
+			productReference = 6B5DD2711DC8A4E200788BDA /* FitCloudDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6B5DD2451DC8A4E100788BDA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "马远征";
+				TargetAttributes = {
+					6B5DD24C1DC8A4E100788BDA = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = K4VY4M94L6;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					6B5DD2651DC8A4E200788BDA = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = K4VY4M94L6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6B5DD24C1DC8A4E100788BDA;
+					};
+					6B5DD2701DC8A4E200788BDA = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = K4VY4M94L6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6B5DD24C1DC8A4E100788BDA;
+					};
+				};
+			};
+			buildConfigurationList = 6B5DD2481DC8A4E100788BDA /* Build configuration list for PBXProject "FitCloudDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6B5DD2441DC8A4E100788BDA;
+			productRefGroup = 6B5DD24E1DC8A4E100788BDA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B5DD24C1DC8A4E100788BDA /* FitCloudDemo */,
+				6B5DD2651DC8A4E200788BDA /* FitCloudDemoTests */,
+				6B5DD2701DC8A4E200788BDA /* FitCloudDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B5DD24B1DC8A4E100788BDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B5DD2601DC8A4E200788BDA /* LaunchScreen.storyboard in Resources */,
+				6B5DD25D1DC8A4E200788BDA /* Assets.xcassets in Resources */,
+				6B5DD25B1DC8A4E200788BDA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B5DD2641DC8A4E200788BDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B5DD26F1DC8A4E200788BDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B5DD2491DC8A4E100788BDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B5DD2551DC8A4E200788BDA /* AppDelegate.m in Sources */,
+				6B5DD2B31DC8A95600788BDA /* MBProgressHUD.m in Sources */,
+				6B5DD2B71DC8A95600788BDA /* ScanListViewController.m in Sources */,
+				6B5DD2B41DC8A95600788BDA /* DailyAlarmClockController.m in Sources */,
+				6B5DD2C61DC8A97A00788BDA /* NSObject+HUD.m in Sources */,
+				6B5DD2C31DC8A97A00788BDA /* FCAlarmModel+Category.m in Sources */,
+				6B5DD2C51DC8A97A00788BDA /* MBProgressHUD+Category.m in Sources */,
+				6B5DD2B81DC8A95600788BDA /* SyncHistoryViewController.m in Sources */,
+				6B5DD2C41DC8A97A00788BDA /* FitCloud+Category.m in Sources */,
+				6B5DD2B61DC8A95600788BDA /* RealTimeTestViewController.m in Sources */,
+				6B5DD2B91DC8A95600788BDA /* AlarmClockCell.m in Sources */,
+				6B5DD2B51DC8A95600788BDA /* MainViewController.m in Sources */,
+				6B5DD2521DC8A4E100788BDA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B5DD2621DC8A4E200788BDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B5DD26B1DC8A4E200788BDA /* FitCloudDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B5DD26D1DC8A4E200788BDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B5DD2761DC8A4E200788BDA /* FitCloudDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B5DD2681DC8A4E200788BDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B5DD24C1DC8A4E100788BDA /* FitCloudDemo */;
+			targetProxy = 6B5DD2671DC8A4E200788BDA /* PBXContainerItemProxy */;
+		};
+		6B5DD2731DC8A4E200788BDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B5DD24C1DC8A4E100788BDA /* FitCloudDemo */;
+			targetProxy = 6B5DD2721DC8A4E200788BDA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6B5DD2591DC8A4E200788BDA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B5DD25A1DC8A4E200788BDA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6B5DD25E1DC8A4E200788BDA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B5DD25F1DC8A4E200788BDA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6B5DD2781DC8A4E200788BDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6B5DD2791DC8A4E200788BDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6B5DD27B1DC8A4E200788BDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K4VY4M94L6;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/include";
+				INFOPLIST_FILE = FitCloudDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.FitCloudDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6B5DD27C1DC8A4E200788BDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K4VY4M94L6;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/include";
+				INFOPLIST_FILE = FitCloudDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.FitCloudDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6B5DD27E1DC8A4E200788BDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = K4VY4M94L6;
+				INFOPLIST_FILE = FitCloudDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.FitCloudDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitCloudDemo.app/FitCloudDemo";
+			};
+			name = Debug;
+		};
+		6B5DD27F1DC8A4E200788BDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = K4VY4M94L6;
+				INFOPLIST_FILE = FitCloudDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.FitCloudDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitCloudDemo.app/FitCloudDemo";
+			};
+			name = Release;
+		};
+		6B5DD2811DC8A4E200788BDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = K4VY4M94L6;
+				INFOPLIST_FILE = FitCloudDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.FitCloudDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FitCloudDemo;
+			};
+			name = Debug;
+		};
+		6B5DD2821DC8A4E200788BDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = K4VY4M94L6;
+				INFOPLIST_FILE = FitCloudDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.topstep.FitCloudDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FitCloudDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B5DD2481DC8A4E100788BDA /* Build configuration list for PBXProject "FitCloudDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B5DD2781DC8A4E200788BDA /* Debug */,
+				6B5DD2791DC8A4E200788BDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B5DD27A1DC8A4E200788BDA /* Build configuration list for PBXNativeTarget "FitCloudDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B5DD27B1DC8A4E200788BDA /* Debug */,
+				6B5DD27C1DC8A4E200788BDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B5DD27D1DC8A4E200788BDA /* Build configuration list for PBXNativeTarget "FitCloudDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B5DD27E1DC8A4E200788BDA /* Debug */,
+				6B5DD27F1DC8A4E200788BDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B5DD2801DC8A4E200788BDA /* Build configuration list for PBXNativeTarget "FitCloudDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B5DD2811DC8A4E200788BDA /* Debug */,
+				6B5DD2821DC8A4E200788BDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6B5DD2451DC8A4E100788BDA /* Project object */;
+}
