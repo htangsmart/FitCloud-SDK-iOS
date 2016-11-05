@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreBluetooth/CoreBluetooth.h>
-#import "FCConstants.h"
-#import "FCDataHandler.h"
-#import "FCObject.h"
+#import "FCDefine.h"
 
 
 /*!
