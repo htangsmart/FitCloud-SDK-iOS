@@ -439,12 +439,12 @@
 - (void)updateNotificationSettings
 {
     FCNotificationModel *aModel = [[FCNotificationModel alloc]init];
-    aModel.smsEnable = YES;
-    aModel.callEnable = YES;
-    aModel.weChatEnable = YES;
-    aModel.qqEnable = YES;
-    aModel.facebookEnable = YES;
-    aModel.instagramEnable = YES;
+    aModel.shortMessage = YES;
+    aModel.phoneCall = YES;
+    aModel.weChat = YES;
+    aModel.QQ = YES;
+    aModel.facebook = YES;
+    aModel.instagram = YES;
     NSData *nfSettingsData = [aModel nfSettingData];
     WS(ws);
     [self showLoadingHUDWithMessage:@"正在同步"];

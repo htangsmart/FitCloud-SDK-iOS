@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FCFunctionSwitchModel.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FCFunctionSwitchModel</TokenIdentifier>
+			<Abstract type="html">@class FCFunctionSwitchModel</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+            
+			
+			<NodeRef refid="6"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCFunctionSwitchModel/setTwLightScreen:</TokenIdentifier>
+			<Abstract type="html">@property twLightScreen</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL twLightScreen</Declaration>
+			
+			
+			<Anchor>//api/name/twLightScreen</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCFunctionSwitchModel/twLightScreen</TokenIdentifier>
+			<Abstract type="html">@property twLightScreen</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL twLightScreen</Declaration>
+			
+			
+			<Anchor>//api/name/twLightScreen</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCFunctionSwitchModel/twLightScreen</TokenIdentifier>
+			<Abstract type="html">@property twLightScreen</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL twLightScreen</Declaration>
+			
+			
+			<Anchor>//api/name/twLightScreen</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCFunctionSwitchModel/modelWithData:</TokenIdentifier>
+			<Abstract type="html">instantiate an model with the given data</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)modelWithData:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The given data</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">an model of &lt;code&gt;FCFunctionSwitchModel&lt;/code&gt; object</Abstract></ReturnValue>
+			<Anchor>//api/name/modelWithData:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCFunctionSwitchModel/functionSwitchData</TokenIdentifier>
+			<Abstract type="html">Convert the display model to NSData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>- (NSData *)functionSwitchData</Declaration>
+			
+			<ReturnValue><Abstract type="html">The converted display data type of NSData</Abstract></ReturnValue>
+			<Anchor>//api/name/functionSwitchData</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

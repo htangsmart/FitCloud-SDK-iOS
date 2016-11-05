@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FCNotificationModel.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FCNotificationModel</TokenIdentifier>
+			<Abstract type="html">@class FCNotificationModel</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+            
+			
+			<NodeRef refid="11"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/setPhoneCall:</TokenIdentifier>
+			<Abstract type="html">@property phoneCall</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL phoneCall</Declaration>
+			
+			
+			<Anchor>//api/name/phoneCall</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/phoneCall</TokenIdentifier>
+			<Abstract type="html">@property phoneCall</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL phoneCall</Declaration>
+			
+			
+			<Anchor>//api/name/phoneCall</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCNotificationModel/phoneCall</TokenIdentifier>
+			<Abstract type="html">@property phoneCall</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL phoneCall</Declaration>
+			
+			
+			<Anchor>//api/name/phoneCall</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/setShortMessage:</TokenIdentifier>
+			<Abstract type="html">@property shortMessage</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL shortMessage</Declaration>
+			
+			
+			<Anchor>//api/name/shortMessage</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/shortMessage</TokenIdentifier>
+			<Abstract type="html">@property shortMessage</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL shortMessage</Declaration>
+			
+			
+			<Anchor>//api/name/shortMessage</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCNotificationModel/shortMessage</TokenIdentifier>
+			<Abstract type="html">@property shortMessage</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL shortMessage</Declaration>
+			
+			
+			<Anchor>//api/name/shortMessage</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/setQQ:</TokenIdentifier>
+			<Abstract type="html">@property QQ</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL QQ</Declaration>
+			
+			
+			<Anchor>//api/name/QQ</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/QQ</TokenIdentifier>
+			<Abstract type="html">@property QQ</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL QQ</Declaration>
+			
+			
+			<Anchor>//api/name/QQ</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCNotificationModel/QQ</TokenIdentifier>
+			<Abstract type="html">@property QQ</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL QQ</Declaration>
+			
+			
+			<Anchor>//api/name/QQ</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/setWeChat:</TokenIdentifier>
+			<Abstract type="html">@property weChat</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL weChat</Declaration>
+			
+			
+			<Anchor>//api/name/weChat</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/weChat</TokenIdentifier>
+			<Abstract type="html">@property weChat</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL weChat</Declaration>
+			
+			
+			<Anchor>//api/name/weChat</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCNotificationModel/weChat</TokenIdentifier>
+			<Abstract type="html">@property weChat</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL weChat</Declaration>
+			
+			
+			<Anchor>//api/name/weChat</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/setFacebook:</TokenIdentifier>
+			<Abstract type="html">@property facebook</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL facebook</Declaration>
+			
+			
+			<Anchor>//api/name/facebook</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/facebook</TokenIdentifier>
+			<Abstract type="html">@property facebook</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL facebook</Declaration>
+			
+			
+			<Anchor>//api/name/facebook</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCNotificationModel/facebook</TokenIdentifier>
+			<Abstract type="html">@property facebook</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL facebook</Declaration>
+			
+			
+			<Anchor>//api/name/facebook</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/setTwitter:</TokenIdentifier>
+			<Abstract type="html">@property twitter</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL twitter</Declaration>
+			
+			
+			<Anchor>//api/name/twitter</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/twitter</TokenIdentifier>
+			<Abstract type="html">@property twitter</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL twitter</Declaration>
+			
+			
+			<Anchor>//api/name/twitter</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCNotificationModel/twitter</TokenIdentifier>
+			<Abstract type="html">@property twitter</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL twitter</Declaration>
+			
+			
+			<Anchor>//api/name/twitter</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/setLinkedin:</TokenIdentifier>
+			<Abstract type="html">@property linkedin</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL linkedin</Declaration>
+			
+			
+			<Anchor>//api/name/linkedin</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/linkedin</TokenIdentifier>
+			<Abstract type="html">@property linkedin</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL linkedin</Declaration>
+			
+			
+			<Anchor>//api/name/linkedin</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCNotificationModel/linkedin</TokenIdentifier>
+			<Abstract type="html">@property linkedin</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL linkedin</Declaration>
+			
+			
+			<Anchor>//api/name/linkedin</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/setInstagram:</TokenIdentifier>
+			<Abstract type="html">@property instagram</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL instagram</Declaration>
+			
+			
+			<Anchor>//api/name/instagram</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/instagram</TokenIdentifier>
+			<Abstract type="html">@property instagram</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL instagram</Declaration>
+			
+			
+			<Anchor>//api/name/instagram</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCNotificationModel/instagram</TokenIdentifier>
+			<Abstract type="html">@property instagram</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL instagram</Declaration>
+			
+			
+			<Anchor>//api/name/instagram</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/setPinterest:</TokenIdentifier>
+			<Abstract type="html">@property pinterest</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL pinterest</Declaration>
+			
+			
+			<Anchor>//api/name/pinterest</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/pinterest</TokenIdentifier>
+			<Abstract type="html">@property pinterest</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL pinterest</Declaration>
+			
+			
+			<Anchor>//api/name/pinterest</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCNotificationModel/pinterest</TokenIdentifier>
+			<Abstract type="html">@property pinterest</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL pinterest</Declaration>
+			
+			
+			<Anchor>//api/name/pinterest</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/setWhatsapp:</TokenIdentifier>
+			<Abstract type="html">@property whatsapp</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL whatsapp</Declaration>
+			
+			
+			<Anchor>//api/name/whatsapp</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/whatsapp</TokenIdentifier>
+			<Abstract type="html">@property whatsapp</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL whatsapp</Declaration>
+			
+			
+			<Anchor>//api/name/whatsapp</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCNotificationModel/whatsapp</TokenIdentifier>
+			<Abstract type="html">@property whatsapp</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL whatsapp</Declaration>
+			
+			
+			<Anchor>//api/name/whatsapp</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/setLine:</TokenIdentifier>
+			<Abstract type="html">@property line</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL line</Declaration>
+			
+			
+			<Anchor>//api/name/line</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/line</TokenIdentifier>
+			<Abstract type="html">@property line</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL line</Declaration>
+			
+			
+			<Anchor>//api/name/line</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCNotificationModel/line</TokenIdentifier>
+			<Abstract type="html">@property line</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL line</Declaration>
+			
+			
+			<Anchor>//api/name/line</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/setFacebookMessage:</TokenIdentifier>
+			<Abstract type="html">@property facebookMessage</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL facebookMessage</Declaration>
+			
+			
+			<Anchor>//api/name/facebookMessage</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/facebookMessage</TokenIdentifier>
+			<Abstract type="html">@property facebookMessage</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL facebookMessage</Declaration>
+			
+			
+			<Anchor>//api/name/facebookMessage</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCNotificationModel/facebookMessage</TokenIdentifier>
+			<Abstract type="html">@property facebookMessage</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL facebookMessage</Declaration>
+			
+			
+			<Anchor>//api/name/facebookMessage</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/setOtherApp:</TokenIdentifier>
+			<Abstract type="html">@property otherApp</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL otherApp</Declaration>
+			
+			
+			<Anchor>//api/name/otherApp</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/otherApp</TokenIdentifier>
+			<Abstract type="html">@property otherApp</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL otherApp</Declaration>
+			
+			
+			<Anchor>//api/name/otherApp</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCNotificationModel/otherApp</TokenIdentifier>
+			<Abstract type="html">@property otherApp</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL otherApp</Declaration>
+			
+			
+			<Anchor>//api/name/otherApp</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/setMessageContent:</TokenIdentifier>
+			<Abstract type="html">@property messageContent</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL messageContent</Declaration>
+			
+			
+			<Anchor>//api/name/messageContent</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/messageContent</TokenIdentifier>
+			<Abstract type="html">@property messageContent</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL messageContent</Declaration>
+			
+			
+			<Anchor>//api/name/messageContent</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCNotificationModel/messageContent</TokenIdentifier>
+			<Abstract type="html">@property messageContent</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL messageContent</Declaration>
+			
+			
+			<Anchor>//api/name/messageContent</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/setDisconnectPhone:</TokenIdentifier>
+			<Abstract type="html">@property disconnectPhone</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL disconnectPhone</Declaration>
+			
+			
+			<Anchor>//api/name/disconnectPhone</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/disconnectPhone</TokenIdentifier>
+			<Abstract type="html">@property disconnectPhone</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL disconnectPhone</Declaration>
+			
+			
+			<Anchor>//api/name/disconnectPhone</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCNotificationModel/disconnectPhone</TokenIdentifier>
+			<Abstract type="html">@property disconnectPhone</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL disconnectPhone</Declaration>
+			
+			
+			<Anchor>//api/name/disconnectPhone</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/setDisconnectDevice:</TokenIdentifier>
+			<Abstract type="html">@property disconnectDevice</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL disconnectDevice</Declaration>
+			
+			
+			<Anchor>//api/name/disconnectDevice</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/disconnectDevice</TokenIdentifier>
+			<Abstract type="html">@property disconnectDevice</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL disconnectDevice</Declaration>
+			
+			
+			<Anchor>//api/name/disconnectDevice</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCNotificationModel/disconnectDevice</TokenIdentifier>
+			<Abstract type="html">@property disconnectDevice</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL disconnectDevice</Declaration>
+			
+			
+			<Anchor>//api/name/disconnectDevice</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/setHeartRateCollection:</TokenIdentifier>
+			<Abstract type="html">@property heartRateCollection</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL heartRateCollection</Declaration>
+			
+			
+			<Anchor>//api/name/heartRateCollection</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/heartRateCollection</TokenIdentifier>
+			<Abstract type="html">@property heartRateCollection</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL heartRateCollection</Declaration>
+			
+			
+			<Anchor>//api/name/heartRateCollection</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCNotificationModel/heartRateCollection</TokenIdentifier>
+			<Abstract type="html">@property heartRateCollection</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL heartRateCollection</Declaration>
+			
+			
+			<Anchor>//api/name/heartRateCollection</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCNotificationModel/modelWithData:</TokenIdentifier>
+			<Abstract type="html">instantiate an model with the given data</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)modelWithData:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The given data</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">an model of &lt;code&gt;FCNotificationModel&lt;/code&gt; object</Abstract></ReturnValue>
+			<Anchor>//api/name/modelWithData:</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationModel/nfSettingData</TokenIdentifier>
+			<Abstract type="html">Convert the model to NSData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>- (NSData *)nfSettingData</Declaration>
+			
+			<ReturnValue><Abstract type="html">The converted data</Abstract></ReturnValue>
+			<Anchor>//api/name/nfSettingData</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

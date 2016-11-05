@@ -1,0 +1,2398 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>FitCloud Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">FitCloud </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">H.Tang</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/centralManager">centralManager</option>
+		
+		<option value="//api/name/findMobilePhoneBlock">findMobilePhoneBlock</option>
+		
+		<option value="//api/name/isSynchronizing">isSynchronizing</option>
+		
+		<option value="//api/name/servicePeripheral">servicePeripheral</option>
+		
+		<option value="//api/name/syncType">syncType</option>
+		
+		<option value="//api/name/takePicturesBlock">takePicturesBlock</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/bondDevice:dataHandler:retHandler:">- bondDevice:dataHandler:retHandler:</option>
+		
+		<option value="//api/name/connectPeripheral:">- connectPeripheral:</option>
+		
+		<option value="//api/name/disconnect">- disconnect</option>
+		
+		<option value="//api/name/disconnectPeripheral:">- disconnectPeripheral:</option>
+		
+		<option value="//api/name/fcCloseRealTimeSync:">- fcCloseRealTimeSync:</option>
+		
+		<option value="//api/name/fcFindWristband:">- fcFindWristband:</option>
+		
+		<option value="//api/name/fcFoundMyCellPhone:">- fcFoundMyCellPhone:</option>
+		
+		<option value="//api/name/fcGetAlarmList:retHandler:">- fcGetAlarmList:retHandler:</option>
+		
+		<option value="//api/name/fcGetBatteryPowerAndChargingState:retHandler:">- fcGetBatteryPowerAndChargingState:retHandler:</option>
+		
+		<option value="//api/name/fcGetFirmwareVersion:retHandler:">- fcGetFirmwareVersion:retHandler:</option>
+		
+		<option value="//api/name/fcGetHistoryData:dataHandler:retHandler:">- fcGetHistoryData:dataHandler:retHandler:</option>
+		
+		<option value="//api/name/fcGetSystemSetting:retHandler:">- fcGetSystemSetting:retHandler:</option>
+		
+		<option value="//api/name/fcOpenRealTimeSync:dataHandler:retHandler:">- fcOpenRealTimeSync:dataHandler:retHandler:</option>
+		
+		<option value="//api/name/fcSetAlarmData:retHandler:">- fcSetAlarmData:retHandler:</option>
+		
+		<option value="//api/name/fcSetBloodPressure:dbp:retHandler:">- fcSetBloodPressure:dbp:retHandler:</option>
+		
+		<option value="//api/name/fcSetCameraState:retHandler:">- fcSetCameraState:retHandler:</option>
+		
+		<option value="//api/name/fcSetDisplayData:retHandler:">- fcSetDisplayData:retHandler:</option>
+		
+		<option value="//api/name/fcSetDrinkRemindEnable:retHandler:">- fcSetDrinkRemindEnable:retHandler:</option>
+		
+		<option value="//api/name/fcSetFunctionSwitchData:retHandler:">- fcSetFunctionSwitchData:retHandler:</option>
+		
+		<option value="//api/name/fcSetHealthMonitorData:retHandler:">- fcSetHealthMonitorData:retHandler:</option>
+		
+		<option value="//api/name/fcSetLeftHandWearEnable:retHandler:">- fcSetLeftHandWearEnable:retHandler:</option>
+		
+		<option value="//api/name/fcSetLongSitData:retHandler:">- fcSetLongSitData:retHandler:</option>
+		
+		<option value="//api/name/fcSetNotificationSettingData:retHandler:">- fcSetNotificationSettingData:retHandler:</option>
+		
+		<option value="//api/name/fcSetUserProfile:age:height:weight:retHandler:">- fcSetUserProfile:age:height:weight:retHandler:</option>
+		
+		<option value="//api/name/fcSetWeather:highTemp:lowTemp:state:cityName:retHandler:">- fcSetWeather:highTemp:lowTemp:state:cityName:retHandler:</option>
+		
+		<option value="//api/name/isConnected">- isConnected</option>
+		
+		<option value="//api/name/loginDevice:retHandler:">- loginDevice:retHandler:</option>
+		
+		<option value="//api/name/scanningPeripheralWithUUID:retHandler:">- scanningPeripheralWithUUID:retHandler:</option>
+		
+		<option value="//api/name/scanningPeripherals:">- scanningPeripherals:</option>
+		
+		<option value="//api/name/stopScanning">- stopScanning</option>
+		
+		<option value="//api/name/unBondDevice:">- unBondDevice:</option>
+		
+		<option value="//api/name/upgradeWithFilePath:progress:retHandler:">- upgradeWithFilePath:progress:retHandler:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">FitCloud Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>FitCloud.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>@class FitCloud
+@classdesign Singleton mode</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/centralManager" title="centralManager"></a>
+	<h3 class="method-title"><code><a href="#//api/name/centralManager">&nbsp;&nbsp;centralManager</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@property centralManager</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) CBCentralManager *centralManager</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Entry point to the central role. Commands should only be issued when its state is <code>CBCentralManagerStatePoweredOn</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/servicePeripheral" title="servicePeripheral"></a>
+	<h3 class="method-title"><code><a href="#//api/name/servicePeripheral">&nbsp;&nbsp;servicePeripheral</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@property servicePeripheral</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) CBPeripheral *servicePeripheral</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Represents a peripheral.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/syncType" title="syncType"></a>
+	<h3 class="method-title"><code><a href="#//api/name/syncType">&nbsp;&nbsp;syncType</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@property syncType</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) FCSyncType syncType</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The current synchronization type</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isSynchronizing" title="isSynchronizing"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isSynchronizing">&nbsp;&nbsp;isSynchronizing</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@property isSynchronizing</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) BOOL isSynchronizing</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Synchronization status，Indicates whether the current device is synchronized</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/findMobilePhoneBlock" title="findMobilePhoneBlock"></a>
+	<h3 class="method-title"><code><a href="#//api/name/findMobilePhoneBlock">&nbsp;&nbsp;findMobilePhoneBlock</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@property findMobilePhoneBlock</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) dispatch_block_t findMobilePhoneBlock</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Find the phone block</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/findMobilePhoneBlock">@property findMobilePhoneBlock</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/takePicturesBlock" title="takePicturesBlock"></a>
+	<h3 class="method-title"><code><a href="#//api/name/takePicturesBlock">&nbsp;&nbsp;takePicturesBlock</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@property takePicturesBlock</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) dispatch_block_t takePicturesBlock</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Camera control block</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/takePicturesBlock">@property takePicturesBlock</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/scanningPeripherals:" title="scanningPeripherals:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/scanningPeripherals:">&ndash;&nbsp;scanningPeripherals:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Scans Bluetooth peripherals</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)scanningPeripherals:(FCDeviceListHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Scan result callback block</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Scans Bluetooth peripherals,Returns a peripheral that is currently being scanned and A list of <code>CBPeripheral</code> objects.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/scanningPeripheralWithUUID:retHandler:" title="scanningPeripheralWithUUID:retHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/scanningPeripheralWithUUID:retHandler:">&ndash;&nbsp;scanningPeripheralWithUUID:retHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Scans a peripheral that contains a uuid string</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)scanningPeripheralWithUUID:(NSString *)<em>uuidString</em> retHandler:(FCPeripheralHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>uuidString</code></th>
+						<td><p>The uuid string of a peripheral</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Scan result callback block</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/stopScanning" title="stopScanning"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stopScanning">&ndash;&nbsp;stopScanning</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Stop scanning the peripherals</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)stopScanning</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isConnected" title="isConnected"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isConnected">&ndash;&nbsp;isConnected</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The result of the connection</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isConnected</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Whether the peripheral has been connected</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/connectPeripheral:" title="connectPeripheral:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/connectPeripheral:">&ndash;&nbsp;connectPeripheral:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Connect a peripheral</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)connectPeripheral:(CBPeripheral *)<em>peripheral</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>peripheral</code></th>
+						<td><p>A peripheral to connect to</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Whether the peripheral in connection mode</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/disconnectPeripheral:" title="disconnectPeripheral:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/disconnectPeripheral:">&ndash;&nbsp;disconnectPeripheral:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Disconnect the peripheral</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)disconnectPeripheral:(CBPeripheral *)<em>peripheral</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>peripheral</code></th>
+						<td><p>A peripheral to be disconnected</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Whether the peripheral in disconnected mode</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/disconnect" title="disconnect"></a>
+	<h3 class="method-title"><code><a href="#//api/name/disconnect">&ndash;&nbsp;disconnect</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Disconnect the current peripheral</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)disconnect</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Whether the current peripheral in disconnected mode</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcFindWristband:" title="fcFindWristband:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcFindWristband:">&ndash;&nbsp;fcFindWristband:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Find the watch，The watch starts to vibrate when it receives a command from the app</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcFindWristband:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Find the watch，The watch starts to vibrate when it receives a command from the app</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcFoundMyCellPhone:" title="fcFoundMyCellPhone:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcFoundMyCellPhone:">&ndash;&nbsp;fcFoundMyCellPhone:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When the phone received a command issued by the watch,it needs to send a reply to the watch.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcFoundMyCellPhone:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>When the phone received a command issued by the watch,it needs to send a reply to the watch.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/bondDevice:dataHandler:retHandler:" title="bondDevice:dataHandler:retHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/bondDevice:dataHandler:retHandler:">&ndash;&nbsp;bondDevice:dataHandler:retHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Bond the device</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)bondDevice:(FCBoundDataHandler)<em>paramsHandler</em> dataHandler:(FCSyncDataHandler)<em>dataHandler</em> retHandler:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>paramsHandler</code></th>
+						<td><p>The block parameter is used to set user information。</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dataHandler</code></th>
+						<td><p>The system setting data callback block</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loginDevice:retHandler:" title="loginDevice:retHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loginDevice:retHandler:">&ndash;&nbsp;loginDevice:retHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Login the device</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)loginDevice:(FCLoginDatahandler)<em>paramHandler</em> retHandler:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>paramHandler</code></th>
+						<td><p>The block parameter is used to set user information</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/unBondDevice:" title="unBondDevice:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/unBondDevice:">&ndash;&nbsp;unBondDevice:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Unbind the watch</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)unBondDevice:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcSetAlarmData:retHandler:" title="fcSetAlarmData:retHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcSetAlarmData:retHandler:">&ndash;&nbsp;fcSetAlarmData:retHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set alarm clock data</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcSetAlarmData:(NSData *)<em>data</em> retHandler:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>Alarm clock data</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcGetAlarmList:retHandler:" title="fcGetAlarmList:retHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcGetAlarmList:retHandler:">&ndash;&nbsp;fcGetAlarmList:retHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get the list of alarms</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcGetAlarmList:(FCSyncDataHandler)<em>dataHandler</em> retHandler:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dataHandler</code></th>
+						<td><p>Alarm list data callback</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcGetSystemSetting:retHandler:" title="fcGetSystemSetting:retHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcGetSystemSetting:retHandler:">&ndash;&nbsp;fcGetSystemSetting:retHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Gets the system settings</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcGetSystemSetting:(FCSyncDataHandler)<em>dataHandler</em> retHandler:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dataHandler</code></th>
+						<td><p>The system setting data callback</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcGetBatteryPowerAndChargingState:retHandler:" title="fcGetBatteryPowerAndChargingState:retHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcGetBatteryPowerAndChargingState:retHandler:">&ndash;&nbsp;fcGetBatteryPowerAndChargingState:retHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get power and charge status</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcGetBatteryPowerAndChargingState:(FCSyncPowerAndChargingStateHandler)<em>dataHandler</em> retHandler:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dataHandler</code></th>
+						<td><p>Power and charge state callback</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcSetDisplayData:retHandler:" title="fcSetDisplayData:retHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcSetDisplayData:retHandler:">&ndash;&nbsp;fcSetDisplayData:retHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the screen display items</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcSetDisplayData:(NSData *)<em>data</em> retHandler:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>The screen display data</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcSetFunctionSwitchData:retHandler:" title="fcSetFunctionSwitchData:retHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcSetFunctionSwitchData:retHandler:">&ndash;&nbsp;fcSetFunctionSwitchData:retHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the watch function switch</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcSetFunctionSwitchData:(NSData *)<em>data</em> retHandler:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>Function switch data</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcSetNotificationSettingData:retHandler:" title="fcSetNotificationSettingData:retHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcSetNotificationSettingData:retHandler:">&ndash;&nbsp;fcSetNotificationSettingData:retHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the notification switch</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcSetNotificationSettingData:(NSData *)<em>data</em> retHandler:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>Notification switch data</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcSetLongSitData:retHandler:" title="fcSetLongSitData:retHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcSetLongSitData:retHandler:">&ndash;&nbsp;fcSetLongSitData:retHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set up sedentary reminders</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcSetLongSitData:(NSData *)<em>data</em> retHandler:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>Sedentary reminder data</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcSetHealthMonitorData:retHandler:" title="fcSetHealthMonitorData:retHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcSetHealthMonitorData:retHandler:">&ndash;&nbsp;fcSetHealthMonitorData:retHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the health of real-time monitoring</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcSetHealthMonitorData:(NSData *)<em>data</em> retHandler:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>Health real-time monitoring data</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcSetDrinkRemindEnable:retHandler:" title="fcSetDrinkRemindEnable:retHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcSetDrinkRemindEnable:retHandler:">&ndash;&nbsp;fcSetDrinkRemindEnable:retHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set reminders to drink water</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcSetDrinkRemindEnable:(BOOL)<em>bEnabled</em> retHandler:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>bEnabled</code></th>
+						<td><p>Reminder to drink water switch status</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcSetLeftHandWearEnable:retHandler:" title="fcSetLeftHandWearEnable:retHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcSetLeftHandWearEnable:retHandler:">&ndash;&nbsp;fcSetLeftHandWearEnable:retHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>@brief Set the wearing style</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcSetLeftHandWearEnable:(BOOL)<em>bEnabled</em> retHandler:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>bEnabled</code></th>
+						<td><p>Left hand wear</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcSetCameraState:retHandler:" title="fcSetCameraState:retHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcSetCameraState:retHandler:">&ndash;&nbsp;fcSetCameraState:retHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the camera status</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcSetCameraState:(BOOL)<em>bInForeground</em> retHandler:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>bInForeground</code></th>
+						<td><p>in the foreground</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcSetUserProfile:age:height:weight:retHandler:" title="fcSetUserProfile:age:height:weight:retHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcSetUserProfile:age:height:weight:retHandler:">&ndash;&nbsp;fcSetUserProfile:age:height:weight:retHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the user profile</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcSetUserProfile:(UInt32)<em>sex</em> age:(UInt32)<em>age</em> height:(UInt32)<em>height</em> weight:(UInt32)<em>weight</em> retHandler:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>sex</code></th>
+						<td><p>sex</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>age</code></th>
+						<td><p>age</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>height</code></th>
+						<td><p>height</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>weight</code></th>
+						<td><p>weight</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcSetBloodPressure:dbp:retHandler:" title="fcSetBloodPressure:dbp:retHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcSetBloodPressure:dbp:retHandler:">&ndash;&nbsp;fcSetBloodPressure:dbp:retHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the default blood pressure</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcSetBloodPressure:(UInt16)<em>sbp</em> dbp:(UInt16)<em>dbp</em> retHandler:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>sbp</code></th>
+						<td><p>Systolic blood pressure</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dbp</code></th>
+						<td><p>Diastolic blood pressure</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcSetWeather:highTemp:lowTemp:state:cityName:retHandler:" title="fcSetWeather:highTemp:lowTemp:state:cityName:retHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcSetWeather:highTemp:lowTemp:state:cityName:retHandler:">&ndash;&nbsp;fcSetWeather:highTemp:lowTemp:state:cityName:retHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set up the latest weather</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcSetWeather:(int)<em>temperature</em> highTemp:(int)<em>hTemp</em> lowTemp:(int)<em>lTemp</em> state:(int)<em>state</em> cityName:(NSString *)<em>cityName</em> retHandler:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>temperature</code></th>
+						<td><p>Current temperature</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>hTemp</code></th>
+						<td><p>Maximum temperature</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>lTemp</code></th>
+						<td><p>lowest temperature</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>state</code></th>
+						<td><p>Weather conditions</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>cityName</code></th>
+						<td><p>City name</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcOpenRealTimeSync:dataHandler:retHandler:" title="fcOpenRealTimeSync:dataHandler:retHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcOpenRealTimeSync:dataHandler:retHandler:">&ndash;&nbsp;fcOpenRealTimeSync:dataHandler:retHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Turn on Healthy real-time synchronization</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcOpenRealTimeSync:(FCRTSyncType)<em>syncType</em> dataHandler:(FCSyncDataHandler)<em>dataHandler</em> retHandler:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>syncType</code></th>
+						<td><p>Real-time synchronization type</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dataHandler</code></th>
+						<td><p>Health real-time synchronization data callback</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcCloseRealTimeSync:" title="fcCloseRealTimeSync:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcCloseRealTimeSync:">&ndash;&nbsp;fcCloseRealTimeSync:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Turn off healthy real-time synchronization</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcCloseRealTimeSync:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcGetHistoryData:dataHandler:retHandler:" title="fcGetHistoryData:dataHandler:retHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcGetHistoryData:dataHandler:retHandler:">&ndash;&nbsp;fcGetHistoryData:dataHandler:retHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Synchronize historical motion data</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcGetHistoryData:(FCSyncStepHandler)<em>syncStepHandler</em> dataHandler:(FCSyncDataHandler)<em>dataHandler</em> retHandler:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>syncStepHandler</code></th>
+						<td><p>Synchronization step callback</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dataHandler</code></th>
+						<td><p>Synchronous data callback</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Synchronize different types of historical data，SyncStepHandler will return to the synchronization step multiple times，The dataHandler will return different types of historical data for synchronization</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcGetFirmwareVersion:retHandler:" title="fcGetFirmwareVersion:retHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcGetFirmwareVersion:retHandler:">&ndash;&nbsp;fcGetFirmwareVersion:retHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@method fcGetFirmwareVersion:retHandler:</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcGetFirmwareVersion:(FCSyncDataHandler)<em>dataHandler</em> retHandler:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dataHandler</code></th>
+						<td><p>Firmware Version Data Callback</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Synchronous result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get the firmware version information</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/upgradeWithFilePath:progress:retHandler:" title="upgradeWithFilePath:progress:retHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/upgradeWithFilePath:progress:retHandler:">&ndash;&nbsp;upgradeWithFilePath:progress:retHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Firmware upgrade</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)upgradeWithFilePath:(NSString *)<em>filePath</em> progress:(FCProgressHandler)<em>progressHandler</em> retHandler:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>filePath</code></th>
+						<td><p>Firmware path</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>progressHandler</code></th>
+						<td><p>Upgrade progress callback</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>Upgrade result callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Firmware upgrade interface, call this API bracelet will <a href="#//api/name/disconnect">disconnect</a> and enter the upgrade mode</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2016 H.Tang. All rights reserved. Updated: 2016-11-05</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

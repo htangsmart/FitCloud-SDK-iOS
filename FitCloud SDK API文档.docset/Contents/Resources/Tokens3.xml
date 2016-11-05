@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FCDataHandler.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FCDataHandler</TokenIdentifier>
+			<Abstract type="html">@class FCDataHandler</Abstract>
+			<DeclaredIn>FCDataHandler.h</DeclaredIn>
+            
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCDataHandler/divideSystemSettingData:retHandler:</TokenIdentifier>
+			<Abstract type="html">Split system settings data</Abstract>
+			<DeclaredIn>FCDataHandler.h</DeclaredIn>
+			
+			<Declaration>+ (void)divideSystemSettingData:(NSData *)data retHandler:(FCSysSettingDataHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">System setting Data</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">Processing result callback block</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/divideSystemSettingData:retHandler:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCDataHandler/divideVersionData:retHandler:</TokenIdentifier>
+			<Abstract type="html">Split the hardware and software version data</Abstract>
+			<DeclaredIn>FCDataHandler.h</DeclaredIn>
+			
+			<Declaration>+ (void)divideVersionData:(NSData *)versionData retHandler:(FCVersionDataHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>versionData</Name>
+					<Abstract type="html">Hardware and software version data</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">Processing result callback block</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/divideVersionData:retHandler:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCDataHandler/parseVersionData:retHandler:</TokenIdentifier>
+			<Abstract type="html">Parse the hardware and software version data</Abstract>
+			<DeclaredIn>FCDataHandler.h</DeclaredIn>
+			
+			<Declaration>+ (void)parseVersionData:(NSData *)versionData retHandler:(FCVersionStringHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>versionData</Name>
+					<Abstract type="html">Hardware and software version data</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">Processing result callback block</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/parseVersionData:retHandler:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCDataHandler/convertAlarmDataToModels:</TokenIdentifier>
+			<Abstract type="html">Parse the alarm clock data</Abstract>
+			<DeclaredIn>FCDataHandler.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)convertAlarmDataToModels:(NSData *)alarmData</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>alarmData</Name>
+					<Abstract type="html">alarm clock data</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a list of &lt;code&gt;FCAlarmObject&lt;/code&gt; objects</Abstract></ReturnValue>
+			<Anchor>//api/name/convertAlarmDataToModels:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCDataHandler/convertModelsToAlarmData:</TokenIdentifier>
+			<Abstract type="html">Converts a list of alarm objects to NSData</Abstract>
+			<DeclaredIn>FCDataHandler.h</DeclaredIn>
+			
+			<Declaration>+ (NSData *)convertModelsToAlarmData:(NSArray *)array</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>array</Name>
+					<Abstract type="html">a list of &lt;code&gt;FCAlarmModel&lt;/code&gt; objects</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Alarm data of NSData type</Abstract></ReturnValue>
+			<Anchor>//api/name/convertModelsToAlarmData:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCDataHandler/convertSportsDataToDictionarys:</TokenIdentifier>
+			<Abstract type="html">Convert sports data to an array containing dictionary objects,Each record contains five minutes of data</Abstract>
+			<DeclaredIn>FCDataHandler.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)convertSportsDataToDictionarys:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The sports data to be converted</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a list of &lt;code&gt;NSDictionary&lt;/code&gt; objects</Abstract></ReturnValue>
+			<Anchor>//api/name/convertSportsDataToDictionarys:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCDataHandler/convertSportsDataToModels:</TokenIdentifier>
+			<Abstract type="html">Convert sports data to an array containing the model objects,Each record contains five minutes of data</Abstract>
+			<DeclaredIn>FCDataHandler.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)convertSportsDataToModels:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The sports data to be converted</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a list of &lt;code&gt;FCExerciseModel&lt;/code&gt; objects</Abstract></ReturnValue>
+			<Anchor>//api/name/convertSportsDataToModels:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCDataHandler/convertSleepDataToDictionarys:</TokenIdentifier>
+			<Abstract type="html">Convert sleep data to an array containing dictionary objects,Each record contains five minutes of data</Abstract>
+			<DeclaredIn>FCDataHandler.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)convertSleepDataToDictionarys:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The sleep data to be converted</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a list of &lt;code&gt;NSDictionary&lt;/code&gt; objects</Abstract></ReturnValue>
+			<Anchor>//api/name/convertSleepDataToDictionarys:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCDataHandler/convertSleepDataToModels:</TokenIdentifier>
+			<Abstract type="html">Convert sleep data to an array containing the model objects,Each record contains five minutes of data</Abstract>
+			<DeclaredIn>FCDataHandler.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)convertSleepDataToModels:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The sleep data to be converted</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a list of &lt;code&gt;FCSleepModel&lt;/code&gt; objects</Abstract></ReturnValue>
+			<Anchor>//api/name/convertSleepDataToModels:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCDataHandler/convertHeartRateDataToDictionarys:</TokenIdentifier>
+			<Abstract type="html">Convert heart rate data to an array containing dictionary objects,Each record contains five minutes of data</Abstract>
+			<DeclaredIn>FCDataHandler.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)convertHeartRateDataToDictionarys:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The heart rate data to be converted</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a list of &lt;code&gt;NSDictionary&lt;/code&gt; objects</Abstract></ReturnValue>
+			<Anchor>//api/name/convertHeartRateDataToDictionarys:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCDataHandler/convertHeartRateDataToModels:</TokenIdentifier>
+			<Abstract type="html">Convert heart rate data to an array containing the model objects,Each record contains five minutes of data</Abstract>
+			<DeclaredIn>FCDataHandler.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)convertHeartRateDataToModels:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The heart rate data to be converted</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a list of &lt;code&gt;FCHealthModel&lt;/code&gt; objects</Abstract></ReturnValue>
+			<Anchor>//api/name/convertHeartRateDataToModels:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

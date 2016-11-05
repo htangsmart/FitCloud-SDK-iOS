@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FCSleepModel.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FCSleepModel</TokenIdentifier>
+			<Abstract type="html">@class FCSleepModel</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+            
+			
+			<NodeRef refid="12"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSleepModel/setYear:</TokenIdentifier>
+			<Abstract type="html">@property year</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *year</Declaration>
+			
+			
+			<Anchor>//api/name/year</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSleepModel/year</TokenIdentifier>
+			<Abstract type="html">@property year</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *year</Declaration>
+			
+			
+			<Anchor>//api/name/year</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSleepModel/year</TokenIdentifier>
+			<Abstract type="html">@property year</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *year</Declaration>
+			
+			
+			<Anchor>//api/name/year</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSleepModel/setMonth:</TokenIdentifier>
+			<Abstract type="html">@property month</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *month</Declaration>
+			
+			
+			<Anchor>//api/name/month</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSleepModel/month</TokenIdentifier>
+			<Abstract type="html">@property month</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *month</Declaration>
+			
+			
+			<Anchor>//api/name/month</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSleepModel/month</TokenIdentifier>
+			<Abstract type="html">@property month</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *month</Declaration>
+			
+			
+			<Anchor>//api/name/month</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSleepModel/setDay:</TokenIdentifier>
+			<Abstract type="html">@property day</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *day</Declaration>
+			
+			
+			<Anchor>//api/name/day</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSleepModel/day</TokenIdentifier>
+			<Abstract type="html">@property day</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *day</Declaration>
+			
+			
+			<Anchor>//api/name/day</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSleepModel/day</TokenIdentifier>
+			<Abstract type="html">@property day</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *day</Declaration>
+			
+			
+			<Anchor>//api/name/day</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSleepModel/setMinutes:</TokenIdentifier>
+			<Abstract type="html">@property minutes</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *minutes</Declaration>
+			
+			
+			<Anchor>//api/name/minutes</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSleepModel/minutes</TokenIdentifier>
+			<Abstract type="html">@property minutes</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *minutes</Declaration>
+			
+			
+			<Anchor>//api/name/minutes</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSleepModel/minutes</TokenIdentifier>
+			<Abstract type="html">@property minutes</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *minutes</Declaration>
+			
+			
+			<Anchor>//api/name/minutes</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSleepModel/setSleep:</TokenIdentifier>
+			<Abstract type="html">@property sleep</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *sleep</Declaration>
+			
+			
+			<Anchor>//api/name/sleep</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSleepModel/sleep</TokenIdentifier>
+			<Abstract type="html">@property sleep</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *sleep</Declaration>
+			
+			
+			<Anchor>//api/name/sleep</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSleepModel/sleep</TokenIdentifier>
+			<Abstract type="html">@property sleep</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *sleep</Declaration>
+			
+			
+			<Anchor>//api/name/sleep</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

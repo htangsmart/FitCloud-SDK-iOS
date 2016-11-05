@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FCHealthMonitoringModel.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FCHealthMonitoringModel</TokenIdentifier>
+			<Abstract type="html">@class FCRTHealthModel</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+            
+			
+			<NodeRef refid="9"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/setIsOn:</TokenIdentifier>
+			<Abstract type="html">@property isOn</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL isOn</Declaration>
+			
+			
+			<Anchor>//api/name/isOn</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/isOn</TokenIdentifier>
+			<Abstract type="html">@property isOn</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL isOn</Declaration>
+			
+			
+			<Anchor>//api/name/isOn</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHealthMonitoringModel/isOn</TokenIdentifier>
+			<Abstract type="html">@property isOn</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL isOn</Declaration>
+			
+			
+			<Anchor>//api/name/isOn</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/setStMinute:</TokenIdentifier>
+			<Abstract type="html">@property stMinute</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger stMinute</Declaration>
+			
+			
+			<Anchor>//api/name/stMinute</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/stMinute</TokenIdentifier>
+			<Abstract type="html">@property stMinute</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger stMinute</Declaration>
+			
+			
+			<Anchor>//api/name/stMinute</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHealthMonitoringModel/stMinute</TokenIdentifier>
+			<Abstract type="html">@property stMinute</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger stMinute</Declaration>
+			
+			
+			<Anchor>//api/name/stMinute</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/setEdMinute:</TokenIdentifier>
+			<Abstract type="html">@property edMinute</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger edMinute</Declaration>
+			
+			
+			<Anchor>//api/name/edMinute</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/edMinute</TokenIdentifier>
+			<Abstract type="html">@property edMinute</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger edMinute</Declaration>
+			
+			
+			<Anchor>//api/name/edMinute</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHealthMonitoringModel/edMinute</TokenIdentifier>
+			<Abstract type="html">@property edMinute</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger edMinute</Declaration>
+			
+			
+			<Anchor>//api/name/edMinute</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCHealthMonitoringModel/modelWithData:</TokenIdentifier>
+			<Abstract type="html">instantiate an model with the given data</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)modelWithData:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The given data</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">an model of &lt;code&gt;FCHealthMonitoringModel&lt;/code&gt; object</Abstract></ReturnValue>
+			<Anchor>//api/name/modelWithData:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/healthMonitoringData</TokenIdentifier>
+			<Abstract type="html">Convert the model to NSData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>- (NSData *)healthMonitoringData</Declaration>
+			
+			<ReturnValue><Abstract type="html">The converted data</Abstract></ReturnValue>
+			<Anchor>//api/name/healthMonitoringData</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -114,6 +114,7 @@
  */
 - (BOOL)disconnect;
 
+
 #pragma mark - 控制监听
 
 /*!
@@ -127,6 +128,8 @@
  * @param retHandler Synchronous result callback
  */
 - (void)fcFoundMyCellPhone:(FCSyncResultHandler)retHandler;
+
+
 
 #pragma mark - 手表登录、绑定或解绑操作
 /*!

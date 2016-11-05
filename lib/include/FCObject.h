@@ -201,23 +201,91 @@
  * @discussion The notification settings data model
  */
 @interface FCNotificationModel : NSObject
-@property (nonatomic, assign) BOOL callEnable;
-@property (nonatomic, assign) BOOL smsEnable;
-@property (nonatomic, assign) BOOL qqEnable;
-@property (nonatomic, assign) BOOL weChatEnable;
-@property (nonatomic, assign) BOOL facebookEnable;
-@property (nonatomic, assign) BOOL twitterEnable;
-@property (nonatomic, assign) BOOL linkedinEnable;
-@property (nonatomic, assign) BOOL instagramEnable;
-@property (nonatomic, assign) BOOL pinterestEnable;
-@property (nonatomic, assign) BOOL whatsappEnable;
-@property (nonatomic, assign) BOOL lineEnable;
-@property (nonatomic, assign) BOOL fbMessageEnable;
-@property (nonatomic, assign) BOOL otherAppEnable;
-@property (nonatomic, assign) BOOL showMsgEnable;
-@property (nonatomic, assign) BOOL disconnectPhoneEnable;
-@property (nonatomic, assign) BOOL disconnectDeviceEnable;
-@property (nonatomic, assign) BOOL heartRateEnable;
+/*!
+ * @property phoneCall
+ * @discussion The watch will notify the user when the phone has a call
+ */
+@property (nonatomic, assign) BOOL phoneCall;
+/*!
+ * @property shortMessage
+ * @discussion The watch will notify the user when the phone has SMS
+ */
+@property (nonatomic, assign) BOOL shortMessage;
+/*!
+ * @property QQ
+ * @discussion The watch will notify the user when the QQ has a new message
+ */
+@property (nonatomic, assign) BOOL QQ;
+/*!
+ * @property weChat
+ * @discussion The watch will notify the user when the weChat has a new message
+ */
+@property (nonatomic, assign) BOOL weChat;
+/*!
+ * @property facebook
+ * @discussion The watch will notify the user when the facebook has a new message
+ */
+@property (nonatomic, assign) BOOL facebook;
+/*!
+ * @property twitter
+ * @discussion The watch will notify the user when the twitter has a new message
+ */
+@property (nonatomic, assign) BOOL twitter;
+/*!
+ * @property linkedin
+ * @discussion The watch will notify the user when the linkedin has a new message
+ */
+@property (nonatomic, assign) BOOL linkedin;
+/*!
+ * @property instagram
+ * @discussion The watch will notify the user when the instagram has a new message
+ */
+@property (nonatomic, assign) BOOL instagram;
+/*!
+ * @property pinterest
+ * @discussion The watch will notify the user when the pinterest has a new message
+ */
+@property (nonatomic, assign) BOOL pinterest;
+/*!
+ * @property whatsapp
+ * @discussion The watch will notify the user when the whatsapp has a new message
+ */
+@property (nonatomic, assign) BOOL whatsapp;
+/*!
+ * @property line
+ * @discussion The watch will notify the user when the line has a new message
+ */
+@property (nonatomic, assign) BOOL line;
+/*!
+ * @property facebookMessage
+ * @discussion The watch will notify the user when the Facebook Message has a new message
+ */
+@property (nonatomic, assign) BOOL facebookMessage;
+/*!
+ * @property otherApp
+ * @discussion The watch will notify the user when the other app has a message
+ */
+@property (nonatomic, assign) BOOL otherApp;
+/*!
+ * @property messageContent
+ * @discussion Whether the new message is displayed on the watch
+ */
+@property (nonatomic, assign) BOOL messageContent;
+/*!
+ * @property disconnectPhone
+ * @discussion Alert the user when the phone is disconnected from the Bluetooth connection
+ */
+@property (nonatomic, assign) BOOL disconnectPhone;
+/*!
+ * @property disconnectDevice
+ * @discussion Vibrate to remind the user when the device is disconnected from the Bluetooth connection
+ */
+@property (nonatomic, assign) BOOL disconnectDevice;
+/*!
+ * @property heartRateCollection
+ * @discussion Heart rate timing acquisition
+ */
+@property (nonatomic, assign) BOOL heartRateCollection;
 /*!
  * @brief instantiate an model with the given data
  * @param data The given data

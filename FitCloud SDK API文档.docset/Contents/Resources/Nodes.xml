@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocSetNodes version="1.0">
+    <TOC>
+        <Node type="folder">
+            <Name>FitCloud</Name>
+            <Path>index.html</Path>
+			<Subnodes>
+                
+				
+				<Node type="folder">
+					<Name>Classes</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="1"/>
+						<NodeRef refid="2"/>
+						<NodeRef refid="3"/>
+						<NodeRef refid="4"/>
+						<NodeRef refid="5"/>
+						<NodeRef refid="6"/>
+						<NodeRef refid="7"/>
+						<NodeRef refid="8"/>
+						<NodeRef refid="9"/>
+						<NodeRef refid="10"/>
+						<NodeRef refid="11"/>
+						<NodeRef refid="12"/>
+						<NodeRef refid="13"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+                
+                
+				<Node>
+					<Name>Constants</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="14"/>
+						<NodeRef refid="15"/>
+						<NodeRef refid="16"/>
+						
+					</Subnodes>
+				</Node>
+				
+                
+                <Node>
+                    <Name>Blocks</Name>
+                    <Path>index.html</Path>
+                    <Subnodes>
+                        <NodeRef refid="17"/>
+                        <NodeRef refid="18"/>
+                        <NodeRef refid="19"/>
+                        <NodeRef refid="20"/>
+                        <NodeRef refid="21"/>
+                        <NodeRef refid="22"/>
+                        <NodeRef refid="23"/>
+                        <NodeRef refid="24"/>
+                        <NodeRef refid="25"/>
+                        <NodeRef refid="26"/>
+                        <NodeRef refid="27"/>
+                        <NodeRef refid="28"/>
+                        <NodeRef refid="29"/>
+                        <NodeRef refid="30"/>
+                        <NodeRef refid="31"/>
+                        <NodeRef refid="32"/>
+                        <NodeRef refid="33"/>
+                        <NodeRef refid="34"/>
+                        <NodeRef refid="35"/>
+                        
+                    </Subnodes>
+                </Node>
+                
+			</Subnodes>
+        </Node>
+    </TOC>
+	<Library>
+		
+		<Node id="1" type="file" documentType="reference">
+            <Name>FCAlarmCycleModel</Name>
+            <Path>Classes/FCAlarmCycleModel.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/FCAlarmCycleModel.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/FCAlarmCycleModel.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/FCAlarmCycleModel.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/FCAlarmCycleModel.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/FCAlarmCycleModel.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="2" type="file" documentType="reference">
+            <Name>FCAlarmModel</Name>
+            <Path>Classes/FCAlarmModel.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/FCAlarmModel.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/FCAlarmModel.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/FCAlarmModel.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Classes/FCAlarmModel.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="3" type="file" documentType="reference">
+            <Name>FCDataHandler</Name>
+            <Path>Classes/FCDataHandler.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/FCDataHandler.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/FCDataHandler.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/FCDataHandler.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="4" type="file" documentType="reference">
+            <Name>FCDisplayModel</Name>
+            <Path>Classes/FCDisplayModel.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/FCDisplayModel.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/FCDisplayModel.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/FCDisplayModel.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/FCDisplayModel.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/FCDisplayModel.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="5" type="file" documentType="reference">
+            <Name>FCExerciseModel</Name>
+            <Path>Classes/FCExerciseModel.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/FCExerciseModel.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/FCExerciseModel.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/FCExerciseModel.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="6" type="file" documentType="reference">
+            <Name>FCFunctionSwitchModel</Name>
+            <Path>Classes/FCFunctionSwitchModel.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/FCFunctionSwitchModel.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/FCFunctionSwitchModel.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/FCFunctionSwitchModel.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/FCFunctionSwitchModel.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/FCFunctionSwitchModel.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="7" type="file" documentType="reference">
+            <Name>FCHardwareNumModel</Name>
+            <Path>Classes/FCHardwareNumModel.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/FCHardwareNumModel.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/FCHardwareNumModel.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/FCHardwareNumModel.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/FCHardwareNumModel.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="8" type="file" documentType="reference">
+            <Name>FCHealthModel</Name>
+            <Path>Classes/FCHealthModel.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/FCHealthModel.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/FCHealthModel.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/FCHealthModel.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="9" type="file" documentType="reference">
+            <Name>FCHealthMonitoringModel</Name>
+            <Path>Classes/FCHealthMonitoringModel.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/FCHealthMonitoringModel.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/FCHealthMonitoringModel.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/FCHealthMonitoringModel.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/FCHealthMonitoringModel.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/FCHealthMonitoringModel.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="10" type="file" documentType="reference">
+            <Name>FCLongSitModel</Name>
+            <Path>Classes/FCLongSitModel.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/FCLongSitModel.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/FCLongSitModel.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/FCLongSitModel.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/FCLongSitModel.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/FCLongSitModel.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="11" type="file" documentType="reference">
+            <Name>FCNotificationModel</Name>
+            <Path>Classes/FCNotificationModel.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/FCNotificationModel.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/FCNotificationModel.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/FCNotificationModel.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/FCNotificationModel.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/FCNotificationModel.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="12" type="file" documentType="reference">
+            <Name>FCSleepModel</Name>
+            <Path>Classes/FCSleepModel.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/FCSleepModel.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/FCSleepModel.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/FCSleepModel.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="13" type="file" documentType="reference">
+            <Name>FitCloud</Name>
+            <Path>Classes/FitCloud.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/FitCloud.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/FitCloud.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/FitCloud.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Classes/FitCloud.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		
+		
+        
+        <Node id="14" type="file" documentType="reference">
+            <Name>FCRTSyncType</Name>
+            <Path>Constants/FCRTSyncType.html</Path>
+            
+        </Node>
+		<Node id="15" type="file" documentType="reference">
+            <Name>FCSyncResponseState</Name>
+            <Path>Constants/FCSyncResponseState.html</Path>
+            
+        </Node>
+		<Node id="16" type="file" documentType="reference">
+            <Name>FCSyncType</Name>
+            <Path>Constants/FCSyncType.html</Path>
+            
+        </Node>
+		
+        <Node id="17" type="file" documentType="reference">
+            <Name>FCAuthDataHandler</Name>
+            <Path>Blocks/FCAuthDataHandler.html</Path>
+            
+        </Node>
+        <Node id="18" type="file" documentType="reference">
+            <Name>FCBoundDataHandler</Name>
+            <Path>Blocks/FCBoundDataHandler.html</Path>
+            
+        </Node>
+        <Node id="19" type="file" documentType="reference">
+            <Name>FCDeviceListHandler</Name>
+            <Path>Blocks/FCDeviceListHandler.html</Path>
+            
+        </Node>
+        <Node id="20" type="file" documentType="reference">
+            <Name>FCLoginDatahandler</Name>
+            <Path>Blocks/FCLoginDatahandler.html</Path>
+            
+        </Node>
+        <Node id="21" type="file" documentType="reference">
+            <Name>FCPeripheralHandler</Name>
+            <Path>Blocks/FCPeripheralHandler.html</Path>
+            
+        </Node>
+        <Node id="22" type="file" documentType="reference">
+            <Name>FCProgressHandler</Name>
+            <Path>Blocks/FCProgressHandler.html</Path>
+            
+        </Node>
+        <Node id="23" type="file" documentType="reference">
+            <Name>FCRTSyncDataHandler</Name>
+            <Path>Blocks/FCRTSyncDataHandler.html</Path>
+            
+        </Node>
+        <Node id="24" type="file" documentType="reference">
+            <Name>FCSyncCountHandler</Name>
+            <Path>Blocks/FCSyncCountHandler.html</Path>
+            
+        </Node>
+        <Node id="25" type="file" documentType="reference">
+            <Name>FCSyncDataHandler</Name>
+            <Path>Blocks/FCSyncDataHandler.html</Path>
+            
+        </Node>
+        <Node id="26" type="file" documentType="reference">
+            <Name>FCSyncPowerAndChargingStateHandler</Name>
+            <Path>Blocks/FCSyncPowerAndChargingStateHandler.html</Path>
+            
+        </Node>
+        <Node id="27" type="file" documentType="reference">
+            <Name>FCSyncResultHandler</Name>
+            <Path>Blocks/FCSyncResultHandler.html</Path>
+            
+        </Node>
+        <Node id="28" type="file" documentType="reference">
+            <Name>FCSyncStepHandler</Name>
+            <Path>Blocks/FCSyncStepHandler.html</Path>
+            
+        </Node>
+        <Node id="29" type="file" documentType="reference">
+            <Name>FCSyncUnBoundHandler</Name>
+            <Path>Blocks/FCSyncUnBoundHandler.html</Path>
+            
+        </Node>
+        <Node id="30" type="file" documentType="reference">
+            <Name>FCSysSettingDataHandler</Name>
+            <Path>Blocks/FCSysSettingDataHandler.html</Path>
+            
+        </Node>
+        <Node id="31" type="file" documentType="reference">
+            <Name>FCTotalDailyDataHandler</Name>
+            <Path>Blocks/FCTotalDailyDataHandler.html</Path>
+            
+        </Node>
+        <Node id="32" type="file" documentType="reference">
+            <Name>FCUserDataHandler</Name>
+            <Path>Blocks/FCUserDataHandler.html</Path>
+            
+        </Node>
+        <Node id="33" type="file" documentType="reference">
+            <Name>FCVersionDataHandler</Name>
+            <Path>Blocks/FCVersionDataHandler.html</Path>
+            
+        </Node>
+        <Node id="34" type="file" documentType="reference">
+            <Name>FCVersionStringHandler</Name>
+            <Path>Blocks/FCVersionStringHandler.html</Path>
+            
+        </Node>
+        <Node id="35" type="file" documentType="reference">
+            <Name>FCWearStyleHandler</Name>
+            <Path>Blocks/FCWearStyleHandler.html</Path>
+            
+        </Node>
+        
+	</Library>
+</DocSetNodes>
