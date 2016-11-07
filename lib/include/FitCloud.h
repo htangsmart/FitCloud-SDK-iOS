@@ -183,6 +183,13 @@
 #pragma mark - 功能设置
 
 /*!
+ * @brief Get the MAC address of the watch
+ * @param dataHandler MAC address data callback block
+ * @param retHandler Synchronous result callback block
+ */
+- (void)fcGetMacAddress:(FCSyncDataHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler;
+
+/*!
  * @brief Gets the system settings
  * @param dataHandler The system setting data callback
  * @param retHandler Synchronous result callback

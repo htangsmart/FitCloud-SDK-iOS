@@ -87,6 +87,8 @@ typedef NS_ENUM(NSInteger, FCSyncType) {
     FCSyncTypeFirmwareVersion = 50,
     /*! Found my cell phone.*/
     FCSyncTypeFoundMyCellPhone = 51,
+    /*! Get the MAC address of the watch*/
+    FCSyncTypeGetMacAddress = 52,
     /*! Finished*/
     FCSyncTypeEnd = 100,
 };
