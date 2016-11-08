@@ -8,13 +8,10 @@
 
 #import "MainViewController.h"
 #import "ScanListViewController.h"
-#import "FCConstants.h"
 #import "Macro.h"
 #import "FitCloud+Category.h"
-#import "FitCloud.h"
 #import "NSObject+HUD.h"
-#import "FCObject.h"
-
+#import <FitCloudKit.h>
 
 @interface MainViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
@@ -119,15 +116,15 @@
     // 登录设备
     [[FitCloud shared]loginDevice:^(FCAuthDataHandler authDataHandler) {
         if (authDataHandler) {
-            authDataHandler(100,0x02,0x01);
+            authDataHandler(100,0x01,0x02,0x01);
         }
     } retHandler:^(FCSyncType syncType, FCSyncResponseState state) {
-        if (syncType == FCSyncTypeLoginDevice && state != FCSyncResponseStateSuccess) {
-            NSLog(@"--登录失败--");
+        if (syncType == FCSyncTypeLoginToSyncTime) {
+            NSLog(@"--同步完成--");
         }
         else
         {
-            NSLog(@"--同步完成--");
+            NSLog(@"--登录失败---");
         }
     }];
     
@@ -436,6 +433,7 @@
 }
 
 #pragma mark - 通知设置
+
 - (void)updateNotificationSettings
 {
     FCNotificationModel *aModel = [[FCNotificationModel alloc]init];

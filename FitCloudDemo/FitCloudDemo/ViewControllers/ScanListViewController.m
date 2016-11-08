@@ -9,9 +9,7 @@
 #import "ScanListViewController.h"
 #import "Macro.h"
 #import "NSObject+HUD.h"
-#import <FCDataHandler.h>
-#import <FCConstants.h>
-#import <FitCloud.h>
+#import <FitCloudKit.h>
 #import "FitCloud+Category.h"
 
 
@@ -62,7 +60,7 @@
     [self changeLoadingWithMessage:@"正在绑定设备"];
     [[FitCloud shared]bondDevice:^(FCAuthDataHandler authDataHandler, FCUserDataHandler userDataHandler, FCWearStyleHandler wearStyleHandler) {
         if (authDataHandler) {
-            authDataHandler(100,0x02,0x01);
+            authDataHandler(100,0x01,0x02,0x01);
         }
         if (userDataHandler) {
             userDataHandler(1,29,63*2,183*2);
@@ -75,10 +73,14 @@
         if (data)
         {
             //
-            [FCDataHandler divideSystemSettingData:data retHandler:^(NSData *msgNFData, NSData *displayData, NSData *fcSwitchData, NSData *versionData, NSData *monitorData, NSData *longSitData, NSData *bpData, NSData *drinkData) {
+            [FitCloudUtils resolveSystemSettingsData:data withCallbackBlock:^(NSData *notificationData, NSData *screenDisplayData, NSData *functionalSwitchData, NSData *hsVersionData, NSData *healthHistorymonitorData, NSData *longSitData, NSData *bloodPressureData, NSData *drinkWaterReminderData) {
                 
-                //
-                [FCDataHandler divideVersionData:data retHandler:^(NSData *projData, NSData *hardwareData, NSData *sdkData, NSData *patchData, NSData *flashData, NSData *fwAppData, NSData *seqData) {
+                
+                [FitCloudUtils resolveHardwareAndSoftwareVersionData:hsVersionData withCallbackBlock:^(NSData *projData, NSData *hardwareData, NSData *sdkData, NSData *patchData, NSData *flashData, NSData *fwAppData, NSData *seqData) {
+                    
+                }];
+                
+                [FitCloudUtils resolveHardwareAndSoftwareVersionDataToString:hsVersionData withCallbackBlock:^(NSString *projNum, NSString *hardware, NSString *sdkVersion, NSString *patchVerson, NSString *falshVersion, NSString *appVersion, NSString *serialNum) {
                     
                 }];
             }];

@@ -87,6 +87,8 @@ typedef NS_ENUM(NSInteger, FCSyncType) {
     FCSyncTypeFirmwareVersion = 50,
     /*! Found my cell phone.*/
     FCSyncTypeFoundMyCellPhone = 51,
+    /*! Get the MAC address of the watch*/
+    FCSyncTypeGetMacAddress = 52,
     /*! Finished*/
     FCSyncTypeEnd = 100,
 };
@@ -172,22 +174,23 @@ typedef void (^FCUserDataHandler)(UInt32 sex, UInt32 age, UInt32 weight, UInt32 
 
 
 /**
- 手表穿戴方式
+ A block is used to set the wear mode
 
- @param lefthHand 是否是左手佩戴
+ @param lefthHand Whether it is left-handed
  */
 typedef void (^FCWearStyleHandler)(BOOL lefthHand);
 
 
 
 /**
- 登录、绑定所需用户和手机信息回调
+ A Block is used to log in and bind the watch to set the user ID and phone information
 
- @param guestId 用户唯一id
- @param mode    手机系统版本
- @param os      手机系统类型
+ @param guestId     The user's unique id
+ @param phone       Phone type, such as Samsung
+ @param phoneModel  Phone models, such as Samsung s6
+ @param OS          The operating system version of the phone
  */
-typedef void (^FCAuthDataHandler)(UInt64 guestId, UInt8 mode, UInt8 os);
+typedef void (^FCAuthDataHandler)(UInt64 guestId, UInt8 phone, UInt8 phoneModel, UInt8 OS);
 
 
 /**
@@ -265,61 +268,6 @@ typedef void (^FCRTSyncDataHandler)(NSData *data);
  *  @param chargingState 充电状态
  */
 typedef void (^FCSyncPowerAndChargingStateHandler)(UInt8 powerValue, UInt8 chargingState);
-
-
-/**
- *  手环系统配置信息回调
- *
- *  @param msgNFData    消息通知开关 4byte
- *  @param displayData  手环显示配置 2byte
- *  @param fcSwitchData 功能开关配置 2byte
- *  @param versionData  软硬件版本信息配置 32byte
- *  @param monitorData  健康实时监测配置 5byte
- *  @param longSitData  久坐提醒配置 5byte
- *  @param bpData       默认血压配置 2byte
- *  @param drinkData    喝水提醒配置 1byte
- */
-typedef void (^FCSysSettingDataHandler)(NSData *msgNFData, NSData *displayData,NSData *fcSwitchData,NSData *versionData,NSData *monitorData,NSData *longSitData,NSData *bpData,NSData *drinkData);
-
-
-/**
- *  手环软硬件版本信息回调
- *
- *  @param projData     项目号 6byte
- *  @param hardwareData 硬件号 4byte
- *  @param sdkData      sdk版本号 4byte
- *  @param patchData    软件patch版本号 6byte
- *  @param flashData    flash版本号 4byte
- *  @param fwAppData    固件app版本号 4byte
- *  @param seqData      序号 4byte
- */
-typedef void (^FCVersionDataHandler)(NSData *projData,NSData *hardwareData,NSData *sdkData,NSData *patchData,NSData *flashData,NSData *fwAppData,NSData *seqData);
-
-
-/*!
- * @discussion  手环软硬件版本信息字符串回调
- *
- *  @param projNum       项目号
- *  @param hardware      硬件号
- *  @param sdkVersion    sdk版本号
- *  @param patchVerson   软件patch版本号
- *  @param falshVersion  flash版本号
- *  @param appVersion    固件app版本号
- *  @param serialNum     序号
- */
-typedef void (^FCVersionStringHandler)(NSString *projNum,NSString *hardware,NSString *sdkVersion,NSString *patchVerson,NSString *falshVersion,NSString *appVersion,NSString *serialNum);
-
-
-/*!
- * @discussion 每日运动总数据结果回调
- * @param steps        日总运动步数
- * @param distance     日总运动距离
- * @param calorie      日总运动卡路里
- * @param dSleepTime   日总共深睡眠时间
- * @param lSleepTime   日总浅睡眠时间
- * @param avgHeartRate 平均心率
- */
-typedef void (^FCTotalDailyDataHandler)(UInt32 steps, UInt32 distance, UInt32 calorie, UInt32 dSleepTime, UInt32 lSleepTime,UInt32 avgHeartRate);
 
 
 #endif /* FCDefine_h */

@@ -6,7 +6,7 @@
 //  Copyright © 2016年 马远征. All rights reserved.
 //
 
-#import "FitCloud.h"
+#import <FitCloudKit.h>
 
 @interface FitCloud (Category)
 // 存储绑定数据

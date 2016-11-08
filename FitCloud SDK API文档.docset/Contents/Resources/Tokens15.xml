@@ -34,7 +34,7 @@
 			<Abstract type="html">Combines a set of alarm clock models into alarm clock data</Abstract>
 			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
 			
-			<Declaration>+ (NSData *)alarmClockConfigurationData</Declaration>
+			<Declaration>- (NSData *)alarmClockConfigurationData</Declaration>
 			
 			<ReturnValue><Abstract type="html">Alarm clock data according to Bluetooth protocol standard</Abstract></ReturnValue>
 			<Anchor>//api/name/alarmClockConfigurationData</Anchor>

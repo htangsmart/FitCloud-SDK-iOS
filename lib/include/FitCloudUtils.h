@@ -160,5 +160,5 @@
 
  @return Alarm clock data according to Bluetooth protocol standard
  */
-+ (NSData*)alarmClockConfigurationData;
+- (NSData*)alarmClockConfigurationData;
 @end

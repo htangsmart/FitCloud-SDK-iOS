@@ -8,12 +8,11 @@
 
 #import "DailyAlarmClockController.h"
 #import "Macro.h"
-#import <FitCloud.h>
 #import "NSObject+HUD.h"
-#import "FCObject.h"
-#import "FCDataHandler.h"
 #import "FCAlarmModel+Category.h"
 #import "AlarmClockCell.h"
+#import <FitCloudKit.h>
+
 
 
 @interface DailyAlarmClockController () <UITableViewDataSource,UITableViewDelegate>
@@ -133,7 +132,7 @@
     [self.listArray addObject:aModel7];
     [self.tableView reloadData];
     
-    NSData *alarmData = [FCDataHandler convertModelsToAlarmData:self.listArray];
+    NSData *alarmData = [self.listArray alarmClockConfigurationData];
     WS(ws);
     [self showLoadingHUDWithMessage:@"正在同步"];
     [[FitCloud shared]fcSetAlarmData:alarmData retHandler:^(FCSyncType syncType, FCSyncResponseState state) {
@@ -161,7 +160,7 @@
     [self showLoadingHUDWithMessage:@"正在同步"];
     [[FitCloud shared]fcGetAlarmList:^(FCSyncType syncType, NSData *data) {
         NSLog(@"--data--%@",data);
-        NSArray *modelsArray = [FCDataHandler convertAlarmDataToModels:data];
+        NSArray *modelsArray = [NSArray arrayWithAlarmClockConfigurationData:data];
         [modelsArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             if (obj && [obj isKindOfClass:[FCAlarmModel class]]) {
                 FCAlarmModel *aModel = (FCAlarmModel*)obj;

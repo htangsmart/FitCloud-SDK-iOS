@@ -8,9 +8,8 @@
 
 #import "SyncHistoryViewController.h"
 #import "NSObject+HUD.h"
-#import "FitCloud.h"
+#import <FitCloudKit.h>
 #import "Macro.h"
-#import "FCDataHandler.h"
 
 
 @interface SyncHistoryViewController ()
@@ -42,17 +41,17 @@
         NSLog(@"--syncType--%@",@(syncType));
     } dataHandler:^(FCSyncType syncType, NSData *data) {
         if (syncType == FCSyncTypeExercise) {
-            NSArray *array = [FCDataHandler convertSportsDataToModels:data];
+            NSArray *array = [FitCloudUtils resolveExerciseDataIntoModelObjects:data];
             NSLog(@"--array--%@",array);
         }
         else if (syncType == FCSyncTypeSleep)
         {
-            NSArray *array = [FCDataHandler convertSleepDataToModels:data];
+            NSArray *array = [FitCloudUtils resolveSleepDataIntoModelObjects:data];
             NSLog(@"--array--%@",array);
         }
         else if (syncType == FCSyncTypeHeartRate)
         {
-            NSArray *array = [FCDataHandler convertHeartRateDataToModels:data];
+            NSArray *array = [FitCloudUtils resolveHeartRateDataIntoModelObjects:data];
             NSLog(@"--array--%@",array);
         }
         else if (syncType == FCSyncTypeBloodOxygen)

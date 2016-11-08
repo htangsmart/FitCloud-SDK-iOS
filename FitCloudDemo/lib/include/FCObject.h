@@ -10,6 +10,8 @@
 
 #import <Foundation/Foundation.h>
 
+
+
 #pragma mark - FCAlarmCycleModel
 
 /*!
@@ -60,6 +62,8 @@
  */
 - (NSNumber*)cycleValue;
 @end
+
+
 
 
 
@@ -118,6 +122,9 @@
  */
 - (NSData*)alarmData;
 @end
+
+
+
 
 
 #pragma mark - FCDisplayModel
@@ -193,6 +200,9 @@
  */
 - (NSData*)displayData;
 @end
+
+
+
 
 
 #pragma mark - FCNotificationModel
@@ -299,6 +309,9 @@
 - (NSData*)nfSettingData;
 @end
 
+
+
+
 #pragma mark -  FCFunctionSwitchModel
 /*!
  * @class FCFunctionSwitchModel
@@ -322,6 +335,9 @@
  */
 - (NSData*)functionSwitchData;
 @end
+
+
+
 
 
 #pragma mark - FCLongSitModel
@@ -372,6 +388,9 @@
 @end
 
 
+
+
+
 #pragma mark - FCHealthMonitoringModel
 /*!
  * @class FCRTHealthModel
@@ -405,6 +424,10 @@
  */
 - (NSData*)healthMonitoringData;
 @end
+
+
+
+
 
 
 #pragma mark - FCHardwareNumModel 
@@ -445,6 +468,11 @@
 + (instancetype)modelWithData:(NSData*)data;
 @end
 
+
+
+
+
+
 #pragma mark - FCExerciseModel
 /*!
  * @class FCExerciseModel
@@ -473,7 +501,11 @@
  * @property stepCount
  */
 @property (nonatomic, strong) NSNumber *stepCount;
+
+
 @end
+
+
 
 
 
@@ -508,6 +540,7 @@
 @end
 
 
+
 #pragma mark - FCHealthModel
 /*!
  * @class FCHealthModel
@@ -537,3 +570,54 @@
  */
 @property (nonatomic, strong) NSNumber *heartRate; 
 @end
+
+
+
+#pragma mark - FCSystemSettingsModel
+/*!
+ * @class FCSystemSettingsModel
+ * @discussion System setting data model
+ */
+@interface FCSystemSettingsModel : NSObject
+/*!
+ * @property notificationData
+ * @discussion notification switch settings data
+ */
+@property (nonatomic, strong) NSData *notificationData;
+/*!
+ * @property screenDisplayData
+ * @discussion screen display settings data
+ */
+@property (nonatomic, strong) NSData *screenDisplayData;
+/*!
+ * @property functionalSwitchData
+ * @discussion functional switch data
+ */
+@property (nonatomic, strong) NSData *functionalSwitchData;
+/*!
+ * @property softwareAndHardwareVersionData
+ * @discussion software and hardware version data
+ */
+@property (nonatomic, strong) NSData *softwareAndHardwareVersionData;
+/*!
+ * @property healthHistoryData
+ * @discussion health history monitoring settings data
+ */
+@property (nonatomic, strong) NSData *healthHistoryData;
+/*!
+ * @property longSitReminderData
+ * @discussion Sedentary reminder settings data
+ */
+@property (nonatomic, strong) NSData *longSitReminderData;
+/*!
+ * @property defaultBloodPressureData
+ * @discussion Default blood pressure, including systolic and diastolic blood pressure
+ */
+@property (nonatomic, strong) NSData *defaultBloodPressureData;
+/*!
+ * @property drinkWaterReminderData
+ * @discussion drink water reminder data,contains a bool value
+ */
+@property (nonatomic, strong) NSData *drinkWaterReminderData;
+@end
+
