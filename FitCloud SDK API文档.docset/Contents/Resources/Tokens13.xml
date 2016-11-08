@@ -501,6 +501,26 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcGetMacAddress:retHandler:</TokenIdentifier>
+			<Abstract type="html">Get the MAC address of the watch</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcGetMacAddress:(FCSyncDataHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>dataHandler</Name>
+					<Abstract type="html">MAC address data callback block</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">Synchronous result callback block</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcGetMacAddress:retHandler:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcGetSystemSetting:retHandler:</TokenIdentifier>
 			<Abstract type="html">Gets the system settings</Abstract>
 			<DeclaredIn>FitCloud.h</DeclaredIn>
@@ -868,11 +888,11 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/upgradeWithFilePath:progress:retHandler:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcUpdateFirmwareWithPath:progress:retHandler:</TokenIdentifier>
 			<Abstract type="html">Firmware upgrade</Abstract>
 			<DeclaredIn>FitCloud.h</DeclaredIn>
 			
-			<Declaration>- (void)upgradeWithFilePath:(NSString *)filePath progress:(FCProgressHandler)progressHandler retHandler:(FCSyncResultHandler)retHandler</Declaration>
+			<Declaration>- (void)fcUpdateFirmwareWithPath:(NSString *)filePath progress:(FCProgressHandler)progressHandler retHandler:(FCSyncResultHandler)retHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>filePath</Name>
@@ -886,7 +906,7 @@
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/upgradeWithFilePath:progress:retHandler:</Anchor>
+			<Anchor>//api/name/fcUpdateFirmwareWithPath:progress:retHandler:</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		

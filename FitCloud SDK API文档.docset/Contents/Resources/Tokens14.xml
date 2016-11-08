@@ -1,67 +1,179 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/FCRTSyncType.html">
+	<File path="Classes/FitCloudUtils.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/FCRTSyncType</TokenIdentifier>
-			<Abstract type="html">@enum FCRTSyncType</Abstract>
-			<DeclaredIn>FCDefine.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/FitCloudUtils</TokenIdentifier>
+			<Abstract type="html">@class FitCloudUtils</Abstract>
+			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
             
 			
 			<NodeRef refid="14"/>
 		</Token>
 		
 		
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeNone</TokenIdentifier>
-            <Abstract type="html">The default type</Abstract>
-            <Declaration>FCRTSyncTypeNone</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/resolveSystemSettingsData:withCallbackBlock:</TokenIdentifier>
+			<Abstract type="html">The system setting data is divided into detailed setting data</Abstract>
+			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
+			
+			<Declaration>+ (BOOL)resolveSystemSettingsData:(NSData *)data withCallbackBlock:(FCSystemSettingDataBlock)block</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">system setting data</Abstract>
+				</Parameter><Parameter>
+					<Name>block</Name>
+					<Abstract type="html">The resulting callback block</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">if data is &lt;i&gt;nil&lt;/i&gt;,return &lt;i&gt;NO&lt;/i&gt;</Abstract></ReturnValue>
+			<Anchor>//api/name/resolveSystemSettingsData:withCallbackBlock:</Anchor>
             <NodeRef refid="14"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeHeartRate</TokenIdentifier>
-            <Abstract type="html">Heart rate real-time synchronization</Abstract>
-            <Declaration>FCRTSyncTypeHeartRate</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/resolveHardwareAndSoftwareVersionDataToString:withCallbackBlock:</TokenIdentifier>
+			<Abstract type="html">Divide the hardware and software version information data into detailed data</Abstract>
+			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
+			
+			<Declaration>+ (BOOL)resolveHardwareAndSoftwareVersionDataToString:(NSData *)data withCallbackBlock:(FCHardwareAndSoftwareVersionStringBlock)block</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">hardware and software version information data</Abstract>
+				</Parameter><Parameter>
+					<Name>block</Name>
+					<Abstract type="html">The resulting callback block</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">if data is &lt;i&gt;nil&lt;/i&gt;,return &lt;i&gt;NO&lt;/i&gt;</Abstract></ReturnValue>
+			<Anchor>//api/name/resolveHardwareAndSoftwareVersionDataToString:withCallbackBlock:</Anchor>
             <NodeRef refid="14"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeBloodOxygen</TokenIdentifier>
-            <Abstract type="html">Blood oxygen real-time synchronization步</Abstract>
-            <Declaration>FCRTSyncTypeBloodOxygen</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/resolveHardwareAndSoftwareVersionData:withCallbackBlock:</TokenIdentifier>
+			<Abstract type="html">Divide the hardware and software version information data into detailed data and parse the detailed data into strings</Abstract>
+			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
+			
+			<Declaration>+ (BOOL)resolveHardwareAndSoftwareVersionData:(NSData *)data withCallbackBlock:(FCHardwareAndSoftwareVersionDataBlock)block</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">hardware and software version information data</Abstract>
+				</Parameter><Parameter>
+					<Name>block</Name>
+					<Abstract type="html">The resulting callback block</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">if data is &lt;i&gt;nil&lt;/i&gt;,return &lt;i&gt;NO&lt;/i&gt;</Abstract></ReturnValue>
+			<Anchor>//api/name/resolveHardwareAndSoftwareVersionData:withCallbackBlock:</Anchor>
             <NodeRef refid="14"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeBloodPressure</TokenIdentifier>
-            <Abstract type="html">Blood pressure real-time synchronization</Abstract>
-            <Declaration>FCRTSyncTypeBloodPressure</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/resolveExerciseDataIntoDictionaryObjects:</TokenIdentifier>
+			<Abstract type="html">Convert sports data to an array containing dictionary objects,Each record contains five minutes of data</Abstract>
+			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)resolveExerciseDataIntoDictionaryObjects:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The sports data to be converted</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a list of &lt;code&gt;NSDictionary&lt;/code&gt; objects</Abstract></ReturnValue>
+			<Anchor>//api/name/resolveExerciseDataIntoDictionaryObjects:</Anchor>
             <NodeRef refid="14"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeBreathingRate</TokenIdentifier>
-            <Abstract type="html">Respiratory rate real-time synchronization</Abstract>
-            <Declaration>FCRTSyncTypeBreathingRate</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/resolveExerciseDataIntoModelObjects:</TokenIdentifier>
+			<Abstract type="html">Convert sports data to an array containing dictionary objects,Each record contains five minutes of data</Abstract>
+			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)resolveExerciseDataIntoModelObjects:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The sports data to be converted</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a list of &lt;code&gt;FCExerciseModel&lt;/code&gt; objects</Abstract></ReturnValue>
+			<Anchor>//api/name/resolveExerciseDataIntoModelObjects:</Anchor>
             <NodeRef refid="14"/>
-        </Token>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/resolveSleepDataIntoDictionaryObjects:</TokenIdentifier>
+			<Abstract type="html">Convert sleep data to an array containing dictionary objects,Each record contains five minutes of data</Abstract>
+			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)resolveSleepDataIntoDictionaryObjects:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The sleep data to be converted</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a list of &lt;code&gt;NSDictionary&lt;/code&gt; objects</Abstract></ReturnValue>
+			<Anchor>//api/name/resolveSleepDataIntoDictionaryObjects:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/resolveSleepDataIntoModelObjects:</TokenIdentifier>
+			<Abstract type="html">Convert sleep data to an array containing the model objects,Each record contains five minutes of data</Abstract>
+			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)resolveSleepDataIntoModelObjects:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The sleep data to be converted</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a list of &lt;code&gt;FCSleepModel&lt;/code&gt; objects</Abstract></ReturnValue>
+			<Anchor>//api/name/resolveSleepDataIntoModelObjects:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/resolveHeartRateDataIntoDictionaryObjects:</TokenIdentifier>
+			<Abstract type="html">Convert heart rate data to an array containing dictionary objects,Each record contains five minutes of data</Abstract>
+			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)resolveHeartRateDataIntoDictionaryObjects:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The heart rate data to be converted</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a list of &lt;code&gt;NSDictionary&lt;/code&gt; objects</Abstract></ReturnValue>
+			<Anchor>//api/name/resolveHeartRateDataIntoDictionaryObjects:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/resolveHeartRateDataIntoModelObjects:</TokenIdentifier>
+			<Abstract type="html">Convert heart rate data to an array containing the model objects,Each record contains five minutes of data</Abstract>
+			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)resolveHeartRateDataIntoModelObjects:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The heart rate data to be converted</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a list of &lt;code&gt;FCHealthModel&lt;/code&gt; objects</Abstract></ReturnValue>
+			<Anchor>//api/name/resolveHeartRateDataIntoModelObjects:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
         
         
 	</File>

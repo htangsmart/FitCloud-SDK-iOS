@@ -1,117 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/FCSyncResponseState.html">
+	<File path="Categories/NSArray+Utils.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/FCSyncResponseState</TokenIdentifier>
-			<Abstract type="html">@enum FCSyncResponseState</Abstract>
-			<DeclaredIn>FCDefine.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cat/NSArray(Utils)</TokenIdentifier>
+			<Abstract type="html">@category NSArray</Abstract>
+			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
             
 			
 			<NodeRef refid="15"/>
 		</Token>
 		
 		
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateNone</TokenIdentifier>
-            <Abstract type="html">The default type</Abstract>
-            <Declaration>FCSyncResponseStateNone</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSArray/arrayWithAlarmClockConfigurationData:</TokenIdentifier>
+			<Abstract type="html">Convert alarm clock data to alarm clock models</Abstract>
+			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)arrayWithAlarmClockConfigurationData:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The alarm clock data to be converted</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a list of &lt;code&gt;FCAlarmObject&lt;/code&gt; objects, if data is &lt;i&gt;nil&lt;/i&gt;,return nil.</Abstract></ReturnValue>
+			<Anchor>//api/name/arrayWithAlarmClockConfigurationData:</Anchor>
             <NodeRef refid="15"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStatePowerOff</TokenIdentifier>
-            <Abstract type="html">Bluetooth is poweroff</Abstract>
-            <Declaration>FCSyncResponseStatePowerOff</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSArray/alarmClockConfigurationData</TokenIdentifier>
+			<Abstract type="html">Combines a set of alarm clock models into alarm clock data</Abstract>
+			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
+			
+			<Declaration>+ (NSData *)alarmClockConfigurationData</Declaration>
+			
+			<ReturnValue><Abstract type="html">Alarm clock data according to Bluetooth protocol standard</Abstract></ReturnValue>
+			<Anchor>//api/name/alarmClockConfigurationData</Anchor>
             <NodeRef refid="15"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateNotConnected</TokenIdentifier>
-            <Abstract type="html">Bluetooth is not connected</Abstract>
-            <Declaration>FCSyncResponseStateNotConnected</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="15"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateDisconnect</TokenIdentifier>
-            <Abstract type="html">Bluetooth disconnected</Abstract>
-            <Declaration>FCSyncResponseStateDisconnect</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="15"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateParameterError</TokenIdentifier>
-            <Abstract type="html">Parameter error</Abstract>
-            <Declaration>FCSyncResponseStateParameterError</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="15"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateSyncing</TokenIdentifier>
-            <Abstract type="html">Synchronizing data</Abstract>
-            <Declaration>FCSyncResponseStateSyncing</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="15"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateSuccess</TokenIdentifier>
-            <Abstract type="html">Synchronization succeeded</Abstract>
-            <Declaration>FCSyncResponseStateSuccess</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="15"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateError</TokenIdentifier>
-            <Abstract type="html">Synchronization failed</Abstract>
-            <Declaration>FCSyncResponseStateError</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="15"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateTimeOut</TokenIdentifier>
-            <Abstract type="html">Synchronization timeout</Abstract>
-            <Declaration>FCSyncResponseStateTimeOut</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="15"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateRTTimeOut</TokenIdentifier>
-            <Abstract type="html">Healthy real-time synchronization timeout</Abstract>
-            <Declaration>FCSyncResponseStateRTTimeOut</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="15"/>
-        </Token>
+		</Token>
+		
         
         
 	</File>

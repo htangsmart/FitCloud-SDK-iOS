@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/FCHardwareNumModel.html">
+	<File path="Classes/FCHealthModel.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/FCHardwareNumModel</TokenIdentifier>
-			<Abstract type="html">@class FCHardwareNumModel</Abstract>
+			<TokenIdentifier>//apple_ref/occ/cl/FCHealthModel</TokenIdentifier>
+			<Abstract type="html">@class FCHealthModel</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
             
 			
@@ -13,11 +13,155 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/setHeartRate:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/setYear:</TokenIdentifier>
+			<Abstract type="html">@property year</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *year</Declaration>
+			
+			
+			<Anchor>//api/name/year</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/year</TokenIdentifier>
+			<Abstract type="html">@property year</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *year</Declaration>
+			
+			
+			<Anchor>//api/name/year</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHealthModel/year</TokenIdentifier>
+			<Abstract type="html">@property year</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *year</Declaration>
+			
+			
+			<Anchor>//api/name/year</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/setMonth:</TokenIdentifier>
+			<Abstract type="html">@property month</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *month</Declaration>
+			
+			
+			<Anchor>//api/name/month</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/month</TokenIdentifier>
+			<Abstract type="html">@property month</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *month</Declaration>
+			
+			
+			<Anchor>//api/name/month</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHealthModel/month</TokenIdentifier>
+			<Abstract type="html">@property month</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *month</Declaration>
+			
+			
+			<Anchor>//api/name/month</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/setDay:</TokenIdentifier>
+			<Abstract type="html">@property day</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *day</Declaration>
+			
+			
+			<Anchor>//api/name/day</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/day</TokenIdentifier>
+			<Abstract type="html">@property day</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *day</Declaration>
+			
+			
+			<Anchor>//api/name/day</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHealthModel/day</TokenIdentifier>
+			<Abstract type="html">@property day</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *day</Declaration>
+			
+			
+			<Anchor>//api/name/day</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/setMinutes:</TokenIdentifier>
+			<Abstract type="html">@property minutes</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *minutes</Declaration>
+			
+			
+			<Anchor>//api/name/minutes</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/minutes</TokenIdentifier>
+			<Abstract type="html">@property minutes</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *minutes</Declaration>
+			
+			
+			<Anchor>//api/name/minutes</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHealthModel/minutes</TokenIdentifier>
+			<Abstract type="html">@property minutes</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *minutes</Declaration>
+			
+			
+			<Anchor>//api/name/minutes</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/setHeartRate:</TokenIdentifier>
 			<Abstract type="html">@property heartRate</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL heartRate</Declaration>
+			<Declaration>@property (nonatomic, strong) NSNumber *heartRate</Declaration>
 			
 			
 			<Anchor>//api/name/heartRate</Anchor>
@@ -25,11 +169,11 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/heartRate</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/heartRate</TokenIdentifier>
 			<Abstract type="html">@property heartRate</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL heartRate</Declaration>
+			<Declaration>@property (nonatomic, strong) NSNumber *heartRate</Declaration>
 			
 			
 			<Anchor>//api/name/heartRate</Anchor>
@@ -37,211 +181,14 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCHardwareNumModel/heartRate</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHealthModel/heartRate</TokenIdentifier>
 			<Abstract type="html">@property heartRate</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL heartRate</Declaration>
+			<Declaration>@property (nonatomic, strong) NSNumber *heartRate</Declaration>
 			
 			
 			<Anchor>//api/name/heartRate</Anchor>
-            <NodeRef refid="7"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/setUltraviolet:</TokenIdentifier>
-			<Abstract type="html">@property ultraviolet</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL ultraviolet</Declaration>
-			
-			
-			<Anchor>//api/name/ultraviolet</Anchor>
-            <NodeRef refid="7"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/ultraviolet</TokenIdentifier>
-			<Abstract type="html">@property ultraviolet</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL ultraviolet</Declaration>
-			
-			
-			<Anchor>//api/name/ultraviolet</Anchor>
-            <NodeRef refid="7"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCHardwareNumModel/ultraviolet</TokenIdentifier>
-			<Abstract type="html">@property ultraviolet</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL ultraviolet</Declaration>
-			
-			
-			<Anchor>//api/name/ultraviolet</Anchor>
-            <NodeRef refid="7"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/setWeather:</TokenIdentifier>
-			<Abstract type="html">@property weather</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL weather</Declaration>
-			
-			
-			<Anchor>//api/name/weather</Anchor>
-            <NodeRef refid="7"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/weather</TokenIdentifier>
-			<Abstract type="html">@property weather</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL weather</Declaration>
-			
-			
-			<Anchor>//api/name/weather</Anchor>
-            <NodeRef refid="7"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCHardwareNumModel/weather</TokenIdentifier>
-			<Abstract type="html">@property weather</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL weather</Declaration>
-			
-			
-			<Anchor>//api/name/weather</Anchor>
-            <NodeRef refid="7"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/setBloodOxygen:</TokenIdentifier>
-			<Abstract type="html">@property bloodOxygen</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL bloodOxygen</Declaration>
-			
-			
-			<Anchor>//api/name/bloodOxygen</Anchor>
-            <NodeRef refid="7"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/bloodOxygen</TokenIdentifier>
-			<Abstract type="html">@property bloodOxygen</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL bloodOxygen</Declaration>
-			
-			
-			<Anchor>//api/name/bloodOxygen</Anchor>
-            <NodeRef refid="7"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCHardwareNumModel/bloodOxygen</TokenIdentifier>
-			<Abstract type="html">@property bloodOxygen</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL bloodOxygen</Declaration>
-			
-			
-			<Anchor>//api/name/bloodOxygen</Anchor>
-            <NodeRef refid="7"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/setBloodPressure:</TokenIdentifier>
-			<Abstract type="html">@property bloodPressure</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL bloodPressure</Declaration>
-			
-			
-			<Anchor>//api/name/bloodPressure</Anchor>
-            <NodeRef refid="7"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/bloodPressure</TokenIdentifier>
-			<Abstract type="html">@property bloodPressure</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL bloodPressure</Declaration>
-			
-			
-			<Anchor>//api/name/bloodPressure</Anchor>
-            <NodeRef refid="7"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCHardwareNumModel/bloodPressure</TokenIdentifier>
-			<Abstract type="html">@property bloodPressure</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL bloodPressure</Declaration>
-			
-			
-			<Anchor>//api/name/bloodPressure</Anchor>
-            <NodeRef refid="7"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/setBreathingRate:</TokenIdentifier>
-			<Abstract type="html">@property breathingRate</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL breathingRate</Declaration>
-			
-			
-			<Anchor>//api/name/breathingRate</Anchor>
-            <NodeRef refid="7"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/breathingRate</TokenIdentifier>
-			<Abstract type="html">@property breathingRate</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL breathingRate</Declaration>
-			
-			
-			<Anchor>//api/name/breathingRate</Anchor>
-            <NodeRef refid="7"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCHardwareNumModel/breathingRate</TokenIdentifier>
-			<Abstract type="html">@property breathingRate</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL breathingRate</Declaration>
-			
-			
-			<Anchor>//api/name/breathingRate</Anchor>
-            <NodeRef refid="7"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FCHardwareNumModel/modelWithData:</TokenIdentifier>
-			<Abstract type="html">instantiate an model with the given data</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>+ (instancetype)modelWithData:(NSData *)data</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">The given data</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">an model of &lt;code&gt;FCHardwareNumModel&lt;/code&gt; object</Abstract></ReturnValue>
-			<Anchor>//api/name/modelWithData:</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		

@@ -9,9 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "FCDefine.h"
-#import "FCObject.h"
-#import "FCDataHandler.h"
-#import "FCConstants.h"
 
 
 /*!
@@ -376,15 +373,15 @@
                   retHandler:(FCSyncResultHandler)retHandler;
 
 /*!
- * @method upgradeWithFilePath:progress:retHandler:
+ * @method fcUpdateFirmwareWithPath:progress:retHandler:
  * @brief Firmware upgrade
  * @discussion Firmware upgrade interface, call this API bracelet will disconnect and enter the upgrade mode
  * @param filePath Firmware path
  * @param progressHandler Upgrade progress callback
  * @param retHandler Upgrade result callback
  */
-- (void)upgradeWithFilePath:(NSString*)filePath
-                   progress:(FCProgressHandler)progressHandler
-                 retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcUpdateFirmwareWithPath:(NSString*)filePath
+                        progress:(FCProgressHandler)progressHandler
+                      retHandler:(FCSyncResultHandler)retHandler;
 @end
 

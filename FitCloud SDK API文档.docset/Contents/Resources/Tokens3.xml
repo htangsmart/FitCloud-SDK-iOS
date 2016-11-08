@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/FCDataHandler.html">
+	<File path="Classes/FCDisplayModel.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/FCDataHandler</TokenIdentifier>
-			<Abstract type="html">@class FCDataHandler</Abstract>
-			<DeclaredIn>FCDataHandler.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/FCDisplayModel</TokenIdentifier>
+			<Abstract type="html">@class FCDisplayModel</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
             
 			
 			<NodeRef refid="3"/>
@@ -13,198 +13,427 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FCDataHandler/divideSystemSettingData:retHandler:</TokenIdentifier>
-			<Abstract type="html">Split system settings data</Abstract>
-			<DeclaredIn>FCDataHandler.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/setDateTime:</TokenIdentifier>
+			<Abstract type="html">@property dateTime</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>+ (void)divideSystemSettingData:(NSData *)data retHandler:(FCSysSettingDataHandler)retHandler</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL dateTime</Declaration>
+			
+			
+			<Anchor>//api/name/dateTime</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/dateTime</TokenIdentifier>
+			<Abstract type="html">@property dateTime</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL dateTime</Declaration>
+			
+			
+			<Anchor>//api/name/dateTime</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCDisplayModel/dateTime</TokenIdentifier>
+			<Abstract type="html">@property dateTime</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL dateTime</Declaration>
+			
+			
+			<Anchor>//api/name/dateTime</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/setStepCount:</TokenIdentifier>
+			<Abstract type="html">@property stepCount</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL stepCount</Declaration>
+			
+			
+			<Anchor>//api/name/stepCount</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/stepCount</TokenIdentifier>
+			<Abstract type="html">@property stepCount</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL stepCount</Declaration>
+			
+			
+			<Anchor>//api/name/stepCount</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCDisplayModel/stepCount</TokenIdentifier>
+			<Abstract type="html">@property stepCount</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL stepCount</Declaration>
+			
+			
+			<Anchor>//api/name/stepCount</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/setCalorie:</TokenIdentifier>
+			<Abstract type="html">@property calorie</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL calorie</Declaration>
+			
+			
+			<Anchor>//api/name/calorie</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/calorie</TokenIdentifier>
+			<Abstract type="html">@property calorie</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL calorie</Declaration>
+			
+			
+			<Anchor>//api/name/calorie</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCDisplayModel/calorie</TokenIdentifier>
+			<Abstract type="html">@property calorie</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL calorie</Declaration>
+			
+			
+			<Anchor>//api/name/calorie</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/setDistance:</TokenIdentifier>
+			<Abstract type="html">@property distance</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL distance</Declaration>
+			
+			
+			<Anchor>//api/name/distance</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/distance</TokenIdentifier>
+			<Abstract type="html">@property distance</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL distance</Declaration>
+			
+			
+			<Anchor>//api/name/distance</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCDisplayModel/distance</TokenIdentifier>
+			<Abstract type="html">@property distance</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL distance</Declaration>
+			
+			
+			<Anchor>//api/name/distance</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/setSleep:</TokenIdentifier>
+			<Abstract type="html">@property sleep</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL sleep</Declaration>
+			
+			
+			<Anchor>//api/name/sleep</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/sleep</TokenIdentifier>
+			<Abstract type="html">@property sleep</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL sleep</Declaration>
+			
+			
+			<Anchor>//api/name/sleep</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCDisplayModel/sleep</TokenIdentifier>
+			<Abstract type="html">@property sleep</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL sleep</Declaration>
+			
+			
+			<Anchor>//api/name/sleep</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/setHeartRate:</TokenIdentifier>
+			<Abstract type="html">@property heartRate</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL heartRate</Declaration>
+			
+			
+			<Anchor>//api/name/heartRate</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/heartRate</TokenIdentifier>
+			<Abstract type="html">@property heartRate</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL heartRate</Declaration>
+			
+			
+			<Anchor>//api/name/heartRate</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCDisplayModel/heartRate</TokenIdentifier>
+			<Abstract type="html">@property heartRate</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL heartRate</Declaration>
+			
+			
+			<Anchor>//api/name/heartRate</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/setBloodOxygen:</TokenIdentifier>
+			<Abstract type="html">@property bloodOxygen</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL bloodOxygen</Declaration>
+			
+			
+			<Anchor>//api/name/bloodOxygen</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/bloodOxygen</TokenIdentifier>
+			<Abstract type="html">@property bloodOxygen</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL bloodOxygen</Declaration>
+			
+			
+			<Anchor>//api/name/bloodOxygen</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCDisplayModel/bloodOxygen</TokenIdentifier>
+			<Abstract type="html">@property bloodOxygen</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL bloodOxygen</Declaration>
+			
+			
+			<Anchor>//api/name/bloodOxygen</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/setBloodPressure:</TokenIdentifier>
+			<Abstract type="html">@property bloodPressure</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL bloodPressure</Declaration>
+			
+			
+			<Anchor>//api/name/bloodPressure</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/bloodPressure</TokenIdentifier>
+			<Abstract type="html">@property bloodPressure</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL bloodPressure</Declaration>
+			
+			
+			<Anchor>//api/name/bloodPressure</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCDisplayModel/bloodPressure</TokenIdentifier>
+			<Abstract type="html">@property bloodPressure</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL bloodPressure</Declaration>
+			
+			
+			<Anchor>//api/name/bloodPressure</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/setWeatherForecast:</TokenIdentifier>
+			<Abstract type="html">@property weatherForecast</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL weatherForecast</Declaration>
+			
+			
+			<Anchor>//api/name/weatherForecast</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/weatherForecast</TokenIdentifier>
+			<Abstract type="html">@property weatherForecast</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL weatherForecast</Declaration>
+			
+			
+			<Anchor>//api/name/weatherForecast</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCDisplayModel/weatherForecast</TokenIdentifier>
+			<Abstract type="html">@property weatherForecast</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL weatherForecast</Declaration>
+			
+			
+			<Anchor>//api/name/weatherForecast</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/setFindPhone:</TokenIdentifier>
+			<Abstract type="html">@property findPhone</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL findPhone</Declaration>
+			
+			
+			<Anchor>//api/name/findPhone</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/findPhone</TokenIdentifier>
+			<Abstract type="html">@property findPhone</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL findPhone</Declaration>
+			
+			
+			<Anchor>//api/name/findPhone</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCDisplayModel/findPhone</TokenIdentifier>
+			<Abstract type="html">@property findPhone</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL findPhone</Declaration>
+			
+			
+			<Anchor>//api/name/findPhone</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/setDisplayId:</TokenIdentifier>
+			<Abstract type="html">@property displayId</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL displayId</Declaration>
+			
+			
+			<Anchor>//api/name/displayId</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/displayId</TokenIdentifier>
+			<Abstract type="html">@property displayId</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL displayId</Declaration>
+			
+			
+			<Anchor>//api/name/displayId</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCDisplayModel/displayId</TokenIdentifier>
+			<Abstract type="html">@property displayId</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL displayId</Declaration>
+			
+			
+			<Anchor>//api/name/displayId</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCDisplayModel/modelWithData:</TokenIdentifier>
+			<Abstract type="html">instantiate an display model with the given data</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)modelWithData:(NSData *)data</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>data</Name>
-					<Abstract type="html">System setting Data</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Processing result callback block</Abstract>
+					<Abstract type="html">The alarm clock data</Abstract>
 				</Parameter>
 			</Parameters>
-			
-			<Anchor>//api/name/divideSystemSettingData:retHandler:</Anchor>
+			<ReturnValue><Abstract type="html">an alarm clock model of &lt;code&gt;FCAlarmModel&lt;/code&gt; object</Abstract></ReturnValue>
+			<Anchor>//api/name/modelWithData:</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FCDataHandler/divideVersionData:retHandler:</TokenIdentifier>
-			<Abstract type="html">Split the hardware and software version data</Abstract>
-			<DeclaredIn>FCDataHandler.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/displayData</TokenIdentifier>
+			<Abstract type="html">Convert the display model to NSData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>+ (void)divideVersionData:(NSData *)versionData retHandler:(FCVersionDataHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>versionData</Name>
-					<Abstract type="html">Hardware and software version data</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Processing result callback block</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>- (NSData *)displayData</Declaration>
 			
-			<Anchor>//api/name/divideVersionData:retHandler:</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FCDataHandler/parseVersionData:retHandler:</TokenIdentifier>
-			<Abstract type="html">Parse the hardware and software version data</Abstract>
-			<DeclaredIn>FCDataHandler.h</DeclaredIn>
-			
-			<Declaration>+ (void)parseVersionData:(NSData *)versionData retHandler:(FCVersionStringHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>versionData</Name>
-					<Abstract type="html">Hardware and software version data</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Processing result callback block</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/parseVersionData:retHandler:</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FCDataHandler/convertAlarmDataToModels:</TokenIdentifier>
-			<Abstract type="html">Parse the alarm clock data</Abstract>
-			<DeclaredIn>FCDataHandler.h</DeclaredIn>
-			
-			<Declaration>+ (NSArray *)convertAlarmDataToModels:(NSData *)alarmData</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>alarmData</Name>
-					<Abstract type="html">alarm clock data</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">a list of &lt;code&gt;FCAlarmObject&lt;/code&gt; objects</Abstract></ReturnValue>
-			<Anchor>//api/name/convertAlarmDataToModels:</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FCDataHandler/convertModelsToAlarmData:</TokenIdentifier>
-			<Abstract type="html">Converts a list of alarm objects to NSData</Abstract>
-			<DeclaredIn>FCDataHandler.h</DeclaredIn>
-			
-			<Declaration>+ (NSData *)convertModelsToAlarmData:(NSArray *)array</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>array</Name>
-					<Abstract type="html">a list of &lt;code&gt;FCAlarmModel&lt;/code&gt; objects</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">Alarm data of NSData type</Abstract></ReturnValue>
-			<Anchor>//api/name/convertModelsToAlarmData:</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FCDataHandler/convertSportsDataToDictionarys:</TokenIdentifier>
-			<Abstract type="html">Convert sports data to an array containing dictionary objects,Each record contains five minutes of data</Abstract>
-			<DeclaredIn>FCDataHandler.h</DeclaredIn>
-			
-			<Declaration>+ (NSArray *)convertSportsDataToDictionarys:(NSData *)data</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">The sports data to be converted</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">a list of &lt;code&gt;NSDictionary&lt;/code&gt; objects</Abstract></ReturnValue>
-			<Anchor>//api/name/convertSportsDataToDictionarys:</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FCDataHandler/convertSportsDataToModels:</TokenIdentifier>
-			<Abstract type="html">Convert sports data to an array containing the model objects,Each record contains five minutes of data</Abstract>
-			<DeclaredIn>FCDataHandler.h</DeclaredIn>
-			
-			<Declaration>+ (NSArray *)convertSportsDataToModels:(NSData *)data</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">The sports data to be converted</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">a list of &lt;code&gt;FCExerciseModel&lt;/code&gt; objects</Abstract></ReturnValue>
-			<Anchor>//api/name/convertSportsDataToModels:</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FCDataHandler/convertSleepDataToDictionarys:</TokenIdentifier>
-			<Abstract type="html">Convert sleep data to an array containing dictionary objects,Each record contains five minutes of data</Abstract>
-			<DeclaredIn>FCDataHandler.h</DeclaredIn>
-			
-			<Declaration>+ (NSArray *)convertSleepDataToDictionarys:(NSData *)data</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">The sleep data to be converted</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">a list of &lt;code&gt;NSDictionary&lt;/code&gt; objects</Abstract></ReturnValue>
-			<Anchor>//api/name/convertSleepDataToDictionarys:</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FCDataHandler/convertSleepDataToModels:</TokenIdentifier>
-			<Abstract type="html">Convert sleep data to an array containing the model objects,Each record contains five minutes of data</Abstract>
-			<DeclaredIn>FCDataHandler.h</DeclaredIn>
-			
-			<Declaration>+ (NSArray *)convertSleepDataToModels:(NSData *)data</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">The sleep data to be converted</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">a list of &lt;code&gt;FCSleepModel&lt;/code&gt; objects</Abstract></ReturnValue>
-			<Anchor>//api/name/convertSleepDataToModels:</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FCDataHandler/convertHeartRateDataToDictionarys:</TokenIdentifier>
-			<Abstract type="html">Convert heart rate data to an array containing dictionary objects,Each record contains five minutes of data</Abstract>
-			<DeclaredIn>FCDataHandler.h</DeclaredIn>
-			
-			<Declaration>+ (NSArray *)convertHeartRateDataToDictionarys:(NSData *)data</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">The heart rate data to be converted</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">a list of &lt;code&gt;NSDictionary&lt;/code&gt; objects</Abstract></ReturnValue>
-			<Anchor>//api/name/convertHeartRateDataToDictionarys:</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FCDataHandler/convertHeartRateDataToModels:</TokenIdentifier>
-			<Abstract type="html">Convert heart rate data to an array containing the model objects,Each record contains five minutes of data</Abstract>
-			<DeclaredIn>FCDataHandler.h</DeclaredIn>
-			
-			<Declaration>+ (NSArray *)convertHeartRateDataToModels:(NSData *)data</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">The heart rate data to be converted</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">a list of &lt;code&gt;FCHealthModel&lt;/code&gt; objects</Abstract></ReturnValue>
-			<Anchor>//api/name/convertHeartRateDataToModels:</Anchor>
+			<ReturnValue><Abstract type="html">The converted data</Abstract></ReturnValue>
+			<Anchor>//api/name/displayData</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		

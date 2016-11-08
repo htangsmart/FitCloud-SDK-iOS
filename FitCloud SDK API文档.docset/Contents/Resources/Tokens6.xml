@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/FCFunctionSwitchModel.html">
+	<File path="Classes/FCHardwareNumModel.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/FCFunctionSwitchModel</TokenIdentifier>
-			<Abstract type="html">@class FCFunctionSwitchModel</Abstract>
+			<TokenIdentifier>//apple_ref/occ/cl/FCHardwareNumModel</TokenIdentifier>
+			<Abstract type="html">@class FCHardwareNumModel</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
             
 			
@@ -13,43 +13,223 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCFunctionSwitchModel/setTwLightScreen:</TokenIdentifier>
-			<Abstract type="html">@property twLightScreen</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/setHeartRate:</TokenIdentifier>
+			<Abstract type="html">@property heartRate</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL twLightScreen</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL heartRate</Declaration>
 			
 			
-			<Anchor>//api/name/twLightScreen</Anchor>
+			<Anchor>//api/name/heartRate</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCFunctionSwitchModel/twLightScreen</TokenIdentifier>
-			<Abstract type="html">@property twLightScreen</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/heartRate</TokenIdentifier>
+			<Abstract type="html">@property heartRate</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL twLightScreen</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL heartRate</Declaration>
 			
 			
-			<Anchor>//api/name/twLightScreen</Anchor>
+			<Anchor>//api/name/heartRate</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCFunctionSwitchModel/twLightScreen</TokenIdentifier>
-			<Abstract type="html">@property twLightScreen</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHardwareNumModel/heartRate</TokenIdentifier>
+			<Abstract type="html">@property heartRate</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL twLightScreen</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL heartRate</Declaration>
 			
 			
-			<Anchor>//api/name/twLightScreen</Anchor>
+			<Anchor>//api/name/heartRate</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FCFunctionSwitchModel/modelWithData:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/setUltraviolet:</TokenIdentifier>
+			<Abstract type="html">@property ultraviolet</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL ultraviolet</Declaration>
+			
+			
+			<Anchor>//api/name/ultraviolet</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/ultraviolet</TokenIdentifier>
+			<Abstract type="html">@property ultraviolet</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL ultraviolet</Declaration>
+			
+			
+			<Anchor>//api/name/ultraviolet</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHardwareNumModel/ultraviolet</TokenIdentifier>
+			<Abstract type="html">@property ultraviolet</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL ultraviolet</Declaration>
+			
+			
+			<Anchor>//api/name/ultraviolet</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/setWeather:</TokenIdentifier>
+			<Abstract type="html">@property weather</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL weather</Declaration>
+			
+			
+			<Anchor>//api/name/weather</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/weather</TokenIdentifier>
+			<Abstract type="html">@property weather</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL weather</Declaration>
+			
+			
+			<Anchor>//api/name/weather</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHardwareNumModel/weather</TokenIdentifier>
+			<Abstract type="html">@property weather</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL weather</Declaration>
+			
+			
+			<Anchor>//api/name/weather</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/setBloodOxygen:</TokenIdentifier>
+			<Abstract type="html">@property bloodOxygen</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL bloodOxygen</Declaration>
+			
+			
+			<Anchor>//api/name/bloodOxygen</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/bloodOxygen</TokenIdentifier>
+			<Abstract type="html">@property bloodOxygen</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL bloodOxygen</Declaration>
+			
+			
+			<Anchor>//api/name/bloodOxygen</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHardwareNumModel/bloodOxygen</TokenIdentifier>
+			<Abstract type="html">@property bloodOxygen</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL bloodOxygen</Declaration>
+			
+			
+			<Anchor>//api/name/bloodOxygen</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/setBloodPressure:</TokenIdentifier>
+			<Abstract type="html">@property bloodPressure</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL bloodPressure</Declaration>
+			
+			
+			<Anchor>//api/name/bloodPressure</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/bloodPressure</TokenIdentifier>
+			<Abstract type="html">@property bloodPressure</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL bloodPressure</Declaration>
+			
+			
+			<Anchor>//api/name/bloodPressure</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHardwareNumModel/bloodPressure</TokenIdentifier>
+			<Abstract type="html">@property bloodPressure</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL bloodPressure</Declaration>
+			
+			
+			<Anchor>//api/name/bloodPressure</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/setBreathingRate:</TokenIdentifier>
+			<Abstract type="html">@property breathingRate</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL breathingRate</Declaration>
+			
+			
+			<Anchor>//api/name/breathingRate</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHardwareNumModel/breathingRate</TokenIdentifier>
+			<Abstract type="html">@property breathingRate</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL breathingRate</Declaration>
+			
+			
+			<Anchor>//api/name/breathingRate</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHardwareNumModel/breathingRate</TokenIdentifier>
+			<Abstract type="html">@property breathingRate</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL breathingRate</Declaration>
+			
+			
+			<Anchor>//api/name/breathingRate</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCHardwareNumModel/modelWithData:</TokenIdentifier>
 			<Abstract type="html">instantiate an model with the given data</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
@@ -60,20 +240,8 @@
 					<Abstract type="html">The given data</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">an model of &lt;code&gt;FCFunctionSwitchModel&lt;/code&gt; object</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">an model of &lt;code&gt;FCHardwareNumModel&lt;/code&gt; object</Abstract></ReturnValue>
 			<Anchor>//api/name/modelWithData:</Anchor>
-            <NodeRef refid="6"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCFunctionSwitchModel/functionSwitchData</TokenIdentifier>
-			<Abstract type="html">Convert the display model to NSData</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>- (NSData *)functionSwitchData</Declaration>
-			
-			<ReturnValue><Abstract type="html">The converted display data type of NSData</Abstract></ReturnValue>
-			<Anchor>//api/name/functionSwitchData</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		

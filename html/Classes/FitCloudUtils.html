@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>FCDataHandler Class Reference</title>
+	<title>FitCloudUtils Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -58,27 +58,23 @@
 	
 	<optgroup label="Class Methods">
 		
-		<option value="//api/name/convertAlarmDataToModels:">+ convertAlarmDataToModels:</option>
+		<option value="//api/name/resolveExerciseDataIntoDictionaryObjects:">+ resolveExerciseDataIntoDictionaryObjects:</option>
 		
-		<option value="//api/name/convertHeartRateDataToDictionarys:">+ convertHeartRateDataToDictionarys:</option>
+		<option value="//api/name/resolveExerciseDataIntoModelObjects:">+ resolveExerciseDataIntoModelObjects:</option>
 		
-		<option value="//api/name/convertHeartRateDataToModels:">+ convertHeartRateDataToModels:</option>
+		<option value="//api/name/resolveHardwareAndSoftwareVersionData:withCallbackBlock:">+ resolveHardwareAndSoftwareVersionData:withCallbackBlock:</option>
 		
-		<option value="//api/name/convertModelsToAlarmData:">+ convertModelsToAlarmData:</option>
+		<option value="//api/name/resolveHardwareAndSoftwareVersionDataToString:withCallbackBlock:">+ resolveHardwareAndSoftwareVersionDataToString:withCallbackBlock:</option>
 		
-		<option value="//api/name/convertSleepDataToDictionarys:">+ convertSleepDataToDictionarys:</option>
+		<option value="//api/name/resolveHeartRateDataIntoDictionaryObjects:">+ resolveHeartRateDataIntoDictionaryObjects:</option>
 		
-		<option value="//api/name/convertSleepDataToModels:">+ convertSleepDataToModels:</option>
+		<option value="//api/name/resolveHeartRateDataIntoModelObjects:">+ resolveHeartRateDataIntoModelObjects:</option>
 		
-		<option value="//api/name/convertSportsDataToDictionarys:">+ convertSportsDataToDictionarys:</option>
+		<option value="//api/name/resolveSleepDataIntoDictionaryObjects:">+ resolveSleepDataIntoDictionaryObjects:</option>
 		
-		<option value="//api/name/convertSportsDataToModels:">+ convertSportsDataToModels:</option>
+		<option value="//api/name/resolveSleepDataIntoModelObjects:">+ resolveSleepDataIntoModelObjects:</option>
 		
-		<option value="//api/name/divideSystemSettingData:retHandler:">+ divideSystemSettingData:retHandler:</option>
-		
-		<option value="//api/name/divideVersionData:retHandler:">+ divideVersionData:retHandler:</option>
-		
-		<option value="//api/name/parseVersionData:retHandler:">+ parseVersionData:retHandler:</option>
+		<option value="//api/name/resolveSystemSettingsData:withCallbackBlock:">+ resolveSystemSettingsData:withCallbackBlock:</option>
 		
 	</optgroup>
 	
@@ -97,7 +93,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">FCDataHandler Class Reference</h1>
+					<h1 class="title">FitCloudUtils Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -106,7 +102,7 @@
 	<td>NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>FCDataHandler.h</td>
+	<td>FitCloudUtils.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -116,7 +112,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>@class FCDataHandler</p><p>This class is mainly used for data processing,Such as data segmentation, data analysis, model conversion and so on</p>
+						<p>@class FitCloudUtils</p><p>This class is mainly used for data analysis, type conversion and so on</p>
 					</div>
 					
 					
@@ -132,8 +128,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/divideSystemSettingData:retHandler:" title="divideSystemSettingData:retHandler:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/divideSystemSettingData:retHandler:">+&nbsp;divideSystemSettingData:retHandler:</a></code>
+	<a name="//api/name/resolveSystemSettingsData:withCallbackBlock:" title="resolveSystemSettingsData:withCallbackBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resolveSystemSettingsData:withCallbackBlock:">+&nbsp;resolveSystemSettingsData:withCallbackBlock:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -143,12 +139,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Split system settings data</p>
+				<p>The system setting data is divided into detailed setting data</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (void)divideSystemSettingData:(NSData *)<em>data</em> retHandler:(FCSysSettingDataHandler)<em>retHandler</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (BOOL)resolveSystemSettingsData:(NSData *)<em>data</em> withCallbackBlock:(FCSystemSettingDataBlock)<em>block</em></code></div>
 
 		    
 			
@@ -158,196 +154,12 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>data</code></th>
-						<td><p>System setting Data</p></td>
+						<td><p>system setting data</p></td>
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>retHandler</code></th>
-						<td><p>Processing result callback block</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<div class="warning"><p><strong>Warning:</strong> If the parameter is <i>nil</i>, no data is returned</p></div>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCDataHandler.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/divideVersionData:retHandler:" title="divideVersionData:retHandler:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/divideVersionData:retHandler:">+&nbsp;divideVersionData:retHandler:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Split the hardware and software version data</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (void)divideVersionData:(NSData *)<em>versionData</em> retHandler:(FCVersionDataHandler)<em>retHandler</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>versionData</code></th>
-						<td><p>Hardware and software version data</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>retHandler</code></th>
-						<td><p>Processing result callback block</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<div class="warning"><p><strong>Warning:</strong> If the parameter is null, no data is returned</p></div>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCDataHandler.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/parseVersionData:retHandler:" title="parseVersionData:retHandler:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/parseVersionData:retHandler:">+&nbsp;parseVersionData:retHandler:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Parse the hardware and software version data</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (void)parseVersionData:(NSData *)<em>versionData</em> retHandler:(FCVersionStringHandler)<em>retHandler</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>versionData</code></th>
-						<td><p>Hardware and software version data</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>retHandler</code></th>
-						<td><p>Processing result callback block</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<div class="warning"><p><strong>Warning:</strong> If the parameter is null, no data is returned</p></div>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCDataHandler.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/convertAlarmDataToModels:" title="convertAlarmDataToModels:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/convertAlarmDataToModels:">+&nbsp;convertAlarmDataToModels:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Parse the alarm clock data</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (NSArray *)convertAlarmDataToModels:(NSData *)<em>alarmData</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>alarmData</code></th>
-						<td><p>alarm clock data</p></td>
+						<th scope="row" class="argument-name"><code>block</code></th>
+						<td><p>The resulting callback block</p></td>
 					</tr>
 				
 				</table>
@@ -357,7 +169,7 @@
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>a list of <code>FCAlarmObject</code> objects</p>
+				<p>if data is <i>nil</i>,return <i>NO</i></p>
 			</div>
 			
 
@@ -372,15 +184,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCDataHandler.h</code></p>
+				<p><code class="declared-in-ref">FitCloudUtils.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/convertModelsToAlarmData:" title="convertModelsToAlarmData:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/convertModelsToAlarmData:">+&nbsp;convertModelsToAlarmData:</a></code>
+	<a name="//api/name/resolveHardwareAndSoftwareVersionDataToString:withCallbackBlock:" title="resolveHardwareAndSoftwareVersionDataToString:withCallbackBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resolveHardwareAndSoftwareVersionDataToString:withCallbackBlock:">+&nbsp;resolveHardwareAndSoftwareVersionDataToString:withCallbackBlock:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -390,12 +202,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Converts a list of alarm objects to NSData</p>
+				<p>Divide the hardware and software version information data into detailed data</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (NSData *)convertModelsToAlarmData:(NSArray *)<em>array</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (BOOL)resolveHardwareAndSoftwareVersionDataToString:(NSData *)<em>data</em> withCallbackBlock:(FCHardwareAndSoftwareVersionStringBlock)<em>block</em></code></div>
 
 		    
 			
@@ -404,8 +216,13 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>array</code></th>
-						<td><p>a list of <code>FCAlarmModel</code> objects</p></td>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>hardware and software version information data</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>block</code></th>
+						<td><p>The resulting callback block</p></td>
 					</tr>
 				
 				</table>
@@ -415,17 +232,12 @@
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>Alarm data of NSData type</p>
+				<p>if data is <i>nil</i>,return <i>NO</i></p>
 			</div>
 			
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<div class="warning"><p><strong>Warning:</strong> If the parameter is <i>nil</i>, returns <i>nil</i></p></div>
-			</div>
 			
 
 			
@@ -435,15 +247,78 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCDataHandler.h</code></p>
+				<p><code class="declared-in-ref">FitCloudUtils.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/convertSportsDataToDictionarys:" title="convertSportsDataToDictionarys:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/convertSportsDataToDictionarys:">+&nbsp;convertSportsDataToDictionarys:</a></code>
+	<a name="//api/name/resolveHardwareAndSoftwareVersionData:withCallbackBlock:" title="resolveHardwareAndSoftwareVersionData:withCallbackBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resolveHardwareAndSoftwareVersionData:withCallbackBlock:">+&nbsp;resolveHardwareAndSoftwareVersionData:withCallbackBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Divide the hardware and software version information data into detailed data and parse the detailed data into strings</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BOOL)resolveHardwareAndSoftwareVersionData:(NSData *)<em>data</em> withCallbackBlock:(FCHardwareAndSoftwareVersionDataBlock)<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>hardware and software version information data</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>block</code></th>
+						<td><p>The resulting callback block</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>if data is <i>nil</i>,return <i>NO</i></p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloudUtils.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/resolveExerciseDataIntoDictionaryObjects:" title="resolveExerciseDataIntoDictionaryObjects:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resolveExerciseDataIntoDictionaryObjects:">+&nbsp;resolveExerciseDataIntoDictionaryObjects:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -458,7 +333,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (NSArray *)convertSportsDataToDictionarys:(NSData *)<em>data</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (NSArray *)resolveExerciseDataIntoDictionaryObjects:(NSData *)<em>data</em></code></div>
 
 		    
 			
@@ -498,15 +373,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCDataHandler.h</code></p>
+				<p><code class="declared-in-ref">FitCloudUtils.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/convertSportsDataToModels:" title="convertSportsDataToModels:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/convertSportsDataToModels:">+&nbsp;convertSportsDataToModels:</a></code>
+	<a name="//api/name/resolveExerciseDataIntoModelObjects:" title="resolveExerciseDataIntoModelObjects:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resolveExerciseDataIntoModelObjects:">+&nbsp;resolveExerciseDataIntoModelObjects:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -516,12 +391,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Convert sports data to an array containing the model objects,Each record contains five minutes of data</p>
+				<p>Convert sports data to an array containing dictionary objects,Each record contains five minutes of data</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (NSArray *)convertSportsDataToModels:(NSData *)<em>data</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (NSArray *)resolveExerciseDataIntoModelObjects:(NSData *)<em>data</em></code></div>
 
 		    
 			
@@ -561,15 +436,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCDataHandler.h</code></p>
+				<p><code class="declared-in-ref">FitCloudUtils.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/convertSleepDataToDictionarys:" title="convertSleepDataToDictionarys:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/convertSleepDataToDictionarys:">+&nbsp;convertSleepDataToDictionarys:</a></code>
+	<a name="//api/name/resolveSleepDataIntoDictionaryObjects:" title="resolveSleepDataIntoDictionaryObjects:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resolveSleepDataIntoDictionaryObjects:">+&nbsp;resolveSleepDataIntoDictionaryObjects:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -584,7 +459,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (NSArray *)convertSleepDataToDictionarys:(NSData *)<em>data</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (NSArray *)resolveSleepDataIntoDictionaryObjects:(NSData *)<em>data</em></code></div>
 
 		    
 			
@@ -624,15 +499,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCDataHandler.h</code></p>
+				<p><code class="declared-in-ref">FitCloudUtils.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/convertSleepDataToModels:" title="convertSleepDataToModels:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/convertSleepDataToModels:">+&nbsp;convertSleepDataToModels:</a></code>
+	<a name="//api/name/resolveSleepDataIntoModelObjects:" title="resolveSleepDataIntoModelObjects:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resolveSleepDataIntoModelObjects:">+&nbsp;resolveSleepDataIntoModelObjects:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -647,7 +522,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (NSArray *)convertSleepDataToModels:(NSData *)<em>data</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (NSArray *)resolveSleepDataIntoModelObjects:(NSData *)<em>data</em></code></div>
 
 		    
 			
@@ -687,15 +562,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCDataHandler.h</code></p>
+				<p><code class="declared-in-ref">FitCloudUtils.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/convertHeartRateDataToDictionarys:" title="convertHeartRateDataToDictionarys:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/convertHeartRateDataToDictionarys:">+&nbsp;convertHeartRateDataToDictionarys:</a></code>
+	<a name="//api/name/resolveHeartRateDataIntoDictionaryObjects:" title="resolveHeartRateDataIntoDictionaryObjects:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resolveHeartRateDataIntoDictionaryObjects:">+&nbsp;resolveHeartRateDataIntoDictionaryObjects:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -710,7 +585,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (NSArray *)convertHeartRateDataToDictionarys:(NSData *)<em>data</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (NSArray *)resolveHeartRateDataIntoDictionaryObjects:(NSData *)<em>data</em></code></div>
 
 		    
 			
@@ -750,15 +625,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCDataHandler.h</code></p>
+				<p><code class="declared-in-ref">FitCloudUtils.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/convertHeartRateDataToModels:" title="convertHeartRateDataToModels:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/convertHeartRateDataToModels:">+&nbsp;convertHeartRateDataToModels:</a></code>
+	<a name="//api/name/resolveHeartRateDataIntoModelObjects:" title="resolveHeartRateDataIntoModelObjects:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resolveHeartRateDataIntoModelObjects:">+&nbsp;resolveHeartRateDataIntoModelObjects:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -773,7 +648,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (NSArray *)convertHeartRateDataToModels:(NSData *)<em>data</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (NSArray *)resolveHeartRateDataIntoModelObjects:(NSData *)<em>data</em></code></div>
 
 		    
 			
@@ -813,7 +688,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCDataHandler.h</code></p>
+				<p><code class="declared-in-ref">FitCloudUtils.h</code></p>
 			</div>
 			
 			
@@ -834,7 +709,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 H.Tang. All rights reserved. Updated: 2016-11-05</p>
+						<p class="copyright">Copyright &copy; 2016 H.Tang. All rights reserved. Updated: 2016-11-08</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

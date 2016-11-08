@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/FCSleepModel.html">
+	<File path="Classes/FCSystemSettingsModel.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/FCSleepModel</TokenIdentifier>
-			<Abstract type="html">@class FCSleepModel</Abstract>
+			<TokenIdentifier>//apple_ref/occ/cl/FCSystemSettingsModel</TokenIdentifier>
+			<Abstract type="html">@class FCSystemSettingsModel</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
             
 			
@@ -13,182 +13,290 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSleepModel/setYear:</TokenIdentifier>
-			<Abstract type="html">@property year</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setNotificationData:</TokenIdentifier>
+			<Abstract type="html">@property notificationData</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *year</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *notificationData</Declaration>
 			
 			
-			<Anchor>//api/name/year</Anchor>
+			<Anchor>//api/name/notificationData</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSleepModel/year</TokenIdentifier>
-			<Abstract type="html">@property year</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/notificationData</TokenIdentifier>
+			<Abstract type="html">@property notificationData</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *year</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *notificationData</Declaration>
 			
 			
-			<Anchor>//api/name/year</Anchor>
+			<Anchor>//api/name/notificationData</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCSleepModel/year</TokenIdentifier>
-			<Abstract type="html">@property year</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/notificationData</TokenIdentifier>
+			<Abstract type="html">@property notificationData</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *year</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *notificationData</Declaration>
 			
 			
-			<Anchor>//api/name/year</Anchor>
+			<Anchor>//api/name/notificationData</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSleepModel/setMonth:</TokenIdentifier>
-			<Abstract type="html">@property month</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setScreenDisplayData:</TokenIdentifier>
+			<Abstract type="html">@property screenDisplayData</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *month</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *screenDisplayData</Declaration>
 			
 			
-			<Anchor>//api/name/month</Anchor>
+			<Anchor>//api/name/screenDisplayData</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSleepModel/month</TokenIdentifier>
-			<Abstract type="html">@property month</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/screenDisplayData</TokenIdentifier>
+			<Abstract type="html">@property screenDisplayData</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *month</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *screenDisplayData</Declaration>
 			
 			
-			<Anchor>//api/name/month</Anchor>
+			<Anchor>//api/name/screenDisplayData</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCSleepModel/month</TokenIdentifier>
-			<Abstract type="html">@property month</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/screenDisplayData</TokenIdentifier>
+			<Abstract type="html">@property screenDisplayData</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *month</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *screenDisplayData</Declaration>
 			
 			
-			<Anchor>//api/name/month</Anchor>
+			<Anchor>//api/name/screenDisplayData</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSleepModel/setDay:</TokenIdentifier>
-			<Abstract type="html">@property day</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setFunctionalSwitchData:</TokenIdentifier>
+			<Abstract type="html">@property functionalSwitchData</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *day</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *functionalSwitchData</Declaration>
 			
 			
-			<Anchor>//api/name/day</Anchor>
+			<Anchor>//api/name/functionalSwitchData</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSleepModel/day</TokenIdentifier>
-			<Abstract type="html">@property day</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/functionalSwitchData</TokenIdentifier>
+			<Abstract type="html">@property functionalSwitchData</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *day</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *functionalSwitchData</Declaration>
 			
 			
-			<Anchor>//api/name/day</Anchor>
+			<Anchor>//api/name/functionalSwitchData</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCSleepModel/day</TokenIdentifier>
-			<Abstract type="html">@property day</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/functionalSwitchData</TokenIdentifier>
+			<Abstract type="html">@property functionalSwitchData</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *day</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *functionalSwitchData</Declaration>
 			
 			
-			<Anchor>//api/name/day</Anchor>
+			<Anchor>//api/name/functionalSwitchData</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSleepModel/setMinutes:</TokenIdentifier>
-			<Abstract type="html">@property minutes</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setSoftwareAndHardwareVersionData:</TokenIdentifier>
+			<Abstract type="html">@property softwareAndHardwareVersionData</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *minutes</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *softwareAndHardwareVersionData</Declaration>
 			
 			
-			<Anchor>//api/name/minutes</Anchor>
+			<Anchor>//api/name/softwareAndHardwareVersionData</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSleepModel/minutes</TokenIdentifier>
-			<Abstract type="html">@property minutes</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/softwareAndHardwareVersionData</TokenIdentifier>
+			<Abstract type="html">@property softwareAndHardwareVersionData</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *minutes</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *softwareAndHardwareVersionData</Declaration>
 			
 			
-			<Anchor>//api/name/minutes</Anchor>
+			<Anchor>//api/name/softwareAndHardwareVersionData</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCSleepModel/minutes</TokenIdentifier>
-			<Abstract type="html">@property minutes</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/softwareAndHardwareVersionData</TokenIdentifier>
+			<Abstract type="html">@property softwareAndHardwareVersionData</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *minutes</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *softwareAndHardwareVersionData</Declaration>
 			
 			
-			<Anchor>//api/name/minutes</Anchor>
+			<Anchor>//api/name/softwareAndHardwareVersionData</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSleepModel/setSleep:</TokenIdentifier>
-			<Abstract type="html">@property sleep</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setHealthHistoryData:</TokenIdentifier>
+			<Abstract type="html">@property healthHistoryData</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *sleep</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *healthHistoryData</Declaration>
 			
 			
-			<Anchor>//api/name/sleep</Anchor>
+			<Anchor>//api/name/healthHistoryData</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSleepModel/sleep</TokenIdentifier>
-			<Abstract type="html">@property sleep</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/healthHistoryData</TokenIdentifier>
+			<Abstract type="html">@property healthHistoryData</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *sleep</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *healthHistoryData</Declaration>
 			
 			
-			<Anchor>//api/name/sleep</Anchor>
+			<Anchor>//api/name/healthHistoryData</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCSleepModel/sleep</TokenIdentifier>
-			<Abstract type="html">@property sleep</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/healthHistoryData</TokenIdentifier>
+			<Abstract type="html">@property healthHistoryData</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *sleep</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *healthHistoryData</Declaration>
 			
 			
-			<Anchor>//api/name/sleep</Anchor>
+			<Anchor>//api/name/healthHistoryData</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setLongSitReminderData:</TokenIdentifier>
+			<Abstract type="html">@property longSitReminderData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSData *longSitReminderData</Declaration>
+			
+			
+			<Anchor>//api/name/longSitReminderData</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/longSitReminderData</TokenIdentifier>
+			<Abstract type="html">@property longSitReminderData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSData *longSitReminderData</Declaration>
+			
+			
+			<Anchor>//api/name/longSitReminderData</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/longSitReminderData</TokenIdentifier>
+			<Abstract type="html">@property longSitReminderData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSData *longSitReminderData</Declaration>
+			
+			
+			<Anchor>//api/name/longSitReminderData</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setDefaultBloodPressureData:</TokenIdentifier>
+			<Abstract type="html">@property defaultBloodPressureData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSData *defaultBloodPressureData</Declaration>
+			
+			
+			<Anchor>//api/name/defaultBloodPressureData</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/defaultBloodPressureData</TokenIdentifier>
+			<Abstract type="html">@property defaultBloodPressureData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSData *defaultBloodPressureData</Declaration>
+			
+			
+			<Anchor>//api/name/defaultBloodPressureData</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/defaultBloodPressureData</TokenIdentifier>
+			<Abstract type="html">@property defaultBloodPressureData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSData *defaultBloodPressureData</Declaration>
+			
+			
+			<Anchor>//api/name/defaultBloodPressureData</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setDrinkWaterReminderData:</TokenIdentifier>
+			<Abstract type="html">@property drinkWaterReminderData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSData *drinkWaterReminderData</Declaration>
+			
+			
+			<Anchor>//api/name/drinkWaterReminderData</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/drinkWaterReminderData</TokenIdentifier>
+			<Abstract type="html">@property drinkWaterReminderData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSData *drinkWaterReminderData</Declaration>
+			
+			
+			<Anchor>//api/name/drinkWaterReminderData</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/drinkWaterReminderData</TokenIdentifier>
+			<Abstract type="html">@property drinkWaterReminderData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSData *drinkWaterReminderData</Declaration>
+			
+			
+			<Anchor>//api/name/drinkWaterReminderData</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		

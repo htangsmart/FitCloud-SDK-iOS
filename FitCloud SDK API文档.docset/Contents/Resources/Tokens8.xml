@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/FCHealthModel.html">
+	<File path="Classes/FCHealthMonitoringModel.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/FCHealthModel</TokenIdentifier>
-			<Abstract type="html">@class FCHealthModel</Abstract>
+			<TokenIdentifier>//apple_ref/occ/cl/FCHealthMonitoringModel</TokenIdentifier>
+			<Abstract type="html">@class FCRTHealthModel</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
             
 			
@@ -13,182 +13,139 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/setYear:</TokenIdentifier>
-			<Abstract type="html">@property year</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/setIsOn:</TokenIdentifier>
+			<Abstract type="html">@property isOn</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *year</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL isOn</Declaration>
 			
 			
-			<Anchor>//api/name/year</Anchor>
+			<Anchor>//api/name/isOn</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/year</TokenIdentifier>
-			<Abstract type="html">@property year</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/isOn</TokenIdentifier>
+			<Abstract type="html">@property isOn</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *year</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL isOn</Declaration>
 			
 			
-			<Anchor>//api/name/year</Anchor>
+			<Anchor>//api/name/isOn</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCHealthModel/year</TokenIdentifier>
-			<Abstract type="html">@property year</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHealthMonitoringModel/isOn</TokenIdentifier>
+			<Abstract type="html">@property isOn</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *year</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL isOn</Declaration>
 			
 			
-			<Anchor>//api/name/year</Anchor>
+			<Anchor>//api/name/isOn</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/setMonth:</TokenIdentifier>
-			<Abstract type="html">@property month</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/setStMinute:</TokenIdentifier>
+			<Abstract type="html">@property stMinute</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *month</Declaration>
+			<Declaration>@property (nonatomic, assign) NSUInteger stMinute</Declaration>
 			
 			
-			<Anchor>//api/name/month</Anchor>
+			<Anchor>//api/name/stMinute</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/month</TokenIdentifier>
-			<Abstract type="html">@property month</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/stMinute</TokenIdentifier>
+			<Abstract type="html">@property stMinute</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *month</Declaration>
+			<Declaration>@property (nonatomic, assign) NSUInteger stMinute</Declaration>
 			
 			
-			<Anchor>//api/name/month</Anchor>
+			<Anchor>//api/name/stMinute</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCHealthModel/month</TokenIdentifier>
-			<Abstract type="html">@property month</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHealthMonitoringModel/stMinute</TokenIdentifier>
+			<Abstract type="html">@property stMinute</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *month</Declaration>
+			<Declaration>@property (nonatomic, assign) NSUInteger stMinute</Declaration>
 			
 			
-			<Anchor>//api/name/month</Anchor>
+			<Anchor>//api/name/stMinute</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/setDay:</TokenIdentifier>
-			<Abstract type="html">@property day</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/setEdMinute:</TokenIdentifier>
+			<Abstract type="html">@property edMinute</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *day</Declaration>
+			<Declaration>@property (nonatomic, assign) NSUInteger edMinute</Declaration>
 			
 			
-			<Anchor>//api/name/day</Anchor>
+			<Anchor>//api/name/edMinute</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/day</TokenIdentifier>
-			<Abstract type="html">@property day</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/edMinute</TokenIdentifier>
+			<Abstract type="html">@property edMinute</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *day</Declaration>
+			<Declaration>@property (nonatomic, assign) NSUInteger edMinute</Declaration>
 			
 			
-			<Anchor>//api/name/day</Anchor>
+			<Anchor>//api/name/edMinute</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCHealthModel/day</TokenIdentifier>
-			<Abstract type="html">@property day</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHealthMonitoringModel/edMinute</TokenIdentifier>
+			<Abstract type="html">@property edMinute</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *day</Declaration>
+			<Declaration>@property (nonatomic, assign) NSUInteger edMinute</Declaration>
 			
 			
-			<Anchor>//api/name/day</Anchor>
+			<Anchor>//api/name/edMinute</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/setMinutes:</TokenIdentifier>
-			<Abstract type="html">@property minutes</Abstract>
+			<TokenIdentifier>//apple_ref/occ/clm/FCHealthMonitoringModel/modelWithData:</TokenIdentifier>
+			<Abstract type="html">instantiate an model with the given data</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *minutes</Declaration>
-			
-			
-			<Anchor>//api/name/minutes</Anchor>
+			<Declaration>+ (instancetype)modelWithData:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The given data</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">an model of &lt;code&gt;FCHealthMonitoringModel&lt;/code&gt; object</Abstract></ReturnValue>
+			<Anchor>//api/name/modelWithData:</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/minutes</TokenIdentifier>
-			<Abstract type="html">@property minutes</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/healthMonitoringData</TokenIdentifier>
+			<Abstract type="html">Convert the model to NSData</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *minutes</Declaration>
+			<Declaration>- (NSData *)healthMonitoringData</Declaration>
 			
-			
-			<Anchor>//api/name/minutes</Anchor>
-            <NodeRef refid="8"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCHealthModel/minutes</TokenIdentifier>
-			<Abstract type="html">@property minutes</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSNumber *minutes</Declaration>
-			
-			
-			<Anchor>//api/name/minutes</Anchor>
-            <NodeRef refid="8"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/setHeartRate:</TokenIdentifier>
-			<Abstract type="html">@property heartRate</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSNumber *heartRate</Declaration>
-			
-			
-			<Anchor>//api/name/heartRate</Anchor>
-            <NodeRef refid="8"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/heartRate</TokenIdentifier>
-			<Abstract type="html">@property heartRate</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSNumber *heartRate</Declaration>
-			
-			
-			<Anchor>//api/name/heartRate</Anchor>
-            <NodeRef refid="8"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCHealthModel/heartRate</TokenIdentifier>
-			<Abstract type="html">@property heartRate</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSNumber *heartRate</Declaration>
-			
-			
-			<Anchor>//api/name/heartRate</Anchor>
+			<ReturnValue><Abstract type="html">The converted data</Abstract></ReturnValue>
+			<Anchor>//api/name/healthMonitoringData</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
