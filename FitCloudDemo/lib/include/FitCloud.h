@@ -368,11 +368,11 @@
 
 /*!
  * @method fcGetHistoryData:dataHandler:retHandler:
- * @brief Synchronize historical motion data
- * @discussion Synchronize different types of historical data，SyncStepHandler will return to the synchronization step multiple times，The dataHandler will return different types of historical data for synchronization
- * @param syncStepHandler Synchronization step callback
- * @param dataHandler     Synchronous data callback
- * @param retHandler Synchronous result callback
+ * @brief Synchronize historical data
+ * @discussion Synchronize historical data，including exercise, sleep, heart rate, blood oxygen, blood pressure and respiratory rate.
+ * @param syncStepHandler This block shows you which step to synchronizes，
+ * @param dataHandler     It returns a type of data that is synchronized,This Block is called multiple times.
+ * @param retHandler  It will be called when synchronization is completed or an error occurs.
  */
 - (void)fcGetHistoryData:(FCSyncStepHandler)syncStepHandler
              dataHandler:(FCSyncDataHandler)dataHandler
@@ -393,7 +393,7 @@
 /*!
  * @method fcUpdateFirmwareWithPath:progress:retHandler:
  * @brief Firmware upgrade
- * @discussion Firmware upgrade interface, call this API bracelet will disconnect and enter the upgrade mode
+ * @discussion Firmware upgrade interface, when calling this API peripherals will be disconnected and enter the firmware upgrade mode
  * @param filePath Firmware path
  * @param progressHandler Upgrade progress callback
  * @param retHandler Upgrade result callback

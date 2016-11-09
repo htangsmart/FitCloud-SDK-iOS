@@ -960,20 +960,20 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcGetHistoryData:dataHandler:retHandler:</TokenIdentifier>
-			<Abstract type="html">Synchronize historical motion data</Abstract>
+			<Abstract type="html">Synchronize historical data</Abstract>
 			<DeclaredIn>FitCloud.h</DeclaredIn>
 			
 			<Declaration>- (void)fcGetHistoryData:(FCSyncStepHandler)syncStepHandler dataHandler:(FCSyncDataHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>syncStepHandler</Name>
-					<Abstract type="html">Synchronization step callback</Abstract>
+					<Abstract type="html">This block shows you which step to synchronizes，</Abstract>
 				</Parameter><Parameter>
 					<Name>dataHandler</Name>
-					<Abstract type="html">Synchronous data callback</Abstract>
+					<Abstract type="html">It returns a type of data that is synchronized,This Block is called multiple times.</Abstract>
 				</Parameter><Parameter>
 					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
+					<Abstract type="html">It will be called when synchronization is completed or an error occurs.</Abstract>
 				</Parameter>
 			</Parameters>
 			

@@ -2414,7 +2414,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Synchronize historical motion data</p>
+				<p>Synchronize historical data</p>
 			</div>
 			
 		    
@@ -2429,17 +2429,17 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>syncStepHandler</code></th>
-						<td><p>Synchronization step callback</p></td>
+						<td><p>This block shows you which step to synchronizes，</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>dataHandler</code></th>
-						<td><p>Synchronous data callback</p></td>
+						<td><p>It returns a type of data that is synchronized,This Block is called multiple times.</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>retHandler</code></th>
-						<td><p>Synchronous result callback</p></td>
+						<td><p>It will be called when synchronization is completed or an error occurs.</p></td>
 					</tr>
 				
 				</table>
@@ -2453,7 +2453,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Synchronize different types of historical data，SyncStepHandler will return to the synchronization step multiple times，The dataHandler will return different types of historical data for synchronization</p>
+				<p>Synchronize historical data，including exercise, sleep, heart rate, blood oxygen, blood pressure and respiratory rate.</p>
 			</div>
 			
 
@@ -2584,7 +2584,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Firmware upgrade interface, call this API bracelet will <a href="#//api/name/disconnect">disconnect</a> and enter the upgrade mode</p>
+				<p>Firmware upgrade interface, when calling this API peripherals will be disconnected and enter the firmware upgrade mode</p>
 			</div>
 			
 
