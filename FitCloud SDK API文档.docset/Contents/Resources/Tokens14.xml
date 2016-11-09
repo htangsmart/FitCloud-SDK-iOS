@@ -73,6 +73,40 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/calorieWithStepCount:</TokenIdentifier>
+			<Abstract type="html">Calculate calories consumed by exercise</Abstract>
+			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
+			
+			<Declaration>+ (NSNumber *)calorieWithStepCount:(NSNumber *)stepCount</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>stepCount</Name>
+					<Abstract type="html">Number of steps</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">calorie in Kcal</Abstract></ReturnValue>
+			<Anchor>//api/name/calorieWithStepCount:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/distanceWithStepCount:</TokenIdentifier>
+			<Abstract type="html">The walking distance is calculated according to the number of steps</Abstract>
+			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
+			
+			<Declaration>+ (NSNumber *)distanceWithStepCount:(NSNumber *)stepCount</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>stepCount</Name>
+					<Abstract type="html">Number of steps</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Movement distance in kilometers</Abstract></ReturnValue>
+			<Anchor>//api/name/distanceWithStepCount:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/resolveExerciseDataIntoDictionaryObjects:</TokenIdentifier>
 			<Abstract type="html">Convert sports data to an array containing dictionary objects,Each record contains five minutes of data</Abstract>
 			<DeclaredIn>FitCloudUtils.h</DeclaredIn>

@@ -47,6 +47,23 @@
 
 
 /*!
+ Calculate calories consumed by exercise
+
+ @param stepCount Number of steps
+ @return calorie in Kcal
+ */
++ (NSNumber*)calorieWithStepCount:(NSNumber*)stepCount;
+
+
+/*!
+ The walking distance is calculated according to the number of steps
+
+ @param stepCount Number of steps
+ @return Movement distance in kilometers
+ */
++ (NSNumber*)distanceWithStepCount:(NSNumber*)stepCount;
+
+/*!
  Convert sports data to an array containing dictionary objects,Each record contains five minutes of data
 
  @param data The sports data to be converted
@@ -104,6 +121,9 @@
  @warning If the parameter is <i>nil</i>, returns <i>nil</i>
  */
 + (NSArray*)resolveHeartRateDataIntoModelObjects:(NSData*)data;
+
+
+
 @end
 
 /*!

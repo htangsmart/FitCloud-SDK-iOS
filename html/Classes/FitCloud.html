@@ -56,17 +56,25 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/age">age</option>
+		
 		<option value="//api/name/centralManager">centralManager</option>
 		
 		<option value="//api/name/findMobilePhoneBlock">findMobilePhoneBlock</option>
+		
+		<option value="//api/name/height">height</option>
 		
 		<option value="//api/name/isSynchronizing">isSynchronizing</option>
 		
 		<option value="//api/name/servicePeripheral">servicePeripheral</option>
 		
+		<option value="//api/name/sex">sex</option>
+		
 		<option value="//api/name/syncType">syncType</option>
 		
 		<option value="//api/name/takePicturesBlock">takePicturesBlock</option>
+		
+		<option value="//api/name/weight">weight</option>
 		
 	</optgroup>
 	
@@ -405,21 +413,12 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Find the phone block</p>
+				<p>This block will be called back after the phone receives an instruction from the hand ring</p>
 			</div>
 			
 
 			
 
-			
-			<div class="method-subsection see-also-section">
-				<h4 class="method-subtitle">See Also</h4>
-				<ul>
-					
-					<li><code><p><a href="#//api/name/findMobilePhoneBlock">@property findMobilePhoneBlock</a></p></code></li>
-					
-				</ul>
-			</div>
 			
 
 			
@@ -460,21 +459,196 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Camera control block</p>
+				<p>This block will be called back after the phone receives a shot command from the bracelet</p>
 			</div>
 			
 
 			
 
 			
-			<div class="method-subsection see-also-section">
-				<h4 class="method-subtitle">See Also</h4>
-				<ul>
-					
-					<li><code><p><a href="#//api/name/takePicturesBlock">@property takePicturesBlock</a></p></code></li>
-					
-				</ul>
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
 			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/age" title="age"></a>
+	<h3 class="method-title"><code><a href="#//api/name/age">&nbsp;&nbsp;age</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@property age</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UInt32 age</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>User age, the default was born in 1990</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sex" title="sex"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sex">&nbsp;&nbsp;sex</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@property sex</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UInt32 sex</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The user&rsquo;s gender, the default is female 0</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/height" title="height"></a>
+	<h3 class="method-title"><code><a href="#//api/name/height">&nbsp;&nbsp;height</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@property height</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UInt32 height</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>User&rsquo;s height in cm,The default height of women is 165cm, men are 175cm</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/weight" title="weight"></a>
+	<h3 class="method-title"><code><a href="#//api/name/weight">&nbsp;&nbsp;weight</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@property weight</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UInt32 weight</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The user&rsquo;s weight in kg</p>
+			</div>
+			
+
+			
+
 			
 
 			
@@ -1925,22 +2099,22 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>sex</code></th>
-						<td><p>sex</p></td>
+						<td><p><a href="#//api/name/sex">sex</a></p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>age</code></th>
-						<td><p>age</p></td>
+						<td><p><a href="#//api/name/age">age</a></p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>height</code></th>
-						<td><p>height</p></td>
+						<td><p><a href="#//api/name/height">height</a></p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>weight</code></th>
-						<td><p>weight</p></td>
+						<td><p><a href="#//api/name/weight">weight</a></p></td>
 					</tr>
 				
 					<tr>

@@ -301,14 +301,63 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmModel/alarmData</TokenIdentifier>
-			<Abstract type="html">Convert the alarm clock model to NSData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmModel/setCycleModel:</TokenIdentifier>
+			<Abstract type="html">@property cycleModel</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>- (NSData *)alarmData</Declaration>
+			<Declaration>@property (nonatomic, strong) FCAlarmCycleModel *cycleModel</Declaration>
 			
-			<ReturnValue><Abstract type="html">The converted data</Abstract></ReturnValue>
-			<Anchor>//api/name/alarmData</Anchor>
+			
+			<Anchor>//api/name/cycleModel</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmModel/cycleModel</TokenIdentifier>
+			<Abstract type="html">@property cycleModel</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) FCAlarmCycleModel *cycleModel</Declaration>
+			
+			
+			<Anchor>//api/name/cycleModel</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCAlarmModel/cycleModel</TokenIdentifier>
+			<Abstract type="html">@property cycleModel</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) FCAlarmCycleModel *cycleModel</Declaration>
+			
+			
+			<Anchor>//api/name/cycleModel</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmModel/ringTime</TokenIdentifier>
+			<Abstract type="html">Ring time</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)ringTime</Declaration>
+			
+			<ReturnValue><Abstract type="html">Ring time string with format &quot;HH: mm&quot;</Abstract></ReturnValue>
+			<Anchor>//api/name/ringTime</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmModel/alarmClockData</TokenIdentifier>
+			<Abstract type="html">   Convert alarm clock model to alarm clock data
+* @return The converted data</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>- (NSData *)alarmClockData</Declaration>
+			
+			
+			<Anchor>//api/name/alarmClockData</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		

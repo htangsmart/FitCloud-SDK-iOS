@@ -192,6 +192,78 @@
             <NodeRef refid="4"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCExerciseModel/setCalorie:</TokenIdentifier>
+			<Abstract type="html">@property calorie</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *calorie</Declaration>
+			
+			
+			<Anchor>//api/name/calorie</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCExerciseModel/calorie</TokenIdentifier>
+			<Abstract type="html">@property calorie</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *calorie</Declaration>
+			
+			
+			<Anchor>//api/name/calorie</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCExerciseModel/calorie</TokenIdentifier>
+			<Abstract type="html">@property calorie</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *calorie</Declaration>
+			
+			
+			<Anchor>//api/name/calorie</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCExerciseModel/setDistance:</TokenIdentifier>
+			<Abstract type="html">@property distance</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *distance</Declaration>
+			
+			
+			<Anchor>//api/name/distance</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCExerciseModel/distance</TokenIdentifier>
+			<Abstract type="html">@property distance</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *distance</Declaration>
+			
+			
+			<Anchor>//api/name/distance</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCExerciseModel/distance</TokenIdentifier>
+			<Abstract type="html">@property distance</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *distance</Declaration>
+			
+			
+			<Anchor>//api/name/distance</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
         
         
 	</File>

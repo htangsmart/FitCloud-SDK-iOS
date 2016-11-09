@@ -60,6 +60,8 @@
 		
 		<option value="//api/name/cycle">cycle</option>
 		
+		<option value="//api/name/cycleModel">cycleModel</option>
+		
 		<option value="//api/name/day">day</option>
 		
 		<option value="//api/name/hour">hour</option>
@@ -80,7 +82,9 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/alarmData">- alarmData</option>
+		<option value="//api/name/alarmClockData">- alarmClockData</option>
+		
+		<option value="//api/name/ringTime">- ringTime</option>
 		
 	</optgroup>
 	
@@ -116,7 +120,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>@class FCAlarmModel</p><p>The alarm clock data model</p>
+						<p>@class FCAlarmModel</p><p>Alarm clock data model, including the alarm <a href="#//api/name/cycle">cycle</a>, switch status and ring time</p>
 					</div>
 					
 					
@@ -500,8 +504,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/alarmData" title="alarmData"></a>
-	<h3 class="method-title"><code><a href="#//api/name/alarmData">&ndash;&nbsp;alarmData</a></code>
+	<a name="//api/name/cycleModel" title="cycleModel"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cycleModel">&nbsp;&nbsp;cycleModel</a></code>
 </h3>
 
 	<div class="method-info">
@@ -511,12 +515,58 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Convert the alarm clock model to NSData</p>
+				<p>@property cycleModel</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSData *)alarmData</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) FCAlarmCycleModel *cycleModel</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Alarm clock <a href="#//api/name/cycle">cycle</a> model.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/ringTime" title="ringTime"></a>
+	<h3 class="method-title"><code><a href="#//api/name/ringTime">&ndash;&nbsp;ringTime</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Ring time</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)ringTime</code></div>
 
 		    
 			
@@ -524,8 +574,50 @@
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>The converted data</p>
+				<p>Ring time string with format &ldquo;HH: mm&rdquo;</p>
 			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/alarmClockData" title="alarmClockData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/alarmClockData">&ndash;&nbsp;alarmClockData</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>   Convert alarm clock model to alarm clock data
+* @return The converted data</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSData *)alarmClockData</code></div>
+
+		    
+			
+
 			
 
 			

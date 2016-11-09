@@ -162,11 +162,6 @@
 			<Abstract type="html">@property findMobilePhoneBlock</Abstract>
 			<DeclaredIn>FitCloud.h</DeclaredIn>
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/instp/FitCloud/findMobilePhoneBlock</TokenIdentifier>
-		
-	</RelatedTokens>
-	
 			<Declaration>@property (nonatomic, copy) dispatch_block_t findMobilePhoneBlock</Declaration>
 			
 			
@@ -179,11 +174,6 @@
 			<Abstract type="html">@property findMobilePhoneBlock</Abstract>
 			<DeclaredIn>FitCloud.h</DeclaredIn>
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/instp/FitCloud/findMobilePhoneBlock</TokenIdentifier>
-		
-	</RelatedTokens>
-	
 			<Declaration>@property (nonatomic, copy) dispatch_block_t findMobilePhoneBlock</Declaration>
 			
 			
@@ -196,11 +186,6 @@
 			<Abstract type="html">@property findMobilePhoneBlock</Abstract>
 			<DeclaredIn>FitCloud.h</DeclaredIn>
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/instp/FitCloud/findMobilePhoneBlock</TokenIdentifier>
-		
-	</RelatedTokens>
-	
 			<Declaration>@property (nonatomic, copy) dispatch_block_t findMobilePhoneBlock</Declaration>
 			
 			
@@ -213,11 +198,6 @@
 			<Abstract type="html">@property takePicturesBlock</Abstract>
 			<DeclaredIn>FitCloud.h</DeclaredIn>
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/instp/FitCloud/takePicturesBlock</TokenIdentifier>
-		
-	</RelatedTokens>
-	
 			<Declaration>@property (nonatomic, copy) dispatch_block_t takePicturesBlock</Declaration>
 			
 			
@@ -230,11 +210,6 @@
 			<Abstract type="html">@property takePicturesBlock</Abstract>
 			<DeclaredIn>FitCloud.h</DeclaredIn>
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/instp/FitCloud/takePicturesBlock</TokenIdentifier>
-		
-	</RelatedTokens>
-	
 			<Declaration>@property (nonatomic, copy) dispatch_block_t takePicturesBlock</Declaration>
 			
 			
@@ -247,15 +222,154 @@
 			<Abstract type="html">@property takePicturesBlock</Abstract>
 			<DeclaredIn>FitCloud.h</DeclaredIn>
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/instp/FitCloud/takePicturesBlock</TokenIdentifier>
-		
-	</RelatedTokens>
-	
 			<Declaration>@property (nonatomic, copy) dispatch_block_t takePicturesBlock</Declaration>
 			
 			
 			<Anchor>//api/name/takePicturesBlock</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/setAge:</TokenIdentifier>
+			<Abstract type="html">@property age</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UInt32 age</Declaration>
+			
+			
+			<Anchor>//api/name/age</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/age</TokenIdentifier>
+			<Abstract type="html">@property age</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UInt32 age</Declaration>
+			
+			
+			<Anchor>//api/name/age</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FitCloud/age</TokenIdentifier>
+			<Abstract type="html">@property age</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UInt32 age</Declaration>
+			
+			
+			<Anchor>//api/name/age</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/setSex:</TokenIdentifier>
+			<Abstract type="html">@property sex</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UInt32 sex</Declaration>
+			
+			
+			<Anchor>//api/name/sex</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/sex</TokenIdentifier>
+			<Abstract type="html">@property sex</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UInt32 sex</Declaration>
+			
+			
+			<Anchor>//api/name/sex</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FitCloud/sex</TokenIdentifier>
+			<Abstract type="html">@property sex</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UInt32 sex</Declaration>
+			
+			
+			<Anchor>//api/name/sex</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/setHeight:</TokenIdentifier>
+			<Abstract type="html">@property height</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UInt32 height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/height</TokenIdentifier>
+			<Abstract type="html">@property height</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UInt32 height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FitCloud/height</TokenIdentifier>
+			<Abstract type="html">@property height</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UInt32 height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/setWeight:</TokenIdentifier>
+			<Abstract type="html">@property weight</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UInt32 weight</Declaration>
+			
+			
+			<Anchor>//api/name/weight</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/weight</TokenIdentifier>
+			<Abstract type="html">@property weight</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UInt32 weight</Declaration>
+			
+			
+			<Anchor>//api/name/weight</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FitCloud/weight</TokenIdentifier>
+			<Abstract type="html">@property weight</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UInt32 weight</Declaration>
+			
+			
+			<Anchor>//api/name/weight</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		

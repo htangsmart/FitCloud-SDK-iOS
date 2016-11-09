@@ -120,7 +120,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>@class FCAlarmCycleModel</p><p>The alarm clock cycle data model</p>
+						<p>@class FCAlarmCycleModel</p><p>Alarm clock cycle, if there is no cycle from Monday to Sunday, it means the day is valid</p>
 					</div>
 					
 					
@@ -434,7 +434,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>instantiate an model with the given data</p>
+				<p>  Instantiate a data model using an alarm clock cycle</p>
 			</div>
 			
 		    
@@ -443,28 +443,20 @@
 
 		    
 			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>cycle</code></th>
-						<td><p>The alarm clock cycle</p></td>
-					</tr>
-				
-				</table>
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li>@param cycle The alarm clock cycle</li>
+<li>@return  an alarm clock cycle model of <code>FCAlarmCycleModel</code> object</li>
+</ul>
+
 			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>an alarm clock cycle model of <code>FCAlarmCycleModel</code> object</p>
-			</div>
-			
-
-			
-
 			
 
 			
@@ -492,7 +484,8 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The alarm clock cycle (7bits).From low to high indicates Monday to Sunday.All bits are 0, indicating that the day is valid</p>
+				<p>  The alarm clock cycle (7bits).From low to high indicates Monday to Sunday.All bits are 0, indicating that the day is valid
+* @return alarm clock cycle value</p>
 			</div>
 			
 		    
@@ -502,11 +495,6 @@
 		    
 			
 
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>alarm clock cycle value</p>
-			</div>
 			
 
 			
