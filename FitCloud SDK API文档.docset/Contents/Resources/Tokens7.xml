@@ -192,6 +192,150 @@
             <NodeRef refid="7"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/setSystolicBloodPressure:</TokenIdentifier>
+			<Abstract type="html">@property systolicBloodPressure</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *systolicBloodPressure</Declaration>
+			
+			
+			<Anchor>//api/name/systolicBloodPressure</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/systolicBloodPressure</TokenIdentifier>
+			<Abstract type="html">@property systolicBloodPressure</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *systolicBloodPressure</Declaration>
+			
+			
+			<Anchor>//api/name/systolicBloodPressure</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHealthModel/systolicBloodPressure</TokenIdentifier>
+			<Abstract type="html">@property systolicBloodPressure</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *systolicBloodPressure</Declaration>
+			
+			
+			<Anchor>//api/name/systolicBloodPressure</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/setDiastolicBloodPressure:</TokenIdentifier>
+			<Abstract type="html">@property diastolicBloodPressure</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *diastolicBloodPressure</Declaration>
+			
+			
+			<Anchor>//api/name/diastolicBloodPressure</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/diastolicBloodPressure</TokenIdentifier>
+			<Abstract type="html">@property diastolicBloodPressure</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *diastolicBloodPressure</Declaration>
+			
+			
+			<Anchor>//api/name/diastolicBloodPressure</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHealthModel/diastolicBloodPressure</TokenIdentifier>
+			<Abstract type="html">@property diastolicBloodPressure</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *diastolicBloodPressure</Declaration>
+			
+			
+			<Anchor>//api/name/diastolicBloodPressure</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/setBloodOxygen:</TokenIdentifier>
+			<Abstract type="html">@property bloodOxygen</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *bloodOxygen</Declaration>
+			
+			
+			<Anchor>//api/name/bloodOxygen</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/bloodOxygen</TokenIdentifier>
+			<Abstract type="html">@property bloodOxygen</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *bloodOxygen</Declaration>
+			
+			
+			<Anchor>//api/name/bloodOxygen</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHealthModel/bloodOxygen</TokenIdentifier>
+			<Abstract type="html">@property bloodOxygen</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *bloodOxygen</Declaration>
+			
+			
+			<Anchor>//api/name/bloodOxygen</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/setBreathingRate:</TokenIdentifier>
+			<Abstract type="html">@property breathingRate</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *breathingRate</Declaration>
+			
+			
+			<Anchor>//api/name/breathingRate</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthModel/breathingRate</TokenIdentifier>
+			<Abstract type="html">@property breathingRate</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *breathingRate</Declaration>
+			
+			
+			<Anchor>//api/name/breathingRate</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHealthModel/breathingRate</TokenIdentifier>
+			<Abstract type="html">@property breathingRate</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *breathingRate</Declaration>
+			
+			
+			<Anchor>//api/name/breathingRate</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
         
         
 	</File>

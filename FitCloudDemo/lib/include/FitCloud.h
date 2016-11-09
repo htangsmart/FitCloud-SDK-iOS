@@ -44,18 +44,36 @@
 
 /*!
  * @property findMobilePhoneBlock
- * @discussion Find the phone block
- * @see setFindMobilePhoneBlock:
+ * @discussion This block will be called back after the phone receives an instruction from the hand ring
  */
 @property (nonatomic, copy) dispatch_block_t findMobilePhoneBlock;
 
 /*!
  * @property takePicturesBlock
- * @discussion Camera control block
- * @see setTakePicturesBlock:
+ * @discussion This block will be called back after the phone receives a shot command from the bracelet
  */
 @property (nonatomic, copy) dispatch_block_t takePicturesBlock;
 
+/*!
+ * @property age
+ * @discussion User age, the default was born in 1990
+ */
+@property (nonatomic, assign) UInt32 age;
+/*!
+ * @property sex
+ * @discussion The user's gender, the default is female 0
+ */
+@property (nonatomic, assign) UInt32 sex;
+/*!
+ * @property height
+ * @discussion User's height in cm,The default height of women is 165cm, men are 175cm
+ */
+@property (nonatomic, assign) UInt32 height;
+/*!
+ * @property weight
+ * @discussion The user's weight in kg
+ */
+@property (nonatomic, assign) UInt32 weight;
 
 + (instancetype)shared;
 

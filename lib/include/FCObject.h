@@ -50,22 +50,18 @@
 @property (nonatomic, assign) BOOL sunday;
 
 /*!
-  Instantiate a data model using an alarm clock cycle
- 
+ * @discussion Instantiate a data model using an alarm clock cycle
  * @param cycle The alarm clock cycle
  * @return  an alarm clock cycle model of <code>FCAlarmCycleModel</code> object
  */
 + (instancetype)modelWithCycle:(NSNumber*)cycle;
 
 /*!
-  The alarm clock cycle (7bits).From low to high indicates Monday to Sunday.All bits are 0, indicating that the day is valid
+ * @discussion The alarm clock cycle (7bits).From low to high indicates Monday to Sunday.All bits are 0, indicating that the day is valid
  * @return alarm clock cycle value
  */
 - (NSNumber*)cycleValue;
 @end
-
-
-
 
 
 #pragma mark - FCAlarmModel
@@ -591,7 +587,23 @@
 /*!
  * @property heartRate
  */
-@property (nonatomic, strong) NSNumber *heartRate; 
+@property (nonatomic, strong) NSNumber *heartRate;
+/*!
+ * @property systolicBloodPressure
+ */
+@property (nonatomic, strong) NSNumber *systolicBloodPressure;
+/*!
+ * @property diastolicBloodPressure
+ */
+@property (nonatomic, strong) NSNumber *diastolicBloodPressure;
+/*!
+ * @property bloodOxygen
+ */
+@property (nonatomic, strong) NSNumber *bloodOxygen;
+/*!
+ * @property breathingRate
+ */
+@property (nonatomic, strong) NSNumber *breathingRate;
 @end
 
 

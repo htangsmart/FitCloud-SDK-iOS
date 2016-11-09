@@ -266,25 +266,29 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/FCAlarmCycleModel/modelWithCycle:</TokenIdentifier>
-			<Abstract type="html">  Instantiate a data model using an alarm clock cycle</Abstract>
+			<Abstract type="html">Instantiate a data model using an alarm clock cycle</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
 			<Declaration>+ (instancetype)modelWithCycle:(NSNumber *)cycle</Declaration>
-			
-			
+			<Parameters>
+				<Parameter>
+					<Name>cycle</Name>
+					<Abstract type="html">The alarm clock cycle</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">an alarm clock cycle model of &lt;code&gt;FCAlarmCycleModel&lt;/code&gt; object</Abstract></ReturnValue>
 			<Anchor>//api/name/modelWithCycle:</Anchor>
             <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmCycleModel/cycleValue</TokenIdentifier>
-			<Abstract type="html">  The alarm clock cycle (7bits).From low to high indicates Monday to Sunday.All bits are 0, indicating that the day is valid
-* @return alarm clock cycle value</Abstract>
+			<Abstract type="html">The alarm clock cycle (7bits).From low to high indicates Monday to Sunday.All bits are 0, indicating that the day is valid</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
 			<Declaration>- (NSNumber *)cycleValue</Declaration>
 			
-			
+			<ReturnValue><Abstract type="html">alarm clock cycle value</Abstract></ReturnValue>
 			<Anchor>//api/name/cycleValue</Anchor>
             <NodeRef refid="1"/>
 		</Token>

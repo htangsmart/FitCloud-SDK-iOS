@@ -16,7 +16,7 @@
 
 /*!
  * @class FCAlarmCycleModel
- * @discussion The alarm clock cycle data model
+ * @discussion Alarm clock cycle, if there is no cycle from Monday to Sunday, it means the day is valid
  */
 
 @interface FCAlarmCycleModel : NSObject
@@ -50,28 +50,25 @@
 @property (nonatomic, assign) BOOL sunday;
 
 /*!
- * @brief instantiate an model with the given data
+ * @discussion Instantiate a data model using an alarm clock cycle
  * @param cycle The alarm clock cycle
  * @return  an alarm clock cycle model of <code>FCAlarmCycleModel</code> object
  */
 + (instancetype)modelWithCycle:(NSNumber*)cycle;
 
 /*!
- * @brief The alarm clock cycle (7bits).From low to high indicates Monday to Sunday.All bits are 0, indicating that the day is valid
+ * @discussion The alarm clock cycle (7bits).From low to high indicates Monday to Sunday.All bits are 0, indicating that the day is valid
  * @return alarm clock cycle value
  */
 - (NSNumber*)cycleValue;
 @end
 
 
-
-
-
 #pragma mark - FCAlarmModel
 
 /*!
  * @class FCAlarmModel
- * @discussion The alarm clock data model
+ * @discussion Alarm clock data model, including the alarm cycle, switch status and ring time
  */
 @interface FCAlarmModel : NSObject
 /*!
@@ -115,14 +112,27 @@
  */
 @property (nonatomic, strong) NSNumber *cycle;
 
-- (NSString*)workTime;
 /*!
- * @brief Convert the alarm clock model to NSData
+ * @property cycleModel
+ * @discussion Alarm clock cycle model.
+ */
+@property (nonatomic, strong) FCAlarmCycleModel *cycleModel;
+
+
+/**
+ Ring time
+
+ @return Ring time string with format "HH: mm"
+ */
+- (NSString*)ringTime;
+
+
+/*!
+   Convert alarm clock model to alarm clock data
  * @return The converted data
  */
-- (NSData*)alarmData;
+- (NSData*)alarmClockData;
 @end
-
 
 
 
@@ -188,6 +198,8 @@
  * @discussion The ID of the watch
  */
 @property (nonatomic, assign) BOOL displayId;
+
+
 /*!
  * @brief instantiate an display model with the given data
  * @param data The alarm clock data
@@ -502,7 +514,14 @@
  */
 @property (nonatomic, strong) NSNumber *stepCount;
 
-
+/*!
+ * @property calorie
+ */
+@property (nonatomic, strong) NSNumber *calorie;
+/*!
+ * @property distance
+ */
+@property (nonatomic, strong) NSNumber *distance;
 @end
 
 
@@ -568,7 +587,23 @@
 /*!
  * @property heartRate
  */
-@property (nonatomic, strong) NSNumber *heartRate; 
+@property (nonatomic, strong) NSNumber *heartRate;
+/*!
+ * @property systolicBloodPressure
+ */
+@property (nonatomic, strong) NSNumber *systolicBloodPressure;
+/*!
+ * @property diastolicBloodPressure
+ */
+@property (nonatomic, strong) NSNumber *diastolicBloodPressure;
+/*!
+ * @property bloodOxygen
+ */
+@property (nonatomic, strong) NSNumber *bloodOxygen;
+/*!
+ * @property breathingRate
+ */
+@property (nonatomic, strong) NSNumber *breathingRate;
 @end
 
 
