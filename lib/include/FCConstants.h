@@ -9,20 +9,20 @@
 #import <Foundation/Foundation.h>
 
 
-// 蓝牙更新状态通知
+// This notification is issued when the central manager's status changes
 FOUNDATION_EXTERN NSString *const EVENT_CENTRALMANAGER_UPDATE_STATE_NOTIFY;
 
-// 外设成功连接通知
+// This notification is issued when the peripheral is connected successfully
 FOUNDATION_EXTERN NSString *const EVENT_CONNECT_PERIPHERAL_NOTIFY;
 
-// 连接外设失败通知
+// This notification is issued when a peripheral connection fails
 FOUNDATION_EXTERN NSString *const EVENT_FAIL_CONNECT_PERIPHERAL_NOTIFY;
 
-// 外设断开连接通知
+// This notification is issued by a peripheral disconnect
 FOUNDATION_EXTERN NSString *const EVENT_DISCONNECT_PERIPHERAL_NOTIFY;
 
-// 发现外设服务特征值通知
+// Discover the service characteristic value of the peripheral,After receiving this notice, you can write value.
 FOUNDATION_EXTERN NSString *const EVENT_DISCOVER_CHARACTERISTICS_NOTIFY;
 
-// 固件升级断开连接通知
+// This notification is issued when the firmware upgrade is successful or disconnected
 FOUNDATION_EXTERN NSString *const EVENT_FIRMWARE_UPDATE_DISCONNECT_PERIPHERAL_NOTIFY;

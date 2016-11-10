@@ -195,7 +195,7 @@
         
         <Token>
             <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeDefaultBloodPressure</TokenIdentifier>
-            <Abstract type="html">Default Blood Pressure压</Abstract>
+            <Abstract type="html">Default Blood Pressure</Abstract>
             <Declaration>FCSyncTypeDefaultBloodPressure</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
@@ -357,6 +357,16 @@
             <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeGetMacAddress</TokenIdentifier>
             <Abstract type="html">Get the MAC address of the watch</Abstract>
             <Declaration>FCSyncTypeGetMacAddress</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="19"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeDailyTotalData</TokenIdentifier>
+            <Abstract type="html">Gets the current day&apos;s total data</Abstract>
+            <Declaration>FCSyncTypeDailyTotalData</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             

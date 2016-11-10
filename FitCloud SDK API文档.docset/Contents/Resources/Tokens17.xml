@@ -25,7 +25,7 @@
         
         <Token>
             <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeHeartRate</TokenIdentifier>
-            <Abstract type="html">Heart rate real-time synchronization</Abstract>
+            <Abstract type="html">Real time measurement of heart rate</Abstract>
             <Declaration>FCRTSyncTypeHeartRate</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
@@ -35,7 +35,7 @@
         
         <Token>
             <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeBloodOxygen</TokenIdentifier>
-            <Abstract type="html">Blood oxygen real-time synchronization步</Abstract>
+            <Abstract type="html">Real time measurement of blood oxygen</Abstract>
             <Declaration>FCRTSyncTypeBloodOxygen</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
@@ -45,7 +45,7 @@
         
         <Token>
             <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeBloodPressure</TokenIdentifier>
-            <Abstract type="html">Blood pressure real-time synchronization</Abstract>
+            <Abstract type="html">Real time measurement of blood pressure</Abstract>
             <Declaration>FCRTSyncTypeBloodPressure</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
@@ -55,7 +55,7 @@
         
         <Token>
             <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeBreathingRate</TokenIdentifier>
-            <Abstract type="html">Respiratory rate real-time synchronization</Abstract>
+            <Abstract type="html">Real time measurement of respiratory rate</Abstract>
             <Declaration>FCRTSyncTypeBreathingRate</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>

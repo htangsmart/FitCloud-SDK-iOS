@@ -124,7 +124,7 @@ typedef NS_ENUM(NSInteger, FCSyncType) {
     /*! Get the MAC address of the watch*/
     FCSyncTypeGetMacAddress = 52,
     
-    /* Gets the current day's total data*/
+    /*! Gets the current day's total data*/
     FCSyncTypeDailyTotalData = 53,
     
     /*! Finished*/
