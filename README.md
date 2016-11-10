@@ -210,25 +210,21 @@ phone model 信息说明
 
 | 设备        | 序号           |  设备        | 序号           |
 | ------------- |:-------------:| ------------- |:-------------:
-| iPhone3G      | 2 | iPad 1      | 31 |
-| iPhone3Gs      | 3      | iPad 2      | 32      |
-| iPhone4 | 4      | iPad 3 | 33  |   
-| iPhone4s | 5      | iPad 4 | 34 |
-| iPhone5 | 6      | iPad mini | 35 |
-| iPhone5c | 7      | iPad air | 36      |
-| iPhone5s | 8      | iPad mini2 | 37      |
-| iPhone6 | 9      | iPad air2 | 38      |
-| iPhone6s | 10      | iPad mini3 | 39      |
-| iPhone6 Plus | 11      | iPad pro | 40      |
-| iPhone6s Plus | 12      | iPad mini4 | 41      |
-| iPhone7 | 13      |  |      |
-| iPhone7 Plus | 14      |  |      |
+|  iPhone4s   | 2 | iPad 2      | 31 |
+|  iPhone5     | 3      | iPad 3      | 32      |
+| iPhone5c | 4      | iPad 4 | 33  |   
+| iPhone5s | 5      | iPad mini | 34 |
+| iPhone6 | 6      | iPad air | 35 |
+| iPhone6s | 7      | iPad mini2 | 36      |
+| iPhone6 Plus | 8      | iPad air2 | 37      |
+| iPhone6s Plus | 9      | iPad mini3 | 38      |
+| iPhone7 | 10      | iPad pro | 39      |
+| iPhone7 Plus | 11      | iPad mini4 | 40      |
 
 operating system
 
 | 系统        | 序号           |  系统        | 序号           |
 | ------------- |:-------------:| ------------- |:-------------:
-| iOS 7.0      | 1 | iOS 7.1      | 2 |
 | iOS 8.0     | 3      | iOS 8.1     | 4      |
 | iOS 8.2 | 5      | iOS 8.3 | 6  |   
 | iOS 8.4 | 7      | iOS 9.0 | 8 |
