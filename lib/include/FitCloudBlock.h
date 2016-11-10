@@ -7,51 +7,167 @@
 //
 
 
-@class NSString;
+#import <UIKit/UIKit.h>
+#import <CoreBluetooth/CoreBluetooth.h>
+#import "FCDefine.h"
 
 
 #ifndef FitCloudBlock_h
 #define FitCloudBlock_h
 
-/**
- *  手环系统配置信息回调
+/*!
+ *  @discussion System Setting Information Callback Block
  *
- *  @param notificationData    消息通知开关 4byte
- *  @param screenDisplayData  手环显示配置 2byte
- *  @param functionalSwitchData 功能开关配置 2byte
- *  @param hsVersionData  软硬件版本信息配置 32byte
- *  @param healthHistorymonitorData  健康实时监测配置 5byte
- *  @param longSitData  久坐提醒配置 5byte
- *  @param bloodPressureData       默认血压配置 2byte
- *  @param drinkWaterReminderData    喝水提醒配置 1byte
+ *  @param notificationData    Notification switch (4byte)
+ *  @param screenDisplayData  Screen display settings data (2byte)
+ *  @param functionalSwitchData Function switch setting data (2byte)
+ *  @param hsVersionData  Hardware and software version information data (32byte)
+ *  @param healthHistorymonitorData  Health history monitoring data (5byte)
+ *  @param longSitData  Sedentary reminder data (5byte)
+ *  @param bloodPressureData       Default blood pressure data (2byte)
+ *  @param drinkWaterReminderData    Drinking water reminder settings data (1byte)
  */
 typedef void (^FCSystemSettingDataBlock)(NSData *notificationData, NSData *screenDisplayData,NSData *functionalSwitchData,NSData *hsVersionData,NSData *healthHistorymonitorData,NSData *longSitData,NSData *bloodPressureData,NSData *drinkWaterReminderData);
 
 /*!
- *  @discussion  手环软硬件版本信息字符串回调
+ *  @discussion  Hardware and software version information string callback Block
  *
- *  @param projNum       项目号
- *  @param hardware      硬件号
- *  @param sdkVersion    sdk版本号
- *  @param patchVerson   软件patch版本号
- *  @param falshVersion  flash版本号
- *  @param appVersion    固件app版本号
- *  @param serialNum     序号
+ *  @param projNum     Project number (6byte)
+ *  @param hardware    Hardware number (4byte)
+ *  @param sdkVersion      Sdk version number (4byte)
+ *  @param patchVerson    Software patch version number (6byte)
+ *  @param falshVersion    The version number of the flash (4byte)
+ *  @param appVersion   Firmware app version number (4byte)
+ *  @param serialNum      Serial number (4byte)
  */
+
 typedef void (^FCHardwareAndSoftwareVersionStringBlock)(NSString *projNum,NSString *hardware,NSString *sdkVersion,NSString *patchVerson,NSString *falshVersion,NSString *appVersion,NSString *serialNum);
 
 
 /**
- *  @discussion 手环软硬件版本信息回调
+ *  @discussion Hardware and software version information callback block
  *
- *  @param projData     项目号 6byte
- *  @param hardwareData 硬件号 4byte
- *  @param sdkData      sdk版本号 4byte
- *  @param patchData    软件patch版本号 6byte
- *  @param flashData    flash版本号 4byte
- *  @param fwAppData    固件app版本号 4byte
- *  @param seqData      序号 4byte
+ *  @param projData     Project number (6byte)
+ *  @param hardwareData Hardware number (4byte)
+ *  @param sdkData      Sdk version number (4byte)
+ *  @param patchData    Software patch version number (6byte)
+ *  @param flashData    The version number of the flash (4byte)
+ *  @param appVersionData   Firmware app version number (4byte)
+ *  @param seqData      Serial number (4byte)
  */
-typedef void (^FCHardwareAndSoftwareVersionDataBlock)(NSData *projData,NSData *hardwareData,NSData *sdkData,NSData *patchData,NSData *flashData,NSData *fwAppData,NSData *seqData);
+typedef void (^FCHardwareAndSoftwareVersionDataBlock)(NSData *projData,NSData *hardwareData,NSData *sdkData,NSData *patchData,NSData *flashData,NSData *appVersionData,NSData *seqData);
+
+
+/*!
+ * @discussion A block is used for the progress callback
+ * @param progress Progress value,a floating point number between 0 and 1
+ */
+typedef void (^FCProgressHandler)(CGFloat progress);
+
+
+/*!
+ * @brief A block is used for the Bluetooth peripheral scan callback
+ * @param aPeripheral A peripheral to be scanned
+ */
+typedef void (^FCPeripheralHandler)(CBPeripheral *aPeripheral);
+
+
+/*!
+ * @discussion A block is used to call back all the peripherals scanned,This block will be called when a new peripheral is scanned
+ * @param retArray    A list of <i>CBPeripheral</i> objects
+ * @param aPeripheral A peripheral to be scanned
+ */
+typedef void (^FCDeviceListHandler)(NSArray<CBPeripheral*>*retArray,CBPeripheral *aPeripheral);
+
+
+/*!
+ * @discussion A Block is used to log in and bind the watch to set the user ID and phone information
+ * @param guestId     The user's unique id
+ * @param phoneModel  Phone models, such as iPhone5s
+ * @param OS          The operating system version of the phone
+ */
+typedef void (^FCAuthDataHandler)(UInt64 guestId, UInt8 phoneModel, UInt8 OS);
+
+
+/*!
+ * @discussion Login to set the parameter block
+ * @param authDataHandler A block is used to set the device login information
+ */
+typedef void (^FCLoginDatahandler)(FCAuthDataHandler authDataHandler);
+
+
+/*!
+ * @discussion This block is used to set up user information, including user gender, age, height and weight.
+ * @param sex    User gender
+ * @param age    User age
+ * @param weight User Weight
+ * @param height User height
+ */
+typedef void (^FCUserDataHandler)(UInt32 sex, UInt32 age, UInt32 weight, UInt32 height);
+
+
+/*!
+ * @discussion A block is used to set the wear mode
+ * @param lefthHand Whether it is left-handed
+ */
+typedef void (^FCWearStyleHandler)(BOOL lefthHand);
+
+
+/*!
+ * @discussion This block is used to set the binding parameters, user information, and wear mode
+ * @param authDataHandler  Set hardware binding information
+ * @param userDataHandler  Set user information
+ * @param wearStyleHandler Set the way to wear
+ */
+typedef void (^FCBoundDataHandler)(FCAuthDataHandler authDataHandler,FCUserDataHandler userDataHandler,FCWearStyleHandler wearStyleHandler);
+
+
+/*!
+ * @discussion  When the synchronization is complete, this block returns the current synchronization type and the status of the synchronization response. If the status is <i>FCSyncResponseStateSuccess</i>, it means that the operation is complete.
+ * @param syncType Synchronization type
+ * @param state    The status of the synchronization response
+ * @see FCSyncType
+ * @see FCSyncResponseState
+ */
+typedef void (^FCSyncResultHandler)(FCSyncType syncType, FCSyncResponseState state);
+
+
+/*!
+ * @discussion This block returns the type that is currently being synchronized
+ * @param syncType Synchronization type
+ * @see FCSyncType
+ */
+typedef void (^FCSyncStepHandler)(FCSyncType syncType);
+
+
+/*!
+ * @discussion This block returns the currently synchronized data and synchronization type. If there is no data, it will not be called
+ * @param syncType Synchronization type
+ * @param data     Synchronized data
+ * @see FCSyncType
+ */
+typedef void (^FCSyncDataHandler)(FCSyncType syncType, NSData *data);
+
+
+/*!
+ * @discussion This block returns the number of records currently synchronized.
+ * @param count The number of records that have been synchronized
+ */
+typedef void (^FCSyncCountHandler) (UInt16 count);
+
+
+/*!
+ * @discussion This block returns the real-time health data that is currently being synchronized.
+ * @param data  Real-time health data
+ */
+typedef void (^FCRTSyncDataHandler)(NSData *data);
+
+
+/*!
+ * @discussion This block returns the percentage of battery power and the charge status of the watch.
+ * @param powerValue    The percentage of battery power
+ * @param chargingState The charge status of the watch
+ */
+typedef void (^FCSyncPowerAndChargingStateHandler)(UInt8 powerValue, UInt8 chargingState);
 
 #endif /* FitCloudBlock_h */

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreBluetooth/CoreBluetooth.h>
-#import "FCDefine.h"
+#import "FitCloudBlock.h"
 
 
 /*!
@@ -155,9 +155,7 @@
  * @param dataHandler   The system setting data callback block
  * @param retHandler    Synchronous result callback
  */
-- (void)bondDevice:(FCBoundDataHandler)paramsHandler
-       dataHandler:(FCSyncDataHandler)dataHandler
-        retHandler:(FCSyncResultHandler)retHandler;
+- (void)bondDevice:(FCBoundDataHandler)paramsHandler dataHandler:(FCSyncDataHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler;
 
 
 /*!
@@ -166,8 +164,7 @@
  * @param paramHandler The block parameter is used to set user information
  * @param retHandler   Synchronous result callback
  */
-- (void)loginDevice:(FCLoginDatahandler)paramHandler
-         retHandler:(FCSyncResultHandler)retHandler;
+- (void)loginDevice:(FCLoginDatahandler)paramHandler retHandler:(FCSyncResultHandler)retHandler;
 
 /*!
  * @brief Unbind the watch
@@ -183,16 +180,14 @@
  * @param data       Alarm clock data
  * @param retHandler Synchronous result callback
  */
-- (void)fcSetAlarmData:(NSData*)data
-            retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetAlarmData:(NSData*)data retHandler:(FCSyncResultHandler)retHandler;
 
 /*!
  * @brief Get the list of alarms
  * @param dataHandler Alarm list data callback
  * @param retHandler  Synchronous result callback
  */
-- (void)fcGetAlarmList:(FCSyncDataHandler)dataHandler
-            retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcGetAlarmList:(FCSyncDataHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler;
 
 
 #pragma mark - 功能设置
@@ -209,8 +204,7 @@
  * @param dataHandler The system setting data callback
  * @param retHandler Synchronous result callback
  */
-- (void)fcGetSystemSetting:(FCSyncDataHandler)dataHandler
-                retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcGetSystemSetting:(FCSyncDataHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler;
 
 
 /*!
@@ -218,8 +212,7 @@
  * @param dataHandler  Power and charge state callback
  * @param retHandler   Synchronous result callback
  */
-- (void)fcGetBatteryPowerAndChargingState:(FCSyncPowerAndChargingStateHandler)dataHandler
-                               retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcGetBatteryPowerAndChargingState:(FCSyncPowerAndChargingStateHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler;
 
 
 /*!
@@ -227,8 +220,7 @@
  * @param data       The screen display data
  * @param retHandler Synchronous result callback
  */
-- (void)fcSetDisplayData:(NSData*)data
-              retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetDisplayData:(NSData*)data retHandler:(FCSyncResultHandler)retHandler;
 
 
 /*!
@@ -236,16 +228,14 @@
  * @param data       Function switch data
  * @param retHandler Synchronous result callback
  */
-- (void)fcSetFunctionSwitchData:(NSData*)data
-                     retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetFunctionSwitchData:(NSData*)data retHandler:(FCSyncResultHandler)retHandler;
 
 /*!
  * @brief Set the notification switch
  * @param data       Notification switch data
  * @param retHandler Synchronous result callback
  */
-- (void)fcSetNotificationSettingData:(NSData*)data
-                          retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetNotificationSettingData:(NSData*)data retHandler:(FCSyncResultHandler)retHandler;
 
 
 /**
@@ -253,8 +243,7 @@
  * @param data       Sedentary reminder data
  * @param retHandler Synchronous result callback
  */
-- (void)fcSetLongSitData:(NSData*)data
-              retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetLongSitData:(NSData*)data retHandler:(FCSyncResultHandler)retHandler;
 
 
 /*!
@@ -262,8 +251,7 @@
  * @param data       Health real-time monitoring data
  * @param retHandler Synchronous result callback
  */
-- (void)fcSetHealthMonitorData:(NSData*)data
-                    retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetHealthMonitorData:(NSData*)data retHandler:(FCSyncResultHandler)retHandler;
 
 
 
@@ -272,8 +260,7 @@
  * @param bEnabled   Reminder to drink water switch status
  * @param retHandler Synchronous result callback
  */
-- (void)fcSetDrinkRemindEnable:(BOOL)bEnabled
-                    retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetDrinkRemindEnable:(BOOL)bEnabled retHandler:(FCSyncResultHandler)retHandler;
 
 
 /*!
@@ -282,8 +269,7 @@
  @param bEnabled   Left hand wear
  @param retHandler Synchronous result callback
  */
-- (void)fcSetLeftHandWearEnable:(BOOL)bEnabled
-                     retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetLeftHandWearEnable:(BOOL)bEnabled retHandler:(FCSyncResultHandler)retHandler;
 
 
 /*!
@@ -291,8 +277,7 @@
  * @param bInForeground in the foreground
  * @param retHandler    Synchronous result callback
  */
-- (void)fcSetCameraState:(BOOL)bInForeground
-              retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetCameraState:(BOOL)bInForeground retHandler:(FCSyncResultHandler)retHandler;
 
 
 /*!
@@ -318,9 +303,7 @@
  * @param dbp        Diastolic blood pressure
  * @param retHandler Synchronous result callback
  */
-- (void)fcSetBloodPressure:(UInt16)sbp
-                       dbp:(UInt16)dbp
-                retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetBloodPressure:(UInt16)sbp dbp:(UInt16)dbp retHandler:(FCSyncResultHandler)retHandler;
 
 
 /*!
@@ -350,9 +333,7 @@
  * @param dataHandler Health real-time synchronization data callback
  * @param retHandler  Synchronous result callback
  */
-- (void)fcOpenRealTimeSync:(FCRTSyncType)syncType
-               dataHandler:(FCSyncDataHandler)dataHandler
-                retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcOpenRealTimeSync:(FCRTSyncType)syncType dataHandler:(FCSyncDataHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler;
 
 
 /*!
@@ -363,20 +344,17 @@
 - (void)fcCloseRealTimeSync:(FCSyncResultHandler)retHandler;
 
 
-
 #pragma mark - 历史数据同步
 
 /*!
  * @method fcGetHistoryData:dataHandler:retHandler:
  * @brief Synchronize historical data
- * @discussion Synchronize historical data，including exercise, sleep, heart rate, blood oxygen, blood pressure and respiratory rate.
+ * @discussion Synchronize historical data，including the total data for the day,exercise, sleep, heart rate, blood oxygen, blood pressure and respiratory rate.
  * @param syncStepHandler This block shows you which step to synchronizes，
  * @param dataHandler     It returns a type of data that is synchronized,This Block is called multiple times.
  * @param retHandler  It will be called when synchronization is completed or an error occurs.
  */
-- (void)fcGetHistoryData:(FCSyncStepHandler)syncStepHandler
-             dataHandler:(FCSyncDataHandler)dataHandler
-              retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcGetHistoryData:(FCSyncStepHandler)syncStepHandler dataHandler:(FCSyncDataHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler;
 
 
 #pragma mark - 固件升级
@@ -387,8 +365,7 @@
  * @param dataHandler Firmware Version Data Callback
  * @param retHandler Synchronous result callback
  */
-- (void)fcGetFirmwareVersion:(FCSyncDataHandler)dataHandler
-                  retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcGetFirmwareVersion:(FCSyncDataHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler;
 
 /*!
  * @method fcUpdateFirmwareWithPath:progress:retHandler:
@@ -398,8 +375,6 @@
  * @param progressHandler Upgrade progress callback
  * @param retHandler Upgrade result callback
  */
-- (void)fcUpdateFirmwareWithPath:(NSString*)filePath
-                        progress:(FCProgressHandler)progressHandler
-                      retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcUpdateFirmwareWithPath:(NSString*)filePath progress:(FCProgressHandler)progressHandler retHandler:(FCSyncResultHandler)retHandler;
 @end
 
