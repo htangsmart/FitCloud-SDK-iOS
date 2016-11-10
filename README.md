@@ -296,31 +296,125 @@ operating system
 ```
 #### 同步闹钟设置
 ```objective-c
-  NSMutableArray *tmpArray = [[NSMutableArray alloc]init];
-  FCAlarmCycleModel *cycleModel = [[FCAlarmCycleModel alloc]init];
-  cycleModel.sunday = YES;
-  FCAlarmModel *alarmModel = [[FCAlarmModel alloc]init];
-  aModel.cycle = cycleModel.cycleValue;
-  aModel.isOn = YES;
-  aModel.year = @(16);
-  aModel.month = @(10);
-  aModel.day = @(31);
-  aModel.hour = @(20);
-  aModel.minute = @(30);
-  aModel.alarmId = @(0);
-  [tmpArray addObject:alarmModel];
-  NSData *alarmData = [tmpArray alarmClockConfigurationData];
-  // 开始同步闹钟
-  [[FitCloud shared]fcSetAlarmData:alarmData retHandler:^(FCSyncType syncType, FCSyncResponseState state) {
-      if (state == FCSyncResponseStateSuccess) {
-          // 闹钟同步成功
-      }
-      else
-      {
-          // 闹钟同步失败
-      }
-  }];
+
+// 这里的闹钟使用模拟数据，实际同步时使用你存储的真实数据
+NSMutableArray *tmpArray = [[NSMutableArray alloc]init];
+FCAlarmCycleModel *cycleModel = [[FCAlarmCycleModel alloc]init];
+cycleModel.sunday = YES;
+FCAlarmModel *alarmModel = [[FCAlarmModel alloc]init];
+aModel.cycle = cycleModel.cycleValue;
+aModel.isOn = YES;
+aModel.year = @(16);
+aModel.month = @(10);
+aModel.day = @(31);
+aModel.hour = @(20);
+aModel.minute = @(30);
+aModel.alarmId = @(0);
+[tmpArray addObject:alarmModel];
+NSData *alarmData = [tmpArray alarmClockConfigurationData];
+// 开始同步闹钟
+[[FitCloud shared]fcSetAlarmData:alarmData retHandler:^(FCSyncType syncType, FCSyncResponseState state) {
+    if (state == FCSyncResponseStateSuccess) {
+        // 闹钟同步成功
+    }
+    else
+    {
+        // 闹钟同步失败
+    }
+}];
 ```
+
+---
+
+### 5.  消息通知设置
+APP绑定手环后手环会将设置信息上传到APP，APP存储这些数据，在数据有更新时重新同步到手环
+#### 获取消息通知设置
+```objective-c
+[FitCloudUtils resolveSystemSettingsData:data withCallbackBlock:^(NSData *notificationData, NSData *screenDisplayData, NSData *functionalSwitchData, NSData *hsVersionData, NSData *healthHistorymonitorData, NSData *longSitData, NSData *bloodPressureData, NSData *drinkWaterReminderData) {
+      // 序列化通知设置模型  
+      FCNotificationModel *notificationModel = [FCNotificationModel modelWithData:notificationData];
+      // 存储或者更新消息通知设置
+}];
+```
+#### 更新消息通知设置
+```objective-c
+
+// 这里的model是模拟数据，实际使用你自己存储的数据
+FCNotificationModel *aModel = [[FCNotificationModel alloc]init];
+aModel.shortMessage = YES;
+aModel.phoneCall = YES;
+aModel.weChat = YES;
+aModel.QQ = YES;
+aModel.facebook = YES;
+aModel.instagram = YES;
+NSData *nfSettingsData = [aModel nfSettingData];
+WS(ws);
+[self showLoadingHUDWithMessage:@"正在同步"];
+[[FitCloud shared]fcSetNotificationSettingData:nfSettingsData retHandler:^(FCSyncType syncType, FCSyncResponseState state) {
+    if (state == FCSyncResponseStateSuccess) {
+        [ws hideLoadingHUDWithSuccess:@"同步成功"];
+    }
+    else
+    {
+        [ws hideLoadingHUDWithFailure:@"同步失败"];
+    }
+}];
+
+```
+
+---
+
+### 6. 相机拍照控制
+进入相机拍照页面监听手环发出的拍照指令，收到指令后开始拍照。如果app进入后台或者回到前台，app需要把相机状态同步到手表
+
+#### 拍照监听
+```objective-c
+[[FitCloud shared]setTakePicturesBlock:^{
+    // 启动拍照  
+}];
+```
+#### 注册观察者
+```objective-c
+// app进入前台
+[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(applicationDidBecomeActiveNotification) name:UIApplicationDidBecomeActiveNotification object:nil];
+// app进入背后
+[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(applicationDidEnterBackgroundNotification) name:UIApplicationDidEnterBackgroundNotification object:nil];
+
+- (void)applicationDidBecomeActiveNotification
+{
+    // 相机进入前台
+}
+
+- (void)applicationDidEnterBackgroundNotification
+{
+    // 相机进入后台
+}
+
+```
+
+#### app发送状态指令到手环
+```objective-c
+
+BOOL  inForeground = YES; // 判断前台还是后台
+[[FitCloud shared]fcSetCameraState:inForeground retHandler:^(FCSyncType syncType, FCSyncResponseState state) {
+        if (state == FCSyncResponseStateSuccess) {
+            if (inForeground) {
+                // 相机进入前台同步成功
+            }
+            else
+            {
+                // 相机进入后台同步成功-
+            }
+        }
+        else
+        {
+            // 相机状态同步失败
+        }
+    }];
+```
+
+
+
 
 注意
 ----
