@@ -63,17 +63,9 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
 ---
 
 ## API 使用指导
-### 1.  绑定设备
-绑定设备前我们需要先扫描要连接的外设，在扫描到的外设列表中选取一个外设并连接，连接成功并`didDiscoverCharacteristicsForService`后启动绑定服务。绑定成功将绑定的设备UUID使用NSUserDefaults存储起来用于下次自动扫描连接登录。
-
-##### 扫描外设列表
-
-```objective-c
-[[FitCloud shared]scanningPeripherals:^(NSArray<CBPeripheral *> *retArray, CBPeripheral *aPeripheral) { }];
-```
-
-##### 注册观察者
-
+### 1. 扫描连接外设
+第一次使用需要扫描绑定，调用`scanningPeripherals:`接口,连接后将`CBPeripheral`的UUID存储起来，下次使用调用`scanningPeripheralWithUUID:retHandler:`接口直接扫描连接
+#### 注册观察者
 ```objective-c
 // centralManager 状态改变通知
 [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(centerManagerDidUpdateState:) name:EVENT_CENTRALMANAGER_UPDATE_STATE_NOTIFY object:nil];
@@ -106,20 +98,41 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
 }
 ```
 
-
-
-##### 连接外设
-
+#### 调用`scanningPeripherals:`扫描所有外设
 ```objective-c
-CBPeripheral *aPeripheral = nil; // 这里是你选择的外设
+[[FitCloud shared]scanningPeripherals:^(NSArray<CBPeripheral *> *retArray, CBPeripheral *aPeripheral) {
+  // 处理扫描结果
+}];
+```
+
+#### 调用`scanningPeripheralWithUUID:retHandler:`扫描指定外设
+```objective-c
+// 通过绑定的uuid扫描指定的蓝牙外设
+[[FitCloud shared]scanningPeripheralWithUUID:nil retHandler:^(CBPeripheral *aPeripheral) {
+  // 扫描到外设后启动连接
+}];
+
+```
+
+#### 连接外设
+```objective-c
+// 连接一个你选择的外设，并在观察者里捕获连接结果
 [[FitCloud shared]connectPeripheral:aPeripheral];
 ```
-##### 绑定外设
 
+### 2.  绑定设备
+第一次使用设备前，选取扫描的外设连接成功后并收到`didDiscoverCharacteristicsForService`后开始绑定设备。绑定成功将绑定的设备UUID使用NSUserDefaults存储起来用于下次自动扫描连接登录。
+
+
+#### 注册观察者
 ```objective-c
 // 注册观察者
 [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(didDiscoverCharacteristics:) name:EVENT_DISCOVER_CHARACTERISTICS_NOTIFY object:nil];
+```
 
+##### 绑定外设
+
+```objective-c
 // 蓝牙连接成功，发现特征值服务
 - (void)didDisconnectPeripheral:(NSNotification*)notfication
 {
@@ -154,7 +167,9 @@ CBPeripheral *aPeripheral = nil; // 这里是你选择的外设
             wearStyleHandler(YES);
         }
     } dataHandler:^(FCSyncType syncType, NSData *data) {
+         // 存储手表的系统设置信息
         [self updateSystemSettingsWithData:data];
+
     } retHandler:^(FCSyncType syncType, FCSyncResponseState state)
      {
          if (state == FCSyncResponseStateSuccess)
@@ -223,17 +238,9 @@ operating system
 
 ---
 
-### 2.  登录设备
-如果app已经绑定，下次使用只需要使用存储的UUID字符串直接扫描指定外设，连接后启动登录就可以正常使用了
+### 3.  登录设备
+如果app已经绑定，使用存储的UUID字符串直接扫描指定外设，连接后登录设备就可以正常使用了
 
-##### 扫描指定的外设
-```objective-c
-// 通过绑定的uuid扫描指定的蓝牙外设
-[[FitCloud shared]scanningPeripheralWithUUID:@"xxx" retHandler:^(CBPeripheral *aPeripheral) {
-  // 扫描到外设后启动连接
-  [[FitCloud shared]connectPeripheral:aPeripheral];
-}];
-```
 #### 注册观察者
 ```objective-c
 // 注册观察者通知，如果发现服务特征值则启动登录路程
@@ -270,5 +277,6 @@ operating system
     }];
 ```
 
-
-5. 至此，你已经能使用FitCloud终端SDK的API内容了。如果想更详细了解每个API函数的用法，请查阅 API文档 或自行下载阅读SDK Sample Demo源码。
+注意
+----
+至此，你已经能使用FitCloud终端SDK的API内容了。如果想更详细了解每个API函数的用法，请查阅 API文档 或自行下载阅读SDK Sample Demo源码。
