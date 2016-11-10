@@ -12,7 +12,6 @@
 #import <FitCloudKit.h>
 #import "FitCloud+Category.h"
 
-
 @interface ScanListViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *listArray;
@@ -60,10 +59,10 @@
     [self changeLoadingWithMessage:@"正在绑定设备"];
     [[FitCloud shared]bondDevice:^(FCAuthDataHandler authDataHandler, FCUserDataHandler userDataHandler, FCWearStyleHandler wearStyleHandler) {
         if (authDataHandler) {
-            authDataHandler(100,0x01,0x02,0x01);
+            authDataHandler(100,2,1);
         }
         if (userDataHandler) {
-            userDataHandler(1,29,63*2,183*2);
+            userDataHandler(1,29,63,183);
         }
         if (wearStyleHandler) {
             wearStyleHandler(1);

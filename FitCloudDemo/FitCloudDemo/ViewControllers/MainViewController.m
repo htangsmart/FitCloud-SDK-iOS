@@ -116,7 +116,7 @@
     // 登录设备
     [[FitCloud shared]loginDevice:^(FCAuthDataHandler authDataHandler) {
         if (authDataHandler) {
-            authDataHandler(100,0x01,0x02,0x01);
+            authDataHandler(100,2,1);
         }
     } retHandler:^(FCSyncType syncType, FCSyncResponseState state) {
         if (syncType == FCSyncTypeLoginToSyncTime) {

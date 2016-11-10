@@ -205,7 +205,7 @@
     AlarmClockCell  *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
     if (indexPath.row < self.listArray.count) {
         FCAlarmModel *aModel = self.listArray[indexPath.row];
-        cell.textLabel.text = aModel.workTime;
+        cell.textLabel.text = aModel.ringTime;
         cell.detailTextLabel.text = aModel.cycleModel.cycleDescription;
         cell.acSwitch.on = aModel.isOn;
     }
