@@ -38,7 +38,7 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
 
 2. 下载FitCloud-SDK-iOS
 
-3. 将FitCloud-SDK-iOS中的lib文件夹内源文件导入你的工程。如果你不想导入工程，你可以把lib文件夹放到你的工程里，然后在Build Settings中设置库文件和头文件的搜索路径，设置如下图：
+3. 将FitCloud-SDK-iOS中的lib文件夹内源文件导入你的工程。如果你不想导入工程，你可以把lib文件夹放到你的工程文件夹里，然后在Build Settings中设置库文件和头文件的搜索路径，设置如下图：
 ![Alt text](http://p1.bqimg.com/1949/6dde697bfc40636b.png)
 
 4. 在Build Settings中设置Other linker Flags为 -ObjC
@@ -58,7 +58,7 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
 ---
 
 ## 系统要求
-该SDk最低支持`iOS 8.0` 和 `Xcode 7.0`
+该SDK最低支持`iOS 8.0` 和 `Xcode 7.0`
 
 ---
 
