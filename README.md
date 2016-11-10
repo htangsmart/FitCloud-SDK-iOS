@@ -119,6 +119,7 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
 // 连接一个你选择的外设，并在观察者里捕获连接结果
 [[FitCloud shared]connectPeripheral:aPeripheral];
 ```
+---
 
 ### 2.  绑定设备
 第一次使用设备前，选取扫描的外设连接成功后并收到`didDiscoverCharacteristicsForService`后开始绑定设备。绑定成功将绑定的设备UUID使用NSUserDefaults存储起来用于下次自动扫描连接登录。
@@ -271,6 +272,54 @@ operating system
            //超时，后者蓝牙未连接等做其他处理
         }
     }];
+```
+
+---
+
+### 4.  闹钟同步
+最多可以设置8个闹钟，每个闹钟的响铃时间必须唯一,每次同步前需要对闹钟的ID进行编号，每个id唯一（0-7）
+#### 获取闹钟列表
+```objective-c
+[[FitCloud shared]fcGetAlarmList:^(FCSyncType syncType, NSData *data) {
+        NSArray *modelsArray = [NSArray arrayWithAlarmClockConfigurationData:data];
+        // 将同步的闹钟展示到列表
+
+    } retHandler:^(FCSyncType syncType, FCSyncResponseState state) {
+        if (state == FCSyncResponseStateSuccess) {
+            // 闹钟同步完成
+        }
+        else
+        {
+            // 闹钟同步失败
+        }
+    }];
+```
+#### 同步闹钟设置
+```objective-c
+  NSMutableArray *tmpArray = [[NSMutableArray alloc]init];
+  FCAlarmCycleModel *cycleModel = [[FCAlarmCycleModel alloc]init];
+  cycleModel.sunday = YES;
+  FCAlarmModel *alarmModel = [[FCAlarmModel alloc]init];
+  aModel.cycle = cycleModel.cycleValue;
+  aModel.isOn = YES;
+  aModel.year = @(16);
+  aModel.month = @(10);
+  aModel.day = @(31);
+  aModel.hour = @(20);
+  aModel.minute = @(30);
+  aModel.alarmId = @(0);
+  [tmpArray addObject:alarmModel];
+  NSData *alarmData = [tmpArray alarmClockConfigurationData];
+  // 开始同步闹钟
+  [[FitCloud shared]fcSetAlarmData:alarmData retHandler:^(FCSyncType syncType, FCSyncResponseState state) {
+      if (state == FCSyncResponseStateSuccess) {
+          // 闹钟同步成功
+      }
+      else
+      {
+          // 闹钟同步失败
+      }
+  }];
 ```
 
 注意
