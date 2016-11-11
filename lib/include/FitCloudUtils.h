@@ -16,6 +16,17 @@
  */
 @interface FitCloudUtils : NSObject
 
+
+/*!
+ Total daily data will be analyzed into the total number of steps, total distance, total calories, deep sleep duration, light sleep duration, average heart rate
+
+ @param data Day total data
+ @param block Callback block
+ @return if data is <i>nil</i>,return <i>NO</i>
+ */
++ (BOOL)resovleDayTotalData:(NSData*)data withCallBackBlock:(FCDayTotalDataBlock)block;
+
+
 /*!
  The system setting data is divided into detailed setting data
 

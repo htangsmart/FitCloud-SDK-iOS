@@ -40,17 +40,25 @@
     [[FitCloud shared]fcGetHistoryData:^(FCSyncType syncType) {
         NSLog(@"--syncType--%@",@(syncType));
     } dataHandler:^(FCSyncType syncType, NSData *data) {
-        if (syncType == FCSyncTypeExercise) {
+        if (syncType == FCSyncTypeDailyTotalData)
+        {
+            NSLog(@"--日总记录--%@",data);
+        }
+        else if (syncType == FCSyncTypeExercise) {
+            
+            NSLog(@"--运动记录-%@",data);
             NSArray *array = [FitCloudUtils resolveExerciseDataIntoModelObjects:data];
             NSLog(@"--array--%@",array);
         }
         else if (syncType == FCSyncTypeSleep)
         {
+            NSLog(@"--睡眠记录-%@",data);
             NSArray *array = [FitCloudUtils resolveSleepDataIntoModelObjects:data];
             NSLog(@"--array--%@",array);
         }
         else if (syncType == FCSyncTypeHeartRate)
         {
+            NSLog(@"--心率记录-%@",data);
             NSArray *array = [FitCloudUtils resolveHeartRateDataIntoModelObjects:data];
             NSLog(@"--array--%@",array);
         }

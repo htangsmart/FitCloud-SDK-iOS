@@ -15,6 +15,18 @@
 #ifndef FitCloudBlock_h
 #define FitCloudBlock_h
 
+
+/*!
+ * @discussion Day total data, including the total number of steps, total distance, total calories, deep sleep duration, light sleep duration, average heart rate
+ @param steps           Total number of steps
+ @param distance        Total distance
+ @param calorie         Total calories
+ @param deepSleep       Deep sleep duration
+ @param lightSleep      Light sleep duration
+ @param avgHeartRate    Average heart rate
+ */
+typedef void (^FCDayTotalDataBlock)(UInt32 steps, UInt32 distance, UInt32 calorie, UInt32 deepSleep, UInt32 lightSleep, UInt32 avgHeartRate);
+
 /*!
  *  @discussion System Setting Information Callback Block
  *

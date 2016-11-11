@@ -75,6 +75,7 @@
                         <NodeRef refid="34"/>
                         <NodeRef refid="35"/>
                         <NodeRef refid="36"/>
+                        <NodeRef refid="37"/>
                         
                     </Subnodes>
                 </Node>
@@ -642,76 +643,81 @@
             
         </Node>
         <Node id="22" type="file" documentType="reference">
+            <Name>FCDayTotalDataBlock</Name>
+            <Path>Blocks/FCDayTotalDataBlock.html</Path>
+            
+        </Node>
+        <Node id="23" type="file" documentType="reference">
             <Name>FCDeviceListHandler</Name>
             <Path>Blocks/FCDeviceListHandler.html</Path>
             
         </Node>
-        <Node id="23" type="file" documentType="reference">
+        <Node id="24" type="file" documentType="reference">
             <Name>FCHardwareAndSoftwareVersionDataBlock</Name>
             <Path>Blocks/FCHardwareAndSoftwareVersionDataBlock.html</Path>
             
         </Node>
-        <Node id="24" type="file" documentType="reference">
+        <Node id="25" type="file" documentType="reference">
             <Name>FCHardwareAndSoftwareVersionStringBlock</Name>
             <Path>Blocks/FCHardwareAndSoftwareVersionStringBlock.html</Path>
             
         </Node>
-        <Node id="25" type="file" documentType="reference">
+        <Node id="26" type="file" documentType="reference">
             <Name>FCLoginDatahandler</Name>
             <Path>Blocks/FCLoginDatahandler.html</Path>
             
         </Node>
-        <Node id="26" type="file" documentType="reference">
+        <Node id="27" type="file" documentType="reference">
             <Name>FCPeripheralHandler</Name>
             <Path>Blocks/FCPeripheralHandler.html</Path>
             
         </Node>
-        <Node id="27" type="file" documentType="reference">
+        <Node id="28" type="file" documentType="reference">
             <Name>FCProgressHandler</Name>
             <Path>Blocks/FCProgressHandler.html</Path>
             
         </Node>
-        <Node id="28" type="file" documentType="reference">
+        <Node id="29" type="file" documentType="reference">
             <Name>FCRTSyncDataHandler</Name>
             <Path>Blocks/FCRTSyncDataHandler.html</Path>
             
         </Node>
-        <Node id="29" type="file" documentType="reference">
+        <Node id="30" type="file" documentType="reference">
             <Name>FCSyncCountHandler</Name>
             <Path>Blocks/FCSyncCountHandler.html</Path>
             
         </Node>
-        <Node id="30" type="file" documentType="reference">
+        <Node id="31" type="file" documentType="reference">
             <Name>FCSyncDataHandler</Name>
             <Path>Blocks/FCSyncDataHandler.html</Path>
             
         </Node>
-        <Node id="31" type="file" documentType="reference">
+        <Node id="32" type="file" documentType="reference">
             <Name>FCSyncPowerAndChargingStateHandler</Name>
             <Path>Blocks/FCSyncPowerAndChargingStateHandler.html</Path>
             
         </Node>
-        <Node id="32" type="file" documentType="reference">
+        <Node id="33" type="file" documentType="reference">
             <Name>FCSyncResultHandler</Name>
             <Path>Blocks/FCSyncResultHandler.html</Path>
             
         </Node>
-        <Node id="33" type="file" documentType="reference">
+        <Node id="34" type="file" documentType="reference">
             <Name>FCSyncStepHandler</Name>
             <Path>Blocks/FCSyncStepHandler.html</Path>
             
         </Node>
-        <Node id="34" type="file" documentType="reference">
+        <Node id="35" type="file" documentType="reference">
             <Name>FCSystemSettingDataBlock</Name>
             <Path>Blocks/FCSystemSettingDataBlock.html</Path>
             
         </Node>
-        <Node id="35" type="file" documentType="reference">
+        <Node id="36" type="file" documentType="reference">
             <Name>FCUserDataHandler</Name>
             <Path>Blocks/FCUserDataHandler.html</Path>
             
         </Node>
-        <Node id="36" type="file" documentType="reference">
+        <Node id="37" type="file" documentType="reference">
             <Name>FCWearStyleHandler</Name>
             <Path>Blocks/FCWearStyleHandler.html</Path>
             
