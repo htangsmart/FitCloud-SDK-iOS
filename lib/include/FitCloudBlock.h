@@ -17,6 +17,17 @@
 
 
 /*!
+ * @discussion Detailed records of health data,The current data is generated from the heart rate data simulation.
+
+ @param heartRateArray a list of <i>FCHeathModel</i> objects,The property <i>heartRate</i> will be assigned
+ @param bloodOxygenArray a list of <i>FCHeathModel</i> objects,The property <i>bloodOxygen</i> will be assigned
+ @param bloodPressureArray a list of <i>FCHeathModel</i> objects,The property <i>systolicBloodPressure</i> and <i>diastolicBloodPressure</i> will be assigned
+ @param breathingRateArray a list of <i>FCHeathModel</i> objects,The property <i>breathingRate</i> will be assigned
+ */
+typedef void (^FCHealthDataModelBlock)(NSArray *heartRateArray,NSArray *bloodOxygenArray,NSArray *bloodPressureArray,NSArray *breathingRateArray);
+
+
+/*!
  * @discussion Day total data, including the total number of steps, total distance, total calories, deep sleep duration, light sleep duration, average heart rate
  @param steps           Total number of steps
  @param distance        Total distance
