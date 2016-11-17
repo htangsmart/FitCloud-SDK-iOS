@@ -62,6 +62,16 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
 
 ---
 
+## 修改日志
+```
+2016-11-17 SDK 1.0.0
+(1) 修改登录接口，添加用户信息设置参数
+(2) 优化卡路里和距离的计算公式
+```
+
+---
+
+
 ## API 使用指导
 ### 1. 扫描连接外设
 第一次使用需要扫描绑定，调用`scanningPeripherals:`接口,连接后将`CBPeripheral`的UUID存储起来，下次使用调用`scanningPeripheralWithUUID:retHandler:`接口直接扫描连接
