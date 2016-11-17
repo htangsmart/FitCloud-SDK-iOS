@@ -112,12 +112,6 @@ typedef void (^FCDeviceListHandler)(NSArray<CBPeripheral*>*retArray,CBPeripheral
 typedef void (^FCAuthDataHandler)(UInt64 guestId, UInt8 phoneModel, UInt8 OS);
 
 
-/*!
- * @discussion Login to set the parameter block
- * @param authDataHandler A block is used to set the device login information
- */
-typedef void (^FCLoginDatahandler)(FCAuthDataHandler authDataHandler);
-
 
 /*!
  * @discussion This block is used to set up user information, including user gender, age, height and weight.
@@ -134,6 +128,14 @@ typedef void (^FCUserDataHandler)(UInt32 sex, UInt32 age, UInt32 weight, UInt32 
  * @param lefthHand Whether it is left-handed
  */
 typedef void (^FCWearStyleHandler)(BOOL lefthHand);
+
+
+/*!
+ * @discussion Login to set the parameter block
+ * @param authDataHandler A block is used to set the device login information
+ * @param userDataHandler  Set user information
+ */
+typedef void (^FCLoginDatahandler)(FCAuthDataHandler authDataHandler,FCUserDataHandler userDataHandler);
 
 
 /*!
