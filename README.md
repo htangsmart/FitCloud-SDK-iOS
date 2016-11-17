@@ -249,12 +249,19 @@ operating system
 ```
 #### 登录设备
 ```objective-c
-[[FitCloud shared]loginDevice:^(FCAuthDataHandler authDataHandler)
+[[FitCloud shared]loginDevice:^(FCAuthDataHandler authDataHandler, FCUserDataHandler userDataHandler)
     {
         if (authDataHandler)
         {
           // 详细数据见 1.绑定设备->设备信息说明
             authDataHandler(100,10,10);
+        }
+
+        // 设置用户信息
+        if (userDataHandler)
+        {
+          // 性别：0 女 1 男; 年龄 = 当前年 - 出身 + 1; 体重 65kg; 身高 183cm
+            userDataHandler(1,29,65,183);
         }
 
     } retHandler:^(FCSyncType syncType, FCSyncResponseState state)
