@@ -280,13 +280,16 @@ operating system
             NSLog(@"--同步完成--");
             // 登录成功，处理其他同步
         }
-        else if (syncType == FCSyncResponseStateError)
-        {
-          // 登录失败，移除绑定信息重新绑定
-        }
         else
         {
-           //超时，后者蓝牙未连接等做其他处理
+          if (state == FCSyncResponseStateError)
+          {
+            // 登录失败，移除绑定信息重新绑定
+          }
+          else
+          {
+             //超时，后者蓝牙未连接等做其他处理
+          }
         }
     }];
 ```
