@@ -13,11 +13,11 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/resovleDayTotalData:withCallBackBlock:</TokenIdentifier>
-			<Abstract type="html">Total daily data will be analyzed into the total number of steps, total distance, total calories, deep sleep duration, light sleep duration, average heart rate</Abstract>
+			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/resolveDayTotalData:withCallBackBlock:</TokenIdentifier>
+			<Abstract type="html">Day total data will be analyzed into the total number of steps, total distance, total calories, deep sleep duration, light sleep duration, average heart rate</Abstract>
 			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
 			
-			<Declaration>+ (BOOL)resovleDayTotalData:(NSData *)data withCallBackBlock:(FCDayTotalDataBlock)block</Declaration>
+			<Declaration>+ (BOOL)resolveDayTotalData:(NSData *)data withCallBackBlock:(FCDayTotalDataBlock)block</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>data</Name>
@@ -28,7 +28,7 @@
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">if data is &lt;i&gt;nil&lt;/i&gt;,return &lt;i&gt;NO&lt;/i&gt;</Abstract></ReturnValue>
-			<Anchor>//api/name/resovleDayTotalData:withCallBackBlock:</Anchor>
+			<Anchor>//api/name/resolveDayTotalData:withCallBackBlock:</Anchor>
             <NodeRef refid="14"/>
 		</Token>
 		
