@@ -114,7 +114,7 @@
         return;
     }
     // 登录设备
-    [[FitCloud shared]loginDevice:^(FCAuthDataHandler authDataHandler) {
+    [[FitCloud shared]loginDevice:^(FCAuthDataHandler authDataHandler, FCUserDataHandler userDataHandler) {
         if (authDataHandler) {
             authDataHandler(100,2,1);
         }

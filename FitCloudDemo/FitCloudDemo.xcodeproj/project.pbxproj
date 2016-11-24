@@ -25,6 +25,7 @@
 		6B5DD2C41DC8A97A00788BDA /* FitCloud+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DD2BE1DC8A97A00788BDA /* FitCloud+Category.m */; };
 		6B5DD2C51DC8A97A00788BDA /* MBProgressHUD+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DD2C01DC8A97A00788BDA /* MBProgressHUD+Category.m */; };
 		6B5DD2C61DC8A97A00788BDA /* NSObject+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DD2C21DC8A97A00788BDA /* NSObject+HUD.m */; };
+		6BCF1C6A1DE57FD600B99A21 /* FitCloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCF1C691DE57FD600B99A21 /* FitCloudManager.m */; };
 		6BFE92711DD4C02500685350 /* libFitCloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFE92701DD4C02500685350 /* libFitCloud.a */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,8 @@
 		6B5DD2C01DC8A97A00788BDA /* MBProgressHUD+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Category.m"; sourceTree = "<group>"; };
 		6B5DD2C11DC8A97A00788BDA /* NSObject+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HUD.h"; sourceTree = "<group>"; };
 		6B5DD2C21DC8A97A00788BDA /* NSObject+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HUD.m"; sourceTree = "<group>"; };
+		6BCF1C681DE57FD600B99A21 /* FitCloudManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitCloudManager.h; sourceTree = "<group>"; };
+		6BCF1C691DE57FD600B99A21 /* FitCloudManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitCloudManager.m; sourceTree = "<group>"; };
 		6BF7E0981DC8D2B40052073C /* libFitCloud.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFitCloud.a; path = "lib/Debug-iphoneos/libFitCloud.a"; sourceTree = "<group>"; };
 		6BFE92701DD4C02500685350 /* libFitCloud.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFitCloud.a; path = lib/libFitCloud.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +140,7 @@
 		6B5DD24F1DC8A4E100788BDA /* FitCloudDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6BCF1C671DE57FC700B99A21 /* Manager */,
 				6B5DD2BA1DC8A97A00788BDA /* Category */,
 				6B5DD29E1DC8A95600788BDA /* Helper */,
 				6B5DD29F1DC8A95600788BDA /* Marco */,
@@ -251,6 +255,15 @@
 				6B5DD2C21DC8A97A00788BDA /* NSObject+HUD.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		6BCF1C671DE57FC700B99A21 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				6BCF1C681DE57FD600B99A21 /* FitCloudManager.h */,
+				6BCF1C691DE57FD600B99A21 /* FitCloudManager.m */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		6BF7E0971DC8D2B40052073C /* Frameworks */ = {
@@ -412,6 +425,7 @@
 				6B5DD2C51DC8A97A00788BDA /* MBProgressHUD+Category.m in Sources */,
 				6B5DD2B81DC8A95600788BDA /* SyncHistoryViewController.m in Sources */,
 				6B5DD2C41DC8A97A00788BDA /* FitCloud+Category.m in Sources */,
+				6BCF1C6A1DE57FD600B99A21 /* FitCloudManager.m in Sources */,
 				6B5DD2B61DC8A95600788BDA /* RealTimeTestViewController.m in Sources */,
 				6B5DD2B91DC8A95600788BDA /* AlarmClockCell.m in Sources */,
 				6B5DD2B51DC8A95600788BDA /* MainViewController.m in Sources */,
