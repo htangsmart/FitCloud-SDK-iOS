@@ -113,6 +113,16 @@
             <NodeRef refid="18"/>
         </Token>
         
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateLowPower</TokenIdentifier>
+            <Abstract type="html">Power is too low to upgrade</Abstract>
+            <Declaration>FCSyncResponseStateLowPower</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="18"/>
+        </Token>
+        
         
 	</File>
 </Tokens>

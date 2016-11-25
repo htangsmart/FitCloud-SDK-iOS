@@ -189,6 +189,9 @@ typedef NS_ENUM(NSInteger, FCSyncResponseState) {
     
     /*! Healthy real-time synchronization timeout*/
     FCSyncResponseStateRTTimeOut = 9,
+    
+    /*! Power is too low to upgrade*/
+    FCSyncResponseStateLowPower = 10,
 };
 
 #endif /* FCDefine_h */
