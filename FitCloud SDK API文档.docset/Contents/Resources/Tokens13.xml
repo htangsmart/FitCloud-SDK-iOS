@@ -374,6 +374,18 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FitCloud/SDKVersion</TokenIdentifier>
+			<Abstract type="html">SDK Version</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)SDKVersion</Declaration>
+			
+			<ReturnValue><Abstract type="html">SDK Version String</Abstract></ReturnValue>
+			<Anchor>//api/name/SDKVersion</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/scanningPeripherals:</TokenIdentifier>
 			<Abstract type="html">Scans Bluetooth peripherals</Abstract>
 			<DeclaredIn>FitCloud.h</DeclaredIn>

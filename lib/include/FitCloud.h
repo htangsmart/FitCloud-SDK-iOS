@@ -78,6 +78,13 @@
 + (instancetype)shared;
 
 
+/*!
+ SDK Version
+ 
+ @return SDK Version String
+ */
++ (NSString*)SDKVersion;
+
 #pragma mark - 扫描与连接
 
 /**
@@ -289,11 +296,7 @@
  * @param weight     weight
  * @param retHandler Synchronous result callback
  */
-- (void)fcSetUserProfile:(UInt32)sex
-                     age:(UInt32)age
-                  height:(UInt32)height
-                  weight:(UInt32)weight
-              retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetUserProfile:(UInt32)sex age:(UInt32)age height:(UInt32)height weight:(UInt32)weight retHandler:(FCSyncResultHandler)retHandler;
 
 
 /*!
@@ -316,12 +319,7 @@
  * @param cityName    City name
  * @param retHandler  Synchronous result callback
  */
-- (void)fcSetWeather:(int)temperature
-            highTemp:(int)hTemp
-             lowTemp:(int)lTemp
-               state:(int)state
-            cityName:(NSString*)cityName
-          retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetWeather:(int)temperature highTemp:(int)hTemp lowTemp:(int)lTemp state:(int)state cityName:(NSString*)cityName retHandler:(FCSyncResultHandler)retHandler;
 
 
 #pragma mark - 健康实时同步
