@@ -103,6 +103,11 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
         }
     }
 }
+- (void)peripheralDidConnected:(NSNotification*)notification
+{
+    // 蓝牙连接成功，这里尚未扫描特征值服务，不能进行通讯，你可以进行UI刷新
+}
+
 - (void)peripheralDidFailConnected:(NSNotification*)notification
 {
     // 连接失败，停止扫描或者重新扫描外设
@@ -157,7 +162,7 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
         // your code
         return;
     }
-    
+
    // 绑定设备
    [self startBindingDevice:^(FCSyncResponseState state) {
         // 结果处理
@@ -217,12 +222,12 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
   [FitCloudUtils resolveSystemSettingsData:data withCallbackBlock:^(NSData *notificationData, NSData *screenDisplayData, NSData *functionalSwitchData, NSData *hsVersionData, NSData *healthHistorymonitorData, NSData *longSitData, NSData *bloodPressureData, NSData *drinkWaterReminderData) {
     // 你自己的处理，你需要存储这些设置数据
     // your code
-    
+
     // 解析固件的软硬件版本信息数据
     [FitCloudUtils resolveHardwareAndSoftwareVersionData:hsVersionData withCallbackBlock:^(NSData *projData, NSData *hardwareData, NSData *sdkData, NSData *patchData, NSData *flashData, NSData *fwAppData, NSData *seqData) {
             // 你自己的处理
         }];
-    
+
     // 解析固件的软硬件版本信息数据成字符串，这里部分字符串参数需要提交给服务器用于固件版本信息检查
     [FitCloudUtils resolveHardwareAndSoftwareVersionDataToString:hsVersionData withCallbackBlock:^(NSString *projNum, NSString *hardware, NSString *sdkVersion, NSString *patchVerson, NSString *falshVersion, NSString *appVersion, NSString *serialNum) {
        // 你自己的处理
