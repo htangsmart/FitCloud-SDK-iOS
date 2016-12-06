@@ -1,4 +1,4 @@
-
+﻿
 # FitCloud
 
 [![Platfrom](https://img.shields.io/badge/platfrom-iOS-brightgreen.svg?style=flat)](https://github.com/htangsmart/FitCloud-SDK-iOS.git)&nbsp;
@@ -11,7 +11,7 @@
 ---
 ## 简介
 
-FitCloud 是基于和唐智能手表开发的一款SDK，它可以帮助你记录全天事件：标准运动功能（步数、热量、距离）、睡眠时间、心率、血氧、信息提醒（来电、留言、微信、QQ、Facebook等）、智能闹钟、防丢失提醒、解除手腕查看信息、闲置报警、水钟、相机拍照控制等,功能十分强大，在你的APP中快速集成吧！
+FitCloud 是基于和唐智能手表开发的一款SDK，它可以帮助你记录全天事件，功能十分强大，包括标准运动功能（步数、热量、距离）、睡眠时间、心率、血氧、信息提醒（来电、留言、微信、QQ、Facebook等）、智能闹钟、防丢失提醒、解除手腕查看信息、闲置报警、水钟、相机拍照控制等，在你的APP中快速集成吧！
 
 ---
 ## 资源介绍
@@ -25,6 +25,26 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
 * [libFitCloud.a](https://github.com/htangsmart/FitCloud-SDK-iOS/tree/master/lib) — SDK 静态库文件
 
 ---
+
+## 系统要求
+该SDK最低支持`iOS 8.0` 和 `Xcode 7.0`
+
+---
+
+## 文档
+你可以查阅FitCloud-SDK-iOS中的`html`文档,也可以将`docset`文档安装到`Xcode`阅读。具体开发指导请参阅Demo源代码。
+
+---
+
+## 修改日志
+```
+2016-11-17 SDK 1.0.0
+(1) 修改登录接口，添加用户信息设置参数
+(2) 优化卡路里和距离的计算公式
+```
+
+---
+
 ## 安装
 
 ### CocoaPods
@@ -52,36 +72,17 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
 
 ---
 
-## 文档
-你可以查阅FitCloud-SDK-iOS中的`html`文档,也可以将`docset`文档安装到`Xcode`阅读
-
----
-
-## 系统要求
-该SDK最低支持`iOS 8.0` 和 `Xcode 7.0`
-
----
-
-## 修改日志
-```
-2016-11-17 SDK 1.0.0
-(1) 修改登录接口，添加用户信息设置参数
-(2) 优化卡路里和距离的计算公式
-```
-
----
-
-
 ## API 使用指导
 ### 1. 扫描连接外设
-第一次使用需要扫描绑定，调用`scanningPeripherals:`接口,连接后将`CBPeripheral`的UUID存储起来，下次使用调用`scanningPeripheralWithUUID:retHandler:`接口直接扫描连接
+第一次使用需要扫描绑定，调用`scanningPeripherals:`接口扫描符合条件的外设,连接绑定后将`CBPeripheral`的UUID存储起来，下次使用调用`scanningPeripheralWithUUID:retHandler:`接口直接扫描连接指定`UUID`的外设进行登录就可以正常通讯了。
+
 #### 注册观察者
 ```objective-c
-// centralManager 状态改变通知
+// centralManager 状态改变通知，如果蓝牙关闭或者打开，你需要执行某些响应操作
 [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(centerManagerDidUpdateState:) name:EVENT_CENTRALMANAGER_UPDATE_STATE_NOTIFY object:nil];
-// 外设成功连接通知
+// 外设成功连接通知，当蓝牙连接上了以后，你可以更新相应的UI状态等
 [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(peripheralDidConnected:) name:EVENT_CONNECT_PERIPHERAL_NOTIFY object:nil];
-// 外设连接失败通知
+// 外设连接失败通知，如果收到此通知，则蓝牙连接失败，你需要重新执行连接操作或者其他事情
 [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(peripheralDidFailConnected:) name:EVENT_FAIL_CONNECT_PERIPHERAL_NOTIFY object:nil];
 
 // 此处观察设备蓝牙的状态，如果蓝牙打开或者关闭，更改相应的扫描状态
@@ -94,11 +95,11 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
         CBCentralManagerState state = stateNumber.integerValue;
         if (state == CBCentralManagerStatePoweredOn)
         {
-            // 蓝牙打开，启动扫描外设
+            // 蓝牙打开，启动外设扫描
         }
         else if (state == CBCentralManagerStatePoweredOff)
         {
-            // 蓝牙关闭，停止扫描外设
+            // 蓝牙关闭，停止外设扫描
         }
     }
 }
@@ -110,14 +111,15 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
 
 #### 调用`scanningPeripherals:`扫描所有外设
 ```objective-c
+// 此处会返回当前扫描到的所有外设列表和当前扫描到的外设。
 [[FitCloud shared]scanningPeripherals:^(NSArray<CBPeripheral *> *retArray, CBPeripheral *aPeripheral) {
-  // 处理扫描结果
+  // 处理扫描结果，你可以把结果显示在列表上，然后点击选择一个外设进行连接
 }];
 ```
 
-#### 调用`scanningPeripheralWithUUID:retHandler:`扫描指定外设
+#### 调用`scanningPeripheralWithUUID:retHandler:`扫描指定`UUID`的外设
 ```objective-c
-// 通过绑定的uuid扫描指定的蓝牙外设
+// 通过绑定的uuid扫描指定的蓝牙外设，如果你已经存储了UUID，直接调用扫描此UUID的外设即可
 [[FitCloud shared]scanningPeripheralWithUUID:nil retHandler:^(CBPeripheral *aPeripheral) {
   // 扫描到外设后启动连接
 }];
@@ -126,32 +128,39 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
 
 #### 连接外设
 ```objective-c
-// 连接一个你选择的外设，并在观察者里捕获连接结果
+// 连接一个你选择的外设，并在上述通知里获取连接结果
 [[FitCloud shared]connectPeripheral:aPeripheral];
 ```
 ---
 
 ### 2.  绑定设备
-第一次使用设备前，选取扫描的外设连接成功后并收到`didDiscoverCharacteristicsForService`后开始绑定设备。绑定成功将绑定的设备UUID使用NSUserDefaults存储起来用于下次自动扫描连接登录。
+第一次使用设备前，你需要绑定指定的设备，调用`scanningPeripherals:`扫描外设列表，选取外设连接成功并收到`didDiscoverCharacteristicsForService`通知后开始绑定设备。绑定成功后将此设备`UUID`存储起来下次调用`scanningPeripheralWithUUID:retHandler:`API自动扫描连接然后执行登录即可正常通讯。
 
 
 #### 注册观察者
 ```objective-c
-// 注册观察者
+// 当扫描到服务特征值后，蓝牙可以进行正常通讯工作，这个你可以执行绑定或者登录了
 [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(didDiscoverCharacteristics:) name:EVENT_DISCOVER_CHARACTERISTICS_NOTIFY object:nil];
 ```
 
 ##### 绑定外设
 
 ```objective-c
-// 蓝牙连接成功，发现特征值服务
+// 发现服务特征值通知，这里你需要判断是需要登录还是绑定操作
 - (void)didDisconnectPeripheral:(NSNotification*)notfication
 {
    // 你的逻辑代码
-
+    BOOL ret = (已经绑定？YES:NO);
+    if (ret)
+    {
+        // 设备已经绑定，获取存储的UUID执行登录操作
+        // your code
+        return;
+    }
+    
    // 绑定设备
    [self startBindingDevice:^(FCSyncResponseState state) {
-            // 结果处理
+        // 结果处理
     }];
 }
 
@@ -201,14 +210,20 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
      }];
 }
 
-// 解析存储系统设置数据
+// 绑定成功后，会返回手表的各项设置信息，你需要解析并存储此数据
 - (void)updateSystemSettingsWithData:(NSData*)data
 {
+    // 将手表数据解析成详细的各项设置数据
   [FitCloudUtils resolveSystemSettingsData:data withCallbackBlock:^(NSData *notificationData, NSData *screenDisplayData, NSData *functionalSwitchData, NSData *hsVersionData, NSData *healthHistorymonitorData, NSData *longSitData, NSData *bloodPressureData, NSData *drinkWaterReminderData) {
-    // 你自己的处理
+    // 你自己的处理，你需要存储这些设置数据
+    // your code
+    
+    // 解析固件的软硬件版本信息数据
     [FitCloudUtils resolveHardwareAndSoftwareVersionData:hsVersionData withCallbackBlock:^(NSData *projData, NSData *hardwareData, NSData *sdkData, NSData *patchData, NSData *flashData, NSData *fwAppData, NSData *seqData) {
             // 你自己的处理
         }];
+    
+    // 解析固件的软硬件版本信息数据成字符串，这里部分字符串参数需要提交给服务器用于固件版本信息检查
     [FitCloudUtils resolveHardwareAndSoftwareVersionDataToString:hsVersionData withCallbackBlock:^(NSString *projNum, NSString *hardware, NSString *sdkVersion, NSString *patchVerson, NSString *falshVersion, NSString *appVersion, NSString *serialNum) {
        // 你自己的处理
     }];
@@ -407,12 +422,12 @@ WS(ws);
 
 - (void)applicationDidBecomeActiveNotification
 {
-    // 相机进入前台
+    // 相机进入前台，发送状态指令到手环
 }
 
 - (void)applicationDidEnterBackgroundNotification
 {
-    // 相机进入后台
+    // 相机进入后台，发送状态指令到手环
 }
 
 ```
