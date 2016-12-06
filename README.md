@@ -465,8 +465,8 @@ BOOL  inForeground = YES; // 判断前台还是后台
 ```objective-c
 [[FitCloud shared]fcGetBatteryPowerAndChargingState:^(UInt8 powerValue, UInt8 chargingState) {
 
-        DEBUG_METHOD(@"--电量--%@",@(powerValue));
-        DEBUG_METHOD(@"--充电状态--%@",@(chargingState));
+        NSLog(@"--电量--%@",@(powerValue));
+        NSLog(@"--充电状态--%@",@(chargingState));
         if (chargingState == 0)
         {
             // 未充电
@@ -491,6 +491,31 @@ BOOL  inForeground = YES; // 判断前台还是后台
 ---
 
 ### 9. 手环显示设置
+手环屏幕显示条目可以根据需要设置，调用此接口你可以自定义手表的显示功能，当前手表显示条目如下：时间和日期、步数、距离、卡路里、睡眠、心率、血氧、血压、天气预报、查找手机、手表id。其中心率、血氧、血压等健康功能跟固件的flag有关，如果固件包含此功能，则手表会显示。
+
+```objective-c
+// 需要显示的属性设置为YES即可，在同步设置之前，你需要读取本地设置
+FCDisplayModel *displayModel = [[FCDisplayModel alloc]init];
+displayModel.dateTime = YES;
+displayModel.stepCount = YES;
+displayModel.distance = YES;
+displayModel.calorie = YES;
+displayModel.sleep = YES;
+displayModel.heartRate = YES;
+displayModel.displayId = YES;
+NSData *data = [displayModel displayData];
+[[FitCloud shared]fcSetDisplayData:data retHandler:^(FCSyncType syncType, FCSyncResponseState state) {
+    if (state == FCSyncResponseStateSuccess)
+    {
+        // 成功更新显示设置，你可以更新本地存储的数据
+    }
+    else
+    {
+
+    }
+}];
+```
+
 
 ---
 
