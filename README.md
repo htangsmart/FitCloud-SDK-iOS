@@ -158,7 +158,7 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
     BOOL ret = (已经绑定？YES:NO);
     if (ret)
     {
-        // 设备已经绑定，获取存储的UUID执行登录操作
+        // 设备已经绑定，执行登录操作
         // your code
         return;
     }
@@ -461,6 +461,32 @@ BOOL  inForeground = YES; // 判断前台还是后台
 ---
 
 ### 8. 手环充电状态和剩余电量获取
+这里会返回设备的电量和充电的状态，如果发现设备正在充电你可以在UI做动画提示
+```objective-c
+[[FitCloud shared]fcGetBatteryPowerAndChargingState:^(UInt8 powerValue, UInt8 chargingState) {
+
+        DEBUG_METHOD(@"--电量--%@",@(powerValue));
+        DEBUG_METHOD(@"--充电状态--%@",@(chargingState));
+        if (chargingState == 0)
+        {
+            // 未充电
+        }
+        else
+        {
+            // 正在充电
+        }
+
+    } retHandler:^(FCSyncType syncType, FCSyncResponseState state) {
+        if (state == FCSyncResponseStateSuccess)
+        {
+            // 电量获取成功
+        }
+        else
+        {
+           // 电量获取失败
+        }
+    }];
+```
 
 ---
 
