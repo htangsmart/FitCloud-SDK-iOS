@@ -38,11 +38,11 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
 
 ## 修改日志
 
-	
+
 	2016-11-17 SDK 1.0.0
 	(1) 修改登录接口，添加用户信息设置参数
 	(2) 优化卡路里和距离的计算公式
-	
+
 
 
 ---
@@ -79,21 +79,13 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
 第一次使用需要扫描绑定，调用`scanningPeripherals:`接口扫描符合条件的外设,连接绑定后将`CBPeripheral`的UUID存储起来，下次使用调用`scanningPeripheralWithUUID:retHandler:`接口直接扫描连接指定`UUID`的外设进行登录就可以正常通讯了。
 
 #### 注册观察者
-`
-`
-
-
-
-`
-`
-
-\`\`\`objective-c
+```objective-c
 // centralManager 状态改变通知，如果蓝牙关闭或者打开，你需要执行某些响应操作
-[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(centerManagerDidUpdateState:) name:EVENT\_CENTRALMANAGER\_UPDATE\_STATE\_NOTIFY object:nil];
+[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(centerManagerDidUpdateState:) name:EVENT_CENTRALMANAGER_UPDATE_STATE_NOTIFY object:nil];
 // 外设成功连接通知，当蓝牙连接上了以后，你可以更新相应的UI状态等
-[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(peripheralDidConnected:) name:EVENT\_CONNECT\_PERIPHERAL\_NOTIFY object:nil];
+[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(peripheralDidConnected:) name:EVENT_CONNECT_PERIPHERAL_NOTIFY object:nil];
 // 外设连接失败通知，如果收到此通知，则蓝牙连接失败，你需要重新执行连接操作或者其他事情
-[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(peripheralDidFailConnected:) name:EVENT\_FAIL\_CONNECT\_PERIPHERAL\_NOTIFY object:nil];
+[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(peripheralDidFailConnected:) name:EVENT_FAIL_CONNECT_PERIPHERAL_NOTIFY object:nil];
 
 // 此处观察设备蓝牙的状态，如果蓝牙打开或者关闭，更改相应的扫描状态
 - (void)centerManagerDidUpdateState:(NSNotification\*)notification
@@ -123,30 +115,30 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
 	// 连接失败，停止扫描或者重新扫描外设
 }
 
-\`\`\`
+```
 
 #### 调用`scanningPeripherals:`扫描所有外设
-\`\`\`objective-c
+```objective-c
 // 此处会返回当前扫描到的所有外设列表和当前扫描到的外设。
-[[FitCloud shared]scanningPeripherals:^(NSArray\<CBPeripheral *\> *retArray, CBPeripheral \*aPeripheral) {
+[[FitCloud shared]scanningPeripherals:^(NSArray<CBPeripheral *> *retArray, CBPeripheral *aPeripheral) {
   // 处理扫描结果，你可以把结果显示在列表上，然后点击选择一个外设进行连接
 }];
-\`\`\`
+```
 
 #### 调用`scanningPeripheralWithUUID:retHandler:`扫描指定`UUID`的外设
-\`\`\`objective-c
+```objective-c
 // 通过绑定的uuid扫描指定的蓝牙外设，如果你已经存储了UUID，直接调用扫描此UUID的外设即可
-[[FitCloud shared]scanningPeripheralWithUUID:nil retHandler:^(CBPeripheral \*aPeripheral) {
+[[FitCloud shared]scanningPeripheralWithUUID:nil retHandler:^(CBPeripheral *aPeripheral) {
   // 扫描到外设后启动连接
 }];
 
-\`\`\`
+```
 
 #### 连接外设
-\`\`\`objective-c
+```objective-c
 // 连接一个你选择的外设，并在上述通知里获取连接结果
 [[FitCloud shared]connectPeripheral:aPeripheral];
-\`\`\`
+```
 ---
 
 ### 2.  绑定设备
@@ -154,14 +146,14 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
 
 
 #### 注册观察者
-\`\`\`objective-c
+```objective-c
 // 当扫描到服务特征值后，蓝牙可以进行正常通讯工作，这个你可以执行绑定或者登录了
 [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(didDiscoverCharacteristics:) name:EVENT\_DISCOVER\_CHARACTERISTICS\_NOTIFY object:nil];
-\`\`\`
+```
 
 ##### 绑定外设
 
-\`\`\`objective-c
+```objective-c
 // 发现服务特征值通知，这里你需要判断是需要登录还是绑定操作
 - (void)didDisconnectPeripheral:(NSNotification\*)notfication
 {
@@ -205,7 +197,7 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
 	} dataHandler:^(FCSyncType syncType, NSData *data) {
 	     // 存储手表的系统设置信息
 	    [self updateSystemSettingsWithData:data];
-	
+
 	} retHandler:^(FCSyncType syncType, FCSyncResponseState state)
 	 {
 	     if (state == FCSyncResponseStateSuccess)
@@ -233,12 +225,12 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
   [FitCloudUtils resolveSystemSettingsData:data withCallbackBlock:^(NSData *notificationData, NSData *screenDisplayData, NSData *functionalSwitchData, NSData *hsVersionData, NSData *healthHistorymonitorData, NSData *longSitData, NSData *bloodPressureData, NSData *drinkWaterReminderData) {
 	// 你自己的处理，你需要存储这些设置数据
 	// your code
-	
+
 	// 解析固件的软硬件版本信息数据
 	[FitCloudUtils resolveHardwareAndSoftwareVersionData:hsVersionData withCallbackBlock:^(NSData *projData, NSData *hardwareData, NSData *sdkData, NSData *patchData, NSData *flashData, NSData *fwAppData, NSData *seqData) {
 	        // 你自己的处理
 	    }];
-	
+
 	// 解析固件的软硬件版本信息数据成字符串，这里部分字符串参数需要提交给服务器用于固件版本信息检查
 	[FitCloudUtils resolveHardwareAndSoftwareVersionDataToString:hsVersionData withCallbackBlock:^(NSString *projNum, NSString *hardware, NSString *sdkVersion, NSString *patchVerson, NSString *falshVersion, NSString *appVersion, NSString *serialNum) {
 	   // 你自己的处理
@@ -246,7 +238,7 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
   }];
 }
 
-\`\`\`
+```
 ##### 设备信息说明
 phone model 信息说明
 
@@ -280,16 +272,16 @@ operating system
 如果app已经绑定，使用存储的UUID字符串直接扫描指定外设，连接后登录设备就可以正常使用了
 
 #### 注册观察者
-\`\`\`objective-c
+```objective-c
 // 注册观察者通知，如果发现服务特征值则启动登录路程
-[[NSNotificationCenter defaultCenter]addObserverForName:EVENT\_DISCOVER\_CHARACTERISTICS\_NOTIFY object:nil queue:nil usingBlock:^(NSNotification \* \_Nonnull note) {
+[[NSNotificationCenter defaultCenter]addObserverForName:EVENT\_DISCOVER\_CHARACTERISTICS\_NOTIFY object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
    // 你的代码判断分支
    // 登录设备
 
 }];
-\`\`\`
+```
 #### 登录设备
-\`\`\`objective-c
+```objective-c
 [[FitCloud shared]loginDevice:^(FCAuthDataHandler authDataHandler, FCUserDataHandler userDataHandler)
 	{
 	    if (authDataHandler)
@@ -297,14 +289,14 @@ operating system
 	      // 详细数据见 1.绑定设备->设备信息说明
 	        authDataHandler(100,10,10);
 	    }
-	
+
 	    // 设置用户信息
 	    if (userDataHandler)
 	    {
 	      // 性别：0 女 1 男; 年龄 = 当前年 - 出身 + 1; 体重 65kg; 身高 183cm
 	        userDataHandler(1,29,65,183);
 	    }
-	
+
 	} retHandler:^(FCSyncType syncType, FCSyncResponseState state)
 	{
 	  if (syncType == FCSyncTypeLoginToSyncTime) {
@@ -323,7 +315,7 @@ operating system
 	      }
 	    }
 	}];
-\`\`\`
+```
 
 ---
 
@@ -335,11 +327,11 @@ operating system
 ### 5.  闹钟同步
 最多可以设置8个闹钟，每个闹钟的响铃时间必须唯一,每次同步前需要对闹钟的ID进行编号，每个id唯一（0-7）
 #### 获取闹钟列表
-\`\`\`objective-c
+```objective-c
 [[FitCloud shared]fcGetAlarmList:^(FCSyncType syncType, NSData \*data) {
 	    NSArray *modelsArray = [NSArray arrayWithAlarmClockConfigurationData:data];
 	    // 将同步的闹钟展示到列表
-	
+
 	} retHandler:^(FCSyncType syncType, FCSyncResponseState state) {
 	    if (state == FCSyncResponseStateSuccess) {
 	        // 闹钟同步完成
@@ -349,9 +341,10 @@ operating system
 	        // 闹钟同步失败
 	    }
 	}];
-\`\`\`
+```
+
 #### 同步闹钟设置
-\`\`\`objective-c
+```objective-c
 
 // 这里的闹钟使用模拟数据，实际同步时使用你存储的真实数据
 NSMutableArray \*tmpArray = [[NSMutableArray alloc]init];
@@ -378,22 +371,22 @@ NSData \*alarmData = [tmpArray alarmClockConfigurationData];
 	    // 闹钟同步失败
 	}
 }];
-\`\`\`
+```
 
 ---
 
 ### 6.  消息通知设置
 APP绑定手环后手环会将设置信息上传到APP，APP存储这些数据，在数据有更新时重新同步到手环
 #### 获取消息通知设置
-\`\`\`objective-c
+```objective-c
 [FitCloudUtils resolveSystemSettingsData:data withCallbackBlock:^(NSData *notificationData, NSData *screenDisplayData, NSData *functionalSwitchData, NSData *hsVersionData, NSData *healthHistorymonitorData, NSData *longSitData, NSData *bloodPressureData, NSData *drinkWaterReminderData) {
 	  // 序列化通知设置模型  
 	  FCNotificationModel *notificationModel = [FCNotificationModel modelWithData:notificationData];
 	  // 存储或者更新消息通知设置
 }];
-\`\`\`
+```
 #### 更新消息通知设置
-\`\`\`objective-c
+```objective-c
 
 // 这里的model是模拟数据，实际使用你自己存储的数据
 FCNotificationModel \*aModel = [[FCNotificationModel alloc]init];
@@ -416,7 +409,7 @@ WS(ws);
 	}
 }];
 
-\`\`\`
+```
 
 ---
 
@@ -424,13 +417,13 @@ WS(ws);
 进入相机拍照页面监听手环发出的拍照指令，收到指令后开始拍照。如果app进入后台或者回到前台，app需要把相机状态同步到手表
 
 #### 拍照监听
-\`\`\`objective-c
+```objective-c
 [[FitCloud shared]setTakePicturesBlock:^{
 	// 启动拍照  
 }];
-\`\`\`
+```
 #### 注册观察者
-\`\`\`objective-c
+```objective-c
 // app进入前台
 [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(applicationDidBecomeActiveNotification) name:UIApplicationDidBecomeActiveNotification object:nil];
 // app进入背后
@@ -446,10 +439,10 @@ WS(ws);
 	// 相机进入后台，发送状态指令到手环
 }
 
-\`\`\`
+```
 
 #### app发送状态指令到手环
-\`\`\`objective-c
+```objective-c
 
 BOOL  inForeground = YES; // 判断前台还是后台
 [[FitCloud shared]fcSetCameraState:inForeground retHandler:^(FCSyncType syncType, FCSyncResponseState state) {
@@ -467,13 +460,13 @@ BOOL  inForeground = YES; // 判断前台还是后台
 	        // 相机状态同步失败
 	    }
 	}];
-\`\`\`
+```
 
 ---
 
 ### 8. 手环充电状态和剩余电量获取
 这里会返回设备的电量和充电的状态，如果发现设备正在充电你可以在UI做动画提示
-\`\`\`objective-c
+```objective-c
 [[FitCloud shared]fcGetBatteryPowerAndChargingState:^(UInt8 powerValue, UInt8 chargingState) {
 
 	    NSLog(@"--电量--%@",@(powerValue));
@@ -486,7 +479,7 @@ BOOL  inForeground = YES; // 判断前台还是后台
 	    {
 	        // 正在充电
 	    }
-	
+
 	} retHandler:^(FCSyncType syncType, FCSyncResponseState state) {
 	    if (state == FCSyncResponseStateSuccess)
 	    {
@@ -497,14 +490,14 @@ BOOL  inForeground = YES; // 判断前台还是后台
 	       // 电量获取失败
 	    }
 	}];
-\`\`\`
+```
 
 ---
 
 ### 9. 手环显示设置
 手环屏幕显示条目可以根据需要设置，调用此接口你可以自定义手表的显示功能，当前手表显示条目如下：时间和日期、步数、距离、卡路里、睡眠、心率、血氧、血压、天气预报、查找手机、手表id。其中心率、血氧、血压等健康功能跟固件的flag有关，如果固件包含此功能，则手表会显示。
 
-\`\`\`objective-c
+```objective-c
 // 需要显示的属性设置为YES即可，在同步设置之前，你需要读取本地设置
 FCDisplayModel \*displayModel = [[FCDisplayModel alloc]init];
 displayModel.dateTime = YES;
@@ -522,10 +515,10 @@ NSData \*data = [displayModel displayData];
 	}
 	else
 	{
-	
+
 	}
 }];
-\`\`\`
+```
 
 
 ---
@@ -551,7 +544,7 @@ NSData \*data = [displayModel displayData];
 ---
 
 注意
----- 
+----
 至此，你已经能使用FitCloud终端SDK的API内容了。如果想更详细了解每个API函数的用法，请查阅 API文档 或自行下载阅读SDK Sample Demo源码。
 
 [1]:	https://github.com/htangsmart/FitCloud-SDK-iOS.git
