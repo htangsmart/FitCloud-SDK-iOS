@@ -611,7 +611,7 @@ NSData *data = [fsModel functionSwitchData];
 ---
 
 ### 12. 手表天气预报同步
-你可以借助自己的后台服务器或者第三方服务获取当前天气，然后同步到手环，但是同步之前需要将天气状态转换成手表可以识别的状态，目前手表能够显示一下几种天气：
+你可以借助自己的后台服务器或者第三方服务获取当前天气，然后同步到手环，但是同步之前需要将天气状态转换成手表可以识别的状态，目前手表能够显示以下几种天气：
 
 |天气状态说明 | 天气状态吗|
 |---|---|
@@ -628,6 +628,19 @@ NSData *data = [fsModel functionSwitchData];
 |沙尘暴、浮尘 | 0x0b|
 |雾、雾霾 | 0x0c|
 
+```objective-c
+// 天气参数有当前温度、最高温度、最低温度、天气状态、城市名称
+[[FitCloud shared]fcSetWeather:20 highTemp:22 lowTemp:18 state:0x06 cityName:@"深圳" retHandler:^(FCSyncType syncType, FCSyncResponseState state)
+ {
+     if (state == FCSyncResponseStateSuccess) {
+         NSLog(@"----天气预报同步成功----");
+     }
+     else
+     {
+         NSLog(@"----天气预报同步失败----");
+     }
+ }];
+```
 
 ---
 
