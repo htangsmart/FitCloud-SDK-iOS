@@ -180,7 +180,7 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
 	    // 设置绑定设备信息
 	    if (authDataHandler)
 	    {
-	      // *用户id* 100; *手机型号* 见设备信息说明； *手机系统版本* 见设备信息说明
+	        // *用户id* 100;
 					NSNumber *phoneModel = [NSNumber phoneModel];
 					NSNumber *osType = [NSNumber osType];
 	        authDataHandler(100,phoneModel,osType);
