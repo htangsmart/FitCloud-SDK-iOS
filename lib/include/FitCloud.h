@@ -319,7 +319,7 @@
  * @param cityName    City name
  * @param retHandler  Synchronous result callback
  */
-- (void)fcSetWeather:(int)temperature highTemp:(int)hTemp lowTemp:(int)lTemp state:(int)state cityName:(NSString*)cityName retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetWeather:(int)temperature highTemp:(int)hTemp lowTemp:(int)lTemp state:(FCWeatherState)state cityName:(NSString*)cityName retHandler:(FCSyncResultHandler)retHandler;
 
 
 #pragma mark - 健康实时同步

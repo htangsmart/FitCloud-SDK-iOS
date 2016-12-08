@@ -25,6 +25,7 @@
 						<NodeRef refid="12"/>
 						<NodeRef refid="13"/>
 						<NodeRef refid="14"/>
+						<NodeRef refid="15"/>
 						
 					</Subnodes>
 				</Node>
@@ -34,8 +35,9 @@
 					<Name>Categories</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="15"/>
 						<NodeRef refid="16"/>
+						<NodeRef refid="17"/>
+						<NodeRef refid="18"/>
 						
 					</Subnodes>
 				</Node>
@@ -46,9 +48,11 @@
 					<Name>Constants</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="17"/>
-						<NodeRef refid="18"/>
 						<NodeRef refid="19"/>
+						<NodeRef refid="20"/>
+						<NodeRef refid="21"/>
+						<NodeRef refid="22"/>
+						<NodeRef refid="23"/>
 						
 					</Subnodes>
 				</Node>
@@ -58,10 +62,6 @@
                     <Name>Blocks</Name>
                     <Path>index.html</Path>
                     <Subnodes>
-                        <NodeRef refid="20"/>
-                        <NodeRef refid="21"/>
-                        <NodeRef refid="22"/>
-                        <NodeRef refid="23"/>
                         <NodeRef refid="24"/>
                         <NodeRef refid="25"/>
                         <NodeRef refid="26"/>
@@ -77,6 +77,10 @@
                         <NodeRef refid="36"/>
                         <NodeRef refid="37"/>
                         <NodeRef refid="38"/>
+                        <NodeRef refid="39"/>
+                        <NodeRef refid="40"/>
+                        <NodeRef refid="41"/>
+                        <NodeRef refid="42"/>
                         
                     </Subnodes>
                 </Node>
@@ -159,6 +163,33 @@
             
         </Node>
 		<Node id="3" type="file" documentType="reference">
+            <Name>FCDataModel</Name>
+            <Path>Classes/FCDataModel.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/FCDataModel.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/FCDataModel.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/FCDataModel.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="4" type="file" documentType="reference">
             <Name>FCDisplayModel</Name>
             <Path>Classes/FCDisplayModel.html</Path>
             
@@ -197,7 +228,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="4" type="file" documentType="reference">
+		<Node id="5" type="file" documentType="reference">
             <Name>FCExerciseModel</Name>
             <Path>Classes/FCExerciseModel.html</Path>
             
@@ -224,7 +255,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="5" type="file" documentType="reference">
+		<Node id="6" type="file" documentType="reference">
             <Name>FCFunctionSwitchModel</Name>
             <Path>Classes/FCFunctionSwitchModel.html</Path>
             
@@ -263,7 +294,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="6" type="file" documentType="reference">
+		<Node id="7" type="file" documentType="reference">
             <Name>FCHardwareNumModel</Name>
             <Path>Classes/FCHardwareNumModel.html</Path>
             
@@ -296,7 +327,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="7" type="file" documentType="reference">
+		<Node id="8" type="file" documentType="reference">
             <Name>FCHealthModel</Name>
             <Path>Classes/FCHealthModel.html</Path>
             
@@ -323,7 +354,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="8" type="file" documentType="reference">
+		<Node id="9" type="file" documentType="reference">
             <Name>FCHealthMonitoringModel</Name>
             <Path>Classes/FCHealthMonitoringModel.html</Path>
             
@@ -362,7 +393,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="9" type="file" documentType="reference">
+		<Node id="10" type="file" documentType="reference">
             <Name>FCLongSitModel</Name>
             <Path>Classes/FCLongSitModel.html</Path>
             
@@ -401,7 +432,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="10" type="file" documentType="reference">
+		<Node id="11" type="file" documentType="reference">
             <Name>FCNotificationModel</Name>
             <Path>Classes/FCNotificationModel.html</Path>
             
@@ -440,7 +471,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="11" type="file" documentType="reference">
+		<Node id="12" type="file" documentType="reference">
             <Name>FCSleepModel</Name>
             <Path>Classes/FCSleepModel.html</Path>
             
@@ -467,7 +498,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="12" type="file" documentType="reference">
+		<Node id="13" type="file" documentType="reference">
             <Name>FCSystemSettingsModel</Name>
             <Path>Classes/FCSystemSettingsModel.html</Path>
             
@@ -494,7 +525,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="13" type="file" documentType="reference">
+		<Node id="14" type="file" documentType="reference">
             <Name>FitCloud</Name>
             <Path>Classes/FitCloud.html</Path>
             
@@ -533,7 +564,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="14" type="file" documentType="reference">
+		<Node id="15" type="file" documentType="reference">
             <Name>FitCloudUtils</Name>
             <Path>Classes/FitCloudUtils.html</Path>
             
@@ -561,7 +592,7 @@
             
         </Node>
 		
-		<Node id="15" type="file" documentType="reference">
+		<Node id="16" type="file" documentType="reference">
             <Name>NSArray(Utils)</Name>
             <Path>Categories/NSArray+Utils.html</Path>
             
@@ -594,7 +625,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="16" type="file" documentType="reference">
+		<Node id="17" type="file" documentType="reference">
             <Name>NSData(Utils)</Name>
             <Path>Categories/NSData+Utils.html</Path>
             
@@ -621,115 +652,152 @@
             </Subnodes>
             
         </Node>
+		<Node id="18" type="file" documentType="reference">
+            <Name>NSNumber(Utils)</Name>
+            <Path>Categories/NSNumber+Utils.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Categories/NSNumber+Utils.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Categories/NSNumber+Utils.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Categories/NSNumber+Utils.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+            </Subnodes>
+            
+        </Node>
 		
         
-        <Node id="17" type="file" documentType="reference">
+        <Node id="19" type="file" documentType="reference">
+            <Name>FCDataType</Name>
+            <Path>Constants/FCDataType.html</Path>
+            
+        </Node>
+		<Node id="20" type="file" documentType="reference">
             <Name>FCRTSyncType</Name>
             <Path>Constants/FCRTSyncType.html</Path>
             
         </Node>
-		<Node id="18" type="file" documentType="reference">
+		<Node id="21" type="file" documentType="reference">
             <Name>FCSyncResponseState</Name>
             <Path>Constants/FCSyncResponseState.html</Path>
             
         </Node>
-		<Node id="19" type="file" documentType="reference">
+		<Node id="22" type="file" documentType="reference">
             <Name>FCSyncType</Name>
             <Path>Constants/FCSyncType.html</Path>
             
         </Node>
+		<Node id="23" type="file" documentType="reference">
+            <Name>FCWeatherState</Name>
+            <Path>Constants/FCWeatherState.html</Path>
+            
+        </Node>
 		
-        <Node id="20" type="file" documentType="reference">
+        <Node id="24" type="file" documentType="reference">
             <Name>FCAuthDataHandler</Name>
             <Path>Blocks/FCAuthDataHandler.html</Path>
             
         </Node>
-        <Node id="21" type="file" documentType="reference">
+        <Node id="25" type="file" documentType="reference">
             <Name>FCBoundDataHandler</Name>
             <Path>Blocks/FCBoundDataHandler.html</Path>
             
         </Node>
-        <Node id="22" type="file" documentType="reference">
+        <Node id="26" type="file" documentType="reference">
             <Name>FCDayTotalDataBlock</Name>
             <Path>Blocks/FCDayTotalDataBlock.html</Path>
             
         </Node>
-        <Node id="23" type="file" documentType="reference">
+        <Node id="27" type="file" documentType="reference">
             <Name>FCDeviceListHandler</Name>
             <Path>Blocks/FCDeviceListHandler.html</Path>
             
         </Node>
-        <Node id="24" type="file" documentType="reference">
+        <Node id="28" type="file" documentType="reference">
             <Name>FCHardwareAndSoftwareVersionDataBlock</Name>
             <Path>Blocks/FCHardwareAndSoftwareVersionDataBlock.html</Path>
             
         </Node>
-        <Node id="25" type="file" documentType="reference">
+        <Node id="29" type="file" documentType="reference">
             <Name>FCHardwareAndSoftwareVersionStringBlock</Name>
             <Path>Blocks/FCHardwareAndSoftwareVersionStringBlock.html</Path>
             
         </Node>
-        <Node id="26" type="file" documentType="reference">
+        <Node id="30" type="file" documentType="reference">
             <Name>FCHealthDataModelBlock</Name>
             <Path>Blocks/FCHealthDataModelBlock.html</Path>
             
         </Node>
-        <Node id="27" type="file" documentType="reference">
+        <Node id="31" type="file" documentType="reference">
             <Name>FCLoginDatahandler</Name>
             <Path>Blocks/FCLoginDatahandler.html</Path>
             
         </Node>
-        <Node id="28" type="file" documentType="reference">
+        <Node id="32" type="file" documentType="reference">
             <Name>FCPeripheralHandler</Name>
             <Path>Blocks/FCPeripheralHandler.html</Path>
             
         </Node>
-        <Node id="29" type="file" documentType="reference">
+        <Node id="33" type="file" documentType="reference">
             <Name>FCProgressHandler</Name>
             <Path>Blocks/FCProgressHandler.html</Path>
             
         </Node>
-        <Node id="30" type="file" documentType="reference">
+        <Node id="34" type="file" documentType="reference">
             <Name>FCRTSyncDataHandler</Name>
             <Path>Blocks/FCRTSyncDataHandler.html</Path>
             
         </Node>
-        <Node id="31" type="file" documentType="reference">
+        <Node id="35" type="file" documentType="reference">
             <Name>FCSyncCountHandler</Name>
             <Path>Blocks/FCSyncCountHandler.html</Path>
             
         </Node>
-        <Node id="32" type="file" documentType="reference">
+        <Node id="36" type="file" documentType="reference">
             <Name>FCSyncDataHandler</Name>
             <Path>Blocks/FCSyncDataHandler.html</Path>
             
         </Node>
-        <Node id="33" type="file" documentType="reference">
+        <Node id="37" type="file" documentType="reference">
             <Name>FCSyncPowerAndChargingStateHandler</Name>
             <Path>Blocks/FCSyncPowerAndChargingStateHandler.html</Path>
             
         </Node>
-        <Node id="34" type="file" documentType="reference">
+        <Node id="38" type="file" documentType="reference">
             <Name>FCSyncResultHandler</Name>
             <Path>Blocks/FCSyncResultHandler.html</Path>
             
         </Node>
-        <Node id="35" type="file" documentType="reference">
+        <Node id="39" type="file" documentType="reference">
             <Name>FCSyncStepHandler</Name>
             <Path>Blocks/FCSyncStepHandler.html</Path>
             
         </Node>
-        <Node id="36" type="file" documentType="reference">
+        <Node id="40" type="file" documentType="reference">
             <Name>FCSystemSettingDataBlock</Name>
             <Path>Blocks/FCSystemSettingDataBlock.html</Path>
             
         </Node>
-        <Node id="37" type="file" documentType="reference">
+        <Node id="41" type="file" documentType="reference">
             <Name>FCUserDataHandler</Name>
             <Path>Blocks/FCUserDataHandler.html</Path>
             
         </Node>
-        <Node id="38" type="file" documentType="reference">
+        <Node id="42" type="file" documentType="reference">
             <Name>FCWearStyleHandler</Name>
             <Path>Blocks/FCWearStyleHandler.html</Path>
             

@@ -163,35 +163,95 @@ typedef NS_ENUM(NSInteger, FCSyncResponseState) {
     /*! The default type*/
     FCSyncResponseStateNone = 0,
     
-    /*! Bluetooth is poweroff*/
+    /*! 蓝牙未打开*/
     FCSyncResponseStatePowerOff = 1,
     
     /*! Bluetooth is not connected*/
     FCSyncResponseStateNotConnected = 2,
     
-    /*! Bluetooth disconnected*/
-    FCSyncResponseStateDisconnect = 3,
+    /*! 蓝牙关闭，主动关闭蓝牙时回调*/
+    FCSyncResponseStateTurnedOff = 3,
     
-    /*! Parameter error*/
-    FCSyncResponseStateParameterError = 4,
+    /*! 蓝牙断开连接，主动或者被动断开都会调用*/
+    FCSyncResponseStateDisconnect = 4,
+    
+    /*! 同步参数错误*/
+    FCSyncResponseStateParameterError = 5,
     
     /*! Synchronizing data*/
-    FCSyncResponseStateSyncing = 5,
+    FCSyncResponseStateSyncing = 6,
     
     /*! Synchronization succeeded*/
-    FCSyncResponseStateSuccess = 6,
+    FCSyncResponseStateSuccess = 7,
     
     /*! Synchronization failed*/
-    FCSyncResponseStateError = 7,
+    FCSyncResponseStateError = 8,
     
     /*! Synchronization timeout*/
-    FCSyncResponseStateTimeOut = 8,
+    FCSyncResponseStateTimeOut = 9,
     
     /*! Healthy real-time synchronization timeout*/
-    FCSyncResponseStateRTTimeOut = 9,
+    FCSyncResponseStateRTTimeOut = 10,
     
     /*! Power is too low to upgrade*/
-    FCSyncResponseStateLowPower = 10,
+    FCSyncResponseStateLowPower = 11,
+};
+
+/*!
+ * @enum FCDataType
+ * @discussion  同步数据的类型，用于区分FCDataModel所属的数据
+ */
+typedef NS_ENUM(NSInteger, FCDataType)
+{
+    /*!  默认未知类型*/
+    FCDataTypeUnknown,
+    /*!  运动量*/
+    FCDataTypeExercise,
+    /*!  睡眠*/
+    FCDataTypeSleep,
+    /*!  心率*/
+    FCDataTypeHeartRate,
+    /*!  血氧*/
+    FCDataTypeBloodOxygen,
+    /*!  血压*/
+    FCDataTypeBloodPressure,
+    /*!  呼吸频率*/
+    FCDataTypeBreathingRate,
+};
+
+
+/*!
+ * @enum FCWeatherState
+ * @discussion  天气状态，你需要把自己获取的天气转换成以下状态同步到手表，手表才能显示正确的天气状态
+ */
+typedef NS_ENUM(NSInteger, FCWeatherState)
+{
+    /*! 未知天气*/
+    FCWeatherStateUnknown = 0x00,
+    /*! 晴天*/
+    FCWeatherStateSunnyDay = 0x01,
+    /*! 多云*/
+    FCWeatherStateCloudy = 0x02,
+    /*! 阴天*/
+    FCWeatherStateOvercast = 0x03,
+    /*! 阵雨*/
+    FCWeatherStateShower = 0x04,
+    /*! 雷阵雨、雷阵雨伴有冰雹*/
+    FCWeatherStateThunderyShower = 0x05,
+    /*! 小雨*/
+    FCWeatherStateDrizzle = 0x06,
+    /*! 中雨、大雨、暴雨*/
+    FCWeatherStateHeavyRain = 0x07,
+    /*! 雨夹雪、冻雨*/
+    FCWeatherStateSleet = 0x08,
+    /*! 小雪*/
+    FCWeatherStateLightSnow = 0x09,
+    /*! 大雪、暴雪*/
+    FCWeatherStateHeavySnow = 0x0a,
+    /*! 沙尘暴、浮尘*/
+    FCWeatherStateSandstorm = 0x0b,
+    /*! 雾、雾霾*/
+    FCWeatherStateFogOrHaze = 0x0c,
 };
 
 #endif /* FCDefine_h */

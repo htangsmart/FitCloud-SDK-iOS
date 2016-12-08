@@ -1,67 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/FCRTSyncType.html">
+	<File path="Categories/NSData+Utils.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/FCRTSyncType</TokenIdentifier>
-			<Abstract type="html">@enum FCRTSyncType</Abstract>
-			<DeclaredIn>FCDefine.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cat/NSData(Utils)</TokenIdentifier>
+			<Abstract type="html">@category NSData</Abstract>
+			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
             
 			
 			<NodeRef refid="17"/>
 		</Token>
 		
 		
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeNone</TokenIdentifier>
-            <Abstract type="html">The default type</Abstract>
-            <Declaration>FCRTSyncTypeNone</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSData/objectFromSystemSettingsData</TokenIdentifier>
+			<Abstract type="html">Converts system settings data to a data model with detailed attributes</Abstract>
+			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
+			
+			<Declaration>- (id)objectFromSystemSettingsData</Declaration>
+			
+			<ReturnValue><Abstract type="html">The object to be converted</Abstract></ReturnValue>
+			<Anchor>//api/name/objectFromSystemSettingsData</Anchor>
             <NodeRef refid="17"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeHeartRate</TokenIdentifier>
-            <Abstract type="html">Real time measurement of heart rate</Abstract>
-            <Declaration>FCRTSyncTypeHeartRate</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSData/dictionaryFromSystemSettingsData</TokenIdentifier>
+			<Abstract type="html">Converts system settings data to a dictonary with detailed data</Abstract>
+			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
+			
+			<Declaration>- (NSDictionary *)dictionaryFromSystemSettingsData</Declaration>
+			
+			<ReturnValue><Abstract type="html">The object to be converted</Abstract></ReturnValue>
+			<Anchor>//api/name/dictionaryFromSystemSettingsData</Anchor>
             <NodeRef refid="17"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeBloodOxygen</TokenIdentifier>
-            <Abstract type="html">Real time measurement of blood oxygen</Abstract>
-            <Declaration>FCRTSyncTypeBloodOxygen</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSData/dictionaryFromSoftwareAndHardwareVersionData</TokenIdentifier>
+			<Abstract type="html">Converts hardware and software version information data to a dictionary with detailed data</Abstract>
+			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
+			
+			<Declaration>- (NSDictionary *)dictionaryFromSoftwareAndHardwareVersionData</Declaration>
+			
+			<ReturnValue><Abstract type="html">The object to be converted</Abstract></ReturnValue>
+			<Anchor>//api/name/dictionaryFromSoftwareAndHardwareVersionData</Anchor>
             <NodeRef refid="17"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeBloodPressure</TokenIdentifier>
-            <Abstract type="html">Real time measurement of blood pressure</Abstract>
-            <Declaration>FCRTSyncTypeBloodPressure</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="17"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeBreathingRate</TokenIdentifier>
-            <Abstract type="html">Real time measurement of respiratory rate</Abstract>
-            <Declaration>FCRTSyncTypeBreathingRate</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="17"/>
-        </Token>
+		</Token>
+		
         
         
 	</File>

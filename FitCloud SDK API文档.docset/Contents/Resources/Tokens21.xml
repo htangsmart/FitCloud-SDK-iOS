@@ -1,8 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="">
+	<File path="Constants/FCSyncResponseState.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/FCSyncResponseState</TokenIdentifier>
+			<Abstract type="html">@enum FCSyncResponseState</Abstract>
+			<DeclaredIn>FCDefine.h</DeclaredIn>
+            
+			
+			<NodeRef refid="21"/>
+		</Token>
 		
 		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateNone</TokenIdentifier>
+            <Abstract type="html">The default type</Abstract>
+            <Declaration>FCSyncResponseStateNone</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStatePowerOff</TokenIdentifier>
+            <Abstract type="html">蓝牙未打开</Abstract>
+            <Declaration>FCSyncResponseStatePowerOff</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateNotConnected</TokenIdentifier>
+            <Abstract type="html">Bluetooth is not connected</Abstract>
+            <Declaration>FCSyncResponseStateNotConnected</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateTurnedOff</TokenIdentifier>
+            <Abstract type="html">蓝牙关闭，主动关闭蓝牙时回调</Abstract>
+            <Declaration>FCSyncResponseStateTurnedOff</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateDisconnect</TokenIdentifier>
+            <Abstract type="html">蓝牙断开连接，主动或者被动断开都会调用</Abstract>
+            <Declaration>FCSyncResponseStateDisconnect</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateParameterError</TokenIdentifier>
+            <Abstract type="html">同步参数错误</Abstract>
+            <Declaration>FCSyncResponseStateParameterError</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateSyncing</TokenIdentifier>
+            <Abstract type="html">Synchronizing data</Abstract>
+            <Declaration>FCSyncResponseStateSyncing</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateSuccess</TokenIdentifier>
+            <Abstract type="html">Synchronization succeeded</Abstract>
+            <Declaration>FCSyncResponseStateSuccess</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateError</TokenIdentifier>
+            <Abstract type="html">Synchronization failed</Abstract>
+            <Declaration>FCSyncResponseStateError</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateTimeOut</TokenIdentifier>
+            <Abstract type="html">Synchronization timeout</Abstract>
+            <Declaration>FCSyncResponseStateTimeOut</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateRTTimeOut</TokenIdentifier>
+            <Abstract type="html">Healthy real-time synchronization timeout</Abstract>
+            <Declaration>FCSyncResponseStateRTTimeOut</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateLowPower</TokenIdentifier>
+            <Abstract type="html">Power is too low to upgrade</Abstract>
+            <Declaration>FCSyncResponseStateLowPower</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
         
         
 	</File>

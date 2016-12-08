@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/FCLongSitModel.html">
+	<File path="Classes/FCHealthMonitoringModel.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/FCLongSitModel</TokenIdentifier>
-			<Abstract type="html">@class FCLongSitModel</Abstract>
+			<TokenIdentifier>//apple_ref/occ/cl/FCHealthMonitoringModel</TokenIdentifier>
+			<Abstract type="html">@class FCRTHealthModel</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
             
 			
@@ -13,7 +13,7 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCLongSitModel/setIsOn:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/setIsOn:</TokenIdentifier>
 			<Abstract type="html">@property isOn</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
@@ -25,7 +25,7 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCLongSitModel/isOn</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/isOn</TokenIdentifier>
 			<Abstract type="html">@property isOn</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
@@ -37,7 +37,7 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCLongSitModel/isOn</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHealthMonitoringModel/isOn</TokenIdentifier>
 			<Abstract type="html">@property isOn</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
@@ -49,43 +49,7 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCLongSitModel/setIsLunchBreakFree:</TokenIdentifier>
-			<Abstract type="html">@property isLunchBreakFree</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL isLunchBreakFree</Declaration>
-			
-			
-			<Anchor>//api/name/isLunchBreakFree</Anchor>
-            <NodeRef refid="9"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCLongSitModel/isLunchBreakFree</TokenIdentifier>
-			<Abstract type="html">@property isLunchBreakFree</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL isLunchBreakFree</Declaration>
-			
-			
-			<Anchor>//api/name/isLunchBreakFree</Anchor>
-            <NodeRef refid="9"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCLongSitModel/isLunchBreakFree</TokenIdentifier>
-			<Abstract type="html">@property isLunchBreakFree</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL isLunchBreakFree</Declaration>
-			
-			
-			<Anchor>//api/name/isLunchBreakFree</Anchor>
-            <NodeRef refid="9"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCLongSitModel/setStMinute:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/setStMinute:</TokenIdentifier>
 			<Abstract type="html">@property stMinute</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
@@ -97,7 +61,7 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCLongSitModel/stMinute</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/stMinute</TokenIdentifier>
 			<Abstract type="html">@property stMinute</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
@@ -109,7 +73,7 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCLongSitModel/stMinute</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHealthMonitoringModel/stMinute</TokenIdentifier>
 			<Abstract type="html">@property stMinute</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
@@ -121,7 +85,7 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCLongSitModel/setEdMinute:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/setEdMinute:</TokenIdentifier>
 			<Abstract type="html">@property edMinute</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
@@ -133,7 +97,7 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCLongSitModel/edMinute</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/edMinute</TokenIdentifier>
 			<Abstract type="html">@property edMinute</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
@@ -145,7 +109,7 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCLongSitModel/edMinute</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHealthMonitoringModel/edMinute</TokenIdentifier>
 			<Abstract type="html">@property edMinute</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
@@ -157,7 +121,7 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FCLongSitModel/modelWithData:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/FCHealthMonitoringModel/modelWithData:</TokenIdentifier>
 			<Abstract type="html">instantiate an model with the given data</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
@@ -168,32 +132,20 @@
 					<Abstract type="html">The given data</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">an model of &lt;code&gt;FCLongSitModel&lt;/code&gt; object</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">an model of &lt;code&gt;FCHealthMonitoringModel&lt;/code&gt; object</Abstract></ReturnValue>
 			<Anchor>//api/name/modelWithData:</Anchor>
             <NodeRef refid="9"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCLongSitModel/longSitData</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/healthMonitoringData</TokenIdentifier>
 			<Abstract type="html">Convert the model to NSData</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>- (NSData *)longSitData</Declaration>
+			<Declaration>- (NSData *)healthMonitoringData</Declaration>
 			
 			<ReturnValue><Abstract type="html">The converted data</Abstract></ReturnValue>
-			<Anchor>//api/name/longSitData</Anchor>
-            <NodeRef refid="9"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCLongSitModel/isLunchDNDEnable</TokenIdentifier>
-			<Abstract type="html">To determine whether the lunch break DND is available</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>- (BOOL)isLunchDNDEnable</Declaration>
-			
-			<ReturnValue><Abstract type="html">The state of the switch without disturb</Abstract></ReturnValue>
-			<Anchor>//api/name/isLunchDNDEnable</Anchor>
+			<Anchor>//api/name/healthMonitoringData</Anchor>
             <NodeRef refid="9"/>
 		</Token>
 		

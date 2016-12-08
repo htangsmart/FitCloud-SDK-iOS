@@ -1,1038 +1,302 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/FitCloud.html">
+	<File path="Classes/FCSystemSettingsModel.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/FitCloud</TokenIdentifier>
-			<Abstract type="html">@class FitCloud
-@classdesign Singleton mode</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-            <Availability type="html"></Availability>
+			<TokenIdentifier>//apple_ref/occ/cl/FCSystemSettingsModel</TokenIdentifier>
+			<Abstract type="html">@class FCSystemSettingsModel</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+            
 			
 			<NodeRef refid="13"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/setCentralManager:</TokenIdentifier>
-			<Abstract type="html">@property centralManager</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setNotificationData:</TokenIdentifier>
+			<Abstract type="html">@property notificationData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) CBCentralManager *centralManager</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *notificationData</Declaration>
 			
 			
-			<Anchor>//api/name/centralManager</Anchor>
+			<Anchor>//api/name/notificationData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/centralManager</TokenIdentifier>
-			<Abstract type="html">@property centralManager</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/notificationData</TokenIdentifier>
+			<Abstract type="html">@property notificationData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) CBCentralManager *centralManager</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *notificationData</Declaration>
 			
 			
-			<Anchor>//api/name/centralManager</Anchor>
+			<Anchor>//api/name/notificationData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FitCloud/centralManager</TokenIdentifier>
-			<Abstract type="html">@property centralManager</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/notificationData</TokenIdentifier>
+			<Abstract type="html">@property notificationData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) CBCentralManager *centralManager</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *notificationData</Declaration>
 			
 			
-			<Anchor>//api/name/centralManager</Anchor>
+			<Anchor>//api/name/notificationData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/setServicePeripheral:</TokenIdentifier>
-			<Abstract type="html">@property servicePeripheral</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setScreenDisplayData:</TokenIdentifier>
+			<Abstract type="html">@property screenDisplayData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) CBPeripheral *servicePeripheral</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *screenDisplayData</Declaration>
 			
 			
-			<Anchor>//api/name/servicePeripheral</Anchor>
+			<Anchor>//api/name/screenDisplayData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/servicePeripheral</TokenIdentifier>
-			<Abstract type="html">@property servicePeripheral</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/screenDisplayData</TokenIdentifier>
+			<Abstract type="html">@property screenDisplayData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) CBPeripheral *servicePeripheral</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *screenDisplayData</Declaration>
 			
 			
-			<Anchor>//api/name/servicePeripheral</Anchor>
+			<Anchor>//api/name/screenDisplayData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FitCloud/servicePeripheral</TokenIdentifier>
-			<Abstract type="html">@property servicePeripheral</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/screenDisplayData</TokenIdentifier>
+			<Abstract type="html">@property screenDisplayData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) CBPeripheral *servicePeripheral</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *screenDisplayData</Declaration>
 			
 			
-			<Anchor>//api/name/servicePeripheral</Anchor>
+			<Anchor>//api/name/screenDisplayData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/setSyncType:</TokenIdentifier>
-			<Abstract type="html">@property syncType</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setFunctionalSwitchData:</TokenIdentifier>
+			<Abstract type="html">@property functionalSwitchData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign, readonly) FCSyncType syncType</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *functionalSwitchData</Declaration>
 			
 			
-			<Anchor>//api/name/syncType</Anchor>
+			<Anchor>//api/name/functionalSwitchData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/syncType</TokenIdentifier>
-			<Abstract type="html">@property syncType</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/functionalSwitchData</TokenIdentifier>
+			<Abstract type="html">@property functionalSwitchData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign, readonly) FCSyncType syncType</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *functionalSwitchData</Declaration>
 			
 			
-			<Anchor>//api/name/syncType</Anchor>
+			<Anchor>//api/name/functionalSwitchData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FitCloud/syncType</TokenIdentifier>
-			<Abstract type="html">@property syncType</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/functionalSwitchData</TokenIdentifier>
+			<Abstract type="html">@property functionalSwitchData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign, readonly) FCSyncType syncType</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *functionalSwitchData</Declaration>
 			
 			
-			<Anchor>//api/name/syncType</Anchor>
+			<Anchor>//api/name/functionalSwitchData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/setIsSynchronizing:</TokenIdentifier>
-			<Abstract type="html">@property isSynchronizing</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setSoftwareAndHardwareVersionData:</TokenIdentifier>
+			<Abstract type="html">@property softwareAndHardwareVersionData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign, readonly) BOOL isSynchronizing</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *softwareAndHardwareVersionData</Declaration>
 			
 			
-			<Anchor>//api/name/isSynchronizing</Anchor>
+			<Anchor>//api/name/softwareAndHardwareVersionData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/isSynchronizing</TokenIdentifier>
-			<Abstract type="html">@property isSynchronizing</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/softwareAndHardwareVersionData</TokenIdentifier>
+			<Abstract type="html">@property softwareAndHardwareVersionData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign, readonly) BOOL isSynchronizing</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *softwareAndHardwareVersionData</Declaration>
 			
 			
-			<Anchor>//api/name/isSynchronizing</Anchor>
+			<Anchor>//api/name/softwareAndHardwareVersionData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FitCloud/isSynchronizing</TokenIdentifier>
-			<Abstract type="html">@property isSynchronizing</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/softwareAndHardwareVersionData</TokenIdentifier>
+			<Abstract type="html">@property softwareAndHardwareVersionData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign, readonly) BOOL isSynchronizing</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *softwareAndHardwareVersionData</Declaration>
 			
 			
-			<Anchor>//api/name/isSynchronizing</Anchor>
+			<Anchor>//api/name/softwareAndHardwareVersionData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/setFindMobilePhoneBlock:</TokenIdentifier>
-			<Abstract type="html">@property findMobilePhoneBlock</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setHealthHistoryData:</TokenIdentifier>
+			<Abstract type="html">@property healthHistoryData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) dispatch_block_t findMobilePhoneBlock</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *healthHistoryData</Declaration>
 			
 			
-			<Anchor>//api/name/findMobilePhoneBlock</Anchor>
+			<Anchor>//api/name/healthHistoryData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/findMobilePhoneBlock</TokenIdentifier>
-			<Abstract type="html">@property findMobilePhoneBlock</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/healthHistoryData</TokenIdentifier>
+			<Abstract type="html">@property healthHistoryData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) dispatch_block_t findMobilePhoneBlock</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *healthHistoryData</Declaration>
 			
 			
-			<Anchor>//api/name/findMobilePhoneBlock</Anchor>
+			<Anchor>//api/name/healthHistoryData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FitCloud/findMobilePhoneBlock</TokenIdentifier>
-			<Abstract type="html">@property findMobilePhoneBlock</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/healthHistoryData</TokenIdentifier>
+			<Abstract type="html">@property healthHistoryData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) dispatch_block_t findMobilePhoneBlock</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *healthHistoryData</Declaration>
 			
 			
-			<Anchor>//api/name/findMobilePhoneBlock</Anchor>
+			<Anchor>//api/name/healthHistoryData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/setTakePicturesBlock:</TokenIdentifier>
-			<Abstract type="html">@property takePicturesBlock</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setLongSitReminderData:</TokenIdentifier>
+			<Abstract type="html">@property longSitReminderData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) dispatch_block_t takePicturesBlock</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *longSitReminderData</Declaration>
 			
 			
-			<Anchor>//api/name/takePicturesBlock</Anchor>
+			<Anchor>//api/name/longSitReminderData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/takePicturesBlock</TokenIdentifier>
-			<Abstract type="html">@property takePicturesBlock</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/longSitReminderData</TokenIdentifier>
+			<Abstract type="html">@property longSitReminderData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) dispatch_block_t takePicturesBlock</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *longSitReminderData</Declaration>
 			
 			
-			<Anchor>//api/name/takePicturesBlock</Anchor>
+			<Anchor>//api/name/longSitReminderData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FitCloud/takePicturesBlock</TokenIdentifier>
-			<Abstract type="html">@property takePicturesBlock</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/longSitReminderData</TokenIdentifier>
+			<Abstract type="html">@property longSitReminderData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) dispatch_block_t takePicturesBlock</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *longSitReminderData</Declaration>
 			
 			
-			<Anchor>//api/name/takePicturesBlock</Anchor>
+			<Anchor>//api/name/longSitReminderData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/setAge:</TokenIdentifier>
-			<Abstract type="html">@property age</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setDefaultBloodPressureData:</TokenIdentifier>
+			<Abstract type="html">@property defaultBloodPressureData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) UInt32 age</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *defaultBloodPressureData</Declaration>
 			
 			
-			<Anchor>//api/name/age</Anchor>
+			<Anchor>//api/name/defaultBloodPressureData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/age</TokenIdentifier>
-			<Abstract type="html">@property age</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/defaultBloodPressureData</TokenIdentifier>
+			<Abstract type="html">@property defaultBloodPressureData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) UInt32 age</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *defaultBloodPressureData</Declaration>
 			
 			
-			<Anchor>//api/name/age</Anchor>
+			<Anchor>//api/name/defaultBloodPressureData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FitCloud/age</TokenIdentifier>
-			<Abstract type="html">@property age</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/defaultBloodPressureData</TokenIdentifier>
+			<Abstract type="html">@property defaultBloodPressureData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) UInt32 age</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *defaultBloodPressureData</Declaration>
 			
 			
-			<Anchor>//api/name/age</Anchor>
+			<Anchor>//api/name/defaultBloodPressureData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/setSex:</TokenIdentifier>
-			<Abstract type="html">@property sex</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setDrinkWaterReminderData:</TokenIdentifier>
+			<Abstract type="html">@property drinkWaterReminderData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) UInt32 sex</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *drinkWaterReminderData</Declaration>
 			
 			
-			<Anchor>//api/name/sex</Anchor>
+			<Anchor>//api/name/drinkWaterReminderData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/sex</TokenIdentifier>
-			<Abstract type="html">@property sex</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/drinkWaterReminderData</TokenIdentifier>
+			<Abstract type="html">@property drinkWaterReminderData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) UInt32 sex</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *drinkWaterReminderData</Declaration>
 			
 			
-			<Anchor>//api/name/sex</Anchor>
+			<Anchor>//api/name/drinkWaterReminderData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FitCloud/sex</TokenIdentifier>
-			<Abstract type="html">@property sex</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/drinkWaterReminderData</TokenIdentifier>
+			<Abstract type="html">@property drinkWaterReminderData</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) UInt32 sex</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *drinkWaterReminderData</Declaration>
 			
 			
-			<Anchor>//api/name/sex</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/setHeight:</TokenIdentifier>
-			<Abstract type="html">@property height</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) UInt32 height</Declaration>
-			
-			
-			<Anchor>//api/name/height</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/height</TokenIdentifier>
-			<Abstract type="html">@property height</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) UInt32 height</Declaration>
-			
-			
-			<Anchor>//api/name/height</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FitCloud/height</TokenIdentifier>
-			<Abstract type="html">@property height</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) UInt32 height</Declaration>
-			
-			
-			<Anchor>//api/name/height</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/setWeight:</TokenIdentifier>
-			<Abstract type="html">@property weight</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) UInt32 weight</Declaration>
-			
-			
-			<Anchor>//api/name/weight</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/weight</TokenIdentifier>
-			<Abstract type="html">@property weight</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) UInt32 weight</Declaration>
-			
-			
-			<Anchor>//api/name/weight</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FitCloud/weight</TokenIdentifier>
-			<Abstract type="html">@property weight</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) UInt32 weight</Declaration>
-			
-			
-			<Anchor>//api/name/weight</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FitCloud/SDKVersion</TokenIdentifier>
-			<Abstract type="html">SDK Version</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>+ (NSString *)SDKVersion</Declaration>
-			
-			<ReturnValue><Abstract type="html">SDK Version String</Abstract></ReturnValue>
-			<Anchor>//api/name/SDKVersion</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/scanningPeripherals:</TokenIdentifier>
-			<Abstract type="html">Scans Bluetooth peripherals</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)scanningPeripherals:(FCDeviceListHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Scan result callback block</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/scanningPeripherals:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/scanningPeripheralWithUUID:retHandler:</TokenIdentifier>
-			<Abstract type="html">Scans a peripheral that contains a uuid string</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)scanningPeripheralWithUUID:(NSString *)uuidString retHandler:(FCPeripheralHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>uuidString</Name>
-					<Abstract type="html">The uuid string of a peripheral</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Scan result callback block</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/scanningPeripheralWithUUID:retHandler:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/stopScanning</TokenIdentifier>
-			<Abstract type="html">Stop scanning the peripherals</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)stopScanning</Declaration>
-			
-			
-			<Anchor>//api/name/stopScanning</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/isConnected</TokenIdentifier>
-			<Abstract type="html">The result of the connection</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (BOOL)isConnected</Declaration>
-			
-			<ReturnValue><Abstract type="html">Whether the peripheral has been connected</Abstract></ReturnValue>
-			<Anchor>//api/name/isConnected</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/connectPeripheral:</TokenIdentifier>
-			<Abstract type="html">Connect a peripheral</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (BOOL)connectPeripheral:(CBPeripheral *)peripheral</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>peripheral</Name>
-					<Abstract type="html">A peripheral to connect to</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">Whether the peripheral in connection mode</Abstract></ReturnValue>
-			<Anchor>//api/name/connectPeripheral:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/disconnectPeripheral:</TokenIdentifier>
-			<Abstract type="html">Disconnect the peripheral</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (BOOL)disconnectPeripheral:(CBPeripheral *)peripheral</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>peripheral</Name>
-					<Abstract type="html">A peripheral to be disconnected</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">Whether the peripheral in disconnected mode</Abstract></ReturnValue>
-			<Anchor>//api/name/disconnectPeripheral:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/disconnect</TokenIdentifier>
-			<Abstract type="html">Disconnect the current peripheral</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (BOOL)disconnect</Declaration>
-			
-			<ReturnValue><Abstract type="html">Whether the current peripheral in disconnected mode</Abstract></ReturnValue>
-			<Anchor>//api/name/disconnect</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcFindWristband:</TokenIdentifier>
-			<Abstract type="html">Find the watch，The watch starts to vibrate when it receives a command from the app</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)fcFindWristband:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/fcFindWristband:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcFoundMyCellPhone:</TokenIdentifier>
-			<Abstract type="html">When the phone received a command issued by the watch,it needs to send a reply to the watch.</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)fcFoundMyCellPhone:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/fcFoundMyCellPhone:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/bondDevice:dataHandler:retHandler:</TokenIdentifier>
-			<Abstract type="html">Bond the device</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)bondDevice:(FCBoundDataHandler)paramsHandler dataHandler:(FCSyncDataHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>paramsHandler</Name>
-					<Abstract type="html">The block parameter is used to set user information。</Abstract>
-				</Parameter><Parameter>
-					<Name>dataHandler</Name>
-					<Abstract type="html">The system setting data callback block</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/bondDevice:dataHandler:retHandler:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/loginDevice:retHandler:</TokenIdentifier>
-			<Abstract type="html">Login the device</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)loginDevice:(FCLoginDatahandler)paramHandler retHandler:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>paramHandler</Name>
-					<Abstract type="html">The block parameter is used to set user information</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/loginDevice:retHandler:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/unBondDevice:</TokenIdentifier>
-			<Abstract type="html">Unbind the watch</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)unBondDevice:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/unBondDevice:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetAlarmData:retHandler:</TokenIdentifier>
-			<Abstract type="html">Set alarm clock data</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)fcSetAlarmData:(NSData *)data retHandler:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">Alarm clock data</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/fcSetAlarmData:retHandler:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcGetAlarmList:retHandler:</TokenIdentifier>
-			<Abstract type="html">Get the list of alarms</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)fcGetAlarmList:(FCSyncDataHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>dataHandler</Name>
-					<Abstract type="html">Alarm list data callback</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/fcGetAlarmList:retHandler:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcGetMacAddress:retHandler:</TokenIdentifier>
-			<Abstract type="html">Get the MAC address of the watch</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)fcGetMacAddress:(FCSyncDataHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>dataHandler</Name>
-					<Abstract type="html">MAC address data callback block</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback block</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/fcGetMacAddress:retHandler:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcGetSystemSetting:retHandler:</TokenIdentifier>
-			<Abstract type="html">Gets the system settings</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)fcGetSystemSetting:(FCSyncDataHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>dataHandler</Name>
-					<Abstract type="html">The system setting data callback</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/fcGetSystemSetting:retHandler:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcGetBatteryPowerAndChargingState:retHandler:</TokenIdentifier>
-			<Abstract type="html">Get power and charge status</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)fcGetBatteryPowerAndChargingState:(FCSyncPowerAndChargingStateHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>dataHandler</Name>
-					<Abstract type="html">Power and charge state callback</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/fcGetBatteryPowerAndChargingState:retHandler:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetDisplayData:retHandler:</TokenIdentifier>
-			<Abstract type="html">Set the screen display items</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)fcSetDisplayData:(NSData *)data retHandler:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">The screen display data</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/fcSetDisplayData:retHandler:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetFunctionSwitchData:retHandler:</TokenIdentifier>
-			<Abstract type="html">Set the watch function switch</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)fcSetFunctionSwitchData:(NSData *)data retHandler:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">Function switch data</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/fcSetFunctionSwitchData:retHandler:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetNotificationSettingData:retHandler:</TokenIdentifier>
-			<Abstract type="html">Set the notification switch</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)fcSetNotificationSettingData:(NSData *)data retHandler:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">Notification switch data</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/fcSetNotificationSettingData:retHandler:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetLongSitData:retHandler:</TokenIdentifier>
-			<Abstract type="html">Set up sedentary reminders</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)fcSetLongSitData:(NSData *)data retHandler:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">Sedentary reminder data</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/fcSetLongSitData:retHandler:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetHealthMonitorData:retHandler:</TokenIdentifier>
-			<Abstract type="html">Set the health of real-time monitoring</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)fcSetHealthMonitorData:(NSData *)data retHandler:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">Health real-time monitoring data</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/fcSetHealthMonitorData:retHandler:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetDrinkRemindEnable:retHandler:</TokenIdentifier>
-			<Abstract type="html">Set reminders to drink water</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)fcSetDrinkRemindEnable:(BOOL)bEnabled retHandler:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>bEnabled</Name>
-					<Abstract type="html">Reminder to drink water switch status</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/fcSetDrinkRemindEnable:retHandler:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetLeftHandWearEnable:retHandler:</TokenIdentifier>
-			<Abstract type="html">* @brief Set the wearing style</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)fcSetLeftHandWearEnable:(BOOL)bEnabled retHandler:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>bEnabled</Name>
-					<Abstract type="html">Left hand wear</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/fcSetLeftHandWearEnable:retHandler:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetCameraState:retHandler:</TokenIdentifier>
-			<Abstract type="html">Set the camera status</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)fcSetCameraState:(BOOL)bInForeground retHandler:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>bInForeground</Name>
-					<Abstract type="html">in the foreground</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/fcSetCameraState:retHandler:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetUserProfile:age:height:weight:retHandler:</TokenIdentifier>
-			<Abstract type="html">Set the user profile</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)fcSetUserProfile:(UInt32)sex age:(UInt32)age height:(UInt32)height weight:(UInt32)weight retHandler:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>sex</Name>
-					<Abstract type="html">sex</Abstract>
-				</Parameter><Parameter>
-					<Name>age</Name>
-					<Abstract type="html">age</Abstract>
-				</Parameter><Parameter>
-					<Name>height</Name>
-					<Abstract type="html">height</Abstract>
-				</Parameter><Parameter>
-					<Name>weight</Name>
-					<Abstract type="html">weight</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/fcSetUserProfile:age:height:weight:retHandler:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetBloodPressure:dbp:retHandler:</TokenIdentifier>
-			<Abstract type="html">Set the default blood pressure</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)fcSetBloodPressure:(UInt16)sbp dbp:(UInt16)dbp retHandler:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>sbp</Name>
-					<Abstract type="html">Systolic blood pressure</Abstract>
-				</Parameter><Parameter>
-					<Name>dbp</Name>
-					<Abstract type="html">Diastolic blood pressure</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/fcSetBloodPressure:dbp:retHandler:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetWeather:highTemp:lowTemp:state:cityName:retHandler:</TokenIdentifier>
-			<Abstract type="html">Set up the latest weather</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)fcSetWeather:(int)temperature highTemp:(int)hTemp lowTemp:(int)lTemp state:(int)state cityName:(NSString *)cityName retHandler:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>temperature</Name>
-					<Abstract type="html">Current temperature</Abstract>
-				</Parameter><Parameter>
-					<Name>hTemp</Name>
-					<Abstract type="html">Maximum temperature</Abstract>
-				</Parameter><Parameter>
-					<Name>lTemp</Name>
-					<Abstract type="html">lowest temperature</Abstract>
-				</Parameter><Parameter>
-					<Name>state</Name>
-					<Abstract type="html">Weather conditions</Abstract>
-				</Parameter><Parameter>
-					<Name>cityName</Name>
-					<Abstract type="html">City name</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/fcSetWeather:highTemp:lowTemp:state:cityName:retHandler:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcOpenRealTimeSync:dataHandler:retHandler:</TokenIdentifier>
-			<Abstract type="html">Turn on Healthy real-time synchronization</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)fcOpenRealTimeSync:(FCRTSyncType)syncType dataHandler:(FCSyncDataHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>syncType</Name>
-					<Abstract type="html">Real-time synchronization type</Abstract>
-				</Parameter><Parameter>
-					<Name>dataHandler</Name>
-					<Abstract type="html">Health real-time synchronization data callback</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/fcOpenRealTimeSync:dataHandler:retHandler:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcCloseRealTimeSync:</TokenIdentifier>
-			<Abstract type="html">Turn off healthy real-time synchronization</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)fcCloseRealTimeSync:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/fcCloseRealTimeSync:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcGetHistoryData:dataHandler:retHandler:</TokenIdentifier>
-			<Abstract type="html">Synchronize historical data</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)fcGetHistoryData:(FCSyncStepHandler)syncStepHandler dataHandler:(FCSyncDataHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>syncStepHandler</Name>
-					<Abstract type="html">This block shows you which step to synchronizes，</Abstract>
-				</Parameter><Parameter>
-					<Name>dataHandler</Name>
-					<Abstract type="html">It returns a type of data that is synchronized,This Block is called multiple times.</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">It will be called when synchronization is completed or an error occurs.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/fcGetHistoryData:dataHandler:retHandler:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcGetFirmwareVersion:retHandler:</TokenIdentifier>
-			<Abstract type="html">@method fcGetFirmwareVersion:retHandler:</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)fcGetFirmwareVersion:(FCSyncDataHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>dataHandler</Name>
-					<Abstract type="html">Firmware Version Data Callback</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Synchronous result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/fcGetFirmwareVersion:retHandler:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcUpdateFirmwareWithPath:progress:retHandler:</TokenIdentifier>
-			<Abstract type="html">Firmware upgrade</Abstract>
-			<DeclaredIn>FitCloud.h</DeclaredIn>
-			
-			<Declaration>- (void)fcUpdateFirmwareWithPath:(NSString *)filePath progress:(FCProgressHandler)progressHandler retHandler:(FCSyncResultHandler)retHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>filePath</Name>
-					<Abstract type="html">Firmware path</Abstract>
-				</Parameter><Parameter>
-					<Name>progressHandler</Name>
-					<Abstract type="html">Upgrade progress callback</Abstract>
-				</Parameter><Parameter>
-					<Name>retHandler</Name>
-					<Abstract type="html">Upgrade result callback</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/fcUpdateFirmwareWithPath:progress:retHandler:</Anchor>
+			<Anchor>//api/name/drinkWaterReminderData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		

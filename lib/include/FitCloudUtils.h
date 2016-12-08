@@ -214,3 +214,24 @@
  */
 - (NSData*)alarmClockConfigurationData;
 @end
+
+
+#pragma mark - NSNumber
+
+@interface NSNumber (Utils)
+
+/*!
+ 手机的型号，用于登录和绑定设备时手表识别不同型号的机型
+
+ @return 手机机型对应的数值
+ */
++ (NSNumber*)phoneModel;
+
+
+/*!
+ 手机操作系统型号，用于手表区分不同的系统
+
+ @return 操作系统对应的数值
+ */
++ (NSNumber*)osType;
+@end

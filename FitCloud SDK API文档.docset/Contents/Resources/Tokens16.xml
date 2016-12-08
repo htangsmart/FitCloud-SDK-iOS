@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSData+Utils.html">
+	<File path="Categories/NSArray+Utils.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSData(Utils)</TokenIdentifier>
-			<Abstract type="html">@category NSData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/cat/NSArray(Utils)</TokenIdentifier>
+			<Abstract type="html">@category NSArray</Abstract>
 			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
             
 			
@@ -13,38 +13,31 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSData/objectFromSystemSettingsData</TokenIdentifier>
-			<Abstract type="html">Converts system settings data to a data model with detailed attributes</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/NSArray/arrayWithAlarmClockConfigurationData:</TokenIdentifier>
+			<Abstract type="html">Convert alarm clock data to alarm clock models</Abstract>
 			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
 			
-			<Declaration>- (id)objectFromSystemSettingsData</Declaration>
-			
-			<ReturnValue><Abstract type="html">The object to be converted</Abstract></ReturnValue>
-			<Anchor>//api/name/objectFromSystemSettingsData</Anchor>
+			<Declaration>+ (NSArray *)arrayWithAlarmClockConfigurationData:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The alarm clock data to be converted</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a list of &lt;code&gt;FCAlarmObject&lt;/code&gt; objects, if data is &lt;i&gt;nil&lt;/i&gt;,return nil.</Abstract></ReturnValue>
+			<Anchor>//api/name/arrayWithAlarmClockConfigurationData:</Anchor>
             <NodeRef refid="16"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSData/dictionaryFromSystemSettingsData</TokenIdentifier>
-			<Abstract type="html">Converts system settings data to a dictonary with detailed data</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/NSArray/alarmClockConfigurationData</TokenIdentifier>
+			<Abstract type="html">Combines a set of alarm clock models into alarm clock data</Abstract>
 			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
 			
-			<Declaration>- (NSDictionary *)dictionaryFromSystemSettingsData</Declaration>
+			<Declaration>- (NSData *)alarmClockConfigurationData</Declaration>
 			
-			<ReturnValue><Abstract type="html">The object to be converted</Abstract></ReturnValue>
-			<Anchor>//api/name/dictionaryFromSystemSettingsData</Anchor>
-            <NodeRef refid="16"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSData/dictionaryFromSoftwareAndHardwareVersionData</TokenIdentifier>
-			<Abstract type="html">Converts hardware and software version information data to a dictionary with detailed data</Abstract>
-			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
-			
-			<Declaration>- (NSDictionary *)dictionaryFromSoftwareAndHardwareVersionData</Declaration>
-			
-			<ReturnValue><Abstract type="html">The object to be converted</Abstract></ReturnValue>
-			<Anchor>//api/name/dictionaryFromSoftwareAndHardwareVersionData</Anchor>
+			<ReturnValue><Abstract type="html">Alarm clock data according to Bluetooth protocol standard</Abstract></ReturnValue>
+			<Anchor>//api/name/alarmClockConfigurationData</Anchor>
             <NodeRef refid="16"/>
 		</Token>
 		
