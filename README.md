@@ -502,6 +502,21 @@ NSData \*data = [displayModel displayData];
 ---
 
 ### 10. 手环功能开关设置
+手表功能开关设置目前只有翻腕亮屏这一项，后续可能扩充功能
+```objective-c
+FCFunctionSwitchModel *fsModel = [[FCFunctionSwitchModel alloc]init];
+fsModel.twLightScreen = sender.isOn;
+NSData *data = [fsModel functionSwitchData];
+[[FitCloud shared]fcSetFunctionSwitchData:data retHandler:^(FCSyncType syncType, FCSyncResponseState state) {
+  if (state == FCSyncResponseStateSuccess) {
+      NSLog(@"设置成功");
+  }
+  else
+  {
+      NSLog(@"设置失败");
+  }
+}];
+```
 
 ---
 
