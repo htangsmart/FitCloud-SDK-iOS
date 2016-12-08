@@ -181,7 +181,9 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
 	    if (authDataHandler)
 	    {
 	      // *用户id* 100; *手机型号* 见设备信息说明； *手机系统版本* 见设备信息说明
-	        authDataHandler(100,2,1);
+					NSNumber *phoneModel = [NSNumber phoneModel];
+					NSNumber *osType = [NSNumber osType];
+	        authDataHandler(100,phoneModel,osType);
 	    }
 	    // 设置用户信息
 	    if (userDataHandler)
@@ -239,32 +241,6 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
 }
 
 ```
-##### 设备信息说明
-phone model 信息说明
-
-| 设备        | 序号           |  设备        | 序号           |
-| ------------- |:-------------:| ------------- |:-------------:
-|  iPhone4s   | 2 | iPad 2      | 31 |
-|  iPhone5     | 3      | iPad 3      | 32      |
-| iPhone5c | 4      | iPad 4 | 33  |  
-| iPhone5s | 5      | iPad mini | 34 |
-| iPhone6 | 6      | iPad air | 35 |
-| iPhone6s | 7      | iPad mini2 | 36      |
-| iPhone6 Plus | 8      | iPad air2 | 37      |
-| iPhone6s Plus | 9      | iPad mini3 | 38      |
-| iPhone7 | 10      | iPad pro | 39      |
-| iPhone7 Plus | 11      | iPad mini4 | 40      |
-
-operating system
-
-| 系统        | 序号           |  系统        | 序号           |
-| ------------- |:-------------:| ------------- |:-------------:
-| iOS 8.0     | 3      | iOS 8.1     | 4      |
-| iOS 8.2 | 5      | iOS 8.3 | 6  |  
-| iOS 8.4 | 7      | iOS 9.0 | 8 |
-| iOS 9.1 | 9      | iOS 9.2 | 10 |
-| iOS 9.3 | 11      | iOS 10.0 | 12      |
-| iOS 10.1 | 13      | |       |
 
 ---
 
@@ -287,6 +263,8 @@ operating system
 	    if (authDataHandler)
 	    {
 	      // 详细数据见 1.绑定设备->设备信息说明
+				NSNumber *phoneModel = [NSNumber phoneModel];
+				NSNumber *osType = [NSNumber osType];
 	        authDataHandler(100,10,10);
 	    }
 
