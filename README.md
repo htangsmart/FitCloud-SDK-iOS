@@ -545,6 +545,69 @@ NSData *data = [fsModel functionSwitchData];
 ---
 
 ### 11. 手表固件升级与固件版本信息获取
+#### 固件版本信息获取
+通过`fcGetFirmwareVersion:retHandler:`API接口你可以获取手表当前的固件信息，获取后你需要保存这些信息用于检测固件升级和其他操作
+```objective-c
+// 获取固件版本信息
+[[FitCloud shared]fcGetFirmwareVersion:^(FCSyncType syncType, NSData *data) {
+        [ws didUpdateLocalFirmwareVersionWithData:data];
+    } retHandler:^(FCSyncType syncType, FCSyncResponseState state) {
+        if (state == FCSyncResponseStateSuccess)
+        {
+            NSLog(@"--固件版本信息获取成功--");
+        }
+        else
+        {
+            NSLog(@"--固件版本信息获取失败--");
+        }
+}];
+
+// 获取到固件版本信息后，你需要对固件版本信息解析存储
+- (void)didUpdateLocalFirmwareVersionWithData:(NSData*)data
+{
+    if (!data) {
+        return;
+    }
+    [FitCloudUtils resolveHardwareAndSoftwareVersionData:data withCallbackBlock:^(NSData *projData, NSData *hardwareData, NSData *sdkData, NSData *patchData, NSData *flashData, NSData *fwAppData, NSData *seqData) {
+			// hardwareData 包含健康传感器表示，心率、血氧、血压、呼吸频率等功能是否存在可以通过此数据判断
+        [[NSNotificationCenter defaultCenter]postNotificationName:EVENT_SENSOR_FLAG_UPDATE_NOTIFY object:hardwareData];
+    }];
+
+    WS(ws);
+    [FitCloudUtils resolveHardwareAndSoftwareVersionDataToString:data withCallbackBlock:^(NSString *projNum, NSString *hardware, NSString *sdkVersion, NSString *patchVerson, NSString *falshVersion, NSString *appVersion, NSString *serialNum) {
+        NSString *prjHareWare = [NSString stringWithFormat:@"%@%@",projNum,hardware];
+        NSString *patchApp = [NSString stringWithFormat:@"%@%@%@",patchVerson,falshVersion,appVersion];
+        DEBUG_METHOD(@"--patchApp--%@",patchApp);
+        DEBUG_METHOD(@"--prjHareWare--%@",prjHareWare);
+
+        // 通过解析出的固件版本信息，你可以更新本地数据并查询最新固件版本
+				// your code`
+    }];
+}
+
+#### 固件升级
+固件升级之前你需要从服务器下载最新固件，然后获取下载的固件路径调用`fcUpdateFirmwareWithPath:progress:retHandler:`进行升级操作
+```objective-c
+[[FitCloud shared]fcUpdateFirmwareWithPath:filePath progress:^(CGFloat progress) {
+        // 在UI显示升级进度
+    } retHandler:^(FCSyncType syncType, FCSyncResponseState state) {
+        if (state == FCSyncResponseStateSuccess)
+        {
+            // 升级成功
+        }
+        else if (state == FCSyncResponseStateLowPower)
+        {
+            // 电量过低，不能进行升级
+        }
+        else
+        {
+            // 升级是啊比
+        }
+    }];
+
+```
+
+```
 
 ---
 
