@@ -298,7 +298,31 @@ FitCloud SDK 结构十分简单，仅包含以下几部分：
 ---
 
 ### 4. 解除绑定
+如果手表在连接状态，解绑设备时你需要对手表发送解绑指令，解绑成功可以移除绑定的`UUID`信息，如果蓝牙关闭或者断开连接，你可以不用发送解绑指令直接移除绑定的`UUID`信息直接解绑。
+```objective-c
+[[FitCloud shared]unBondDevice:^(FCSyncType syncType, FCSyncResponseState state)
+    {
+        if (state == FCSyncResponseStateNotConnected || state == FCSyncResponseStatePowerOff || state == FCSyncResponseStateSuccess) {
 
+            BOOL ret =  [[FitCloud shared]removeBoundDevice];
+            if (ret)
+            {
+                [ws hideLoadingHUDWithSuccess:KLocalString(@"解绑成功")];
+                [[FitCloud shared]disconnect];
+                // your code
+								// ...
+            }
+            else
+            {
+                [ws hideLoadingHUDWithFailure:KLocalString(@"解绑失败")];
+            }
+        }
+        else
+        {
+            [ws hideLoadingHUDWithFailure:KLocalString(@"解绑失败")];
+        }
+}];
+```
 
 ---
 
