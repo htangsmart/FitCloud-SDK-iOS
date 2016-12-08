@@ -584,6 +584,7 @@ NSData *data = [fsModel functionSwitchData];
 				// your code`
     }];
 }
+```
 
 #### 固件升级
 固件升级之前你需要从服务器下载最新固件，然后获取下载的固件路径调用`fcUpdateFirmwareWithPath:progress:retHandler:`进行升级操作
@@ -604,8 +605,6 @@ NSData *data = [fsModel functionSwitchData];
             // 升级是啊比
         }
     }];
-
-```
 
 ```
 
