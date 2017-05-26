@@ -12,30 +12,130 @@
 #import <UIKit/UIKit.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
+/*!
+ * @enum FCDataType
+ * @discussion  同步数据的类型，用于区分FCDataModel所属的数据
+ */
+typedef NS_ENUM(NSInteger, FCDataType)
+{
+    /*!  默认未知类型*/
+    FCDataTypeUnknown,
+    /*!  运动量*/
+    FCDataTypeExercise,
+    /*!  睡眠*/
+    FCDataTypeSleep,
+    /*!  心率*/
+    FCDataTypeHeartRate,
+    /*!  血氧*/
+    FCDataTypeBloodOxygen,
+    /*!  血压*/
+    FCDataTypeBloodPressure,
+    /*!  呼吸频率*/
+    FCDataTypeBreathingRate,
+};
+
+
+
+/*!
+ * @enum FCLoginSyncType
+ * @discussion 登录设备同步流程
+ */
+typedef NS_ENUM(NSInteger, FCLoginSyncType)
+{
+    /*! 默认类型*/
+    FCLoginSyncTypeUnknown = 0,
+    /*! 登录设备*/
+    FCLoginSyncTypeLogin = 1,
+    /*! 同步系统时间*/
+    FCLoginSyncTypeTime = 2,
+    /*! 时间制式，根据系统制式类型来判断是采用12小时制还是24小时制*/
+    FCLoginSyncTypeHourSystem = 3,
+    /*! 结束*/
+    FCLoginSyncTypeEnd = 4,
+};
+
+
+
+/*!
+ * @enum FCBondSyncType
+ * @discussion 绑定设备同步流程
+ */
+typedef NS_ENUM(NSInteger, FCBindSyncType)
+{
+    /*! 默认类型*/
+    FCBindSyncTypeUnknown = 0,
+    /*! 绑定设备*/
+    FCBindSyncTypeBond = 1,
+    /*! 同步系统时间到手表*/
+    FCBindSyncTypeTime = 2,
+    /*! 同步用户资料到手表*/
+    FCBindSyncTypeUserInfo = 3,
+    /*! 同步佩戴方式到手表*/
+    FCBindSyncTypeWearingStyle = 4,
+    /*! 同步默认血压到手表*/
+    FCBindSyncTypeDefaultBloodPressure = 5,
+    /*! 同步手表系统设置*/
+    FCBindSyncTypeSystemSetting = 6,
+    /*! 结束*/
+    FCBindSyncTypeEnd = 7,
+};
+
+
+
+/*!
+ * @enum FCHistoryDataSyncType
+ * @discussion 历史数据同步流程（部分同步功能是否执行由传感器标志决定）
+ */
+typedef NS_ENUM(NSInteger, FCHistoryDataSyncType)
+{
+    /*! 默认类型*/
+    FCHistoryDataSyncTypeUnknown = 0,
+    /*! 同步系统时间*/
+    FCHistoryDataSyncTypeTime = 1,
+    /*! 同步各类型的日志数据（包括运动总步数、总距离、总卡路里等）*/
+    FCHistoryDataSyncTypeTotalData = 2,
+    /*! 同步运动量详细记录*/
+    FCHistoryDataSyncTypeExercise = 3,
+    /*! 同步睡眠详细记录*/
+    FCHistoryDataSyncTypeSleep = 4,
+    /*! 同步血氧详细记录*/
+    FCHistoryDataSyncTypeBloodOxygen = 5,
+    /*! 同步血压详细记录*/
+    FCHistoryDataSyncTypeBloodPressure = 6,
+    /*! 同步呼吸频率详细记录*/
+    FCHistoryDataSyncTypeBreathingRate = 7,
+    /*! 同步心率详细记录*/
+    FCHistoryDataSyncTypeHeartRate = 8,
+    /*! 同步紫外线详细记录*/
+    FCHistoryDataSyncTypeUltraviolet = 9,
+    /*! 同步睡眠总数据（包含七天以内的深睡眠和浅睡眠时长）*/
+    FCHistoryDataSyncTypeTotalSleep = 10,
+    /*! 结束*/
+    FCHistoryDataSyncTypeEnd = 11,
+};
+
+
 
 /*!
  * @enum FCSyncType
- * @discussion Bluetooth data synchronization type
+ * @discussion 手环数据同步标志
  */
 typedef NS_ENUM(NSInteger, FCSyncType) {
     
-    /*! The default type*/
-    FCSyncTypeNone = 0,
+    /*! 默认类型*/
+    FCSyncTypeUnknown = 0,
     
-    /*! Unbind the device*/
+    /*! 解绑设备*/
     FCSyncTypeUnBindDevice = 18,
     
-    /*! Login the device*/
+    /*! 登录设备*/
     FCSyncTypeLoginDevice = 19,
     
-    /*! Bond the device*/
+    /*! 绑定设备*/
     FCSyncTypeBindDevice = 20,
     
-    /*! Login to the device to synchronize the time*/
-    FCSyncTypeLoginToSyncTime = 21,
-    
     /*! Find the watch*/
-    FCSyncTypeFindWristband = 23,
+    FCSyncTypeFindTheWatch = 23,
     
     /*! Synchronize the alarm list*/
     FCSyncTypeGetAlarmList = 24,
@@ -53,7 +153,7 @@ typedef NS_ENUM(NSInteger, FCSyncType) {
     FCSyncTypeDisplaySettings = 28,
     
     /*! Watch function switch settings*/
-    FCSyncTypeFunctionSwitchSettings = 29,
+    FCSyncTypeFeaturesSettings = 29,
     
     /*! notification switch settings*/
     FCSyncTypeNotificationSettings = 30,
@@ -85,27 +185,6 @@ typedef NS_ENUM(NSInteger, FCSyncType) {
     /*! Historical data synchronization*/
     FCSyncTypeHistoryData = 39,
     
-    /*! Exercise synchronization*/
-    FCSyncTypeExercise = 40,
-    
-    /*! sleep data synchronization*/
-    FCSyncTypeSleep = 41,
-    
-    /*! Heart rate data synchronization*/
-    FCSyncTypeHeartRate = 42,
-    
-    /*! Blood oxygenation data synchronization*/
-    FCSyncTypeBloodOxygen = 43,
-    
-    /*! UV data synchronization*/
-    FCSyncTypeUltraviolet = 44,
-    
-    /*! Respiratory frequency data synchronization*/
-    FCSyncTypeBreathingRate = 45,
-    
-    /*! Blood Pressure Data Synchronization*/
-    FCSyncTypeBloodPressure = 46,
-    
     /*! Turns on real-time health sync*/
     FCSyncTypeOpenRealtimeSync = 47,
     
@@ -119,13 +198,22 @@ typedef NS_ENUM(NSInteger, FCSyncType) {
     FCSyncTypeFirmwareVersion = 50,
     
     /*! Found my cell phone.*/
-    FCSyncTypeFoundMyCellPhone = 51,
+    FCSyncTypeFoundPhoneReplay = 51,
     
     /*! Get the MAC address of the watch*/
     FCSyncTypeGetMacAddress = 52,
     
-    /*! Gets the current day's total data*/
-    FCSyncTypeDailyTotalData = 53,
+    /*! 打开睡眠监测设定监测时间*/
+    FCSyncTypeOpenSleepMonitoring = 54,
+    
+    /*! 关闭睡眠监测*/
+    FCSyncTypeCloseSleepMonitoring = 55,
+    
+    /*! 日总睡眠数据*/
+    FCSyncTypeTotalSleepData = 56,
+    
+    /*! 历史数据同步同步七天睡眠日总数据*/
+    FCSyncTypeHistoryTotalSleepData = 57,
     
     /*! Finished*/
     FCSyncTypeEnd = 100,
@@ -197,27 +285,6 @@ typedef NS_ENUM(NSInteger, FCSyncResponseState) {
     FCSyncResponseStateLowPower = 11,
 };
 
-/*!
- * @enum FCDataType
- * @discussion  同步数据的类型，用于区分FCDataModel所属的数据
- */
-typedef NS_ENUM(NSInteger, FCDataType)
-{
-    /*!  默认未知类型*/
-    FCDataTypeUnknown,
-    /*!  运动量*/
-    FCDataTypeExercise,
-    /*!  睡眠*/
-    FCDataTypeSleep,
-    /*!  心率*/
-    FCDataTypeHeartRate,
-    /*!  血氧*/
-    FCDataTypeBloodOxygen,
-    /*!  血压*/
-    FCDataTypeBloodPressure,
-    /*!  呼吸频率*/
-    FCDataTypeBreathingRate,
-};
 
 
 /*!

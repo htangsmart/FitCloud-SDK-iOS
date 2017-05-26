@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/FCAlarmCycleModel.html">
+	<File path="Classes/FCAlarmClockCycleObject.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/FCAlarmCycleModel</TokenIdentifier>
-			<Abstract type="html">@class FCAlarmCycleModel</Abstract>
+			<TokenIdentifier>//apple_ref/occ/cl/FCAlarmClockCycleObject</TokenIdentifier>
+			<Abstract type="html">闹钟周期, 如果周一到周日无设置，则表示闹钟当日有效</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
             
 			
@@ -13,282 +13,30 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmCycleModel/setMonday:</TokenIdentifier>
-			<Abstract type="html">@property monday</Abstract>
+			<TokenIdentifier>//apple_ref/occ/clm/FCAlarmClockCycleObject/cycleWithValue:</TokenIdentifier>
+			<Abstract type="html">通过闹钟周期&lt;i&gt;cycleValue&lt;/i&gt;初始化&lt;i&gt;FCCycleOfAlarmClockObject&lt;/i&gt;对象</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL monday</Declaration>
-			
-			
-			<Anchor>//api/name/monday</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmCycleModel/monday</TokenIdentifier>
-			<Abstract type="html">@property monday</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL monday</Declaration>
-			
-			
-			<Anchor>//api/name/monday</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCAlarmCycleModel/monday</TokenIdentifier>
-			<Abstract type="html">@property monday</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL monday</Declaration>
-			
-			
-			<Anchor>//api/name/monday</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmCycleModel/setTuesday:</TokenIdentifier>
-			<Abstract type="html">@property tuesday</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL tuesday</Declaration>
-			
-			
-			<Anchor>//api/name/tuesday</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmCycleModel/tuesday</TokenIdentifier>
-			<Abstract type="html">@property tuesday</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL tuesday</Declaration>
-			
-			
-			<Anchor>//api/name/tuesday</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCAlarmCycleModel/tuesday</TokenIdentifier>
-			<Abstract type="html">@property tuesday</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL tuesday</Declaration>
-			
-			
-			<Anchor>//api/name/tuesday</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmCycleModel/setWednesday:</TokenIdentifier>
-			<Abstract type="html">@property wednesday</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL wednesday</Declaration>
-			
-			
-			<Anchor>//api/name/wednesday</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmCycleModel/wednesday</TokenIdentifier>
-			<Abstract type="html">@property wednesday</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL wednesday</Declaration>
-			
-			
-			<Anchor>//api/name/wednesday</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCAlarmCycleModel/wednesday</TokenIdentifier>
-			<Abstract type="html">@property wednesday</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL wednesday</Declaration>
-			
-			
-			<Anchor>//api/name/wednesday</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmCycleModel/setThursday:</TokenIdentifier>
-			<Abstract type="html">@property thursday</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL thursday</Declaration>
-			
-			
-			<Anchor>//api/name/thursday</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmCycleModel/thursday</TokenIdentifier>
-			<Abstract type="html">@property thursday</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL thursday</Declaration>
-			
-			
-			<Anchor>//api/name/thursday</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCAlarmCycleModel/thursday</TokenIdentifier>
-			<Abstract type="html">@property thursday</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL thursday</Declaration>
-			
-			
-			<Anchor>//api/name/thursday</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmCycleModel/setFirday:</TokenIdentifier>
-			<Abstract type="html">@property firday</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL firday</Declaration>
-			
-			
-			<Anchor>//api/name/firday</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmCycleModel/firday</TokenIdentifier>
-			<Abstract type="html">@property firday</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL firday</Declaration>
-			
-			
-			<Anchor>//api/name/firday</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCAlarmCycleModel/firday</TokenIdentifier>
-			<Abstract type="html">@property firday</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL firday</Declaration>
-			
-			
-			<Anchor>//api/name/firday</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmCycleModel/setSaturday:</TokenIdentifier>
-			<Abstract type="html">@property saturday</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL saturday</Declaration>
-			
-			
-			<Anchor>//api/name/saturday</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmCycleModel/saturday</TokenIdentifier>
-			<Abstract type="html">@property saturday</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL saturday</Declaration>
-			
-			
-			<Anchor>//api/name/saturday</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCAlarmCycleModel/saturday</TokenIdentifier>
-			<Abstract type="html">@property saturday</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL saturday</Declaration>
-			
-			
-			<Anchor>//api/name/saturday</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmCycleModel/setSunday:</TokenIdentifier>
-			<Abstract type="html">@property sunday</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL sunday</Declaration>
-			
-			
-			<Anchor>//api/name/sunday</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmCycleModel/sunday</TokenIdentifier>
-			<Abstract type="html">@property sunday</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL sunday</Declaration>
-			
-			
-			<Anchor>//api/name/sunday</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCAlarmCycleModel/sunday</TokenIdentifier>
-			<Abstract type="html">@property sunday</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL sunday</Declaration>
-			
-			
-			<Anchor>//api/name/sunday</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FCAlarmCycleModel/modelWithCycle:</TokenIdentifier>
-			<Abstract type="html">Instantiate a data model using an alarm clock cycle</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>+ (instancetype)modelWithCycle:(NSNumber *)cycle</Declaration>
+			<Declaration>+ (instancetype)cycleWithValue:(NSNumber *)cycleValue</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>cycle</Name>
-					<Abstract type="html">The alarm clock cycle</Abstract>
+					<Name>cycleValue</Name>
+					<Abstract type="html">闹钟周期数值</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">an alarm clock cycle model of &lt;code&gt;FCAlarmCycleModel&lt;/code&gt; object</Abstract></ReturnValue>
-			<Anchor>//api/name/modelWithCycle:</Anchor>
+			<ReturnValue><Abstract type="html">&lt;i&gt;FCCycleOfAlarmClockObject&lt;/i&gt; 实例对象</Abstract></ReturnValue>
+			<Anchor>//api/name/cycleWithValue:</Anchor>
             <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmCycleModel/cycleValue</TokenIdentifier>
-			<Abstract type="html">The alarm clock cycle (7bits).From low to high indicates Monday to Sunday.All bits are 0, indicating that the day is valid</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmClockCycleObject/cycleValue</TokenIdentifier>
+			<Abstract type="html">获取闹钟周期数值（7 bits），从低位到高位表示周一到周日；如果所有字节为0，则表示闹钟当日有效.</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
 			<Declaration>- (NSNumber *)cycleValue</Declaration>
 			
-			<ReturnValue><Abstract type="html">alarm clock cycle value</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">闹钟周期数值</Abstract></ReturnValue>
 			<Anchor>//api/name/cycleValue</Anchor>
             <NodeRef refid="1"/>
 		</Token>

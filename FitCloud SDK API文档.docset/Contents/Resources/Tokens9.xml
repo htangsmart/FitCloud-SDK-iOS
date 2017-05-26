@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/FCHealthMonitoringModel.html">
+	<File path="Classes/FCSedentaryReminderObject.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/FCHealthMonitoringModel</TokenIdentifier>
-			<Abstract type="html">@class FCRTHealthModel</Abstract>
+			<TokenIdentifier>//apple_ref/occ/cl/FCSedentaryReminderObject</TokenIdentifier>
+			<Abstract type="html">久坐提醒,手表会在长时间不运动时发出提醒，通知用户起身运动</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
             
 			
@@ -13,8 +13,8 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/setIsOn:</TokenIdentifier>
-			<Abstract type="html">@property isOn</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSedentaryReminderObject/setIsOn:</TokenIdentifier>
+			<Abstract type="html">久坐提醒开关</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) BOOL isOn</Declaration>
@@ -25,8 +25,8 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/isOn</TokenIdentifier>
-			<Abstract type="html">@property isOn</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSedentaryReminderObject/isOn</TokenIdentifier>
+			<Abstract type="html">久坐提醒开关</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) BOOL isOn</Declaration>
@@ -37,8 +37,8 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCHealthMonitoringModel/isOn</TokenIdentifier>
-			<Abstract type="html">@property isOn</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSedentaryReminderObject/isOn</TokenIdentifier>
+			<Abstract type="html">久坐提醒开关</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) BOOL isOn</Declaration>
@@ -49,8 +49,44 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/setStMinute:</TokenIdentifier>
-			<Abstract type="html">@property stMinute</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSedentaryReminderObject/setRestTimeNotDisturbEnabled:</TokenIdentifier>
+			<Abstract type="html">午休免打扰，打开此项，午休时间将不会提醒</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL restTimeNotDisturbEnabled</Declaration>
+			
+			
+			<Anchor>//api/name/restTimeNotDisturbEnabled</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSedentaryReminderObject/restTimeNotDisturbEnabled</TokenIdentifier>
+			<Abstract type="html">午休免打扰，打开此项，午休时间将不会提醒</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL restTimeNotDisturbEnabled</Declaration>
+			
+			
+			<Anchor>//api/name/restTimeNotDisturbEnabled</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSedentaryReminderObject/restTimeNotDisturbEnabled</TokenIdentifier>
+			<Abstract type="html">午休免打扰，打开此项，午休时间将不会提醒</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL restTimeNotDisturbEnabled</Declaration>
+			
+			
+			<Anchor>//api/name/restTimeNotDisturbEnabled</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSedentaryReminderObject/setStMinute:</TokenIdentifier>
+			<Abstract type="html">久坐提醒开始时间，数值为从0开始的分钟数</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) NSUInteger stMinute</Declaration>
@@ -61,8 +97,8 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/stMinute</TokenIdentifier>
-			<Abstract type="html">@property stMinute</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSedentaryReminderObject/stMinute</TokenIdentifier>
+			<Abstract type="html">久坐提醒开始时间，数值为从0开始的分钟数</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) NSUInteger stMinute</Declaration>
@@ -73,8 +109,8 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCHealthMonitoringModel/stMinute</TokenIdentifier>
-			<Abstract type="html">@property stMinute</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSedentaryReminderObject/stMinute</TokenIdentifier>
+			<Abstract type="html">久坐提醒开始时间，数值为从0开始的分钟数</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) NSUInteger stMinute</Declaration>
@@ -85,8 +121,8 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/setEdMinute:</TokenIdentifier>
-			<Abstract type="html">@property edMinute</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSedentaryReminderObject/setEdMinute:</TokenIdentifier>
+			<Abstract type="html">久坐提醒结束时间，数值为从0开始的分钟数</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) NSUInteger edMinute</Declaration>
@@ -97,8 +133,8 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/edMinute</TokenIdentifier>
-			<Abstract type="html">@property edMinute</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSedentaryReminderObject/edMinute</TokenIdentifier>
+			<Abstract type="html">久坐提醒结束时间，数值为从0开始的分钟数</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) NSUInteger edMinute</Declaration>
@@ -109,8 +145,8 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCHealthMonitoringModel/edMinute</TokenIdentifier>
-			<Abstract type="html">@property edMinute</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSedentaryReminderObject/edMinute</TokenIdentifier>
+			<Abstract type="html">久坐提醒结束时间，数值为从0开始的分钟数</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) NSUInteger edMinute</Declaration>
@@ -121,31 +157,14 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FCHealthMonitoringModel/modelWithData:</TokenIdentifier>
-			<Abstract type="html">instantiate an model with the given data</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSedentaryReminderObject/isAtRestTime</TokenIdentifier>
+			<Abstract type="html">判断是否处于午休时间，午休时间为12:00-14:00,如果处于这个范围则为午休时间。</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)modelWithData:(NSData *)data</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">The given data</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">an model of &lt;code&gt;FCHealthMonitoringModel&lt;/code&gt; object</Abstract></ReturnValue>
-			<Anchor>//api/name/modelWithData:</Anchor>
-            <NodeRef refid="9"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringModel/healthMonitoringData</TokenIdentifier>
-			<Abstract type="html">Convert the model to NSData</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
+			<Declaration>- (BOOL)isAtRestTime</Declaration>
 			
-			<Declaration>- (NSData *)healthMonitoringData</Declaration>
-			
-			<ReturnValue><Abstract type="html">The converted data</Abstract></ReturnValue>
-			<Anchor>//api/name/healthMonitoringData</Anchor>
+			<ReturnValue><Abstract type="html">是否处于午休时间</Abstract></ReturnValue>
+			<Anchor>//api/name/isAtRestTime</Anchor>
             <NodeRef refid="9"/>
 		</Token>
 		

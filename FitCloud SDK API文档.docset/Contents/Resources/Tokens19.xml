@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/c/tdef/FCDataType</TokenIdentifier>
-			<Abstract type="html">@enum FCDataType</Abstract>
+			<Abstract type="html">同步数据的类型，用于区分FCDataObject数据类型</Abstract>
 			<DeclaredIn>FCDefine.h</DeclaredIn>
             
 			
@@ -77,6 +77,16 @@
             <TokenIdentifier>//apple_ref/c/econst/FCDataTypeBreathingRate</TokenIdentifier>
             <Abstract type="html">  呼吸频率</Abstract>
             <Declaration>FCDataTypeBreathingRate</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="19"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCDataTypeSevenDaysSleepData</TokenIdentifier>
+            <Abstract type="html">  七天日总睡眠数据</Abstract>
+            <Declaration>FCDataTypeSevenDaysSleepData</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             

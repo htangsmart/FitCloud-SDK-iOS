@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/FitCloudUtils.html">
+	<File path="Classes/FitCloud.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/FitCloudUtils</TokenIdentifier>
-			<Abstract type="html">@class FitCloudUtils</Abstract>
-			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/FitCloud</TokenIdentifier>
+			<Abstract type="html">@class FitCloud</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
             
 			
 			<NodeRef refid="15"/>
@@ -13,244 +13,718 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/resolveDayTotalData:withCallBackBlock:</TokenIdentifier>
-			<Abstract type="html">Day total data will be analyzed into the total number of steps, total distance, total calories, deep sleep duration, light sleep duration, average heart rate</Abstract>
-			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/FitCloud/SDKVersion</TokenIdentifier>
+			<Abstract type="html">获取SDK版本号</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
 			
-			<Declaration>+ (BOOL)resolveDayTotalData:(NSData *)data withCallBackBlock:(FCDayTotalDataBlock)block</Declaration>
+			<Declaration>+ (NSString *)SDKVersion</Declaration>
+			
+			<ReturnValue><Abstract type="html">SDK 版本字符串</Abstract></ReturnValue>
+			<Anchor>//api/name/SDKVersion</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/scanForPeripherals:result:</TokenIdentifier>
+			<Abstract type="html">扫描蓝牙外设，如果uuidString存在则返回指定uuidString的外设，不存在则扫描所有符合条件的外设</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)scanForPeripherals:(NSString *)uuidString result:(FCPeripheralsHandler)retHandler</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">Day total data</Abstract>
+					<Name>uuidString</Name>
+					<Abstract type="html">蓝牙外设uuid字符串</Abstract>
 				</Parameter><Parameter>
-					<Name>block</Name>
-					<Abstract type="html">Callback block</Abstract>
+					<Name>retHandler</Name>
+					<Abstract type="html">扫描结果回调</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">if data is &lt;i&gt;nil&lt;/i&gt;,return &lt;i&gt;NO&lt;/i&gt;</Abstract></ReturnValue>
-			<Anchor>//api/name/resolveDayTotalData:withCallBackBlock:</Anchor>
+			
+			<Anchor>//api/name/scanForPeripherals:result:</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/resolveSystemSettingsData:withCallbackBlock:</TokenIdentifier>
-			<Abstract type="html">The system setting data is divided into detailed setting data</Abstract>
-			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/stopScanning</TokenIdentifier>
+			<Abstract type="html">停止蓝牙扫描</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
 			
-			<Declaration>+ (BOOL)resolveSystemSettingsData:(NSData *)data withCallbackBlock:(FCSystemSettingDataBlock)block</Declaration>
+			<Declaration>- (void)stopScanning</Declaration>
+			
+			
+			<Anchor>//api/name/stopScanning</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/isConnected</TokenIdentifier>
+			<Abstract type="html">判断当前的&lt;code&gt;servicePeripheral&lt;/code&gt;是否已链接</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isConnected</Declaration>
+			
+			<ReturnValue><Abstract type="html">YES/NO</Abstract></ReturnValue>
+			<Anchor>//api/name/isConnected</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/connectPeripheral:</TokenIdentifier>
+			<Abstract type="html">连接蓝牙外设外设</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)connectPeripheral:(CBPeripheral *)peripheral</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">system setting data</Abstract>
+					<Name>peripheral</Name>
+					<Abstract type="html">要连接的外设
+@seealso EVENTCONNECTPERIPHERALNOTIFY,EVENTFAILCONNECTPERIPHERAL_NOTIFY</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES/NO,如果外设进入连接状态返回YES</Abstract></ReturnValue>
+			<Anchor>//api/name/connectPeripheral:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/disconnectPeripheral:</TokenIdentifier>
+			<Abstract type="html">断开&lt;i&gt;peripheral&lt;/i&gt;连接, 断开结果回调请接收通知 {@see EVENTDISCONNECTPERIPHERAL_NOTIFY}</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)disconnectPeripheral:(CBPeripheral *)peripheral</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>peripheral</Name>
+					<Abstract type="html">要断开的外设</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES/NO, 如果进入了断开流程返回YES</Abstract></ReturnValue>
+			<Anchor>//api/name/disconnectPeripheral:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/disconnect</TokenIdentifier>
+			<Abstract type="html">断开&lt;i&gt;servicePeripheral&lt;/i&gt;连接，断开结果回调请接收通知 {@see EVENTDISCONNECTPERIPHERAL_NOTIFY}</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)disconnect</Declaration>
+			
+			<ReturnValue><Abstract type="html">YES/NO, 如果进入了断开流程返回YES</Abstract></ReturnValue>
+			<Anchor>//api/name/disconnect</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcFindTheWatch:</TokenIdentifier>
+			<Abstract type="html">查找手表，如果蓝牙处于连接状态，当收到手机app发出的查找手表命令后手表开始震动</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcFindTheWatch:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcFindTheWatch:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcFindThePhoneReply:</TokenIdentifier>
+			<Abstract type="html">向手表回复找到手机，如果蓝牙处于连接状态，当收到手表发出的查找手机命令后，手机发送一个回复给手表表示找到手机</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcFindThePhoneReply:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcFindThePhoneReply:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetListenTakePicturesCMDFromWatch:</TokenIdentifier>
+			<Abstract type="html">app监听来自手表的拍照控制命令</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcSetListenTakePicturesCMDFromWatch:(dispatch_block_t)aBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>aBlock</Name>
+					<Abstract type="html">响应结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcSetListenTakePicturesCMDFromWatch:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetListenFindPhoneCMDFromWatch:</TokenIdentifier>
+			<Abstract type="html">app监听手表查找手机指令</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcSetListenFindPhoneCMDFromWatch:(dispatch_block_t)aBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>aBlock</Name>
+					<Abstract type="html">响应结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcSetListenFindPhoneCMDFromWatch:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/loginWithUser:stepCallback:result:</TokenIdentifier>
+			<Abstract type="html">登录设备，蓝牙连接成功后，如果已经绑定过手表则需要执行登录操作</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)loginWithUser:(FCUserObject *)aUser stepCallback:(FCStepCallbackHandler)stepCallBack result:(FCLoginResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>aUser</Name>
+					<Abstract type="html">用户资料</Abstract>
 				</Parameter><Parameter>
-					<Name>block</Name>
-					<Abstract type="html">The resulting callback block</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">if data is &lt;i&gt;nil&lt;/i&gt;,return &lt;i&gt;NO&lt;/i&gt;</Abstract></ReturnValue>
-			<Anchor>//api/name/resolveSystemSettingsData:withCallbackBlock:</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/resolveHardwareAndSoftwareVersionDataToString:withCallbackBlock:</TokenIdentifier>
-			<Abstract type="html">Divide the hardware and software version information data into detailed data</Abstract>
-			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
-			
-			<Declaration>+ (BOOL)resolveHardwareAndSoftwareVersionDataToString:(NSData *)data withCallbackBlock:(FCHardwareAndSoftwareVersionStringBlock)block</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">hardware and software version information data</Abstract>
+					<Name>stepCallBack</Name>
+					<Abstract type="html">登录流程回调</Abstract>
 				</Parameter><Parameter>
-					<Name>block</Name>
-					<Abstract type="html">The resulting callback block</Abstract>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">if data is &lt;i&gt;nil&lt;/i&gt;,return &lt;i&gt;NO&lt;/i&gt;</Abstract></ReturnValue>
-			<Anchor>//api/name/resolveHardwareAndSoftwareVersionDataToString:withCallbackBlock:</Anchor>
+			
+			<Anchor>//api/name/loginWithUser:stepCallback:result:</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/resolveHardwareAndSoftwareVersionData:withCallbackBlock:</TokenIdentifier>
-			<Abstract type="html">Divide the hardware and software version information data into detailed data and parse the detailed data into strings</Abstract>
-			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/bindWithUser:stepCallback:dataCallback:result:</TokenIdentifier>
+			<Abstract type="html">绑定设备，第一次蓝牙配对成功后调用此接口绑定手表，绑定成功后将把蓝牙uuid保存在app，之后每次使用通过uuid自动扫描连接然后执行登录操作</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
 			
-			<Declaration>+ (BOOL)resolveHardwareAndSoftwareVersionData:(NSData *)data withCallbackBlock:(FCHardwareAndSoftwareVersionDataBlock)block</Declaration>
+			<Declaration>- (void)bindWithUser:(FCUserObject *)aUser stepCallback:(FCStepCallbackHandler)stepCallBack dataCallback:(FCSyncDataHandler)dataCallback result:(FCBindResultHandler)retHandler</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">hardware and software version information data</Abstract>
+					<Name>aUser</Name>
+					<Abstract type="html">用户资料</Abstract>
 				</Parameter><Parameter>
-					<Name>block</Name>
-					<Abstract type="html">The resulting callback block</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">if data is &lt;i&gt;nil&lt;/i&gt;,return &lt;i&gt;NO&lt;/i&gt;</Abstract></ReturnValue>
-			<Anchor>//api/name/resolveHardwareAndSoftwareVersionData:withCallbackBlock:</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/calorieWithStepCount:</TokenIdentifier>
-			<Abstract type="html">Calculate calories consumed by exercise</Abstract>
-			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
-			
-			<Declaration>+ (NSNumber *)calorieWithStepCount:(NSNumber *)stepCount</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>stepCount</Name>
-					<Abstract type="html">Number of steps</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">calorie in Kcal</Abstract></ReturnValue>
-			<Anchor>//api/name/calorieWithStepCount:</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/distanceWithStepCount:</TokenIdentifier>
-			<Abstract type="html">The walking distance is calculated according to the number of steps</Abstract>
-			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
-			
-			<Declaration>+ (NSNumber *)distanceWithStepCount:(NSNumber *)stepCount</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>stepCount</Name>
-					<Abstract type="html">Number of steps</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">Movement distance in kilometers</Abstract></ReturnValue>
-			<Anchor>//api/name/distanceWithStepCount:</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/resolveExerciseDataIntoDictionaryObjects:</TokenIdentifier>
-			<Abstract type="html">Convert sports data to an array containing dictionary objects,Each record contains five minutes of data</Abstract>
-			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
-			
-			<Declaration>+ (NSArray *)resolveExerciseDataIntoDictionaryObjects:(NSData *)data</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">The sports data to be converted</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">a list of &lt;code&gt;NSDictionary&lt;/code&gt; objects</Abstract></ReturnValue>
-			<Anchor>//api/name/resolveExerciseDataIntoDictionaryObjects:</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/resolveExerciseDataIntoModelObjects:</TokenIdentifier>
-			<Abstract type="html">Convert sports data to an array containing dictionary objects,Each record contains five minutes of data</Abstract>
-			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
-			
-			<Declaration>+ (NSArray *)resolveExerciseDataIntoModelObjects:(NSData *)data</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">The sports data to be converted</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">a list of &lt;code&gt;FCExerciseModel&lt;/code&gt; objects</Abstract></ReturnValue>
-			<Anchor>//api/name/resolveExerciseDataIntoModelObjects:</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/resolveSleepDataIntoDictionaryObjects:</TokenIdentifier>
-			<Abstract type="html">Convert sleep data to an array containing dictionary objects,Each record contains five minutes of data</Abstract>
-			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
-			
-			<Declaration>+ (NSArray *)resolveSleepDataIntoDictionaryObjects:(NSData *)data</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">The sleep data to be converted</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">a list of &lt;code&gt;NSDictionary&lt;/code&gt; objects</Abstract></ReturnValue>
-			<Anchor>//api/name/resolveSleepDataIntoDictionaryObjects:</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/resolveSleepDataIntoModelObjects:</TokenIdentifier>
-			<Abstract type="html">Convert sleep data to an array containing the model objects,Each record contains five minutes of data</Abstract>
-			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
-			
-			<Declaration>+ (NSArray *)resolveSleepDataIntoModelObjects:(NSData *)data</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">The sleep data to be converted</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">a list of &lt;code&gt;FCSleepModel&lt;/code&gt; objects</Abstract></ReturnValue>
-			<Anchor>//api/name/resolveSleepDataIntoModelObjects:</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/resolveHeartRateDataIntoDictionaryObjects:</TokenIdentifier>
-			<Abstract type="html">Convert heart rate data to an array containing dictionary objects,Each record contains five minutes of data</Abstract>
-			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
-			
-			<Declaration>+ (NSArray *)resolveHeartRateDataIntoDictionaryObjects:(NSData *)data</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">The heart rate data to be converted</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">a list of &lt;code&gt;NSDictionary&lt;/code&gt; objects</Abstract></ReturnValue>
-			<Anchor>//api/name/resolveHeartRateDataIntoDictionaryObjects:</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/resolveHeartRateDataIntoModelObjects:</TokenIdentifier>
-			<Abstract type="html">Convert heart rate data to an array containing the model objects,Each record contains five minutes of data</Abstract>
-			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
-			
-			<Declaration>+ (NSArray *)resolveHeartRateDataIntoModelObjects:(NSData *)data</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">The heart rate data to be converted</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">a list of &lt;code&gt;FCHealthModel&lt;/code&gt; objects</Abstract></ReturnValue>
-			<Anchor>//api/name/resolveHeartRateDataIntoModelObjects:</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FitCloudUtils/resolveHeathDataIntoModelObjects:systolic:diastolic:withCallbackBlock:</TokenIdentifier>
-			<Abstract type="html">Health data including blood oxygen, blood oxygen, and respiratory rate are generated by heart rate data modeling</Abstract>
-			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
-			
-			<Declaration>+ (BOOL)resolveHeathDataIntoModelObjects:(NSData *)data systolic:(UInt16)systolicBP diastolic:(UInt16)diastolicBP withCallbackBlock:(FCHealthDataModelBlock)block</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">Heart rate data</Abstract>
+					<Name>stepCallBack</Name>
+					<Abstract type="html">绑定流程回调</Abstract>
 				</Parameter><Parameter>
-					<Name>systolicBP</Name>
-					<Abstract type="html">Default systolic pressure</Abstract>
+					<Name>dataCallback</Name>
+					<Abstract type="html">绑定数据回调，这里只有手表系统设置数据返回。</Abstract>
 				</Parameter><Parameter>
-					<Name>diastolicBP</Name>
-					<Abstract type="html">Default diastolic pressure</Abstract>
-				</Parameter><Parameter>
-					<Name>block</Name>
-					<Abstract type="html">Callback several different types of health data</Abstract>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">If the parameter is &lt;i&gt;nil&lt;/i&gt;, returns &lt;i&gt;nil&lt;/i&gt;</Abstract></ReturnValue>
-			<Anchor>//api/name/resolveHeathDataIntoModelObjects:systolic:diastolic:withCallbackBlock:</Anchor>
+			
+			<Anchor>//api/name/bindWithUser:stepCallback:dataCallback:result:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/unbindDevice:</TokenIdentifier>
+			<Abstract type="html">解除绑定，此操作会解除手表与app用户id的绑定</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)unbindDevice:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/unbindDevice:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetAlarmData:result:</TokenIdentifier>
+			<Abstract type="html">同步闹钟数据</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/FCAlarmClockCycleObject</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)fcSetAlarmData:(NSData *)data result:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">闹钟数据，最多只能设置8个闹钟</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcSetAlarmData:result:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcGetAlarmList:result:</TokenIdentifier>
+			<Abstract type="html">获取闹钟列表数据，回调数据通过&lt;i&gt;FitCloudUtils&lt;/i&gt;的&lt;code&gt;getAlarmClocksFromData&lt;/code&gt;解析可以获取闹钟对象列表</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/FCAlarmClockCycleObject</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)fcGetAlarmList:(FCSyncDataHandler)dataCallback result:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>dataCallback</Name>
+					<Abstract type="html">闹钟数据回调</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcGetAlarmList:result:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcGetMacAddress:result:</TokenIdentifier>
+			<Abstract type="html">获取手表的macAddress</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcGetMacAddress:(FCSyncDataHandler)dataCallback result:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>dataCallback</Name>
+					<Abstract type="html">macAddress回调</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcGetMacAddress:result:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcGetSystemSetting:result:</TokenIdentifier>
+			<Abstract type="html">获取手表系统设置，相关配置数据解析请查看&lt;i&gt;FCObject&lt;/i&gt;和&lt;i&gt;FitCloudUtils&lt;/i&gt;的相关对象和方法</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcGetSystemSetting:(FCSyncDataHandler)dataCallback result:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>dataCallback</Name>
+					<Abstract type="html">手表配置数据回调</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcGetSystemSetting:result:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcGetBatteryLevelAndState:result:</TokenIdentifier>
+			<Abstract type="html">获取电池的电量和充电状态信息</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcGetBatteryLevelAndState:(FCSyncBatteryLevelAndStateHandler)dataCallback result:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>dataCallback</Name>
+					<Abstract type="html">电量和充电信息回调</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcGetBatteryLevelAndState:result:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetWatchScreenDisplayData:result:</TokenIdentifier>
+			<Abstract type="html">同步手表屏幕显示内容到手表</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcSetWatchScreenDisplayData:(NSData *)data result:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">屏幕显示设置数据</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcSetWatchScreenDisplayData:result:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetFeaturesData:result:</TokenIdentifier>
+			<Abstract type="html">同步手表的功能开关配置到手表</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcSetFeaturesData:(NSData *)data result:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">功能开关配置数据</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcSetFeaturesData:result:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetNotificationSettingData:result:</TokenIdentifier>
+			<Abstract type="html">同步通知开关设置到手表</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcSetNotificationSettingData:(NSData *)data result:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">通知开关数据</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcSetNotificationSettingData:result:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetSedentaryRemindersData:result:</TokenIdentifier>
+			<Abstract type="html">同步久坐提醒配置到手表</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcSetSedentaryRemindersData:(NSData *)data result:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">久坐提醒数据</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcSetSedentaryRemindersData:result:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetHealthMonitoringData:result:</TokenIdentifier>
+			<Abstract type="html">同步健康检测配置到手表</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcSetHealthMonitoringData:(NSData *)data result:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">健康监测配置数据</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcSetHealthMonitoringData:result:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetDrinkRemindEnable:result:</TokenIdentifier>
+			<Abstract type="html">同步喝水提醒配置到手表</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcSetDrinkRemindEnable:(BOOL)bEnabled result:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>bEnabled</Name>
+					<Abstract type="html">喝水提醒开关状态</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcSetDrinkRemindEnable:result:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetLeftHandWearEnable:result:</TokenIdentifier>
+			<Abstract type="html">同步配到方式到手表</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcSetLeftHandWearEnable:(BOOL)bEnabled result:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>bEnabled</Name>
+					<Abstract type="html">是否是左右佩戴</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcSetLeftHandWearEnable:result:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetCameraState:result:</TokenIdentifier>
+			<Abstract type="html">同步相机前后台状态到手表</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcSetCameraState:(BOOL)bInForeground result:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>bInForeground</Name>
+					<Abstract type="html">app是否在后台</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcSetCameraState:result:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetUserProfile:result:</TokenIdentifier>
+			<Abstract type="html">同步用户资料到手表</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcSetUserProfile:(FCUserObject *)aUser result:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>aUser</Name>
+					<Abstract type="html">用户资料数据</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcSetUserProfile:result:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetBloodPressure:dbp:result:</TokenIdentifier>
+			<Abstract type="html">同步默认参考血压到手表</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcSetBloodPressure:(UInt16)sbp dbp:(UInt16)dbp result:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>sbp</Name>
+					<Abstract type="html">收缩压</Abstract>
+				</Parameter><Parameter>
+					<Name>dbp</Name>
+					<Abstract type="html">舒张压</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcSetBloodPressure:dbp:result:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetWeather:result:</TokenIdentifier>
+			<Abstract type="html">同步天气到手表</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcSetWeather:(FCWeather *)weather result:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>weather</Name>
+					<Abstract type="html">天气对象</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcSetWeather:result:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcOpenSleepMonitoringData:result:</TokenIdentifier>
+			<Abstract type="html">打开睡眠监测</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcOpenSleepMonitoringData:(NSData *)data result:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">睡眠监测配置数据</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcOpenSleepMonitoringData:result:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcCloseSleepMonitoring:</TokenIdentifier>
+			<Abstract type="html">关闭睡眠监测，关闭后手表不在记录睡眠数据</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcCloseSleepMonitoring:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcCloseSleepMonitoring:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcOpenRealTimeSync:dataCallback:result:</TokenIdentifier>
+			<Abstract type="html">打开健康实时同步</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcOpenRealTimeSync:(FCRTSyncType)syncType dataCallback:(FCSyncDataHandler)dataCallback result:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>syncType</Name>
+					<Abstract type="html">健康实时同步操作类型</Abstract>
+				</Parameter><Parameter>
+					<Name>dataCallback</Name>
+					<Abstract type="html">实时同步数据回调</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcOpenRealTimeSync:dataCallback:result:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcCloseRealTimeSync:</TokenIdentifier>
+			<Abstract type="html">关闭健康实时同步</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcCloseRealTimeSync:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcCloseRealTimeSync:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcGetHistoryDataWithUser:stepCallback:dataCallback:result:</TokenIdentifier>
+			<Abstract type="html">同步手表历史数据，包括日总数据、运动量详细记录、睡眠详细记录、心率详细记录、血氧、血压和呼吸频率等。每次同步历史数据时会将系统时间和功能开关配置数据写入到手表</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcGetHistoryDataWithUser:(FCUserObject *)aUser stepCallback:(FCStepCallbackHandler)stepCallback dataCallback:(FCHistoryDataHandler)dataCallback result:(FCHistoryDataResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>aUser</Name>
+					<Abstract type="html">用户资料对象</Abstract>
+				</Parameter><Parameter>
+					<Name>stepCallback</Name>
+					<Abstract type="html">同步流程回调</Abstract>
+				</Parameter><Parameter>
+					<Name>dataCallback</Name>
+					<Abstract type="html">同步数据回调，此处回多次回调不同类型的数据</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcGetHistoryDataWithUser:stepCallback:dataCallback:result:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcGetFirmwareVersion:result:</TokenIdentifier>
+			<Abstract type="html">获取手表固件版本信息</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcGetFirmwareVersion:(FCSyncDataHandler)dataCallback result:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>dataCallback</Name>
+					<Abstract type="html">固件版本信息数据回调</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcGetFirmwareVersion:result:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcUpdateFirmwareWithPath:progress:result:</TokenIdentifier>
+			<Abstract type="html">固件升级接口，掉用此接口，蓝牙将会断开连接并进入固件升级模式，升级成功后，手表会重启</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (void)fcUpdateFirmwareWithPath:(NSString *)filePath progress:(FCProgressHandler)progressHandler result:(FCSyncResultHandler)retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>filePath</Name>
+					<Abstract type="html">要升级的固件路径</Abstract>
+				</Parameter><Parameter>
+					<Name>progressHandler</Name>
+					<Abstract type="html">固件升级进度回调</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">同步结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fcUpdateFirmwareWithPath:progress:result:</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/FCExerciseModel.html">
+	<File path="Classes/FCHealthMonitoringObject.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/FCExerciseModel</TokenIdentifier>
-			<Abstract type="html">@class FCExerciseModel</Abstract>
+			<TokenIdentifier>//apple_ref/occ/cl/FCHealthMonitoringObject</TokenIdentifier>
+			<Abstract type="html">手表健康定时监测</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
             
 			
@@ -13,254 +13,110 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCExerciseModel/setYear:</TokenIdentifier>
-			<Abstract type="html">@property year</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringObject/setIsOn:</TokenIdentifier>
+			<Abstract type="html">健康监测开关状态</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *year</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL isOn</Declaration>
 			
 			
-			<Anchor>//api/name/year</Anchor>
+			<Anchor>//api/name/isOn</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCExerciseModel/year</TokenIdentifier>
-			<Abstract type="html">@property year</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringObject/isOn</TokenIdentifier>
+			<Abstract type="html">健康监测开关状态</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *year</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL isOn</Declaration>
 			
 			
-			<Anchor>//api/name/year</Anchor>
+			<Anchor>//api/name/isOn</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCExerciseModel/year</TokenIdentifier>
-			<Abstract type="html">@property year</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHealthMonitoringObject/isOn</TokenIdentifier>
+			<Abstract type="html">健康监测开关状态</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *year</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL isOn</Declaration>
 			
 			
-			<Anchor>//api/name/year</Anchor>
+			<Anchor>//api/name/isOn</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCExerciseModel/setMonth:</TokenIdentifier>
-			<Abstract type="html">@property month</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringObject/setStMinute:</TokenIdentifier>
+			<Abstract type="html">健康监测开始时间（从0点开始的分钟数）.</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *month</Declaration>
+			<Declaration>@property (nonatomic, assign) NSUInteger stMinute</Declaration>
 			
 			
-			<Anchor>//api/name/month</Anchor>
+			<Anchor>//api/name/stMinute</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCExerciseModel/month</TokenIdentifier>
-			<Abstract type="html">@property month</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringObject/stMinute</TokenIdentifier>
+			<Abstract type="html">健康监测开始时间（从0点开始的分钟数）.</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *month</Declaration>
+			<Declaration>@property (nonatomic, assign) NSUInteger stMinute</Declaration>
 			
 			
-			<Anchor>//api/name/month</Anchor>
+			<Anchor>//api/name/stMinute</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCExerciseModel/month</TokenIdentifier>
-			<Abstract type="html">@property month</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHealthMonitoringObject/stMinute</TokenIdentifier>
+			<Abstract type="html">健康监测开始时间（从0点开始的分钟数）.</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *month</Declaration>
+			<Declaration>@property (nonatomic, assign) NSUInteger stMinute</Declaration>
 			
 			
-			<Anchor>//api/name/month</Anchor>
+			<Anchor>//api/name/stMinute</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCExerciseModel/setDay:</TokenIdentifier>
-			<Abstract type="html">@property day</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringObject/setEdMinute:</TokenIdentifier>
+			<Abstract type="html">健康监测结束时间（从0点开始的分钟数）.</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *day</Declaration>
+			<Declaration>@property (nonatomic, assign) NSUInteger edMinute</Declaration>
 			
 			
-			<Anchor>//api/name/day</Anchor>
+			<Anchor>//api/name/edMinute</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCExerciseModel/day</TokenIdentifier>
-			<Abstract type="html">@property day</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCHealthMonitoringObject/edMinute</TokenIdentifier>
+			<Abstract type="html">健康监测结束时间（从0点开始的分钟数）.</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *day</Declaration>
+			<Declaration>@property (nonatomic, assign) NSUInteger edMinute</Declaration>
 			
 			
-			<Anchor>//api/name/day</Anchor>
+			<Anchor>//api/name/edMinute</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCExerciseModel/day</TokenIdentifier>
-			<Abstract type="html">@property day</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCHealthMonitoringObject/edMinute</TokenIdentifier>
+			<Abstract type="html">健康监测结束时间（从0点开始的分钟数）.</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSNumber *day</Declaration>
+			<Declaration>@property (nonatomic, assign) NSUInteger edMinute</Declaration>
 			
 			
-			<Anchor>//api/name/day</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCExerciseModel/setMinutes:</TokenIdentifier>
-			<Abstract type="html">@property minutes</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSNumber *minutes</Declaration>
-			
-			
-			<Anchor>//api/name/minutes</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCExerciseModel/minutes</TokenIdentifier>
-			<Abstract type="html">@property minutes</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSNumber *minutes</Declaration>
-			
-			
-			<Anchor>//api/name/minutes</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCExerciseModel/minutes</TokenIdentifier>
-			<Abstract type="html">@property minutes</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSNumber *minutes</Declaration>
-			
-			
-			<Anchor>//api/name/minutes</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCExerciseModel/setStepCount:</TokenIdentifier>
-			<Abstract type="html">@property stepCount</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSNumber *stepCount</Declaration>
-			
-			
-			<Anchor>//api/name/stepCount</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCExerciseModel/stepCount</TokenIdentifier>
-			<Abstract type="html">@property stepCount</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSNumber *stepCount</Declaration>
-			
-			
-			<Anchor>//api/name/stepCount</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCExerciseModel/stepCount</TokenIdentifier>
-			<Abstract type="html">@property stepCount</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSNumber *stepCount</Declaration>
-			
-			
-			<Anchor>//api/name/stepCount</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCExerciseModel/setCalorie:</TokenIdentifier>
-			<Abstract type="html">@property calorie</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSNumber *calorie</Declaration>
-			
-			
-			<Anchor>//api/name/calorie</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCExerciseModel/calorie</TokenIdentifier>
-			<Abstract type="html">@property calorie</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSNumber *calorie</Declaration>
-			
-			
-			<Anchor>//api/name/calorie</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCExerciseModel/calorie</TokenIdentifier>
-			<Abstract type="html">@property calorie</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSNumber *calorie</Declaration>
-			
-			
-			<Anchor>//api/name/calorie</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCExerciseModel/setDistance:</TokenIdentifier>
-			<Abstract type="html">@property distance</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSNumber *distance</Declaration>
-			
-			
-			<Anchor>//api/name/distance</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCExerciseModel/distance</TokenIdentifier>
-			<Abstract type="html">@property distance</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSNumber *distance</Declaration>
-			
-			
-			<Anchor>//api/name/distance</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCExerciseModel/distance</TokenIdentifier>
-			<Abstract type="html">@property distance</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSNumber *distance</Declaration>
-			
-			
-			<Anchor>//api/name/distance</Anchor>
+			<Anchor>//api/name/edMinute</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		

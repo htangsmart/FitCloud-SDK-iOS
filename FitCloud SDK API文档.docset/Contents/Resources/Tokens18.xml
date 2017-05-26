@@ -1,41 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSNumber+Utils.html">
+	<File path="Constants/FCBindSyncType.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSNumber(Utils)</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/c/tdef/FCBindSyncType</TokenIdentifier>
+			<Abstract type="html">绑定设备同步流程</Abstract>
+			<DeclaredIn>FCDefine.h</DeclaredIn>
             
 			
 			<NodeRef refid="18"/>
 		</Token>
 		
 		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/phoneModel</TokenIdentifier>
-			<Abstract type="html">手机的型号，用于登录和绑定设备时手表识别不同型号的机型</Abstract>
-			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
-			
-			<Declaration>+ (NSNumber *)phoneModel</Declaration>
-			
-			<ReturnValue><Abstract type="html">手机机型对应的数值</Abstract></ReturnValue>
-			<Anchor>//api/name/phoneModel</Anchor>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCBindSyncTypeUnknown</TokenIdentifier>
+            <Abstract type="html">默认类型</Abstract>
+            <Declaration>FCBindSyncTypeUnknown</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
             <NodeRef refid="18"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/osType</TokenIdentifier>
-			<Abstract type="html">手机操作系统型号，用于手表区分不同的系统</Abstract>
-			<DeclaredIn>FitCloudUtils.h</DeclaredIn>
-			
-			<Declaration>+ (NSNumber *)osType</Declaration>
-			
-			<ReturnValue><Abstract type="html">操作系统对应的数值</Abstract></ReturnValue>
-			<Anchor>//api/name/osType</Anchor>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCBindSyncTypeBond</TokenIdentifier>
+            <Abstract type="html">绑定设备</Abstract>
+            <Declaration>FCBindSyncTypeBond</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
             <NodeRef refid="18"/>
-		</Token>
-		
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCBindSyncTypeFeatures</TokenIdentifier>
+            <Abstract type="html">同步功能开关设置到手表</Abstract>
+            <Declaration>FCBindSyncTypeFeatures</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="18"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCBindSyncTypeTime</TokenIdentifier>
+            <Abstract type="html">同步系统时间到手表</Abstract>
+            <Declaration>FCBindSyncTypeTime</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="18"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCBindSyncTypeUserInfo</TokenIdentifier>
+            <Abstract type="html">同步用户资料到手表</Abstract>
+            <Declaration>FCBindSyncTypeUserInfo</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="18"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCBindSyncTypeWearingStyle</TokenIdentifier>
+            <Abstract type="html">同步佩戴方式到手表</Abstract>
+            <Declaration>FCBindSyncTypeWearingStyle</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="18"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCBindSyncTypeDefaultBloodPressure</TokenIdentifier>
+            <Abstract type="html">同步默认血压到手表</Abstract>
+            <Declaration>FCBindSyncTypeDefaultBloodPressure</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="18"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCBindSyncTypeSystemSetting</TokenIdentifier>
+            <Abstract type="html">同步手表系统设置到手机</Abstract>
+            <Declaration>FCBindSyncTypeSystemSetting</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="18"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCBindSyncTypeEnd</TokenIdentifier>
+            <Abstract type="html">结束</Abstract>
+            <Declaration>FCBindSyncTypeEnd</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="18"/>
+        </Token>
         
         
 	</File>

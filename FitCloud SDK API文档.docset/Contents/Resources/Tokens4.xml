@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/FCDisplayModel.html">
+	<File path="Classes/FCFeaturesObject.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/FCDisplayModel</TokenIdentifier>
-			<Abstract type="html">@class FCDisplayModel</Abstract>
+			<TokenIdentifier>//apple_ref/occ/cl/FCFeaturesObject</TokenIdentifier>
+			<Abstract type="html">手表功能开关设置对象</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
             
 			
@@ -13,427 +13,146 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/setDateTime:</TokenIdentifier>
-			<Abstract type="html">@property dateTime</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCFeaturesObject/setFlipWristToLightScreen:</TokenIdentifier>
+			<Abstract type="html">翻动手腕时点亮手表屏幕</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL dateTime</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL flipWristToLightScreen</Declaration>
 			
 			
-			<Anchor>//api/name/dateTime</Anchor>
+			<Anchor>//api/name/flipWristToLightScreen</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/dateTime</TokenIdentifier>
-			<Abstract type="html">@property dateTime</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCFeaturesObject/flipWristToLightScreen</TokenIdentifier>
+			<Abstract type="html">翻动手腕时点亮手表屏幕</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL dateTime</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL flipWristToLightScreen</Declaration>
 			
 			
-			<Anchor>//api/name/dateTime</Anchor>
+			<Anchor>//api/name/flipWristToLightScreen</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCDisplayModel/dateTime</TokenIdentifier>
-			<Abstract type="html">@property dateTime</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCFeaturesObject/flipWristToLightScreen</TokenIdentifier>
+			<Abstract type="html">翻动手腕时点亮手表屏幕</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL dateTime</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL flipWristToLightScreen</Declaration>
 			
 			
-			<Anchor>//api/name/dateTime</Anchor>
+			<Anchor>//api/name/flipWristToLightScreen</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/setStepCount:</TokenIdentifier>
-			<Abstract type="html">@property stepCount</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCFeaturesObject/setEnhanceSurveyEnabled:</TokenIdentifier>
+			<Abstract type="html">加强测量，心率等测量不出来时，手环会开启加强光反射</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL stepCount</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL enhanceSurveyEnabled</Declaration>
 			
 			
-			<Anchor>//api/name/stepCount</Anchor>
+			<Anchor>//api/name/enhanceSurveyEnabled</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/stepCount</TokenIdentifier>
-			<Abstract type="html">@property stepCount</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCFeaturesObject/enhanceSurveyEnabled</TokenIdentifier>
+			<Abstract type="html">加强测量，心率等测量不出来时，手环会开启加强光反射</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL stepCount</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL enhanceSurveyEnabled</Declaration>
 			
 			
-			<Anchor>//api/name/stepCount</Anchor>
+			<Anchor>//api/name/enhanceSurveyEnabled</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCDisplayModel/stepCount</TokenIdentifier>
-			<Abstract type="html">@property stepCount</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCFeaturesObject/enhanceSurveyEnabled</TokenIdentifier>
+			<Abstract type="html">加强测量，心率等测量不出来时，手环会开启加强光反射</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL stepCount</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL enhanceSurveyEnabled</Declaration>
 			
 			
-			<Anchor>//api/name/stepCount</Anchor>
+			<Anchor>//api/name/enhanceSurveyEnabled</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/setCalorie:</TokenIdentifier>
-			<Abstract type="html">@property calorie</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCFeaturesObject/setTwelveHoursSystem:</TokenIdentifier>
+			<Abstract type="html">12小时时间制式，如果为NO，则使用24小时时间制式</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL calorie</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL twelveHoursSystem</Declaration>
 			
 			
-			<Anchor>//api/name/calorie</Anchor>
+			<Anchor>//api/name/twelveHoursSystem</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/calorie</TokenIdentifier>
-			<Abstract type="html">@property calorie</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCFeaturesObject/twelveHoursSystem</TokenIdentifier>
+			<Abstract type="html">12小时时间制式，如果为NO，则使用24小时时间制式</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL calorie</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL twelveHoursSystem</Declaration>
 			
 			
-			<Anchor>//api/name/calorie</Anchor>
+			<Anchor>//api/name/twelveHoursSystem</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCDisplayModel/calorie</TokenIdentifier>
-			<Abstract type="html">@property calorie</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCFeaturesObject/twelveHoursSystem</TokenIdentifier>
+			<Abstract type="html">12小时时间制式，如果为NO，则使用24小时时间制式</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL calorie</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL twelveHoursSystem</Declaration>
 			
 			
-			<Anchor>//api/name/calorie</Anchor>
+			<Anchor>//api/name/twelveHoursSystem</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/setDistance:</TokenIdentifier>
-			<Abstract type="html">@property distance</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCFeaturesObject/setIsImperialUnits:</TokenIdentifier>
+			<Abstract type="html">距离和重量单位，0 为公制单位  1 英制单位</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL distance</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL isImperialUnits</Declaration>
 			
 			
-			<Anchor>//api/name/distance</Anchor>
+			<Anchor>//api/name/isImperialUnits</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/distance</TokenIdentifier>
-			<Abstract type="html">@property distance</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCFeaturesObject/isImperialUnits</TokenIdentifier>
+			<Abstract type="html">距离和重量单位，0 为公制单位  1 英制单位</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL distance</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL isImperialUnits</Declaration>
 			
 			
-			<Anchor>//api/name/distance</Anchor>
+			<Anchor>//api/name/isImperialUnits</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCDisplayModel/distance</TokenIdentifier>
-			<Abstract type="html">@property distance</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCFeaturesObject/isImperialUnits</TokenIdentifier>
+			<Abstract type="html">距离和重量单位，0 为公制单位  1 英制单位</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL distance</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL isImperialUnits</Declaration>
 			
 			
-			<Anchor>//api/name/distance</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/setSleep:</TokenIdentifier>
-			<Abstract type="html">@property sleep</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL sleep</Declaration>
-			
-			
-			<Anchor>//api/name/sleep</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/sleep</TokenIdentifier>
-			<Abstract type="html">@property sleep</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL sleep</Declaration>
-			
-			
-			<Anchor>//api/name/sleep</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCDisplayModel/sleep</TokenIdentifier>
-			<Abstract type="html">@property sleep</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL sleep</Declaration>
-			
-			
-			<Anchor>//api/name/sleep</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/setHeartRate:</TokenIdentifier>
-			<Abstract type="html">@property heartRate</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL heartRate</Declaration>
-			
-			
-			<Anchor>//api/name/heartRate</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/heartRate</TokenIdentifier>
-			<Abstract type="html">@property heartRate</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL heartRate</Declaration>
-			
-			
-			<Anchor>//api/name/heartRate</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCDisplayModel/heartRate</TokenIdentifier>
-			<Abstract type="html">@property heartRate</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL heartRate</Declaration>
-			
-			
-			<Anchor>//api/name/heartRate</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/setBloodOxygen:</TokenIdentifier>
-			<Abstract type="html">@property bloodOxygen</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL bloodOxygen</Declaration>
-			
-			
-			<Anchor>//api/name/bloodOxygen</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/bloodOxygen</TokenIdentifier>
-			<Abstract type="html">@property bloodOxygen</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL bloodOxygen</Declaration>
-			
-			
-			<Anchor>//api/name/bloodOxygen</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCDisplayModel/bloodOxygen</TokenIdentifier>
-			<Abstract type="html">@property bloodOxygen</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL bloodOxygen</Declaration>
-			
-			
-			<Anchor>//api/name/bloodOxygen</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/setBloodPressure:</TokenIdentifier>
-			<Abstract type="html">@property bloodPressure</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL bloodPressure</Declaration>
-			
-			
-			<Anchor>//api/name/bloodPressure</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/bloodPressure</TokenIdentifier>
-			<Abstract type="html">@property bloodPressure</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL bloodPressure</Declaration>
-			
-			
-			<Anchor>//api/name/bloodPressure</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCDisplayModel/bloodPressure</TokenIdentifier>
-			<Abstract type="html">@property bloodPressure</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL bloodPressure</Declaration>
-			
-			
-			<Anchor>//api/name/bloodPressure</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/setWeatherForecast:</TokenIdentifier>
-			<Abstract type="html">@property weatherForecast</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL weatherForecast</Declaration>
-			
-			
-			<Anchor>//api/name/weatherForecast</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/weatherForecast</TokenIdentifier>
-			<Abstract type="html">@property weatherForecast</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL weatherForecast</Declaration>
-			
-			
-			<Anchor>//api/name/weatherForecast</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCDisplayModel/weatherForecast</TokenIdentifier>
-			<Abstract type="html">@property weatherForecast</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL weatherForecast</Declaration>
-			
-			
-			<Anchor>//api/name/weatherForecast</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/setFindPhone:</TokenIdentifier>
-			<Abstract type="html">@property findPhone</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL findPhone</Declaration>
-			
-			
-			<Anchor>//api/name/findPhone</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/findPhone</TokenIdentifier>
-			<Abstract type="html">@property findPhone</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL findPhone</Declaration>
-			
-			
-			<Anchor>//api/name/findPhone</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCDisplayModel/findPhone</TokenIdentifier>
-			<Abstract type="html">@property findPhone</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL findPhone</Declaration>
-			
-			
-			<Anchor>//api/name/findPhone</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/setDisplayId:</TokenIdentifier>
-			<Abstract type="html">@property displayId</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL displayId</Declaration>
-			
-			
-			<Anchor>//api/name/displayId</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/displayId</TokenIdentifier>
-			<Abstract type="html">@property displayId</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL displayId</Declaration>
-			
-			
-			<Anchor>//api/name/displayId</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCDisplayModel/displayId</TokenIdentifier>
-			<Abstract type="html">@property displayId</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL displayId</Declaration>
-			
-			
-			<Anchor>//api/name/displayId</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/FCDisplayModel/modelWithData:</TokenIdentifier>
-			<Abstract type="html">instantiate an display model with the given data</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>+ (instancetype)modelWithData:(NSData *)data</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>data</Name>
-					<Abstract type="html">The alarm clock data</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">an alarm clock model of &lt;code&gt;FCAlarmModel&lt;/code&gt; object</Abstract></ReturnValue>
-			<Anchor>//api/name/modelWithData:</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCDisplayModel/displayData</TokenIdentifier>
-			<Abstract type="html">Convert the display model to NSData</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>- (NSData *)displayData</Declaration>
-			
-			<ReturnValue><Abstract type="html">The converted data</Abstract></ReturnValue>
-			<Anchor>//api/name/displayData</Anchor>
+			<Anchor>//api/name/isImperialUnits</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		

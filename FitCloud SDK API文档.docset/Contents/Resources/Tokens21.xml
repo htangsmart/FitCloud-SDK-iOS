@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/FCSyncResponseState.html">
+	<File path="Constants/FCHistoryDataSyncType.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/FCSyncResponseState</TokenIdentifier>
-			<Abstract type="html">@enum FCSyncResponseState</Abstract>
+			<TokenIdentifier>//apple_ref/c/tdef/FCHistoryDataSyncType</TokenIdentifier>
+			<Abstract type="html">历史数据同步流程（部分同步功能是否执行由传感器标志决定</Abstract>
 			<DeclaredIn>FCDefine.h</DeclaredIn>
             
 			
@@ -14,9 +14,9 @@
 		
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateNone</TokenIdentifier>
-            <Abstract type="html">The default type</Abstract>
-            <Declaration>FCSyncResponseStateNone</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeUnknown</TokenIdentifier>
+            <Abstract type="html">默认类型</Abstract>
+            <Declaration>FCHistoryDataSyncTypeUnknown</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -24,9 +24,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStatePowerOff</TokenIdentifier>
-            <Abstract type="html">蓝牙未打开</Abstract>
-            <Declaration>FCSyncResponseStatePowerOff</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeFeatures</TokenIdentifier>
+            <Abstract type="html">同步时间制式</Abstract>
+            <Declaration>FCHistoryDataSyncTypeFeatures</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -34,9 +34,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateNotConnected</TokenIdentifier>
-            <Abstract type="html">Bluetooth is not connected</Abstract>
-            <Declaration>FCSyncResponseStateNotConnected</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeTime</TokenIdentifier>
+            <Abstract type="html">同步系统时间</Abstract>
+            <Declaration>FCHistoryDataSyncTypeTime</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -44,9 +44,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateTurnedOff</TokenIdentifier>
-            <Abstract type="html">蓝牙关闭，主动关闭蓝牙时回调</Abstract>
-            <Declaration>FCSyncResponseStateTurnedOff</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeTotalData</TokenIdentifier>
+            <Abstract type="html">同步各类型的日志数据（包括运动总步数、总距离、总卡路里等）</Abstract>
+            <Declaration>FCHistoryDataSyncTypeTotalData</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -54,9 +54,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateDisconnect</TokenIdentifier>
-            <Abstract type="html">蓝牙断开连接，主动或者被动断开都会调用</Abstract>
-            <Declaration>FCSyncResponseStateDisconnect</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeExercise</TokenIdentifier>
+            <Abstract type="html">同步运动量详细记录</Abstract>
+            <Declaration>FCHistoryDataSyncTypeExercise</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -64,9 +64,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateParameterError</TokenIdentifier>
-            <Abstract type="html">同步参数错误</Abstract>
-            <Declaration>FCSyncResponseStateParameterError</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeSleep</TokenIdentifier>
+            <Abstract type="html">同步睡眠详细记录</Abstract>
+            <Declaration>FCHistoryDataSyncTypeSleep</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -74,9 +74,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateSyncing</TokenIdentifier>
-            <Abstract type="html">Synchronizing data</Abstract>
-            <Declaration>FCSyncResponseStateSyncing</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeBloodOxygen</TokenIdentifier>
+            <Abstract type="html">同步血氧详细记录</Abstract>
+            <Declaration>FCHistoryDataSyncTypeBloodOxygen</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -84,9 +84,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateSuccess</TokenIdentifier>
-            <Abstract type="html">Synchronization succeeded</Abstract>
-            <Declaration>FCSyncResponseStateSuccess</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeBloodPressure</TokenIdentifier>
+            <Abstract type="html">同步血压详细记录</Abstract>
+            <Declaration>FCHistoryDataSyncTypeBloodPressure</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -94,9 +94,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateError</TokenIdentifier>
-            <Abstract type="html">Synchronization failed</Abstract>
-            <Declaration>FCSyncResponseStateError</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeBreathingRate</TokenIdentifier>
+            <Abstract type="html">同步呼吸频率详细记录</Abstract>
+            <Declaration>FCHistoryDataSyncTypeBreathingRate</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -104,9 +104,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateTimeOut</TokenIdentifier>
-            <Abstract type="html">Synchronization timeout</Abstract>
-            <Declaration>FCSyncResponseStateTimeOut</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeHeartRate</TokenIdentifier>
+            <Abstract type="html">同步心率详细记录</Abstract>
+            <Declaration>FCHistoryDataSyncTypeHeartRate</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -114,9 +114,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateRTTimeOut</TokenIdentifier>
-            <Abstract type="html">Healthy real-time synchronization timeout</Abstract>
-            <Declaration>FCSyncResponseStateRTTimeOut</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeUltraviolet</TokenIdentifier>
+            <Abstract type="html">同步紫外线详细记录</Abstract>
+            <Declaration>FCHistoryDataSyncTypeUltraviolet</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -124,9 +124,19 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateLowPower</TokenIdentifier>
-            <Abstract type="html">Power is too low to upgrade</Abstract>
-            <Declaration>FCSyncResponseStateLowPower</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeSevenDaysSleepData</TokenIdentifier>
+            <Abstract type="html">同步睡眠总数据（包含七天以内的深睡眠和浅睡眠时长）</Abstract>
+            <Declaration>FCHistoryDataSyncTypeSevenDaysSleepData</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeEnd</TokenIdentifier>
+            <Abstract type="html">结束</Abstract>
+            <Declaration>FCHistoryDataSyncTypeEnd</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             

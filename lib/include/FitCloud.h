@@ -11,173 +11,156 @@
 #import "FitCloudBlock.h"
 
 
-/*!
- * @class FitCloud
- * @classdesign Singleton mode
- * @since iOS8.0
- */
 
+@class FCWeather;
+@class FCUserObject;
 @interface FitCloud : NSObject
-/*!
- *  @property centralManager
- *  @discussion Entry point to the central role. Commands should only be issued when its state is <code>CBCentralManagerStatePoweredOn</code>.
- */
 @property (nonatomic, strong) CBCentralManager *centralManager;
-
-/*!
- *  @property servicePeripheral
- *  @discussion Represents a peripheral.
- */
 @property (nonatomic, strong) CBPeripheral *servicePeripheral;
-
-/*!
- * @property syncType
- * @discussion The current synchronization type
- */
 @property (nonatomic, assign, readonly) FCSyncType syncType;
-
-/*!
- * @property isSynchronizing
- * @discussion Synchronization status，Indicates whether the current device is synchronized
- */
 @property (nonatomic, assign, readonly) BOOL isSynchronizing;
-
-/*!
- * @property findMobilePhoneBlock
- * @discussion This block will be called back after the phone receives an instruction from the hand ring
- */
-@property (nonatomic, copy) dispatch_block_t findMobilePhoneBlock;
-
-/*!
- * @property takePicturesBlock
- * @discussion This block will be called back after the phone receives a shot command from the bracelet
- */
-@property (nonatomic, copy) dispatch_block_t takePicturesBlock;
-
-/*!
- * @property age
- * @discussion User age, the default was born in 1990
- */
-@property (nonatomic, assign) UInt32 age;
-/*!
- * @property sex
- * @discussion The user's gender, the default is female 0
- */
-@property (nonatomic, assign) UInt32 sex;
-/*!
- * @property height
- * @discussion User's height in cm,The default height of women is 165cm, men are 175cm
- */
-@property (nonatomic, assign) UInt32 height;
-/*!
- * @property weight
- * @discussion The user's weight in kg
- */
-@property (nonatomic, assign) UInt32 weight;
 
 + (instancetype)shared;
 
-
 /*!
- SDK Version
+ 获取SDK版本
  
- @return SDK Version String
+ @return SDK 版本字符串
  */
 + (NSString*)SDKVersion;
 
+
 #pragma mark - 扫描与连接
 
-/**
- * @method scanningPeripherals:
- * @brief Scans Bluetooth peripherals
- * @discussion Scans Bluetooth peripherals,Returns a peripheral that is currently being scanned and A list of <code>CBPeripheral</code> objects.
- * @param retHandler Scan result callback block
+/*!
+ @discussion 扫描蓝牙外设,返回当前被扫描到的外设和已经扫描到的<code>CBPeripheral</code>外设列表
+ @param retHandler 扫描结果回调block
  */
 - (void)scanningPeripherals:(FCDeviceListHandler)retHandler;
 
 
 /*!
- * @brief Scans a peripheral that contains a uuid string
- * @param uuidString The uuid string of a peripheral
- * @param retHandler Scan result callback block
+ @discussion 扫描制定uuid的蓝牙外设，返回当前被扫描到的目标外设
+ @param uuidString 蓝牙uuid
+ @param retHandler 扫描结果回调
  */
-- (void)scanningPeripheralWithUUID:(NSString *)uuidString retHandler:(FCPeripheralHandler)retHandler;
+- (void)scanningPeripheralWithUUID:(NSString *)uuidString
+                        retHandler:(FCPeripheralHandler)retHandler;
 
 
 /*!
- * @brief Stop scanning the peripherals
+ @discussion 停止扫描
  */
 - (void)stopScanning;
 
 
 /*!
- * @brief The result of the connection
- * @return Whether the peripheral has been connected
+ @discussion 判断当前的<code>servicePeripheral</code>是否已链接
+ @return YES/NO
  */
 - (BOOL)isConnected;
 
+
 /*!
- * @brief Connect a peripheral
- * @param peripheral A peripheral to connect to
- * @return Whether the peripheral in connection mode
+ @discussion连接蓝牙外设外设
+ @param peripheral 要连接的外设
+ @see EVENT_FAIL_CONNECT_PERIPHERAL_NOTIFY
+ @seealso EVENT_CONNECT_PERIPHERAL_NOTIFY
+ @return YES/NO,如果外设进入连接返回YES
  */
 - (BOOL)connectPeripheral:(CBPeripheral*)peripheral;
 
 
 /*!
- * @brief Disconnect the peripheral
- * @param peripheral A peripheral to be disconnected
- * @return Whether the peripheral in disconnected mode
+ @discussion 断开<i>peripheral</i>连接, 断开结果回调请接收通知 {@link EVENT_DISCONNECT_PERIPHERAL_NOTIFY}
+ @param peripheral 目标外设
+ @see EVENT_DISCONNECT_PERIPHERAL_NOTIFY
+ @return YES/NO, 如果执行了断开操作返回YES
  */
 - (BOOL)disconnectPeripheral:(CBPeripheral*)peripheral;
 
+
 /*!
- * @brief Disconnect the current peripheral
- * @return Whether the current peripheral in disconnected mode
+ @discussion 断开<i>servicePeripheral</i>连接，断开结果回调请接收通知 {@link EVENT_DISCONNECT_PERIPHERAL_NOTIFY}
+ @see EVENT_DISCONNECT_PERIPHERAL_NOTIFY
+ @return YES/NO
  */
 - (BOOL)disconnect;
+
+
 
 
 #pragma mark - 控制监听
 
 /*!
- * @discussion Find the watch，The watch starts to vibrate when it receives a command from the app
- * @param retHandler Synchronous result callback
+ @discussion 查找手表，如果蓝牙处于连接状态，当收到手机app发出的查找手表命令后手表开始震动
+ @param retHandler 响应结果回调block
  */
-- (void)fcFindWristband:(FCSyncResultHandler)retHandler;
+- (void)fcFindTheWatch:(FCSyncResultHandler)retHandler;
+
+
+
 
 /*!
- * @discussion When the phone received a command issued by the watch,it needs to send a reply to the watch.
- * @param retHandler Synchronous result callback
+ @discussion 回复找到手机，如果蓝牙处于连接状态，当收到手表发出的查找手机命令后，手机发送一个回复给手表表示找到手机
+ @param retHandler 响应结果回调block
  */
-- (void)fcFoundMyCellPhone:(FCSyncResultHandler)retHandler;
+- (void)fcFineThePhoneReply:(FCSyncResultHandler)retHandler;
+
+
+
+
+/*!
+ @discussion 手机监听来自手表的拍照控制命令
+ @param aBlock 响应回调block
+ */
+- (void)fcSetOnReceivedTakePicturesCommandFromWatch:(dispatch_block_t)aBlock;
+
+
+
+
+/*!
+ @discussion 手机监听手表查找手机指令
+ @param aBlock 响应回调block
+ */
+- (void)fcSetOnReceivedFindMobileCommandFromWatch:(dispatch_block_t)aBlock;
+
+
 
 
 
 #pragma mark - 手表登录、绑定或解绑操作
+
 /*!
- * @method bondDevice:dataHandler:retHandler:
- * @brief Bond the device
- * @param paramsHandler The block parameter is used to set user information。
- * @param dataHandler   The system setting data callback block
- * @param retHandler    Synchronous result callback
+ @discussion 登录设备，蓝牙连接成功后，如果已经绑定过手表则需要执行登录操作
+ @param aUser 用户对象
+ @param stepCallBack 登录流程步骤回调
+ @param retHandler 登录结果回调block
  */
-- (void)bondDevice:(FCBoundDataHandler)paramsHandler dataHandler:(FCSyncDataHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler;
+- (void)loginWithUser:(FCUserObject*)aUser
+         stepCallback:(FCStepCallbackHandler)stepCallBack
+           retHandler:(FCLoginResultHandler)retHandler;
 
 
 /*!
- * @method loginDevice:retHandler:
- * @brief Login the device
- * @param paramHandler The block parameter is used to set user information
- * @param retHandler   Synchronous result callback
+ @discussion 绑定设备，第一次配对成功后需要执行绑定操作，将用户账户与手表绑定，绑定成功后app需要把蓝牙uuid保存在客户端，下次蓝牙连接检查此uuid如果存在直接执行登陆操作
+ @param aUser 用户信息对象
+ @param stepCallBack 登录流程步骤回调
+ @param dataCallback 系统设置数据回调block
+ @param retHandler 绑定结果回调block
  */
-- (void)loginDevice:(FCLoginDatahandler)paramHandler retHandler:(FCSyncResultHandler)retHandler;
+- (void)bindWithUser:(FCUserObject*)aUser
+        stepCallback:(FCStepCallbackHandler)stepCallBack
+        dataCallback:(FCSyncDataHandler)dataCallback
+          retHandler:(FCBindResultHandler)retHandler;
 
-/*!
- * @brief Unbind the watch
- * @param retHandler Synchronous result callback
+
+
+/**
+ @discussion 解除绑定，此操作会解除手表与app用户账号的绑定
+ @param retHandler 解绑结果回调block
  */
-- (void)unBondDevice:(FCSyncResultHandler)retHandler;
+- (void)unbindDevice:(FCSyncResultHandler)retHandler;
 
 
 
@@ -187,14 +170,17 @@
  * @param data       Alarm clock data
  * @param retHandler Synchronous result callback
  */
-- (void)fcSetAlarmData:(NSData*)data retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetAlarmData:(NSData*)data
+            retHandler:(FCSyncResultHandler)retHandler;
 
 /*!
  * @brief Get the list of alarms
  * @param dataHandler Alarm list data callback
  * @param retHandler  Synchronous result callback
  */
-- (void)fcGetAlarmList:(FCSyncDataHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcGetAlarmList:(FCSyncDataHandler)dataHandler
+            retHandler:(FCSyncResultHandler)retHandler;
+
 
 
 #pragma mark - 功能设置
@@ -204,45 +190,51 @@
  * @param dataHandler MAC address data callback block
  * @param retHandler Synchronous result callback block
  */
-- (void)fcGetMacAddress:(FCSyncDataHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcGetMacAddress:(FCSyncDataHandler)dataHandler
+             retHandler:(FCSyncResultHandler)retHandler;
 
 /*!
  * @brief Gets the system settings
  * @param dataHandler The system setting data callback
  * @param retHandler Synchronous result callback
  */
-- (void)fcGetSystemSetting:(FCSyncDataHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcGetSystemSetting:(FCSyncDataHandler)dataHandler
+                retHandler:(FCSyncResultHandler)retHandler;
 
 
 /*!
- * @brief Get power and charge status
- * @param dataHandler  Power and charge state callback
- * @param retHandler   Synchronous result callback
+ * @discussion 获取电池的电量和充电信息
+ * @param dataHandler  电量和充电信息回调block
+ * @param retHandler   同步结果回调block
  */
-- (void)fcGetBatteryPowerAndChargingState:(FCSyncPowerAndChargingStateHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcGetBatteryPowerAndChargingState:(FCSyncPowerAndChargingStateHandler)dataHandler
+                               retHandler:(FCSyncResultHandler)retHandler;
 
 
 /*!
- * @brief Set the screen display items
- * @param data       The screen display data
- * @param retHandler Synchronous result callback
+ * @discussion 设置手表屏幕显示内容
+ * @param data       屏幕显示设置数据
+ * @param retHandler 同步结果回调block
  */
-- (void)fcSetDisplayData:(NSData*)data retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetWatchScreenDisplayData:(NSData*)data
+                         retHandler:(FCSyncResultHandler)retHandler;
 
 
 /*!
- * @brief Set the watch function switch
- * @param data       Function switch data
- * @param retHandler Synchronous result callback
+ * @discussion 设置手表的功能开关配置
+ * @param data       功能开关配置数据
+ * @param retHandler 同步结果回调block
  */
-- (void)fcSetFunctionSwitchData:(NSData*)data retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetFeaturesData:(NSData*)data
+               retHandler:(FCSyncResultHandler)retHandler;
 
 /*!
  * @brief Set the notification switch
  * @param data       Notification switch data
  * @param retHandler Synchronous result callback
  */
-- (void)fcSetNotificationSettingData:(NSData*)data retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetNotificationSettingData:(NSData*)data
+                          retHandler:(FCSyncResultHandler)retHandler;
 
 
 /**
@@ -250,7 +242,8 @@
  * @param data       Sedentary reminder data
  * @param retHandler Synchronous result callback
  */
-- (void)fcSetLongSitData:(NSData*)data retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetSedentaryRemindersData:(NSData*)data
+                         retHandler:(FCSyncResultHandler)retHandler;
 
 
 /*!
@@ -258,8 +251,8 @@
  * @param data       Health real-time monitoring data
  * @param retHandler Synchronous result callback
  */
-- (void)fcSetHealthMonitorData:(NSData*)data retHandler:(FCSyncResultHandler)retHandler;
-
+- (void)fcSetHealthMonitoringData:(NSData*)data
+                       retHandler:(FCSyncResultHandler)retHandler;
 
 
 /*!
@@ -267,7 +260,8 @@
  * @param bEnabled   Reminder to drink water switch status
  * @param retHandler Synchronous result callback
  */
-- (void)fcSetDrinkRemindEnable:(BOOL)bEnabled retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetDrinkRemindEnable:(BOOL)bEnabled
+                    retHandler:(FCSyncResultHandler)retHandler;
 
 
 /*!
@@ -276,7 +270,8 @@
  @param bEnabled   Left hand wear
  @param retHandler Synchronous result callback
  */
-- (void)fcSetLeftHandWearEnable:(BOOL)bEnabled retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetLeftHandWearEnable:(BOOL)bEnabled
+                     retHandler:(FCSyncResultHandler)retHandler;
 
 
 /*!
@@ -284,19 +279,17 @@
  * @param bInForeground in the foreground
  * @param retHandler    Synchronous result callback
  */
-- (void)fcSetCameraState:(BOOL)bInForeground retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetCameraState:(BOOL)bInForeground
+              retHandler:(FCSyncResultHandler)retHandler;
 
 
 /*!
- * @method fcSetUserProfile:age:height:weight:retHandler:
- * @brief Set the user profile
- * @param sex        sex 
- * @param age        age
- * @param height     height
- * @param weight     weight
- * @param retHandler Synchronous result callback
+ @discussion 同步用户资料到手表
+ @param aUser 用户资料对象
+ @param retHandler 同步结果回调block
  */
-- (void)fcSetUserProfile:(UInt32)sex age:(UInt32)age height:(UInt32)height weight:(UInt32)weight retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetUserProfile:(FCUserObject*)aUser
+              retHandler:(FCSyncResultHandler)retHandler;
 
 
 /*!
@@ -306,20 +299,37 @@
  * @param dbp        Diastolic blood pressure
  * @param retHandler Synchronous result callback
  */
-- (void)fcSetBloodPressure:(UInt16)sbp dbp:(UInt16)dbp retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetBloodPressure:(UInt16)sbp
+                       dbp:(UInt16)dbp
+                retHandler:(FCSyncResultHandler)retHandler;
 
 
 /*!
- * @method fcSetWeather:highTemp:lowTemp:state:cityName:retHandler:
- * @brief Set up the latest weather
- * @param temperature Current temperature
- * @param hTemp       Maximum temperature
- * @param lTemp       lowest temperature
- * @param state       Weather conditions
- * @param cityName    City name
- * @param retHandler  Synchronous result callback
+ @discussion 更新最新天气到手表
+ @param weather 天气对象
+ @param retHandler 同步结果回调block
  */
-- (void)fcSetWeather:(int)temperature highTemp:(int)hTemp lowTemp:(int)lTemp state:(FCWeatherState)state cityName:(NSString*)cityName retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcSetWeather:(FCWeather*)weather
+          retHandler:(FCSyncResultHandler)retHandler;
+
+
+
+#pragma mark - 睡眠监测
+/*!
+ * @brief 设置睡眠监测时间，包含睡眠监测开始时间和结束时间
+ * @param data       睡眠监测时间数据
+ * @param retHandler 同步结果回调
+ */
+- (void)fcOpenSleepMonitoringData:(NSData*)data
+                       retHandler:(FCSyncResultHandler)retHandler;
+
+
+/*!
+ * @brief 关闭睡眠监测，关闭后手表不在记录睡眠数据
+ * @param retHandler 同步结果回调
+ */
+- (void)fcCloseSleepMonitoring:(FCSyncResultHandler)retHandler;
+
 
 
 #pragma mark - 健康实时同步
@@ -331,7 +341,9 @@
  * @param dataHandler Health real-time synchronization data callback
  * @param retHandler  Synchronous result callback
  */
-- (void)fcOpenRealTimeSync:(FCRTSyncType)syncType dataHandler:(FCSyncDataHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcOpenRealTimeSync:(FCRTSyncType)syncType
+               dataHandler:(FCSyncDataHandler)dataHandler
+                retHandler:(FCSyncResultHandler)retHandler;
 
 
 /*!
@@ -345,34 +357,48 @@
 #pragma mark - 历史数据同步
 
 /*!
- * @method fcGetHistoryData:dataHandler:retHandler:
- * @brief Synchronize historical data
- * @discussion Synchronize historical data，including the total data for the day,exercise, sleep, heart rate, blood oxygen, blood pressure and respiratory rate.
- * @param syncStepHandler This block shows you which step to synchronizes，
- * @param dataHandler     It returns a type of data that is synchronized,This Block is called multiple times.
- * @param retHandler  It will be called when synchronization is completed or an error occurs.
+ @discussion 同步手表历史数据，包括日总数据、运动量详细记录、睡眠详细记录、心率详细记录、血氧、血压和呼吸频率等
+ @method fcGetHistoryData:dataHandler:retHandler:
+ @param stepCallback 同步步骤回调block
+ @param dataCallback 同步数据回调block，此block会多次调用
+ @param retHandler 同步结果回调block，当同步完成或者中途同步失败，此block被调用
  */
-- (void)fcGetHistoryData:(FCSyncStepHandler)syncStepHandler dataHandler:(FCSyncDataHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcGetHistoryData:(FCStepCallbackHandler)stepCallback
+             dataCallback:(FCHistoryDataHandler)dataCallback
+              retHandler:(FCHistoryDataResultHandler)retHandler;
+
+
+/*!
+ @discussion 同步历史总睡眠数据，此睡眠数据包含当天及以前的七天内日总睡眠时长（深睡眠和浅睡眠时长）
+ @method fcGetHistoryTotalSleepData:retHandler:
+ @param dataHandler 睡觉数据回调block
+ @param retHandler 同步结果回调block
+ */
+- (void)fcGetHistoryTotalSleepData:(FCSyncDataHandler)dataHandler
+                        retHandler:(FCSyncResultHandler)retHandler;
 
 
 #pragma mark - 固件升级
 
 /*!
- * @method fcGetFirmwareVersion:retHandler:
- * @discussion Get the firmware version information
- * @param dataHandler Firmware Version Data Callback
- * @param retHandler Synchronous result callback
+ @discussion 获取手表固件版本信息
+ @method fcGetFirmwareVersion:retHandler:
+ @param dataHandler 固件版本信息数据回调
+ @param retHandler 获取固件版本信息结果回调
  */
-- (void)fcGetFirmwareVersion:(FCSyncDataHandler)dataHandler retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcGetFirmwareVersion:(FCSyncDataHandler)dataHandler
+                  retHandler:(FCSyncResultHandler)retHandler;
+
 
 /*!
- * @method fcUpdateFirmwareWithPath:progress:retHandler:
- * @brief Firmware upgrade
- * @discussion Firmware upgrade interface, when calling this API peripherals will be disconnected and enter the firmware upgrade mode
- * @param filePath Firmware path
- * @param progressHandler Upgrade progress callback
- * @param retHandler Upgrade result callback
+ @discussion 固件升级接口，掉用此接口，蓝牙将会断开连接并进入固件升级模式
+ @method fcUpdateFirmwareWithPath:progress:retHandler:
+ @param filePath 要升级的固件路径
+ @param progressHandler 固件升级进度回调block
+ @param retHandler 固件升级结果回调block
  */
-- (void)fcUpdateFirmwareWithPath:(NSString*)filePath progress:(FCProgressHandler)progressHandler retHandler:(FCSyncResultHandler)retHandler;
+- (void)fcUpdateFirmwareWithPath:(NSString*)filePath
+                        progress:(FCProgressHandler)progressHandler
+                      retHandler:(FCSyncResultHandler)retHandler;
 @end
 

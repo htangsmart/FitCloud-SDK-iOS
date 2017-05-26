@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/FCSystemSettingsModel.html">
+	<File path="Classes/FCWatchSettingsObject.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/FCSystemSettingsModel</TokenIdentifier>
-			<Abstract type="html">@class FCSystemSettingsModel</Abstract>
+			<TokenIdentifier>//apple_ref/occ/cl/FCWatchSettingsObject</TokenIdentifier>
+			<Abstract type="html">手表配置</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
             
 			
@@ -13,224 +13,299 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setNotificationData:</TokenIdentifier>
-			<Abstract type="html">@property notificationData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWatchSettingsObject/setNfSettingData:</TokenIdentifier>
+			<Abstract type="html">消息通知开关配置 4byte</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *notificationData</Declaration>
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/FCNotificationObject</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, strong) NSData *nfSettingData</Declaration>
 			
 			
-			<Anchor>//api/name/notificationData</Anchor>
+			<Anchor>//api/name/nfSettingData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/notificationData</TokenIdentifier>
-			<Abstract type="html">@property notificationData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWatchSettingsObject/nfSettingData</TokenIdentifier>
+			<Abstract type="html">消息通知开关配置 4byte</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *notificationData</Declaration>
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/FCNotificationObject</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, strong) NSData *nfSettingData</Declaration>
 			
 			
-			<Anchor>//api/name/notificationData</Anchor>
+			<Anchor>//api/name/nfSettingData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/notificationData</TokenIdentifier>
-			<Abstract type="html">@property notificationData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCWatchSettingsObject/nfSettingData</TokenIdentifier>
+			<Abstract type="html">消息通知开关配置 4byte</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *notificationData</Declaration>
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/FCNotificationObject</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, strong) NSData *nfSettingData</Declaration>
 			
 			
-			<Anchor>//api/name/notificationData</Anchor>
+			<Anchor>//api/name/nfSettingData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setScreenDisplayData:</TokenIdentifier>
-			<Abstract type="html">@property screenDisplayData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWatchSettingsObject/setWsdisplayData:</TokenIdentifier>
+			<Abstract type="html">手表屏幕显示设置 2byte</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *screenDisplayData</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *wsdisplayData</Declaration>
 			
 			
-			<Anchor>//api/name/screenDisplayData</Anchor>
+			<Anchor>//api/name/wsdisplayData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/screenDisplayData</TokenIdentifier>
-			<Abstract type="html">@property screenDisplayData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWatchSettingsObject/wsdisplayData</TokenIdentifier>
+			<Abstract type="html">手表屏幕显示设置 2byte</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *screenDisplayData</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *wsdisplayData</Declaration>
 			
 			
-			<Anchor>//api/name/screenDisplayData</Anchor>
+			<Anchor>//api/name/wsdisplayData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/screenDisplayData</TokenIdentifier>
-			<Abstract type="html">@property screenDisplayData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCWatchSettingsObject/wsdisplayData</TokenIdentifier>
+			<Abstract type="html">手表屏幕显示设置 2byte</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *screenDisplayData</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *wsdisplayData</Declaration>
 			
 			
-			<Anchor>//api/name/screenDisplayData</Anchor>
+			<Anchor>//api/name/wsdisplayData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setFunctionalSwitchData:</TokenIdentifier>
-			<Abstract type="html">@property functionalSwitchData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWatchSettingsObject/setFeaturesData:</TokenIdentifier>
+			<Abstract type="html">手表功能开关配置 2byte</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *functionalSwitchData</Declaration>
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/FCFeaturesObject</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, strong) NSData *featuresData</Declaration>
 			
 			
-			<Anchor>//api/name/functionalSwitchData</Anchor>
+			<Anchor>//api/name/featuresData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/functionalSwitchData</TokenIdentifier>
-			<Abstract type="html">@property functionalSwitchData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWatchSettingsObject/featuresData</TokenIdentifier>
+			<Abstract type="html">手表功能开关配置 2byte</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *functionalSwitchData</Declaration>
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/FCFeaturesObject</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, strong) NSData *featuresData</Declaration>
 			
 			
-			<Anchor>//api/name/functionalSwitchData</Anchor>
+			<Anchor>//api/name/featuresData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/functionalSwitchData</TokenIdentifier>
-			<Abstract type="html">@property functionalSwitchData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCWatchSettingsObject/featuresData</TokenIdentifier>
+			<Abstract type="html">手表功能开关配置 2byte</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *functionalSwitchData</Declaration>
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/FCFeaturesObject</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, strong) NSData *featuresData</Declaration>
 			
 			
-			<Anchor>//api/name/functionalSwitchData</Anchor>
+			<Anchor>//api/name/featuresData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setSoftwareAndHardwareVersionData:</TokenIdentifier>
-			<Abstract type="html">@property softwareAndHardwareVersionData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWatchSettingsObject/setVersionData:</TokenIdentifier>
+			<Abstract type="html">手表系统软硬件版本信息 32byte</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *softwareAndHardwareVersionData</Declaration>
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/FCVersionDataObject</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, strong) NSData *versionData</Declaration>
 			
 			
-			<Anchor>//api/name/softwareAndHardwareVersionData</Anchor>
+			<Anchor>//api/name/versionData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/softwareAndHardwareVersionData</TokenIdentifier>
-			<Abstract type="html">@property softwareAndHardwareVersionData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWatchSettingsObject/versionData</TokenIdentifier>
+			<Abstract type="html">手表系统软硬件版本信息 32byte</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *softwareAndHardwareVersionData</Declaration>
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/FCVersionDataObject</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, strong) NSData *versionData</Declaration>
 			
 			
-			<Anchor>//api/name/softwareAndHardwareVersionData</Anchor>
+			<Anchor>//api/name/versionData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/softwareAndHardwareVersionData</TokenIdentifier>
-			<Abstract type="html">@property softwareAndHardwareVersionData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCWatchSettingsObject/versionData</TokenIdentifier>
+			<Abstract type="html">手表系统软硬件版本信息 32byte</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *softwareAndHardwareVersionData</Declaration>
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/FCVersionDataObject</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, strong) NSData *versionData</Declaration>
 			
 			
-			<Anchor>//api/name/softwareAndHardwareVersionData</Anchor>
+			<Anchor>//api/name/versionData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setHealthHistoryData:</TokenIdentifier>
-			<Abstract type="html">@property healthHistoryData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWatchSettingsObject/setHealthMonitoringData:</TokenIdentifier>
+			<Abstract type="html">健康定时监测 5byte</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *healthHistoryData</Declaration>
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/FCHealthMonitoringObject</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, strong) NSData *healthMonitoringData</Declaration>
 			
 			
-			<Anchor>//api/name/healthHistoryData</Anchor>
+			<Anchor>//api/name/healthMonitoringData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/healthHistoryData</TokenIdentifier>
-			<Abstract type="html">@property healthHistoryData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWatchSettingsObject/healthMonitoringData</TokenIdentifier>
+			<Abstract type="html">健康定时监测 5byte</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *healthHistoryData</Declaration>
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/FCHealthMonitoringObject</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, strong) NSData *healthMonitoringData</Declaration>
 			
 			
-			<Anchor>//api/name/healthHistoryData</Anchor>
+			<Anchor>//api/name/healthMonitoringData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/healthHistoryData</TokenIdentifier>
-			<Abstract type="html">@property healthHistoryData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCWatchSettingsObject/healthMonitoringData</TokenIdentifier>
+			<Abstract type="html">健康定时监测 5byte</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *healthHistoryData</Declaration>
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/FCHealthMonitoringObject</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, strong) NSData *healthMonitoringData</Declaration>
 			
 			
-			<Anchor>//api/name/healthHistoryData</Anchor>
+			<Anchor>//api/name/healthMonitoringData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setLongSitReminderData:</TokenIdentifier>
-			<Abstract type="html">@property longSitReminderData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWatchSettingsObject/setSedentaryReminderData:</TokenIdentifier>
+			<Abstract type="html">久坐提醒数据 5bytes</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *longSitReminderData</Declaration>
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/FCSedentaryReminderObject</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, strong) NSData *sedentaryReminderData</Declaration>
 			
 			
-			<Anchor>//api/name/longSitReminderData</Anchor>
+			<Anchor>//api/name/sedentaryReminderData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/longSitReminderData</TokenIdentifier>
-			<Abstract type="html">@property longSitReminderData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWatchSettingsObject/sedentaryReminderData</TokenIdentifier>
+			<Abstract type="html">久坐提醒数据 5bytes</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *longSitReminderData</Declaration>
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/FCSedentaryReminderObject</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, strong) NSData *sedentaryReminderData</Declaration>
 			
 			
-			<Anchor>//api/name/longSitReminderData</Anchor>
+			<Anchor>//api/name/sedentaryReminderData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/longSitReminderData</TokenIdentifier>
-			<Abstract type="html">@property longSitReminderData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCWatchSettingsObject/sedentaryReminderData</TokenIdentifier>
+			<Abstract type="html">久坐提醒数据 5bytes</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *longSitReminderData</Declaration>
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/FCSedentaryReminderObject</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, strong) NSData *sedentaryReminderData</Declaration>
 			
 			
-			<Anchor>//api/name/longSitReminderData</Anchor>
+			<Anchor>//api/name/sedentaryReminderData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setDefaultBloodPressureData:</TokenIdentifier>
-			<Abstract type="html">@property defaultBloodPressureData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWatchSettingsObject/setDefaultBloodPressureData:</TokenIdentifier>
+			<Abstract type="html">默认血压</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) NSData *defaultBloodPressureData</Declaration>
@@ -241,8 +316,8 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/defaultBloodPressureData</TokenIdentifier>
-			<Abstract type="html">@property defaultBloodPressureData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWatchSettingsObject/defaultBloodPressureData</TokenIdentifier>
+			<Abstract type="html">默认血压</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) NSData *defaultBloodPressureData</Declaration>
@@ -253,8 +328,8 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/defaultBloodPressureData</TokenIdentifier>
-			<Abstract type="html">@property defaultBloodPressureData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCWatchSettingsObject/defaultBloodPressureData</TokenIdentifier>
+			<Abstract type="html">默认血压</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) NSData *defaultBloodPressureData</Declaration>
@@ -265,38 +340,38 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/setDrinkWaterReminderData:</TokenIdentifier>
-			<Abstract type="html">@property drinkWaterReminderData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWatchSettingsObject/setDrinkReminderData:</TokenIdentifier>
+			<Abstract type="html">喝水提醒</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *drinkWaterReminderData</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *drinkReminderData</Declaration>
 			
 			
-			<Anchor>//api/name/drinkWaterReminderData</Anchor>
+			<Anchor>//api/name/drinkReminderData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSystemSettingsModel/drinkWaterReminderData</TokenIdentifier>
-			<Abstract type="html">@property drinkWaterReminderData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWatchSettingsObject/drinkReminderData</TokenIdentifier>
+			<Abstract type="html">喝水提醒</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *drinkWaterReminderData</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *drinkReminderData</Declaration>
 			
 			
-			<Anchor>//api/name/drinkWaterReminderData</Anchor>
+			<Anchor>//api/name/drinkReminderData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCSystemSettingsModel/drinkWaterReminderData</TokenIdentifier>
-			<Abstract type="html">@property drinkWaterReminderData</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCWatchSettingsObject/drinkReminderData</TokenIdentifier>
+			<Abstract type="html">喝水提醒</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *drinkWaterReminderData</Declaration>
+			<Declaration>@property (nonatomic, strong) NSData *drinkReminderData</Declaration>
 			
 			
-			<Anchor>//api/name/drinkWaterReminderData</Anchor>
+			<Anchor>//api/name/drinkReminderData</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		

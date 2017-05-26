@@ -12,226 +12,264 @@
 
 /*!
  * @class FitCloudUtils
- * @discussion This class is mainly used for data analysis, type conversion and so on
+ * @discussion 数据处理转换类
  */
 @interface FitCloudUtils : NSObject
 
-#pragma mark - Day Total Data
-/*!
- Day total data will be analyzed into the total number of steps, total distance, total calories, deep sleep duration, light sleep duration, average heart rate
+#pragma mark - 实时同步数据
 
- @param data Day total data
- @param block Callback block
- @return if data is <i>nil</i>,return <i>NO</i>
+/*!
+ @discussion 获取实时心率
+ @param data 实时测试数据包
+ @return 实时心率
  */
-+ (BOOL)resolveDayTotalData:(NSData*)data withCallBackBlock:(FCDayTotalDataBlock)block;
++ (NSNumber*)getRealTimeHeartRateFromData:(NSData*)data;
 
 
-#pragma mark - System Settings
 /*!
- The system setting data is divided into detailed setting data
-
- @param data system setting data
- @param block The resulting callback block
- @return if data is <i>nil</i>,return <i>NO</i>
+ @discussion 获取实时血氧
+ @param data 实时测试数据包
+ @return 实时血氧
  */
-+ (BOOL)resolveSystemSettingsData:(NSData*)data withCallbackBlock:(FCSystemSettingDataBlock)block;
++ (NSNumber*)getRealTimeBloodOxygenFromData:(NSData*)data;
 
 
-#pragma mark - Firmware Version
 /*!
- Divide the hardware and software version information data into detailed data
-
- @param data hardware and software version information data
- @param block The resulting callback block
- @return if data is <i>nil</i>,return <i>NO</i>
+ @discussion 获取实时血压
+ @param data 实时测试数据包
+ @return 实时血压 @ {@"sbp":value,@"dbp":value}
  */
-+ (BOOL)resolveHardwareAndSoftwareVersionDataToString:(NSData*)data withCallbackBlock:(FCHardwareAndSoftwareVersionStringBlock)block;
++ (NSDictionary*)getRealTimeBloodPressureFromData:(NSData*)data;
 
 
 /*!
- Divide the hardware and software version information data into detailed data and parse the detailed data into strings
-
- @param data hardware and software version information data
- @param block The resulting callback block
- @return if data is <i>nil</i>,return <i>NO</i>
+ @discussion 获取实时呼吸频率
+ @param data 实时测试数据包
+ @return 实时呼吸频率
  */
-+ (BOOL)resolveHardwareAndSoftwareVersionData:(NSData*)data withCallbackBlock:(FCHardwareAndSoftwareVersionDataBlock)block;
++ (NSNumber*)getRealTimeBreathingRateFromData:(NSData*)data;
 
 
-#pragma mark - calorie and distance
+#pragma mark - 日总数据记录
+
 /*!
- Calculate calories consumed by exercise
-
- @param stepCount Number of steps
- @return calorie in Kcal
+ @discussion 获取多项总数据记录，包括总步数、总距离、总卡路里、深睡眠时长、浅睡眠时长、平均心率
+ 返回结果：{
+             "stepCount": 0, // 步数,单位 步
+             "distance": 0, // 距离，单位 m
+             "calorie": 0, // 卡路里， 单位 cal
+             "deepSleep": 0, // 深睡眠， 单位 min
+             "lightSleep": 0,// 浅睡眠， 单位 min
+             "avgHeartRate": 0, // 评价心率， 单位 次/分
+         }
+ @param data 手表返回的日总数据
+ @return 返回日总数据详细记录
  */
-+ (NSNumber*)calorieWithStepCount:(NSNumber*)stepCount;
++ (NSDictionary*)getDetailsOfCurrentDayFromData:(NSData*)data;
 
+
+
+#pragma mark - 获取七天睡眠总数据
 
 /*!
- The walking distance is calculated according to the number of steps
-
- @param stepCount Number of steps
- @return Movement distance in kilometers
+ @discussion 获取日总睡眠时长，手表返回七天或者少于7天的睡眠时长数据
+ @param data 睡眠总数据
+ @return 七日睡眠记录
  */
-+ (NSNumber*)distanceWithStepCount:(NSNumber*)stepCount;
++ (NSArray*)getSleepTotalDataOfSevenDaysFromData:(NSData*)data;
 
 
-#pragma mark - Exerciese
+
+#pragma mark - 手环设置
+
 /*!
- Convert sports data to an array containing dictionary objects,Each record contains five minutes of data
-
- @param data The sports data to be converted
- @return a list of <code>NSDictionary</code> objects
- @warning If the parameter is <i>nil</i>, returns <i>nil</i>
+ @discussion 获取系统设置，系统设置数据包括消息通知开关配置、手环显示配置、手环功能开关配置、手环软硬件版本信息、健康定时检测开关、久坐提醒配置、默认血压、喝水提醒开关
+ @param data 系统设置源数据
+ @return 系统设置详细数据,value为<code>NSData</code>类型
  */
-+ (NSArray*)resolveExerciseDataIntoDictionaryObjects:(NSData*)data;
++ (NSDictionary*)getWatchSettingsFromData:(NSData*)data;
 
+
+
+
+#pragma mark - 软硬件版本信息
 
 /*!
- Convert sports data to an array containing dictionary objects,Each record contains five minutes of data
- 
- @param data The sports data to be converted
- @return a list of <code>FCExerciseModel</code> objects
- @warning If the parameter is <i>nil</i>, returns <i>nil</i>
+ @discussion 获取软硬件版本信息详细数据
+ @param data 软硬件版本信息数据
+ @return {@“fwNumberData”:data,
+             @"sensorTagData":data,
+             @"pageDisplayData":data,
+             @"patchData":data,
+             @"flashData":data,
+             @"fwAppData":data,
+             @"timeSeqNumData":data
+        }
  */
-+ (NSArray*)resolveExerciseDataIntoModelObjects:(NSData*)data;
++ (NSDictionary*)getVersionDetailsDataFromData:(NSData*)data;
 
 
-#pragma mark - Sleep
+
+
 /*!
- Convert sleep data to an array containing dictionary objects,Each record contains five minutes of data
- 
- @param data The sleep data to be converted
- @return a list of <code>NSDictionary</code> objects
- @warning If the parameter is <i>nil</i>, returns <i>nil</i>
+ @discussion 获取软硬件版本信息详细字符串
+ @param data 软硬件版本信息数据
+ @return {@“fwNumberData”:string,
+             @"sensorTagData":string,
+             @"pageDisplayData":string,
+             @"patchData":string,
+             @"flashData":string,
+             @"fwAppData":string,
+             @"timeSeqNumData":string
+        }
  */
-+ (NSArray*)resolveSleepDataIntoDictionaryObjects:(NSData*)data;
++ (NSDictionary*)getVersionDetailsStringFromData:(NSData *)data;
 
+
+
+
+#pragma mark - 默认血压
 
 /*!
- Convert sleep data to an array containing the model objects,Each record contains five minutes of data
- 
- @param data The sleep data to be converted
- @return a list of <code>FCSleepModel</code> objects
- @warning If the parameter is <i>nil</i>, returns <i>nil</i>
+ @discussion 获取默认血压
+ @param data 血压数据
+ @see <code>FCWatchSettingsObject</code>
+ @seealso <i>defaultBloodPressureData</i>
+ @return {@link {@"systolicBP":120,@"diastolicBP":80} }
  */
-+ (NSArray*)resolveSleepDataIntoModelObjects:(NSData*)data;
++ (NSDictionary*)getDefaultBloodPressureFromData:(NSData*)data;
 
 
-#pragma mark - Health
+
+#pragma mark - 卡路里计算
+
 /*!
- Convert heart rate data to an array containing dictionary objects,Each record contains five minutes of data
- 
- @param data The heart rate data to be converted
- @return a list of <code>NSDictionary</code> objects
- @warning If the parameter is <i>nil</i>, returns <i>nil</i>
+ @discussion 计算卡路里消耗(千卡)
+ @param stepCount 步数 步
+ @param weight 体重 kg
+ @param height 身高 cm
+ @param isBoy 男女
+ @return 卡路里
  */
-+ (NSArray*)resolveHeartRateDataIntoDictionaryObjects:(NSData*)data;
++ (CGFloat)caloriesFromSteps:(UInt32)stepCount weight:(UInt32)weight height:(UInt32)height isBoy:(BOOL)isBoy;
 
+
+
+#pragma mark - 计算距离
 
 /*!
- Convert heart rate data to an array containing the model objects,Each record contains five minutes of data
- 
- @param data The heart rate data to be converted
- @return a list of <code>FCHealthModel</code> objects
- @warning If the parameter is <i>nil</i>, returns <i>nil</i>
+ @discussion 计算运动距离 km
+ @param stepCount 步数
+ @param height 身高 cm
+ @param isBoy 男女
+ @return 运动距离
  */
-+ (NSArray*)resolveHeartRateDataIntoModelObjects:(NSData*)data;
++ (CGFloat)distanceFromSteps:(UInt32)stepCount height:(UInt32)height isBoy:(BOOL)isBoy;
 
+
+
+#pragma mark - 获取运动量记录
 
 /*!
- Health data including blood oxygen, blood oxygen, and respiratory rate are generated by heart rate data modeling
-
- @param data Heart rate data
- @param block Callback several different types of health data
- @param systolicBP Default systolic pressure
- @param diastolicBP Default diastolic pressure
- @return If the parameter is <i>nil</i>, returns <i>nil</i>
+ @discussion 获取运动量详细记录， 每隔5分钟一个数据
+ @param data 运动量数据包
+ @return 一组<code>FCDataObject</code>对象记录
  */
-+ (BOOL)resolveHeathDataIntoModelObjects:(NSData*)data systolic:(UInt16)systolicBP diastolic:(UInt16)diastolicBP withCallbackBlock:(FCHealthDataModelBlock)block;
-
-@end
++ (NSArray*)getExerciseDetailsFromData:(NSData*)data;
 
 
-#pragma mark - NSData Extention
+
+#pragma mark - 获取睡眠记录
+
 /*!
- * @category NSData
- * @discussion NSData class method extension
+ @discussion 获取睡眠详细记录， 每隔5分钟一个数据
+ @param data 睡眠数据包
+ @return 一组包含<code>FCDataObject</code>对象的记录
  */
-@interface NSData (Utils)
++ (NSArray*)getSleepDetailsFromData:(NSData*)data;
+
+
+
+#pragma mark - 获取心率详细记录
 
 /*!
- Converts system settings data to a data model with detailed attributes
-
- @return The object to be converted
- @warning if self is <i>nil</i>, return <i>nil</i>
+ @discussion 获取心率详细记录， 每隔5分钟一个数据
+ @param data 心率数据包
+ @return 一组包含<code>FCDataObject</code>对象的记录
  */
-- (id)objectFromSystemSettingsData;
++ (NSArray*)getHeartRateDetailsFromData:(NSData*)data;
 
+
+
+#pragma mark - 获取血氧详细记录
 
 /*!
- Converts system settings data to a dictonary with detailed data
- 
- @return The object to be converted
- @warning if self is <i>nil</i>, return <i>nil</i>
+ @discussion 获取血氧详细记录， 每隔5分钟一个数据
+ @param data 血氧数据包
+ @return 一组包含<code>FCDataObject</code>对象的记录
  */
-- (NSDictionary*)dictionaryFromSystemSettingsData;
++ (NSArray*)getBloodOxygenDetailsFromData:(NSData*)data;
 
+
+
+#pragma mark - 获取呼吸频率详细记录
 
 /*!
- Converts hardware and software version information data to a dictionary with detailed data
-
- @return The object to be converted
- @warning if self is <i>nil</i>, return <i>nil</i>
+ @discussion 获取呼吸频率详细记录， 每隔5分钟一个数据
+ @param data 呼吸频率数据包
+ @return 一组包含<code>FCDataObject</code>对象的记录
  */
-- (NSDictionary*)dictionaryFromSoftwareAndHardwareVersionData;
-@end
++ (NSArray*)getBreathingRateDetailsFromData:(NSData*)data;
 
 
 
-#pragma mark - NSArray Extention
+#pragma mark - 获取血压详细记录
+
 /*!
- * @category NSArray
- * @discussion NSArray class method extension
+ @discussion 获取血压详细记录， 每隔5分钟一个数据
+ @param data 血氧数据包
+ @param systolicBP 收缩压默认数据
+ @param diastolicBP 舒张压默认数据
+ @return 一组包含<code>FCDataObject</code>对象的记录
  */
-@interface NSArray (Utils)
+- (NSArray*)getBloodPressureDetailsFromData:(NSData*)data systolicBP:(UInt16)systolicBP diastolicBP:(UInt16)diastolicBP;
+
+
+
+#pragma mark - 闹钟信息
 
 /*!
- Convert alarm clock data to alarm clock models
+ @discussion 获取手表闹钟，最多可以设置8个无重复的闹钟
 
- @param data The alarm clock data to be converted
- @return a list of <code>FCAlarmObject</code> objects, if data is <i>nil</i>,return nil.
+ @param data 闹钟数据
+ @return 一组<code>FCAlarmObject</code>对象
  */
-+ (NSArray*)arrayWithAlarmClockConfigurationData:(NSData*)data;
++ (NSArray*)getAlarmClocksFromData:(NSData*)data;
 
 
 /*!
- Combines a set of alarm clock models into alarm clock data
-
- @return Alarm clock data according to Bluetooth protocol standard
+ @discussion 将一组闹钟对象序列化为二进制闹钟数据，用于蓝牙同步
+ @param array 包含<code>FCAlarmObject</code>对象的闹钟数组
+ @return 闹钟数据
  */
-- (NSData*)alarmClockConfigurationData;
-@end
++ (NSData*)getAlarmClockDataFromObjects:(NSArray*)array;
 
 
-#pragma mark - NSNumber
 
-@interface NSNumber (Utils)
+#pragma mark - 手机信息
 
 /*!
- 手机的型号，用于登录和绑定设备时手表识别不同型号的机型
-
+ @discussion 手机的型号，用于登录和绑定设备时手表识别不同型号的机型
  @return 手机机型对应的数值
  */
-+ (NSNumber*)phoneModel;
++ (NSNumber*)getPhoneModel;
 
 
 /*!
- 手机操作系统型号，用于手表区分不同的系统
-
+ @discussion 手机操作系统型号，用于手表区分不同的系统
  @return 操作系统对应的数值
  */
-+ (NSNumber*)osType;
++ (NSNumber*)getOsVersion;
+
 @end
+
