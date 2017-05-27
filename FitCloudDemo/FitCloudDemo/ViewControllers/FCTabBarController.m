@@ -28,7 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self configureBarButtonItems];
+//    [self configureBarButtonItems];
 }
 
 
