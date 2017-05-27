@@ -36,6 +36,7 @@
 - (void)configureBarButtonItems
 {
     UIStoryboard *sportsBoard = [UIStoryboard storyboardWithName:@"运动" bundle:nil];
+    NSLog(@"sportsBoard--%@",sportsBoard);
     UIViewController *sportsViewController = [sportsBoard instantiateInitialViewController];
     
     UIStoryboard *sleepBoard = [UIStoryboard storyboardWithName:@"睡眠" bundle:nil];
