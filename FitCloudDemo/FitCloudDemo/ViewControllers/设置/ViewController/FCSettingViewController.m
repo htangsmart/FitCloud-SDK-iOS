@@ -59,7 +59,8 @@
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    if (indexPath.row == 0) {
+    if (indexPath.row == 0)
+    {
         cell.imageView.image = [UIImage imageNamed:@"ico_profile"];
         cell.textLabel.text = @"用户资料";
     }

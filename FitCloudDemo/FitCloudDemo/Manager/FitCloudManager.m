@@ -24,7 +24,6 @@
 
 - (void)startService
 {
-    // Registration Notification Service
     [self registerNotification];
     
 }
@@ -64,4 +63,9 @@
 {
     
 }
+
+
+#pragma mark - 绑定或者登录
+
+
 @end
