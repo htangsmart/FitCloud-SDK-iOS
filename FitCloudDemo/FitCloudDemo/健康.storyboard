@@ -28,10 +28,10 @@
             </objects>
             <point key="canvasLocation" x="1324" y="-176.76161919040482"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--健康导航-->
         <scene sceneID="E3A-gf-zo8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iJJ-g6-59U" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="健康导航" title="健康导航" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iJJ-g6-59U" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="nOo-bg-HBW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

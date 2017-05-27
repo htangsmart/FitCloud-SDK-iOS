@@ -28,10 +28,10 @@
             </objects>
             <point key="canvasLocation" x="1207.2" y="220.83958020989508"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--设置导航-->
         <scene sceneID="8mH-55-aPi">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6DN-vN-w9U" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="设置导航" title="设置导航" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6DN-vN-w9U" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="RyK-a7-hCh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

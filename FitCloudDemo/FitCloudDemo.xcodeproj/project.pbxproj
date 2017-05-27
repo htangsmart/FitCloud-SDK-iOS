@@ -25,10 +25,10 @@
 		6BE746F91ED95DE40085E16E /* FCHealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE746F81ED95DE40085E16E /* FCHealthViewController.m */; };
 		6BE746FD1ED95F360085E16E /* FCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE746FC1ED95F360085E16E /* FCTabBarController.m */; };
 		6BE747091ED965A80085E16E /* MBProgressHUD+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE747081ED965A80085E16E /* MBProgressHUD+Category.m */; };
-		6BE747121ED968FF0085E16E /* 健康.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE7470A1ED968FF0085E16E /* 健康.storyboard */; };
-		6BE747131ED968FF0085E16E /* 设置.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE7470C1ED968FF0085E16E /* 设置.storyboard */; };
-		6BE747141ED968FF0085E16E /* 睡眠.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE7470E1ED968FF0085E16E /* 睡眠.storyboard */; };
-		6BE747151ED968FF0085E16E /* 运动.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE747101ED968FF0085E16E /* 运动.storyboard */; };
+		6BE7472A1ED96FDE0085E16E /* 健康.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE747221ED96F940085E16E /* 健康.storyboard */; };
+		6BE7472B1ED96FDE0085E16E /* 设置.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE747231ED96F940085E16E /* 设置.storyboard */; };
+		6BE7472C1ED96FDE0085E16E /* 睡眠.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE747241ED96F940085E16E /* 睡眠.storyboard */; };
+		6BE7472E1ED9705B0085E16E /* 运动.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE747301ED9705B0085E16E /* 运动.storyboard */; };
 		6BFE92711DD4C02500685350 /* libFitCloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFE92701DD4C02500685350 /* libFitCloud.a */; };
 		CB7CB9E6F4E6054DD7B94E79 /* libPods-FitCloudDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2577CFEC4DEBAB49E54AAD7 /* libPods-FitCloudDemo.a */; };
 /* End PBXBuildFile section */
@@ -89,16 +89,10 @@
 		6BE746FC1ED95F360085E16E /* FCTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCTabBarController.m; sourceTree = "<group>"; };
 		6BE747071ED965A80085E16E /* MBProgressHUD+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Category.h"; sourceTree = "<group>"; };
 		6BE747081ED965A80085E16E /* MBProgressHUD+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Category.m"; sourceTree = "<group>"; };
-		6BE7470B1ED968FF0085E16E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/健康.storyboard"; sourceTree = "<group>"; };
-		6BE7470D1ED968FF0085E16E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/设置.storyboard"; sourceTree = "<group>"; };
-		6BE7470F1ED968FF0085E16E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/睡眠.storyboard"; sourceTree = "<group>"; };
-		6BE747111ED968FF0085E16E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/运动.storyboard"; sourceTree = "<group>"; };
-		6BE747161ED96A890085E16E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
-		6BE747171ED96A890085E16E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/健康.strings"; sourceTree = "<group>"; };
-		6BE747181ED96A890085E16E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/设置.strings"; sourceTree = "<group>"; };
-		6BE747191ED96A890085E16E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/睡眠.strings"; sourceTree = "<group>"; };
-		6BE7471A1ED96A890085E16E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/运动.strings"; sourceTree = "<group>"; };
-		6BE7471B1ED96A8A0085E16E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		6BE747221ED96F940085E16E /* 健康.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "健康.storyboard"; sourceTree = "<group>"; };
+		6BE747231ED96F940085E16E /* 设置.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "设置.storyboard"; sourceTree = "<group>"; };
+		6BE747241ED96F940085E16E /* 睡眠.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "睡眠.storyboard"; sourceTree = "<group>"; };
+		6BE7472F1ED9705B0085E16E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/运动.storyboard"; sourceTree = "<group>"; };
 		6BF7E0981DC8D2B40052073C /* libFitCloud.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFitCloud.a; path = "lib/Debug-iphoneos/libFitCloud.a"; sourceTree = "<group>"; };
 		6BFE92701DD4C02500685350 /* libFitCloud.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFitCloud.a; path = lib/libFitCloud.a; sourceTree = "<group>"; };
 		BB9C57499BC2C6CBFCEF3A1A /* Pods-FitCloudDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitCloudDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitCloudDemo/Pods-FitCloudDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,10 +172,10 @@
 				6B5DD2531DC8A4E100788BDA /* AppDelegate.h */,
 				6B5DD2541DC8A4E200788BDA /* AppDelegate.m */,
 				6B5DD2591DC8A4E200788BDA /* Main.storyboard */,
-				6BE7470A1ED968FF0085E16E /* 健康.storyboard */,
-				6BE7470C1ED968FF0085E16E /* 设置.storyboard */,
-				6BE7470E1ED968FF0085E16E /* 睡眠.storyboard */,
-				6BE747101ED968FF0085E16E /* 运动.storyboard */,
+				6BE747221ED96F940085E16E /* 健康.storyboard */,
+				6BE747231ED96F940085E16E /* 设置.storyboard */,
+				6BE747241ED96F940085E16E /* 睡眠.storyboard */,
+				6BE747301ED9705B0085E16E /* 运动.storyboard */,
 				6B5DD25C1DC8A4E200788BDA /* Assets.xcassets */,
 				6B5DD25E1DC8A4E200788BDA /* LaunchScreen.storyboard */,
 				6B5DD2611DC8A4E200788BDA /* Info.plist */,
@@ -578,7 +572,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = 6B5DD2441DC8A4E100788BDA;
@@ -598,12 +591,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BE747121ED968FF0085E16E /* 健康.storyboard in Resources */,
-				6BE747141ED968FF0085E16E /* 睡眠.storyboard in Resources */,
-				6BE747151ED968FF0085E16E /* 运动.storyboard in Resources */,
+				6BE7472A1ED96FDE0085E16E /* 健康.storyboard in Resources */,
+				6BE7472B1ED96FDE0085E16E /* 设置.storyboard in Resources */,
+				6BE7472C1ED96FDE0085E16E /* 睡眠.storyboard in Resources */,
+				6BE7472E1ED9705B0085E16E /* 运动.storyboard in Resources */,
 				6B5DD2601DC8A4E200788BDA /* LaunchScreen.storyboard in Resources */,
 				6B5DD25D1DC8A4E200788BDA /* Assets.xcassets in Resources */,
-				6BE747131ED968FF0085E16E /* 设置.storyboard in Resources */,
 				6B5DD25B1DC8A4E200788BDA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -729,7 +722,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				6B5DD25A1DC8A4E200788BDA /* Base */,
-				6BE747161ED96A890085E16E /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -738,43 +730,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				6B5DD25F1DC8A4E200788BDA /* Base */,
-				6BE7471B1ED96A8A0085E16E /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		6BE7470A1ED968FF0085E16E /* 健康.storyboard */ = {
+		6BE747301ED9705B0085E16E /* 运动.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6BE7470B1ED968FF0085E16E /* Base */,
-				6BE747171ED96A890085E16E /* zh-Hans */,
-			);
-			name = "健康.storyboard";
-			sourceTree = "<group>";
-		};
-		6BE7470C1ED968FF0085E16E /* 设置.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6BE7470D1ED968FF0085E16E /* Base */,
-				6BE747181ED96A890085E16E /* zh-Hans */,
-			);
-			name = "设置.storyboard";
-			sourceTree = "<group>";
-		};
-		6BE7470E1ED968FF0085E16E /* 睡眠.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6BE7470F1ED968FF0085E16E /* Base */,
-				6BE747191ED96A890085E16E /* zh-Hans */,
-			);
-			name = "睡眠.storyboard";
-			sourceTree = "<group>";
-		};
-		6BE747101ED968FF0085E16E /* 运动.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6BE747111ED968FF0085E16E /* Base */,
-				6BE7471A1ED96A890085E16E /* zh-Hans */,
+				6BE7472F1ED9705B0085E16E /* Base */,
 			);
 			name = "运动.storyboard";
 			sourceTree = "<group>";
