@@ -6,7 +6,7 @@
 //  Copyright © 2016年 BillYang. All rights reserved.
 //
 
-#import "MBProgressHUD.h"
+#import <MBProgressHUD.h>
 
 @interface MBProgressHUD (Category)
 

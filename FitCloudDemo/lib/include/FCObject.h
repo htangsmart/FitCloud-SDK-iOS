@@ -6,72 +6,102 @@
 //  Copyright © 2016年 远征 马. All rights reserved.
 //
 
-
-
 #import <Foundation/Foundation.h>
 #import "FCDefine.h"
 
 
+/**
+ 数据模型协议
+ */
 @protocol FCObjectProtocal <NSObject>
 
 @optional
-/**
- @discussion 使用<i>data</i>初始化对象
- @param data data
- @return 对象模型
- */
 + (instancetype)objectWithData:(NSData*)data;
-
-/**
- @discussion 使用<i>value</i>初始化数据
- @param value value
- @return 对象模型
- */
 + (instancetype)objectWithValue:(NSNumber*)value;
 
 /**
- @discussion 遵循蓝牙协议的二进制数据,可用于蓝牙通讯写入数据
- @return <code>NSData</code>二进制数据
+ 经过协议编码的蓝牙数据
+
+ @return <i>NSData</i>类型的二进制数据
  */
-- (NSData*)writeBytes;
+- (NSData*)writeData;
 @end
+
 
 
 
 
 #pragma mark - FCUserObject
 
+/**
+ 用户资料,主要用途手表绑定、登录、同步等更新配置信息使用
+ */
 @interface FCUserObject : NSObject <FCObjectProtocal>
+
+/**
+ 用户id，由自己服务器为每个用户分配。登录、绑定都需要此参数
+ */
 @property (nonatomic, assign) UInt64 guestId;
-/*!
- @discussion 手机型号,如iphone6、iphone6s
- @property phoneModel
+
+/**
+ 手机型号,如iphone6、iphone6s,通过<i>FitCloudUtils</i>可以获取到。登录、绑定都需要此参数
  */
 @property (nonatomic, assign) UInt8 phoneModel;
+
+/**
+ 系统版本,通过<i>FitCloudUtils</i>可以获取到。登录、绑定都需要此参数
+ */
 @property (nonatomic, assign) UInt8 osVersion;
 
-/*!
- @discussion 用户年龄，默认1990出生
+/**
+ 用户年龄，默认1990出生。 绑定手表或者同步用户资料需要此参数
  */
 @property (nonatomic, assign) UInt32 age;
 
-/*!
- @discussion 性别。默认为女性 0
+/**
+ 性别，默认为女性 0。 绑定手表或者同步用户资料需要此参数
  */
 @property (nonatomic, assign) UInt32 sex;
+
+/**
+ 用户体重，默认60kg。绑定手表或者同步用户资料需要此参数
+ */
 @property (nonatomic, assign) UInt32 weight;
 
 /**
- @discussion 用户身高，女性默认 165cm, 男性默认 175cm
- @property height
+ 用户身高，女性默认 165cm, 男性默认 175cm。 绑定手表或者同步用户资料需要此参数
  */
 @property (nonatomic, assign) UInt32 height;
+
+/**
+ 收缩压参考值，默认125。绑定手表或者同步用户资料需要此参数
+ */
 @property (nonatomic, assign) UInt16 systolicBP;
+
+/**
+ 舒张压参考值，默认80。绑定手表或者同步用户资料需要此参数
+ */
 @property (nonatomic, assign) UInt16 diastolicBP;
+
+/**
+ 佩戴方式，左右佩戴？右手佩戴。 绑定手表需要此参数
+ */
 @property (nonatomic, assign) BOOL isLeftHandWearEnabled;
 
-- (NSData*)writeDataOfLoginOrBind;
-- (NSData*)writeDataOfUserProfile;
+/**
+ 手表功能开关数据，详细参数见 <i>FCFeaturesObject</i> ,手表绑定、登录或者同步历史数据时如果对此参数赋值，会将手表时间制式、单位等同步到手表，如果为nil则不同步此配置
+ */
+@property (nonatomic, strong) NSData  *featuresData;
+
+/**
+ 登录或者绑定手表时蓝牙需要写入的数据
+ */
+- (NSData*)writeDataForLoginOrBind;
+
+/**
+ 同步用户资料时蓝牙需要写入的数据
+ */
+- (NSData*)writeDataForUserProfile;
 @end
 
 
@@ -79,23 +109,46 @@
 
 #pragma mark - FCWeather
 
+/**
+ 天气
+ */
 @interface FCWeather : NSObject <FCObjectProtocal>
+
+/**
+ 当前温度
+ */
 @property (nonatomic, assign) NSInteger temperature;
+
+/**
+ 最高温度
+ */
 @property (nonatomic, assign) NSInteger maxTemperature;
+
+/**
+ 最低温度
+ */
 @property (nonatomic, assign) NSInteger minTemperature;
+
+/**
+ 天气状况，从服务器获取天气状态后，你需要转换为枚举值对应的天气
+ */
 @property (nonatomic, assign) FCWeatherState weatherState;
+
+/**
+ 当前天气所在城市
+ */
 @property (nonatomic, strong) NSString *city;
 @end
 
 
 
-#pragma mark - FCCycleOfAlarmClockObject
 
-/*!
- * @class FCCycleOfAlarmClockObject
- * @discussion 闹钟周期, 如果周一到周日无设置，则表示闹钟当日有效
+#pragma mark - FCAlarmClockCycleObject
+
+/**
+ 闹钟周期, 如果周一到周日无设置，则表示闹钟当日有效
  */
-@interface FCCycleOfAlarmClockObject : NSObject
+@interface FCAlarmClockCycleObject : NSObject
 @property (nonatomic, assign) BOOL monday;
 @property (nonatomic, assign) BOOL tuesday;
 @property (nonatomic, assign) BOOL wednesday;
@@ -104,16 +157,18 @@
 @property (nonatomic, assign) BOOL saturday;
 @property (nonatomic, assign) BOOL sunday;
 
-/*!
- * @discussion 通过闹钟周期<i>cycleValue</i>初始化<code>FCCycleOfAlarmClockObject</code>对象
- * @param cycleValue 闹钟周期数值
- * @return   <code>FCCycleOfAlarmClockObject</code> 实例对象
+/**
+ 通过闹钟周期<i>cycleValue</i>初始化<i>FCCycleOfAlarmClockObject</i>对象
+
+ @param cycleValue 闹钟周期数值
+ @return <i>FCCycleOfAlarmClockObject</i> 实例对象
  */
 + (instancetype)cycleWithValue:(NSNumber*)cycleValue;
 
-/*!
- * @discussion 获取闹钟周期数值（7 bits），从低位到高位表示周一到周日；如果所有字节为0，则表示闹钟当日有效。
- * @return 闹钟周期数值
+/**
+ 获取闹钟周期数值（7 bits），从低位到高位表示周一到周日；如果所有字节为0，则表示闹钟当日有效.
+
+ @return 闹钟周期数值
  */
 - (NSNumber*)cycleValue;
 @end
@@ -123,6 +178,9 @@
 
 #pragma mark - FCAlarmClockObject
 
+/**
+ 闹钟对象
+ */
 @interface FCAlarmClockObject : NSObject <FCObjectProtocal>
 @property (nonatomic, strong) NSNumber *alarmId;
 @property (nonatomic, strong) NSNumber *year;
@@ -132,10 +190,11 @@
 @property (nonatomic, strong) NSNumber *minute;
 @property (nonatomic, assign) BOOL isOn;
 @property (nonatomic, strong) NSNumber *cycle;
-@property (nonatomic, strong) FCCycleOfAlarmClockObject *cycleObject;
+@property (nonatomic, strong) FCAlarmClockCycleObject *cycleObject;
 
-/*!
- @discussion 响铃时间
+/**
+ 响铃时间
+
  @return 响铃时间字符串 格式："HH: mm"
  */
 - (NSString*)ringTime;
@@ -143,19 +202,19 @@
 
 
 #pragma mark - FCNotificationObject
-/*!
- * @class FCNotificationModel
- * @discussion The notification settings data model
+
+/**
+ 手表通知开关对象
  */
 @interface FCNotificationObject : NSObject <FCObjectProtocal>
-/*!
- * @property incomingCall
- * @discussion 手机有新来电时手表会通知用户
+
+/**
+ 手机来电通知，有新来电时手表会震动提醒
  */
 @property (nonatomic, assign) BOOL incomingCall;
-/*!
- * @property smsAlert
- * @discussion 手机有新短信时手表会通知用户
+
+/**
+ 短信通知，有新短信时手表会提醒
  */
 @property (nonatomic, assign) BOOL smsAlerts;
 @property (nonatomic, assign) BOOL qqMessage;
@@ -168,29 +227,29 @@
 @property (nonatomic, assign) BOOL whatsapp;
 @property (nonatomic, assign) BOOL line;
 @property (nonatomic, assign) BOOL facebookMessage;
-/*!
- * @property otherApp
- * @discussion 打开此项，其他app来消息时，手表会及时通知用户
+
+/**
+ 打开此项，其他app来消息时，手表会及时通知用户
  */
 @property (nonatomic, assign) BOOL otherApp;
-/*!
- * @property messageDisplayEnable
- * @discussion 消息内容是否在手表屏幕上显示，打开此项短消息内容会即时显示在手表屏幕上
+
+/**
+ 消息内容是否在手表屏幕上显示，打开此项短消息内容会即时显示在手表屏幕上
  */
 @property (nonatomic, assign) BOOL messageDisplayEnabled;
-/*!
- * @property bleDisconnectAlerts
- * @discussion 蓝牙断开提醒，当手表和手机断开连接，手机app会及时提醒用户
+
+/**
+ 蓝牙断开提醒，当手表和手机断开连接，手机app会及时提醒用户,此处需要用户自己去做app提醒
  */
-@property (nonatomic, assign) BOOL bleDisconnectAlerts;
-/*!
- * @property deviceDisconnectAlerts
- * @discussion 手表断开提醒，当手表和手机断开连接，手表会震动提醒
+@property (nonatomic, assign) BOOL appDisconnectAlerts;
+
+/**
+ 手表断开提醒，当手表和手机断开连接，手表会震动提醒
  */
-@property (nonatomic, assign) BOOL deviceDisconnectAlerts;
-/*!
- * @property heartRateMonitoringEnable
- * @discussion 心率实时监测，打开此开关，手表会持续采集用户心率数据
+@property (nonatomic, assign) BOOL watchDisconnectAlerts;
+
+/**
+ 心率实时监测，打开此开关，手表会持续采集用户心率数据
  */
 @property (nonatomic, assign) BOOL heartRateMonitoringEnabled;
 @end
@@ -199,10 +258,9 @@
 #pragma mark - FCWatchScreenDisplayObject
 
 /**
- @discussion 手表屏幕显示设置，屏幕显示设置项需要先根据传感器标志来判断，如果传感器标志功能不存在，则屏幕设置项需要设置为无效
- @class FCWatchScreenDisplayObject
+ 手表屏幕显示设置，屏幕显示设置项需要先根据传感器标志来判断，如果传感器标志功能不存在，则屏幕设置项需要设置为无效
  */
-@interface FCWatchScreenDisplayObject : NSObject <FCObjectProtocal>
+@interface FCScreenDisplayConfigObject : NSObject <FCObjectProtocal>
 @property (nonatomic, assign) BOOL dateTime;
 @property (nonatomic, assign) BOOL stepCount;
 @property (nonatomic, assign) BOOL calorie;
@@ -220,40 +278,40 @@
 
 #pragma mark - FCFeaturesObject
 
-/*!
- @discussion 手表功能开关设置对象
- @class FCFeaturesObject
+/**
+ 手表功能开关设置对象
  */
 @interface FCFeaturesObject : NSObject <FCObjectProtocal>
 
-/*!
- @discussion 反动手腕时点亮手表屏幕
- @property flipWristToLightScreen
+/**
+ 翻动手腕时点亮手表屏幕
  */
 @property (nonatomic, assign) BOOL flipWristToLightScreen;
 
-/*!
- @discussion 加强测量，心率等测量不出来时，手环会开启加强光反射
- @property enhanceSurveyEnabled
+/**
+ 加强测量，心率等测量不出来时，手环会开启加强光反射
  */
 @property (nonatomic, assign) BOOL enhanceSurveyEnabled;
 
-
-/*!
- @discussion 12小时时间制式，如果为NO，则使用24小时时间制式
- @property twelveHoursSystem
+/**
+ 12小时时间制式，如果为NO，则使用24小时时间制式
  */
 @property (nonatomic, assign) BOOL twelveHoursSystem;
+
+
+/**
+ 距离和重量单位，0 为公制单位  1 英制单位
+ */
+@property (nonatomic, assign) BOOL isImperialUnits;
 @end
 
 
-#pragma mark -  FCSensorTagObject
+#pragma mark -  FCSensorFlagObject
 
 /**
- @discussion 传感器标志（受不同手环型号影响），部分UI功能会根据传感器标志动态配置。
- @class FCSensorTagObject
+ 传感器标志。硬件号亦为手环传感器或功能标志位，组成的32bit，每个bit代表某一传感器或功能在该项目是否存在，手机APP根据该硬件号判断在手机APP上是否显示该功能和是否同步该项数据，详细请看下面定义
  */
-@interface FCSensorTagObject : NSObject <FCObjectProtocal>
+@interface FCSensorFlagObject : NSObject <FCObjectProtocal>
 @property (nonatomic, assign) BOOL heartRate;
 @property (nonatomic, assign) BOOL ultraviolet;
 @property (nonatomic, assign) BOOL weather;
@@ -262,67 +320,95 @@
 @property (nonatomic, assign) BOOL breathingRate;
 
 /**
- @discussion 心率加强监测
- @property enhanceSurvey
+ 心率加强监测，对于一些测不出心率的特殊人群，开启加强检测有助于心率测量
  */
 @property (nonatomic, assign) BOOL enhanceSurvey;
-@property (nonatomic, assign) BOOL sleepMonitoring;
+
+/**
+ 七天历史睡眠总数据,如果有此标志位，可以同步七天睡眠总数据
+ */
+@property (nonatomic, assign) BOOL sleepHistoryOfSevenDays;
+
+/**
+ 心电功能标志
+ */
+@property (nonatomic, assign) BOOL ECG;
 @end
+
+
+/*!
+ 手环页面标号。手环页面标号为该项目手环上能显示的所有页面的标志，共32bit，每个bit代表一个页面，手机APP上根据该标号来确定有哪些显示页面可以给用户设置，具体每一位代表哪一个页面请看下面定义
+ */
+@interface FCPageDisplayFlagObject : NSObject
+@property (nonatomic, assign) BOOL dateTime;
+@property (nonatomic, assign) BOOL stepCount;
+@property (nonatomic, assign) BOOL calorie;
+@property (nonatomic, assign) BOOL distance;
+@property (nonatomic, assign) BOOL sleep;
+@property (nonatomic, assign) BOOL heartRate;
+@property (nonatomic, assign) BOOL bloodOxygen;
+@property (nonatomic, assign) BOOL bloodPressure;
+@property (nonatomic, assign) BOOL weatherForecast;
+@property (nonatomic, assign) BOOL findPhone;
+@property (nonatomic, assign) BOOL displayId;
+@end
+
+
 
 
 #pragma mark - FCVersionDataObject
 
 /**
- @discussion 手表系统版本信息
- @class FCVersionDataObject
+ 手表系统版本信息
  */
 @interface FCVersionDataObject : NSObject <FCObjectProtocal>
+
 /**
- @discussion 项目的编号
- @property fwNumberData
+ 项目的编号
  */
 @property (nonatomic, strong) NSData *fwNumberData;
 
 /**
- @discussion 硬件号亦为手环传感器或功能标志位，组成的32bit，每个bit代表某一传感器或功能在该项目是否存在，手机APP根据该硬件号判断在手机APP上是否显示该功能和是否同步该项数据，
- @property  sensorTagData
- @see <code>FCSensorTagObject</code>
+ 硬件号亦为手环传感器或功能标志位，组成的32bit，每个bit代表某一传感器或功能在该项目是否存在，手机APP根据该硬件号判断在手机APP上是否显示该功能和是否同步该项数据，
+ 
+ @see FCSensorTagObject
  */
 @property (nonatomic, strong) NSData *sensorTagData;
 
 /**
- @discussion 手环页面标号为该项目手环上能显示的所有页面的标志，共32bit，每个bit代表一个页面，手机APP上根据该标号来确定有哪些显示页面可以给用户设置。此处数据暂不使用，可以通过<code>FCSystemSettingObject</code> 的 <i>wsdisplayData</i>获取设置信息  4byte
- @property pageDisplayData
- @see <code>FCWatchScreenDisplayObject</code>
+ 手环页面标号为该项目手环上能显示的所有页面的标志，共32bit，每个bit代表一个页面，手机APP上根据该标号来确定有哪些显示页面可以给用户设置。此处数据暂不使用，可以通过<i>FCSystemSettingObject</i> 的 <i>wsdisplayData</i>获取设置信息  4byte
+ 
+ @see FCWatchScreenDisplayObject
  */
 @property (nonatomic, strong) NSData *pageDisplayData;
 
 /**
- @discussion 手环底层patch的版本号 6byte
- @property patchData
+ 手环底层patch的版本号 6byte
  */
 @property (nonatomic, strong) NSData *patchData;
 
-
 /**
- @discussion flash文件版本号 4byte
- @property flashData
+ flash文件版本号 4byte
  */
 @property (nonatomic, strong) NSData *flashData;
 
 /**
- @discussion 固件app版本号 4byte
- @property fwAppData
+ 固件app版本号 4byte
  */
 @property (nonatomic, strong) NSData *fwAppData;
 
 /**
- @discussion 固件版本时间序号 4byte
- @property timeSeqNumData
+ 固件版本时间序号 4byte
  */
 @property (nonatomic, strong) NSData *timeSeqNumData;
 
-- (FCSensorTagObject*)sensorTagObject;
+
+/**
+ 通过系统版本数据获取传感器标志位对象
+
+ @return 传感器标志对象
+ */
+- (FCSensorFlagObject*)sensorTagObject;
 
 @end
 
@@ -330,27 +416,24 @@
 
 
 #pragma mark - FCHealthMonitoringObject
-/*!
- * @discussion 手表健康定时监测
- * @class FCHealthMonitoringObject
+
+/**
+ 手表健康定时监测
  */
 @interface FCHealthMonitoringObject : NSObject <FCObjectProtocal>
 
-/*!
- * @discussion 健康监测开关状态
- * @property isOn
+/**
+ 健康监测开关状态
  */
 @property (nonatomic, assign) BOOL isOn;
 
-/*!
- * @discussion 健康监测开始时间（从0点开始的分钟数）.
- * @property stMinute
+/**
+ 健康监测开始时间（从0点开始的分钟数）.
  */
 @property (nonatomic, assign) NSUInteger stMinute;
 
-/*!
- * @discussion 健康监测结束时间（从0点开始的分钟数）.
- * @property edMinute
+/**
+ 健康监测结束时间（从0点开始的分钟数）.
  */
 @property (nonatomic, assign) NSUInteger edMinute;
 @end
@@ -359,37 +442,33 @@
 
 
 #pragma mark - FCSedentaryReminderObject
-/*!
- * @discussion 久坐提醒,手表会在长时间不运动时发出提醒，通知用户起身运动
- * @class FCSedentaryReminderObject
+
+/**
+ 久坐提醒,手表会在长时间不运动时发出提醒，通知用户起身运动
  */
 @interface FCSedentaryReminderObject : NSObject <FCObjectProtocal>
 
-/*!
- * @property isOn
- * @discussion 久坐提醒开关
+/**
+ 久坐提醒开关
  */
 @property (nonatomic, assign) BOOL isOn;
 
-/*!
- * @property restTimeNotDisturbEnabled
- * @discussion 午休免打扰
+/**
+ 午休免打扰，打开此项，午休时间将不会提醒
  */
 @property (nonatomic, assign) BOOL restTimeNotDisturbEnabled;
 
-/*!
- * @property stMinute
- * @discussion 久坐提醒开始时间，数值为从0开始的分钟数
+/**
+ 久坐提醒开始时间，数值为从0开始的分钟数
  */
 @property (nonatomic, assign) NSUInteger stMinute;
 
-/*!
- * @property edMinute
- * @discussion 久坐提醒结束时间，数值为从0开始的分钟数
+/**
+ 久坐提醒结束时间，数值为从0开始的分钟数
  */
 @property (nonatomic, assign) NSUInteger edMinute;
 
-/*!
+/**
  判断是否处于午休时间，午休时间为12:00-14:00,如果处于这个范围则为午休时间。
  
  @return 是否处于午休时间
@@ -404,68 +483,65 @@
 
 #pragma mark - FCWatchSettingsObject
 
-/*!
- @discussion 手表配置
- @class FCWatchSettingsObject
+/**
+ 手表配置
  */
 @interface FCWatchSettingsObject : NSObject <FCObjectProtocal>
 
-/*!
- @discussion 消息通知开关配置 4byte
- @property nfSettingData
- @see <code>FCNotificationObject</code>
+/**
+ 消息通知开关配置 4byte
+ 
+ @see FCNotificationObject
  */
 @property (nonatomic, strong) NSData *nfSettingData;
 
-/*!
- @discussion 手表屏幕显示设置 2byte
- @property wsdisplayData
- @see <code>FCWatchScreenDisplayObject</code>
+/**
+ 手表屏幕显示设置 2byte
+ 
+ @see FCWatchScreenDisplayObject
  */
 @property (nonatomic, strong) NSData *wsdisplayData;
 
-/*!
- @discussion 手表功能开关配置 2byte
- @property featuresData
+/**
+ 手表功能开关配置 2byte
+ 
  @see FCFeaturesObject
  */
 @property (nonatomic, strong) NSData *featuresData;
 
-/*!
- @discussion 手表系统软硬件版本信息 32byte
- @property versionData
+/**
+ 手表系统软硬件版本信息 32byte
+ 
  @see FCVersionDataObject
  */
 @property (nonatomic, strong) NSData *versionData;
 
-/*!
- @discussion 健康定时监测 5byte
- @property healthMonitoringData
- @see <code>FCHealthMonitoringObject</code>
+/**
+ 健康定时监测 5byte
+ 
+ @see FCHealthMonitoringObject
  */
 @property (nonatomic, strong) NSData *healthMonitoringData;
 
-/*!
- @discussion 久坐提醒数据 5bytes
- @property sedentaryReminderData
- @see <code>FCSedentaryReminderObject</code>
+/**
+ 久坐提醒数据 5bytes
+ 
+ @see FCSedentaryReminderObject
  */
 @property (nonatomic, strong) NSData *sedentaryReminderData;
 
-/*!
- @discussion 默认血压
- @property defaultBloodPressureData
+/**
+ 默认血压
  */
 @property (nonatomic, strong) NSData *defaultBloodPressureData;
 
-/*!
- @discussion 喝水提醒
- @property drinkReminderData
+/**
+ 喝水提醒
  */
 @property (nonatomic, strong) NSData *drinkReminderData;
 
 - (FCNotificationObject*)messageNotificationObject;
-- (FCWatchScreenDisplayObject*)watchScreenDisplayObject;
+- (FCScreenDisplayConfigObject*)watchScreenDisplayObject;
 - (FCFeaturesObject*)featuresObject;
 - (FCVersionDataObject*)versionObject;
 - (FCHealthMonitoringObject*)healthMonitoringObject;
@@ -478,21 +554,23 @@
 
 #pragma mark - FCDataObject
 
+/**
+ 手表同步数据模型
+ */
 @interface FCDataObject : NSObject
-/*!
- * @property dataType
- * @discussion 数据类型，用于区分不同的数据，详细见<i>FCDataType</i>
+
+/**
+ 数据类型，用于区分不同的数据，详细见<i>FCDataType</i>
  */
 @property (nonatomic, assign) FCDataType DataType;
-/*!
- * @property timestamp
- * @discussion 自1970开始的时间戳
+
+/**
+ 自1970开始的时间戳
  */
 @property (nonatomic, strong) NSNumber *timeStamp;
 
-/*!
- * @property value
- * @discussion 运动和健康数据，dataType为一下类型时分别对应一下数据
+/**
+ 运动和健康数据，dataType为一下类型时分别对应一下数据
  <i>FCDataTypeExercise</i>：value为运动的步数；
  <i>FCDataTypeSleep</i>：value为睡眠状态（1：深睡眠 2：浅睡眠 3：清醒）；
  <i>FCDataTypeHeartRate</i>：value为平均心率；

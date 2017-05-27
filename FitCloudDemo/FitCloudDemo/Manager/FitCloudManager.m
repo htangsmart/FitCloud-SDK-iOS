@@ -11,6 +11,7 @@
 
 
 @implementation FitCloudManager
+
 + (instancetype)manager
 {
     static FitCloudManager *instance = nil;
@@ -25,15 +26,6 @@
 {
     // Registration Notification Service
     [self registerNotification];
-    
-    // Receive Camera Take a photo command
-    [[FitCloud shared]setTakePicturesBlock:^{
-    }];
-    
-    // Receive a command from the watch to find the phone
-    [[FitCloud shared]setFindMobilePhoneBlock:^{
-        
-    }];
     
 }
 

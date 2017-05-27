@@ -12,14 +12,32 @@
 #import <UIKit/UIKit.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-/*!
- * @enum FCDataType
- * @discussion  同步数据的类型，用于区分FCDataModel所属的数据
+/**
+ 蓝牙状态定义
+ */
+typedef NS_ENUM(NSInteger, FCManagerState) {
+    /*! 未知错误*/
+    FCManagerStateUnknown,
+    /*! 蓝牙重置状态*/
+    FCManagerStateResetting,
+    /*! 设备不支持状态*/
+    FCManagerStateUnsupported,
+    /*! 设备未授权状态*/
+    FCManagerStateUnauthorized,
+    /*! 蓝牙关闭*/
+    FCManagerStatePoweredOff,
+    /*! 蓝牙打开*/
+    FCManagerStatePoweredOn,
+};
+
+
+/**
+ 同步数据的类型，用于区分FCDataObject数据类型
  */
 typedef NS_ENUM(NSInteger, FCDataType)
 {
     /*!  默认未知类型*/
-    FCDataTypeUnknown,
+    FCDataTypeUnknown = 0,
     /*!  运动量*/
     FCDataTypeExercise,
     /*!  睡眠*/
@@ -32,13 +50,13 @@ typedef NS_ENUM(NSInteger, FCDataType)
     FCDataTypeBloodPressure,
     /*!  呼吸频率*/
     FCDataTypeBreathingRate,
+    /*!  七天日总睡眠数据*/
+    FCDataTypeSevenDaysSleepData,
 };
 
 
-
-/*!
- * @enum FCLoginSyncType
- * @discussion 登录设备同步流程
+/**
+ 登录设备同步流程
  */
 typedef NS_ENUM(NSInteger, FCLoginSyncType)
 {
@@ -46,19 +64,17 @@ typedef NS_ENUM(NSInteger, FCLoginSyncType)
     FCLoginSyncTypeUnknown = 0,
     /*! 登录设备*/
     FCLoginSyncTypeLogin = 1,
+    /*! 同步功能开关设置到手表*/
+    FCLoginSyncTypeFeatures = 2,
     /*! 同步系统时间*/
-    FCLoginSyncTypeTime = 2,
-    /*! 时间制式，根据系统制式类型来判断是采用12小时制还是24小时制*/
-    FCLoginSyncTypeHourSystem = 3,
+    FCLoginSyncTypeTime = 3,
     /*! 结束*/
     FCLoginSyncTypeEnd = 4,
 };
 
 
-
-/*!
- * @enum FCBondSyncType
- * @discussion 绑定设备同步流程
+/**
+ 绑定设备同步流程
  */
 typedef NS_ENUM(NSInteger, FCBindSyncType)
 {
@@ -66,59 +82,58 @@ typedef NS_ENUM(NSInteger, FCBindSyncType)
     FCBindSyncTypeUnknown = 0,
     /*! 绑定设备*/
     FCBindSyncTypeBond = 1,
+    /*! 同步功能开关设置到手表*/
+    FCBindSyncTypeFeatures = 2,
     /*! 同步系统时间到手表*/
-    FCBindSyncTypeTime = 2,
+    FCBindSyncTypeTime = 3,
     /*! 同步用户资料到手表*/
-    FCBindSyncTypeUserInfo = 3,
+    FCBindSyncTypeUserInfo = 4,
     /*! 同步佩戴方式到手表*/
-    FCBindSyncTypeWearingStyle = 4,
+    FCBindSyncTypeWearingStyle = 5,
     /*! 同步默认血压到手表*/
-    FCBindSyncTypeDefaultBloodPressure = 5,
-    /*! 同步手表系统设置*/
-    FCBindSyncTypeSystemSetting = 6,
+    FCBindSyncTypeDefaultBloodPressure = 6,
+    /*! 同步手表系统设置到手机*/
+    FCBindSyncTypeSystemSetting = 7,
     /*! 结束*/
-    FCBindSyncTypeEnd = 7,
+    FCBindSyncTypeEnd = 8,
 };
 
-
-
-/*!
- * @enum FCHistoryDataSyncType
- * @discussion 历史数据同步流程（部分同步功能是否执行由传感器标志决定）
+/**
+ 历史数据同步流程（部分同步功能是否执行由传感器标志决定
  */
 typedef NS_ENUM(NSInteger, FCHistoryDataSyncType)
 {
     /*! 默认类型*/
     FCHistoryDataSyncTypeUnknown = 0,
+    /*! 同步时间制式*/
+    FCHistoryDataSyncTypeFeatures = 1,
     /*! 同步系统时间*/
-    FCHistoryDataSyncTypeTime = 1,
+    FCHistoryDataSyncTypeTime = 2,
     /*! 同步各类型的日志数据（包括运动总步数、总距离、总卡路里等）*/
-    FCHistoryDataSyncTypeTotalData = 2,
+    FCHistoryDataSyncTypeTotalData = 3,
     /*! 同步运动量详细记录*/
-    FCHistoryDataSyncTypeExercise = 3,
+    FCHistoryDataSyncTypeExercise = 4,
     /*! 同步睡眠详细记录*/
-    FCHistoryDataSyncTypeSleep = 4,
+    FCHistoryDataSyncTypeSleep = 5,
     /*! 同步血氧详细记录*/
-    FCHistoryDataSyncTypeBloodOxygen = 5,
+    FCHistoryDataSyncTypeBloodOxygen = 6,
     /*! 同步血压详细记录*/
-    FCHistoryDataSyncTypeBloodPressure = 6,
+    FCHistoryDataSyncTypeBloodPressure = 7,
     /*! 同步呼吸频率详细记录*/
-    FCHistoryDataSyncTypeBreathingRate = 7,
+    FCHistoryDataSyncTypeBreathingRate = 8,
     /*! 同步心率详细记录*/
-    FCHistoryDataSyncTypeHeartRate = 8,
+    FCHistoryDataSyncTypeHeartRate = 9,
     /*! 同步紫外线详细记录*/
-    FCHistoryDataSyncTypeUltraviolet = 9,
+    FCHistoryDataSyncTypeUltraviolet = 10,
     /*! 同步睡眠总数据（包含七天以内的深睡眠和浅睡眠时长）*/
-    FCHistoryDataSyncTypeTotalSleep = 10,
+    FCHistoryDataSyncTypeSevenDaysSleepData = 11,
     /*! 结束*/
-    FCHistoryDataSyncTypeEnd = 11,
+    FCHistoryDataSyncTypeEnd = 12,
 };
 
 
-
-/*!
- * @enum FCSyncType
- * @discussion 手环数据同步标志
+/**
+ 手环数据同步标志
  */
 typedef NS_ENUM(NSInteger, FCSyncType) {
     
@@ -126,170 +141,173 @@ typedef NS_ENUM(NSInteger, FCSyncType) {
     FCSyncTypeUnknown = 0,
     
     /*! 解绑设备*/
-    FCSyncTypeUnBindDevice = 18,
+    FCSyncTypeUnBindDevice = 1,
     
     /*! 登录设备*/
-    FCSyncTypeLoginDevice = 19,
+    FCSyncTypeLoginDevice = 2,
     
     /*! 绑定设备*/
-    FCSyncTypeBindDevice = 20,
+    FCSyncTypeBindDevice = 3,
     
-    /*! Find the watch*/
-    FCSyncTypeFindTheWatch = 23,
+    /*! 查找手表*/
+    FCSyncTypeFindTheWatch = 4,
     
-    /*! Synchronize the alarm list*/
-    FCSyncTypeGetAlarmList = 24,
+    /*! 获取闹钟列表*/
+    FCSyncTypeGetAlarmList = 5,
     
-    /*! Alarm settings*/
-    FCSyncTypeSetAlarmData = 25,
+    /*! 闹钟设置*/
+    FCSyncTypeSetAlarmData = 6,
     
-    /*! Get power and charge status*/
-    FCSyncTypeBatteryPowerAndChargingState = 26,
+    /*! 电量和充电状态获取*/
+    FCSyncTypeGetBatteryLevelAndState = 7,
     
-    /*! Get the system settings*/
-    FCSyncTypeGetSystemSettings = 27,
+    /*! 系统设置同步*/
+    FCSyncTypeGetSystemSettings = 8,
     
-    /*! Watch display settings*/
-    FCSyncTypeDisplaySettings = 28,
+    /*! 屏幕显示设置*/
+    FCSyncTypeUpdateDisplaySettings = 9,
     
-    /*! Watch function switch settings*/
-    FCSyncTypeFeaturesSettings = 29,
+    /*! 功能开关设置*/
+    FCSyncTypeUpdateFeaturesSettings = 10,
     
-    /*! notification switch settings*/
-    FCSyncTypeNotificationSettings = 30,
+    /*! 通知开关设置*/
+    FCSyncTypeUpdateNotificationSettings = 11,
     
-    /*! The sedentary reminder setting*/
-    FCSyncTypeSedentaryReminder = 31,
+    /*! 久坐提醒*/
+    FCSyncTypeSetSedentaryReminder = 12,
     
-    /*! Health monitoring settings*/
-    FCSyncTypeHealthMonitoring = 32,
+    /*! 健康监测*/
+    FCSyncTypeSetHealthMonitoring = 13,
     
-    /*! Drink water to remind*/
-    FCSyncTypeDrinkReminder = 33,
+    /*! 喝水提醒*/
+    FCSyncTypeSetDrinkReminder = 14,
     
-    /*! Wearing style settings*/
-    FCSyncTypeWearingStyle = 34,
+    /*! 佩戴方式*/
+    FCSyncTypeSetWearingStyle = 15,
     
-    /*! Camera states*/
-    FCSyncTypeCameraState = 35,
+    /*! 相机状态设置*/
+    FCSyncTypeSetCameraState = 16,
     
-    /*! Default Blood Pressure*/
-    FCSyncTypeDefaultBloodPressure = 36,
+    /*! 默认血压设置*/
+    FCSyncTypeSetDefaultBloodPressure = 17,
     
-    /*! Weather settings*/
-    FCSyncTypeUpdateWeather = 37,
+    /*! 天气更新*/
+    FCSyncTypeUpdateWeather = 18,
     
-    /*! Set the user profile*/
-    FCSyncTypeUserProfile = 38,
+    /*! 同步用户资料*/
+    FCSyncTypeSetUserProfile = 19,
     
-    /*! Historical data synchronization*/
-    FCSyncTypeHistoryData = 39,
+    /*! 历史数据同步*/
+    FCSyncTypeGetHistoryData = 20,
     
-    /*! Turns on real-time health sync*/
-    FCSyncTypeOpenRealtimeSync = 47,
+    /*! 打开健康实时同步*/
+    FCSyncTypeOpenRealtimeSync = 21,
     
-    /*! Turn off health real-time synchronization*/
-    FCSyncTypeCloseRealtimeSync = 48,
+    /*! 关闭健康实时同步*/
+    FCSyncTypeCloseRealtimeSync = 22,
     
-    /*! Firmware upgrade*/
-    FCSyncTypeFirmwareUpgrade = 49,
+    /*! 请求固件升级*/
+    FCSyncTypeFirmwareUpgrade = 23,
     
-    /*! Firmware version*/
-    FCSyncTypeFirmwareVersion = 50,
+    /*! 获取固件版本*/
+    FCSyncTypeGetFirmwareVersion = 24,
     
-    /*! Found my cell phone.*/
-    FCSyncTypeFoundPhoneReplay = 51,
+    /*! 发现手机回复*/
+    FCSyncTypeFoundPhoneReplay = 25,
     
-    /*! Get the MAC address of the watch*/
-    FCSyncTypeGetMacAddress = 52,
+    /*! 获取手表mac地址*/
+    FCSyncTypeGetMacAddress = 26,
     
     /*! 打开睡眠监测设定监测时间*/
-    FCSyncTypeOpenSleepMonitoring = 54,
+    FCSyncTypeOpenSleepMonitoring = 27,
     
     /*! 关闭睡眠监测*/
-    FCSyncTypeCloseSleepMonitoring = 55,
+    FCSyncTypeCloseSleepMonitoring = 28,
     
-    /*! 日总睡眠数据*/
-    FCSyncTypeTotalSleepData = 56,
-    
-    /*! 历史数据同步同步七天睡眠日总数据*/
-    FCSyncTypeHistoryTotalSleepData = 57,
-    
-    /*! Finished*/
+    /*! 结束*/
     FCSyncTypeEnd = 100,
 };
 
 
-/*!
- * @enum FCRTSyncType
- * @discussion The type of operation for real-time detection of health
+/**
+ 实时同步类型
  */
 typedef NS_ENUM(NSInteger, FCRTSyncType)
 {
-    /*! The default type*/
-    FCRTSyncTypeNone = 0,
-    
-    /*! Real time measurement of heart rate*/
+    /*! 默认*/
+    FCRTSyncTypeUnknown = 0,
+    /*! 心率*/
     FCRTSyncTypeHeartRate,
-    
-    /*! Real time measurement of blood oxygen*/
+    /*! 实时血氧*/
     FCRTSyncTypeBloodOxygen,
-    
-    /*! Real time measurement of blood pressure*/
+    /*! 血压e*/
     FCRTSyncTypeBloodPressure,
-    
-    /*! Real time measurement of respiratory rate*/
+    /*! 呼吸频率*/
     FCRTSyncTypeBreathingRate,
+    /*! 心电图*/
+    FCRTSyncTypeECG,
 };
 
-/*!
- * @enum FCSyncResponseState
- * @discussion  synchronization response status
+
+/**
+ 健康实时同步操作类型
+ */
+typedef NS_ENUM(NSInteger, FCHealthRTSyncType)
+{
+    /*! 未知健康同步操作*/
+    FCHealthRTSyncTypeUnKnown = 0,
+    /*! 打开健康实时同步*/
+    FCHealthRTSyncTypeOpenRTSync,
+    /*! 关闭健康实时同步*/
+    FCHealthRTSyncTypeCloseRTSync,
+    /*! 打开心电检测*/
+    FCHealthRTSyncTypeOpenECG,
+    /*! 关闭心电检测*/
+    FCHealthRTSyncTypeCloseECG,
+};
+
+/**
+ 同步响应结果
  */
 typedef NS_ENUM(NSInteger, FCSyncResponseState) {
 
-    /*! The default type*/
-    FCSyncResponseStateNone = 0,
-    
-    /*! 蓝牙未打开*/
-    FCSyncResponseStatePowerOff = 1,
-    
-    /*! Bluetooth is not connected*/
-    FCSyncResponseStateNotConnected = 2,
-    
+    /*! 未知类型*/
+    FCSyncResponseStateUnKnown = 0,
+    /*! 当前设备不支持蓝牙4.0*/
+    KRSyncResponseStateUnsupported = 1,
+    /*! 蓝牙未授权*/
+    KRSyncResponseStateUnauthorized = 2,
+    /*! 蓝牙重置状态*/
+    KRSyncResponseStateResetting = 3,
+    /*! 蓝牙未连接*/
+    FCSyncResponseStateNotConnected = 4,
     /*! 蓝牙关闭，主动关闭蓝牙时回调*/
-    FCSyncResponseStateTurnedOff = 3,
-    
+    FCSyncResponseStatePowerOff = 5,
+    /*! 蓝牙打开，主动打开蓝牙时回调*/
+    FCSyncResponseStatePowerOn = 6,
     /*! 蓝牙断开连接，主动或者被动断开都会调用*/
-    FCSyncResponseStateDisconnect = 4,
-    
+    FCSyncResponseStateDisconnect = 7,
     /*! 同步参数错误*/
-    FCSyncResponseStateParameterError = 5,
-    
-    /*! Synchronizing data*/
-    FCSyncResponseStateSyncing = 6,
-    
-    /*! Synchronization succeeded*/
-    FCSyncResponseStateSuccess = 7,
-    
-    /*! Synchronization failed*/
-    FCSyncResponseStateError = 8,
-    
-    /*! Synchronization timeout*/
-    FCSyncResponseStateTimeOut = 9,
-    
-    /*! Healthy real-time synchronization timeout*/
-    FCSyncResponseStateRTTimeOut = 10,
-    
-    /*! Power is too low to upgrade*/
-    FCSyncResponseStateLowPower = 11,
+    FCSyncResponseStateParameterError = 8,
+    /*! 正在同步，蓝牙正在同步时发起同步操作会返回此结果*/
+    KRSyncResponseStateSynchronizing = 9,
+    /*! 同步响应成功*/
+    FCSyncResponseStateSuccess = 10,
+    /*! 同步响应失败*/
+    FCSyncResponseStateError = 11,
+    /*! 同步响应超时*/
+    FCSyncResponseStateTimeOut = 12,
+    /*! 健康实时同步超时*/
+    FCSyncResponseStateRTTimeOut = 13,
+    /*! 心电检测数据同步超时*/
+    FCSyncResponseStateECGTimeOut = 14,
+    /*! 低电量模式，固件升级时低电量提示*/
+    FCSyncResponseStateLowPower = 15,
 };
 
 
-
-/*!
- * @enum FCWeatherState
- * @discussion  天气状态，你需要把自己获取的天气转换成以下状态同步到手表，手表才能显示正确的天气状态
+/**
+ 天气状态，你需要把自己获取的天气转换成以下状态同步到手表，手表才能显示正确的天气状态
  */
 typedef NS_ENUM(NSInteger, FCWeatherState)
 {
