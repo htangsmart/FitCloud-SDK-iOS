@@ -22,6 +22,7 @@
     [super didReceiveMemoryWarning];
 }
 
+
 #pragma mark - lifeStyle
 
 - (void)viewDidLoad
@@ -39,7 +40,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 7;
+    return 6;
 }
 
 
@@ -82,7 +83,11 @@
         cell.imageView.image = [UIImage imageNamed:@"ico_upgrade"];
         cell.textLabel.text = @"固件升级";
     }
-    
+    else if (indexPath.row == 5)
+    {
+        cell.imageView.image = [UIImage imageNamed:@"ico_other"];
+        cell.textLabel.text = @"其他设置";
+    }
     return cell;
 }
 

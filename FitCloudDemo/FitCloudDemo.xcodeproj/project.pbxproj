@@ -26,6 +26,13 @@
 		6BE746FD1ED95F360085E16E /* FCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE746FC1ED95F360085E16E /* FCTabBarController.m */; };
 		6BE747091ED965A80085E16E /* MBProgressHUD+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE747081ED965A80085E16E /* MBProgressHUD+Category.m */; };
 		6BF31A5E1ED98A60000454EB /* FCSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF31A5D1ED98A60000454EB /* FCSettingViewController.m */; };
+		6BF31A621ED9A743000454EB /* FCProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF31A611ED9A743000454EB /* FCProfileViewController.m */; };
+		6BF31A661ED9A75D000454EB /* FCNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF31A651ED9A75D000454EB /* FCNotificationViewController.m */; };
+		6BF31A6A1ED9A76F000454EB /* FCUnitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF31A691ED9A76F000454EB /* FCUnitViewController.m */; };
+		6BF31A6E1ED9A79B000454EB /* FCFrimwareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF31A6D1ED9A79B000454EB /* FCFrimwareViewController.m */; };
+		6BF31A721ED9A7B1000454EB /* FCAlarmConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF31A711ED9A7B1000454EB /* FCAlarmConfigViewController.m */; };
+		6BF31A761ED9A7C7000454EB /* FCOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF31A751ED9A7C7000454EB /* FCOtherViewController.m */; };
+		6BF31A7A1ED9A7E6000454EB /* FCDeviceInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF31A791ED9A7E6000454EB /* FCDeviceInfoViewController.m */; };
 		6BFE92711DD4C02500685350 /* libFitCloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFE92701DD4C02500685350 /* libFitCloud.a */; };
 		CB7CB9E6F4E6054DD7B94E79 /* libPods-FitCloudDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2577CFEC4DEBAB49E54AAD7 /* libPods-FitCloudDemo.a */; };
 /* End PBXBuildFile section */
@@ -88,6 +95,20 @@
 		6BE747081ED965A80085E16E /* MBProgressHUD+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Category.m"; sourceTree = "<group>"; };
 		6BF31A5C1ED98A60000454EB /* FCSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCSettingViewController.h; sourceTree = "<group>"; };
 		6BF31A5D1ED98A60000454EB /* FCSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCSettingViewController.m; sourceTree = "<group>"; };
+		6BF31A601ED9A743000454EB /* FCProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCProfileViewController.h; sourceTree = "<group>"; };
+		6BF31A611ED9A743000454EB /* FCProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCProfileViewController.m; sourceTree = "<group>"; };
+		6BF31A641ED9A75D000454EB /* FCNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCNotificationViewController.h; sourceTree = "<group>"; };
+		6BF31A651ED9A75D000454EB /* FCNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCNotificationViewController.m; sourceTree = "<group>"; };
+		6BF31A681ED9A76F000454EB /* FCUnitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCUnitViewController.h; sourceTree = "<group>"; };
+		6BF31A691ED9A76F000454EB /* FCUnitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCUnitViewController.m; sourceTree = "<group>"; };
+		6BF31A6C1ED9A79B000454EB /* FCFrimwareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCFrimwareViewController.h; sourceTree = "<group>"; };
+		6BF31A6D1ED9A79B000454EB /* FCFrimwareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCFrimwareViewController.m; sourceTree = "<group>"; };
+		6BF31A701ED9A7B1000454EB /* FCAlarmConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCAlarmConfigViewController.h; sourceTree = "<group>"; };
+		6BF31A711ED9A7B1000454EB /* FCAlarmConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCAlarmConfigViewController.m; sourceTree = "<group>"; };
+		6BF31A741ED9A7C7000454EB /* FCOtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCOtherViewController.h; sourceTree = "<group>"; };
+		6BF31A751ED9A7C7000454EB /* FCOtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCOtherViewController.m; sourceTree = "<group>"; };
+		6BF31A781ED9A7E6000454EB /* FCDeviceInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCDeviceInfoViewController.h; sourceTree = "<group>"; };
+		6BF31A791ED9A7E6000454EB /* FCDeviceInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCDeviceInfoViewController.m; sourceTree = "<group>"; };
 		6BF7E0981DC8D2B40052073C /* libFitCloud.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFitCloud.a; path = "lib/Debug-iphoneos/libFitCloud.a"; sourceTree = "<group>"; };
 		6BFE92701DD4C02500685350 /* libFitCloud.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFitCloud.a; path = lib/libFitCloud.a; sourceTree = "<group>"; };
 		BB9C57499BC2C6CBFCEF3A1A /* Pods-FitCloudDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitCloudDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitCloudDemo/Pods-FitCloudDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -484,10 +505,80 @@
 		6BF31A5B1ED98A60000454EB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6BF31A771ED9A7CE000454EB /* 设备信息 */,
+				6BF31A731ED9A7BA000454EB /* 其他设置 */,
+				6BF31A6F1ED9A7A1000454EB /* 闹钟配置 */,
+				6BF31A6B1ED9A773000454EB /* 固件升级 */,
+				6BF31A671ED9A760000454EB /* 惯用单位 */,
+				6BF31A631ED9A74C000454EB /* 通知配置 */,
+				6BF31A5F1ED9A731000454EB /* 资料设置 */,
 				6BF31A5C1ED98A60000454EB /* FCSettingViewController.h */,
 				6BF31A5D1ED98A60000454EB /* FCSettingViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6BF31A5F1ED9A731000454EB /* 资料设置 */ = {
+			isa = PBXGroup;
+			children = (
+				6BF31A601ED9A743000454EB /* FCProfileViewController.h */,
+				6BF31A611ED9A743000454EB /* FCProfileViewController.m */,
+			);
+			name = "资料设置";
+			sourceTree = "<group>";
+		};
+		6BF31A631ED9A74C000454EB /* 通知配置 */ = {
+			isa = PBXGroup;
+			children = (
+				6BF31A641ED9A75D000454EB /* FCNotificationViewController.h */,
+				6BF31A651ED9A75D000454EB /* FCNotificationViewController.m */,
+			);
+			name = "通知配置";
+			sourceTree = "<group>";
+		};
+		6BF31A671ED9A760000454EB /* 惯用单位 */ = {
+			isa = PBXGroup;
+			children = (
+				6BF31A681ED9A76F000454EB /* FCUnitViewController.h */,
+				6BF31A691ED9A76F000454EB /* FCUnitViewController.m */,
+			);
+			name = "惯用单位";
+			sourceTree = "<group>";
+		};
+		6BF31A6B1ED9A773000454EB /* 固件升级 */ = {
+			isa = PBXGroup;
+			children = (
+				6BF31A6C1ED9A79B000454EB /* FCFrimwareViewController.h */,
+				6BF31A6D1ED9A79B000454EB /* FCFrimwareViewController.m */,
+			);
+			name = "固件升级";
+			sourceTree = "<group>";
+		};
+		6BF31A6F1ED9A7A1000454EB /* 闹钟配置 */ = {
+			isa = PBXGroup;
+			children = (
+				6BF31A701ED9A7B1000454EB /* FCAlarmConfigViewController.h */,
+				6BF31A711ED9A7B1000454EB /* FCAlarmConfigViewController.m */,
+			);
+			name = "闹钟配置";
+			sourceTree = "<group>";
+		};
+		6BF31A731ED9A7BA000454EB /* 其他设置 */ = {
+			isa = PBXGroup;
+			children = (
+				6BF31A741ED9A7C7000454EB /* FCOtherViewController.h */,
+				6BF31A751ED9A7C7000454EB /* FCOtherViewController.m */,
+			);
+			name = "其他设置";
+			sourceTree = "<group>";
+		};
+		6BF31A771ED9A7CE000454EB /* 设备信息 */ = {
+			isa = PBXGroup;
+			children = (
+				6BF31A781ED9A7E6000454EB /* FCDeviceInfoViewController.h */,
+				6BF31A791ED9A7E6000454EB /* FCDeviceInfoViewController.m */,
+			);
+			name = "设备信息";
 			sourceTree = "<group>";
 		};
 		6BF7E0971DC8D2B40052073C /* Frameworks */ = {
@@ -694,14 +785,21 @@
 				6B5DD2551DC8A4E200788BDA /* AppDelegate.m in Sources */,
 				6BE747091ED965A80085E16E /* MBProgressHUD+Category.m in Sources */,
 				6BE746FD1ED95F360085E16E /* FCTabBarController.m in Sources */,
+				6BF31A621ED9A743000454EB /* FCProfileViewController.m in Sources */,
 				6BE746F91ED95DE40085E16E /* FCHealthViewController.m in Sources */,
 				6BE746DE1ED95C8D0085E16E /* FCHomeViewController.m in Sources */,
+				6BF31A7A1ED9A7E6000454EB /* FCDeviceInfoViewController.m in Sources */,
 				6B5DD2C61DC8A97A00788BDA /* NSObject+HUD.m in Sources */,
 				6BE746F01ED95DB20085E16E /* FCSportsViewController.m in Sources */,
+				6BF31A761ED9A7C7000454EB /* FCOtherViewController.m in Sources */,
+				6BF31A661ED9A75D000454EB /* FCNotificationViewController.m in Sources */,
 				6B5DD2C41DC8A97A00788BDA /* FitCloud+Category.m in Sources */,
+				6BF31A6A1ED9A76F000454EB /* FCUnitViewController.m in Sources */,
 				6BF31A5E1ED98A60000454EB /* FCSettingViewController.m in Sources */,
+				6BF31A721ED9A7B1000454EB /* FCAlarmConfigViewController.m in Sources */,
 				6BE746F31ED95DBF0085E16E /* FCSleepViewController.m in Sources */,
 				6B403C151ED9790800246086 /* FCSyncDataViewController.m in Sources */,
+				6BF31A6E1ED9A79B000454EB /* FCFrimwareViewController.m in Sources */,
 				6BCF1C6A1DE57FD600B99A21 /* FitCloudManager.m in Sources */,
 				6BE746CF1ED941BC0085E16E /* FCConfigManager.m in Sources */,
 				6B5DD2521DC8A4E100788BDA /* main.m in Sources */,
