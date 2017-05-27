@@ -1,18 +1,20 @@
 //
-//  FCTabBarController.m
+//  FCSyncDataViewController.m
 //  FitCloudDemo
 //
 //  Created by 远征 马 on 2017/5/27.
 //  Copyright © 2017年 马远征. All rights reserved.
 //
 
-#import "FCTabBarController.h"
+#import "FCSyncDataViewController.h"
 
-@interface FCTabBarController ()
+@interface FCSyncDataViewController ()
 
 @end
 
-@implementation FCTabBarController
+@implementation FCSyncDataViewController
+
+
 
 
 #pragma mark - dealloc
@@ -22,13 +24,11 @@
     [super didReceiveMemoryWarning];
 }
 
-
 #pragma mark - lifeStyle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 }
-
 
 @end
