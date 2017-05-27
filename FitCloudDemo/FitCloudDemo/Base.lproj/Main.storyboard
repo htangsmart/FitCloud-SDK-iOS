@@ -30,7 +30,7 @@
         <!--数据-->
         <scene sceneID="cya-9c-9dk">
             <objects>
-                <viewController storyboardIdentifier="数据" id="qRh-sh-p4r" customClass="FCSyncDataViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="数据" automaticallyAdjustsScrollViewInsets="NO" id="qRh-sh-p4r" customClass="FCSyncDataViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="a4l-Ob-gAv"/>
                         <viewControllerLayoutGuide type="bottom" id="mJN-Hl-rey"/>
@@ -38,9 +38,38 @@
                     <view key="view" contentMode="scaleToFill" id="9rW-No-Unr">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Z9X-xy-kfR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="GjL-qx-mgv">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GjL-qx-mgv" id="kuY-ty-yba">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="qRh-sh-p4r" id="PIR-GM-i3t"/>
+                                    <outlet property="delegate" destination="qRh-sh-p4r" id="n4T-2K-68h"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Z9X-xy-kfR" secondAttribute="trailing" id="BDH-Ep-EJu"/>
+                            <constraint firstAttribute="bottom" secondItem="Z9X-xy-kfR" secondAttribute="bottom" id="OBv-Qf-NKw"/>
+                            <constraint firstItem="Z9X-xy-kfR" firstAttribute="leading" secondItem="9rW-No-Unr" secondAttribute="leading" id="t9m-zN-ML0"/>
+                            <constraint firstItem="Z9X-xy-kfR" firstAttribute="top" secondItem="a4l-Ob-gAv" secondAttribute="bottom" id="tAh-uk-CGi"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="数据" id="984-h6-rRc"/>
+                    <connections>
+                        <outlet property="tableView" destination="Z9X-xy-kfR" id="6DH-AX-PqF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l0g-7R-F5h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -49,7 +78,7 @@
         <!--设置-->
         <scene sceneID="pRS-T3-aMX">
             <objects>
-                <viewController storyboardIdentifier="设置" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cqc-5J-1L6" customClass="FCSettingViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="设置" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cqc-5J-1L6" customClass="FCSettingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3o0-ia-vMy"/>
                         <viewControllerLayoutGuide type="bottom" id="Xcu-G1-soX"/>
@@ -57,9 +86,38 @@
                     <view key="view" contentMode="scaleToFill" id="0W8-OJ-dkI">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="aA5-g1-vh0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="pgy-4c-l8i">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pgy-4c-l8i" id="780-ih-ajv">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Cqc-5J-1L6" id="lgv-rd-edy"/>
+                                    <outlet property="delegate" destination="Cqc-5J-1L6" id="cBz-JN-tvC"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aA5-g1-vh0" firstAttribute="top" secondItem="3o0-ia-vMy" secondAttribute="bottom" id="Im7-qm-ER2"/>
+                            <constraint firstItem="aA5-g1-vh0" firstAttribute="leading" secondItem="0W8-OJ-dkI" secondAttribute="leading" id="XfG-qd-Q75"/>
+                            <constraint firstAttribute="trailing" secondItem="aA5-g1-vh0" secondAttribute="trailing" id="ddz-f8-Eum"/>
+                            <constraint firstAttribute="bottom" secondItem="aA5-g1-vh0" secondAttribute="bottom" id="yO8-t9-OMz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="设置" id="doh-ra-iP5"/>
+                    <connections>
+                        <outlet property="tableView" destination="aA5-g1-vh0" id="3mt-BV-7A2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n7r-SV-yN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
