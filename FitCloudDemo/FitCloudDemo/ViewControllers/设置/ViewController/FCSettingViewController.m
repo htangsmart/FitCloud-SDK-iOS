@@ -7,6 +7,8 @@
 //
 
 #import "FCSettingViewController.h"
+#import "FCConnectStateCell.h"
+
 
 @interface FCSettingViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -28,6 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.tableView registerClass:[FCConnectStateCell class] forCellReuseIdentifier:@"StateCell"];
 }
 
 
@@ -35,29 +38,46 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 6;
+    if (section == 0) {
+        return 1;
+    }
+    return 7;
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.section == 0) {
+        return 60;
+    }
     return 50.0;
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
+    if (section == 0) {
+        return 20;
+    }
     return 0.01;
 }
 
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.section == 0)
+    {
+        FCConnectStateCell *stateCell = [tableView dequeueReusableCellWithIdentifier:@"StateCell" forIndexPath:indexPath];
+        stateCell.textLabel.text = @"绑定设备";
+        stateCell.detailTextLabel.text = @"未绑定";
+        return stateCell;
+    }
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     if (indexPath.row == 0)
     {
