@@ -82,12 +82,22 @@
 
 - (FCPageDisplayFlagObject*)pageDisplayFlagObject
 {
-    FCVersionDataObject *versionDataObj = [_watchSetting versionObject];
-    if (versionDataObj)
+    if (_watchSetting)
     {
-        FCPageDisplayFlagObject *pageDisplayFlagObj = [FCPageDisplayFlagObject ];
-        return sensorFlagObj;
+        FCVersionDataObject *versionDataObj = [_watchSetting versionObject];
+        if (versionDataObj)
+        {
+            return [versionDataObj pageDisplayFlagObject];
+        }
     }
     return [FCPageDisplayFlagObject objectWithData:nil];
+}
+
+- (FCFeaturesObject*)featuresObject
+{
+    if (_watchSetting) {
+        return [_watchSetting featuresObject];
+    }
+    return [FCFeaturesObject objectWithData:nil];
 }
 @end
