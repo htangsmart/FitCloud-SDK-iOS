@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>FCFunctionSwitchModel Class Reference</title>
+	<title>FCDataObject Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -56,25 +56,17 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/twLightScreen">twLightScreen</option>
+		<option value="//api/name/DataType">DataType</option>
+		
+		<option value="//api/name/timeStamp">timeStamp</option>
+		
+		<option value="//api/name/value">value</option>
 		
 	</optgroup>
 	
 
 	
-	<optgroup label="Class Methods">
-		
-		<option value="//api/name/modelWithData:">+ modelWithData:</option>
-		
-	</optgroup>
-	
 
-	
-	<optgroup label="Instance Methods">
-		
-		<option value="//api/name/functionSwitchData">- functionSwitchData</option>
-		
-	</optgroup>
 	
 	
 </select>
@@ -89,7 +81,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">FCFunctionSwitchModel Class Reference</h1>
+					<h1 class="title">FCDataObject Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -108,7 +100,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>@class FCFunctionSwitchModel</p><p>The functional switch data model</p>
+						<p>手表同步数据模型</p>
 					</div>
 					
 					
@@ -124,8 +116,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/twLightScreen" title="twLightScreen"></a>
-	<h3 class="method-title"><code><a href="#//api/name/twLightScreen">&nbsp;&nbsp;twLightScreen</a></code>
+	<a name="//api/name/DataType" title="DataType"></a>
+	<h3 class="method-title"><code><a href="#//api/name/DataType">&nbsp;&nbsp;DataType</a></code>
 </h3>
 
 	<div class="method-info">
@@ -135,79 +127,16 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property twLightScreen</p>
+				<p>数据类型，用于区分不同的数据，详细见<i>FCDataType</i></p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL twLightScreen</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) FCDataType DataType</code></div>
 
 		    
 			
 
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The screen lights up after turning the wrist</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/modelWithData:" title="modelWithData:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/modelWithData:">+&nbsp;modelWithData:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>instantiate an model with the given data</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (instancetype)modelWithData:(NSData *)<em>data</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>data</code></th>
-						<td><p>The given data</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>an model of <code>FCFunctionSwitchModel</code> object</p>
-			</div>
 			
 
 			
@@ -228,8 +157,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/functionSwitchData" title="functionSwitchData"></a>
-	<h3 class="method-title"><code><a href="#//api/name/functionSwitchData">&ndash;&nbsp;functionSwitchData</a></code>
+	<a name="//api/name/timeStamp" title="timeStamp"></a>
+	<h3 class="method-title"><code><a href="#//api/name/timeStamp">&nbsp;&nbsp;timeStamp</a></code>
 </h3>
 
 	<div class="method-info">
@@ -239,21 +168,63 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Convert the display model to NSData</p>
+				<p>自1970开始的时间戳</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSData *)functionSwitchData</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *timeStamp</code></div>
 
 		    
 			
 
 			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>The converted display data type of NSData</p>
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
 			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/value" title="value"></a>
+	<h3 class="method-title"><code><a href="#//api/name/value">&nbsp;&nbsp;value</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>运动和健康数据，dataType为一下类型时分别对应一下数据
+<i>FCDataTypeExercise</i>：value为运动的步数；
+<i>FCDataTypeSleep</i>：value为睡眠状态（1：深睡眠 2：浅睡眠 3：清醒）；
+<i>FCDataTypeHeartRate</i>：value为平均心率；
+<i>FCDataTypeBloodOxygen</i>：value为血氧数值；
+<i>FCDataTypeBloodPressure</i>：value为收缩压，extravalue为舒张压；
+<i>FCDataTypeBreathingRate</i>：value为呼吸频率</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *value</code></div>
+
+		    
+			
+
 			
 
 			
@@ -288,7 +259,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 H.Tang. All rights reserved. Updated: 2016-12-08</p>
+						<p class="copyright">Copyright &copy; 2017 H.Tang. All rights reserved. Updated: 2017-05-28</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

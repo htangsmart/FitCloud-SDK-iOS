@@ -91,31 +91,35 @@
                             
                             &nbsp;&nbsp; <a href="">FCSyncResponseStateUnKnown</a> = 0,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStateNotOpen</a> = 1,<br>
+                            &nbsp;&nbsp; <a href="">KRSyncResponseStateUnsupported</a> = 1,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStateNotConnected</a> = 2,<br>
+                            &nbsp;&nbsp; <a href="">KRSyncResponseStateUnauthorized</a> = 2,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStatePowerOff</a> = 3,<br>
+                            &nbsp;&nbsp; <a href="">KRSyncResponseStateResetting</a> = 3,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStatePowerOn</a> = 4,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncResponseStateNotConnected</a> = 4,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStateDisconnect</a> = 5,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncResponseStatePowerOff</a> = 5,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStateParameterError</a> = 6,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncResponseStatePowerOn</a> = 6,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStateSyncing</a> = 7,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncResponseStateDisconnect</a> = 7,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStateSuccess</a> = 8,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncResponseStateParameterError</a> = 8,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStateError</a> = 9,<br>
+                            &nbsp;&nbsp; <a href="">KRSyncResponseStateSynchronizing</a> = 9,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStateTimeOut</a> = 10,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncResponseStateSuccess</a> = 10,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStateRTTimeOut</a> = 11,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncResponseStateError</a> = 11,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStateECGTimeOut</a> = 12,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncResponseStateTimeOut</a> = 12,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStateLowPower</a> = 13,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncResponseStateRTTimeOut</a> = 13,<br>
+                            
+                            &nbsp;&nbsp; <a href="">FCSyncResponseStateECGTimeOut</a> = 14,<br>
+                            
+                            &nbsp;&nbsp; <a href="">FCSyncResponseStateLowPower</a> = 15,<br>
                             
                             };</code>
                     
@@ -142,11 +146,45 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncResponseStateNotOpen"></a><code>FCSyncResponseStateNotOpen</code></dt>
+                            <dt><a name="" title="KRSyncResponseStateUnsupported"></a><code>KRSyncResponseStateUnsupported</code></dt>
 <dd>
 
 
-<p>蓝牙未打开，查询蓝牙状态时如果蓝牙未打开调用</p>
+<p>当前设备不支持蓝牙4.0</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">FCDefine.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KRSyncResponseStateUnauthorized"></a><code>KRSyncResponseStateUnauthorized</code></dt>
+<dd>
+
+
+<p>蓝牙未授权</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">FCDefine.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KRSyncResponseStateResetting"></a><code>KRSyncResponseStateResetting</code></dt>
+<dd>
+
+
+<p>蓝牙重置状态</p>
 
 
 
@@ -244,7 +282,7 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncResponseStateSyncing"></a><code>FCSyncResponseStateSyncing</code></dt>
+                            <dt><a name="" title="KRSyncResponseStateSynchronizing"></a><code>KRSyncResponseStateSynchronizing</code></dt>
 <dd>
 
 
@@ -387,7 +425,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 H.Tang. All rights reserved. Updated: 2017-05-26</p>
+						<p class="copyright">Copyright &copy; 2017 H.Tang. All rights reserved. Updated: 2017-05-28</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

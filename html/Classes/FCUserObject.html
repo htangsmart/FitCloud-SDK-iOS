@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>FCAlarmModel Class Reference</title>
+	<title>FCUserObject Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -56,23 +56,27 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/alarmId">alarmId</option>
+		<option value="//api/name/age">age</option>
 		
-		<option value="//api/name/cycle">cycle</option>
+		<option value="//api/name/diastolicBP">diastolicBP</option>
 		
-		<option value="//api/name/cycleModel">cycleModel</option>
+		<option value="//api/name/featuresData">featuresData</option>
 		
-		<option value="//api/name/day">day</option>
+		<option value="//api/name/guestId">guestId</option>
 		
-		<option value="//api/name/hour">hour</option>
+		<option value="//api/name/height">height</option>
 		
-		<option value="//api/name/isOn">isOn</option>
+		<option value="//api/name/isLeftHandWearEnabled">isLeftHandWearEnabled</option>
 		
-		<option value="//api/name/minute">minute</option>
+		<option value="//api/name/osVersion">osVersion</option>
 		
-		<option value="//api/name/month">month</option>
+		<option value="//api/name/phoneModel">phoneModel</option>
 		
-		<option value="//api/name/year">year</option>
+		<option value="//api/name/sex">sex</option>
+		
+		<option value="//api/name/systolicBP">systolicBP</option>
+		
+		<option value="//api/name/weight">weight</option>
 		
 	</optgroup>
 	
@@ -82,9 +86,9 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/alarmClockData">- alarmClockData</option>
+		<option value="//api/name/writeDataForLoginOrBind">- writeDataForLoginOrBind</option>
 		
-		<option value="//api/name/ringTime">- ringTime</option>
+		<option value="//api/name/writeDataForUserProfile">- writeDataForUserProfile</option>
 		
 	</optgroup>
 	
@@ -101,13 +105,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">FCAlarmModel Class Reference</h1>
+					<h1 class="title">FCUserObject Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
 	<td>NSObject</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td><a href="../Protocols/FCObjectProtocal.html">FCObjectProtocal</a></td>
 </tr><tr>
 	<th>Declared in</th>
 	<td>FCObject.h</td>
@@ -120,7 +127,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>@class FCAlarmModel</p><p>Alarm clock data model, including the alarm <a href="#//api/name/cycle">cycle</a>, switch status and ring time</p>
+						<p>用户资料,主要用途手表绑定、登录、同步等更新配置信息使用</p>
 					</div>
 					
 					
@@ -136,8 +143,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/alarmId" title="alarmId"></a>
-	<h3 class="method-title"><code><a href="#//api/name/alarmId">&nbsp;&nbsp;alarmId</a></code>
+	<a name="//api/name/guestId" title="guestId"></a>
+	<h3 class="method-title"><code><a href="#//api/name/guestId">&nbsp;&nbsp;guestId</a></code>
 </h3>
 
 	<div class="method-info">
@@ -147,435 +154,16 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property alarmId</p>
+				<p>用户id，由自己服务器为每个用户分配。登录、绑定都需要此参数</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *alarmId</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UInt64 guestId</code></div>
 
 		    
 			
 
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The ID of the alarm clock</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/year" title="year"></a>
-	<h3 class="method-title"><code><a href="#//api/name/year">&nbsp;&nbsp;year</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>@property year</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *year</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The year of the alarm，The value of year is the current year minus 2000</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/month" title="month"></a>
-	<h3 class="method-title"><code><a href="#//api/name/month">&nbsp;&nbsp;month</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>@property month</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *month</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The month of the alarm clock</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/day" title="day"></a>
-	<h3 class="method-title"><code><a href="#//api/name/day">&nbsp;&nbsp;day</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>@property day</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *day</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The day of the alarm clock</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/hour" title="hour"></a>
-	<h3 class="method-title"><code><a href="#//api/name/hour">&nbsp;&nbsp;hour</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>@property hour</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *hour</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The hour of the alarm clock</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/minute" title="minute"></a>
-	<h3 class="method-title"><code><a href="#//api/name/minute">&nbsp;&nbsp;minute</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>@property minute</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *minute</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The minute of the alarm clock</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/isOn" title="isOn"></a>
-	<h3 class="method-title"><code><a href="#//api/name/isOn">&nbsp;&nbsp;isOn</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>@property isOn</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL isOn</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The alarm switch status</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/cycle" title="cycle"></a>
-	<h3 class="method-title"><code><a href="#//api/name/cycle">&nbsp;&nbsp;cycle</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>@property cycle</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *cycle</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The alarm clock cycle (7bits).From low to high indicates Mon<a href="#//api/name/day">day</a> to Sun<a href="#//api/name/day">day</a>.All bits are 0, indicating that the <a href="#//api/name/day">day</a> is valid</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/cycleModel" title="cycleModel"></a>
-	<h3 class="method-title"><code><a href="#//api/name/cycleModel">&nbsp;&nbsp;cycleModel</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>@property cycleModel</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) FCAlarmCycleModel *cycleModel</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Alarm clock <a href="#//api/name/cycle">cycle</a> model.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/ringTime" title="ringTime"></a>
-	<h3 class="method-title"><code><a href="#//api/name/ringTime">&ndash;&nbsp;ringTime</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Ring time</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (NSString *)ringTime</code></div>
-
-		    
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>Ring time string with format &ldquo;HH: mm&rdquo;</p>
-			</div>
 			
 
 			
@@ -596,8 +184,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/alarmClockData" title="alarmClockData"></a>
-	<h3 class="method-title"><code><a href="#//api/name/alarmClockData">&ndash;&nbsp;alarmClockData</a></code>
+	<a name="//api/name/phoneModel" title="phoneModel"></a>
+	<h3 class="method-title"><code><a href="#//api/name/phoneModel">&nbsp;&nbsp;phoneModel</a></code>
 </h3>
 
 	<div class="method-info">
@@ -607,13 +195,463 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>   Convert alarm clock model to alarm clock data
-* @return The converted data</p>
+				<p>手机型号,如iphone6、iphone6s,通过<i>FitCloudUtils</i>可以获取到。登录、绑定都需要此参数</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSData *)alarmClockData</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UInt8 phoneModel</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/osVersion" title="osVersion"></a>
+	<h3 class="method-title"><code><a href="#//api/name/osVersion">&nbsp;&nbsp;osVersion</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>系统版本,通过<i>FitCloudUtils</i>可以获取到。登录、绑定都需要此参数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UInt8 osVersion</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/age" title="age"></a>
+	<h3 class="method-title"><code><a href="#//api/name/age">&nbsp;&nbsp;age</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>用户年龄，默认1990出生。 绑定手表或者同步用户资料需要此参数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UInt32 age</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sex" title="sex"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sex">&nbsp;&nbsp;sex</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>性别，默认为女性 0。 绑定手表或者同步用户资料需要此参数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UInt32 sex</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/weight" title="weight"></a>
+	<h3 class="method-title"><code><a href="#//api/name/weight">&nbsp;&nbsp;weight</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>用户体重，默认60kg。绑定手表或者同步用户资料需要此参数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UInt32 weight</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/height" title="height"></a>
+	<h3 class="method-title"><code><a href="#//api/name/height">&nbsp;&nbsp;height</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>用户身高，女性默认 165cm, 男性默认 175cm。 绑定手表或者同步用户资料需要此参数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UInt32 height</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/systolicBP" title="systolicBP"></a>
+	<h3 class="method-title"><code><a href="#//api/name/systolicBP">&nbsp;&nbsp;systolicBP</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>收缩压参考值，默认125。绑定手表或者同步用户资料需要此参数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UInt16 systolicBP</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/diastolicBP" title="diastolicBP"></a>
+	<h3 class="method-title"><code><a href="#//api/name/diastolicBP">&nbsp;&nbsp;diastolicBP</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>舒张压参考值，默认80。绑定手表或者同步用户资料需要此参数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UInt16 diastolicBP</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isLeftHandWearEnabled" title="isLeftHandWearEnabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isLeftHandWearEnabled">&nbsp;&nbsp;isLeftHandWearEnabled</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>佩戴方式，左右佩戴？右手佩戴。 绑定手表需要此参数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL isLeftHandWearEnabled</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/featuresData" title="featuresData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/featuresData">&nbsp;&nbsp;featuresData</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>手表功能开关数据，详细参数见 <i>FCFeaturesObject</i> ,手表绑定、登录或者同步历史数据时如果对此参数赋值，会将手表时间制式、单位等同步到手表，如果为nil则不同步此配置</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *featuresData</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/writeDataForLoginOrBind" title="writeDataForLoginOrBind"></a>
+	<h3 class="method-title"><code><a href="#//api/name/writeDataForLoginOrBind">&ndash;&nbsp;writeDataForLoginOrBind</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>登录或者绑定手表时蓝牙需要写入的数据</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSData *)writeDataForLoginOrBind</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/writeDataForUserProfile" title="writeDataForUserProfile"></a>
+	<h3 class="method-title"><code><a href="#//api/name/writeDataForUserProfile">&ndash;&nbsp;writeDataForUserProfile</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>同步用户资料时蓝牙需要写入的数据</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSData *)writeDataForUserProfile</code></div>
 
 		    
 			
@@ -652,7 +690,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 H.Tang. All rights reserved. Updated: 2016-12-08</p>
+						<p class="copyright">Copyright &copy; 2017 H.Tang. All rights reserved. Updated: 2017-05-28</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

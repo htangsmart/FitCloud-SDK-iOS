@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>FCSleepModel Class Reference</title>
+	<title>FCFeaturesObject Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -56,15 +56,13 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/day">day</option>
+		<option value="//api/name/enhanceSurveyEnabled">enhanceSurveyEnabled</option>
 		
-		<option value="//api/name/minutes">minutes</option>
+		<option value="//api/name/flipWristToLightScreen">flipWristToLightScreen</option>
 		
-		<option value="//api/name/month">month</option>
+		<option value="//api/name/isImperialUnits">isImperialUnits</option>
 		
-		<option value="//api/name/sleep">sleep</option>
-		
-		<option value="//api/name/year">year</option>
+		<option value="//api/name/twelveHoursSystem">twelveHoursSystem</option>
 		
 	</optgroup>
 	
@@ -85,13 +83,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">FCSleepModel Class Reference</h1>
+					<h1 class="title">FCFeaturesObject Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
 	<td>NSObject</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td><a href="../Protocols/FCObjectProtocal.html">FCObjectProtocal</a></td>
 </tr><tr>
 	<th>Declared in</th>
 	<td>FCObject.h</td>
@@ -104,7 +105,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>@class FCSleepModel</p><p>The <a href="#//api/name/sleep">sleep</a> data model</p>
+						<p>手表功能开关设置对象</p>
 					</div>
 					
 					
@@ -120,8 +121,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/year" title="year"></a>
-	<h3 class="method-title"><code><a href="#//api/name/year">&nbsp;&nbsp;year</a></code>
+	<a name="//api/name/flipWristToLightScreen" title="flipWristToLightScreen"></a>
+	<h3 class="method-title"><code><a href="#//api/name/flipWristToLightScreen">&nbsp;&nbsp;flipWristToLightScreen</a></code>
 </h3>
 
 	<div class="method-info">
@@ -131,58 +132,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property year</p>
+				<p>翻动手腕时点亮手表屏幕</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *year</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The value of year is the current year minus 2000</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/month" title="month"></a>
-	<h3 class="method-title"><code><a href="#//api/name/month">&nbsp;&nbsp;month</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>@property month</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *month</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL flipWristToLightScreen</code></div>
 
 		    
 			
@@ -207,8 +162,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/day" title="day"></a>
-	<h3 class="method-title"><code><a href="#//api/name/day">&nbsp;&nbsp;day</a></code>
+	<a name="//api/name/enhanceSurveyEnabled" title="enhanceSurveyEnabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/enhanceSurveyEnabled">&nbsp;&nbsp;enhanceSurveyEnabled</a></code>
 </h3>
 
 	<div class="method-info">
@@ -218,12 +173,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property day</p>
+				<p>加强测量，心率等测量不出来时，手环会开启加强光反射</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *day</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL enhanceSurveyEnabled</code></div>
 
 		    
 			
@@ -248,8 +203,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/minutes" title="minutes"></a>
-	<h3 class="method-title"><code><a href="#//api/name/minutes">&nbsp;&nbsp;minutes</a></code>
+	<a name="//api/name/twelveHoursSystem" title="twelveHoursSystem"></a>
+	<h3 class="method-title"><code><a href="#//api/name/twelveHoursSystem">&nbsp;&nbsp;twelveHoursSystem</a></code>
 </h3>
 
 	<div class="method-info">
@@ -259,12 +214,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property minutes</p>
+				<p>12小时时间制式，如果为NO，则使用24小时时间制式</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *minutes</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL twelveHoursSystem</code></div>
 
 		    
 			
@@ -273,11 +228,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The number of minutes from zero</p>
-			</div>
 			
 
 			
@@ -294,8 +244,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/sleep" title="sleep"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sleep">&nbsp;&nbsp;sleep</a></code>
+	<a name="//api/name/isImperialUnits" title="isImperialUnits"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isImperialUnits">&nbsp;&nbsp;isImperialUnits</a></code>
 </h3>
 
 	<div class="method-info">
@@ -305,12 +255,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property sleep</p>
+				<p>距离和重量单位，0 为公制单位  1 英制单位</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *sleep</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL isImperialUnits</code></div>
 
 		    
 			
@@ -349,7 +299,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 H.Tang. All rights reserved. Updated: 2016-12-08</p>
+						<p class="copyright">Copyright &copy; 2017 H.Tang. All rights reserved. Updated: 2017-05-28</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

@@ -255,25 +255,6 @@
 @end
 
 
-#pragma mark - FCWatchScreenDisplayObject
-
-/**
- 手表屏幕显示设置，屏幕显示设置项需要先根据传感器标志来判断，如果传感器标志功能不存在，则屏幕设置项需要设置为无效
- */
-@interface FCScreenDisplayConfigObject : NSObject <FCObjectProtocal>
-@property (nonatomic, assign) BOOL dateTime;
-@property (nonatomic, assign) BOOL stepCount;
-@property (nonatomic, assign) BOOL calorie;
-@property (nonatomic, assign) BOOL distance;
-@property (nonatomic, assign) BOOL sleep;
-@property (nonatomic, assign) BOOL heartRate;
-@property (nonatomic, assign) BOOL bloodOxygen;
-@property (nonatomic, assign) BOOL bloodPressure;
-@property (nonatomic, assign) BOOL weatherForecast;
-@property (nonatomic, assign) BOOL findPhone;
-@property (nonatomic, assign) BOOL displayId;
-@end
-
 
 
 #pragma mark - FCFeaturesObject
@@ -306,6 +287,8 @@
 @end
 
 
+
+
 #pragma mark -  FCSensorFlagObject
 
 /**
@@ -336,10 +319,31 @@
 @end
 
 
+#pragma mark - FCScreenDisplayConfigObject
+
+/**
+ 手表屏幕显示设置，屏幕显示设置项需要先根据传感器标志来判断，如果传感器标志功能不存在，则屏幕设置项需要设置为无效
+ */
+@interface FCScreenDisplayConfigObject : NSObject <FCObjectProtocal>
+@property (nonatomic, assign) BOOL dateTime;
+@property (nonatomic, assign) BOOL stepCount;
+@property (nonatomic, assign) BOOL calorie;
+@property (nonatomic, assign) BOOL distance;
+@property (nonatomic, assign) BOOL sleep;
+@property (nonatomic, assign) BOOL heartRate;
+@property (nonatomic, assign) BOOL bloodOxygen;
+@property (nonatomic, assign) BOOL bloodPressure;
+@property (nonatomic, assign) BOOL weatherForecast;
+@property (nonatomic, assign) BOOL findPhone;
+@property (nonatomic, assign) BOOL displayId;
+@end
+
+
+#pragma mark - FCPageDisplayFlagObject
 /*!
  手环页面标号。手环页面标号为该项目手环上能显示的所有页面的标志，共32bit，每个bit代表一个页面，手机APP上根据该标号来确定有哪些显示页面可以给用户设置，具体每一位代表哪一个页面请看下面定义
  */
-@interface FCPageDisplayFlagObject : NSObject
+@interface FCPageDisplayFlagObject : NSObject <FCObjectProtocal>
 @property (nonatomic, assign) BOOL dateTime;
 @property (nonatomic, assign) BOOL stepCount;
 @property (nonatomic, assign) BOOL calorie;
@@ -371,14 +375,14 @@
 /**
  硬件号亦为手环传感器或功能标志位，组成的32bit，每个bit代表某一传感器或功能在该项目是否存在，手机APP根据该硬件号判断在手机APP上是否显示该功能和是否同步该项数据，
  
- @see FCSensorTagObject
+ @see FCSensorFlagObject
  */
 @property (nonatomic, strong) NSData *sensorTagData;
 
 /**
  手环页面标号为该项目手环上能显示的所有页面的标志，共32bit，每个bit代表一个页面，手机APP上根据该标号来确定有哪些显示页面可以给用户设置。此处数据暂不使用，可以通过<i>FCSystemSettingObject</i> 的 <i>wsdisplayData</i>获取设置信息  4byte
  
- @see FCWatchScreenDisplayObject
+ @see FCScreenDisplayConfigObject
  */
 @property (nonatomic, strong) NSData *pageDisplayData;
 
@@ -410,6 +414,12 @@
  */
 - (FCSensorFlagObject*)sensorTagObject;
 
+/**
+ 手环页面显示标志，如果某个属性存在，手表屏幕才能显示某个功能，否则就不显示。<i>FCScreenDisplayConfigObject</i>中的部分属性如果不需要显示，则必须设置为NO,其余属性根据需要动态配置
+
+ @return 页面显示标志对象
+ */
+- (FCPageDisplayFlagObject*)pageDisplayFlagObject;
 @end
 
 
@@ -498,7 +508,7 @@
 /**
  手表屏幕显示设置 2byte
  
- @see FCWatchScreenDisplayObject
+ @see FCScreenDisplayConfigObject
  */
 @property (nonatomic, strong) NSData *wsdisplayData;
 
@@ -540,7 +550,19 @@
  */
 @property (nonatomic, strong) NSData *drinkReminderData;
 
+/**
+ 通知消息对象。
+
+ @return 通知消息对象
+ */
 - (FCNotificationObject*)messageNotificationObject;
+
+
+/**
+ 手环显示设置对象，其属性能否修改由<i>FCPageDisplayFlagObject</i>对应属性决定
+
+ @return 显示设置对象
+ */
 - (FCScreenDisplayConfigObject*)watchScreenDisplayObject;
 - (FCFeaturesObject*)featuresObject;
 - (FCVersionDataObject*)versionObject;

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>FCSystemSettingsModel Class Reference</title>
+	<title>FCVersionDataObject Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -56,27 +56,33 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/defaultBloodPressureData">defaultBloodPressureData</option>
+		<option value="//api/name/flashData">flashData</option>
 		
-		<option value="//api/name/drinkWaterReminderData">drinkWaterReminderData</option>
+		<option value="//api/name/fwAppData">fwAppData</option>
 		
-		<option value="//api/name/functionalSwitchData">functionalSwitchData</option>
+		<option value="//api/name/fwNumberData">fwNumberData</option>
 		
-		<option value="//api/name/healthHistoryData">healthHistoryData</option>
+		<option value="//api/name/pageDisplayData">pageDisplayData</option>
 		
-		<option value="//api/name/longSitReminderData">longSitReminderData</option>
+		<option value="//api/name/patchData">patchData</option>
 		
-		<option value="//api/name/notificationData">notificationData</option>
+		<option value="//api/name/sensorTagData">sensorTagData</option>
 		
-		<option value="//api/name/screenDisplayData">screenDisplayData</option>
-		
-		<option value="//api/name/softwareAndHardwareVersionData">softwareAndHardwareVersionData</option>
+		<option value="//api/name/timeSeqNumData">timeSeqNumData</option>
 		
 	</optgroup>
 	
 
 	
 
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/pageDisplayFlagObject">- pageDisplayFlagObject</option>
+		
+		<option value="//api/name/sensorTagObject">- sensorTagObject</option>
+		
+	</optgroup>
 	
 	
 </select>
@@ -91,13 +97,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">FCSystemSettingsModel Class Reference</h1>
+					<h1 class="title">FCVersionDataObject Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
 	<td>NSObject</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td><a href="../Protocols/FCObjectProtocal.html">FCObjectProtocal</a></td>
 </tr><tr>
 	<th>Declared in</th>
 	<td>FCObject.h</td>
@@ -110,7 +119,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>@class FCSystemSettingsModel</p><p>System setting data model</p>
+						<p>手表系统版本信息</p>
 					</div>
 					
 					
@@ -126,8 +135,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/notificationData" title="notificationData"></a>
-	<h3 class="method-title"><code><a href="#//api/name/notificationData">&nbsp;&nbsp;notificationData</a></code>
+	<a name="//api/name/fwNumberData" title="fwNumberData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fwNumberData">&nbsp;&nbsp;fwNumberData</a></code>
 </h3>
 
 	<div class="method-info">
@@ -137,12 +146,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property notificationData</p>
+				<p>项目的编号</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *notificationData</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *fwNumberData</code></div>
 
 		    
 			
@@ -151,11 +160,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>notification switch settings data</p>
-			</div>
 			
 
 			
@@ -172,8 +176,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/screenDisplayData" title="screenDisplayData"></a>
-	<h3 class="method-title"><code><a href="#//api/name/screenDisplayData">&nbsp;&nbsp;screenDisplayData</a></code>
+	<a name="//api/name/sensorTagData" title="sensorTagData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sensorTagData">&nbsp;&nbsp;sensorTagData</a></code>
 </h3>
 
 	<div class="method-info">
@@ -183,12 +187,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property screenDisplayData</p>
+				<p>硬件号亦为手环传感器或功能标志位，组成的32bit，每个bit代表某一传感器或功能在该项目是否存在，手机APP根据该硬件号判断在手机APP上是否显示该功能和是否同步该项数据，</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *screenDisplayData</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *sensorTagData</code></div>
 
 		    
 			
@@ -198,10 +202,105 @@
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>screen display settings data</p>
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/FCSensorFlagObject.html">FCSensorFlagObject</a></p></code></li>
+					
+				</ul>
 			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pageDisplayData" title="pageDisplayData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pageDisplayData">&nbsp;&nbsp;pageDisplayData</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>手环页面标号为该项目手环上能显示的所有页面的标志，共32bit，每个bit代表一个页面，手机APP上根据该标号来确定有哪些显示页面可以给用户设置。此处数据暂不使用，可以通过<i>FCSystemSettingObject</i> 的 <i>wsdisplayData</i>获取设置信息  4byte</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *pageDisplayData</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/FCScreenDisplayConfigObject.html">FCScreenDisplayConfigObject</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/patchData" title="patchData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/patchData">&nbsp;&nbsp;patchData</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>手环底层patch的版本号 6byte</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *patchData</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			
@@ -218,8 +317,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/functionalSwitchData" title="functionalSwitchData"></a>
-	<h3 class="method-title"><code><a href="#//api/name/functionalSwitchData">&nbsp;&nbsp;functionalSwitchData</a></code>
+	<a name="//api/name/flashData" title="flashData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/flashData">&nbsp;&nbsp;flashData</a></code>
 </h3>
 
 	<div class="method-info">
@@ -229,12 +328,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property functionalSwitchData</p>
+				<p>flash文件版本号 4byte</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *functionalSwitchData</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *flashData</code></div>
 
 		    
 			
@@ -243,11 +342,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>functional switch data</p>
-			</div>
 			
 
 			
@@ -264,8 +358,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/softwareAndHardwareVersionData" title="softwareAndHardwareVersionData"></a>
-	<h3 class="method-title"><code><a href="#//api/name/softwareAndHardwareVersionData">&nbsp;&nbsp;softwareAndHardwareVersionData</a></code>
+	<a name="//api/name/fwAppData" title="fwAppData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fwAppData">&nbsp;&nbsp;fwAppData</a></code>
 </h3>
 
 	<div class="method-info">
@@ -275,12 +369,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property softwareAndHardwareVersionData</p>
+				<p>固件app版本号 4byte</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *softwareAndHardwareVersionData</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *fwAppData</code></div>
 
 		    
 			
@@ -289,11 +383,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>software and hardware version data</p>
-			</div>
 			
 
 			
@@ -310,8 +399,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/healthHistoryData" title="healthHistoryData"></a>
-	<h3 class="method-title"><code><a href="#//api/name/healthHistoryData">&nbsp;&nbsp;healthHistoryData</a></code>
+	<a name="//api/name/timeSeqNumData" title="timeSeqNumData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/timeSeqNumData">&nbsp;&nbsp;timeSeqNumData</a></code>
 </h3>
 
 	<div class="method-info">
@@ -321,12 +410,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property healthHistoryData</p>
+				<p>固件版本时间序号 4byte</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *healthHistoryData</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *timeSeqNumData</code></div>
 
 		    
 			
@@ -335,11 +424,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>health history monitoring settings data</p>
-			</div>
 			
 
 			
@@ -356,8 +440,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/longSitReminderData" title="longSitReminderData"></a>
-	<h3 class="method-title"><code><a href="#//api/name/longSitReminderData">&nbsp;&nbsp;longSitReminderData</a></code>
+	<a name="//api/name/sensorTagObject" title="sensorTagObject"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sensorTagObject">&ndash;&nbsp;sensorTagObject</a></code>
 </h3>
 
 	<div class="method-info">
@@ -367,25 +451,25 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property longSitReminderData</p>
+				<p>通过系统版本数据获取传感器标志位对象</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *longSitReminderData</code></div>
+			<div class="method-subsection method-declaration"><code>- (FCSensorFlagObject *)sensorTagObject</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Sedentary reminder settings data</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>传感器标志对象</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -402,8 +486,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/defaultBloodPressureData" title="defaultBloodPressureData"></a>
-	<h3 class="method-title"><code><a href="#//api/name/defaultBloodPressureData">&nbsp;&nbsp;defaultBloodPressureData</a></code>
+	<a name="//api/name/pageDisplayFlagObject" title="pageDisplayFlagObject"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pageDisplayFlagObject">&ndash;&nbsp;pageDisplayFlagObject</a></code>
 </h3>
 
 	<div class="method-info">
@@ -413,71 +497,25 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property defaultBloodPressureData</p>
+				<p>手环页面显示标志，如果某个属性存在，手表屏幕才能显示某个功能，否则就不显示。<i>FCScreenDisplayConfigObject</i>中的部分属性如果不需要显示，则必须设置为NO,其余属性根据需要动态配置</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *defaultBloodPressureData</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Default blood pressure, including systolic and diastolic blood pressure</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/drinkWaterReminderData" title="drinkWaterReminderData"></a>
-	<h3 class="method-title"><code><a href="#//api/name/drinkWaterReminderData">&nbsp;&nbsp;drinkWaterReminderData</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>@property drinkWaterReminderData</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *drinkWaterReminderData</code></div>
+			<div class="method-subsection method-declaration"><code>- (FCPageDisplayFlagObject *)pageDisplayFlagObject</code></div>
 
 		    
 			
 
 			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>drink water reminder data,contains a bool value</p>
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>页面显示标志对象</p>
 			</div>
+			
+
+			
+
 			
 
 			
@@ -508,7 +546,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 H.Tang. All rights reserved. Updated: 2016-12-08</p>
+						<p class="copyright">Copyright &copy; 2017 H.Tang. All rights reserved. Updated: 2017-05-28</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

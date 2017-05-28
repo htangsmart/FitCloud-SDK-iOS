@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>NSNumber(Utils) Category Reference</title>
+	<title>FCHealthMonitoringObject Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -43,6 +43,8 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 
 	
 	
@@ -52,15 +54,17 @@
 
 	
 	
-
-	
-	<optgroup label="Class Methods">
+	<optgroup label="Properties">
 		
-		<option value="//api/name/osType">+ osType</option>
+		<option value="//api/name/edMinute">edMinute</option>
 		
-		<option value="//api/name/phoneModel">+ phoneModel</option>
+		<option value="//api/name/isOn">isOn</option>
+		
+		<option value="//api/name/stMinute">stMinute</option>
 		
 	</optgroup>
+	
+
 	
 
 	
@@ -77,18 +81,32 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">NSNumber(Utils) Category Reference</h1>
+					<h1 class="title">FCHealthMonitoringObject Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td><a href="../Protocols/FCObjectProtocal.html">FCObjectProtocal</a></td>
+</tr><tr>
 	<th>Declared in</th>
-	<td>FitCloudUtils.h</td>
+	<td>FCObject.h</td>
 </tr>
 						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>手表健康定时监测</p>
+					</div>
+					
+					
 
 					
 					
@@ -101,8 +119,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/phoneModel" title="phoneModel"></a>
-	<h3 class="method-title"><code><a href="#//api/name/phoneModel">+&nbsp;phoneModel</a></code>
+	<a name="//api/name/isOn" title="isOn"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isOn">&nbsp;&nbsp;isOn</a></code>
 </h3>
 
 	<div class="method-info">
@@ -112,21 +130,16 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>手机的型号，用于登录和绑定设备时手表识别不同型号的机型</p>
+				<p>健康监测开关状态</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (NSNumber *)phoneModel</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL isOn</code></div>
 
 		    
 			
 
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>手机机型对应的数值</p>
-			</div>
 			
 
 			
@@ -140,15 +153,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FitCloudUtils.h</code></p>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/osType" title="osType"></a>
-	<h3 class="method-title"><code><a href="#//api/name/osType">+&nbsp;osType</a></code>
+	<a name="//api/name/stMinute" title="stMinute"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stMinute">&nbsp;&nbsp;stMinute</a></code>
 </h3>
 
 	<div class="method-info">
@@ -158,21 +171,16 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>手机操作系统型号，用于手表区分不同的系统</p>
+				<p>健康监测开始时间（从0点开始的分钟数）.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (NSNumber *)osType</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSUInteger stMinute</code></div>
 
 		    
 			
 
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>操作系统对应的数值</p>
-			</div>
 			
 
 			
@@ -186,7 +194,48 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FitCloudUtils.h</code></p>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/edMinute" title="edMinute"></a>
+	<h3 class="method-title"><code><a href="#//api/name/edMinute">&nbsp;&nbsp;edMinute</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>健康监测结束时间（从0点开始的分钟数）.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSUInteger edMinute</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
 			</div>
 			
 			
@@ -207,7 +256,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 H.Tang. All rights reserved. Updated: 2016-12-08</p>
+						<p class="copyright">Copyright &copy; 2017 H.Tang. All rights reserved. Updated: 2017-05-28</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

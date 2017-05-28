@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>NSData(Utils) Category Reference</title>
+	<title>FCWeather Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -54,19 +54,23 @@
 
 	
 	
-
-	
-
-	
-	<optgroup label="Instance Methods">
+	<optgroup label="Properties">
 		
-		<option value="//api/name/dictionaryFromSoftwareAndHardwareVersionData">- dictionaryFromSoftwareAndHardwareVersionData</option>
+		<option value="//api/name/city">city</option>
 		
-		<option value="//api/name/dictionaryFromSystemSettingsData">- dictionaryFromSystemSettingsData</option>
+		<option value="//api/name/maxTemperature">maxTemperature</option>
 		
-		<option value="//api/name/objectFromSystemSettingsData">- objectFromSystemSettingsData</option>
+		<option value="//api/name/minTemperature">minTemperature</option>
+		
+		<option value="//api/name/temperature">temperature</option>
+		
+		<option value="//api/name/weatherState">weatherState</option>
 		
 	</optgroup>
+	
+
+	
+
 	
 	
 </select>
@@ -81,13 +85,19 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">NSData(Utils) Category Reference</h1>
+					<h1 class="title">FCWeather Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td><a href="../Protocols/FCObjectProtocal.html">FCObjectProtocal</a></td>
+</tr><tr>
 	<th>Declared in</th>
-	<td>FitCloudUtils.h</td>
+	<td>FCObject.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -97,7 +107,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>@category NSData</p><p>NSData class method extension</p>
+						<p>天气</p>
 					</div>
 					
 					
@@ -113,8 +123,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/objectFromSystemSettingsData" title="objectFromSystemSettingsData"></a>
-	<h3 class="method-title"><code><a href="#//api/name/objectFromSystemSettingsData">&ndash;&nbsp;objectFromSystemSettingsData</a></code>
+	<a name="//api/name/temperature" title="temperature"></a>
+	<h3 class="method-title"><code><a href="#//api/name/temperature">&nbsp;&nbsp;temperature</a></code>
 </h3>
 
 	<div class="method-info">
@@ -124,30 +134,20 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Converts system settings data to a data model with detailed attributes</p>
+				<p>当前温度</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (id)objectFromSystemSettingsData</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSInteger temperature</code></div>
 
 		    
 			
 
 			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>The object to be converted</p>
-			</div>
-			
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<div class="warning"><p><strong>Warning:</strong> if self is <i>nil</i>, return <i>nil</i></p></div>
-			</div>
 			
 
 			
@@ -157,15 +157,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FitCloudUtils.h</code></p>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/dictionaryFromSystemSettingsData" title="dictionaryFromSystemSettingsData"></a>
-	<h3 class="method-title"><code><a href="#//api/name/dictionaryFromSystemSettingsData">&ndash;&nbsp;dictionaryFromSystemSettingsData</a></code>
+	<a name="//api/name/maxTemperature" title="maxTemperature"></a>
+	<h3 class="method-title"><code><a href="#//api/name/maxTemperature">&nbsp;&nbsp;maxTemperature</a></code>
 </h3>
 
 	<div class="method-info">
@@ -175,30 +175,20 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Converts system settings data to a dictonary with detailed data</p>
+				<p>最高温度</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSDictionary *)dictionaryFromSystemSettingsData</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSInteger maxTemperature</code></div>
 
 		    
 			
 
 			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>The object to be converted</p>
-			</div>
-			
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<div class="warning"><p><strong>Warning:</strong> if self is <i>nil</i>, return <i>nil</i></p></div>
-			</div>
 			
 
 			
@@ -208,15 +198,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FitCloudUtils.h</code></p>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/dictionaryFromSoftwareAndHardwareVersionData" title="dictionaryFromSoftwareAndHardwareVersionData"></a>
-	<h3 class="method-title"><code><a href="#//api/name/dictionaryFromSoftwareAndHardwareVersionData">&ndash;&nbsp;dictionaryFromSoftwareAndHardwareVersionData</a></code>
+	<a name="//api/name/minTemperature" title="minTemperature"></a>
+	<h3 class="method-title"><code><a href="#//api/name/minTemperature">&nbsp;&nbsp;minTemperature</a></code>
 </h3>
 
 	<div class="method-info">
@@ -226,30 +216,20 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Converts hardware and software version information data to a dictionary with detailed data</p>
+				<p>最低温度</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSDictionary *)dictionaryFromSoftwareAndHardwareVersionData</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSInteger minTemperature</code></div>
 
 		    
 			
 
 			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>The object to be converted</p>
-			</div>
-			
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<div class="warning"><p><strong>Warning:</strong> if self is <i>nil</i>, return <i>nil</i></p></div>
-			</div>
 			
 
 			
@@ -259,7 +239,89 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FitCloudUtils.h</code></p>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/weatherState" title="weatherState"></a>
+	<h3 class="method-title"><code><a href="#//api/name/weatherState">&nbsp;&nbsp;weatherState</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>天气状况，从服务器获取天气状态后，你需要转换为枚举值对应的天气</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) FCWeatherState weatherState</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/city" title="city"></a>
+	<h3 class="method-title"><code><a href="#//api/name/city">&nbsp;&nbsp;city</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>当前天气所在城市</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *city</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
 			</div>
 			
 			
@@ -280,7 +342,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 H.Tang. All rights reserved. Updated: 2016-12-08</p>
+						<p class="copyright">Copyright &copy; 2017 H.Tang. All rights reserved. Updated: 2017-05-28</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

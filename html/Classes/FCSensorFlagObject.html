@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>FCDataModel Class Reference</title>
+	<title>FCSensorFlagObject Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -43,6 +43,8 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 
 	
 	
@@ -54,11 +56,11 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/dataType">dataType</option>
+		<option value="//api/name/ECG">ECG</option>
 		
-		<option value="//api/name/timestamp">timestamp</option>
+		<option value="//api/name/enhanceSurvey">enhanceSurvey</option>
 		
-		<option value="//api/name/value">value</option>
+		<option value="//api/name/sleepHistoryOfSevenDays">sleepHistoryOfSevenDays</option>
 		
 	</optgroup>
 	
@@ -79,7 +81,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">FCDataModel Class Reference</h1>
+					<h1 class="title">FCSensorFlagObject Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -87,13 +89,24 @@
 	<th>Inherits from</th>
 	<td>NSObject</td>
 </tr><tr>
+	<th>Conforms to</th>
+	<td><a href="../Protocols/FCObjectProtocal.html">FCObjectProtocal</a></td>
+</tr><tr>
 	<th>Declared in</th>
-	<td>FCDataModel.h</td>
+	<td>FCObject.h</td>
 </tr>
 						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>传感器标志。硬件号亦为手环传感器或功能标志位，组成的32bit，每个bit代表某一传感器或功能在该项目是否存在，手机APP根据该硬件号判断在手机APP上是否显示该功能和是否同步该项数据，详细请看下面定义</p>
+					</div>
+					
+					
 
 					
 					
@@ -106,8 +119,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/dataType" title="dataType"></a>
-	<h3 class="method-title"><code><a href="#//api/name/dataType">&nbsp;&nbsp;dataType</a></code>
+	<a name="//api/name/enhanceSurvey" title="enhanceSurvey"></a>
+	<h3 class="method-title"><code><a href="#//api/name/enhanceSurvey">&nbsp;&nbsp;enhanceSurvey</a></code>
 </h3>
 
 	<div class="method-info">
@@ -117,12 +130,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property dataType</p>
+				<p>心率加强监测，对于一些测不出心率的特殊人群，开启加强检测有助于心率测量</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) FCDataType dataType</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL enhanceSurvey</code></div>
 
 		    
 			
@@ -131,11 +144,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>数据类型，用于区分不同的数据，详细见<i>FCDataType</i></p>
-			</div>
 			
 
 			
@@ -145,15 +153,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCDataModel.h</code></p>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/timestamp" title="timestamp"></a>
-	<h3 class="method-title"><code><a href="#//api/name/timestamp">&nbsp;&nbsp;timestamp</a></code>
+	<a name="//api/name/sleepHistoryOfSevenDays" title="sleepHistoryOfSevenDays"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sleepHistoryOfSevenDays">&nbsp;&nbsp;sleepHistoryOfSevenDays</a></code>
 </h3>
 
 	<div class="method-info">
@@ -163,12 +171,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property timestamp</p>
+				<p>七天历史睡眠总数据,如果有此标志位，可以同步七天睡眠总数据</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *timestamp</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL sleepHistoryOfSevenDays</code></div>
 
 		    
 			
@@ -177,11 +185,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>自1970开始的时间戳</p>
-			</div>
 			
 
 			
@@ -191,15 +194,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCDataModel.h</code></p>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/value" title="value"></a>
-	<h3 class="method-title"><code><a href="#//api/name/value">&nbsp;&nbsp;value</a></code>
+	<a name="//api/name/ECG" title="ECG"></a>
+	<h3 class="method-title"><code><a href="#//api/name/ECG">&nbsp;&nbsp;ECG</a></code>
 </h3>
 
 	<div class="method-info">
@@ -209,22 +212,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<ul>
-<li>@property value</li>
-<li>@discussion 运动和健康数据，dataType为一下类型时分别对应一下数据
-               <i>FCDataTypeExercise</i>：value为运动的步数；
-               <i>FCDataTypeSleep</i>：value为睡眠状态（1：深睡眠 2：浅睡眠 3：清醒）；
-               <i>FCDataTypeHeartRate</i>：value为平均心率；
-               <i>FCDataTypeBloodOxygen</i>：value为血氧数值；
-               <i>FCDataTypeBloodPressure</i>：value为收缩压，extravalue为舒张压；
-               <i>FCDataTypeBreathingRate</i>：value为呼吸频率</li>
-</ul>
-
+				<p>心电功能标志</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *value</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL ECG</code></div>
 
 		    
 			
@@ -242,7 +235,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCDataModel.h</code></p>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
 			</div>
 			
 			
@@ -263,7 +256,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 H.Tang. All rights reserved. Updated: 2016-12-08</p>
+						<p class="copyright">Copyright &copy; 2017 H.Tang. All rights reserved. Updated: 2017-05-28</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

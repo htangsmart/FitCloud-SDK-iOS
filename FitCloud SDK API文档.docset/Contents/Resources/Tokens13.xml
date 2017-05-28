@@ -68,6 +68,11 @@
 			<Abstract type="html">手表屏幕显示设置 2byte</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/FCScreenDisplayConfigObject</TokenIdentifier>
+		
+	</RelatedTokens>
+	
 			<Declaration>@property (nonatomic, strong) NSData *wsdisplayData</Declaration>
 			
 			
@@ -80,6 +85,11 @@
 			<Abstract type="html">手表屏幕显示设置 2byte</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/FCScreenDisplayConfigObject</TokenIdentifier>
+		
+	</RelatedTokens>
+	
 			<Declaration>@property (nonatomic, strong) NSData *wsdisplayData</Declaration>
 			
 			
@@ -92,6 +102,11 @@
 			<Abstract type="html">手表屏幕显示设置 2byte</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/FCScreenDisplayConfigObject</TokenIdentifier>
+		
+	</RelatedTokens>
+	
 			<Declaration>@property (nonatomic, strong) NSData *wsdisplayData</Declaration>
 			
 			
@@ -372,6 +387,30 @@
 			
 			
 			<Anchor>//api/name/drinkReminderData</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWatchSettingsObject/messageNotificationObject</TokenIdentifier>
+			<Abstract type="html">通知消息对象。</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>- (FCNotificationObject *)messageNotificationObject</Declaration>
+			
+			<ReturnValue><Abstract type="html">通知消息对象</Abstract></ReturnValue>
+			<Anchor>//api/name/messageNotificationObject</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWatchSettingsObject/watchScreenDisplayObject</TokenIdentifier>
+			<Abstract type="html">手环显示设置对象，其属性能否修改由&lt;i&gt;FCPageDisplayFlagObject&lt;/i&gt;对应属性决定</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>- (FCScreenDisplayConfigObject *)watchScreenDisplayObject</Declaration>
+			
+			<ReturnValue><Abstract type="html">显示设置对象</Abstract></ReturnValue>
+			<Anchor>//api/name/watchScreenDisplayObject</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		

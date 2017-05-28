@@ -79,7 +79,7 @@
                     
 					
 					<div class="section section-overview">
-                        <p>@enum FCSyncResponseState</p><p>synchronization response status</p>
+                        <p>同步响应结果</p>
 					</div>
 					
 					
@@ -89,29 +89,37 @@
                         <h4 class="method-subtitle">Definition</h4>
                         <code>typedef NS_ENUM(NSInteger, FCSyncResponseState ) {<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStateNone</a> = 0,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncResponseStateUnKnown</a> = 0,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStatePowerOff</a> = 1,<br>
+                            &nbsp;&nbsp; <a href="">KRSyncResponseStateUnsupported</a> = 1,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStateNotConnected</a> = 2,<br>
+                            &nbsp;&nbsp; <a href="">KRSyncResponseStateUnauthorized</a> = 2,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStateTurnedOff</a> = 3,<br>
+                            &nbsp;&nbsp; <a href="">KRSyncResponseStateResetting</a> = 3,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStateDisconnect</a> = 4,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncResponseStateNotConnected</a> = 4,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStateParameterError</a> = 5,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncResponseStatePowerOff</a> = 5,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStateSyncing</a> = 6,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncResponseStatePowerOn</a> = 6,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStateSuccess</a> = 7,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncResponseStateDisconnect</a> = 7,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStateError</a> = 8,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncResponseStateParameterError</a> = 8,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStateTimeOut</a> = 9,<br>
+                            &nbsp;&nbsp; <a href="">KRSyncResponseStateSynchronizing</a> = 9,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStateRTTimeOut</a> = 10,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncResponseStateSuccess</a> = 10,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncResponseStateLowPower</a> = 11,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncResponseStateError</a> = 11,<br>
+                            
+                            &nbsp;&nbsp; <a href="">FCSyncResponseStateTimeOut</a> = 12,<br>
+                            
+                            &nbsp;&nbsp; <a href="">FCSyncResponseStateRTTimeOut</a> = 13,<br>
+                            
+                            &nbsp;&nbsp; <a href="">FCSyncResponseStateECGTimeOut</a> = 14,<br>
+                            
+                            &nbsp;&nbsp; <a href="">FCSyncResponseStateLowPower</a> = 15,<br>
                             
                             };</code>
                     
@@ -121,11 +129,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="FCSyncResponseStateNone"></a><code>FCSyncResponseStateNone</code></dt>
+                            <dt><a name="" title="FCSyncResponseStateUnKnown"></a><code>FCSyncResponseStateUnKnown</code></dt>
 <dd>
 
 
-<p>The default type</p>
+<p>未知类型</p>
 
 
 
@@ -138,11 +146,45 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncResponseStatePowerOff"></a><code>FCSyncResponseStatePowerOff</code></dt>
+                            <dt><a name="" title="KRSyncResponseStateUnsupported"></a><code>KRSyncResponseStateUnsupported</code></dt>
 <dd>
 
 
-<p>蓝牙未打开</p>
+<p>当前设备不支持蓝牙4.0</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">FCDefine.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KRSyncResponseStateUnauthorized"></a><code>KRSyncResponseStateUnauthorized</code></dt>
+<dd>
+
+
+<p>蓝牙未授权</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">FCDefine.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KRSyncResponseStateResetting"></a><code>KRSyncResponseStateResetting</code></dt>
+<dd>
+
+
+<p>蓝牙重置状态</p>
 
 
 
@@ -159,7 +201,7 @@
 <dd>
 
 
-<p>Bluetooth is not connected</p>
+<p>蓝牙未连接</p>
 
 
 
@@ -172,11 +214,28 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncResponseStateTurnedOff"></a><code>FCSyncResponseStateTurnedOff</code></dt>
+                            <dt><a name="" title="FCSyncResponseStatePowerOff"></a><code>FCSyncResponseStatePowerOff</code></dt>
 <dd>
 
 
 <p>蓝牙关闭，主动关闭蓝牙时回调</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">FCDefine.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="FCSyncResponseStatePowerOn"></a><code>FCSyncResponseStatePowerOn</code></dt>
+<dd>
+
+
+<p>蓝牙打开，主动打开蓝牙时回调</p>
 
 
 
@@ -223,11 +282,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncResponseStateSyncing"></a><code>FCSyncResponseStateSyncing</code></dt>
+                            <dt><a name="" title="KRSyncResponseStateSynchronizing"></a><code>KRSyncResponseStateSynchronizing</code></dt>
 <dd>
 
 
-<p>Synchronizing data</p>
+<p>正在同步，蓝牙正在同步时发起同步操作会返回此结果</p>
 
 
 
@@ -244,7 +303,7 @@
 <dd>
 
 
-<p>Synchronization succeeded</p>
+<p>同步响应成功</p>
 
 
 
@@ -261,7 +320,7 @@
 <dd>
 
 
-<p>Synchronization failed</p>
+<p>同步响应失败</p>
 
 
 
@@ -278,7 +337,7 @@
 <dd>
 
 
-<p>Synchronization timeout</p>
+<p>同步响应超时</p>
 
 
 
@@ -295,7 +354,24 @@
 <dd>
 
 
-<p>Healthy real-time synchronization timeout</p>
+<p>健康实时同步超时</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">FCDefine.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="FCSyncResponseStateECGTimeOut"></a><code>FCSyncResponseStateECGTimeOut</code></dt>
+<dd>
+
+
+<p>心电检测数据同步超时</p>
 
 
 
@@ -312,7 +388,7 @@
 <dd>
 
 
-<p>Power is too low to upgrade</p>
+<p>低电量模式，固件升级时低电量提示</p>
 
 
 
@@ -349,7 +425,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 H.Tang. All rights reserved. Updated: 2016-12-08</p>
+						<p class="copyright">Copyright &copy; 2017 H.Tang. All rights reserved. Updated: 2017-05-28</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

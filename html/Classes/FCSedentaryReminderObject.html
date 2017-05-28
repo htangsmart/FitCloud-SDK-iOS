@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>FCLongSitModel Class Reference</title>
+	<title>FCSedentaryReminderObject Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -58,9 +58,9 @@
 		
 		<option value="//api/name/edMinute">edMinute</option>
 		
-		<option value="//api/name/isLunchBreakFree">isLunchBreakFree</option>
-		
 		<option value="//api/name/isOn">isOn</option>
+		
+		<option value="//api/name/restTimeNotDisturbEnabled">restTimeNotDisturbEnabled</option>
 		
 		<option value="//api/name/stMinute">stMinute</option>
 		
@@ -68,19 +68,11 @@
 	
 
 	
-	<optgroup label="Class Methods">
-		
-		<option value="//api/name/modelWithData:">+ modelWithData:</option>
-		
-	</optgroup>
-	
 
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/isLunchDNDEnable">- isLunchDNDEnable</option>
-		
-		<option value="//api/name/longSitData">- longSitData</option>
+		<option value="//api/name/isAtRestTime">- isAtRestTime</option>
 		
 	</optgroup>
 	
@@ -97,13 +89,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">FCLongSitModel Class Reference</h1>
+					<h1 class="title">FCSedentaryReminderObject Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
 	<td>NSObject</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td><a href="../Protocols/FCObjectProtocal.html">FCObjectProtocal</a></td>
 </tr><tr>
 	<th>Declared in</th>
 	<td>FCObject.h</td>
@@ -116,7 +111,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>@class FCLongSitModel</p><p>The sedentary reminder data model</p>
+						<p>久坐提醒,手表会在长时间不运动时发出提醒，通知用户起身运动</p>
 					</div>
 					
 					
@@ -143,7 +138,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property isOn</p>
+				<p>久坐提醒开关</p>
 			</div>
 			
 		    
@@ -157,11 +152,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Sedentary reminder switch</p>
-			</div>
 			
 
 			
@@ -178,8 +168,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/isLunchBreakFree" title="isLunchBreakFree"></a>
-	<h3 class="method-title"><code><a href="#//api/name/isLunchBreakFree">&nbsp;&nbsp;isLunchBreakFree</a></code>
+	<a name="//api/name/restTimeNotDisturbEnabled" title="restTimeNotDisturbEnabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/restTimeNotDisturbEnabled">&nbsp;&nbsp;restTimeNotDisturbEnabled</a></code>
 </h3>
 
 	<div class="method-info">
@@ -189,12 +179,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property isLunchBreakFree</p>
+				<p>午休免打扰，打开此项，午休时间将不会提醒</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL isLunchBreakFree</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL restTimeNotDisturbEnabled</code></div>
 
 		    
 			
@@ -203,11 +193,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Lump-free break switch</p>
-			</div>
 			
 
 			
@@ -235,7 +220,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property stMinute</p>
+				<p>久坐提醒开始时间，数值为从0开始的分钟数</p>
 			</div>
 			
 		    
@@ -249,11 +234,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The start time for the sedentary reminder. The value is the number of minutes from zero</p>
-			</div>
 			
 
 			
@@ -281,7 +261,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property edMinute</p>
+				<p>久坐提醒结束时间，数值为从0开始的分钟数</p>
 			</div>
 			
 		    
@@ -296,11 +276,6 @@
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>TThe end time of the sedentary reminder. The value is the number of minutes from zero</p>
-			</div>
-			
 
 			
 
@@ -316,8 +291,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/modelWithData:" title="modelWithData:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/modelWithData:">+&nbsp;modelWithData:</a></code>
+	<a name="//api/name/isAtRestTime" title="isAtRestTime"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isAtRestTime">&ndash;&nbsp;isAtRestTime</a></code>
 </h3>
 
 	<div class="method-info">
@@ -327,70 +302,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>instantiate an model with the given data</p>
+				<p>判断是否处于午休时间，午休时间为12:00-14:00,如果处于这个范围则为午休时间。</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (instancetype)modelWithData:(NSData *)<em>data</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>data</code></th>
-						<td><p>The given data</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>an model of <code>FCLongSitModel</code> object</p>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/longSitData" title="longSitData"></a>
-	<h3 class="method-title"><code><a href="#//api/name/longSitData">&ndash;&nbsp;longSitData</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Convert the model to NSData</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (NSData *)longSitData</code></div>
+			<div class="method-subsection method-declaration"><code>- (BOOL)isAtRestTime</code></div>
 
 		    
 			
@@ -398,53 +315,7 @@
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>The converted data</p>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/isLunchDNDEnable" title="isLunchDNDEnable"></a>
-	<h3 class="method-title"><code><a href="#//api/name/isLunchDNDEnable">&ndash;&nbsp;isLunchDNDEnable</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>To determine whether the lunch break DND is available</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (BOOL)isLunchDNDEnable</code></div>
-
-		    
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>The state of the switch without disturb</p>
+				<p>是否处于午休时间</p>
 			</div>
 			
 
@@ -480,7 +351,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 H.Tang. All rights reserved. Updated: 2016-12-08</p>
+						<p class="copyright">Copyright &copy; 2017 H.Tang. All rights reserved. Updated: 2017-05-28</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

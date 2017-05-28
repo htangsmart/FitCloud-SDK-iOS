@@ -79,7 +79,7 @@
                     
 					
 					<div class="section section-overview">
-                        <p>@enum FCSyncType</p><p>Bluetooth data synchronization type</p>
+                        <p>手环数据同步标志</p>
 					</div>
 					
 					
@@ -89,77 +89,63 @@
                         <h4 class="method-subtitle">Definition</h4>
                         <code>typedef NS_ENUM(NSInteger, FCSyncType ) {<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeNone</a> = 0,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeUnknown</a> = 0,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeUnBindDevice</a> = 18,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeUnBindDevice</a> = 1,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeLoginDevice</a> = 19,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeLoginDevice</a> = 2,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeBindDevice</a> = 20,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeBindDevice</a> = 3,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeLoginToSyncTime</a> = 21,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeFindTheWatch</a> = 4,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeFindWristband</a> = 23,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeGetAlarmList</a> = 5,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeGetAlarmList</a> = 24,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeSetAlarmData</a> = 6,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeSetAlarmData</a> = 25,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeGetBatteryLevelAndState</a> = 7,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeBatteryPowerAndChargingState</a> = 26,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeGetSystemSettings</a> = 8,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeGetSystemSettings</a> = 27,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeUpdateDisplaySettings</a> = 9,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeDisplaySettings</a> = 28,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeUpdateFeaturesSettings</a> = 10,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeFunctionSwitchSettings</a> = 29,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeUpdateNotificationSettings</a> = 11,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeNotificationSettings</a> = 30,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeSetSedentaryReminder</a> = 12,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeSedentaryReminder</a> = 31,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeSetHealthMonitoring</a> = 13,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeHealthMonitoring</a> = 32,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeSetDrinkReminder</a> = 14,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeDrinkReminder</a> = 33,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeSetWearingStyle</a> = 15,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeWearingStyle</a> = 34,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeSetCameraState</a> = 16,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeCameraState</a> = 35,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeSetDefaultBloodPressure</a> = 17,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeDefaultBloodPressure</a> = 36,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeUpdateWeather</a> = 18,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeUpdateWeather</a> = 37,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeSetUserProfile</a> = 19,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeUserProfile</a> = 38,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeGetHistoryData</a> = 20,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeHistoryData</a> = 39,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeOpenRealtimeSync</a> = 21,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeExercise</a> = 40,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeCloseRealtimeSync</a> = 22,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeSleep</a> = 41,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeFirmwareUpgrade</a> = 23,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeHeartRate</a> = 42,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeGetFirmwareVersion</a> = 24,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeBloodOxygen</a> = 43,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeFoundPhoneReplay</a> = 25,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeUltraviolet</a> = 44,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeGetMacAddress</a> = 26,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeBreathingRate</a> = 45,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeOpenSleepMonitoring</a> = 27,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeBloodPressure</a> = 46,<br>
-                            
-                            &nbsp;&nbsp; <a href="">FCSyncTypeOpenRealtimeSync</a> = 47,<br>
-                            
-                            &nbsp;&nbsp; <a href="">FCSyncTypeCloseRealtimeSync</a> = 48,<br>
-                            
-                            &nbsp;&nbsp; <a href="">FCSyncTypeFirmwareUpgrade</a> = 49,<br>
-                            
-                            &nbsp;&nbsp; <a href="">FCSyncTypeFirmwareVersion</a> = 50,<br>
-                            
-                            &nbsp;&nbsp; <a href="">FCSyncTypeFoundMyCellPhone</a> = 51,<br>
-                            
-                            &nbsp;&nbsp; <a href="">FCSyncTypeGetMacAddress</a> = 52,<br>
-                            
-                            &nbsp;&nbsp; <a href="">FCSyncTypeDailyTotalData</a> = 53,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeCloseSleepMonitoring</a> = 28,<br>
                             
                             &nbsp;&nbsp; <a href="">FCSyncTypeEnd</a> = 100,<br>
                             
@@ -171,11 +157,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="FCSyncTypeNone"></a><code>FCSyncTypeNone</code></dt>
+                            <dt><a name="" title="FCSyncTypeUnknown"></a><code>FCSyncTypeUnknown</code></dt>
 <dd>
 
 
-<p>The default type</p>
+<p>默认类型</p>
 
 
 
@@ -192,7 +178,7 @@
 <dd>
 
 
-<p>Unbind the device</p>
+<p>解绑设备</p>
 
 
 
@@ -209,7 +195,7 @@
 <dd>
 
 
-<p>Login the device</p>
+<p>登录设备</p>
 
 
 
@@ -226,7 +212,7 @@
 <dd>
 
 
-<p>Bond the device</p>
+<p>绑定设备</p>
 
 
 
@@ -239,28 +225,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncTypeLoginToSyncTime"></a><code>FCSyncTypeLoginToSyncTime</code></dt>
+                            <dt><a name="" title="FCSyncTypeFindTheWatch"></a><code>FCSyncTypeFindTheWatch</code></dt>
 <dd>
 
 
-<p>Login to the device to synchronize the time</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">FCDefine.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="FCSyncTypeFindWristband"></a><code>FCSyncTypeFindWristband</code></dt>
-<dd>
-
-
-<p>Find the watch</p>
+<p>查找手表</p>
 
 
 
@@ -277,7 +246,7 @@
 <dd>
 
 
-<p>Synchronize the alarm list</p>
+<p>获取闹钟列表</p>
 
 
 
@@ -294,7 +263,7 @@
 <dd>
 
 
-<p>Alarm settings</p>
+<p>闹钟设置</p>
 
 
 
@@ -307,11 +276,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncTypeBatteryPowerAndChargingState"></a><code>FCSyncTypeBatteryPowerAndChargingState</code></dt>
+                            <dt><a name="" title="FCSyncTypeGetBatteryLevelAndState"></a><code>FCSyncTypeGetBatteryLevelAndState</code></dt>
 <dd>
 
 
-<p>Get power and charge status</p>
+<p>电量和充电状态获取</p>
 
 
 
@@ -328,7 +297,7 @@
 <dd>
 
 
-<p>Get the system settings</p>
+<p>系统设置同步</p>
 
 
 
@@ -341,11 +310,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncTypeDisplaySettings"></a><code>FCSyncTypeDisplaySettings</code></dt>
+                            <dt><a name="" title="FCSyncTypeUpdateDisplaySettings"></a><code>FCSyncTypeUpdateDisplaySettings</code></dt>
 <dd>
 
 
-<p>Watch display settings</p>
+<p>屏幕显示设置</p>
 
 
 
@@ -358,11 +327,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncTypeFunctionSwitchSettings"></a><code>FCSyncTypeFunctionSwitchSettings</code></dt>
+                            <dt><a name="" title="FCSyncTypeUpdateFeaturesSettings"></a><code>FCSyncTypeUpdateFeaturesSettings</code></dt>
 <dd>
 
 
-<p>Watch function switch settings</p>
+<p>功能开关设置</p>
 
 
 
@@ -375,11 +344,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncTypeNotificationSettings"></a><code>FCSyncTypeNotificationSettings</code></dt>
+                            <dt><a name="" title="FCSyncTypeUpdateNotificationSettings"></a><code>FCSyncTypeUpdateNotificationSettings</code></dt>
 <dd>
 
 
-<p>notification switch settings</p>
+<p>通知开关设置</p>
 
 
 
@@ -392,11 +361,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncTypeSedentaryReminder"></a><code>FCSyncTypeSedentaryReminder</code></dt>
+                            <dt><a name="" title="FCSyncTypeSetSedentaryReminder"></a><code>FCSyncTypeSetSedentaryReminder</code></dt>
 <dd>
 
 
-<p>The sedentary reminder setting</p>
+<p>久坐提醒</p>
 
 
 
@@ -409,11 +378,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncTypeHealthMonitoring"></a><code>FCSyncTypeHealthMonitoring</code></dt>
+                            <dt><a name="" title="FCSyncTypeSetHealthMonitoring"></a><code>FCSyncTypeSetHealthMonitoring</code></dt>
 <dd>
 
 
-<p>Health monitoring settings</p>
+<p>健康监测</p>
 
 
 
@@ -426,11 +395,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncTypeDrinkReminder"></a><code>FCSyncTypeDrinkReminder</code></dt>
+                            <dt><a name="" title="FCSyncTypeSetDrinkReminder"></a><code>FCSyncTypeSetDrinkReminder</code></dt>
 <dd>
 
 
-<p>Drink water to remind</p>
+<p>喝水提醒</p>
 
 
 
@@ -443,11 +412,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncTypeWearingStyle"></a><code>FCSyncTypeWearingStyle</code></dt>
+                            <dt><a name="" title="FCSyncTypeSetWearingStyle"></a><code>FCSyncTypeSetWearingStyle</code></dt>
 <dd>
 
 
-<p>Wearing style settings</p>
+<p>佩戴方式</p>
 
 
 
@@ -460,11 +429,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncTypeCameraState"></a><code>FCSyncTypeCameraState</code></dt>
+                            <dt><a name="" title="FCSyncTypeSetCameraState"></a><code>FCSyncTypeSetCameraState</code></dt>
 <dd>
 
 
-<p>Camera states</p>
+<p>相机状态设置</p>
 
 
 
@@ -477,11 +446,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncTypeDefaultBloodPressure"></a><code>FCSyncTypeDefaultBloodPressure</code></dt>
+                            <dt><a name="" title="FCSyncTypeSetDefaultBloodPressure"></a><code>FCSyncTypeSetDefaultBloodPressure</code></dt>
 <dd>
 
 
-<p>Default Blood Pressure</p>
+<p>默认血压设置</p>
 
 
 
@@ -498,7 +467,7 @@
 <dd>
 
 
-<p>Weather settings</p>
+<p>天气更新</p>
 
 
 
@@ -511,11 +480,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncTypeUserProfile"></a><code>FCSyncTypeUserProfile</code></dt>
+                            <dt><a name="" title="FCSyncTypeSetUserProfile"></a><code>FCSyncTypeSetUserProfile</code></dt>
 <dd>
 
 
-<p>Set the user profile</p>
+<p>同步用户资料</p>
 
 
 
@@ -528,130 +497,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncTypeHistoryData"></a><code>FCSyncTypeHistoryData</code></dt>
+                            <dt><a name="" title="FCSyncTypeGetHistoryData"></a><code>FCSyncTypeGetHistoryData</code></dt>
 <dd>
 
 
-<p>Historical data synchronization</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">FCDefine.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="FCSyncTypeExercise"></a><code>FCSyncTypeExercise</code></dt>
-<dd>
-
-
-<p>Exercise synchronization</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">FCDefine.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="FCSyncTypeSleep"></a><code>FCSyncTypeSleep</code></dt>
-<dd>
-
-
-<p>sleep data synchronization</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">FCDefine.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="FCSyncTypeHeartRate"></a><code>FCSyncTypeHeartRate</code></dt>
-<dd>
-
-
-<p>Heart rate data synchronization</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">FCDefine.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="FCSyncTypeBloodOxygen"></a><code>FCSyncTypeBloodOxygen</code></dt>
-<dd>
-
-
-<p>Blood oxygenation data synchronization</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">FCDefine.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="FCSyncTypeUltraviolet"></a><code>FCSyncTypeUltraviolet</code></dt>
-<dd>
-
-
-<p>UV data synchronization</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">FCDefine.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="FCSyncTypeBreathingRate"></a><code>FCSyncTypeBreathingRate</code></dt>
-<dd>
-
-
-<p>Respiratory frequency data synchronization</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">FCDefine.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="FCSyncTypeBloodPressure"></a><code>FCSyncTypeBloodPressure</code></dt>
-<dd>
-
-
-<p>Blood Pressure Data Synchronization</p>
+<p>历史数据同步</p>
 
 
 
@@ -668,7 +518,7 @@
 <dd>
 
 
-<p>Turns on real-time health sync</p>
+<p>打开健康实时同步</p>
 
 
 
@@ -685,7 +535,7 @@
 <dd>
 
 
-<p>Turn off health real-time synchronization</p>
+<p>关闭健康实时同步</p>
 
 
 
@@ -702,7 +552,7 @@
 <dd>
 
 
-<p>Firmware upgrade</p>
+<p>请求固件升级</p>
 
 
 
@@ -715,11 +565,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncTypeFirmwareVersion"></a><code>FCSyncTypeFirmwareVersion</code></dt>
+                            <dt><a name="" title="FCSyncTypeGetFirmwareVersion"></a><code>FCSyncTypeGetFirmwareVersion</code></dt>
 <dd>
 
 
-<p>Firmware version</p>
+<p>获取固件版本</p>
 
 
 
@@ -732,11 +582,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncTypeFoundMyCellPhone"></a><code>FCSyncTypeFoundMyCellPhone</code></dt>
+                            <dt><a name="" title="FCSyncTypeFoundPhoneReplay"></a><code>FCSyncTypeFoundPhoneReplay</code></dt>
 <dd>
 
 
-<p>Found my cell phone.</p>
+<p>发现手机回复</p>
 
 
 
@@ -753,7 +603,7 @@
 <dd>
 
 
-<p>Get the MAC address of the watch</p>
+<p>获取手表mac地址</p>
 
 
 
@@ -766,11 +616,28 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncTypeDailyTotalData"></a><code>FCSyncTypeDailyTotalData</code></dt>
+                            <dt><a name="" title="FCSyncTypeOpenSleepMonitoring"></a><code>FCSyncTypeOpenSleepMonitoring</code></dt>
 <dd>
 
 
-<p>Gets the current day&rsquo;s total data</p>
+<p>打开睡眠监测设定监测时间</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">FCDefine.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="FCSyncTypeCloseSleepMonitoring"></a><code>FCSyncTypeCloseSleepMonitoring</code></dt>
+<dd>
+
+
+<p>关闭睡眠监测</p>
 
 
 
@@ -787,7 +654,7 @@
 <dd>
 
 
-<p>Finished</p>
+<p>结束</p>
 
 
 
@@ -824,7 +691,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 H.Tang. All rights reserved. Updated: 2016-12-08</p>
+						<p class="copyright">Copyright &copy; 2017 H.Tang. All rights reserved. Updated: 2017-05-28</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

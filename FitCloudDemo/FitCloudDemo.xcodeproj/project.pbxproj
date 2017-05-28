@@ -209,6 +209,7 @@
 		6B5DD24F1DC8A4E100788BDA /* FitCloudDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6BDEB8651EDA822B002A6DD3 /* DataBase */,
 				6BE746FA1ED95ECB0085E16E /* View */,
 				6BE746D31ED95AA90085E16E /* Define */,
 				6BE746D21ED95A990085E16E /* Utils */,
@@ -304,6 +305,13 @@
 				6BE746CE1ED941BC0085E16E /* FCConfigManager.m */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		6BDEB8651EDA822B002A6DD3 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataBase;
 			sourceTree = "<group>";
 		};
 		6BE746D01ED954D40085E16E /* Model */ = {

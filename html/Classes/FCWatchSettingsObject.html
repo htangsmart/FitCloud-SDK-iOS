@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>FCAlarmCycleModel Class Reference</title>
+	<title>FCWatchSettingsObject Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -56,35 +56,33 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/firday">firday</option>
+		<option value="//api/name/defaultBloodPressureData">defaultBloodPressureData</option>
 		
-		<option value="//api/name/monday">monday</option>
+		<option value="//api/name/drinkReminderData">drinkReminderData</option>
 		
-		<option value="//api/name/saturday">saturday</option>
+		<option value="//api/name/featuresData">featuresData</option>
 		
-		<option value="//api/name/sunday">sunday</option>
+		<option value="//api/name/healthMonitoringData">healthMonitoringData</option>
 		
-		<option value="//api/name/thursday">thursday</option>
+		<option value="//api/name/nfSettingData">nfSettingData</option>
 		
-		<option value="//api/name/tuesday">tuesday</option>
+		<option value="//api/name/sedentaryReminderData">sedentaryReminderData</option>
 		
-		<option value="//api/name/wednesday">wednesday</option>
+		<option value="//api/name/versionData">versionData</option>
+		
+		<option value="//api/name/wsdisplayData">wsdisplayData</option>
 		
 	</optgroup>
 	
 
-	
-	<optgroup label="Class Methods">
-		
-		<option value="//api/name/modelWithCycle:">+ modelWithCycle:</option>
-		
-	</optgroup>
 	
 
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/cycleValue">- cycleValue</option>
+		<option value="//api/name/messageNotificationObject">- messageNotificationObject</option>
+		
+		<option value="//api/name/watchScreenDisplayObject">- watchScreenDisplayObject</option>
 		
 	</optgroup>
 	
@@ -101,13 +99,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">FCAlarmCycleModel Class Reference</h1>
+					<h1 class="title">FCWatchSettingsObject Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
 	<td>NSObject</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td><a href="../Protocols/FCObjectProtocal.html">FCObjectProtocal</a></td>
 </tr><tr>
 	<th>Declared in</th>
 	<td>FCObject.h</td>
@@ -120,7 +121,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>@class FCAlarmCycleModel</p><p>Alarm clock cycle, if there is no cycle from Monday to Sunday, it means the day is valid</p>
+						<p>手表配置</p>
 					</div>
 					
 					
@@ -136,8 +137,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/monday" title="monday"></a>
-	<h3 class="method-title"><code><a href="#//api/name/monday">&nbsp;&nbsp;monday</a></code>
+	<a name="//api/name/nfSettingData" title="nfSettingData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/nfSettingData">&nbsp;&nbsp;nfSettingData</a></code>
 </h3>
 
 	<div class="method-info">
@@ -147,12 +148,312 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property monday</p>
+				<p>消息通知开关配置 4byte</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL monday</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *nfSettingData</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/FCNotificationObject.html">FCNotificationObject</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/wsdisplayData" title="wsdisplayData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/wsdisplayData">&nbsp;&nbsp;wsdisplayData</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>手表屏幕显示设置 2byte</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *wsdisplayData</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/FCScreenDisplayConfigObject.html">FCScreenDisplayConfigObject</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/featuresData" title="featuresData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/featuresData">&nbsp;&nbsp;featuresData</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>手表功能开关配置 2byte</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *featuresData</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/FCFeaturesObject.html">FCFeaturesObject</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/versionData" title="versionData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/versionData">&nbsp;&nbsp;versionData</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>手表系统软硬件版本信息 32byte</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *versionData</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/FCVersionDataObject.html">FCVersionDataObject</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/healthMonitoringData" title="healthMonitoringData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/healthMonitoringData">&nbsp;&nbsp;healthMonitoringData</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>健康定时监测 5byte</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *healthMonitoringData</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/FCHealthMonitoringObject.html">FCHealthMonitoringObject</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sedentaryReminderData" title="sedentaryReminderData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sedentaryReminderData">&nbsp;&nbsp;sedentaryReminderData</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>久坐提醒数据 5bytes</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *sedentaryReminderData</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/FCSedentaryReminderObject.html">FCSedentaryReminderObject</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/defaultBloodPressureData" title="defaultBloodPressureData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/defaultBloodPressureData">&nbsp;&nbsp;defaultBloodPressureData</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>默认血压</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *defaultBloodPressureData</code></div>
 
 		    
 			
@@ -177,8 +478,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/tuesday" title="tuesday"></a>
-	<h3 class="method-title"><code><a href="#//api/name/tuesday">&nbsp;&nbsp;tuesday</a></code>
+	<a name="//api/name/drinkReminderData" title="drinkReminderData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/drinkReminderData">&nbsp;&nbsp;drinkReminderData</a></code>
 </h3>
 
 	<div class="method-info">
@@ -188,12 +489,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property tuesday</p>
+				<p>喝水提醒</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL tuesday</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSData *drinkReminderData</code></div>
 
 		    
 			
@@ -218,8 +519,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/wednesday" title="wednesday"></a>
-	<h3 class="method-title"><code><a href="#//api/name/wednesday">&nbsp;&nbsp;wednesday</a></code>
+	<a name="//api/name/messageNotificationObject" title="messageNotificationObject"></a>
+	<h3 class="method-title"><code><a href="#//api/name/messageNotificationObject">&ndash;&nbsp;messageNotificationObject</a></code>
 </h3>
 
 	<div class="method-info">
@@ -229,247 +530,25 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property wednesday</p>
+				<p>通知消息对象。</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL wednesday</code></div>
+			<div class="method-subsection method-declaration"><code>- (FCNotificationObject *)messageNotificationObject</code></div>
 
 		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/thursday" title="thursday"></a>
-	<h3 class="method-title"><code><a href="#//api/name/thursday">&nbsp;&nbsp;thursday</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>@property thursday</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL thursday</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/firday" title="firday"></a>
-	<h3 class="method-title"><code><a href="#//api/name/firday">&nbsp;&nbsp;firday</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>@property firday</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL firday</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/saturday" title="saturday"></a>
-	<h3 class="method-title"><code><a href="#//api/name/saturday">&nbsp;&nbsp;saturday</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>@property saturday</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL saturday</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/sunday" title="sunday"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sunday">&nbsp;&nbsp;sunday</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>@property sunday</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL sunday</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/modelWithCycle:" title="modelWithCycle:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/modelWithCycle:">+&nbsp;modelWithCycle:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Instantiate a data model using an alarm clock cycle</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (instancetype)modelWithCycle:(NSNumber *)<em>cycle</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>cycle</code></th>
-						<td><p>The alarm clock cycle</p></td>
-					</tr>
-				
-				</table>
-			</div>
 			
 
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>an alarm clock cycle model of <code>FCAlarmCycleModel</code> object</p>
+				<p>通知消息对象</p>
 			</div>
 			
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Instantiate a data model using an alarm clock cycle</p>
-			</div>
 			
 
 			
@@ -486,8 +565,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/cycleValue" title="cycleValue"></a>
-	<h3 class="method-title"><code><a href="#//api/name/cycleValue">&ndash;&nbsp;cycleValue</a></code>
+	<a name="//api/name/watchScreenDisplayObject" title="watchScreenDisplayObject"></a>
+	<h3 class="method-title"><code><a href="#//api/name/watchScreenDisplayObject">&ndash;&nbsp;watchScreenDisplayObject</a></code>
 </h3>
 
 	<div class="method-info">
@@ -497,12 +576,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The alarm clock cycle (7bits).From low to high indicates Monday to Sunday.All bits are 0, indicating that the day is valid</p>
+				<p>手环显示设置对象，其属性能否修改由<i>FCPageDisplayFlagObject</i>对应属性决定</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSNumber *)cycleValue</code></div>
+			<div class="method-subsection method-declaration"><code>- (FCScreenDisplayConfigObject *)watchScreenDisplayObject</code></div>
 
 		    
 			
@@ -510,17 +589,12 @@
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>alarm clock cycle value</p>
+				<p>显示设置对象</p>
 			</div>
 			
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The alarm clock cycle (7bits).From low to high indicates Monday to Sunday.All bits are 0, indicating that the day is valid</p>
-			</div>
 			
 
 			
@@ -551,7 +625,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 H.Tang. All rights reserved. Updated: 2016-12-08</p>
+						<p class="copyright">Copyright &copy; 2017 H.Tang. All rights reserved. Updated: 2017-05-28</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>FCExerciseModel Class Reference</title>
+	<title>FCNotificationObject Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -56,19 +56,19 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/calorie">calorie</option>
+		<option value="//api/name/appDisconnectAlerts">appDisconnectAlerts</option>
 		
-		<option value="//api/name/day">day</option>
+		<option value="//api/name/heartRateMonitoringEnabled">heartRateMonitoringEnabled</option>
 		
-		<option value="//api/name/distance">distance</option>
+		<option value="//api/name/incomingCall">incomingCall</option>
 		
-		<option value="//api/name/minutes">minutes</option>
+		<option value="//api/name/messageDisplayEnabled">messageDisplayEnabled</option>
 		
-		<option value="//api/name/month">month</option>
+		<option value="//api/name/otherApp">otherApp</option>
 		
-		<option value="//api/name/stepCount">stepCount</option>
+		<option value="//api/name/smsAlerts">smsAlerts</option>
 		
-		<option value="//api/name/year">year</option>
+		<option value="//api/name/watchDisconnectAlerts">watchDisconnectAlerts</option>
 		
 	</optgroup>
 	
@@ -89,13 +89,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">FCExerciseModel Class Reference</h1>
+					<h1 class="title">FCNotificationObject Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
 	<td>NSObject</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td><a href="../Protocols/FCObjectProtocal.html">FCObjectProtocal</a></td>
 </tr><tr>
 	<th>Declared in</th>
 	<td>FCObject.h</td>
@@ -108,7 +111,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>@class FCExerciseModel</p><p>The sports data model</p>
+						<p>手表通知开关对象</p>
 					</div>
 					
 					
@@ -124,8 +127,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/year" title="year"></a>
-	<h3 class="method-title"><code><a href="#//api/name/year">&nbsp;&nbsp;year</a></code>
+	<a name="//api/name/incomingCall" title="incomingCall"></a>
+	<h3 class="method-title"><code><a href="#//api/name/incomingCall">&nbsp;&nbsp;incomingCall</a></code>
 </h3>
 
 	<div class="method-info">
@@ -135,58 +138,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property year</p>
+				<p>手机来电通知，有新来电时手表会震动提醒</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *year</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The value of year is the current year minus 2000</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/month" title="month"></a>
-	<h3 class="method-title"><code><a href="#//api/name/month">&nbsp;&nbsp;month</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>@property month</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *month</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL incomingCall</code></div>
 
 		    
 			
@@ -211,8 +168,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/day" title="day"></a>
-	<h3 class="method-title"><code><a href="#//api/name/day">&nbsp;&nbsp;day</a></code>
+	<a name="//api/name/smsAlerts" title="smsAlerts"></a>
+	<h3 class="method-title"><code><a href="#//api/name/smsAlerts">&nbsp;&nbsp;smsAlerts</a></code>
 </h3>
 
 	<div class="method-info">
@@ -222,12 +179,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property day</p>
+				<p>短信通知，有新短信时手表会提醒</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *day</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL smsAlerts</code></div>
 
 		    
 			
@@ -252,8 +209,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/minutes" title="minutes"></a>
-	<h3 class="method-title"><code><a href="#//api/name/minutes">&nbsp;&nbsp;minutes</a></code>
+	<a name="//api/name/otherApp" title="otherApp"></a>
+	<h3 class="method-title"><code><a href="#//api/name/otherApp">&nbsp;&nbsp;otherApp</a></code>
 </h3>
 
 	<div class="method-info">
@@ -263,58 +220,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property minutes</p>
+				<p>打开此项，其他app来消息时，手表会及时通知用户</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *minutes</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The number of minutes from zero</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FCObject.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/stepCount" title="stepCount"></a>
-	<h3 class="method-title"><code><a href="#//api/name/stepCount">&nbsp;&nbsp;stepCount</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>@property stepCount</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *stepCount</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL otherApp</code></div>
 
 		    
 			
@@ -339,8 +250,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/calorie" title="calorie"></a>
-	<h3 class="method-title"><code><a href="#//api/name/calorie">&nbsp;&nbsp;calorie</a></code>
+	<a name="//api/name/messageDisplayEnabled" title="messageDisplayEnabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/messageDisplayEnabled">&nbsp;&nbsp;messageDisplayEnabled</a></code>
 </h3>
 
 	<div class="method-info">
@@ -350,12 +261,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property calorie</p>
+				<p>消息内容是否在手表屏幕上显示，打开此项短消息内容会即时显示在手表屏幕上</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *calorie</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL messageDisplayEnabled</code></div>
 
 		    
 			
@@ -380,8 +291,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/distance" title="distance"></a>
-	<h3 class="method-title"><code><a href="#//api/name/distance">&nbsp;&nbsp;distance</a></code>
+	<a name="//api/name/appDisconnectAlerts" title="appDisconnectAlerts"></a>
+	<h3 class="method-title"><code><a href="#//api/name/appDisconnectAlerts">&nbsp;&nbsp;appDisconnectAlerts</a></code>
 </h3>
 
 	<div class="method-info">
@@ -391,12 +302,94 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@property distance</p>
+				<p>蓝牙断开提醒，当手表和手机断开连接，手机app会及时提醒用户,此处需要用户自己去做app提醒</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *distance</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL appDisconnectAlerts</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/watchDisconnectAlerts" title="watchDisconnectAlerts"></a>
+	<h3 class="method-title"><code><a href="#//api/name/watchDisconnectAlerts">&nbsp;&nbsp;watchDisconnectAlerts</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>手表断开提醒，当手表和手机断开连接，手表会震动提醒</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL watchDisconnectAlerts</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/heartRateMonitoringEnabled" title="heartRateMonitoringEnabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/heartRateMonitoringEnabled">&nbsp;&nbsp;heartRateMonitoringEnabled</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>心率实时监测，打开此开关，手表会持续采集用户心率数据</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL heartRateMonitoringEnabled</code></div>
 
 		    
 			
@@ -435,7 +428,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 H.Tang. All rights reserved. Updated: 2016-12-08</p>
+						<p class="copyright">Copyright &copy; 2017 H.Tang. All rights reserved. Updated: 2017-05-28</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
