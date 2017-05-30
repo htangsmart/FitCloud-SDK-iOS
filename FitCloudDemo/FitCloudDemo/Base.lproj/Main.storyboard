@@ -331,14 +331,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="FEW-vq-QsD">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="553"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="FG8-Yx-Ivd">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="FG8-Yx-Ivd" customClass="FCDailyAlarmCell">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FG8-Yx-Ivd" id="Onx-Jg-fue">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -348,13 +348,28 @@
                                     <outlet property="delegate" destination="PoE-Xr-v09" id="UFF-JR-G4W"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1C-Q0-RMz">
+                                <rect key="frame" x="0.0" y="553" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="guY-oU-KVl"/>
+                                </constraints>
+                                <state key="normal" title="新增闹钟">
+                                    <color key="titleColor" red="0.14117647059999999" green="0.62745098040000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToAddNewAlarm:" destination="PoE-Xr-v09" eventType="touchUpInside" id="DG6-SR-hMO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="FEW-vq-QsD" secondAttribute="trailing" id="5Vs-pb-UXL"/>
                             <constraint firstItem="FEW-vq-QsD" firstAttribute="top" secondItem="kNS-nK-6xO" secondAttribute="bottom" id="P9r-cC-e6x"/>
-                            <constraint firstAttribute="bottom" secondItem="FEW-vq-QsD" secondAttribute="bottom" id="gMO-B5-j9G"/>
+                            <constraint firstAttribute="bottom" secondItem="U1C-Q0-RMz" secondAttribute="bottom" id="Y6X-yw-l31"/>
+                            <constraint firstAttribute="trailing" secondItem="U1C-Q0-RMz" secondAttribute="trailing" id="dyF-H0-7io"/>
+                            <constraint firstAttribute="bottom" secondItem="FEW-vq-QsD" secondAttribute="bottom" constant="50" id="gMO-B5-j9G"/>
                             <constraint firstItem="FEW-vq-QsD" firstAttribute="leading" secondItem="gaE-hY-Kee" secondAttribute="leading" id="o9z-5S-ZZa"/>
+                            <constraint firstItem="U1C-Q0-RMz" firstAttribute="leading" secondItem="gaE-hY-Kee" secondAttribute="leading" id="zLm-1z-EFe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="闹钟配置" id="ive-VB-nvV">
@@ -373,11 +388,77 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="FEW-vq-QsD" id="aLJ-ns-YS4"/>
+                        <segue destination="3fD-6o-FEc" kind="show" identifier="编辑闹钟" id="zU9-vi-6lJ"/>
+                        <segue destination="Ytb-Bc-Rcd" kind="show" identifier="新增闹钟" id="XnI-LY-Puw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ad1-4n-w1e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2213" y="975"/>
+        </scene>
+        <!--编辑闹钟-->
+        <scene sceneID="n1N-pR-aN4">
+            <objects>
+                <viewController storyboardIdentifier="编辑闹钟" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="3fD-6o-FEc" customClass="FCEditAlarmViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8cK-iT-3LX"/>
+                        <viewControllerLayoutGuide type="bottom" id="Er4-sv-Sod"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DMm-7M-Tnv">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="编辑闹钟" id="xYM-l7-idw">
+                        <barButtonItem key="leftBarButtonItem" image="ico_back" id="kMg-1b-AFX">
+                            <color key="tintColor" red="0.14117647059999999" green="0.62745098040000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="clickToBack:" destination="3fD-6o-FEc" id="gKn-7q-Alr"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="QLm-Sv-z3N">
+                            <color key="tintColor" red="0.14117647059999999" green="0.62745098040000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="clickToSave:" destination="3fD-6o-FEc" id="kGZ-U3-Ya7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MYn-dQ-sGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1774" y="1762"/>
+        </scene>
+        <!--新增闹钟-->
+        <scene sceneID="MvD-Qd-76l">
+            <objects>
+                <viewController storyboardIdentifier="新增闹钟" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="Ytb-Bc-Rcd" customClass="FCNewAlarmViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ETX-Km-eqb"/>
+                        <viewControllerLayoutGuide type="bottom" id="mw0-26-Nuc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y8k-Xn-zux">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="新增闹钟" id="sik-Us-wcd">
+                        <barButtonItem key="leftBarButtonItem" image="ico_back" id="ns3-ig-Csg">
+                            <color key="tintColor" red="0.14117647059999999" green="0.62745098040000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="clickToBack:" destination="Ytb-Bc-Rcd" id="K2F-DQ-egw"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="OUV-DJ-u5T">
+                            <color key="tintColor" red="0.14117647059999999" green="0.62745098040000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="clickToSave:" destination="Ytb-Bc-Rcd" id="oiz-uA-urw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qJf-p9-KQH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2614" y="1766"/>
         </scene>
         <!--固件升级-->
         <scene sceneID="HFP-5n-ga9">

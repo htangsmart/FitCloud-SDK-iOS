@@ -35,6 +35,12 @@
 		6BE571821EDDDEAC00CE46C7 /* HFPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE571801EDDDEAC00CE46C7 /* HFPickerView.xib */; };
 		6BE571871EDDE40D00CE46C7 /* FCCustomaryUnitsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE571861EDDE40D00CE46C7 /* FCCustomaryUnitsHeaderView.m */; };
 		6BE5718A1EDDE4CA00CE46C7 /* FCCustomaryUnitsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE571891EDDE4CA00CE46C7 /* FCCustomaryUnitsCell.m */; };
+		6BE5718D1EDDEACB00CE46C7 /* FCAlarmConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE5718C1EDDEACB00CE46C7 /* FCAlarmConfigManager.m */; };
+		6BE571901EDDEC5E00CE46C7 /* FCDailyAlarmCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE5718F1EDDEC5E00CE46C7 /* FCDailyAlarmCell.m */; };
+		6BE571931EDDED1D00CE46C7 /* FCAlarmClockCycleObject+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE571921EDDED1D00CE46C7 /* FCAlarmClockCycleObject+Category.m */; };
+		6BE571961EDDEE1B00CE46C7 /* FCNewAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE571951EDDEE1B00CE46C7 /* FCNewAlarmViewController.m */; };
+		6BE571991EDDEE2900CE46C7 /* FCEditAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE571981EDDEE2900CE46C7 /* FCEditAlarmViewController.m */; };
+		6BE5719C1EDDEE4200CE46C7 /* FCEditAlarmCycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE5719B1EDDEE4200CE46C7 /* FCEditAlarmCycleViewController.m */; };
 		6BE746CF1ED941BC0085E16E /* FCConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE746CE1ED941BC0085E16E /* FCConfigManager.m */; };
 		6BE746DE1ED95C8D0085E16E /* FCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE746DD1ED95C8D0085E16E /* FCHomeViewController.m */; };
 		6BE746F01ED95DB20085E16E /* FCSportsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE746EF1ED95DB20085E16E /* FCSportsViewController.m */; };
@@ -127,6 +133,18 @@
 		6BE571861EDDE40D00CE46C7 /* FCCustomaryUnitsHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCCustomaryUnitsHeaderView.m; sourceTree = "<group>"; };
 		6BE571881EDDE4CA00CE46C7 /* FCCustomaryUnitsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCCustomaryUnitsCell.h; sourceTree = "<group>"; };
 		6BE571891EDDE4CA00CE46C7 /* FCCustomaryUnitsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCCustomaryUnitsCell.m; sourceTree = "<group>"; };
+		6BE5718B1EDDEACB00CE46C7 /* FCAlarmConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCAlarmConfigManager.h; sourceTree = "<group>"; };
+		6BE5718C1EDDEACB00CE46C7 /* FCAlarmConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCAlarmConfigManager.m; sourceTree = "<group>"; };
+		6BE5718E1EDDEC5E00CE46C7 /* FCDailyAlarmCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCDailyAlarmCell.h; sourceTree = "<group>"; };
+		6BE5718F1EDDEC5E00CE46C7 /* FCDailyAlarmCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCDailyAlarmCell.m; sourceTree = "<group>"; };
+		6BE571911EDDED1D00CE46C7 /* FCAlarmClockCycleObject+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FCAlarmClockCycleObject+Category.h"; sourceTree = "<group>"; };
+		6BE571921EDDED1D00CE46C7 /* FCAlarmClockCycleObject+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FCAlarmClockCycleObject+Category.m"; sourceTree = "<group>"; };
+		6BE571941EDDEE1B00CE46C7 /* FCNewAlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCNewAlarmViewController.h; sourceTree = "<group>"; };
+		6BE571951EDDEE1B00CE46C7 /* FCNewAlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCNewAlarmViewController.m; sourceTree = "<group>"; };
+		6BE571971EDDEE2900CE46C7 /* FCEditAlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCEditAlarmViewController.h; sourceTree = "<group>"; };
+		6BE571981EDDEE2900CE46C7 /* FCEditAlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCEditAlarmViewController.m; sourceTree = "<group>"; };
+		6BE5719A1EDDEE4200CE46C7 /* FCEditAlarmCycleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCEditAlarmCycleViewController.h; sourceTree = "<group>"; };
+		6BE5719B1EDDEE4200CE46C7 /* FCEditAlarmCycleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCEditAlarmCycleViewController.m; sourceTree = "<group>"; };
 		6BE746CD1ED941BC0085E16E /* FCConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCConfigManager.h; sourceTree = "<group>"; };
 		6BE746CE1ED941BC0085E16E /* FCConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCConfigManager.m; sourceTree = "<group>"; };
 		6BE746DC1ED95C8D0085E16E /* FCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCHomeViewController.h; sourceTree = "<group>"; };
@@ -356,6 +374,8 @@
 				6BCF1C691DE57FD600B99A21 /* FitCloudManager.m */,
 				6BE746CD1ED941BC0085E16E /* FCConfigManager.h */,
 				6BE746CE1ED941BC0085E16E /* FCConfigManager.m */,
+				6BE5718B1EDDEACB00CE46C7 /* FCAlarmConfigManager.h */,
+				6BE5718C1EDDEACB00CE46C7 /* FCAlarmConfigManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -602,6 +622,8 @@
 		6BF31A591ED98A60000454EB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BE571911EDDED1D00CE46C7 /* FCAlarmClockCycleObject+Category.h */,
+				6BE571921EDDED1D00CE46C7 /* FCAlarmClockCycleObject+Category.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -616,6 +638,8 @@
 				6BDEB8671EDA9410002A6DD3 /* FCConnectStateCell.m */,
 				6BE5716B1EDD728E00CE46C7 /* FCNotificationCell.h */,
 				6BE5716C1EDD728E00CE46C7 /* FCNotificationCell.m */,
+				6BE5718E1EDDEC5E00CE46C7 /* FCDailyAlarmCell.h */,
+				6BE5718F1EDDEC5E00CE46C7 /* FCDailyAlarmCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -678,6 +702,12 @@
 			children = (
 				6BF31A701ED9A7B1000454EB /* FCAlarmConfigViewController.h */,
 				6BF31A711ED9A7B1000454EB /* FCAlarmConfigViewController.m */,
+				6BE571941EDDEE1B00CE46C7 /* FCNewAlarmViewController.h */,
+				6BE571951EDDEE1B00CE46C7 /* FCNewAlarmViewController.m */,
+				6BE571971EDDEE2900CE46C7 /* FCEditAlarmViewController.h */,
+				6BE571981EDDEE2900CE46C7 /* FCEditAlarmViewController.m */,
+				6BE5719A1EDDEE4200CE46C7 /* FCEditAlarmCycleViewController.h */,
+				6BE5719B1EDDEE4200CE46C7 /* FCEditAlarmCycleViewController.m */,
 			);
 			name = "闹钟配置";
 			sourceTree = "<group>";
@@ -920,13 +950,17 @@
 				6B5DD2C61DC8A97A00788BDA /* NSObject+HUD.m in Sources */,
 				6BE746F01ED95DB20085E16E /* FCSportsViewController.m in Sources */,
 				6BE571871EDDE40D00CE46C7 /* FCCustomaryUnitsHeaderView.m in Sources */,
+				6BE5718D1EDDEACB00CE46C7 /* FCAlarmConfigManager.m in Sources */,
 				6BF31A761ED9A7C7000454EB /* FCOtherViewController.m in Sources */,
 				6BF31A661ED9A75D000454EB /* FCNotificationViewController.m in Sources */,
 				6B5DD2C41DC8A97A00788BDA /* FitCloud+Category.m in Sources */,
 				6BE5715F1EDD4B8C00CE46C7 /* FCUIConstants.m in Sources */,
 				6BF31A6A1ED9A76F000454EB /* FCUnitViewController.m in Sources */,
+				6BE571961EDDEE1B00CE46C7 /* FCNewAlarmViewController.m in Sources */,
 				6BF31A5E1ED98A60000454EB /* FCSettingViewController.m in Sources */,
 				6BF31A721ED9A7B1000454EB /* FCAlarmConfigViewController.m in Sources */,
+				6BE571991EDDEE2900CE46C7 /* FCEditAlarmViewController.m in Sources */,
+				6BE571901EDDEC5E00CE46C7 /* FCDailyAlarmCell.m in Sources */,
 				6BE571681EDD5A9200CE46C7 /* FCUserConfig.m in Sources */,
 				6BE746F31ED95DBF0085E16E /* FCSleepViewController.m in Sources */,
 				6B403C151ED9790800246086 /* FCSyncDataViewController.m in Sources */,
@@ -939,6 +973,8 @@
 				6B5DD2521DC8A4E100788BDA /* main.m in Sources */,
 				6BE5716D1EDD728E00CE46C7 /* FCNotificationCell.m in Sources */,
 				6BE571791EDDDA8600CE46C7 /* HFRadioAlertView.m in Sources */,
+				6BE571931EDDED1D00CE46C7 /* FCAlarmClockCycleObject+Category.m in Sources */,
+				6BE5719C1EDDEE4200CE46C7 /* FCEditAlarmCycleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
