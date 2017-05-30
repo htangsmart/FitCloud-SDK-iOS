@@ -60,7 +60,16 @@
     if (![dbEngine.dataBase tableExists:@"User"])
     {
         NSLog(@"---表User不存在---");
-        return nil;
+        FCUserConfig *userConfig = [[FCUserConfig alloc]init];
+        userConfig.age = 27;
+        userConfig.sex = 0;
+        userConfig.weight = 60;
+        userConfig.height = 165;
+        userConfig.systolicBP = 125;
+        userConfig.diastolicBP = 80;
+        userConfig.isLeftHandWearEnabled = YES;
+        userConfig.isImperialUnits = NO;
+        return userConfig;
     }
     FCUserConfig *userConfig = nil;
     FMResultSet *rs = [dbEngine.dataBase executeQuery:@"SELECT * FROM User"];
