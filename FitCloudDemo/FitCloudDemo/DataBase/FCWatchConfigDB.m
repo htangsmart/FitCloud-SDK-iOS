@@ -10,6 +10,8 @@
 #import "FCDBEngine.h"
 #import <FitCloudKit.h>
 #import <YYModel.h>
+#import "FCWatchSettingsObject+Category.h"
+
 
 @implementation FCWatchConfigDB
 + (BOOL)storeWatchConfig:(id)configObj forUUID:(NSString *)uuidString
@@ -34,19 +36,19 @@
         return NO;
     }
     FCWatchSettingsObject *watchSettingObj = (FCWatchSettingsObject*)configObj;
-    NSData *watchSettingData = [watchSettingObj yy_modelToJSONData];
+    NSData *dataOnObject = [NSKeyedArchiver archivedDataWithRootObject:watchSettingObj];
     
     BOOL ret = NO;
     NSString *fetchSQL = @"SELECT * FROM WatchSetting WHERE uuid = ?";
     FMResultSet *rs = [dbEngine.dataBase executeQuery:fetchSQL,uuidString];
     if (rs && [rs next]) {
         NSString *updateSQL = @"UPDATE WatchSetting SET jsonData = ? WHERE uuid = ?";
-        ret = [dbEngine.dataBase executeUpdate:updateSQL,watchSettingData, uuidString];
+        ret = [dbEngine.dataBase executeUpdate:updateSQL,dataOnObject, uuidString];
     }
     else
     {
         NSString *insertSQL = @"INSERT INTO WatchSetting VALUES(?,?)";
-        ret = [dbEngine.dataBase executeUpdate:insertSQL,uuidString,watchSettingData];
+        ret = [dbEngine.dataBase executeUpdate:insertSQL,uuidString,dataOnObject];
     }
     [rs close];
     [dbEngine closeDB];
@@ -74,7 +76,8 @@
     FMResultSet *rs = [dbEngine.dataBase executeQuery:@"SELECT * FROM WatchSetting WHERE uuid = ?",uuidString];
     if (rs && [rs next]) {
         NSData *jsonData = [rs dataForColumnIndex:1];
-        watchSettingObj = [FCWatchSettingsObject yy_modelWithJSON:jsonData];
+        watchSettingObj = [NSKeyedUnarchiver unarchiveObjectWithData:jsonData];
+        NSLog(@"---watchSettingObj--%@",watchSettingObj.yy_modelDescription);
     }
     [rs close];
     [dbEngine closeDB];

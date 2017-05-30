@@ -13,6 +13,9 @@
 #import "NSObject+HUD.h"
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import "FCUserConfigDB.h"
+#import "FCUserConfig.h"
+#import "FCConfigManager.h"
 
 
 @interface FitCloudManager()
@@ -196,24 +199,27 @@ void systemAudioCallback()
 #pragma mark - 登录设备
 - (void)loginDevice
 {
+    FCUserConfig *userConfig = [FCUserConfigDB getUserFromDB];
+    
     FCUserObject *user = [[FCUserObject alloc]init];
     user.guestId = 100;
     user.phoneModel = [[FitCloudUtils getPhoneModel]unsignedIntValue];
     user.osVersion = [[FitCloudUtils getOsVersion]unsignedIntValue];
     
     // 如果需要同步手机制式或者单位等到手机需要配置此项
-//    FCFeaturesObject *feature = [[FCFeaturesObject alloc]init];
-//    feature.flipWristToLightScreen = YES;
-//    feature.enhanceSurveyEnabled = YES;
-//    // 时间显示制式，可以跟随手机时间制式显示
-//    feature.twelveHoursSystem = YES;
-//    // 单位，根据需要选择
-//    feature.isImperialUnits = NO;
-//    user.featuresData = feature.writeData;
+    FCFeaturesObject *feature = [[FCConfigManager manager]featuresObject];
+    feature.flipWristToLightScreen = YES;
+    feature.enhanceSurveyEnabled = YES;
+    // 时间显示制式，可以跟随手机时间制式显示
+    feature.twelveHoursSystem = [FitCloudUtils is12HourSystem];
+    // 单位，根据需要选择
+    feature.isImperialUnits = userConfig.isImperialUnits;
+    user.featuresData = feature.writeData;
     
     __weak __typeof(self) ws = self;
     [self showLoadingHUDWithMessage:@"正在登录"];
     [[FitCloud shared]loginWithUser:user stepCallback:^(NSInteger syncType) {
+        
         NSLog(@"--登陆流程回调--%@",@(syncType));
         
     } result:^(FCSyncType syncType, FCLoginSyncType loginSyncType, FCSyncResponseState state) {

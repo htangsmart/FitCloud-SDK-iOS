@@ -25,6 +25,9 @@
 		6BE571651EDD4F6600CE46C7 /* FCWatchConfigDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE571641EDD4F6600CE46C7 /* FCWatchConfigDB.m */; };
 		6BE571681EDD5A9200CE46C7 /* FCUserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE571671EDD5A9200CE46C7 /* FCUserConfig.m */; };
 		6BE5716A1EDD600900CE46C7 /* 29.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6BE571691EDD600900CE46C7 /* 29.mp3 */; };
+		6BE5716D1EDD728E00CE46C7 /* FCNotificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE5716C1EDD728E00CE46C7 /* FCNotificationCell.m */; };
+		6BE571701EDD810D00CE46C7 /* FCWatchSettingsObject+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE5716F1EDD810D00CE46C7 /* FCWatchSettingsObject+Category.m */; };
+		6BE571731EDDD0D100CE46C7 /* FCUserConfigDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE571721EDDD0D100CE46C7 /* FCUserConfigDB.m */; };
 		6BE746CF1ED941BC0085E16E /* FCConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE746CE1ED941BC0085E16E /* FCConfigManager.m */; };
 		6BE746DE1ED95C8D0085E16E /* FCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE746DD1ED95C8D0085E16E /* FCHomeViewController.m */; };
 		6BE746F01ED95DB20085E16E /* FCSportsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE746EF1ED95DB20085E16E /* FCSportsViewController.m */; };
@@ -99,6 +102,12 @@
 		6BE571661EDD5A9200CE46C7 /* FCUserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCUserConfig.h; sourceTree = "<group>"; };
 		6BE571671EDD5A9200CE46C7 /* FCUserConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCUserConfig.m; sourceTree = "<group>"; };
 		6BE571691EDD600900CE46C7 /* 29.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 29.mp3; sourceTree = "<group>"; };
+		6BE5716B1EDD728E00CE46C7 /* FCNotificationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCNotificationCell.h; sourceTree = "<group>"; };
+		6BE5716C1EDD728E00CE46C7 /* FCNotificationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCNotificationCell.m; sourceTree = "<group>"; };
+		6BE5716E1EDD810D00CE46C7 /* FCWatchSettingsObject+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FCWatchSettingsObject+Category.h"; sourceTree = "<group>"; };
+		6BE5716F1EDD810D00CE46C7 /* FCWatchSettingsObject+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FCWatchSettingsObject+Category.m"; sourceTree = "<group>"; };
+		6BE571711EDDD0D100CE46C7 /* FCUserConfigDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCUserConfigDB.h; sourceTree = "<group>"; };
+		6BE571721EDDD0D100CE46C7 /* FCUserConfigDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCUserConfigDB.m; sourceTree = "<group>"; };
 		6BE746CD1ED941BC0085E16E /* FCConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCConfigManager.h; sourceTree = "<group>"; };
 		6BE746CE1ED941BC0085E16E /* FCConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCConfigManager.m; sourceTree = "<group>"; };
 		6BE746DC1ED95C8D0085E16E /* FCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCHomeViewController.h; sourceTree = "<group>"; };
@@ -313,6 +322,8 @@
 				6BE746D11ED955560085E16E /* HUD */,
 				6B5DD2BD1DC8A97A00788BDA /* FitCloud+Category.h */,
 				6B5DD2BE1DC8A97A00788BDA /* FitCloud+Category.m */,
+				6BE5716E1EDD810D00CE46C7 /* FCWatchSettingsObject+Category.h */,
+				6BE5716F1EDD810D00CE46C7 /* FCWatchSettingsObject+Category.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -335,6 +346,8 @@
 				6BE571611EDD4F1D00CE46C7 /* FCDBEngine.m */,
 				6BE571631EDD4F6600CE46C7 /* FCWatchConfigDB.h */,
 				6BE571641EDD4F6600CE46C7 /* FCWatchConfigDB.m */,
+				6BE571711EDDD0D100CE46C7 /* FCUserConfigDB.h */,
+				6BE571721EDDD0D100CE46C7 /* FCUserConfigDB.m */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -546,6 +559,8 @@
 			children = (
 				6BDEB8661EDA9410002A6DD3 /* FCConnectStateCell.h */,
 				6BDEB8671EDA9410002A6DD3 /* FCConnectStateCell.m */,
+				6BE5716B1EDD728E00CE46C7 /* FCNotificationCell.h */,
+				6BE5716C1EDD728E00CE46C7 /* FCNotificationCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -855,10 +870,13 @@
 				6BE571681EDD5A9200CE46C7 /* FCUserConfig.m in Sources */,
 				6BE746F31ED95DBF0085E16E /* FCSleepViewController.m in Sources */,
 				6B403C151ED9790800246086 /* FCSyncDataViewController.m in Sources */,
+				6BE571701EDD810D00CE46C7 /* FCWatchSettingsObject+Category.m in Sources */,
 				6BF31A6E1ED9A79B000454EB /* FCFrimwareViewController.m in Sources */,
 				6BCF1C6A1DE57FD600B99A21 /* FitCloudManager.m in Sources */,
 				6BE746CF1ED941BC0085E16E /* FCConfigManager.m in Sources */,
+				6BE571731EDDD0D100CE46C7 /* FCUserConfigDB.m in Sources */,
 				6B5DD2521DC8A4E100788BDA /* main.m in Sources */,
+				6BE5716D1EDD728E00CE46C7 /* FCNotificationCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

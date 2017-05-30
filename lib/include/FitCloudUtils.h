@@ -13,6 +13,15 @@
  */
 @interface FitCloudUtils : NSObject
 
+
+/*!
+ 判断手机是否是12小时制
+ 
+ @return YES/NO
+ */
++ (BOOL)is12HourSystem;
+
+
 #pragma mark - 实时同步数据
 
 /**

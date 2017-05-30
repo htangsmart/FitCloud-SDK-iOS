@@ -12,6 +12,7 @@
 // 用于手表配置信息管理
 @interface FCConfigManager : NSObject
 @property (nonatomic, assign) BOOL sensorFlagUpdate;
+@property (nonatomic, strong) FCWatchSettingsObject *watchSetting;
 
 + (instancetype)manager;
 
@@ -32,6 +33,15 @@
  @return YES/NO
  */
 - (BOOL)isDrinkRemimdEnabled;
+
+
+
+/**
+ 获取消息通知开关设置
+
+ @return 消息通知对象
+ */
+- (FCNotificationObject*)notificationObject;
 
 
 /**

@@ -13,6 +13,9 @@
 #import "FitCloud+Category.h"
 #import "FCUIConstants.h"
 #import "FCConfigManager.h"
+#import "FCUserConfigDB.h"
+#import "FCUserConfig.h"
+
 
 @interface FCBindDeviceViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -29,6 +32,7 @@
     [[NSNotificationCenter defaultCenter]removeObserver:self name:EVENT_CONNECT_PERIPHERAL_NOTIFY object:nil];
     [[NSNotificationCenter defaultCenter]removeObserver:self name:EVENT_FAIL_CONNECT_PERIPHERAL_NOTIFY object:nil];
     [[NSNotificationCenter defaultCenter]removeObserver:self name:EVENT_DISCONNECT_PERIPHERAL_NOTIFY object:nil];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:EVENT_DISCOVER_CHARACTERISTICS_NOTIFY object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -105,27 +109,30 @@
     NSLog(@"--外设发现服务特征值--");
     // 部分数据配置需要从本地读取
     __weak __typeof(self) ws = self;
+    
+    FCUserConfig *userConfig = [FCUserConfigDB getUserFromDB];
+    
     FCUserObject *user = [[FCUserObject alloc]init];
     user.guestId = 100;
     user.phoneModel = [[FitCloudUtils getPhoneModel]unsignedIntValue];
     user.osVersion = [[FitCloudUtils getOsVersion]unsignedIntValue];
-    user.age = 30;
-    user.sex = 1;
-    user.weight = 65;
-    user.height = 183;
-    user.systolicBP = 125;
-    user.diastolicBP = 80;
-    user.isLeftHandWearEnabled = YES;
+    user.age = userConfig.age;
+    user.sex = userConfig.sex;
+    user.weight = userConfig.weight;
+    user.height = userConfig.height;
+    user.systolicBP = userConfig.systolicBP;
+    user.diastolicBP = userConfig.diastolicBP;
+    user.isLeftHandWearEnabled = userConfig.isLeftHandWearEnabled;
     
-    FCFeaturesObject *feature = [[FCFeaturesObject alloc]init];
+    FCFeaturesObject *feature = [[FCConfigManager manager]featuresObject];
     feature.flipWristToLightScreen = YES;
     feature.enhanceSurveyEnabled = YES;
     // 时间显示制式，可以跟随手机时间制式显示
-    feature.twelveHoursSystem = YES;
+    feature.twelveHoursSystem = [FitCloudUtils is12HourSystem];
     // 单位，根据需要选择
-    feature.isImperialUnits = NO;
+    feature.isImperialUnits = userConfig.isImperialUnits;
     
-//    user.featuresData = feature.writeData;
+    user.featuresData = feature.writeData;
     
     [self showLoadingHUDWithMessage:@"正在绑定设备"];
     [[FitCloud shared]bindWithUser:user stepCallback:^(NSInteger syncType) {
@@ -176,6 +183,7 @@
         {
             NSLog(@"--绑定失败--");
             [ws hideLoadingHUDWithSuccess:@"绑定失败"];
+            [[FitCloud shared]disconnect];
             // 绑定失败重新扫描外设，此处根据UI需求配置
             [ws scanForPeripherals];
         }

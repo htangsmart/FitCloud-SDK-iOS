@@ -1163,7 +1163,8 @@ static id ModelToJSONObjectRecursive(NSObject *model) {
     if (!model || model == (id)kCFNull) return model;
     if ([model isKindOfClass:[NSString class]]) return model;
     if ([model isKindOfClass:[NSNumber class]]) return model;
-    if ([model isKindOfClass:[NSDictionary class]]) {
+    if ([model isKindOfClass:[NSDictionary class]])
+    {
         if ([NSJSONSerialization isValidJSONObject:model]) return model;
         NSMutableDictionary *newDic = [NSMutableDictionary new];
         [((NSDictionary *)model) enumerateKeysAndObjectsUsingBlock:^(NSString *key, id obj, BOOL *stop) {
@@ -1216,13 +1217,19 @@ static id ModelToJSONObjectRecursive(NSObject *model) {
         if (!propertyMeta->_getter) return;
         
         id value = nil;
-        if (propertyMeta->_isCNumber) {
+        if (propertyMeta->_isCNumber)
+        {
             value = ModelCreateNumberFromProperty(model, propertyMeta);
-        } else if (propertyMeta->_nsType) {
+        }
+        else if (propertyMeta->_nsType)
+        {
             id v = ((id (*)(id, SEL))(void *) objc_msgSend)((id)model, propertyMeta->_getter);
             value = ModelToJSONObjectRecursive(v);
-        } else {
-            switch (propertyMeta->_type & YYEncodingTypeMask) {
+        }
+        else
+        {
+            switch (propertyMeta->_type & YYEncodingTypeMask)
+            {
                 case YYEncodingTypeObject: {
                     id v = ((id (*)(id, SEL))(void *) objc_msgSend)((id)model, propertyMeta->_getter);
                     value = ModelToJSONObjectRecursive(v);
@@ -1241,7 +1248,8 @@ static id ModelToJSONObjectRecursive(NSObject *model) {
         }
         if (!value) return;
         
-        if (propertyMeta->_mappedToKeyPath) {
+        if (propertyMeta->_mappedToKeyPath)
+        {
             NSMutableDictionary *superDic = dic;
             NSMutableDictionary *subDic = nil;
             for (NSUInteger i = 0, max = propertyMeta->_mappedToKeyPath.count; i < max; i++) {
@@ -1252,7 +1260,8 @@ static id ModelToJSONObjectRecursive(NSObject *model) {
                 }
                 
                 subDic = superDic[key];
-                if (subDic) {
+                if (subDic)
+                {
                     if ([subDic isKindOfClass:[NSDictionary class]]) {
                         subDic = subDic.mutableCopy;
                         superDic[key] = subDic;
@@ -1645,16 +1654,23 @@ static NSString *ModelDescription(NSObject *model) {
         if (propertyMeta->_isCNumber) {
             NSNumber *value = ModelCreateNumberFromProperty(self, propertyMeta);
             if (value) [aCoder encodeObject:value forKey:propertyMeta->_name];
-        } else {
-            switch (propertyMeta->_type & YYEncodingTypeMask) {
+        }
+        else
+        {
+            switch (propertyMeta->_type & YYEncodingTypeMask)
+            {
                 case YYEncodingTypeObject: {
                     id value = ((id (*)(id, SEL))(void *)objc_msgSend)((id)self, propertyMeta->_getter);
                     if (value && (propertyMeta->_nsType || [value respondsToSelector:@selector(encodeWithCoder:)])) {
-                        if ([value isKindOfClass:[NSValue class]]) {
-                            if ([value isKindOfClass:[NSNumber class]]) {
+                        if ([value isKindOfClass:[NSValue class]])
+                        {
+                            if ([value isKindOfClass:[NSNumber class]])
+                            {
                                 [aCoder encodeObject:value forKey:propertyMeta->_name];
                             }
-                        } else {
+                        }
+                        else
+                        {
                             [aCoder encodeObject:value forKey:propertyMeta->_name];
                         }
                     }

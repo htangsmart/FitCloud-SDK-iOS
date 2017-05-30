@@ -10,9 +10,10 @@
 #import <FitCloudKit.h>
 #import "FitCloud+Category.h"
 #import "FCWatchConfigDB.h"
+#import <YYModel.h>
 
 @interface FCConfigManager ()
-@property (nonatomic, strong) FCWatchSettingsObject *watchSetting;
+
 @end
 
 @implementation FCConfigManager
@@ -30,7 +31,8 @@
 - (instancetype)init
 {
     self = [super init];
-    if (self) {
+    if (self)
+    {
         [self loadWatchSettingFromDB];
     }
     return self;
@@ -42,6 +44,7 @@
 {
     NSString *uuidString = [[FitCloud shared]bondDeviceUUID];
     _watchSetting = [FCWatchConfigDB getWatchConfigFromDBWithUUID:uuidString];
+    NSLog(@"---_watchSetting--%@",_watchSetting.yy_modelDescription);
 }
 
 
@@ -90,6 +93,14 @@
     return NO;
 }
 
+- (FCNotificationObject*)notificationObject
+{
+    if (_watchSetting) {
+        FCNotificationObject *noteObj = [_watchSetting messageNotificationObject];
+        return noteObj;
+    }
+    return [FCNotificationObject objectWithData:nil];
+}
 
 - (FCSensorFlagObject*)sensorFlagObject
 {
