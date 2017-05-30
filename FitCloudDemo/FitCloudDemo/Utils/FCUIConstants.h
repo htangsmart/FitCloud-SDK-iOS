@@ -12,6 +12,8 @@
 // 设备绑定结果通知
 FOUNDATION_EXTERN NSString *const EVENT_DEVICE_BOUND_RESULT_NOTIFY;
 
+FOUNDATION_EXTERN NSString *const EVENT_ALARM_REALTIME_SYNC_NOTIFY;
+
 static inline void st_dispatch_async_main(dispatch_block_t block)
 {
     if ([NSThread isMainThread]) {

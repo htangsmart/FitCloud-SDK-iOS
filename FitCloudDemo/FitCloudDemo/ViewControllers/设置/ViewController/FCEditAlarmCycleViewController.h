@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class FCAlarmClockCycleObject;
 @interface FCEditAlarmCycleViewController : UIViewController
-
+@property (nonatomic, strong) FCAlarmClockCycleObject *cycleObj;
+@property (nonatomic, copy) void(^didRefreshWorkModeBlock)();
 @end

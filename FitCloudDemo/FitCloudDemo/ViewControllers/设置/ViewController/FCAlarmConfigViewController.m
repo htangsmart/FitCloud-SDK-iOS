@@ -14,7 +14,8 @@
 #import "FCAlarmConfigManager.h"
 #import "FCDailyAlarmCell.h"
 #import "FCAlarmClockCycleObject+Category.h"
-
+#import "FCUIConstants.h"
+#import "FCEditAlarmViewController.h"
 
 @interface FCAlarmConfigViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -25,6 +26,12 @@
 
 
 #pragma mark - dealloc
+
+- (void)dealloc
+{
+    [[FCAlarmConfigManager manager]clearCache];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:EVENT_ALARM_REALTIME_SYNC_NOTIFY object:nil];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -64,7 +71,10 @@
     }];
 }
 
-
+- (IBAction)clickToAddNewAlarm:(id)sender
+{
+    [self performSegueWithIdentifier:@"新增闹钟" sender:self];
+}
 
 
 #pragma mark - lifeStyle
@@ -73,8 +83,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self registerNotification];
     
-    [self performSelector:@selector(syncAlarmListFromWatch) withObject:nil afterDelay:1.5];
+    __weak __typeof(self) ws = self;
+    [[FCAlarmConfigManager manager]setDidUpdateAlarmClockListBlock:^{
+        [ws.tableView reloadData];
+    }];
+    [self performSelector:@selector(syncAlarmListFromWatch) withObject:nil afterDelay:1.0];
+}
+
+- (void)registerNotification
+{
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(onReceivedAlarmUpdate) name:EVENT_ALARM_REALTIME_SYNC_NOTIFY object:nil];
+}
+
+- (void)onReceivedAlarmUpdate
+{
+    [self clickToSave:nil];
 }
 
 #pragma mark - 同步闹钟
@@ -100,10 +126,7 @@
     }];
 }
 
-- (IBAction)clickToAddNewAlarm:(id)sender
-{
-    [self performSegueWithIdentifier:@"新增闹钟" sender:self];
-}
+
 
 
 #pragma mark - UITableView
@@ -171,6 +194,15 @@
     if (indexPath.row < [FCAlarmConfigManager manager].listArray.count) {
         FCAlarmClockObject *aModel = [FCAlarmConfigManager manager].listArray[indexPath.row];
         [self performSegueWithIdentifier:@"编辑闹钟" sender:aModel];
+    }
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"编辑闹钟"]) {
+        FCEditAlarmViewController *editAlarm = segue.destinationViewController;
+        editAlarm.alarmObj = sender;
     }
 }
 

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FCEditAlarmViewController : UIViewController
 
+@class FCAlarmClockObject;
+@interface FCEditAlarmViewController : UIViewController
+@property (nonatomic, strong) FCAlarmClockObject *alarmObj;
 @end
