@@ -123,6 +123,8 @@
                         <segue destination="GDZ-jT-heZ" kind="show" identifier="通知开关" id="CcL-HS-Wp3"/>
                         <segue destination="gCQ-Qh-6gg" kind="show" identifier="惯用单位" id="ylS-Jj-6Yc"/>
                         <segue destination="PoE-Xr-v09" kind="show" identifier="闹钟配置" id="E6e-tm-Nvk"/>
+                        <segue destination="DVq-Oy-OoS" kind="show" identifier="固件升级" id="W79-51-PnJ"/>
+                        <segue destination="URt-IY-52Y" kind="show" identifier="其他设置" id="34u-Yp-0wM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n7r-SV-yN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -377,6 +379,58 @@
             </objects>
             <point key="canvasLocation" x="2213" y="975"/>
         </scene>
+        <!--固件升级-->
+        <scene sceneID="HFP-5n-ga9">
+            <objects>
+                <viewController storyboardIdentifier="固件升级" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DVq-Oy-OoS" customClass="FCFrimwareViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k69-Rh-yNw"/>
+                        <viewControllerLayoutGuide type="bottom" id="dCz-tB-NsE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iax-DJ-ji0" customClass="FCF">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="固件升级" id="3an-jr-dRk">
+                        <barButtonItem key="leftBarButtonItem" image="ico_back" id="TEP-dU-JcX">
+                            <color key="tintColor" red="0.14117647059999999" green="0.62745098040000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="clickToBack:" destination="DVq-Oy-OoS" id="s5X-2p-qNz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1uT-VS-rfW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3044" y="985"/>
+        </scene>
+        <!--其他设置-->
+        <scene sceneID="ald-CN-msW">
+            <objects>
+                <viewController storyboardIdentifier="其他设置" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="URt-IY-52Y" customClass="FCOtherViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tN1-9E-nI0"/>
+                        <viewControllerLayoutGuide type="bottom" id="LZP-8l-NoR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UyA-2D-wjr">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="其他设置" id="n6Z-8i-68y">
+                        <barButtonItem key="leftBarButtonItem" image="ico_back" id="cez-Nu-ey9">
+                            <color key="tintColor" red="0.14117647059999999" green="0.62745098040000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="clickToBack:" destination="URt-IY-52Y" id="0cd-Ne-Of1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kUK-5f-67A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3774" y="983"/>
+        </scene>
         <!--绑定设备-->
         <scene sceneID="McC-zx-KbT">
             <objects>
@@ -446,7 +500,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H6p-hO-bUM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2857" y="427"/>
+            <point key="canvasLocation" x="2122" y="196"/>
         </scene>
         <!--设备信息-->
         <scene sceneID="hNU-ZT-Jtj">
@@ -472,7 +526,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IMo-yf-mb8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2858" y="-248"/>
+            <point key="canvasLocation" x="2956" y="196"/>
         </scene>
         <!--数据导航-->
         <scene sceneID="a5m-Tx-UL8">
