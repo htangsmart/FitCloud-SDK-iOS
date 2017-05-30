@@ -7,6 +7,8 @@
 //
 
 #import "FCSyncDataViewController.h"
+#import "FitCloudManager.h"
+
 
 @interface FCSyncDataViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -23,12 +25,17 @@
     [super didReceiveMemoryWarning];
 }
 
+
+
 #pragma mark - lifeStyle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self.tableView addSubview:self.refreshControl];
+    
+    // 开始蓝牙服务
+    [[FitCloudManager manager]startService];
 }
 
 #pragma mark - 同步最新数据

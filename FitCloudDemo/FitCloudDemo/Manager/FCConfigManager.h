@@ -15,6 +15,8 @@
 
 + (instancetype)manager;
 
+- (void)updateConfigWithWatchSettingData:(NSData*)data;
+- (void)updateConfigWithVersionData:(NSData*)data;
 
 /**
  默认血压

@@ -8,6 +8,8 @@
 
 #import "FCConfigManager.h"
 #import <FitCloudKit.h>
+#import "FitCloud+Category.h"
+#import "FCWatchConfigDB.h"
 
 @interface FCConfigManager ()
 @property (nonatomic, strong) FCWatchSettingsObject *watchSetting;
@@ -25,11 +27,21 @@
     return sharedManager;
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self loadWatchSettingFromDB];
+    }
+    return self;
+}
+
 #pragma mark - 从数据库加载手表配置
 
 - (void)loadWatchSettingFromDB
 {
-    
+    NSString *uuidString = [[FitCloud shared]bondDeviceUUID];
+    _watchSetting = [FCWatchConfigDB getWatchConfigFromDBWithUUID:uuidString];
 }
 
 
@@ -40,6 +52,11 @@
     }
     _watchSetting = [FCWatchSettingsObject objectWithData:data];
     // 更新数据库
+    NSString *uuidString = [[FitCloud shared]bondDeviceUUID];
+    BOOL ret = [FCWatchConfigDB storeWatchConfig:_watchSetting forUUID:uuidString];
+    if (ret) {
+        NSLog(@"--存储手表配置---");
+    }
 }
 
 
@@ -50,6 +67,11 @@
     }
     _watchSetting.versionData = data;
     // 更新数据库
+    NSString *uuidString = [[FitCloud shared]bondDeviceUUID];
+    BOOL ret = [FCWatchConfigDB storeWatchConfig:_watchSetting forUUID:uuidString];
+    if (ret) {
+        NSLog(@"--存储手表配置---");
+    }
 }
 
 - (NSDictionary*)defaultBloodPressure

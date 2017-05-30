@@ -8,7 +8,10 @@
 
 #import "FCSettingViewController.h"
 #import "FCConnectStateCell.h"
-
+#import "FitCloud+Category.h"
+#import "FCUIConstants.h"
+#import <FitCloudKit.h>
+#import <NSObject+FBKVOController.h>
 
 @interface FCSettingViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -18,6 +21,15 @@
 @implementation FCSettingViewController
 
 #pragma mark - dealloc
+
+- (void)dealloc
+{
+    [self.KVOController unobserve:[FitCloud shared]];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:EVENT_CONNECT_PERIPHERAL_NOTIFY object:nil];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:EVENT_FAIL_CONNECT_PERIPHERAL_NOTIFY object:nil];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:EVENT_DISCONNECT_PERIPHERAL_NOTIFY object:nil];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:EVENT_DEVICE_BOUND_RESULT_NOTIFY object:nil];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -31,8 +43,54 @@
 {
     [super viewDidLoad];
     [self.tableView registerClass:[FCConnectStateCell class] forCellReuseIdentifier:@"StateCell"];
+    [self registerNotfication];
+    
+    // 观察蓝牙状态并更新对应的UI
+    __weak __typeof(self) ws = self;
+    [self.KVOController observe:[FitCloud shared] keyPath:@"managerState" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld block:^(id  _Nullable observer, id  _Nonnull object, NSDictionary<NSString *,id> * _Nonnull change) {
+        FCManagerState state = (FCManagerState)[change[NSKeyValueChangeNewKey]integerValue];
+        NSLog(@"--state--%@",@(state));
+        st_dispatch_async_main(^{
+            [ws.tableView reloadData];
+        });
+    }];
 }
 
+
+#pragma mark - 通知
+
+- (void)registerNotfication
+{
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(onReceivedBoundResult:) name:EVENT_DEVICE_BOUND_RESULT_NOTIFY object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(onReceivedPeripheralConnected:) name:EVENT_CONNECT_PERIPHERAL_NOTIFY object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(onReceivedPeripheralFailConnect:) name:EVENT_FAIL_CONNECT_PERIPHERAL_NOTIFY object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(onReceivedPeripheralDisConnect:) name:EVENT_DISCONNECT_PERIPHERAL_NOTIFY object:nil];
+}
+
+- (void)onReceivedPeripheralConnected:(NSNotification*)note
+{
+    NSLog(@"--外设连接成功--");
+    [self.tableView reloadData];
+}
+
+- (void)onReceivedPeripheralFailConnect:(NSNotification*)note
+{
+    
+    NSLog(@"--外设连接失败--");
+    [self.tableView reloadData];
+}
+
+- (void)onReceivedPeripheralDisConnect:(NSNotification*)note
+{
+    NSLog(@"--外设断开连接--");
+    [self.tableView reloadData];
+}
+
+
+- (void)onReceivedBoundResult:(NSNotification*)note
+{
+    [self.tableView reloadData];
+}
 
 #pragma mark - UITableView
 
@@ -46,13 +104,14 @@
     if (section == 0) {
         return 1;
     }
-    return 7;
+    return 6;
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 0) {
+    if (indexPath.section == 0)
+    {
         return 60;
     }
     return 50.0;
@@ -61,7 +120,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    if (section == 0) {
+    if (section == 0)
+    {
         return 20;
     }
     return 0.01;
@@ -73,8 +133,19 @@
     if (indexPath.section == 0)
     {
         FCConnectStateCell *stateCell = [tableView dequeueReusableCellWithIdentifier:@"StateCell" forIndexPath:indexPath];
-        stateCell.textLabel.text = @"绑定设备";
-        stateCell.detailTextLabel.text = @"未绑定";
+        BOOL isBound = [[FitCloud shared]deviceIsBond];
+        stateCell.hasBeenBound = isBound;
+        if (isBound)
+        {
+            stateCell.textLabel.text = [[FitCloud shared]bondDeviceName];
+            stateCell.connected = [FitCloud shared].isConnected;
+            stateCell.detailTextLabel.text = @" ";
+        }
+        else
+        {
+            stateCell.textLabel.text = @"绑定设备";
+            stateCell.detailTextLabel.text = @"未绑定";
+        }
         return stateCell;
     }
     
@@ -116,6 +187,22 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section == 0)
+    {
+        BOOL ret = [[FitCloud shared]deviceIsBond];
+        if (!ret)
+        {
+            [self performSegueWithIdentifier:@"绑定设备" sender:self];
+        }
+        else
+        {
+            [self performSegueWithIdentifier:@"设备信息" sender:self];
+        }
+    }
+    else
+    {
+        
+    }
 }
 
 @end

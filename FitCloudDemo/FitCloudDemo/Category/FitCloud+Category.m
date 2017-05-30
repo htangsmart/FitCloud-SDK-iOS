@@ -9,6 +9,7 @@
 #import "FitCloud+Category.h"
 
 @implementation FitCloud (Category)
+
 - (BOOL)storeBondDevice
 {
     if (!self.servicePeripheral) {
@@ -16,7 +17,7 @@
     }
     NSString *uuidString = self.servicePeripheral.identifier.UUIDString;
     NSString *deviceName = self.servicePeripheral.name;
-    NSNumber *guestId = @(100);
+    NSNumber *guestId = @(100); // 使用默认用户id,开发人员可以根据自己服务器账号id配置
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
     if (uuidString && deviceName && guestId)
     {
@@ -35,7 +36,8 @@
 {
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
     NSNumber *guestId = @(100);
-    if (!guestId) {
+    if (!guestId)
+    {
         return NO;
     }
     NSMutableDictionary *params = [standardUserDefaults objectForKey:guestId.stringValue];
@@ -49,7 +51,8 @@
 {
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
     NSNumber *guestId = @(100);
-    if (!guestId) {
+    if (!guestId)
+    {
         return nil;
     }
     NSMutableDictionary *params = [standardUserDefaults objectForKey:guestId.stringValue];
