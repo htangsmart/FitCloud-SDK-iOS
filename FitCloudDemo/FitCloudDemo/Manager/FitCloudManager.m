@@ -44,6 +44,7 @@
         if (state == FCManagerStatePoweredOn)
         {
             // 蓝牙power on，扫描连接指定外设
+            NSLog(@"---扫描蓝牙设备---");
             [ws scanForPeripheralWithSavedUUID];
         }
         else if (state == FCManagerStatePoweredOff)
@@ -211,7 +212,7 @@ void systemAudioCallback()
 //    user.featuresData = feature.writeData;
     
     __weak __typeof(self) ws = self;
-    [self showLoadingHUDWithMessage:@"正在登陆"];
+    [self showLoadingHUDWithMessage:@"正在登录"];
     [[FitCloud shared]loginWithUser:user stepCallback:^(NSInteger syncType) {
         NSLog(@"--登陆流程回调--%@",@(syncType));
         
@@ -220,7 +221,7 @@ void systemAudioCallback()
             if (state == FCSyncResponseStateError)
             {
                 // 登陆失败
-                [ws hideLoadingHUDWithFailure:@"登陆失败,请重新绑定"];
+                [ws hideLoadingHUDWithFailure:@"登录失败,请重新绑定"];
                 BOOL ret = [[FitCloud shared]removeBondDevice];
                 if (ret) {
                     // 断开当前蓝牙外设的连接

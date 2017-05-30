@@ -201,7 +201,29 @@
     }
     else
     {
-        
+        if (indexPath.row == 0) {
+            [self performSegueWithIdentifier:@"用户资料" sender:self];
+        }
+        else if (indexPath.row == 1)
+        {
+            [self performSegueWithIdentifier:@"通知开关" sender:self];
+        }
+        else if (indexPath.row == 2)
+        {
+            [self performSegueWithIdentifier:@"惯用单位" sender:self];
+        }
+        else if (indexPath.row == 3)
+        {
+            [self performSegueWithIdentifier:@"闹钟配置" sender:self];
+        }
+        else if (indexPath.row == 4)
+        {
+            [self performSegueWithIdentifier:@"固件升级" sender:self];
+        }
+        else if (indexPath.row == 5)
+        {
+            [self performSegueWithIdentifier:@"其他设置" sender:self];
+        }
     }
 }
 
