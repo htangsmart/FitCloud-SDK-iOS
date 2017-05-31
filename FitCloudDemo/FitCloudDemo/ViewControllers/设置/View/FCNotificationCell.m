@@ -7,6 +7,8 @@
 //
 
 #import "FCNotificationCell.h"
+#import "FCSwitch.h"
+
 
 @implementation FCNotificationCell
 @synthesize mySwitch = _mySwitch;
@@ -31,19 +33,19 @@
 {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    _mySwitch = [[UISwitch alloc]init];
+    _mySwitch = [[FCSwitch alloc]init];
     [_mySwitch addTarget:self action:@selector(mySwitchValueChanged:) forControlEvents:UIControlEventValueChanged];
     self.accessoryView = _mySwitch;
 }
 
-- (void)setSwitchValueChangeBlock:(void (^)(UISwitch *, NSString *))switchValueChangeBlock
+- (void)setSwitchValueChangeBlock:(void (^)(FCSwitch *, NSString *))switchValueChangeBlock
 {
     if (!_switchValueChangeBlock) {
         _switchValueChangeBlock = switchValueChangeBlock;
     }
 }
 
-- (void)mySwitchValueChanged:(UISwitch*)aSwitch
+- (void)mySwitchValueChanged:(FCSwitch*)aSwitch
 {
     if (_switchValueChangeBlock) {
         _switchValueChangeBlock(aSwitch, self.textLabel.text);

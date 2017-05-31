@@ -91,8 +91,8 @@
     }];
     
     [self syncAlarmListFromWatch];
-//    [self performSelector:@selector(syncAlarmListFromWatch) withObject:nil afterDelay:1.0];
 }
+
 
 - (void)registerNotification
 {

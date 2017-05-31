@@ -15,6 +15,8 @@
 #import "FitCloud+Category.h"
 #import <NSObject+FBKVOController.h>
 #import "FCUIConstants.h"
+#import "FCSwitch.h"
+
 
 @interface FCNotificationViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -129,7 +131,7 @@
 {
     FCNotificationCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     __weak __typeof(self) ws = self;
-    [cell setSwitchValueChangeBlock:^(UISwitch *aSwicth, NSString *funSwitchName){
+    [cell setSwitchValueChangeBlock:^(FCSwitch *aSwicth, NSString *funSwitchName){
         [ws switchValueChanged:aSwicth forFunction:funSwitchName];
     }];
     if (indexPath.row == 0) {
@@ -227,7 +229,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-- (void)switchValueChanged:(UISwitch*)aSwitch forFunction:(NSString*)functionName
+- (void)switchValueChanged:(FCSwitch*)aSwitch forFunction:(NSString*)functionName
 {
     if ([functionName isEqualToString:@"来电通知"])
     {

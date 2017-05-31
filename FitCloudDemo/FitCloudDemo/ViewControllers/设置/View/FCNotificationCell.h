@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class FCSwitch;
 @interface FCNotificationCell : UITableViewCell
-@property (nonatomic, strong, readonly) UISwitch *mySwitch;
-@property (nonatomic, copy) void (^switchValueChangeBlock)(UISwitch *aSwitch, NSString *funSwitchName);
+@property (nonatomic, strong, readonly) FCSwitch *mySwitch;
+@property (nonatomic, copy) void (^switchValueChangeBlock)(FCSwitch *aSwitch, NSString *funSwitchName);
 @end
