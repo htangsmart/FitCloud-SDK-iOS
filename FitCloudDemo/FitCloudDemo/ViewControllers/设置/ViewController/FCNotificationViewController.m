@@ -235,7 +235,7 @@
         __weak __typeof(self) ws = self;
         [self syncNotificationData:^{
             ws.noteObj.incomingCall = !aSwitch.isOn;
-            aSwitch.on = !aSwitch.on;
+            [aSwitch setOn:!aSwitch.isOn animated:YES];
         }];
     }
     else if ([functionName isEqualToString:@"短信通知"])
@@ -244,7 +244,7 @@
         __weak __typeof(self) ws = self;
         [self syncNotificationData:^{
             ws.noteObj.smsAlerts = !aSwitch.isOn;
-            aSwitch.on = !aSwitch.on;
+            [aSwitch setOn:!aSwitch.isOn animated:YES];
         }];
     }
     else if ([functionName isEqualToString:@"QQ消息"])
@@ -253,7 +253,7 @@
         __weak __typeof(self) ws = self;
         [self syncNotificationData:^{
             ws.noteObj.qqMessage = !aSwitch.isOn;
-            aSwitch.on = !aSwitch.on;
+            [aSwitch setOn:!aSwitch.isOn animated:YES];
         }];
     }
     else if ([functionName isEqualToString:@"微信消息"])
@@ -262,7 +262,7 @@
         __weak __typeof(self) ws = self;
         [self syncNotificationData:^{
             ws.noteObj.wechatMessage = !aSwitch.isOn;
-            aSwitch.on = !aSwitch.on;
+            [aSwitch setOn:!aSwitch.isOn animated:YES];
         }];
     }
     else if ([functionName isEqualToString:@"facebook"])
@@ -271,7 +271,7 @@
         __weak __typeof(self) ws = self;
         [self syncNotificationData:^{
             ws.noteObj.facebook = !aSwitch.isOn;
-            aSwitch.on = !aSwitch.on;
+            [aSwitch setOn:!aSwitch.isOn animated:YES];
         }];
     }
     else if ([functionName isEqualToString:@"twitter"])
@@ -280,7 +280,7 @@
         __weak __typeof(self) ws = self;
         [self syncNotificationData:^{
             ws.noteObj.twitter = !aSwitch.isOn;
-            aSwitch.on = !aSwitch.on;
+            [aSwitch setOn:!aSwitch.isOn animated:YES];
         }];
     }
     else if ([functionName isEqualToString:@"linkedin"])
@@ -289,7 +289,7 @@
         __weak __typeof(self) ws = self;
         [self syncNotificationData:^{
             ws.noteObj.linkedin = !aSwitch.isOn;
-            aSwitch.on = !aSwitch.on;
+            [aSwitch setOn:!aSwitch.isOn animated:YES];
         }];
     }
     else if ([functionName isEqualToString:@"instagram"])
@@ -298,7 +298,7 @@
         __weak __typeof(self) ws = self;
         [self syncNotificationData:^{
             ws.noteObj.instagram = !aSwitch.isOn;
-            aSwitch.on = !aSwitch.on;
+            [aSwitch setOn:!aSwitch.isOn animated:YES];
         }];
     }
     else if ([functionName isEqualToString:@"pinterest"])
@@ -307,7 +307,7 @@
         __weak __typeof(self) ws = self;
         [self syncNotificationData:^{
             ws.noteObj.pinterest = !aSwitch.isOn;
-            aSwitch.on = !aSwitch.on;
+            [aSwitch setOn:!aSwitch.isOn animated:YES];
         }];
     }
     else if ([functionName isEqualToString:@"whatsapp"])
@@ -316,7 +316,7 @@
         __weak __typeof(self) ws = self;
         [self syncNotificationData:^{
             ws.noteObj.whatsapp = !aSwitch.isOn;
-            aSwitch.on = !aSwitch.on;
+            [aSwitch setOn:!aSwitch.isOn animated:YES];
         }];
     }
     else if ([functionName isEqualToString:@"line"])
@@ -325,7 +325,7 @@
         __weak __typeof(self) ws = self;
         [self syncNotificationData:^{
             ws.noteObj.line = !aSwitch.isOn;
-            aSwitch.on = !aSwitch.on;
+            [aSwitch setOn:!aSwitch.isOn animated:YES];
         }];
     }
     else if ([functionName isEqualToString:@"facebookMessage"])
@@ -334,7 +334,7 @@
         __weak __typeof(self) ws = self;
         [self syncNotificationData:^{
             ws.noteObj.facebookMessage = !aSwitch.isOn;
-            aSwitch.on = !aSwitch.on;
+            [aSwitch setOn:!aSwitch.isOn animated:YES];
         }];
     }
     else if ([functionName isEqualToString:@"其他app通知"])
@@ -343,7 +343,7 @@
         __weak __typeof(self) ws = self;
         [self syncNotificationData:^{
             ws.noteObj.otherApp = !aSwitch.isOn;
-            aSwitch.on = !aSwitch.on;
+            [aSwitch setOn:!aSwitch.isOn animated:YES];
         }];
     }
     else if ([functionName isEqualToString:@"显示消息内容"])
@@ -352,7 +352,7 @@
         __weak __typeof(self) ws = self;
         [self syncNotificationData:^{
             ws.noteObj.messageDisplayEnabled = !aSwitch.isOn;
-            aSwitch.on = !aSwitch.on;
+            [aSwitch setOn:!aSwitch.isOn animated:YES];
         }];
     }
     else if ([functionName isEqualToString:@"app断开提醒"])
@@ -361,7 +361,7 @@
         __weak __typeof(self) ws = self;
         [self syncNotificationData:^{
             ws.noteObj.appDisconnectAlerts = !aSwitch.isOn;
-            aSwitch.on = !aSwitch.on;
+            [aSwitch setOn:!aSwitch.isOn animated:YES];
         }];
     }
     else if ([functionName isEqualToString:@"手表断开提醒"])
@@ -370,7 +370,7 @@
         __weak __typeof(self) ws = self;
         [self syncNotificationData:^{
             ws.noteObj.watchDisconnectAlerts = !aSwitch.isOn;
-            aSwitch.on = !aSwitch.on;
+            [aSwitch setOn:!aSwitch.isOn animated:YES];
         }];
     }
     else if ([functionName isEqualToString:@"心率实时监测"])
@@ -379,7 +379,7 @@
         __weak __typeof(self) ws = self;
         [self syncNotificationData:^{
             ws.noteObj.heartRateMonitoringEnabled = !aSwitch.isOn;
-            aSwitch.on = !aSwitch.on;
+            [aSwitch setOn:!aSwitch.isOn animated:YES];
         }];
     }
 }

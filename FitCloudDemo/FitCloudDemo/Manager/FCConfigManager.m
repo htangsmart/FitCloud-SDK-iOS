@@ -93,6 +93,15 @@
     return NO;
 }
 
+- (FCSedentaryReminderObject*)sedentaryReminderObject
+{
+    if (_watchSetting) {
+        FCSedentaryReminderObject *obj = [_watchSetting sedentaryReminderObject];
+        return obj;
+    }
+    return [FCSedentaryReminderObject objectWithData:nil];
+}
+
 - (FCNotificationObject*)notificationObject
 {
     if (_watchSetting) {

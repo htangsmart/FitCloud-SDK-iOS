@@ -42,6 +42,7 @@
 		6BE571991EDDEE2900CE46C7 /* FCEditAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE571981EDDEE2900CE46C7 /* FCEditAlarmViewController.m */; };
 		6BE5719C1EDDEE4200CE46C7 /* FCEditAlarmCycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE5719B1EDDEE4200CE46C7 /* FCEditAlarmCycleViewController.m */; };
 		6BE5719F1EDDF2B200CE46C7 /* FCAlarmCycleCheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE5719E1EDDF2B200CE46C7 /* FCAlarmCycleCheckCell.m */; };
+		6BE571AB1EDEE8F500CE46C7 /* NSObject+FCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE571AA1EDEE8F500CE46C7 /* NSObject+FCObject.m */; };
 		6BE746CF1ED941BC0085E16E /* FCConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE746CE1ED941BC0085E16E /* FCConfigManager.m */; };
 		6BE746DE1ED95C8D0085E16E /* FCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE746DD1ED95C8D0085E16E /* FCHomeViewController.m */; };
 		6BE746F01ED95DB20085E16E /* FCSportsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE746EF1ED95DB20085E16E /* FCSportsViewController.m */; };
@@ -148,6 +149,8 @@
 		6BE5719B1EDDEE4200CE46C7 /* FCEditAlarmCycleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCEditAlarmCycleViewController.m; sourceTree = "<group>"; };
 		6BE5719D1EDDF2B200CE46C7 /* FCAlarmCycleCheckCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCAlarmCycleCheckCell.h; sourceTree = "<group>"; };
 		6BE5719E1EDDF2B200CE46C7 /* FCAlarmCycleCheckCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCAlarmCycleCheckCell.m; sourceTree = "<group>"; };
+		6BE571A91EDEE8F500CE46C7 /* NSObject+FCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FCObject.h"; sourceTree = "<group>"; };
+		6BE571AA1EDEE8F500CE46C7 /* NSObject+FCObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FCObject.m"; sourceTree = "<group>"; };
 		6BE746CD1ED941BC0085E16E /* FCConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCConfigManager.h; sourceTree = "<group>"; };
 		6BE746CE1ED941BC0085E16E /* FCConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCConfigManager.m; sourceTree = "<group>"; };
 		6BE746DC1ED95C8D0085E16E /* FCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCHomeViewController.h; sourceTree = "<group>"; };
@@ -366,6 +369,8 @@
 				6BE5716F1EDD810D00CE46C7 /* FCWatchSettingsObject+Category.m */,
 				6BE5717B1EDDDD7400CE46C7 /* NSNumber+Category.h */,
 				6BE5717C1EDDDD7400CE46C7 /* NSNumber+Category.m */,
+				6BE571A91EDEE8F500CE46C7 /* NSObject+FCObject.h */,
+				6BE571AA1EDEE8F500CE46C7 /* NSObject+FCObject.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -950,6 +955,7 @@
 				6BDEB8681EDA9410002A6DD3 /* FCConnectStateCell.m in Sources */,
 				6BE746DE1ED95C8D0085E16E /* FCHomeViewController.m in Sources */,
 				6BF31A7A1ED9A7E6000454EB /* FCDeviceInfoViewController.m in Sources */,
+				6BE571AB1EDEE8F500CE46C7 /* NSObject+FCObject.m in Sources */,
 				6BE5715C1EDD386F00CE46C7 /* FCBindDeviceViewController.m in Sources */,
 				6BE571651EDD4F6600CE46C7 /* FCWatchConfigDB.m in Sources */,
 				6B5DD2C61DC8A97A00788BDA /* NSObject+HUD.m in Sources */,

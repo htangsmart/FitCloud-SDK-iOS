@@ -35,6 +35,12 @@
 - (BOOL)isDrinkRemimdEnabled;
 
 
+/**
+ 久坐提醒设置
+
+ @return 久坐提醒对象
+ */
+- (FCSedentaryReminderObject*)sedentaryReminderObject;
 
 /**
  获取消息通知开关设置

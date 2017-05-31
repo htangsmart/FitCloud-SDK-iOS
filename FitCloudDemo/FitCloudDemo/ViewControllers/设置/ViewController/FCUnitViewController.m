@@ -148,10 +148,11 @@
         {
             [ws hideLoadingHUDWithSuccess:@"同步完成"];
             
+            ws.userConfig.isImperialUnits = (indexPath.row == 1);
             BOOL ret = [FCUserConfigDB storeUser:ws.userConfig];
-            if (ret) {
+            if (ret)
+            {
                 NSLog(@"---更新User--");
-                ws.userConfig.isImperialUnits = (indexPath.row == 1);
                 [ws.tableView reloadData];
             }
             

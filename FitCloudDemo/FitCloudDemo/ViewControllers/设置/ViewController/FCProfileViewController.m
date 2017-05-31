@@ -134,7 +134,7 @@
     else if (indexPath.row == 2)
     {
         cell.textLabel.text = @"身高";
-        if (self.userConfig.isImperialUnits) {
+        if (!self.userConfig.isImperialUnits) {
             cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ cm",@(self.userConfig.height)];
         }
         else
@@ -145,7 +145,7 @@
     else if (indexPath.row == 3)
     {
         cell.textLabel.text = @"体重";
-        if (self.userConfig.isImperialUnits) {
+        if (!self.userConfig.isImperialUnits) {
             cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ kg",@(self.userConfig.weight)];
         }
         else
@@ -203,7 +203,13 @@
         pickerView.pickerStyle = self.userConfig.isImperialUnits ?  HFPickerStyleEHeight : HFPickerStyleMHeight;
         pickerView.value = self.userConfig.height;
         [pickerView setDidCompletionPickBlock:^(NSNumber *pickValue) {
-            ws.userConfig.height = pickValue.unsignedIntValue;
+            if (pickerView.pickerStyle == HFPickerStyleEHeight) {
+                ws.userConfig.height = (UInt32)[pickValue inchToCM].unsignedIntegerValue;
+            }
+            else
+            {
+                ws.userConfig.height = pickValue.unsignedIntValue;
+            }
             [ws.tableView reloadData];
         }];
         [pickerView show];
@@ -216,7 +222,13 @@
         pickerView.value = self.userConfig.weight;
         [pickerView setDidCompletionPickBlock:^(NSNumber *pickValue) {
             NSLog(@"--pickValue---%@",pickValue);
-            ws.userConfig.weight = pickValue.unsignedIntValue;
+            if (pickerView.pickerStyle == HFPickerStyleEWeight) {
+                ws.userConfig.weight = (UInt32)[pickValue pandToKiloGram].unsignedIntegerValue;
+            }
+            else
+            {
+                ws.userConfig.weight = pickValue.unsignedIntValue;
+            }
             [ws.tableView reloadData];
         }];
         [pickerView show];
