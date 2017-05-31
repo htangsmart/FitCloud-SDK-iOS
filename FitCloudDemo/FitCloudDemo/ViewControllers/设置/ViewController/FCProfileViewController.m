@@ -18,6 +18,7 @@
 #import "HFPickerView.h"
 #import <DateTools.h>
 #import "NSObject+HUD.h"
+#import <YYModel.h>
 
 @interface FCProfileViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -95,6 +96,7 @@
     [super viewDidLoad];
     FCUserConfig *aUserConfig = [FCUserConfigDB getUserFromDB];
     self.userConfig = aUserConfig;
+    NSLog(@"--aUserConfig---%@",aUserConfig.yy_modelDescription);
     [self.tableView reloadData];
 }
 

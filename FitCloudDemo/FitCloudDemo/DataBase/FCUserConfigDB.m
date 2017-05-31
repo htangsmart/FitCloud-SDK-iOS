@@ -10,6 +10,7 @@
 #import "FCDBEngine.h"
 #import "FCUserConfig.h"
 #import <YYModel.h>
+#import <FitCloudKit.h>
 
 
 @implementation FCUserConfigDB
@@ -32,7 +33,7 @@
     }
     BOOL ret = NO;
     FCUserConfig *userConfig = (FCUserConfig*)aUser;
-    NSData *jsonData = [userConfig yy_modelToJSONData];
+    NSData *jsonData = [NSKeyedArchiver archivedDataWithRootObject:userConfig];
     FMResultSet *rs = [dbEngine.dataBase executeQuery:@"SELECT * FROM User"];
     if (rs && [rs next])
     {
@@ -69,6 +70,10 @@
         userConfig.diastolicBP = 80;
         userConfig.isLeftHandWearEnabled = YES;
         userConfig.isImperialUnits = NO;
+        
+        FCSedentaryReminderObject *srObj = [FCSedentaryReminderObject objectWithData:nil];
+        userConfig.longSitRemindData = srObj.writeData;
+        
         return userConfig;
     }
     FCUserConfig *userConfig = nil;
@@ -76,7 +81,7 @@
     if (rs && [rs next])
     {
         NSData *jsonData = [rs dataForColumnIndex:0];
-        userConfig = [FCUserConfig yy_modelWithJSON:jsonData];
+        userConfig = [NSKeyedUnarchiver unarchiveObjectWithData:jsonData];
     }
     else
     {
@@ -89,6 +94,9 @@
         userConfig.diastolicBP = 80;
         userConfig.isLeftHandWearEnabled = YES;
         userConfig.isImperialUnits = NO;
+        
+        FCSedentaryReminderObject *srObj = [FCSedentaryReminderObject objectWithData:nil];
+        userConfig.longSitRemindData = srObj.writeData;
     }
     [rs close];
     [dbEngine closeDB];

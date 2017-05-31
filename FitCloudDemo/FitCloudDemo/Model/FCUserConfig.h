@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 // 用于存储用户资料
-@interface FCUserConfig : NSObject
+@interface FCUserConfig : NSObject <NSCoding>
 @property (nonatomic, assign) UInt32 age;
 @property (nonatomic, assign) UInt32 sex;
 @property (nonatomic, assign) UInt32 weight;
@@ -24,5 +24,5 @@
 
 @property (nonatomic, assign) BOOL drinkRemindEnabled;
 
-@property (nonatomic, assign) BOOL longSitRemindEnabled;
+@property (nonatomic, strong) NSData *longSitRemindData;
 @end
