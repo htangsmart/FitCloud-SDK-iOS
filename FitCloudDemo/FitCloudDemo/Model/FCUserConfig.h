@@ -21,4 +21,8 @@
 @property (nonatomic, assign) BOOL isLeftHandWearEnabled;
 // 单位 0 为公制单位  1 英制单位
 @property (nonatomic, assign) BOOL isImperialUnits;
+
+@property (nonatomic, assign) BOOL drinkRemindEnabled;
+
+@property (nonatomic, assign) BOOL longSitRemindEnabled;
 @end

@@ -9,7 +9,8 @@
 #import "FCOtherViewController.h"
 
 @interface FCOtherViewController () <UITableViewDataSource,UITableViewDelegate>
-
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) UISwitch *drinkRemindSwitch;
 @end
 
 @implementation FCOtherViewController
@@ -53,6 +54,16 @@
     return 4;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 10;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 0.01;
+    
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -62,6 +73,14 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.section == 0)
+    {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DrinkRemind" forIndexPath:indexPath];
+        cell.textLabel.text = @"喝水提醒";
+        cell.accessoryView = self.drinkRemindSwitch;
+        return cell;
+    }
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     return cell;
@@ -72,4 +91,23 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+
+#pragma mark - valueChanged
+
+- (void)drinkRemindSwitchValueChanged:(UISwitch*)aSwitch
+{
+    
+}
+
+#pragma mark - Getter
+
+- (UISwitch*)drinkRemindSwitch
+{
+    if (_drinkRemindSwitch) {
+        return _drinkRemindSwitch;
+    }
+    _drinkRemindSwitch = [[UISwitch alloc]initWithFrame:CGRectZero];
+    [_drinkRemindSwitch addTarget:self action:@selector(drinkRemindSwitchValueChanged:) forControlEvents:UIControlEventValueChanged];
+    return _drinkRemindSwitch;
+}
 @end
