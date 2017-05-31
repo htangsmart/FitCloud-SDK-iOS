@@ -17,12 +17,14 @@
 #import "FCWatchSettingsObject+Category.h"
 #import "FitCloud+Category.h"
 #import "NSObject+FCObject.h"
+#import "FCSwitch.h"
+#import "HFDatePickerView.h"
 
 @interface FCOtherViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) UISwitch *drinkRemindSwitch;
-@property (nonatomic, strong) UISwitch *sedentaryReminderSwitch;
-@property (nonatomic, strong) UISwitch *restTimeNotDisturbSwitch;
+@property (nonatomic, strong) FCSwitch *drinkRemindSwitch;
+@property (nonatomic, strong) FCSwitch *sedentaryReminderSwitch;
+@property (nonatomic, strong) FCSwitch *restTimeNotDisturbSwitch;
 @property (nonatomic, strong) FCSedentaryReminderObject *srObj;
 @end
 
@@ -134,6 +136,96 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section == 1) {
+        if (indexPath.row == 1)
+        {
+            if (!self.sedentaryReminderSwitch.isOn) {
+                [self showWarningWithMessage:@"久坐提醒开关未打开"];
+                return;
+            }
+            __weak __typeof(self)ws = self;
+            HFDatePickerView *pickerView = [HFDatePickerView pickerView];
+            pickerView.title = @"开始时间";
+            [pickerView setDidCompletePickBlock:^(NSInteger minutes) {
+                ws.srObj.stMinute = minutes;
+                [ws.tableView reloadData];
+                
+                if (ws.srObj.stMinute < ws.srObj.edMinute)
+                {
+                    [ws showLoadingHUDWithMessage:@"正在同步"];
+                    NSData *longSitData = [self.srObj writeData];
+                    [[FitCloud shared]fcSetDrinkRemindEnable:longSitData result:^(FCSyncType syncType, FCSyncResponseState state) {
+                        if (state == FCSyncResponseStateSuccess)
+                        {
+                            [ws hideLoadingHUDWithSuccess:@"同步完成"];
+                            
+                            FCWatchSettingsObject *watchSettingObj = [FCConfigManager manager].watchSetting;
+                            watchSettingObj.sedentaryReminderData = longSitData;
+                            
+                            NSString *uuidString = [[FitCloud shared]bondDeviceUUID];
+                            BOOL ret = [FCWatchConfigDB storeWatchConfig:watchSettingObj forUUID:uuidString];
+                            if (ret) {
+                                NSLog(@"--更新久坐提醒--");
+                            }
+                        }
+                        else
+                        {
+                            [ws hideLoadingHUDWithFailure:@"同步失败"];
+                        }
+                    }];
+                }
+                else
+                {
+                    [ws showErrorWithMessage:@"开始时间必须小于结束时间"];
+                }
+            }];
+            [pickerView show];
+        }
+        else if (indexPath.row == 2)
+        {
+            if (!self.sedentaryReminderSwitch.isOn) {
+                [self showWarningWithMessage:@"久坐提醒开关未打开"];
+                return;
+            }
+            __weak __typeof(self)ws = self;
+            // 设置结束时间
+            HFDatePickerView *pickerView = [HFDatePickerView pickerView];
+            pickerView.title = @"结束时间";
+            [pickerView setDidCompletePickBlock:^(NSInteger minutes) {
+                if (minutes > ws.srObj.stMinute)
+                {
+                    ws.srObj.edMinute = minutes;
+                    [ws.tableView reloadData];
+                    
+                    [ws showLoadingHUDWithMessage:@"正在同步"];
+                    NSData *longSitData = [self.srObj writeData];
+                    [[FitCloud shared]fcSetDrinkRemindEnable:longSitData result:^(FCSyncType syncType, FCSyncResponseState state) {
+                        if (state == FCSyncResponseStateSuccess)
+                        {
+                            [ws hideLoadingHUDWithSuccess:@"同步完成"];
+                            FCWatchSettingsObject *watchSettingObj = [FCConfigManager manager].watchSetting;
+                            watchSettingObj.sedentaryReminderData = longSitData;
+                            
+                            NSString *uuidString = [[FitCloud shared]bondDeviceUUID];
+                            BOOL ret = [FCWatchConfigDB storeWatchConfig:watchSettingObj forUUID:uuidString];
+                            if (ret) {
+                                NSLog(@"--更新久坐提醒--");
+                            }
+                        }
+                        else
+                        {
+                            [ws hideLoadingHUDWithFailure:@"同步失败"];
+                        }
+                    }];
+                }
+                else
+                {
+                    [ws showErrorWithMessage:@"结束时间必须大于开始时间"];
+                }
+            }];
+            [pickerView show];
+        }
+    }
 }
 
 
@@ -170,6 +262,29 @@
 
 - (void)sedentaryReminderSwitchValueChanged:(UISwitch*)aSwitch
 {
+    self.srObj.isOn = aSwitch.isOn;
+    __weak __typeof(self)ws = self;
+    [self showLoadingHUDWithMessage:@"正在同步"];
+    NSData *data = self.srObj.writeData;
+    [[FitCloud shared]fcSetSedentaryRemindersData:data result:^(FCSyncType syncType, FCSyncResponseState state) {
+        if (state == FCSyncResponseStateSuccess) {
+            [ws hideLoadingHUDWithSuccess:@"同步完成"];
+            
+            FCWatchSettingsObject *watchSettingObj = [FCConfigManager manager].watchSetting;
+            watchSettingObj.sedentaryReminderData = data;
+            
+            NSString *uuidString = [[FitCloud shared]bondDeviceUUID];
+            BOOL ret = [FCWatchConfigDB storeWatchConfig:watchSettingObj forUUID:uuidString];
+            if (ret) {
+                NSLog(@"--更新久坐提醒--");
+            }
+        }
+        else
+        {
+            [aSwitch setOn:!aSwitch.isOn animated:YES];
+            [ws hideLoadingHUDWithFailure:@"同步失败"];
+        }
+    }];
     
 }
 
@@ -178,12 +293,10 @@
     // 久坐提醒未打开或者不包括午休时间，则不允许修改
     if (!self.sedentaryReminderSwitch.isOn || !self.srObj.isAtRestTime)
     {
-        [aSwitch setOn:!aSwitch.isOn animated:YES];
          NSLog(@"---不能设置午休免打扰---");
+        [aSwitch setOn:!aSwitch.isOn animated:YES];
         return;
     }
-    
-   
     
     __weak __typeof(self)ws = self;
     [self showLoadingHUDWithMessage:@"正在同步"];
@@ -217,7 +330,7 @@
     if (_drinkRemindSwitch) {
         return _drinkRemindSwitch;
     }
-    _drinkRemindSwitch = [[UISwitch alloc]initWithFrame:CGRectZero];
+    _drinkRemindSwitch = [[FCSwitch alloc]initWithFrame:CGRectZero];
     [_drinkRemindSwitch addTarget:self action:@selector(drinkRemindSwitchValueChanged:) forControlEvents:UIControlEventValueChanged];
     return _drinkRemindSwitch;
 }
@@ -227,7 +340,7 @@
     if (_sedentaryReminderSwitch) {
         return _sedentaryReminderSwitch;
     }
-    _sedentaryReminderSwitch = [[UISwitch alloc]initWithFrame:CGRectZero];
+    _sedentaryReminderSwitch = [[FCSwitch alloc]initWithFrame:CGRectZero];
     [_sedentaryReminderSwitch addTarget:self action:@selector(sedentaryReminderSwitchValueChanged:) forControlEvents:UIControlEventValueChanged];
     return _sedentaryReminderSwitch;
 }
@@ -237,7 +350,7 @@
     if (_restTimeNotDisturbSwitch) {
         return _restTimeNotDisturbSwitch;
     }
-    _restTimeNotDisturbSwitch = [[UISwitch alloc]initWithFrame:CGRectZero];
+    _restTimeNotDisturbSwitch = [[FCSwitch alloc]initWithFrame:CGRectZero];
     [_restTimeNotDisturbSwitch addTarget:self action:@selector(restTimeNotDisturbSwitchValueChanged:) forControlEvents:UIControlEventValueChanged];
     return _restTimeNotDisturbSwitch;
 }

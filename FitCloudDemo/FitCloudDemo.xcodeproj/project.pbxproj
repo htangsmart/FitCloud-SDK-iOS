@@ -43,6 +43,9 @@
 		6BE5719C1EDDEE4200CE46C7 /* FCEditAlarmCycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE5719B1EDDEE4200CE46C7 /* FCEditAlarmCycleViewController.m */; };
 		6BE5719F1EDDF2B200CE46C7 /* FCAlarmCycleCheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE5719E1EDDF2B200CE46C7 /* FCAlarmCycleCheckCell.m */; };
 		6BE571AB1EDEE8F500CE46C7 /* NSObject+FCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE571AA1EDEE8F500CE46C7 /* NSObject+FCObject.m */; };
+		6BE571AE1EDF1E8100CE46C7 /* FCSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE571AD1EDF1E8100CE46C7 /* FCSwitch.m */; };
+		6BE571B31EDF21E100CE46C7 /* HFDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE571B11EDF21E100CE46C7 /* HFDatePickerView.m */; };
+		6BE571B41EDF21E100CE46C7 /* HFDatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE571B21EDF21E100CE46C7 /* HFDatePickerView.xib */; };
 		6BE746CF1ED941BC0085E16E /* FCConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE746CE1ED941BC0085E16E /* FCConfigManager.m */; };
 		6BE746DE1ED95C8D0085E16E /* FCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE746DD1ED95C8D0085E16E /* FCHomeViewController.m */; };
 		6BE746F01ED95DB20085E16E /* FCSportsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE746EF1ED95DB20085E16E /* FCSportsViewController.m */; };
@@ -151,6 +154,11 @@
 		6BE5719E1EDDF2B200CE46C7 /* FCAlarmCycleCheckCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCAlarmCycleCheckCell.m; sourceTree = "<group>"; };
 		6BE571A91EDEE8F500CE46C7 /* NSObject+FCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FCObject.h"; sourceTree = "<group>"; };
 		6BE571AA1EDEE8F500CE46C7 /* NSObject+FCObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FCObject.m"; sourceTree = "<group>"; };
+		6BE571AC1EDF1E8100CE46C7 /* FCSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCSwitch.h; sourceTree = "<group>"; };
+		6BE571AD1EDF1E8100CE46C7 /* FCSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCSwitch.m; sourceTree = "<group>"; };
+		6BE571B01EDF21E100CE46C7 /* HFDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFDatePickerView.h; sourceTree = "<group>"; };
+		6BE571B11EDF21E100CE46C7 /* HFDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFDatePickerView.m; sourceTree = "<group>"; };
+		6BE571B21EDF21E100CE46C7 /* HFDatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HFDatePickerView.xib; sourceTree = "<group>"; };
 		6BE746CD1ED941BC0085E16E /* FCConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCConfigManager.h; sourceTree = "<group>"; };
 		6BE746CE1ED941BC0085E16E /* FCConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCConfigManager.m; sourceTree = "<group>"; };
 		6BE746DC1ED95C8D0085E16E /* FCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCHomeViewController.h; sourceTree = "<group>"; };
@@ -441,6 +449,16 @@
 			name = "惯用单位";
 			sourceTree = "<group>";
 		};
+		6BE571AF1EDF21D100CE46C7 /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				6BE571B01EDF21E100CE46C7 /* HFDatePickerView.h */,
+				6BE571B11EDF21E100CE46C7 /* HFDatePickerView.m */,
+				6BE571B21EDF21E100CE46C7 /* HFDatePickerView.xib */,
+			);
+			name = DatePicker;
+			sourceTree = "<group>";
+		};
 		6BE746D01ED954D40085E16E /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -613,6 +631,9 @@
 		6BE746FA1ED95ECB0085E16E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6BE571AF1EDF21D100CE46C7 /* DatePicker */,
+				6BE571AC1EDF1E8100CE46C7 /* FCSwitch.h */,
+				6BE571AD1EDF1E8100CE46C7 /* FCSwitch.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -867,6 +888,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B5DD2601DC8A4E200788BDA /* LaunchScreen.storyboard in Resources */,
+				6BE571B41EDF21E100CE46C7 /* HFDatePickerView.xib in Resources */,
 				6B5DD25D1DC8A4E200788BDA /* Assets.xcassets in Resources */,
 				6BE571821EDDDEAC00CE46C7 /* HFPickerView.xib in Resources */,
 				6B5DD25B1DC8A4E200788BDA /* Main.storyboard in Resources */,
@@ -948,6 +970,7 @@
 				6BE5717D1EDDDD7400CE46C7 /* NSNumber+Category.m in Sources */,
 				6BE747091ED965A80085E16E /* MBProgressHUD+Category.m in Sources */,
 				6BE5718A1EDDE4CA00CE46C7 /* FCCustomaryUnitsCell.m in Sources */,
+				6BE571AE1EDF1E8100CE46C7 /* FCSwitch.m in Sources */,
 				6BE746FD1ED95F360085E16E /* FCTabBarController.m in Sources */,
 				6BE571621EDD4F1D00CE46C7 /* FCDBEngine.m in Sources */,
 				6BF31A621ED9A743000454EB /* FCProfileViewController.m in Sources */,
@@ -958,6 +981,7 @@
 				6BE571AB1EDEE8F500CE46C7 /* NSObject+FCObject.m in Sources */,
 				6BE5715C1EDD386F00CE46C7 /* FCBindDeviceViewController.m in Sources */,
 				6BE571651EDD4F6600CE46C7 /* FCWatchConfigDB.m in Sources */,
+				6BE571B31EDF21E100CE46C7 /* HFDatePickerView.m in Sources */,
 				6B5DD2C61DC8A97A00788BDA /* NSObject+HUD.m in Sources */,
 				6BE746F01ED95DB20085E16E /* FCSportsViewController.m in Sources */,
 				6BE571871EDDE40D00CE46C7 /* FCCustomaryUnitsHeaderView.m in Sources */,

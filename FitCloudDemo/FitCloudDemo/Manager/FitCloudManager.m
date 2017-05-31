@@ -42,7 +42,7 @@
     [self scanForPeripheralWithSavedUUID];
     
     __weak __typeof(self) ws = self;
-    [self.KVOController observe:[FitCloud shared] keyPath:@"managerState" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld block:^(id  _Nullable observer, id  _Nonnull object, NSDictionary<NSString *,id> * _Nonnull change) {
+    [self.KVOController observe:[FitCloud shared] keyPath:@"managerState" options:NSKeyValueObservingOptionNew block:^(id  _Nullable observer, id  _Nonnull object, NSDictionary<NSString *,id> * _Nonnull change) {
         FCManagerState state = (FCManagerState)[change[NSKeyValueChangeNewKey]integerValue];
         if (state == FCManagerStatePoweredOn)
         {

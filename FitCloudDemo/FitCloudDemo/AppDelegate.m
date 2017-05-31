@@ -45,21 +45,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
-    YYModelObject *modelObj = [[YYModelObject alloc]init];
-    Byte byte[2] = {0}; byte[0] = 1; byte[1] = 2;
-    modelObj.data1 = [NSData dataWithBytes:byte length:2];
-    Byte byte1[3] = {0}; byte1[0] = 2; byte1[1] = 2;byte1[2] = 2;
-    modelObj.data2 = [NSData dataWithBytes:byte1 length:3];
-    modelObj.number = @(110);
-    modelObj.enabled = YES;
-    
-    NSLog(@"-model--%@",modelObj.yy_modelDescription);
-    
-    NSData *data = [modelObj yy_modelToJSONData];
-    NSLog(@"-data--%@",data);
-    YYModelObject *aModelObj = [YYModelObject yy_modelWithJSON:data];
-    NSLog(@"-aModelObj--%@",aModelObj.yy_modelDescription);
     return YES;
 }
 
