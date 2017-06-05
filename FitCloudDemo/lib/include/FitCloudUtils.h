@@ -253,7 +253,7 @@
  @param diastolicBP 舒张压默认参考数据
  @return 一组包含<i>FCDataObject</i>对象的记录
  */
-- (NSArray*)getBloodPressureDetailsFromData:(NSData*)data systolicBP:(UInt16)systolicBP diastolicBP:(UInt16)diastolicBP;
++ (NSArray*)getBloodPressureDetailsFromData:(NSData*)data systolicBP:(UInt16)systolicBP diastolicBP:(UInt16)diastolicBP;
 
 
 

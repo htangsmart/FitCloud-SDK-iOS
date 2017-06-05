@@ -17,9 +17,20 @@
 #import "FCUserConfig.h"
 #import "FCConfigManager.h"
 
+static inline void st_dispatch_async_main(dispatch_block_t block) {
+    
+    if ([NSThread isMainThread]) {
+        block();
+    }
+    else
+    {
+        dispatch_async(dispatch_get_main_queue(), block);
+    }
+}
 
 @interface FitCloudManager()
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
+@property (nonatomic, strong) dispatch_queue_t asyncQueue;
 @end
 
 @implementation FitCloudManager
@@ -37,6 +48,7 @@
 - (void)startService
 {
     [self registerNotification];
+    _asyncQueue = dispatch_queue_create([[[NSDate date]description]UTF8String], NULL);
     
     // 如果蓝牙已经绑定，自动扫描连接
     [self scanForPeripheralWithSavedUUID];
@@ -297,6 +309,7 @@ void systemAudioCallback()
     if (!ret) {
         NSLog(@"--蓝牙未连接--");
         [self showWarningWithMessage:@"蓝牙未连接"];
+        // 扫描连接以及绑定的蓝牙
         [self scanForPeripheralWithSavedUUID];
         return;
     }
@@ -309,9 +322,201 @@ void systemAudioCallback()
 - (void)syncHistoryData
 {
     
+    __weak __typeof(self) ws = self;
+    
+    FCUserConfig *userConfig = [FCUserConfigDB getUserFromDB];
+    FCFeaturesObject *feature = [[FCConfigManager manager]featuresObject];
+    // 时间显示制式，可以跟随手机时间制式显示
+    feature.twelveHoursSystem = [FitCloudUtils is12HourSystem];
+    // 单位，根据需要选择
+    feature.isImperialUnits = userConfig.isImperialUnits;
+    
+    FCUserObject *userObj = [[FCUserObject alloc]init];
+    userObj.featuresData =  feature.writeData;
+    
+    [ws hideAllHUDs];
+    [ws showLoadingHUDWithMessage:@"正在同步"];
+    
+    [[FitCloud shared]fcGetHistoryDataWithUser:userObj stepCallback:^(NSInteger syncType) {
+        
+        FCHistoryDataSyncType dataSyncType = (FCHistoryDataSyncType)syncType;
+        NSLog(@"---同步步骤--%@",@(dataSyncType));
+        
+    } dataCallback:^(FCSyncType syncType, FCHistoryDataSyncType hdSyncType, NSData *data) {
+        dispatch_async(_asyncQueue, ^{
+            if (hdSyncType == FCHistoryDataSyncTypeTotalData)
+            {
+                // 日总数据
+                [ws didReceivedTotalData:data];
+            }
+            else if (hdSyncType == FCHistoryDataSyncTypeExercise)
+            {
+                // 运动量
+                [ws didReceivedExerciseData:data];
+            }
+            else if (hdSyncType == FCHistoryDataSyncTypeSleep)
+            {
+                // 睡眠
+                [ws didReceivedSleepData:data];
+            }
+            else if (hdSyncType == FCHistoryDataSyncTypeHeartRate)
+            {
+                // 心率
+                [ws didReceivedHeartRateData:data];
+            }
+            else if (hdSyncType == FCHistoryDataSyncTypeBloodOxygen)
+            {
+                // 血氧
+                [ws didReceivedBloodOxygenData:data];
+            }
+            else if (hdSyncType == FCHistoryDataSyncTypeBloodPressure)
+            {
+                // 血压
+                [ws didReceivedBloodPressureData:data];
+            }
+            else if (hdSyncType == FCHistoryDataSyncTypeBreathingRate)
+            {
+                // 呼吸频率
+                [ws didReceivedBreathingRateData:data];
+            }
+            else if (hdSyncType == FCHistoryDataSyncTypeUltraviolet)
+            {
+                // 紫外线，暂无
+            }
+            else if (hdSyncType == FCHistoryDataSyncTypeSevenDaysSleepData)
+            {
+                // 7日睡眠
+            }
+        });
+    } result:^(FCSyncType syncType, FCHistoryDataSyncType hdSyncType, FCSyncResponseState state) {
+        if (state == FCSyncResponseStateSuccess)
+        {
+            [ws hideLoadingHUDWithSuccess:@"同步完成"];
+        }
+        else if (state == FCSyncResponseStateTimeOut)
+        {
+            [ws hideLoadingHUDWithFailure:@"同步超时"];
+        }
+        else if (state == KRSyncResponseStateSynchronizing)
+        {
+            NSLog(@"--正在同步[%@]--",@([FitCloud shared].syncType));
+        }
+        else if (state == FCSyncResponseStateNotConnected)
+        {
+            [ws hideAllHUDs];
+        }
+        else
+        {
+            [ws hideLoadingHUDWithFailure:@"同步失败"];
+        }
+    }];
+}
+
+#pragma mark - 运动量
+
+- (void)didReceivedTotalData:(NSData*)data
+{
+    if (!data) {
+        return;
+    }
+    NSDictionary *params = [FitCloudUtils getDetailsOfCurrentDayFromData:data];
+    NSLog(@"--params--%@",params);
+    
+    st_dispatch_async_main(^{
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"EVENT_DAY_DETAILS_UPDATE_NOTIFY" object:params];
+    });
+    
+    // 存储日总数据
+    
 }
 
 
+#pragma mark - 运动量
+- (void)didReceivedExerciseData:(NSData*)data
+{
+    if (!data) {
+        return;
+    }
+    // 获取运动详细记录 （每五分钟一个记录）
+    NSArray *detailsArray = [FitCloudUtils getExerciseDetailsFromData:data];
+    NSLog(@"--detailsArray--%@",detailsArray);
+    // 存储详细记录，如果有需要，可以对记录按天统计求和
+    
+    // 服务器需要保持记录的可以将详细记录上传给服务器
+}
+
+
+#pragma mark - 睡眠
+- (void)didReceivedSleepData:(NSData*)data
+{
+    if (!data) {
+        return;
+    }
+    // 获取运动详细记录 （每五分钟一个记录）
+    NSArray *detailsArray = [FitCloudUtils getSleepDetailsFromData:data];
+    NSLog(@"--detailsArray--%@",detailsArray);
+    // 存储详细记录，如果有需要，可以对记录按天统计求和
+    
+    // 服务器需要保持记录的可以将详细记录上传给服务器
+}
+
+#pragma mark - 心率
+- (void)didReceivedHeartRateData:(NSData*)data
+{
+    if (!data) {
+        return;
+    }
+    // 获取运动详细记录 （每五分钟一个记录）
+    NSArray *detailsArray = [FitCloudUtils getHeartRateDetailsFromData:data];
+    NSLog(@"--detailsArray--%@",detailsArray);
+    // 存储详细记录，如果有需要，可以对记录按天统计平均值
+    
+    // 服务器需要保持记录的可以将详细记录上传给服务器
+}
+
+#pragma mark - 血氧
+- (void)didReceivedBloodOxygenData:(NSData*)data
+{
+    if (!data) {
+        return;
+    }
+    // 获取运动详细记录 （每五分钟一个记录）
+    NSArray *detailsArray = [FitCloudUtils getBloodOxygenDetailsFromData:data];
+    NSLog(@"--detailsArray--%@",detailsArray);
+    // 存储详细记录，如果有需要，可以对记录按天统计平均值
+    
+    // 服务器需要保持记录的可以将详细记录上传给服务器
+}
+
+#pragma mark - 血压
+- (void)didReceivedBloodPressureData:(NSData*)data
+{
+    if (!data) {
+        return;
+    }
+    FCUserConfig *userConfig = [FCUserConfigDB getUserFromDB];
+    
+    // 获取运动详细记录 （每五分钟一个记录）
+    NSArray *detailsArray = [FitCloudUtils getBloodPressureDetailsFromData:data systolicBP:userConfig.systolicBP diastolicBP:userConfig.diastolicBP];
+    NSLog(@"--detailsArray--%@",detailsArray);
+    // 存储详细记录，如果有需要，可以对记录按天统计平均值
+    
+    // 服务器需要保持记录的可以将详细记录上传给服务器
+}
+
+#pragma mark - 呼吸频率
+- (void)didReceivedBreathingRateData:(NSData*)data
+{
+    if (!data) {
+        return;
+    }
+    // 获取运动详细记录 （每五分钟一个记录）
+    NSArray *detailsArray = [FitCloudUtils getBreathingRateDetailsFromData:data];
+    NSLog(@"--detailsArray--%@",detailsArray);
+    // 存储详细记录，如果有需要，可以对记录按天统计平均值
+    
+    // 服务器需要保持记录的可以将详细记录上传给服务器
+}
 
 #pragma mark - Getter
 
