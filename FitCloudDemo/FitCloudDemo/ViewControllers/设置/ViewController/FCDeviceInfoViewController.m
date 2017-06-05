@@ -18,6 +18,8 @@
 #import "FCWatchSettingsObject+Category.h"
 #import <FitCloudKit.h>
 #import "NSObject+HUD.h"
+#import "HFRadioAlertView.h"
+
 
 @interface FCDeviceInfoViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *batteryLevel;
@@ -198,6 +200,7 @@
     else if (indexPath.row == 3)
     {
         // 佩戴方式
+        [self updateWearSttyle];
     }
     else if (indexPath.row == 6)
     {
@@ -224,6 +227,38 @@
     }];
 }
 
+
+- (void)updateWearSttyle
+{
+    __weak __typeof(self)ws = self;
+    HFRadioAlertView *wearingStylesView = [HFRadioAlertView alertViewWithTitle:@"佩戴方式" andItems:@[@"左手",@"右手"]];
+    wearingStylesView.checkItem = (ws.userConfig.isLeftHandWearEnabled ? @"左手":@"右手");
+    [wearingStylesView setDidTouchBlock:^(NSString *item) {
+        BOOL lefthand = [item isEqualToString:@"左手"];
+        
+        [ws showLoadingHUDWithMessage:@"正在同步"];
+        
+        [[FitCloud shared]fcSetLeftHandWearEnable:lefthand result:^(FCSyncType syncType, FCSyncResponseState state) {
+            if ( state == FCSyncResponseStateSuccess) {
+                [ws hideLoadingHUDWithSuccess:@"同步完成"];
+                
+                ws.userConfig.isLeftHandWearEnabled = lefthand;
+                [ws.tableView reloadData];
+                
+                BOOL ret = [FCUserConfigDB storeUser:ws.userConfig];
+                if (ret) {
+                    NSLog(@"--更新佩戴方式--");
+                }
+                
+            }
+            else
+            {
+                [ws hideLoadingHUDWithFailure:@"同步失败"];
+            }
+        }];
+    }];
+    [wearingStylesView show];
+}
 
 - (void)changeHealthMonitorSTMinute
 {
