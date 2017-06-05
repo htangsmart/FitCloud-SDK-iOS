@@ -15,17 +15,25 @@
 #import "FCSportsDisplayCell.h"
 #import "FCSleepDisplayCell.h"
 #import "FCHealthDisplayCell.h"
+#import "FCDayDetailsObject.h"
+#import "FCDayDetailsDB.h"
 
 @interface FCSyncDataViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 @property (nonatomic, strong) FCSensorFlagObject *sensorFlag;
+@property (nonatomic, strong) FCDayDetailsObject *dayDetailsObj;
 @end
 
 @implementation FCSyncDataViewController
 
 
 #pragma mark - dealloc
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:@"EVENT_DAY_DETAILS_UPDATE_NOTIFY" object:nil];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -52,6 +60,24 @@
     [self.KVOController observe:[FCConfigManager manager] keyPath:@"sensorFlagUpdate" options:NSKeyValueObservingOptionNew block:^(id  _Nullable observer, id  _Nonnull object, NSDictionary<NSString *,id> * _Nonnull change) {
         [ws.tableView reloadData];
     }];
+    
+    [FCDayDetailsDB fetchDayDetails:[NSDate date] result:^(id dayDetails) {
+        if (dayDetails && [dayDetails isKindOfClass:[FCDayDetailsObject class]]) {
+            ws.dayDetailsObj = dayDetails;
+            [ws.tableView reloadData];
+        }
+    }];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(onReceivedDayDetailsUpdate:) name:@"EVENT_DAY_DETAILS_UPDATE_NOTIFY" object:nil];
+}
+
+- (void)onReceivedDayDetailsUpdate:(NSNotification*)note
+{
+    if (note && note.object) {
+        FCDayDetailsObject *dayDetails = (FCDayDetailsObject*)note.object;
+        self.dayDetailsObj = dayDetails;
+        [self.tableView reloadData];
+    }
 }
 
 #pragma mark - 同步最新数据
@@ -112,12 +138,21 @@
         {
             FCSportsDisplayCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SportCell" forIndexPath:indexPath];
             cell.imageView.image = [UIImage imageNamed:@"ico_runing"];
+            cell.stepLabel.text = self.dayDetailsObj.stepCount.stringValue;
+            cell.calorieLabel.text = @(self.dayDetailsObj.calorie.floatValue/1000).stringValue;
+            cell.distanceLabel.text = @(self.dayDetailsObj.distance.floatValue/1000).stringValue;
             return cell;
         }
         else if ([itemName isEqualToString:@"睡眠"])
         {
             FCSleepDisplayCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SleepCell" forIndexPath:indexPath];
             cell.imageView.image = [UIImage imageNamed:@"ico_sleep"];
+            NSInteger totalTime = self.dayDetailsObj.deepSleep.doubleValue + self.dayDetailsObj.lightSleep.doubleValue;
+            cell.totalSleepTimeLabel.text = [NSString stringWithFormat:@"%@时%@分",@((int)(floorf(totalTime/60))),@((int)(ceilf(totalTime%60)))];
+            NSInteger deepSleepTime = self.dayDetailsObj.deepSleep.doubleValue;
+            cell.deepSleepLabel.text = [NSString stringWithFormat:@"%@时%@分",@((int)(floorf(deepSleepTime/60))),@((int)(ceilf(deepSleepTime%60)))];
+            NSInteger lightSleepTime = self.dayDetailsObj.lightSleep.doubleValue;
+            cell.lightSleepLabel.text = [NSString stringWithFormat:@"%@时%@分",@((int)(floorf(lightSleepTime/60))),@((int)(ceilf(lightSleepTime%60)))];
             return cell;
         }
         else if ([itemName isEqualToString:@"紫外线"])
@@ -131,9 +166,9 @@
             FCHealthDisplayCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HealthCell" forIndexPath:indexPath];
             cell.imageView.image = [UIImage imageNamed:@"ico_heart_rate"];
             cell.titleLabel.text = @"实时测量心率";
-            cell.valueLabel.text = @"60";
-            cell.maxValueLabel.text = @"80";
-            cell.minValueLabel.text = @"40";
+            cell.valueLabel.text = @"0";
+            cell.maxValueLabel.text = @"0";
+            cell.minValueLabel.text = @"0";
             return cell;
         }
         else if ([itemName isEqualToString:@"血氧"])
@@ -141,9 +176,9 @@
             FCHealthDisplayCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HealthCell" forIndexPath:indexPath];
             cell.imageView.image = [UIImage imageNamed:@"ico_blood_oxygen"];
             cell.titleLabel.text = @"实时测量血氧";
-            cell.valueLabel.text = @"120/60 SpO2";
-            cell.maxValueLabel.text = @"80 SpO2";
-            cell.minValueLabel.text = @"40 SpO2";
+            cell.valueLabel.text = @"0 SpO2";
+            cell.maxValueLabel.text = @"0 SpO2";
+            cell.minValueLabel.text = @"0 SpO2";
             return cell;
         }
         else if ([itemName isEqualToString:@"血压"])
@@ -151,9 +186,9 @@
             FCHealthDisplayCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HealthCell" forIndexPath:indexPath];
             cell.imageView.image = [UIImage imageNamed:@"ico_blood_pressure"];
             cell.titleLabel.text = @"实时测量血压";
-            cell.valueLabel.text = @"60 mmHg";
-            cell.maxValueLabel.text = @"80 mmHg";
-            cell.minValueLabel.text = @"40 mmHg";
+            cell.valueLabel.text = @"0/0 mmHg";
+            cell.maxValueLabel.text = @"0/0 mmHg";
+            cell.minValueLabel.text = @"0/0 mmHg";
             return cell;
         }
         else if ([itemName isEqualToString:@"呼吸频率"])
@@ -161,9 +196,9 @@
             FCHealthDisplayCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HealthCell" forIndexPath:indexPath];
             cell.imageView.image = [UIImage imageNamed:@"ico_respiratory _rate"];
             cell.titleLabel.text = @"实时测量呼吸频率";
-            cell.valueLabel.text = @"60 次/分";
-            cell.maxValueLabel.text = @"80 次/分";
-            cell.minValueLabel.text = @"40 次/分";
+            cell.valueLabel.text = @"0 次/分";
+            cell.maxValueLabel.text = @"0 次/分";
+            cell.minValueLabel.text = @"0 次/分";
             return cell;
         }
         else if ([itemName isEqualToString:@"心电"])
