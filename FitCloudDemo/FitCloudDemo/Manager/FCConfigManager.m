@@ -60,6 +60,8 @@
     if (ret) {
         NSLog(@"--存储手表配置---");
     }
+    
+    self.sensorFlagUpdate = YES;
 }
 
 
@@ -75,6 +77,8 @@
     if (ret) {
         NSLog(@"--存储手表配置---");
     }
+    
+    self.sensorFlagUpdate = YES;
 }
 
 - (NSArray*)getPageDisplayItems

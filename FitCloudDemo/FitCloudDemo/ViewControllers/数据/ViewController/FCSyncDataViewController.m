@@ -11,6 +11,10 @@
 #import "FCConfigManager.h"
 #import <FitCloudKit.h>
 #import "NSObject+FCObject.h"
+#import <NSObject+FBKVOController.h>
+#import "FCSportsDisplayCell.h"
+#import "FCSleepDisplayCell.h"
+#import "FCHealthDisplayCell.h"
 
 @interface FCSyncDataViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -43,6 +47,11 @@
     FCSensorFlagObject *sensorFlag = [[FCConfigManager manager]sensorFlagObject];
     self.sensorFlag = sensorFlag;
     [self.tableView reloadData];
+    
+    __weak __typeof(self) ws = self;
+    [self.KVOController observe:[FCConfigManager manager] keyPath:@"sensorFlagUpdate" options:NSKeyValueObservingOptionNew block:^(id  _Nullable observer, id  _Nonnull object, NSDictionary<NSString *,id> * _Nonnull change) {
+        [ws.tableView reloadData];
+    }];
 }
 
 #pragma mark - 同步最新数据
@@ -68,7 +77,20 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100.0;
+    if (indexPath.row < [self.sensorFlag itemNameArray].count)
+    {
+        NSString *itemName = self.sensorFlag.itemNameArray[indexPath.row];
+        if ([itemName isEqualToString:@"运动"])
+        {
+            return 100.0;
+        }
+        else if ([itemName isEqualToString:@"心电"])
+        {
+            return 50.0;
+        }
+        return 110.0;
+    }
+    return 50.0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -78,41 +100,60 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    if (indexPath.row < [self.sensorFlag itemNameArray].count) {
+    if (indexPath.row < [self.sensorFlag itemNameArray].count)
+    {
         NSString *itemName = self.sensorFlag.itemNameArray[indexPath.row];
-        if ([itemName isEqualToString:@"运动"]) {
+        if ([itemName isEqualToString:@"运动"])
+        {
+            FCSportsDisplayCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SportCell" forIndexPath:indexPath];
             cell.imageView.image = [UIImage imageNamed:@"ico_runing"];
+            return cell;
         }
         else if ([itemName isEqualToString:@"睡眠"])
         {
+            FCSleepDisplayCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SleepCell" forIndexPath:indexPath];
             cell.imageView.image = [UIImage imageNamed:@"ico_sleep"];
+            return cell;
         }
         else if ([itemName isEqualToString:@"紫外线"])
         {
+            FCHealthDisplayCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HealthCell" forIndexPath:indexPath];
             cell.imageView.image = [UIImage imageNamed:@"ico_sleep"];
+            return cell;
         }
         else if ([itemName isEqualToString:@"心率"])
         {
+            FCHealthDisplayCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HealthCell" forIndexPath:indexPath];
             cell.imageView.image = [UIImage imageNamed:@"ico_heart_rate"];
+            return cell;
         }
         else if ([itemName isEqualToString:@"血氧"])
         {
+            FCHealthDisplayCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HealthCell" forIndexPath:indexPath];
             cell.imageView.image = [UIImage imageNamed:@"ico_blood_oxygen"];
+            return cell;
         }
         else if ([itemName isEqualToString:@"血压"])
         {
+            FCHealthDisplayCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HealthCell" forIndexPath:indexPath];
             cell.imageView.image = [UIImage imageNamed:@"ico_blood_pressure"];
+            return cell;
         }
         else if ([itemName isEqualToString:@"呼吸频率"])
         {
+            FCHealthDisplayCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HealthCell" forIndexPath:indexPath];
             cell.imageView.image = [UIImage imageNamed:@"ico_blood_pressure"];
+            return cell;
         }
         else if ([itemName isEqualToString:@"心电"])
         {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
             cell.imageView.image = [UIImage imageNamed:@"ico_ecg"];
+            cell.textLabel.text = @"心电";
+            return cell;
         }
     }
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     return cell;
 }
 

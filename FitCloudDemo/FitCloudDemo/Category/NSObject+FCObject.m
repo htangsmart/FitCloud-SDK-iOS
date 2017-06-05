@@ -43,7 +43,7 @@
 @end
 
 
-@implementation FCSensorFlagObject
+@implementation FCSensorFlagObject (Category)
 
 - (NSUInteger)countOfItems
 {
