@@ -295,8 +295,6 @@
     [displayView show];
 }
 
- d4cefrv231	 `
-
 #pragma mark - 修改健康定时监测时间
 
 - (void)changeHealthMonitorSTMinute

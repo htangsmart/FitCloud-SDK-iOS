@@ -8,11 +8,14 @@
 
 #import "FCSyncDataViewController.h"
 #import "FitCloudManager.h"
-
+#import "FCConfigManager.h"
+#import <FitCloudKit.h>
+#import "NSObject+FCObject.h"
 
 @interface FCSyncDataViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
+@property (nonatomic, strong) FCSensorFlagObject *sensorFlag;
 @end
 
 @implementation FCSyncDataViewController
@@ -36,6 +39,10 @@
     
     // 开始蓝牙服务
     [[FitCloudManager manager]startService];
+    
+    FCSensorFlagObject *sensorFlag = [[FCConfigManager manager]sensorFlagObject];
+    self.sensorFlag = sensorFlag;
+    [self.tableView reloadData];
 }
 
 #pragma mark - 同步最新数据
@@ -55,7 +62,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return [self.sensorFlag countOfItems];
 }
 
 
@@ -72,19 +79,40 @@
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    if (indexPath.row == 0)
-    {
-        cell.imageView.image = [UIImage imageNamed:@"ico_runing"];
+    if (indexPath.row < [self.sensorFlag itemNameArray].count) {
+        NSString *itemName = self.sensorFlag.itemNameArray[indexPath.row];
+        if ([itemName isEqualToString:@"运动"]) {
+            cell.imageView.image = [UIImage imageNamed:@"ico_runing"];
+        }
+        else if ([itemName isEqualToString:@"睡眠"])
+        {
+            cell.imageView.image = [UIImage imageNamed:@"ico_sleep"];
+        }
+        else if ([itemName isEqualToString:@"紫外线"])
+        {
+            cell.imageView.image = [UIImage imageNamed:@"ico_sleep"];
+        }
+        else if ([itemName isEqualToString:@"心率"])
+        {
+            cell.imageView.image = [UIImage imageNamed:@"ico_heart_rate"];
+        }
+        else if ([itemName isEqualToString:@"血氧"])
+        {
+            cell.imageView.image = [UIImage imageNamed:@"ico_blood_oxygen"];
+        }
+        else if ([itemName isEqualToString:@"血压"])
+        {
+            cell.imageView.image = [UIImage imageNamed:@"ico_blood_pressure"];
+        }
+        else if ([itemName isEqualToString:@"呼吸频率"])
+        {
+            cell.imageView.image = [UIImage imageNamed:@"ico_blood_pressure"];
+        }
+        else if ([itemName isEqualToString:@"心电"])
+        {
+            cell.imageView.image = [UIImage imageNamed:@"ico_ecg"];
+        }
     }
-    else if (indexPath.row == 1)
-    {
-        cell.imageView.image = [UIImage imageNamed:@"ico_sleep"];
-    }
-    else if (indexPath.row == 2)
-    {
-        cell.imageView.image = [UIImage imageNamed:@"ico_heart_rate"];
-    }
-    
     return cell;
 }
 

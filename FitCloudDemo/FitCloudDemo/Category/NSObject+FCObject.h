@@ -19,6 +19,12 @@
 - (NSString*)edMinuteString;
 @end
 
+
+@interface FCSensorFlagObject (Category)
+- (NSUInteger)countOfItems;
+- (NSArray*)itemNameArray;
+@end
+
 @interface NSObject (FCObject)
 
 @end
