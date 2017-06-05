@@ -42,6 +42,14 @@
  */
 - (FCSedentaryReminderObject*)sedentaryReminderObject;
 
+
+/**
+ 健康实时监测
+
+ @return 健康监测对象
+ */
+- (FCHealthMonitoringObject*)healthMonitoringObject;
+
 /**
  获取消息通知开关设置
 

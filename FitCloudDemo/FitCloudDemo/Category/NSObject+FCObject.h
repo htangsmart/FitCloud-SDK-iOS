@@ -14,6 +14,10 @@
 - (NSString*)edMinuteString;
 @end
 
+@interface FCHealthMonitoringObject (Category)
+- (NSString*)stMinuteString;
+- (NSString*)edMinuteString;
+@end
 
 @interface NSObject (FCObject)
 

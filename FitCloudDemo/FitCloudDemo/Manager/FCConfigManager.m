@@ -102,6 +102,15 @@
     return [FCSedentaryReminderObject objectWithData:nil];
 }
 
+- (FCHealthMonitoringObject*)healthMonitoringObject
+{
+    if (_watchSetting) {
+        FCHealthMonitoringObject *obj = [_watchSetting healthMonitoringObject];
+        return obj;
+    }
+    return [FCHealthMonitoringObject objectWithData:nil];
+}
+
 - (FCNotificationObject*)notificationObject
 {
     if (_watchSetting) {

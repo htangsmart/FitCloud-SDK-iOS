@@ -125,8 +125,6 @@
     user.isLeftHandWearEnabled = userConfig.isLeftHandWearEnabled;
     
     FCFeaturesObject *feature = [[FCConfigManager manager]featuresObject];
-    feature.flipWristToLightScreen = YES;
-    feature.enhanceSurveyEnabled = YES;
     // 时间显示制式，可以跟随手机时间制式显示
     feature.twelveHoursSystem = [FitCloudUtils is12HourSystem];
     // 单位，根据需要选择

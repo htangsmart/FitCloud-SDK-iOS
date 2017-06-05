@@ -13,7 +13,6 @@
 #import "FCUserConfigDB.h"
 #import "FCWatchConfigDB.h"
 #import "FCConfigManager.h"
-#import "FCWatchConfigDB.h"
 #import "FCWatchSettingsObject+Category.h"
 #import "FitCloud+Category.h"
 #import "NSObject+FCObject.h"
@@ -136,7 +135,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (indexPath.section == 1) {
+    if (indexPath.section == 1)
+    {
         if (indexPath.row == 1)
         {
             if (!self.sedentaryReminderSwitch.isOn) {

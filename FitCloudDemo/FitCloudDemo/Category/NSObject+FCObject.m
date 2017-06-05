@@ -25,6 +25,22 @@
 }
 @end
 
+@implementation FCHealthMonitoringObject (Category)
+
+- (NSString*)stMinuteString
+{
+    int hour = (int)floorf(self.stMinute /60);
+    int minute = self.stMinute % 60;
+    return [NSString stringWithFormat:@"%02d:%02d",hour,minute];
+}
+
+- (NSString*)edMinuteString
+{
+    int hour = (int)floorf(self.edMinute /60);
+    int minute = self.edMinute % 60;
+    return [NSString stringWithFormat:@"%02d:%02d",hour,minute];
+}
+@end
 
 @implementation NSObject (FCObject)
 
