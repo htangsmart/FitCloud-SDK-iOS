@@ -77,6 +77,55 @@
     }
 }
 
+- (NSArray*)getPageDisplayItems
+{
+    NSMutableArray *tmpArray = [NSMutableArray array];
+    FCPageDisplayFlagObject *pageDisplayFlag = [self pageDisplayFlagObject];
+    if (pageDisplayFlag.dateTime)
+    {
+        [tmpArray addObject:@"时间和日期"];
+    }
+    if (pageDisplayFlag.stepCount)
+    {
+        [tmpArray addObject:@"步数"];
+    }
+    if (pageDisplayFlag.distance)
+    {
+        [tmpArray addObject:@"距离"];
+    }
+    if (pageDisplayFlag.calorie)
+    {
+        [tmpArray addObject:@"卡路里"];
+    }
+    if (pageDisplayFlag.sleep)
+    {
+        [tmpArray addObject:@"睡眠"];
+    }
+    if (pageDisplayFlag.heartRate)
+    {
+        [tmpArray addObject:@"心率"];
+    }
+    if (pageDisplayFlag.bloodOxygen)
+    {
+        [tmpArray addObject:@"血氧"];
+    }
+    if (pageDisplayFlag.bloodPressure)
+    {
+        [tmpArray addObject:@"血压"];
+    }
+    if (pageDisplayFlag.weatherForecast)
+    {
+        [tmpArray addObject:@"天气预报"];
+    }
+    if (pageDisplayFlag.findPhone)
+    {
+        [tmpArray addObject:@"查找手机"];
+    }
+    [tmpArray addObject:@"ID"];
+    
+    return [NSArray arrayWithArray:tmpArray];
+}
+
 - (NSDictionary*)defaultBloodPressure
 {
     if (_watchSetting) {
@@ -143,6 +192,17 @@
     }
     return [FCPageDisplayFlagObject objectWithData:nil];
 }
+
+- (FCScreenDisplayConfigObject*)screenDisplayConfigObject
+{
+    if (_watchSetting)
+    {
+        FCScreenDisplayConfigObject *sdObj = [_watchSetting watchScreenDisplayObject];
+        return sdObj;
+    }
+    return [FCScreenDisplayConfigObject objectWithData:nil];
+}
+
 
 - (FCFeaturesObject*)featuresObject
 {

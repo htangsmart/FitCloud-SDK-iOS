@@ -83,8 +83,8 @@ typedef NS_ENUM(NSInteger, HFRadioType)
 @property (nonatomic, strong) NSArray *listArray;
 
 
-//@property (nonatomic, strong) FCDisplayModel *displayModel;
-//@property (nonatomic, strong) FCHardwareNumModel *hwModel;
+@property (nonatomic, strong) FCPageDisplayFlagObject *pageDisplayFlag;
+@property (nonatomic, strong) FCScreenDisplayConfigObject *displayConfig;
 
 @end
 
@@ -111,10 +111,10 @@ typedef NS_ENUM(NSInteger, HFRadioType)
     view.isMultipleChoice = YES;
     view.title = @"选择以下信息在手环上显示";
     view.radioType = HFRadioTypeMultiple;
-//    view.displayModel = [FCDisplayModel modelWithData:data];
     view.heightConstraint.constant = 360;
     return view;
 }
+
 
 - (void)setTitle:(NSString *)title
 {
@@ -136,10 +136,9 @@ typedef NS_ENUM(NSInteger, HFRadioType)
     [self.okButton setTitle:@"确定" forState:UIControlStateNormal];
     [self.okButton setTitle:@"确定" forState:UIControlStateHighlighted];
     
-//    self.hwModel = [HFDBEngine getHardwareAndSoftwareVersionInfo];
-//    FCPageDisplayTagObject *object = [HFDBEngine pageDisplayObject];
-//    self.listArray = [object displayItems];
-//    [self.tableView reloadData];
+    self.listArray = [[FCConfigManager manager]getPageDisplayItems];
+    self.displayConfig = [[FCConfigManager manager]screenDisplayConfigObject];
+    [self.tableView reloadData];
 }
 
 - (void)show
@@ -163,11 +162,12 @@ typedef NS_ENUM(NSInteger, HFRadioType)
 
 - (IBAction)clickToDone:(id)sender
 {
-    if (self.radioType == HFRadioTypeMultiple) {
-//        self.displayModel.displayId = YES;
-//        NSData *displayData = [self.displayModel displayData];
+    if (self.radioType == HFRadioTypeMultiple)
+    {
+        self.displayConfig.displayId = YES;
+        NSData *displayData = [self.displayConfig writeData];
         if (_didUpdateDisplayBlock) {
-//            _didUpdateDisplayBlock(displayData);
+            _didUpdateDisplayBlock(displayData);
         }
     }
     else
@@ -221,46 +221,46 @@ typedef NS_ENUM(NSInteger, HFRadioType)
                 cell.checked = YES;
                 cell.userInteractionEnabled = NO;
             }
-//            else if ([displayString isEqualToString:@"步数"])
-//            {
-////                cell.checked = self.displayModel.stepCount;
-//            }
-//            else if ([displayString isEqualToString:@"距离"])
-//            {
-//                cell.checked = self.displayModel.distance;
-//            }
-//            else if ([displayString isEqualToString:@"卡路里"])
-//            {
-//                cell.checked = self.displayModel.calorie;
-//            }
-//            else if ([displayString isEqualToString:@"睡眠"])
-//            {
-//                cell.checked = self.displayModel.sleep;
-//            }
-//            else if ([displayString isEqualToString:@"心率"])
-//            {
-//                cell.checked = self.displayModel.heartRate;
-//            }
-//            else if ([displayString isEqualToString:@"血氧"])
-//            {
-//                cell.checked = self.displayModel.bloodOxygen;
-//            }
-//            else if ([displayString isEqualToString:@"血压"])
-//            {
-//                cell.checked = self.displayModel.bloodPressure;
-//            }
-//            else if ([displayString isEqualToString:@"天气预报"])
-//            {
-//                cell.checked = self.displayModel.weatherForecast;
-//            }
-//            else if ([displayString isEqualToString:@"查找手机"])
-//            {
-//                cell.checked = self.displayModel.findPhone;
-//            }
-//            else if ([displayString isEqualToString:@"ID"])
-//            {
-//                cell.checked = YES;//self.displayModel.displayId;
-//            }
+            else if ([displayString isEqualToString:@"步数"])
+            {
+                cell.checked = self.displayConfig.stepCount;
+            }
+            else if ([displayString isEqualToString:@"距离"])
+            {
+                cell.checked = self.displayConfig.distance;
+            }
+            else if ([displayString isEqualToString:@"卡路里"])
+            {
+                cell.checked = self.displayConfig.calorie;
+            }
+            else if ([displayString isEqualToString:@"睡眠"])
+            {
+                cell.checked = self.displayConfig.sleep;
+            }
+            else if ([displayString isEqualToString:@"心率"])
+            {
+                cell.checked = self.displayConfig.heartRate;
+            }
+            else if ([displayString isEqualToString:@"血氧"])
+            {
+                cell.checked = self.displayConfig.bloodOxygen;
+            }
+            else if ([displayString isEqualToString:@"血压"])
+            {
+                cell.checked = self.displayConfig.bloodPressure;
+            }
+            else if ([displayString isEqualToString:@"天气预报"])
+            {
+                cell.checked = self.displayConfig.weatherForecast;
+            }
+            else if ([displayString isEqualToString:@"查找手机"])
+            {
+                cell.checked = self.displayConfig.findPhone;
+            }
+            else if ([displayString isEqualToString:@"ID"])
+            {
+                cell.checked = YES;//self.displayModel.displayId;
+            }
         }
     }
     else
@@ -293,51 +293,46 @@ typedef NS_ENUM(NSInteger, HFRadioType)
     {
         if (indexPath.row < self.listArray.count)
         {
-//            NSString *displayString = self.listArray[indexPath.row];
-//            if ([displayString isEqualToString:@"时间和日期"]) {
-//                self.displayModel.dateTime = YES;
-//            }
-//            else if ([displayString isEqualToString:@"步数"])
-//            {
-//                self.displayModel.stepCount = !self.displayModel.stepCount;
-//            }
-//            else if ([displayString isEqualToString:@"距离"])
-//            {
-//                self.displayModel.distance = !self.displayModel.distance;
-//            }
-//            else if ([displayString isEqualToString:@"卡路里"])
-//            {
-//                self.displayModel.calorie = !self.displayModel.calorie;
-//            }
-//            else if ([displayString isEqualToString:@"睡眠"])
-//            {
-//                self.displayModel.sleep = !self.displayModel.sleep;
-//            }
-//            else if ([displayString isEqualToString:@"心率"])
-//            {
-//                self.displayModel.heartRate = !self.displayModel.heartRate;
-//            }
-//            else if ([displayString isEqualToString:@"血氧"])
-//            {
-//                self.displayModel.bloodOxygen = !self.displayModel.bloodOxygen;
-//            }
-//            else if ([displayString isEqualToString:@"血压"])
-//            {
-//                self.displayModel.bloodPressure = !self.displayModel.bloodPressure;
-//            }
-//            else if ([displayString isEqualToString:@"天气预报"])
-//            {
-//                self.displayModel.weatherForecast = !self.displayModel.weatherForecast;
-//            }
-//            else if ([displayString isEqualToString:@"查找手机"])
-//            {
-//                self.displayModel.findPhone = !self.displayModel.findPhone;
-//            }
-            
-            //else if ([displayString isEqualToString:@"ID"])
-            //{
-              //  self.displayModel.displayId = !self.displayModel.displayId;
-            //}
+            NSString *displayString = self.listArray[indexPath.row];
+            if ([displayString isEqualToString:@"时间和日期"]) {
+                self.displayConfig.dateTime = YES;
+            }
+            else if ([displayString isEqualToString:@"步数"])
+            {
+                self.displayConfig.stepCount = !self.displayConfig.stepCount;
+            }
+            else if ([displayString isEqualToString:@"距离"])
+            {
+                self.displayConfig.distance = !self.displayConfig.distance;
+            }
+            else if ([displayString isEqualToString:@"卡路里"])
+            {
+                self.displayConfig.calorie = !self.displayConfig.calorie;
+            }
+            else if ([displayString isEqualToString:@"睡眠"])
+            {
+                self.displayConfig.sleep = !self.displayConfig.sleep;
+            }
+            else if ([displayString isEqualToString:@"心率"])
+            {
+                self.displayConfig.heartRate = !self.displayConfig.heartRate;
+            }
+            else if ([displayString isEqualToString:@"血氧"])
+            {
+                self.displayConfig.bloodOxygen = !self.displayConfig.bloodOxygen;
+            }
+            else if ([displayString isEqualToString:@"血压"])
+            {
+                self.displayConfig.bloodPressure = !self.displayConfig.bloodPressure;
+            }
+            else if ([displayString isEqualToString:@"天气预报"])
+            {
+                self.displayConfig.weatherForecast = !self.displayConfig.weatherForecast;
+            }
+            else if ([displayString isEqualToString:@"查找手机"])
+            {
+                self.displayConfig.findPhone = !self.displayConfig.findPhone;
+            }
         }
         [self.tableView reloadData];
     }

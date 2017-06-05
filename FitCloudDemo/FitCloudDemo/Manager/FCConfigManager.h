@@ -19,6 +19,15 @@
 - (void)updateConfigWithWatchSettingData:(NSData*)data;
 - (void)updateConfigWithVersionData:(NSData*)data;
 
+
+
+/**
+ 获取手表页面显示参数
+
+ @return 页面显示设置参数数组
+ */
+- (NSArray*)getPageDisplayItems;
+
 /**
  默认血压
 
@@ -73,6 +82,14 @@
  */
 - (FCPageDisplayFlagObject*)pageDisplayFlagObject;
 
+
+
+/**
+ 手表屏幕显示设置配置对象
+
+ @return 屏幕显示设置配置对象
+ */
+- (FCScreenDisplayConfigObject*)screenDisplayConfigObject;
 
 /**
  手环Feature对象

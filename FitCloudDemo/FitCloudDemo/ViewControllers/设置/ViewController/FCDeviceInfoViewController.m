@@ -196,6 +196,7 @@
     else if (indexPath.row == 2)
     {
         // 手环显示设置
+        [self updateDisplaySetting];
     }
     else if (indexPath.row == 3)
     {
@@ -212,6 +213,8 @@
     }
 }
 
+#pragma mark - 查找手表
+
 - (void)findTheWatch
 {
     __weak __typeof(self)ws = self;
@@ -227,6 +230,7 @@
     }];
 }
 
+#pragma mark - 修改手表佩戴方式
 
 - (void)updateWearSttyle
 {
@@ -259,6 +263,41 @@
     }];
     [wearingStylesView show];
 }
+
+#pragma mark - 更新屏幕显示设置
+
+- (void)updateDisplaySetting
+{
+    __weak __typeof(self)ws = self;
+    HFRadioAlertView *displayView = [HFRadioAlertView wristbandDisplayWithData:nil];
+    [displayView setDidUpdateDisplayBlock:^(NSData *data) {
+        [ws showLoadingHUDWithMessage:@"正在同步"];
+        [[FitCloud shared]fcSetWatchScreenDisplayData:data result:^(FCSyncType syncType, FCSyncResponseState state) {
+            if (state == FCSyncResponseStateSuccess)
+            {
+                [ws hideLoadingHUDWithSuccess:@"同步完成"];
+                
+                FCWatchSettingsObject *watchSettingObj = [FCConfigManager manager].watchSetting;
+                watchSettingObj.wsdisplayData = data;
+                
+                NSString *uuidString = [[FitCloud shared]bondDeviceUUID];
+                BOOL ret = [FCWatchConfigDB storeWatchConfig:watchSettingObj forUUID:uuidString];
+                if (ret) {
+                    NSLog(@"--更新久坐提醒--");
+                }
+            }
+            else
+            {
+                [ws hideLoadingHUDWithFailure:@"同步失败"];
+            }
+        }];
+    }];
+    [displayView show];
+}
+
+ d4cefrv231	 `
+
+#pragma mark - 修改健康定时监测时间
 
 - (void)changeHealthMonitorSTMinute
 {
