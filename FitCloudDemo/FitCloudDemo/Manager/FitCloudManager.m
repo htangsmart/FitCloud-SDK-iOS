@@ -16,6 +16,10 @@
 #import "FCUserConfigDB.h"
 #import "FCUserConfig.h"
 #import "FCConfigManager.h"
+#import "FCDayDetailsObject.h"
+#import <DateTools.h>
+#import "FCDayDetailsDB.h"
+
 
 static inline void st_dispatch_async_main(dispatch_block_t block) {
     
@@ -343,6 +347,8 @@ void systemAudioCallback()
         NSLog(@"---同步步骤--%@",@(dataSyncType));
         
     } dataCallback:^(FCSyncType syncType, FCHistoryDataSyncType hdSyncType, NSData *data) {
+        
+        // 部分类型的数据是否同步跟随传感器标志变化，如传感器标志存在心率，则才会有心率数据返回
         dispatch_async(_asyncQueue, ^{
             if (hdSyncType == FCHistoryDataSyncTypeTotalData)
             {
@@ -386,6 +392,8 @@ void systemAudioCallback()
             else if (hdSyncType == FCHistoryDataSyncTypeSevenDaysSleepData)
             {
                 // 7日睡眠
+                NSArray *servenDaysArray = [FitCloudUtils getSleepTotalDataOfSevenDaysFromData:data];
+                NSLog(@"---servenDaysArray--%@",servenDaysArray);
             }
         });
     } result:^(FCSyncType syncType, FCHistoryDataSyncType hdSyncType, FCSyncResponseState state) {
@@ -422,12 +430,28 @@ void systemAudioCallback()
     NSDictionary *params = [FitCloudUtils getDetailsOfCurrentDayFromData:data];
     NSLog(@"--params--%@",params);
     
-    st_dispatch_async_main(^{
-        [[NSNotificationCenter defaultCenter]postNotificationName:@"EVENT_DAY_DETAILS_UPDATE_NOTIFY" object:params];
-    });
-    
+    // 如果需要对每日步数进行累加，请自行累加处理，每次手环重新绑定都会从0开始重新计算
     // 存储日总数据
+    FCDayDetailsObject *dayDetails = [[FCDayDetailsObject alloc]init];
+    dayDetails.stepCount = params[@"stepCount"];
+    dayDetails.distance = params[@"distance"];
+    dayDetails.calorie = params[@"calorie"];
+    dayDetails.deepSleep = params[@"deepSleep"];
+    dayDetails.lightSleep = params[@"lightSleep"];
+    dayDetails.avgHeartRate = params[@"avgHeartRate"];
     
+    NSDate *currentDate = [NSDate date];
+    dayDetails.timeStamp = @([[NSDate dateWithYear:currentDate.year month:currentDate.month day:currentDate.day]timeIntervalSince1970]);
+    
+    [FCDayDetailsDB storeDayDetails:dayDetails result:^(BOOL finished) {
+        if (finished) {
+            NSLog(@"---存储日总数据---");
+        }
+    }];
+    // 通知刷新UI
+    st_dispatch_async_main(^{
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"EVENT_DAY_DETAILS_UPDATE_NOTIFY" object:dayDetails];
+    });
 }
 
 

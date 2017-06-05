@@ -10,6 +10,10 @@
 		6B17EC381EE599E400874A01 /* FCSportsDisplayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B17EC371EE599E400874A01 /* FCSportsDisplayCell.m */; };
 		6B17EC3B1EE599F900874A01 /* FCSleepDisplayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B17EC3A1EE599F900874A01 /* FCSleepDisplayCell.m */; };
 		6B17EC3E1EE5A0EC00874A01 /* FCHealthDisplayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B17EC3D1EE5A0EC00874A01 /* FCHealthDisplayCell.m */; };
+		6B17EC411EE5B2D300874A01 /* FCDayDetailsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B17EC401EE5B2D300874A01 /* FCDayDetailsObject.m */; };
+		6B17EC441EE5B41800874A01 /* FCExerciseDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B17EC431EE5B41800874A01 /* FCExerciseDB.m */; };
+		6B17EC471EE5B42500874A01 /* FCSleepDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B17EC461EE5B42500874A01 /* FCSleepDB.m */; };
+		6B17EC4A1EE5B43100874A01 /* FCDayDetailsDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B17EC491EE5B43100874A01 /* FCDayDetailsDB.m */; };
 		6B403C151ED9790800246086 /* FCSyncDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B403C141ED9790800246086 /* FCSyncDataViewController.m */; };
 		6B5DD2521DC8A4E100788BDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DD2511DC8A4E100788BDA /* main.m */; };
 		6B5DD2551DC8A4E200788BDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DD2541DC8A4E200788BDA /* AppDelegate.m */; };
@@ -93,6 +97,14 @@
 		6B17EC3A1EE599F900874A01 /* FCSleepDisplayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCSleepDisplayCell.m; sourceTree = "<group>"; };
 		6B17EC3C1EE5A0EC00874A01 /* FCHealthDisplayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCHealthDisplayCell.h; sourceTree = "<group>"; };
 		6B17EC3D1EE5A0EC00874A01 /* FCHealthDisplayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCHealthDisplayCell.m; sourceTree = "<group>"; };
+		6B17EC3F1EE5B2D300874A01 /* FCDayDetailsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCDayDetailsObject.h; sourceTree = "<group>"; };
+		6B17EC401EE5B2D300874A01 /* FCDayDetailsObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCDayDetailsObject.m; sourceTree = "<group>"; };
+		6B17EC421EE5B41800874A01 /* FCExerciseDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCExerciseDB.h; sourceTree = "<group>"; };
+		6B17EC431EE5B41800874A01 /* FCExerciseDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCExerciseDB.m; sourceTree = "<group>"; };
+		6B17EC451EE5B42500874A01 /* FCSleepDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCSleepDB.h; sourceTree = "<group>"; };
+		6B17EC461EE5B42500874A01 /* FCSleepDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCSleepDB.m; sourceTree = "<group>"; };
+		6B17EC481EE5B43100874A01 /* FCDayDetailsDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCDayDetailsDB.h; sourceTree = "<group>"; };
+		6B17EC491EE5B43100874A01 /* FCDayDetailsDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCDayDetailsDB.m; sourceTree = "<group>"; };
 		6B403C131ED9790800246086 /* FCSyncDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCSyncDataViewController.h; sourceTree = "<group>"; };
 		6B403C141ED9790800246086 /* FCSyncDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCSyncDataViewController.m; sourceTree = "<group>"; };
 		6B5DD24D1DC8A4E100788BDA /* FitCloudDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitCloudDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -266,6 +278,8 @@
 		6B403C111ED978EE00246086 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6B17EC3F1EE5B2D300874A01 /* FCDayDetailsObject.h */,
+				6B17EC401EE5B2D300874A01 /* FCDayDetailsObject.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -420,6 +434,12 @@
 				6BE571641EDD4F6600CE46C7 /* FCWatchConfigDB.m */,
 				6BE571711EDDD0D100CE46C7 /* FCUserConfigDB.h */,
 				6BE571721EDDD0D100CE46C7 /* FCUserConfigDB.m */,
+				6B17EC421EE5B41800874A01 /* FCExerciseDB.h */,
+				6B17EC431EE5B41800874A01 /* FCExerciseDB.m */,
+				6B17EC451EE5B42500874A01 /* FCSleepDB.h */,
+				6B17EC461EE5B42500874A01 /* FCSleepDB.m */,
+				6B17EC481EE5B43100874A01 /* FCDayDetailsDB.h */,
+				6B17EC491EE5B43100874A01 /* FCDayDetailsDB.m */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -983,6 +1003,7 @@
 			files = (
 				6B5DD2551DC8A4E200788BDA /* AppDelegate.m in Sources */,
 				6BE5717D1EDDDD7400CE46C7 /* NSNumber+Category.m in Sources */,
+				6B17EC4A1EE5B43100874A01 /* FCDayDetailsDB.m in Sources */,
 				6BE747091ED965A80085E16E /* MBProgressHUD+Category.m in Sources */,
 				6BE5718A1EDDE4CA00CE46C7 /* FCCustomaryUnitsCell.m in Sources */,
 				6BE571AE1EDF1E8100CE46C7 /* FCSwitch.m in Sources */,
@@ -999,6 +1020,7 @@
 				6BE571B31EDF21E100CE46C7 /* HFDatePickerView.m in Sources */,
 				6B5DD2C61DC8A97A00788BDA /* NSObject+HUD.m in Sources */,
 				6BE746F01ED95DB20085E16E /* FCSportsViewController.m in Sources */,
+				6B17EC411EE5B2D300874A01 /* FCDayDetailsObject.m in Sources */,
 				6BE571871EDDE40D00CE46C7 /* FCCustomaryUnitsHeaderView.m in Sources */,
 				6BE5718D1EDDEACB00CE46C7 /* FCAlarmConfigManager.m in Sources */,
 				6BF31A761ED9A7C7000454EB /* FCOtherViewController.m in Sources */,
@@ -1008,10 +1030,12 @@
 				6BE5715F1EDD4B8C00CE46C7 /* FCUIConstants.m in Sources */,
 				6BF31A6A1ED9A76F000454EB /* FCUnitViewController.m in Sources */,
 				6BE571961EDDEE1B00CE46C7 /* FCNewAlarmViewController.m in Sources */,
+				6B17EC471EE5B42500874A01 /* FCSleepDB.m in Sources */,
 				6BF31A5E1ED98A60000454EB /* FCSettingViewController.m in Sources */,
 				6BF31A721ED9A7B1000454EB /* FCAlarmConfigViewController.m in Sources */,
 				6B17EC3B1EE599F900874A01 /* FCSleepDisplayCell.m in Sources */,
 				6BE571991EDDEE2900CE46C7 /* FCEditAlarmViewController.m in Sources */,
+				6B17EC441EE5B41800874A01 /* FCExerciseDB.m in Sources */,
 				6BE571901EDDEC5E00CE46C7 /* FCDailyAlarmCell.m in Sources */,
 				6B17EC381EE599E400874A01 /* FCSportsDisplayCell.m in Sources */,
 				6BE571681EDD5A9200CE46C7 /* FCUserConfig.m in Sources */,
