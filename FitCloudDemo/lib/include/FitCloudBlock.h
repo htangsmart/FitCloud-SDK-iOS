@@ -21,7 +21,7 @@
 
  @param syncType 同步类型，查看<i>FCDefine</i>类型定义
  */
-typedef void (^FCStepCallbackHandler)(FCSyncType syncType);
+typedef void (^FCStepCallbackHandler)(NSInteger syncType);
 
 
 /**

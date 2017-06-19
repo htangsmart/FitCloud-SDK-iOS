@@ -217,8 +217,8 @@
     else if (indexPath.row == 16)
     {
         // 这个选项可以不用
-        cell.textLabel.text = @"心率实时监测";
-        cell.mySwitch.on = self.noteObj.heartRateMonitoringEnabled;
+        cell.textLabel.text = @"kakao消息";
+        cell.mySwitch.on = self.noteObj.kakaoMessage;
     }
     return cell;
 }
@@ -377,10 +377,10 @@
     }
     else if ([functionName isEqualToString:@"心率实时监测"])
     {
-        self.noteObj.heartRateMonitoringEnabled = aSwitch.isOn;
+        self.noteObj.kakaoMessage = aSwitch.isOn;
         __weak __typeof(self) ws = self;
         [self syncNotificationData:^{
-            ws.noteObj.heartRateMonitoringEnabled = !aSwitch.isOn;
+            ws.noteObj.kakaoMessage = !aSwitch.isOn;
             [aSwitch setOn:!aSwitch.isOn animated:YES];
         }];
     }

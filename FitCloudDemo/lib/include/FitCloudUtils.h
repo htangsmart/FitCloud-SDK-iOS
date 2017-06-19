@@ -137,8 +137,13 @@
  */
 + (NSDictionary*)getVersionDetailsStringFromData:(NSData *)data;
 
+/**
+ 获取固件版本信息字符串，用于版本升级检查
 
-
+ @param data 固件版本信息数据
+ @return 固件版本字符串
+ */
++ (NSString*)getVersionInfoStringFromData:(NSData*)data;
 
 #pragma mark - 默认血压
 
@@ -294,5 +299,9 @@
  */
 + (NSNumber*)getOsVersion;
 
+
+#pragma mark - 固件升级检测与下载
+
++ (NSURLSessionDataTask*)getNewFirmwareFromServer:(NSString *)versionInfoString result:(void(^)(id responseObject, NSError *error))retHandler;
 @end
 

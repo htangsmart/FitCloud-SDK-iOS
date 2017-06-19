@@ -45,6 +45,10 @@
     NSString *uuidString = [[FitCloud shared]bondDeviceUUID];
     _watchSetting = [FCWatchConfigDB getWatchConfigFromDBWithUUID:uuidString];
     NSLog(@"---_watchSetting--%@",_watchSetting.yy_modelDescription);
+    
+    [FitCloudUtils getNewFirmwareFromServer:@"0000000000200000004D00220033000011013117000000000000010012345678" result:^(id responseObject, NSError *error) {
+        NSLog(@"---responseObject---%@",responseObject);
+    }];
 }
 
 

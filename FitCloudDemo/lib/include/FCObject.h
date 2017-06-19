@@ -124,6 +124,7 @@
  */
 @property (nonatomic, assign) NSInteger maxTemperature;
 
+
 /**
  最低温度
  */
@@ -249,9 +250,9 @@
 @property (nonatomic, assign) BOOL watchDisconnectAlerts;
 
 /**
- 心率实时监测，打开此开关，手表会持续采集用户心率数据
+ kakao消息通知
  */
-@property (nonatomic, assign) BOOL heartRateMonitoringEnabled;
+@property (nonatomic, assign) BOOL kakaoMessage;
 @end
 
 
@@ -316,6 +317,16 @@
  心电功能标志
  */
 @property (nonatomic, assign) BOOL ECG;
+
+/**
+ 判断手表是否支持flashOTA升级
+ */
+@property (nonatomic, assign) BOOL flashOTA;
+
+/**
+ ANCS语言支持标识，此标志的固件可以把app系统语言发送到手表，手表ancs消息通知会显示对应的语言
+ */
+@property (nonatomic, assign) BOOL ancsLanguage;
 @end
 
 
