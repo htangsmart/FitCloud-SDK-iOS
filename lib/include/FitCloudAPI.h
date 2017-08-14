@@ -8,7 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+
+/**
+ 网络API接口类
+ */
 @interface FitCloudAPI : NSObject
+
 #pragma mark - 固件升级检测与下载
 
 /**
