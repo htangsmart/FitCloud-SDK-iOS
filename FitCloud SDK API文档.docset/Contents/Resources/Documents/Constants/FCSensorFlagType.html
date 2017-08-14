@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>FCHistoryDataSyncType Constants Reference</title>
+	<title>FCSensorFlagType Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -59,7 +59,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">FCHistoryDataSyncType Constants Reference</h1>
+					<h1 class="title">FCSensorFlagType Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -75,11 +75,11 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">FCHistoryDataSyncType</h3>
+                    <h3 class="subsubtitle method-title">FCSensorFlagType</h3>
                     
 					
 					<div class="section section-overview">
-                        <p>历史数据同步流程（部分同步功能是否执行由传感器标志决定</p>
+                        <p>传感器标志，如果存在某个标志可以进行某项数据同步</p>
 					</div>
 					
 					
@@ -87,33 +87,29 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSInteger, FCHistoryDataSyncType ) {<br>
+                        <code>typedef NS_OPTIONS(UInt32, FCSensorFlagType ) {<br>
                             
-                            &nbsp;&nbsp; <a href="">FCHistoryDataSyncTypeUnknown</a> = 0,<br>
+                            &nbsp;&nbsp; <a href="">FCSensorFlagTypeHeartRate</a> = 1,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCHistoryDataSyncTypeFeatures</a> = 1,<br>
+                            &nbsp;&nbsp; <a href="">FCSensorFlagTypeUV</a> = 1 &lt; &lt; 1,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCHistoryDataSyncTypeTime</a> = 2,<br>
+                            &nbsp;&nbsp; <a href="">FCSensorFlagTypeWeather</a> = 1 &lt; &lt; 2,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCHistoryDataSyncTypeTotalData</a> = 3,<br>
+                            &nbsp;&nbsp; <a href="">FCSensorFlagTypeBloodOxygen</a> = 1 &lt; &lt; 3,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCHistoryDataSyncTypeExercise</a> = 4,<br>
+                            &nbsp;&nbsp; <a href="">FCSensorFlagTypeBloodPressure</a> = 1 &lt; &lt; 4,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCHistoryDataSyncTypeSleep</a> = 5,<br>
+                            &nbsp;&nbsp; <a href="">FCSensorFlagTypeBreathingRate</a> = 1 &lt; &lt; 5,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCHistoryDataSyncTypeBloodOxygen</a> = 6,<br>
+                            &nbsp;&nbsp; <a href="">FCSensorFlagTypeWearStyle</a> = 1 &lt; &lt; 6,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCHistoryDataSyncTypeBloodPressure</a> = 7,<br>
+                            &nbsp;&nbsp; <a href="">FCSensorFlagTypeSevenDaysSleep</a> = 1 &lt; &lt; 7,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCHistoryDataSyncTypeBreathingRate</a> = 8,<br>
+                            &nbsp;&nbsp; <a href="">FCSensorFlagTypeECG</a> = 1 &lt; &lt; 8,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCHistoryDataSyncTypeHeartRate</a> = 9,<br>
+                            &nbsp;&nbsp; <a href="">FCSensorFlagTypeFlashOTA</a> = 1 &lt; &lt; 9,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCHistoryDataSyncTypeUltraviolet</a> = 10,<br>
-                            
-                            &nbsp;&nbsp; <a href="">FCHistoryDataSyncTypeSevenDaysSleepData</a> = 11,<br>
-                            
-                            &nbsp;&nbsp; <a href="">FCHistoryDataSyncTypeEnd</a> = 12,<br>
+                            &nbsp;&nbsp; <a href="">FCSensorFlagTypeANCS</a> = 1 &lt; &lt; 10,<br>
                             
                             };</code>
                     
@@ -123,11 +119,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="FCHistoryDataSyncTypeUnknown"></a><code>FCHistoryDataSyncTypeUnknown</code></dt>
+                            <dt><a name="" title="FCSensorFlagTypeHeartRate"></a><code>FCSensorFlagTypeHeartRate</code></dt>
 <dd>
 
 
-<p>默认类型</p>
+<p>心率</p>
 
 
 
@@ -140,11 +136,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCHistoryDataSyncTypeFeatures"></a><code>FCHistoryDataSyncTypeFeatures</code></dt>
+                            <dt><a name="" title="FCSensorFlagTypeUV"></a><code>FCSensorFlagTypeUV</code></dt>
 <dd>
 
 
-<p>同步时间制式</p>
+<p>紫外线</p>
 
 
 
@@ -157,11 +153,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCHistoryDataSyncTypeTime"></a><code>FCHistoryDataSyncTypeTime</code></dt>
+                            <dt><a name="" title="FCSensorFlagTypeWeather"></a><code>FCSensorFlagTypeWeather</code></dt>
 <dd>
 
 
-<p>同步系统时间</p>
+<p>天气预报</p>
 
 
 
@@ -174,11 +170,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCHistoryDataSyncTypeTotalData"></a><code>FCHistoryDataSyncTypeTotalData</code></dt>
+                            <dt><a name="" title="FCSensorFlagTypeBloodOxygen"></a><code>FCSensorFlagTypeBloodOxygen</code></dt>
 <dd>
 
 
-<p>同步各类型的日志数据（包括运动总步数、总距离、总卡路里等）</p>
+<p>血氧</p>
 
 
 
@@ -191,11 +187,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCHistoryDataSyncTypeExercise"></a><code>FCHistoryDataSyncTypeExercise</code></dt>
+                            <dt><a name="" title="FCSensorFlagTypeBloodPressure"></a><code>FCSensorFlagTypeBloodPressure</code></dt>
 <dd>
 
 
-<p>同步运动量详细记录</p>
+<p>血压</p>
 
 
 
@@ -208,11 +204,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCHistoryDataSyncTypeSleep"></a><code>FCHistoryDataSyncTypeSleep</code></dt>
+                            <dt><a name="" title="FCSensorFlagTypeBreathingRate"></a><code>FCSensorFlagTypeBreathingRate</code></dt>
 <dd>
 
 
-<p>同步睡眠详细记录</p>
+<p>呼吸频率</p>
 
 
 
@@ -225,11 +221,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCHistoryDataSyncTypeBloodOxygen"></a><code>FCHistoryDataSyncTypeBloodOxygen</code></dt>
+                            <dt><a name="" title="FCSensorFlagTypeWearStyle"></a><code>FCSensorFlagTypeWearStyle</code></dt>
 <dd>
 
 
-<p>同步血氧详细记录</p>
+<p>佩戴检测</p>
 
 
 
@@ -242,11 +238,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCHistoryDataSyncTypeBloodPressure"></a><code>FCHistoryDataSyncTypeBloodPressure</code></dt>
+                            <dt><a name="" title="FCSensorFlagTypeSevenDaysSleep"></a><code>FCSensorFlagTypeSevenDaysSleep</code></dt>
 <dd>
 
 
-<p>同步血压详细记录</p>
+<p>睡眠七天历史数据</p>
 
 
 
@@ -259,11 +255,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCHistoryDataSyncTypeBreathingRate"></a><code>FCHistoryDataSyncTypeBreathingRate</code></dt>
+                            <dt><a name="" title="FCSensorFlagTypeECG"></a><code>FCSensorFlagTypeECG</code></dt>
 <dd>
 
 
-<p>同步呼吸频率详细记录</p>
+<p>心电</p>
 
 
 
@@ -276,11 +272,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCHistoryDataSyncTypeHeartRate"></a><code>FCHistoryDataSyncTypeHeartRate</code></dt>
+                            <dt><a name="" title="FCSensorFlagTypeFlashOTA"></a><code>FCSensorFlagTypeFlashOTA</code></dt>
 <dd>
 
 
-<p>同步心率详细记录</p>
+<p>外部Flash OTA</p>
 
 
 
@@ -293,45 +289,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCHistoryDataSyncTypeUltraviolet"></a><code>FCHistoryDataSyncTypeUltraviolet</code></dt>
+                            <dt><a name="" title="FCSensorFlagTypeANCS"></a><code>FCSensorFlagTypeANCS</code></dt>
 <dd>
 
 
-<p>同步紫外线详细记录</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">FCDefine.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="FCHistoryDataSyncTypeSevenDaysSleepData"></a><code>FCHistoryDataSyncTypeSevenDaysSleepData</code></dt>
-<dd>
-
-
-<p>同步睡眠总数据（包含七天以内的深睡眠和浅睡眠时长）</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">FCDefine.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="FCHistoryDataSyncTypeEnd"></a><code>FCHistoryDataSyncTypeEnd</code></dt>
-<dd>
-
-
-<p>结束</p>
+<p>手机系统语言设置</p>
 
 
 
@@ -368,7 +330,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 H.Tang. All rights reserved. Updated: 2017-05-28</p>
+						<p class="copyright">Copyright &copy; 2017 H.Tang. All rights reserved. Updated: 2017-08-14</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

@@ -77,19 +77,22 @@
 - (void)getBatteryLevelAndChargingState
 {
     __weak __typeof(self) ws = self;
-    [[FitCloud shared]fcGetBatteryLevelAndState:^(UInt8 powerValue, UInt8 chargingState) {
-        
-        ws.batteryLevel.text = @(powerValue).stringValue;
-        if (chargingState == 0x00) {
-            ws.statusLabel.text = @"剩余电量";
-        }
-        else
-        {
-            ws.statusLabel.text = @"正在充电";
-        }
-    } result:^(FCSyncType syncType, FCSyncResponseState state) {
+    [[FitCloud shared]fcGetBatteryLevelAndState:^(NSData *data, FCSyncType syncType, FCSyncResponseState state) {
         if (state == FCSyncResponseStateSuccess) {
-            
+            NSDictionary *params = [FitCloudUtils getBatteryLevelAndChargingState:data];
+            if (params) {
+                int chargingState = [params[@"state"]intValue];
+                int batteryLevel = [params[@"batteryLevel"]intValue];
+                ws.batteryLevel.text = @(batteryLevel).stringValue;
+                if (chargingState == 0x00)
+                {
+                    ws.statusLabel.text = @"剩余电量";
+                }
+                else
+                {
+                    ws.statusLabel.text = @"正在充电";
+                }
+            }
         }
         else
         {

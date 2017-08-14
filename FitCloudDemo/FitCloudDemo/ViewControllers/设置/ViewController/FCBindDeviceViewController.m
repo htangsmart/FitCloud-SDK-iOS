@@ -134,48 +134,29 @@
     
     [self showLoadingHUDWithMessage:@"正在绑定设备"];
     [[FitCloud shared]bindWithUser:user stepCallback:^(NSInteger syncType) {
-        
         NSLog(@"--绑定流程更新--%@",@(syncType));
-        
-    } dataCallback:^(FCSyncType syncType, NSData *data) {
-        NSLog(@"--绑定成功返回手表配置--");
-        
-        // 存储被绑定设备的uuid,下次自动扫描登录
-        BOOL ret = [[FitCloud shared]storeBondDevice];
-        if (ret)
-        {
-            [ws hideLoadingHUDWithSuccess:@"绑定成功"];
-            // 发送通知更新UI
-            [[NSNotificationCenter defaultCenter]postNotificationName:EVENT_DEVICE_BOUND_RESULT_NOTIFY object:nil];
-            
-            // 手表配置数据解析和存储
-            [[FCConfigManager manager]updateConfigWithWatchSettingData:data];
-            
-            [ws.navigationController popViewControllerAnimated:YES];
-        }
-        else
-        {
-            // 如果uuid存储失败，最好做绑定失败处理
-            [ws hideLoadingHUDWithSuccess:@"uuid存储失败"];
-        }
-
-    } result:^(FCSyncType syncType, FCBindSyncType bindSyncType, FCSyncResponseState state) {
+    } result:^(NSData *data, FCSyncType syncType, FCSyncResponseState state) {
         if (state == FCSyncResponseStateSuccess) {
-            NSLog(@"--绑定成功--");
-//            [ws hideLoadingHUDWithSuccess:@"绑定成功"];
+            NSLog(@"--绑定成功返回手表配置--");
             
-//            // 存储被绑定设备的uuid,下次自动扫描登录
-//            BOOL ret = [[FitCloud shared]storeBondDevice];
-//            if (ret)
-//            {
-//                // 发送通知
-//                [[NSNotificationCenter defaultCenter]postNotificationName:EVENT_DEVICE_BOUND_RESULT_NOTIFY object:nil];
-//                [ws.navigationController popViewControllerAnimated:YES];
-//            }
-//            else
-//            {
-//                // 存储失败处理
-//            }
+            // 存储被绑定设备的uuid,下次自动扫描登录
+            BOOL ret = [[FitCloud shared]storeBondDevice];
+            if (ret)
+            {
+                [ws hideLoadingHUDWithSuccess:@"绑定成功"];
+                // 发送通知更新UI
+                [[NSNotificationCenter defaultCenter]postNotificationName:EVENT_DEVICE_BOUND_RESULT_NOTIFY object:nil];
+                
+                // 手表配置数据解析和存储
+                [[FCConfigManager manager]updateConfigWithWatchSettingData:data];
+                
+                [ws.navigationController popViewControllerAnimated:YES];
+            }
+            else
+            {
+                // 如果uuid存储失败，最好做绑定失败处理
+                [ws hideLoadingHUDWithSuccess:@"uuid存储失败"];
+            }
         }
         else
         {

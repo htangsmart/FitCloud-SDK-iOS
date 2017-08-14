@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/FCManagerState.html">
+	<File path="Constants/FCDataType.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/FCManagerState</TokenIdentifier>
-			<Abstract type="html">蓝牙状态定义</Abstract>
+			<TokenIdentifier>//apple_ref/c/tdef/FCDataType</TokenIdentifier>
+			<Abstract type="html">同步数据的类型，用于区分FCDataObject数据类型</Abstract>
 			<DeclaredIn>FCDefine.h</DeclaredIn>
             
 			
@@ -14,9 +14,9 @@
 		
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCManagerStateUnknown</TokenIdentifier>
-            <Abstract type="html">未知错误</Abstract>
-            <Declaration>FCManagerStateUnknown</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCDataTypeUnknown</TokenIdentifier>
+            <Abstract type="html">  默认未知类型</Abstract>
+            <Declaration>FCDataTypeUnknown</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -24,9 +24,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCManagerStateResetting</TokenIdentifier>
-            <Abstract type="html">蓝牙重置状态</Abstract>
-            <Declaration>FCManagerStateResetting</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCDataTypeExercise</TokenIdentifier>
+            <Abstract type="html">  运动量</Abstract>
+            <Declaration>FCDataTypeExercise</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -34,9 +34,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCManagerStateUnsupported</TokenIdentifier>
-            <Abstract type="html">设备不支持状态</Abstract>
-            <Declaration>FCManagerStateUnsupported</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCDataTypeSleep</TokenIdentifier>
+            <Abstract type="html">  睡眠</Abstract>
+            <Declaration>FCDataTypeSleep</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -44,9 +44,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCManagerStateUnauthorized</TokenIdentifier>
-            <Abstract type="html">设备未授权状态</Abstract>
-            <Declaration>FCManagerStateUnauthorized</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCDataTypeHeartRate</TokenIdentifier>
+            <Abstract type="html">  心率</Abstract>
+            <Declaration>FCDataTypeHeartRate</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -54,9 +54,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCManagerStatePoweredOff</TokenIdentifier>
-            <Abstract type="html">蓝牙关闭</Abstract>
-            <Declaration>FCManagerStatePoweredOff</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCDataTypeBloodOxygen</TokenIdentifier>
+            <Abstract type="html">  血氧</Abstract>
+            <Declaration>FCDataTypeBloodOxygen</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -64,9 +64,29 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCManagerStatePoweredOn</TokenIdentifier>
-            <Abstract type="html">蓝牙打开</Abstract>
-            <Declaration>FCManagerStatePoweredOn</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCDataTypeBloodPressure</TokenIdentifier>
+            <Abstract type="html">  血压</Abstract>
+            <Declaration>FCDataTypeBloodPressure</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCDataTypeBreathingRate</TokenIdentifier>
+            <Abstract type="html">  呼吸频率</Abstract>
+            <Declaration>FCDataTypeBreathingRate</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCDataTypeSevenDaysSleepData</TokenIdentifier>
+            <Abstract type="html">  七天日总睡眠数据</Abstract>
+            <Declaration>FCDataTypeSevenDaysSleepData</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             

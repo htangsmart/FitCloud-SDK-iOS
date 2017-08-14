@@ -1,8 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="">
+	<File path="Constants/FCWeatherState.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/FCWeatherState</TokenIdentifier>
+			<Abstract type="html">天气状态，你需要把自己获取的天气转换成以下状态同步到手表，手表才能显示正确的天气状态</Abstract>
+			<DeclaredIn>FCDefine.h</DeclaredIn>
+            
+			
+			<NodeRef refid="30"/>
+		</Token>
 		
 		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateUnknown</TokenIdentifier>
+            <Abstract type="html">未知天气</Abstract>
+            <Declaration>FCWeatherStateUnknown</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="30"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateSunnyDay</TokenIdentifier>
+            <Abstract type="html">晴天</Abstract>
+            <Declaration>FCWeatherStateSunnyDay</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="30"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateCloudy</TokenIdentifier>
+            <Abstract type="html">多云</Abstract>
+            <Declaration>FCWeatherStateCloudy</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="30"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateOvercast</TokenIdentifier>
+            <Abstract type="html">阴天</Abstract>
+            <Declaration>FCWeatherStateOvercast</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="30"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateShower</TokenIdentifier>
+            <Abstract type="html">阵雨</Abstract>
+            <Declaration>FCWeatherStateShower</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="30"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateThunderyShower</TokenIdentifier>
+            <Abstract type="html">雷阵雨、雷阵雨伴有冰雹</Abstract>
+            <Declaration>FCWeatherStateThunderyShower</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="30"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateDrizzle</TokenIdentifier>
+            <Abstract type="html">小雨</Abstract>
+            <Declaration>FCWeatherStateDrizzle</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="30"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateHeavyRain</TokenIdentifier>
+            <Abstract type="html">中雨、大雨、暴雨</Abstract>
+            <Declaration>FCWeatherStateHeavyRain</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="30"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateSleet</TokenIdentifier>
+            <Abstract type="html">雨夹雪、冻雨</Abstract>
+            <Declaration>FCWeatherStateSleet</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="30"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateLightSnow</TokenIdentifier>
+            <Abstract type="html">小雪</Abstract>
+            <Declaration>FCWeatherStateLightSnow</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="30"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateHeavySnow</TokenIdentifier>
+            <Abstract type="html">大雪、暴雪</Abstract>
+            <Declaration>FCWeatherStateHeavySnow</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="30"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateSandstorm</TokenIdentifier>
+            <Abstract type="html">沙尘暴、浮尘</Abstract>
+            <Declaration>FCWeatherStateSandstorm</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="30"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateFogOrHaze</TokenIdentifier>
+            <Abstract type="html">雾、雾霾</Abstract>
+            <Declaration>FCWeatherStateFogOrHaze</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="30"/>
+        </Token>
         
         
 	</File>

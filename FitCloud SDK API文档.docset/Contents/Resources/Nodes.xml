@@ -27,6 +27,11 @@
 						<NodeRef refid="14"/>
 						<NodeRef refid="15"/>
 						<NodeRef refid="16"/>
+						<NodeRef refid="17"/>
+						<NodeRef refid="18"/>
+						<NodeRef refid="19"/>
+						<NodeRef refid="20"/>
+						<NodeRef refid="21"/>
 						
 					</Subnodes>
 				</Node>
@@ -37,7 +42,7 @@
 					<Name>Protocols</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="17"/>
+						<NodeRef refid="22"/>
 						
 					</Subnodes>
 				</Node>
@@ -47,16 +52,14 @@
 					<Name>Constants</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="18"/>
-						<NodeRef refid="19"/>
-						<NodeRef refid="20"/>
-						<NodeRef refid="21"/>
-						<NodeRef refid="22"/>
 						<NodeRef refid="23"/>
 						<NodeRef refid="24"/>
 						<NodeRef refid="25"/>
 						<NodeRef refid="26"/>
 						<NodeRef refid="27"/>
+						<NodeRef refid="28"/>
+						<NodeRef refid="29"/>
+						<NodeRef refid="30"/>
 						
 					</Subnodes>
 				</Node>
@@ -66,9 +69,6 @@
                     <Name>Blocks</Name>
                     <Path>index.html</Path>
                     <Subnodes>
-                        <NodeRef refid="28"/>
-                        <NodeRef refid="29"/>
-                        <NodeRef refid="30"/>
                         <NodeRef refid="31"/>
                         <NodeRef refid="32"/>
                         <NodeRef refid="33"/>
@@ -77,7 +77,6 @@
                         <NodeRef refid="36"/>
                         <NodeRef refid="37"/>
                         <NodeRef refid="38"/>
-                        <NodeRef refid="39"/>
                         
                     </Subnodes>
                 </Node>
@@ -261,11 +260,38 @@
             
         </Node>
 		<Node id="8" type="file" documentType="reference">
+            <Name>FCRTSyncUtils</Name>
+            <Path>Classes/FCRTSyncUtils.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/FCRTSyncUtils.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/FCRTSyncUtils.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/FCRTSyncUtils.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="9" type="file" documentType="reference">
             <Name>FCScreenDisplayConfigObject</Name>
             <Path>Classes/FCScreenDisplayConfigObject.html</Path>
             
         </Node>
-		<Node id="9" type="file" documentType="reference">
+		<Node id="10" type="file" documentType="reference">
             <Name>FCSedentaryReminderObject</Name>
             <Path>Classes/FCSedentaryReminderObject.html</Path>
             
@@ -298,7 +324,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="10" type="file" documentType="reference">
+		<Node id="11" type="file" documentType="reference">
             <Name>FCSensorFlagObject</Name>
             <Path>Classes/FCSensorFlagObject.html</Path>
             
@@ -325,7 +351,61 @@
             </Subnodes>
             
         </Node>
-		<Node id="11" type="file" documentType="reference">
+		<Node id="12" type="file" documentType="reference">
+            <Name>FCSyncUtils</Name>
+            <Path>Classes/FCSyncUtils.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/FCSyncUtils.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/FCSyncUtils.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/FCSyncUtils.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="13" type="file" documentType="reference">
+            <Name>FCSysConfigUtils</Name>
+            <Path>Classes/FCSysConfigUtils.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/FCSysConfigUtils.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/FCSysConfigUtils.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/FCSysConfigUtils.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="14" type="file" documentType="reference">
             <Name>FCUserObject</Name>
             <Path>Classes/FCUserObject.html</Path>
             
@@ -358,7 +438,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="12" type="file" documentType="reference">
+		<Node id="15" type="file" documentType="reference">
             <Name>FCVersionDataObject</Name>
             <Path>Classes/FCVersionDataObject.html</Path>
             
@@ -391,7 +471,12 @@
             </Subnodes>
             
         </Node>
-		<Node id="13" type="file" documentType="reference">
+		<Node id="16" type="file" documentType="reference">
+            <Name>FCWatchConfig</Name>
+            <Path>Classes/FCWatchConfig.html</Path>
+            
+        </Node>
+		<Node id="17" type="file" documentType="reference">
             <Name>FCWatchSettingsObject</Name>
             <Path>Classes/FCWatchSettingsObject.html</Path>
             
@@ -424,7 +509,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="14" type="file" documentType="reference">
+		<Node id="18" type="file" documentType="reference">
             <Name>FCWeather</Name>
             <Path>Classes/FCWeather.html</Path>
             
@@ -451,7 +536,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="15" type="file" documentType="reference">
+		<Node id="19" type="file" documentType="reference">
             <Name>FitCloud</Name>
             <Path>Classes/FitCloud.html</Path>
             
@@ -484,7 +569,34 @@
             </Subnodes>
             
         </Node>
-		<Node id="16" type="file" documentType="reference">
+		<Node id="20" type="file" documentType="reference">
+            <Name>FitCloudAPI</Name>
+            <Path>Classes/FitCloudAPI.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/FitCloudAPI.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/FitCloudAPI.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/FitCloudAPI.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="21" type="file" documentType="reference">
             <Name>FitCloudUtils</Name>
             <Path>Classes/FitCloudUtils.html</Path>
             
@@ -508,18 +620,12 @@
                 </Node>
                 
                 
-                <Node type="section">
-                    <Path>Classes/FitCloudUtils.html</Path>
-                    <Name>Instance Methods</Name>
-                    <Anchor>instance_methods</Anchor>
-                </Node>
-                
             </Subnodes>
             
         </Node>
 		
 		
-        <Node id="17" type="file" documentType="reference">
+        <Node id="22" type="file" documentType="reference">
             <Name>FCObjectProtocal</Name>
             <Path>Protocols/FCObjectProtocal.html</Path>
             
@@ -547,113 +653,83 @@
             
         </Node>
 		
-        <Node id="18" type="file" documentType="reference">
-            <Name>FCBindSyncType</Name>
-            <Path>Constants/FCBindSyncType.html</Path>
-            
-        </Node>
-		<Node id="19" type="file" documentType="reference">
+        <Node id="23" type="file" documentType="reference">
             <Name>FCDataType</Name>
             <Path>Constants/FCDataType.html</Path>
             
         </Node>
-		<Node id="20" type="file" documentType="reference">
+		<Node id="24" type="file" documentType="reference">
             <Name>FCHealthRTSyncType</Name>
             <Path>Constants/FCHealthRTSyncType.html</Path>
             
         </Node>
-		<Node id="21" type="file" documentType="reference">
-            <Name>FCHistoryDataSyncType</Name>
-            <Path>Constants/FCHistoryDataSyncType.html</Path>
-            
-        </Node>
-		<Node id="22" type="file" documentType="reference">
-            <Name>FCLoginSyncType</Name>
-            <Path>Constants/FCLoginSyncType.html</Path>
-            
-        </Node>
-		<Node id="23" type="file" documentType="reference">
+		<Node id="25" type="file" documentType="reference">
             <Name>FCManagerState</Name>
             <Path>Constants/FCManagerState.html</Path>
             
         </Node>
-		<Node id="24" type="file" documentType="reference">
+		<Node id="26" type="file" documentType="reference">
             <Name>FCRTSyncType</Name>
             <Path>Constants/FCRTSyncType.html</Path>
             
         </Node>
-		<Node id="25" type="file" documentType="reference">
+		<Node id="27" type="file" documentType="reference">
+            <Name>FCSensorFlagType</Name>
+            <Path>Constants/FCSensorFlagType.html</Path>
+            
+        </Node>
+		<Node id="28" type="file" documentType="reference">
             <Name>FCSyncResponseState</Name>
             <Path>Constants/FCSyncResponseState.html</Path>
             
         </Node>
-		<Node id="26" type="file" documentType="reference">
+		<Node id="29" type="file" documentType="reference">
             <Name>FCSyncType</Name>
             <Path>Constants/FCSyncType.html</Path>
             
         </Node>
-		<Node id="27" type="file" documentType="reference">
+		<Node id="30" type="file" documentType="reference">
             <Name>FCWeatherState</Name>
             <Path>Constants/FCWeatherState.html</Path>
             
         </Node>
 		
-        <Node id="28" type="file" documentType="reference">
-            <Name>FCBindResultHandler</Name>
-            <Path>Blocks/FCBindResultHandler.html</Path>
-            
-        </Node>
-        <Node id="29" type="file" documentType="reference">
-            <Name>FCHistoryDataHandler</Name>
-            <Path>Blocks/FCHistoryDataHandler.html</Path>
-            
-        </Node>
-        <Node id="30" type="file" documentType="reference">
-            <Name>FCHistoryDataResultHandler</Name>
-            <Path>Blocks/FCHistoryDataResultHandler.html</Path>
-            
-        </Node>
         <Node id="31" type="file" documentType="reference">
-            <Name>FCLoginResultHandler</Name>
-            <Path>Blocks/FCLoginResultHandler.html</Path>
-            
-        </Node>
-        <Node id="32" type="file" documentType="reference">
             <Name>FCPeripheralsHandler</Name>
             <Path>Blocks/FCPeripheralsHandler.html</Path>
             
         </Node>
-        <Node id="33" type="file" documentType="reference">
+        <Node id="32" type="file" documentType="reference">
             <Name>FCProgressHandler</Name>
             <Path>Blocks/FCProgressHandler.html</Path>
             
         </Node>
-        <Node id="34" type="file" documentType="reference">
+        <Node id="33" type="file" documentType="reference">
             <Name>FCRTSyncDataHandler</Name>
             <Path>Blocks/FCRTSyncDataHandler.html</Path>
             
         </Node>
-        <Node id="35" type="file" documentType="reference">
+        <Node id="34" type="file" documentType="reference">
             <Name>FCStepCallbackHandler</Name>
             <Path>Blocks/FCStepCallbackHandler.html</Path>
             
         </Node>
-        <Node id="36" type="file" documentType="reference">
-            <Name>FCSyncBatteryLevelAndStateHandler</Name>
-            <Path>Blocks/FCSyncBatteryLevelAndStateHandler.html</Path>
-            
-        </Node>
-        <Node id="37" type="file" documentType="reference">
+        <Node id="35" type="file" documentType="reference">
             <Name>FCSyncCountHandler</Name>
             <Path>Blocks/FCSyncCountHandler.html</Path>
             
         </Node>
-        <Node id="38" type="file" documentType="reference">
+        <Node id="36" type="file" documentType="reference">
             <Name>FCSyncDataHandler</Name>
             <Path>Blocks/FCSyncDataHandler.html</Path>
             
         </Node>
-        <Node id="39" type="file" documentType="reference">
+        <Node id="37" type="file" documentType="reference">
+            <Name>FCSyncDataResultHandler</Name>
+            <Path>Blocks/FCSyncDataResultHandler.html</Path>
+            
+        </Node>
+        <Node id="38" type="file" documentType="reference">
             <Name>FCSyncResultHandler</Name>
             <Path>Blocks/FCSyncResultHandler.html</Path>
             

@@ -876,7 +876,6 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
                 {
                     DEBUG_METHOD(@"--打开健康实时同步--");
                     [self cancelScheduledTimer];
-                    
                     WS(ws);
                     // 健康实时同步2分钟超时
                     st_dispatch_async_main(^{
@@ -1013,7 +1012,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
         if (retHandler) {
             retHandler(syncType,FCSyncResponseStateNotConnected);
         }
-        return YES;
+        return NO;
     }
     
     if (self.isSynchronizing)
@@ -1022,9 +1021,9 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
         if (retHandler) {
             retHandler(syncType,FCSyncResponseStateSynchronizing);
         }
-        return YES;
+        return NO;
     }
-    return NO;
+    return YES;
 }
 
 - (BOOL)isSyncEnabled:(FCSyncType)syncType resultData:(FCSyncDataResultHandler)retHandler
@@ -1035,7 +1034,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
         if (retHandler) {
             retHandler(nil ,syncType,FCSyncResponseStateNotConnected);
         }
-        return YES;
+        return NO;
     }
     
     if (self.isSynchronizing)
@@ -1044,9 +1043,9 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
         if (retHandler) {
             retHandler(nil, syncType,FCSyncResponseStateSynchronizing);
         }
-        return YES;
+        return NO;
     }
-    return NO;
+    return YES;
 }
 
 
@@ -1054,7 +1053,9 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 
 - (void)fcLoginDevice:(NSData*)data result:(FCSyncResultHandler)retHandler
 {
-    if (!data) {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
+    if (!data)
+    {
         DEBUG_METHOD(@"--参数错误--");
         if (retHandler) {
             retHandler(FCSyncTypeLoginDevice, FCSyncResponseStateParameterError);
@@ -1077,6 +1078,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 
 - (void)fcBindDevice:(NSData*)data result:(FCSyncResultHandler)retHandler
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     if (!data) {
         DEBUG_METHOD(@"--参数错误--");
         if (retHandler) {
@@ -1100,6 +1102,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 
 - (void)fcUnBindDevice:(FCSyncResultHandler)retHandler
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     BOOL ret = [self isSyncEnabled:FCSyncTypeUnBindDevice result:retHandler];
     if (!ret) {
         return;
@@ -1116,6 +1119,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 // 查找手表
 - (void)fcFindTheWatch:(FCSyncResultHandler)retHandler
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     BOOL ret = [self isSyncEnabled:FCSyncTypeFindTheWatch result:retHandler];
     if (!ret)
     {
@@ -1135,6 +1139,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 // 找到手机回复
 - (void)fcFindThePhoneReply:(FCSyncResultHandler)retHandler
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     BOOL ret = [self isSyncEnabled:FCSyncTypeFoundPhoneReplay result:retHandler];
     if (!ret)
     {
@@ -1154,6 +1159,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 
 - (void)fcUpdateWatchTime:(FCSyncResultHandler)retHandler
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     BOOL ret = [self isSyncEnabled:FCSyncTypeUpdateWatchTime result:retHandler];
     if (!ret) {
         return;
@@ -1178,6 +1184,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 // 设置手表穿戴方式
 - (void)fcSetLeftHandWearEnable:(BOOL)bEnabled result:(FCSyncResultHandler)retHandler
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     BOOL ret = [self isSyncEnabled:FCSyncTypeSetWearingStyle result:retHandler];
     if (!ret) {
         return;
@@ -1197,7 +1204,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 // 设置手表功能开关
 - (void)fcSetFeaturesData:(NSData*)data result:(FCSyncResultHandler)retHandler
 {
-    DEBUG_METHOD(@"--data--%@",data);
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     if (!data) {
         if (retHandler) {
             retHandler(FCSyncTypeSetFeatures,FCSyncResponseStateParameterError);
@@ -1222,7 +1229,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 
 - (void)fcSetAlarmData:(NSData*)data result:(FCSyncResultHandler)retHandler
 {
-    DEBUG_METHOD(@"--data--%@",data);
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     if (!data)
     {
         if (retHandler)
@@ -1251,6 +1258,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 
 - (void)fcGetAlarmList:(FCSyncDataResultHandler)retHandler;
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     BOOL ret = [self isSyncEnabled:FCSyncTypeGetAlarmList resultData:retHandler];
     if (!ret) {
         return;
@@ -1267,6 +1275,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 // 设置用户基本资料
 - (void)fcSetUserProfile:(FCUserObject*)aUser result:(FCSyncResultHandler)retHandler
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     if (!aUser) {
         if (retHandler) {
             retHandler(FCSyncTypeSetUserProfile,FCSyncResponseStateParameterError);
@@ -1291,6 +1300,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 // 设置默认血压
 - (void)fcSetBloodPressure:(UInt16)sbp dbp:(UInt16)dbp result:(FCSyncResultHandler)retHandler
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     BOOL ret = [self isSyncEnabled:FCSyncTypeSetDefaultBloodPressure result:retHandler];
     if (!ret) {
         return;
@@ -1313,6 +1323,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 // 获取手表系统设置
 - (void)fcGetWatchConfig:(FCSyncDataResultHandler)retHandler;
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     BOOL ret = [self isSyncEnabled:FCSyncTypeGetWatchConfig resultData:retHandler];
     if (!ret) {
         return;
@@ -1329,6 +1340,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 // 获取mac地址
 - (void)fcGetMacAddress:(FCSyncDataResultHandler)retHandler
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     BOOL ret = [self isSyncEnabled:FCSyncTypeGetMacAddress resultData:retHandler];
     if (!ret)
     {
@@ -1345,6 +1357,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 // 获取电池充电状态和电量
 - (void)fcGetBatteryLevelAndState:(FCSyncDataResultHandler)retHandler
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     BOOL ret = [self isSyncEnabled:FCSyncTypeGetBatteryLevelAndState resultData:retHandler];
     if (!ret)
     {
@@ -1361,6 +1374,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 // 设置手表显示数据
 - (void)fcSetWatchScreenDisplayData:(NSData*)data result:(FCSyncResultHandler)retHandler
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     if (!data)
     {
         if (retHandler)
@@ -1389,7 +1403,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 // 设置手表消息通知开关
 - (void)fcSetNotificationSettingData:(NSData*)data result:(FCSyncResultHandler)retHandler
 {
-    DEBUG_METHOD(@"--data--%@",data);
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     if (!data) {
         if (retHandler) {
             retHandler(FCSyncTypeSetNotification,FCSyncResponseStateParameterError);
@@ -1414,6 +1428,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 // 设置久坐提醒信息
 - (void)fcSetSedentaryRemindersData:(NSData*)data result:(FCSyncResultHandler)retHandler
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     if (!data) {
         if (retHandler) {
             retHandler(FCSyncTypeSetSedentaryReminder,FCSyncResponseStateParameterError);
@@ -1440,6 +1455,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 // 设置健康实时监测数据
 - (void)fcSetHealthMonitoringData:(NSData*)data result:(FCSyncResultHandler)retHandler
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     if (!data) {
         if (retHandler) {
             retHandler(FCSyncTypeSetHealthMonitoring,FCSyncResponseStateParameterError);
@@ -1466,6 +1482,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 // 设置喝水提醒数据
 - (void)fcSetDrinkRemindEnable:(BOOL)bEnabled result:(FCSyncResultHandler)retHandler
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     BOOL ret = [self isSyncEnabled:FCSyncTypeSetDrinkReminder result:retHandler];
     if (!ret)
     {
@@ -1486,6 +1503,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 // 设置app相机前后台状态，用于手表拍照控制
 - (void)fcSetCameraState:(BOOL)bInForeground result:(FCSyncResultHandler)retHandler
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     BOOL ret = [self isSyncEnabled:FCSyncTypeSetCameraState result:retHandler];
     if (!ret)
     {
@@ -1507,6 +1525,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 // 设置天气
 - (void)fcSetWeather:(FCWeather*)weather result:(FCSyncResultHandler)retHandler
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     if (!weather) {
         if (retHandler) {
             retHandler(FCSyncTypeUpdateWeather,FCSyncResponseStateParameterError);
@@ -1534,6 +1553,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 
 - (void)fcGetFirmwareVersion:(FCSyncDataResultHandler)retHandler
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     BOOL ret = [self isSyncEnabled:FCSyncTypeGetFirmwareVersion resultData:retHandler];
     if (!ret)
     {
@@ -1550,7 +1570,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 
 - (void)fcSetANCSLanguage:(FCSyncResultHandler)retHandler
 {
-    DEBUG_METHOD(@"--同步ANCS语言--");
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     BOOL ret = [self isSyncEnable:FCSensorFlagTypeANCS];
     if (!ret)
     {
@@ -1641,6 +1661,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 
 - (void)loginWithUser:(FCUserObject *)aUser stepCallback:(FCStepCallbackHandler)stepCallback result:(FCSyncResultHandler)retHandler
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     if (!aUser) {
         DEBUG_METHOD(@"--参数错误--");
         if (retHandler) {
@@ -1708,6 +1729,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 
 - (void)bindWithUser:(FCUserObject*)aUser stepCallback:(FCStepCallbackHandler)stepCallback result:(FCSyncDataResultHandler)retHandler
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     if (!aUser) {
         DEBUG_METHOD(@"--参数错误--");
         if (retHandler) {
@@ -1854,20 +1876,6 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
     [self scheduledTimerWithTimeInterval:10 andSelector:@selector(syncTimeOut)];
 }
 
-- (void)systemTimeUpdate
-{
-    NSDate *date = [NSDate date];
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSUInteger unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
-    NSDateComponents *components = [calendar components:unitFlags fromDate:date];
-    [self fcSetTimerWithYear:components.year-2000
-                    andMonth:components.month
-                      andDay:components.day
-                     andHour:components.hour
-                   andMinute:components.minute
-                   andSecond:components.second];
-}
-
 
 
 #pragma mark - 监听
@@ -1888,7 +1896,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 
 - (void)fcOpenRealTimeSync:(FCRTSyncType)syncType dataCallback:(FCSyncDataHandler)dataCallback result:(FCSyncResultHandler)retHandler
 {
-    
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     BOOL ret = [self isSyncEnabled:FCSyncTypeOpenRealtimeSync result:retHandler];
     if (!ret)
     {
@@ -1920,6 +1928,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 
 - (void)fcCloseRealTimeSync:(FCSyncResultHandler)retHandler
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     if (![self isConnected])
     {
         DEBUG_METHOD(@"--蓝牙未连接--");
@@ -1975,6 +1984,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 
 - (void)fcUpdateFirmwareWithPath:(NSString *)filePath progress:(FCProgressHandler)progressHandler result:(FCSyncResultHandler)retHandler
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     if (!filePath)
     {
         if (retHandler)
@@ -2002,6 +2012,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 
 - (void)firmwareUpgradeTimeout
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     [self stopScanning];
     _syncType = FCSyncTypeEnd;
     st_dispatch_async_main(^{
@@ -2014,6 +2025,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 
 - (void)cancelFirmwareUpgradeTimeoutTimer
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     st_dispatch_async_main(^{
         if (_firmwareUpgradeTimer) {
             [_firmwareUpgradeTimer invalidate]; _firmwareUpgradeTimer = nil;
@@ -2238,6 +2250,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
 
 - (void)fcGetHistoryDataWithUser:(FCUserObject*)aUser stepCallback:(FCStepCallbackHandler)stepCallback  dataCallback:(FCSyncDataHandler)dataCallback result:(FCSyncResultHandler)retHandler
 {
+    DEBUG_METHOD(@"--%s--",__FUNCTION__);
     if (stepCallback) {
         stepCallback(FCSyncTypeUpdateWatchTime);
     }
@@ -2575,22 +2588,20 @@ static inline void st_dispatch_async_main(dispatch_block_t block)
             if (status == BOND_STATUS_SUCCESS)
             {
                 DEBUG_METHOD(@"LOGIN SUCCESS");
-                FCSyncType tmpSyncType = _syncType;
                 _syncType = FCSyncTypeEnd;
                 st_dispatch_async_main(^{
                     if (_syncResultHandler) {
-                        _syncResultHandler(tmpSyncType, FCSyncResponseStateSuccess);
+                        _syncResultHandler(FCSyncTypeLoginDevice, FCSyncResponseStateSuccess);
                     }
                 });
             }
             else
             {
                 DEBUG_METHOD(@"LOGIN failed. BOND.");
-                FCSyncType tmpSyncType = _syncType;
                 _syncType = FCSyncTypeEnd;
                 st_dispatch_async_main(^{
                     if (_syncResultHandler) {
-                        _syncResultHandler(tmpSyncType, FCSyncResponseStateError);
+                        _syncResultHandler(FCSyncTypeLoginDevice, FCSyncResponseStateError);
                     }
                 });
             }

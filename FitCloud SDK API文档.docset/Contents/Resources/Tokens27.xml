@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/FCWeatherState.html">
+	<File path="Constants/FCSensorFlagType.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/FCWeatherState</TokenIdentifier>
-			<Abstract type="html">天气状态，你需要把自己获取的天气转换成以下状态同步到手表，手表才能显示正确的天气状态</Abstract>
+			<TokenIdentifier>//apple_ref/c/tdef/FCSensorFlagType</TokenIdentifier>
+			<Abstract type="html">传感器标志，如果存在某个标志可以进行某项数据同步</Abstract>
 			<DeclaredIn>FCDefine.h</DeclaredIn>
             
 			
@@ -14,9 +14,9 @@
 		
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateUnknown</TokenIdentifier>
-            <Abstract type="html">未知天气</Abstract>
-            <Declaration>FCWeatherStateUnknown</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeHeartRate</TokenIdentifier>
+            <Abstract type="html">心率</Abstract>
+            <Declaration>FCSensorFlagTypeHeartRate</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -24,9 +24,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateSunnyDay</TokenIdentifier>
-            <Abstract type="html">晴天</Abstract>
-            <Declaration>FCWeatherStateSunnyDay</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeUV</TokenIdentifier>
+            <Abstract type="html">紫外线</Abstract>
+            <Declaration>FCSensorFlagTypeUV</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -34,9 +34,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateCloudy</TokenIdentifier>
-            <Abstract type="html">多云</Abstract>
-            <Declaration>FCWeatherStateCloudy</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeWeather</TokenIdentifier>
+            <Abstract type="html">天气预报</Abstract>
+            <Declaration>FCSensorFlagTypeWeather</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -44,9 +44,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateOvercast</TokenIdentifier>
-            <Abstract type="html">阴天</Abstract>
-            <Declaration>FCWeatherStateOvercast</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeBloodOxygen</TokenIdentifier>
+            <Abstract type="html">血氧</Abstract>
+            <Declaration>FCSensorFlagTypeBloodOxygen</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -54,9 +54,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateShower</TokenIdentifier>
-            <Abstract type="html">阵雨</Abstract>
-            <Declaration>FCWeatherStateShower</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeBloodPressure</TokenIdentifier>
+            <Abstract type="html">血压</Abstract>
+            <Declaration>FCSensorFlagTypeBloodPressure</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -64,9 +64,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateThunderyShower</TokenIdentifier>
-            <Abstract type="html">雷阵雨、雷阵雨伴有冰雹</Abstract>
-            <Declaration>FCWeatherStateThunderyShower</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeBreathingRate</TokenIdentifier>
+            <Abstract type="html">呼吸频率</Abstract>
+            <Declaration>FCSensorFlagTypeBreathingRate</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -74,9 +74,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateDrizzle</TokenIdentifier>
-            <Abstract type="html">小雨</Abstract>
-            <Declaration>FCWeatherStateDrizzle</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeWearStyle</TokenIdentifier>
+            <Abstract type="html">佩戴检测</Abstract>
+            <Declaration>FCSensorFlagTypeWearStyle</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -84,9 +84,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateHeavyRain</TokenIdentifier>
-            <Abstract type="html">中雨、大雨、暴雨</Abstract>
-            <Declaration>FCWeatherStateHeavyRain</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeSevenDaysSleep</TokenIdentifier>
+            <Abstract type="html">睡眠七天历史数据</Abstract>
+            <Declaration>FCSensorFlagTypeSevenDaysSleep</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -94,9 +94,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateSleet</TokenIdentifier>
-            <Abstract type="html">雨夹雪、冻雨</Abstract>
-            <Declaration>FCWeatherStateSleet</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeECG</TokenIdentifier>
+            <Abstract type="html">心电</Abstract>
+            <Declaration>FCSensorFlagTypeECG</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -104,9 +104,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateLightSnow</TokenIdentifier>
-            <Abstract type="html">小雪</Abstract>
-            <Declaration>FCWeatherStateLightSnow</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeFlashOTA</TokenIdentifier>
+            <Abstract type="html">外部Flash OTA</Abstract>
+            <Declaration>FCSensorFlagTypeFlashOTA</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -114,29 +114,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateHeavySnow</TokenIdentifier>
-            <Abstract type="html">大雪、暴雪</Abstract>
-            <Declaration>FCWeatherStateHeavySnow</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="27"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateSandstorm</TokenIdentifier>
-            <Abstract type="html">沙尘暴、浮尘</Abstract>
-            <Declaration>FCWeatherStateSandstorm</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="27"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCWeatherStateFogOrHaze</TokenIdentifier>
-            <Abstract type="html">雾、雾霾</Abstract>
-            <Declaration>FCWeatherStateFogOrHaze</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeANCS</TokenIdentifier>
+            <Abstract type="html">手机系统语言设置</Abstract>
+            <Declaration>FCSensorFlagTypeANCS</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             

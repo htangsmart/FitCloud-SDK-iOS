@@ -66,7 +66,7 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/bindWithUser:stepCallback:dataCallback:result:">- bindWithUser:stepCallback:dataCallback:result:</option>
+		<option value="//api/name/bindWithUser:stepCallback:result:">- bindWithUser:stepCallback:result:</option>
 		
 		<option value="//api/name/connectPeripheral:">- connectPeripheral:</option>
 		
@@ -74,29 +74,49 @@
 		
 		<option value="//api/name/disconnectPeripheral:">- disconnectPeripheral:</option>
 		
-		<option value="//api/name/fcCloseRealTimeSync:">- fcCloseRealTimeSync:</option>
+		<option value="//api/name/fcBindDevice:result:">- fcBindDevice:result:</option>
 		
-		<option value="//api/name/fcCloseSleepMonitoring:">- fcCloseSleepMonitoring:</option>
+		<option value="//api/name/fcCloseRealTimeSync:">- fcCloseRealTimeSync:</option>
 		
 		<option value="//api/name/fcFindThePhoneReply:">- fcFindThePhoneReply:</option>
 		
 		<option value="//api/name/fcFindTheWatch:">- fcFindTheWatch:</option>
 		
-		<option value="//api/name/fcGetAlarmList:result:">- fcGetAlarmList:result:</option>
+		<option value="//api/name/fcGetAlarmList:">- fcGetAlarmList:</option>
 		
-		<option value="//api/name/fcGetBatteryLevelAndState:result:">- fcGetBatteryLevelAndState:result:</option>
+		<option value="//api/name/fcGetBatteryLevelAndState:">- fcGetBatteryLevelAndState:</option>
 		
-		<option value="//api/name/fcGetFirmwareVersion:result:">- fcGetFirmwareVersion:result:</option>
+		<option value="//api/name/fcGetBloodOxygenData:">- fcGetBloodOxygenData:</option>
+		
+		<option value="//api/name/fcGetBloodPressureData:">- fcGetBloodPressureData:</option>
+		
+		<option value="//api/name/fcGetBreathingRateData:">- fcGetBreathingRateData:</option>
+		
+		<option value="//api/name/fcGetDailyTotalData:">- fcGetDailyTotalData:</option>
+		
+		<option value="//api/name/fcGetExerciseData:">- fcGetExerciseData:</option>
+		
+		<option value="//api/name/fcGetFirmwareVersion:">- fcGetFirmwareVersion:</option>
+		
+		<option value="//api/name/fcGetHeartRateData:">- fcGetHeartRateData:</option>
 		
 		<option value="//api/name/fcGetHistoryDataWithUser:stepCallback:dataCallback:result:">- fcGetHistoryDataWithUser:stepCallback:dataCallback:result:</option>
 		
-		<option value="//api/name/fcGetMacAddress:result:">- fcGetMacAddress:result:</option>
+		<option value="//api/name/fcGetMacAddress:">- fcGetMacAddress:</option>
 		
-		<option value="//api/name/fcGetSystemSetting:result:">- fcGetSystemSetting:result:</option>
+		<option value="//api/name/fcGetSevenDaysSleepTotalData:">- fcGetSevenDaysSleepTotalData:</option>
+		
+		<option value="//api/name/fcGetSleepData:">- fcGetSleepData:</option>
+		
+		<option value="//api/name/fcGetUltravioletData:">- fcGetUltravioletData:</option>
+		
+		<option value="//api/name/fcGetWatchConfig:">- fcGetWatchConfig:</option>
+		
+		<option value="//api/name/fcLoginDevice:result:">- fcLoginDevice:result:</option>
 		
 		<option value="//api/name/fcOpenRealTimeSync:dataCallback:result:">- fcOpenRealTimeSync:dataCallback:result:</option>
 		
-		<option value="//api/name/fcOpenSleepMonitoringData:result:">- fcOpenSleepMonitoringData:result:</option>
+		<option value="//api/name/fcSetANCSLanguage:">- fcSetANCSLanguage:</option>
 		
 		<option value="//api/name/fcSetAlarmData:result:">- fcSetAlarmData:result:</option>
 		
@@ -126,17 +146,21 @@
 		
 		<option value="//api/name/fcSetWeather:result:">- fcSetWeather:result:</option>
 		
+		<option value="//api/name/fcUnBindDevice:">- fcUnBindDevice:</option>
+		
 		<option value="//api/name/fcUpdateFirmwareWithPath:progress:result:">- fcUpdateFirmwareWithPath:progress:result:</option>
 		
+		<option value="//api/name/fcUpdateWatchTime:">- fcUpdateWatchTime:</option>
+		
 		<option value="//api/name/isConnected">- isConnected</option>
+		
+		<option value="//api/name/isSyncEnable:">- isSyncEnable:</option>
 		
 		<option value="//api/name/loginWithUser:stepCallback:result:">- loginWithUser:stepCallback:result:</option>
 		
 		<option value="//api/name/scanForPeripherals:result:">- scanForPeripherals:result:</option>
 		
 		<option value="//api/name/stopScanning">- stopScanning</option>
-		
-		<option value="//api/name/unbindDevice:">- unbindDevice:</option>
 		
 	</optgroup>
 	
@@ -542,112 +566,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/fcFindTheWatch:" title="fcFindTheWatch:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fcFindTheWatch:">&ndash;&nbsp;fcFindTheWatch:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>查找手表，如果蓝牙处于连接状态，当收到手机app发出的查找手表命令后手表开始震动</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)fcFindTheWatch:(FCSyncResultHandler)<em>retHandler</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>retHandler</code></th>
-						<td><p>同步结果回调</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FitCloud.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/fcFindThePhoneReply:" title="fcFindThePhoneReply:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fcFindThePhoneReply:">&ndash;&nbsp;fcFindThePhoneReply:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>向手表回复找到手机，如果蓝牙处于连接状态，当收到手表发出的查找手机命令后，手机发送一个回复给手表表示找到手机</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)fcFindThePhoneReply:(FCSyncResultHandler)<em>retHandler</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>retHandler</code></th>
-						<td><p>同步结果回调</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FitCloud.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/fcSetListenTakePicturesCMDFromWatch:" title="fcSetListenTakePicturesCMDFromWatch:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/fcSetListenTakePicturesCMDFromWatch:">&ndash;&nbsp;fcSetListenTakePicturesCMDFromWatch:</a></code>
 </h3>
@@ -754,6 +672,64 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/isSyncEnable:" title="isSyncEnable:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isSyncEnable:">&ndash;&nbsp;isSyncEnable:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>判断当前类型的数据是否可以同步，手表绑定成功后调用有效</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isSyncEnable:(FCSensorFlagType)<em>type</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>type</code></th>
+						<td><p>同步类型</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>YES／NO</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/loginWithUser:stepCallback:result:" title="loginWithUser:stepCallback:result:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/loginWithUser:stepCallback:result:">&ndash;&nbsp;loginWithUser:stepCallback:result:</a></code>
 </h3>
@@ -770,7 +746,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)loginWithUser:(FCUserObject *)<em>aUser</em> stepCallback:(FCStepCallbackHandler)<em>stepCallBack</em> result:(FCLoginResultHandler)<em>retHandler</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)loginWithUser:(FCUserObject *)<em>aUser</em> stepCallback:(FCStepCallbackHandler)<em>stepCallback</em> result:(FCSyncResultHandler)<em>retHandler</em></code></div>
 
 		    
 			
@@ -784,7 +760,7 @@
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>stepCallBack</code></th>
+						<th scope="row" class="argument-name"><code>stepCallback</code></th>
 						<td><p>登录流程回调</p></td>
 					</tr>
 				
@@ -817,8 +793,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/bindWithUser:stepCallback:dataCallback:result:" title="bindWithUser:stepCallback:dataCallback:result:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/bindWithUser:stepCallback:dataCallback:result:">&ndash;&nbsp;bindWithUser:stepCallback:dataCallback:result:</a></code>
+	<a name="//api/name/bindWithUser:stepCallback:result:" title="bindWithUser:stepCallback:result:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/bindWithUser:stepCallback:result:">&ndash;&nbsp;bindWithUser:stepCallback:result:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -833,7 +809,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)bindWithUser:(FCUserObject *)<em>aUser</em> stepCallback:(FCStepCallbackHandler)<em>stepCallBack</em> dataCallback:(FCSyncDataHandler)<em>dataCallback</em> result:(FCBindResultHandler)<em>retHandler</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)bindWithUser:(FCUserObject *)<em>aUser</em> stepCallback:(FCStepCallbackHandler)<em>stepCallback</em> result:(FCSyncDataResultHandler)<em>retHandler</em></code></div>
 
 		    
 			
@@ -847,18 +823,13 @@
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>stepCallBack</code></th>
+						<th scope="row" class="argument-name"><code>stepCallback</code></th>
 						<td><p>绑定流程回调</p></td>
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>dataCallback</code></th>
-						<td><p>绑定数据回调，这里只有手表系统设置数据返回。</p></td>
-					</tr>
-				
-					<tr>
 						<th scope="row" class="argument-name"><code>retHandler</code></th>
-						<td><p>同步结果回调</p></td>
+						<td><p>绑定结果回调，这里只有手表系统设置数据返回</p></td>
 					</tr>
 				
 				</table>
@@ -890,8 +861,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/unbindDevice:" title="unbindDevice:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/unbindDevice:">&ndash;&nbsp;unbindDevice:</a></code>
+	<a name="//api/name/fcGetHistoryDataWithUser:stepCallback:dataCallback:result:" title="fcGetHistoryDataWithUser:stepCallback:dataCallback:result:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcGetHistoryDataWithUser:stepCallback:dataCallback:result:">&ndash;&nbsp;fcGetHistoryDataWithUser:stepCallback:dataCallback:result:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -901,18 +872,380 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>解除绑定，此操作会解除手表与app用户id的绑定</p>
+				<p>同步手表历史数据，包括日总数据、运动量详细记录、睡眠详细记录、心率详细记录、血氧、血压和呼吸频率等。每次同步历史数据时会将系统时间和功能开关配置数据写入到手表</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)unbindDevice:(FCSyncResultHandler)<em>retHandler</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)fcGetHistoryDataWithUser:(FCUserObject *)<em>aUser</em> stepCallback:(FCStepCallbackHandler)<em>stepCallback</em> dataCallback:(FCSyncDataHandler)<em>dataCallback</em> result:(FCSyncResultHandler)<em>retHandler</em></code></div>
 
 		    
 			
 			<div class="method-subsection arguments-section parameters">
 				<h4 class="method-subtitle parameter-title">Parameters</h4>
 				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUser</code></th>
+						<td><p>用户资料对象</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>stepCallback</code></th>
+						<td><p>同步流程回调</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dataCallback</code></th>
+						<td><p>同步数据回调，此处回多次回调不同类型的数据</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>同步结果回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcLoginDevice:result:" title="fcLoginDevice:result:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcLoginDevice:result:">&ndash;&nbsp;fcLoginDevice:result:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>登录设备</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcLoginDevice:(NSData *)<em>data</em> result:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>登录同步数据</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>同步结果回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcBindDevice:result:" title="fcBindDevice:result:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcBindDevice:result:">&ndash;&nbsp;fcBindDevice:result:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>绑定设备</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcBindDevice:(NSData *)<em>data</em> result:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>绑定同步数据</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>同步结果毁掉</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/FCWatchConfig.html">FCWatchConfig</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcUnBindDevice:" title="fcUnBindDevice:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcUnBindDevice:">&ndash;&nbsp;fcUnBindDevice:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>解除绑定</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcUnBindDevice:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>解除绑定回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcUpdateWatchTime:" title="fcUpdateWatchTime:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcUpdateWatchTime:">&ndash;&nbsp;fcUpdateWatchTime:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>同步系统时间到手表</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcUpdateWatchTime:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>同步结果回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcSetLeftHandWearEnable:result:" title="fcSetLeftHandWearEnable:result:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcSetLeftHandWearEnable:result:">&ndash;&nbsp;fcSetLeftHandWearEnable:result:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>同步佩戴方式到手表</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcSetLeftHandWearEnable:(BOOL)<em>bEnabled</em> result:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>bEnabled</code></th>
+						<td><p>是否是左右佩戴</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>同步结果回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcSetFeaturesData:result:" title="fcSetFeaturesData:result:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcSetFeaturesData:result:">&ndash;&nbsp;fcSetFeaturesData:result:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>同步手表的功能开关配置到手表</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcSetFeaturesData:(NSData *)<em>data</em> result:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>功能开关配置数据</p></td>
+					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>retHandler</code></th>
@@ -1011,8 +1344,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/fcGetAlarmList:result:" title="fcGetAlarmList:result:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fcGetAlarmList:result:">&ndash;&nbsp;fcGetAlarmList:result:</a></code>
+	<a name="//api/name/fcGetAlarmList:" title="fcGetAlarmList:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcGetAlarmList:">&ndash;&nbsp;fcGetAlarmList:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1027,18 +1360,13 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)fcGetAlarmList:(FCSyncDataHandler)<em>dataCallback</em> result:(FCSyncResultHandler)<em>retHandler</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)fcGetAlarmList:(FCSyncDataResultHandler)<em>retHandler</em></code></div>
 
 		    
 			
 			<div class="method-subsection arguments-section parameters">
 				<h4 class="method-subtitle parameter-title">Parameters</h4>
 				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>dataCallback</code></th>
-						<td><p>闹钟数据回调</p></td>
-					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>retHandler</code></th>
@@ -1079,8 +1407,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/fcGetMacAddress:result:" title="fcGetMacAddress:result:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fcGetMacAddress:result:">&ndash;&nbsp;fcGetMacAddress:result:</a></code>
+	<a name="//api/name/fcGetMacAddress:" title="fcGetMacAddress:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcGetMacAddress:">&ndash;&nbsp;fcGetMacAddress:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1095,18 +1423,13 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)fcGetMacAddress:(FCSyncDataHandler)<em>dataCallback</em> result:(FCSyncResultHandler)<em>retHandler</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)fcGetMacAddress:(FCSyncDataResultHandler)<em>retHandler</em></code></div>
 
 		    
 			
 			<div class="method-subsection arguments-section parameters">
 				<h4 class="method-subtitle parameter-title">Parameters</h4>
 				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>dataCallback</code></th>
-						<td><p>macAddress回调</p></td>
-					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>retHandler</code></th>
@@ -1137,8 +1460,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/fcGetSystemSetting:result:" title="fcGetSystemSetting:result:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fcGetSystemSetting:result:">&ndash;&nbsp;fcGetSystemSetting:result:</a></code>
+	<a name="//api/name/fcGetWatchConfig:" title="fcGetWatchConfig:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcGetWatchConfig:">&ndash;&nbsp;fcGetWatchConfig:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1153,18 +1476,13 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)fcGetSystemSetting:(FCSyncDataHandler)<em>dataCallback</em> result:(FCSyncResultHandler)<em>retHandler</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)fcGetWatchConfig:(FCSyncDataResultHandler)<em>retHandler</em></code></div>
 
 		    
 			
 			<div class="method-subsection arguments-section parameters">
 				<h4 class="method-subtitle parameter-title">Parameters</h4>
 				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>dataCallback</code></th>
-						<td><p>手表配置数据回调</p></td>
-					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>retHandler</code></th>
@@ -1195,8 +1513,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/fcGetBatteryLevelAndState:result:" title="fcGetBatteryLevelAndState:result:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fcGetBatteryLevelAndState:result:">&ndash;&nbsp;fcGetBatteryLevelAndState:result:</a></code>
+	<a name="//api/name/fcGetBatteryLevelAndState:" title="fcGetBatteryLevelAndState:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcGetBatteryLevelAndState:">&ndash;&nbsp;fcGetBatteryLevelAndState:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1211,18 +1529,13 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)fcGetBatteryLevelAndState:(FCSyncBatteryLevelAndStateHandler)<em>dataCallback</em> result:(FCSyncResultHandler)<em>retHandler</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)fcGetBatteryLevelAndState:(FCSyncDataResultHandler)<em>retHandler</em></code></div>
 
 		    
 			
 			<div class="method-subsection arguments-section parameters">
 				<h4 class="method-subtitle parameter-title">Parameters</h4>
 				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>dataCallback</code></th>
-						<td><p>电量和充电信息回调</p></td>
-					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>retHandler</code></th>
@@ -1285,64 +1598,6 @@
 					<tr>
 						<th scope="row" class="argument-name"><code>retHandler</code></th>
 						<td><p>步结果回调</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FitCloud.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/fcSetFeaturesData:result:" title="fcSetFeaturesData:result:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fcSetFeaturesData:result:">&ndash;&nbsp;fcSetFeaturesData:result:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>同步手表的功能开关配置到手表</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)fcSetFeaturesData:(NSData *)<em>data</em> result:(FCSyncResultHandler)<em>retHandler</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>data</code></th>
-						<td><p>功能开关配置数据</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>retHandler</code></th>
-						<td><p>同步结果回调</p></td>
 					</tr>
 				
 				</table>
@@ -1496,7 +1751,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>同步健康检测配置到手表</p>
+				<p>同步健康监测配置到手表</p>
 			</div>
 			
 		    
@@ -1570,64 +1825,6 @@
 					<tr>
 						<th scope="row" class="argument-name"><code>bEnabled</code></th>
 						<td><p>喝水提醒开关状态</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>retHandler</code></th>
-						<td><p>同步结果回调</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">FitCloud.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/fcSetLeftHandWearEnable:result:" title="fcSetLeftHandWearEnable:result:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fcSetLeftHandWearEnable:result:">&ndash;&nbsp;fcSetLeftHandWearEnable:result:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>同步配到方式到手表</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)fcSetLeftHandWearEnable:(BOOL)<em>bEnabled</em> result:(FCSyncResultHandler)<em>retHandler</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>bEnabled</code></th>
-						<td><p>是否是左右佩戴</p></td>
 					</tr>
 				
 					<tr>
@@ -1896,8 +2093,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/fcOpenSleepMonitoringData:result:" title="fcOpenSleepMonitoringData:result:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fcOpenSleepMonitoringData:result:">&ndash;&nbsp;fcOpenSleepMonitoringData:result:</a></code>
+	<a name="//api/name/fcSetANCSLanguage:" title="fcSetANCSLanguage:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcSetANCSLanguage:">&ndash;&nbsp;fcSetANCSLanguage:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1907,23 +2104,18 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>打开睡眠监测</p>
+				<p>同步系统语言到手表</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)fcOpenSleepMonitoringData:(NSData *)<em>data</em> result:(FCSyncResultHandler)<em>retHandler</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)fcSetANCSLanguage:(FCSyncResultHandler)<em>retHandler</em></code></div>
 
 		    
 			
 			<div class="method-subsection arguments-section parameters">
 				<h4 class="method-subtitle parameter-title">Parameters</h4>
 				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>data</code></th>
-						<td><p>睡眠监测配置数据</p></td>
-					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>retHandler</code></th>
@@ -1954,8 +2146,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/fcCloseSleepMonitoring:" title="fcCloseSleepMonitoring:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fcCloseSleepMonitoring:">&ndash;&nbsp;fcCloseSleepMonitoring:</a></code>
+	<a name="//api/name/fcFindTheWatch:" title="fcFindTheWatch:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcFindTheWatch:">&ndash;&nbsp;fcFindTheWatch:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1965,12 +2157,65 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>关闭睡眠监测，关闭后手表不在记录睡眠数据</p>
+				<p>查找手表，如果蓝牙处于连接状态，当收到手机app发出的查找手表命令后手表开始震动</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)fcCloseSleepMonitoring:(FCSyncResultHandler)<em>retHandler</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)fcFindTheWatch:(FCSyncResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>同步结果回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcFindThePhoneReply:" title="fcFindThePhoneReply:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcFindThePhoneReply:">&ndash;&nbsp;fcFindThePhoneReply:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>向手表回复找到手机，如果蓝牙处于连接状态，当收到手表发出的查找手机命令后，手机发送一个回复给手表表示找到手机</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcFindThePhoneReply:(FCSyncResultHandler)<em>retHandler</em></code></div>
 
 		    
 			
@@ -2123,8 +2368,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/fcGetHistoryDataWithUser:stepCallback:dataCallback:result:" title="fcGetHistoryDataWithUser:stepCallback:dataCallback:result:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fcGetHistoryDataWithUser:stepCallback:dataCallback:result:">&ndash;&nbsp;fcGetHistoryDataWithUser:stepCallback:dataCallback:result:</a></code>
+	<a name="//api/name/fcGetDailyTotalData:" title="fcGetDailyTotalData:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcGetDailyTotalData:">&ndash;&nbsp;fcGetDailyTotalData:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2134,33 +2379,18 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>同步手表历史数据，包括日总数据、运动量详细记录、睡眠详细记录、心率详细记录、血氧、血压和呼吸频率等。每次同步历史数据时会将系统时间和功能开关配置数据写入到手表</p>
+				<p>获取日总运动数据</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)fcGetHistoryDataWithUser:(FCUserObject *)<em>aUser</em> stepCallback:(FCStepCallbackHandler)<em>stepCallback</em> dataCallback:(FCHistoryDataHandler)<em>dataCallback</em> result:(FCHistoryDataResultHandler)<em>retHandler</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)fcGetDailyTotalData:(FCSyncDataResultHandler)<em>retHandler</em></code></div>
 
 		    
 			
 			<div class="method-subsection arguments-section parameters">
 				<h4 class="method-subtitle parameter-title">Parameters</h4>
 				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aUser</code></th>
-						<td><p>用户资料对象</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>stepCallback</code></th>
-						<td><p>同步流程回调</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>dataCallback</code></th>
-						<td><p>同步数据回调，此处回多次回调不同类型的数据</p></td>
-					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>retHandler</code></th>
@@ -2191,8 +2421,498 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/fcGetFirmwareVersion:result:" title="fcGetFirmwareVersion:result:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/fcGetFirmwareVersion:result:">&ndash;&nbsp;fcGetFirmwareVersion:result:</a></code>
+	<a name="//api/name/fcGetExerciseData:" title="fcGetExerciseData:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcGetExerciseData:">&ndash;&nbsp;fcGetExerciseData:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取运动量详细数据</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcGetExerciseData:(FCSyncDataResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>同步结果回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcGetSleepData:" title="fcGetSleepData:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcGetSleepData:">&ndash;&nbsp;fcGetSleepData:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取睡眠详细数据</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcGetSleepData:(FCSyncDataResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>同步结果回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcGetHeartRateData:" title="fcGetHeartRateData:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcGetHeartRateData:">&ndash;&nbsp;fcGetHeartRateData:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取心率详细数据，此项需要判断传感器标志，如果存在心率标志，则可以进行心率同步</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcGetHeartRateData:(FCSyncDataResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>同步结果回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/isSyncEnable:">- isSyncEnable:</a></p></code></li>
+					
+					<li><code><p><a href="../Constants/FCSensorFlagType.html">FCSensorFlagType</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcGetBloodOxygenData:" title="fcGetBloodOxygenData:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcGetBloodOxygenData:">&ndash;&nbsp;fcGetBloodOxygenData:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取血氧详细数据，此项需要判断传感器标志，如果存在标志，则可以进行同步</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcGetBloodOxygenData:(FCSyncDataResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>同步结果回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/isSyncEnable:">- isSyncEnable:</a></p></code></li>
+					
+					<li><code><p><a href="../Constants/FCSensorFlagType.html">FCSensorFlagType</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcGetUltravioletData:" title="fcGetUltravioletData:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcGetUltravioletData:">&ndash;&nbsp;fcGetUltravioletData:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取紫外线详细数据，此项需要判断传感器标志，如果存在标志，则可以进行同步</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcGetUltravioletData:(FCSyncDataResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>同步结果回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/isSyncEnable:">- isSyncEnable:</a></p></code></li>
+					
+					<li><code><p><a href="../Constants/FCSensorFlagType.html">FCSensorFlagType</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcGetBloodPressureData:" title="fcGetBloodPressureData:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcGetBloodPressureData:">&ndash;&nbsp;fcGetBloodPressureData:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取血压详细数据，此项需要判断传感器标志，如果存在标志，则可以进行同步</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcGetBloodPressureData:(FCSyncDataResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>同步结果回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/isSyncEnable:">- isSyncEnable:</a></p></code></li>
+					
+					<li><code><p><a href="../Constants/FCSensorFlagType.html">FCSensorFlagType</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcGetBreathingRateData:" title="fcGetBreathingRateData:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcGetBreathingRateData:">&ndash;&nbsp;fcGetBreathingRateData:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取呼吸频率详细数据，此项需要判断传感器标志，如果存在标志，则可以进行同步</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcGetBreathingRateData:(FCSyncDataResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>同步结果回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/isSyncEnable:">- isSyncEnable:</a></p></code></li>
+					
+					<li><code><p><a href="../Constants/FCSensorFlagType.html">FCSensorFlagType</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcGetSevenDaysSleepTotalData:" title="fcGetSevenDaysSleepTotalData:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcGetSevenDaysSleepTotalData:">&ndash;&nbsp;fcGetSevenDaysSleepTotalData:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取七日睡眠总数据，此项需要判断传感器标志，如果存在标志，则可以进行同步</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fcGetSevenDaysSleepTotalData:(FCSyncDataResultHandler)<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>同步结果回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/isSyncEnable:">- isSyncEnable:</a></p></code></li>
+					
+					<li><code><p><a href="../Constants/FCSensorFlagType.html">FCSensorFlagType</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloud.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fcGetFirmwareVersion:" title="fcGetFirmwareVersion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fcGetFirmwareVersion:">&ndash;&nbsp;fcGetFirmwareVersion:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2207,18 +2927,13 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)fcGetFirmwareVersion:(FCSyncDataHandler)<em>dataCallback</em> result:(FCSyncResultHandler)<em>retHandler</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)fcGetFirmwareVersion:(FCSyncDataResultHandler)<em>retHandler</em></code></div>
 
 		    
 			
 			<div class="method-subsection arguments-section parameters">
 				<h4 class="method-subtitle parameter-title">Parameters</h4>
 				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>dataCallback</code></th>
-						<td><p>固件版本信息数据回调</p></td>
-					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>retHandler</code></th>
@@ -2326,7 +3041,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 H.Tang. All rights reserved. Updated: 2017-05-28</p>
+						<p class="copyright">Copyright &copy; 2017 H.Tang. All rights reserved. Updated: 2017-08-14</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

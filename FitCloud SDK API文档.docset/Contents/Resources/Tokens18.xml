@@ -1,107 +1,197 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/FCBindSyncType.html">
+	<File path="Classes/FCWeather.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/FCBindSyncType</TokenIdentifier>
-			<Abstract type="html">绑定设备同步流程</Abstract>
-			<DeclaredIn>FCDefine.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/FCWeather</TokenIdentifier>
+			<Abstract type="html">天气</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
             
 			
 			<NodeRef refid="18"/>
 		</Token>
 		
 		
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCBindSyncTypeUnknown</TokenIdentifier>
-            <Abstract type="html">默认类型</Abstract>
-            <Declaration>FCBindSyncTypeUnknown</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWeather/setTemperature:</TokenIdentifier>
+			<Abstract type="html">当前温度</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSInteger temperature</Declaration>
+			
+			
+			<Anchor>//api/name/temperature</Anchor>
             <NodeRef refid="18"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCBindSyncTypeBond</TokenIdentifier>
-            <Abstract type="html">绑定设备</Abstract>
-            <Declaration>FCBindSyncTypeBond</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWeather/temperature</TokenIdentifier>
+			<Abstract type="html">当前温度</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSInteger temperature</Declaration>
+			
+			
+			<Anchor>//api/name/temperature</Anchor>
             <NodeRef refid="18"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCBindSyncTypeFeatures</TokenIdentifier>
-            <Abstract type="html">同步功能开关设置到手表</Abstract>
-            <Declaration>FCBindSyncTypeFeatures</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCWeather/temperature</TokenIdentifier>
+			<Abstract type="html">当前温度</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSInteger temperature</Declaration>
+			
+			
+			<Anchor>//api/name/temperature</Anchor>
             <NodeRef refid="18"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCBindSyncTypeTime</TokenIdentifier>
-            <Abstract type="html">同步系统时间到手表</Abstract>
-            <Declaration>FCBindSyncTypeTime</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWeather/setMaxTemperature:</TokenIdentifier>
+			<Abstract type="html">最高温度</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSInteger maxTemperature</Declaration>
+			
+			
+			<Anchor>//api/name/maxTemperature</Anchor>
             <NodeRef refid="18"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCBindSyncTypeUserInfo</TokenIdentifier>
-            <Abstract type="html">同步用户资料到手表</Abstract>
-            <Declaration>FCBindSyncTypeUserInfo</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWeather/maxTemperature</TokenIdentifier>
+			<Abstract type="html">最高温度</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSInteger maxTemperature</Declaration>
+			
+			
+			<Anchor>//api/name/maxTemperature</Anchor>
             <NodeRef refid="18"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCBindSyncTypeWearingStyle</TokenIdentifier>
-            <Abstract type="html">同步佩戴方式到手表</Abstract>
-            <Declaration>FCBindSyncTypeWearingStyle</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCWeather/maxTemperature</TokenIdentifier>
+			<Abstract type="html">最高温度</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSInteger maxTemperature</Declaration>
+			
+			
+			<Anchor>//api/name/maxTemperature</Anchor>
             <NodeRef refid="18"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCBindSyncTypeDefaultBloodPressure</TokenIdentifier>
-            <Abstract type="html">同步默认血压到手表</Abstract>
-            <Declaration>FCBindSyncTypeDefaultBloodPressure</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWeather/setMinTemperature:</TokenIdentifier>
+			<Abstract type="html">最低温度</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSInteger minTemperature</Declaration>
+			
+			
+			<Anchor>//api/name/minTemperature</Anchor>
             <NodeRef refid="18"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCBindSyncTypeSystemSetting</TokenIdentifier>
-            <Abstract type="html">同步手表系统设置到手机</Abstract>
-            <Declaration>FCBindSyncTypeSystemSetting</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWeather/minTemperature</TokenIdentifier>
+			<Abstract type="html">最低温度</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSInteger minTemperature</Declaration>
+			
+			
+			<Anchor>//api/name/minTemperature</Anchor>
             <NodeRef refid="18"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCBindSyncTypeEnd</TokenIdentifier>
-            <Abstract type="html">结束</Abstract>
-            <Declaration>FCBindSyncTypeEnd</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCWeather/minTemperature</TokenIdentifier>
+			<Abstract type="html">最低温度</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSInteger minTemperature</Declaration>
+			
+			
+			<Anchor>//api/name/minTemperature</Anchor>
             <NodeRef refid="18"/>
-        </Token>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWeather/setWeatherState:</TokenIdentifier>
+			<Abstract type="html">天气状况，从服务器获取天气状态后，你需要转换为枚举值对应的天气</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) FCWeatherState weatherState</Declaration>
+			
+			
+			<Anchor>//api/name/weatherState</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWeather/weatherState</TokenIdentifier>
+			<Abstract type="html">天气状况，从服务器获取天气状态后，你需要转换为枚举值对应的天气</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) FCWeatherState weatherState</Declaration>
+			
+			
+			<Anchor>//api/name/weatherState</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCWeather/weatherState</TokenIdentifier>
+			<Abstract type="html">天气状况，从服务器获取天气状态后，你需要转换为枚举值对应的天气</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) FCWeatherState weatherState</Declaration>
+			
+			
+			<Anchor>//api/name/weatherState</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWeather/setCity:</TokenIdentifier>
+			<Abstract type="html">当前天气所在城市</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *city</Declaration>
+			
+			
+			<Anchor>//api/name/city</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWeather/city</TokenIdentifier>
+			<Abstract type="html">当前天气所在城市</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *city</Declaration>
+			
+			
+			<Anchor>//api/name/city</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCWeather/city</TokenIdentifier>
+			<Abstract type="html">当前天气所在城市</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *city</Declaration>
+			
+			
+			<Anchor>//api/name/city</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
         
         
 	</File>

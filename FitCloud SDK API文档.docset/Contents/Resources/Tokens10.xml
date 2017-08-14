@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/FCSensorFlagObject.html">
+	<File path="Classes/FCSedentaryReminderObject.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/FCSensorFlagObject</TokenIdentifier>
-			<Abstract type="html">传感器标志。硬件号亦为手环传感器或功能标志位，组成的32bit，每个bit代表某一传感器或功能在该项目是否存在，手机APP根据该硬件号判断在手机APP上是否显示该功能和是否同步该项数据，详细请看下面定义</Abstract>
+			<TokenIdentifier>//apple_ref/occ/cl/FCSedentaryReminderObject</TokenIdentifier>
+			<Abstract type="html">久坐提醒,手表会在长时间不运动时发出提醒，通知用户起身运动</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
             
 			
@@ -13,110 +13,158 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/setEnhanceSurvey:</TokenIdentifier>
-			<Abstract type="html">心率加强监测，对于一些测不出心率的特殊人群，开启加强检测有助于心率测量</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSedentaryReminderObject/setIsOn:</TokenIdentifier>
+			<Abstract type="html">久坐提醒开关</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL enhanceSurvey</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL isOn</Declaration>
 			
 			
-			<Anchor>//api/name/enhanceSurvey</Anchor>
+			<Anchor>//api/name/isOn</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/enhanceSurvey</TokenIdentifier>
-			<Abstract type="html">心率加强监测，对于一些测不出心率的特殊人群，开启加强检测有助于心率测量</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSedentaryReminderObject/isOn</TokenIdentifier>
+			<Abstract type="html">久坐提醒开关</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL enhanceSurvey</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL isOn</Declaration>
 			
 			
-			<Anchor>//api/name/enhanceSurvey</Anchor>
+			<Anchor>//api/name/isOn</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCSensorFlagObject/enhanceSurvey</TokenIdentifier>
-			<Abstract type="html">心率加强监测，对于一些测不出心率的特殊人群，开启加强检测有助于心率测量</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSedentaryReminderObject/isOn</TokenIdentifier>
+			<Abstract type="html">久坐提醒开关</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL enhanceSurvey</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL isOn</Declaration>
 			
 			
-			<Anchor>//api/name/enhanceSurvey</Anchor>
+			<Anchor>//api/name/isOn</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/setSleepHistoryOfSevenDays:</TokenIdentifier>
-			<Abstract type="html">七天历史睡眠总数据,如果有此标志位，可以同步七天睡眠总数据</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSedentaryReminderObject/setRestTimeNotDisturbEnabled:</TokenIdentifier>
+			<Abstract type="html">午休免打扰，打开此项，午休时间将不会提醒</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL sleepHistoryOfSevenDays</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL restTimeNotDisturbEnabled</Declaration>
 			
 			
-			<Anchor>//api/name/sleepHistoryOfSevenDays</Anchor>
+			<Anchor>//api/name/restTimeNotDisturbEnabled</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/sleepHistoryOfSevenDays</TokenIdentifier>
-			<Abstract type="html">七天历史睡眠总数据,如果有此标志位，可以同步七天睡眠总数据</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSedentaryReminderObject/restTimeNotDisturbEnabled</TokenIdentifier>
+			<Abstract type="html">午休免打扰，打开此项，午休时间将不会提醒</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL sleepHistoryOfSevenDays</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL restTimeNotDisturbEnabled</Declaration>
 			
 			
-			<Anchor>//api/name/sleepHistoryOfSevenDays</Anchor>
+			<Anchor>//api/name/restTimeNotDisturbEnabled</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCSensorFlagObject/sleepHistoryOfSevenDays</TokenIdentifier>
-			<Abstract type="html">七天历史睡眠总数据,如果有此标志位，可以同步七天睡眠总数据</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSedentaryReminderObject/restTimeNotDisturbEnabled</TokenIdentifier>
+			<Abstract type="html">午休免打扰，打开此项，午休时间将不会提醒</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL sleepHistoryOfSevenDays</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL restTimeNotDisturbEnabled</Declaration>
 			
 			
-			<Anchor>//api/name/sleepHistoryOfSevenDays</Anchor>
+			<Anchor>//api/name/restTimeNotDisturbEnabled</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/setECG:</TokenIdentifier>
-			<Abstract type="html">心电功能标志</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSedentaryReminderObject/setStMinute:</TokenIdentifier>
+			<Abstract type="html">久坐提醒开始时间，数值为从0开始的分钟数</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL ECG</Declaration>
+			<Declaration>@property (nonatomic, assign) NSUInteger stMinute</Declaration>
 			
 			
-			<Anchor>//api/name/ECG</Anchor>
+			<Anchor>//api/name/stMinute</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/ECG</TokenIdentifier>
-			<Abstract type="html">心电功能标志</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSedentaryReminderObject/stMinute</TokenIdentifier>
+			<Abstract type="html">久坐提醒开始时间，数值为从0开始的分钟数</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL ECG</Declaration>
+			<Declaration>@property (nonatomic, assign) NSUInteger stMinute</Declaration>
 			
 			
-			<Anchor>//api/name/ECG</Anchor>
+			<Anchor>//api/name/stMinute</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCSensorFlagObject/ECG</TokenIdentifier>
-			<Abstract type="html">心电功能标志</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSedentaryReminderObject/stMinute</TokenIdentifier>
+			<Abstract type="html">久坐提醒开始时间，数值为从0开始的分钟数</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL ECG</Declaration>
+			<Declaration>@property (nonatomic, assign) NSUInteger stMinute</Declaration>
 			
 			
-			<Anchor>//api/name/ECG</Anchor>
+			<Anchor>//api/name/stMinute</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSedentaryReminderObject/setEdMinute:</TokenIdentifier>
+			<Abstract type="html">久坐提醒结束时间，数值为从0开始的分钟数</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger edMinute</Declaration>
+			
+			
+			<Anchor>//api/name/edMinute</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSedentaryReminderObject/edMinute</TokenIdentifier>
+			<Abstract type="html">久坐提醒结束时间，数值为从0开始的分钟数</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger edMinute</Declaration>
+			
+			
+			<Anchor>//api/name/edMinute</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSedentaryReminderObject/edMinute</TokenIdentifier>
+			<Abstract type="html">久坐提醒结束时间，数值为从0开始的分钟数</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger edMinute</Declaration>
+			
+			
+			<Anchor>//api/name/edMinute</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSedentaryReminderObject/isAtRestTime</TokenIdentifier>
+			<Abstract type="html">判断是否处于午休时间，午休时间为12:00-14:00,如果处于这个范围则为午休时间。</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isAtRestTime</Declaration>
+			
+			<ReturnValue><Abstract type="html">是否处于午休时间</Abstract></ReturnValue>
+			<Anchor>//api/name/isAtRestTime</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		

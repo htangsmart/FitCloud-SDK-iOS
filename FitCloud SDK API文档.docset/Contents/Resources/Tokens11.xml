@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/FCUserObject.html">
+	<File path="Classes/FCSensorFlagObject.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/FCUserObject</TokenIdentifier>
-			<Abstract type="html">用户资料,主要用途手表绑定、登录、同步等更新配置信息使用</Abstract>
+			<TokenIdentifier>//apple_ref/occ/cl/FCSensorFlagObject</TokenIdentifier>
+			<Abstract type="html">传感器标志。硬件号亦为手环传感器或功能标志位，组成的32bit，每个bit代表某一传感器或功能在该项目是否存在，手机APP根据该硬件号判断在手机APP上是否显示该功能和是否同步该项数据，详细请看下面定义</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
             
 			
@@ -13,422 +13,182 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/setGuestId:</TokenIdentifier>
-			<Abstract type="html">用户id，由自己服务器为每个用户分配。登录、绑定都需要此参数</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/setEnhanceSurvey:</TokenIdentifier>
+			<Abstract type="html">心率加强监测，对于一些测不出心率的特殊人群，开启加强检测有助于心率测量</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) UInt64 guestId</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL enhanceSurvey</Declaration>
 			
 			
-			<Anchor>//api/name/guestId</Anchor>
+			<Anchor>//api/name/enhanceSurvey</Anchor>
             <NodeRef refid="11"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/guestId</TokenIdentifier>
-			<Abstract type="html">用户id，由自己服务器为每个用户分配。登录、绑定都需要此参数</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/enhanceSurvey</TokenIdentifier>
+			<Abstract type="html">心率加强监测，对于一些测不出心率的特殊人群，开启加强检测有助于心率测量</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) UInt64 guestId</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL enhanceSurvey</Declaration>
 			
 			
-			<Anchor>//api/name/guestId</Anchor>
+			<Anchor>//api/name/enhanceSurvey</Anchor>
             <NodeRef refid="11"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCUserObject/guestId</TokenIdentifier>
-			<Abstract type="html">用户id，由自己服务器为每个用户分配。登录、绑定都需要此参数</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSensorFlagObject/enhanceSurvey</TokenIdentifier>
+			<Abstract type="html">心率加强监测，对于一些测不出心率的特殊人群，开启加强检测有助于心率测量</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) UInt64 guestId</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL enhanceSurvey</Declaration>
 			
 			
-			<Anchor>//api/name/guestId</Anchor>
+			<Anchor>//api/name/enhanceSurvey</Anchor>
             <NodeRef refid="11"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/setPhoneModel:</TokenIdentifier>
-			<Abstract type="html">手机型号,如iphone6、iphone6s,通过&lt;i&gt;FitCloudUtils&lt;/i&gt;可以获取到。登录、绑定都需要此参数</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/setSleepHistoryOfSevenDays:</TokenIdentifier>
+			<Abstract type="html">七天历史睡眠总数据,如果有此标志位，可以同步七天睡眠总数据</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) UInt8 phoneModel</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL sleepHistoryOfSevenDays</Declaration>
 			
 			
-			<Anchor>//api/name/phoneModel</Anchor>
+			<Anchor>//api/name/sleepHistoryOfSevenDays</Anchor>
             <NodeRef refid="11"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/phoneModel</TokenIdentifier>
-			<Abstract type="html">手机型号,如iphone6、iphone6s,通过&lt;i&gt;FitCloudUtils&lt;/i&gt;可以获取到。登录、绑定都需要此参数</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/sleepHistoryOfSevenDays</TokenIdentifier>
+			<Abstract type="html">七天历史睡眠总数据,如果有此标志位，可以同步七天睡眠总数据</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) UInt8 phoneModel</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL sleepHistoryOfSevenDays</Declaration>
 			
 			
-			<Anchor>//api/name/phoneModel</Anchor>
+			<Anchor>//api/name/sleepHistoryOfSevenDays</Anchor>
             <NodeRef refid="11"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCUserObject/phoneModel</TokenIdentifier>
-			<Abstract type="html">手机型号,如iphone6、iphone6s,通过&lt;i&gt;FitCloudUtils&lt;/i&gt;可以获取到。登录、绑定都需要此参数</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSensorFlagObject/sleepHistoryOfSevenDays</TokenIdentifier>
+			<Abstract type="html">七天历史睡眠总数据,如果有此标志位，可以同步七天睡眠总数据</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) UInt8 phoneModel</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL sleepHistoryOfSevenDays</Declaration>
 			
 			
-			<Anchor>//api/name/phoneModel</Anchor>
+			<Anchor>//api/name/sleepHistoryOfSevenDays</Anchor>
             <NodeRef refid="11"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/setOsVersion:</TokenIdentifier>
-			<Abstract type="html">系统版本,通过&lt;i&gt;FitCloudUtils&lt;/i&gt;可以获取到。登录、绑定都需要此参数</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/setECG:</TokenIdentifier>
+			<Abstract type="html">心电功能标志</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) UInt8 osVersion</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL ECG</Declaration>
 			
 			
-			<Anchor>//api/name/osVersion</Anchor>
+			<Anchor>//api/name/ECG</Anchor>
             <NodeRef refid="11"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/osVersion</TokenIdentifier>
-			<Abstract type="html">系统版本,通过&lt;i&gt;FitCloudUtils&lt;/i&gt;可以获取到。登录、绑定都需要此参数</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/ECG</TokenIdentifier>
+			<Abstract type="html">心电功能标志</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) UInt8 osVersion</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL ECG</Declaration>
 			
 			
-			<Anchor>//api/name/osVersion</Anchor>
+			<Anchor>//api/name/ECG</Anchor>
             <NodeRef refid="11"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCUserObject/osVersion</TokenIdentifier>
-			<Abstract type="html">系统版本,通过&lt;i&gt;FitCloudUtils&lt;/i&gt;可以获取到。登录、绑定都需要此参数</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSensorFlagObject/ECG</TokenIdentifier>
+			<Abstract type="html">心电功能标志</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) UInt8 osVersion</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL ECG</Declaration>
 			
 			
-			<Anchor>//api/name/osVersion</Anchor>
+			<Anchor>//api/name/ECG</Anchor>
             <NodeRef refid="11"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/setAge:</TokenIdentifier>
-			<Abstract type="html">用户年龄，默认1990出生。 绑定手表或者同步用户资料需要此参数</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/setFlashOTA:</TokenIdentifier>
+			<Abstract type="html">判断手表是否支持flashOTA升级</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) UInt32 age</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL flashOTA</Declaration>
 			
 			
-			<Anchor>//api/name/age</Anchor>
+			<Anchor>//api/name/flashOTA</Anchor>
             <NodeRef refid="11"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/age</TokenIdentifier>
-			<Abstract type="html">用户年龄，默认1990出生。 绑定手表或者同步用户资料需要此参数</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/flashOTA</TokenIdentifier>
+			<Abstract type="html">判断手表是否支持flashOTA升级</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) UInt32 age</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL flashOTA</Declaration>
 			
 			
-			<Anchor>//api/name/age</Anchor>
+			<Anchor>//api/name/flashOTA</Anchor>
             <NodeRef refid="11"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCUserObject/age</TokenIdentifier>
-			<Abstract type="html">用户年龄，默认1990出生。 绑定手表或者同步用户资料需要此参数</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSensorFlagObject/flashOTA</TokenIdentifier>
+			<Abstract type="html">判断手表是否支持flashOTA升级</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) UInt32 age</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL flashOTA</Declaration>
 			
 			
-			<Anchor>//api/name/age</Anchor>
+			<Anchor>//api/name/flashOTA</Anchor>
             <NodeRef refid="11"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/setSex:</TokenIdentifier>
-			<Abstract type="html">性别，默认为女性 0。 绑定手表或者同步用户资料需要此参数</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/setAncsLanguage:</TokenIdentifier>
+			<Abstract type="html">ANCS语言支持标识，此标志的固件可以把app系统语言发送到手表，手表ancs消息通知会显示对应的语言</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) UInt32 sex</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL ancsLanguage</Declaration>
 			
 			
-			<Anchor>//api/name/sex</Anchor>
+			<Anchor>//api/name/ancsLanguage</Anchor>
             <NodeRef refid="11"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/sex</TokenIdentifier>
-			<Abstract type="html">性别，默认为女性 0。 绑定手表或者同步用户资料需要此参数</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/ancsLanguage</TokenIdentifier>
+			<Abstract type="html">ANCS语言支持标识，此标志的固件可以把app系统语言发送到手表，手表ancs消息通知会显示对应的语言</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) UInt32 sex</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL ancsLanguage</Declaration>
 			
 			
-			<Anchor>//api/name/sex</Anchor>
+			<Anchor>//api/name/ancsLanguage</Anchor>
             <NodeRef refid="11"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCUserObject/sex</TokenIdentifier>
-			<Abstract type="html">性别，默认为女性 0。 绑定手表或者同步用户资料需要此参数</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSensorFlagObject/ancsLanguage</TokenIdentifier>
+			<Abstract type="html">ANCS语言支持标识，此标志的固件可以把app系统语言发送到手表，手表ancs消息通知会显示对应的语言</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) UInt32 sex</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL ancsLanguage</Declaration>
 			
 			
-			<Anchor>//api/name/sex</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/setWeight:</TokenIdentifier>
-			<Abstract type="html">用户体重，默认60kg。绑定手表或者同步用户资料需要此参数</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) UInt32 weight</Declaration>
-			
-			
-			<Anchor>//api/name/weight</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/weight</TokenIdentifier>
-			<Abstract type="html">用户体重，默认60kg。绑定手表或者同步用户资料需要此参数</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) UInt32 weight</Declaration>
-			
-			
-			<Anchor>//api/name/weight</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCUserObject/weight</TokenIdentifier>
-			<Abstract type="html">用户体重，默认60kg。绑定手表或者同步用户资料需要此参数</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) UInt32 weight</Declaration>
-			
-			
-			<Anchor>//api/name/weight</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/setHeight:</TokenIdentifier>
-			<Abstract type="html">用户身高，女性默认 165cm, 男性默认 175cm。 绑定手表或者同步用户资料需要此参数</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) UInt32 height</Declaration>
-			
-			
-			<Anchor>//api/name/height</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/height</TokenIdentifier>
-			<Abstract type="html">用户身高，女性默认 165cm, 男性默认 175cm。 绑定手表或者同步用户资料需要此参数</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) UInt32 height</Declaration>
-			
-			
-			<Anchor>//api/name/height</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCUserObject/height</TokenIdentifier>
-			<Abstract type="html">用户身高，女性默认 165cm, 男性默认 175cm。 绑定手表或者同步用户资料需要此参数</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) UInt32 height</Declaration>
-			
-			
-			<Anchor>//api/name/height</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/setSystolicBP:</TokenIdentifier>
-			<Abstract type="html">收缩压参考值，默认125。绑定手表或者同步用户资料需要此参数</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) UInt16 systolicBP</Declaration>
-			
-			
-			<Anchor>//api/name/systolicBP</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/systolicBP</TokenIdentifier>
-			<Abstract type="html">收缩压参考值，默认125。绑定手表或者同步用户资料需要此参数</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) UInt16 systolicBP</Declaration>
-			
-			
-			<Anchor>//api/name/systolicBP</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCUserObject/systolicBP</TokenIdentifier>
-			<Abstract type="html">收缩压参考值，默认125。绑定手表或者同步用户资料需要此参数</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) UInt16 systolicBP</Declaration>
-			
-			
-			<Anchor>//api/name/systolicBP</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/setDiastolicBP:</TokenIdentifier>
-			<Abstract type="html">舒张压参考值，默认80。绑定手表或者同步用户资料需要此参数</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) UInt16 diastolicBP</Declaration>
-			
-			
-			<Anchor>//api/name/diastolicBP</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/diastolicBP</TokenIdentifier>
-			<Abstract type="html">舒张压参考值，默认80。绑定手表或者同步用户资料需要此参数</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) UInt16 diastolicBP</Declaration>
-			
-			
-			<Anchor>//api/name/diastolicBP</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCUserObject/diastolicBP</TokenIdentifier>
-			<Abstract type="html">舒张压参考值，默认80。绑定手表或者同步用户资料需要此参数</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) UInt16 diastolicBP</Declaration>
-			
-			
-			<Anchor>//api/name/diastolicBP</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/setIsLeftHandWearEnabled:</TokenIdentifier>
-			<Abstract type="html">佩戴方式，左右佩戴？右手佩戴。 绑定手表需要此参数</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL isLeftHandWearEnabled</Declaration>
-			
-			
-			<Anchor>//api/name/isLeftHandWearEnabled</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/isLeftHandWearEnabled</TokenIdentifier>
-			<Abstract type="html">佩戴方式，左右佩戴？右手佩戴。 绑定手表需要此参数</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL isLeftHandWearEnabled</Declaration>
-			
-			
-			<Anchor>//api/name/isLeftHandWearEnabled</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCUserObject/isLeftHandWearEnabled</TokenIdentifier>
-			<Abstract type="html">佩戴方式，左右佩戴？右手佩戴。 绑定手表需要此参数</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) BOOL isLeftHandWearEnabled</Declaration>
-			
-			
-			<Anchor>//api/name/isLeftHandWearEnabled</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/setFeaturesData:</TokenIdentifier>
-			<Abstract type="html">手表功能开关数据，详细参数见 &lt;i&gt;FCFeaturesObject&lt;/i&gt; ,手表绑定、登录或者同步历史数据时如果对此参数赋值，会将手表时间制式、单位等同步到手表，如果为nil则不同步此配置</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSData *featuresData</Declaration>
-			
-			
-			<Anchor>//api/name/featuresData</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/featuresData</TokenIdentifier>
-			<Abstract type="html">手表功能开关数据，详细参数见 &lt;i&gt;FCFeaturesObject&lt;/i&gt; ,手表绑定、登录或者同步历史数据时如果对此参数赋值，会将手表时间制式、单位等同步到手表，如果为nil则不同步此配置</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSData *featuresData</Declaration>
-			
-			
-			<Anchor>//api/name/featuresData</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCUserObject/featuresData</TokenIdentifier>
-			<Abstract type="html">手表功能开关数据，详细参数见 &lt;i&gt;FCFeaturesObject&lt;/i&gt; ,手表绑定、登录或者同步历史数据时如果对此参数赋值，会将手表时间制式、单位等同步到手表，如果为nil则不同步此配置</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSData *featuresData</Declaration>
-			
-			
-			<Anchor>//api/name/featuresData</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/writeDataForLoginOrBind</TokenIdentifier>
-			<Abstract type="html">登录或者绑定手表时蓝牙需要写入的数据</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>- (NSData *)writeDataForLoginOrBind</Declaration>
-			
-			
-			<Anchor>//api/name/writeDataForLoginOrBind</Anchor>
-            <NodeRef refid="11"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCUserObject/writeDataForUserProfile</TokenIdentifier>
-			<Abstract type="html">同步用户资料时蓝牙需要写入的数据</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>- (NSData *)writeDataForUserProfile</Declaration>
-			
-			
-			<Anchor>//api/name/writeDataForUserProfile</Anchor>
+			<Anchor>//api/name/ancsLanguage</Anchor>
             <NodeRef refid="11"/>
 		</Token>
 		

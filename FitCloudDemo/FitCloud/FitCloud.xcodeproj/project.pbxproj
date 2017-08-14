@@ -36,6 +36,7 @@
 		6B224B3D1F35F474009C0057 /* FitCloudUtils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B224B281F35F3B8009C0057 /* FitCloudUtils.h */; };
 		6B224B3E1F35F47F009C0057 /* FitCloudBlock.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B224B261F35F3B8009C0057 /* FitCloudBlock.h */; };
 		6B224B5E1F362B99009C0057 /* FCSysConfigUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B224B5D1F362B99009C0057 /* FCSysConfigUtils.m */; };
+		6B8D7FCD1F41DDA20074F6D6 /* FCSyncUtils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B95C4C81F3AF82F00803964 /* FCSyncUtils.h */; };
 		6B95C4C11F3AF45E00803964 /* FitCloudAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B95C4C01F3AF45E00803964 /* FitCloudAPI.m */; };
 		6B95C4C41F3AF63300803964 /* FCRTSyncUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B95C4C31F3AF63300803964 /* FCRTSyncUtils.m */; };
 		6B95C4C51F3AF7C900803964 /* FCSysConfigUtils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B224B5C1F362B99009C0057 /* FCSysConfigUtils.h */; };
@@ -51,6 +52,7 @@
 			dstPath = include;
 			dstSubfolderSpec = 16;
 			files = (
+				6B8D7FCD1F41DDA20074F6D6 /* FCSyncUtils.h in CopyFiles */,
 				6B95C4C51F3AF7C900803964 /* FCSysConfigUtils.h in CopyFiles */,
 				6B95C4C61F3AF7C900803964 /* FCRTSyncUtils.h in CopyFiles */,
 				6B95C4C71F3AF7C900803964 /* FitCloudAPI.h in CopyFiles */,

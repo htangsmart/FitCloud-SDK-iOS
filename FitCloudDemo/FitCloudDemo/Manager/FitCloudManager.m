@@ -235,11 +235,9 @@ void systemAudioCallback()
     __weak __typeof(self) ws = self;
     [self showLoadingHUDWithMessage:@"正在登录"];
     [[FitCloud shared]loginWithUser:user stepCallback:^(NSInteger syncType) {
-        
         NSLog(@"--登陆流程回调--%@",@(syncType));
-        
-    } result:^(FCSyncType syncType, FCLoginSyncType loginSyncType, FCSyncResponseState state) {
-        if (loginSyncType == FCLoginSyncTypeLogin)
+    } result:^(FCSyncType syncType, FCSyncResponseState state) {
+        if (syncType == FCSyncTypeLoginDevice)
         {
             if (state == FCSyncResponseStateError)
             {
@@ -256,7 +254,7 @@ void systemAudioCallback()
                         NSLog(@"蓝牙断开连接");
                     }
                 }
-
+                
             }
             else if (state == FCSyncResponseStateTimeOut)
             {
@@ -271,7 +269,7 @@ void systemAudioCallback()
             {
                 [ws hideLoadingHUDWithFailure:@"登录失败"];
             }
-            
+
         }
         else
         {
@@ -347,63 +345,59 @@ void systemAudioCallback()
     
     [ws hideAllHUDs];
     [ws showLoadingHUDWithMessage:@"正在同步"];
-    
     [[FitCloud shared]fcGetHistoryDataWithUser:userObj stepCallback:^(NSInteger syncType) {
-        
-        FCHistoryDataSyncType dataSyncType = (FCHistoryDataSyncType)syncType;
+        FCSyncType dataSyncType = (FCSyncType)syncType;
         NSLog(@"---同步步骤--%@",@(dataSyncType));
-        
-    } dataCallback:^(FCSyncType syncType, FCHistoryDataSyncType hdSyncType, NSData *data) {
-        
+    } dataCallback:^(FCSyncType syncType, NSData *data) {
         // 部分类型的数据是否同步跟随传感器标志变化，如传感器标志存在心率，则才会有心率数据返回
         dispatch_async(_asyncQueue, ^{
-            if (hdSyncType == FCHistoryDataSyncTypeTotalData)
+            if (syncType == FCSyncTypeGetDayTotalData)
             {
                 // 日总数据
                 [ws didReceivedTotalData:data];
             }
-            else if (hdSyncType == FCHistoryDataSyncTypeExercise)
+            else if (syncType == FCSyncTypeGetExerciseData)
             {
                 // 运动量
                 [ws didReceivedExerciseData:data];
             }
-            else if (hdSyncType == FCHistoryDataSyncTypeSleep)
+            else if (syncType == FCSyncTypeGetSleepData)
             {
                 // 睡眠
                 [ws didReceivedSleepData:data];
             }
-            else if (hdSyncType == FCHistoryDataSyncTypeHeartRate)
+            else if (syncType == FCSyncTypeGetHeartRateData)
             {
                 // 心率
                 [ws didReceivedHeartRateData:data];
             }
-            else if (hdSyncType == FCHistoryDataSyncTypeBloodOxygen)
+            else if (syncType == FCSyncTypeGetBloodOxygenData)
             {
                 // 血氧
                 [ws didReceivedBloodOxygenData:data];
             }
-            else if (hdSyncType == FCHistoryDataSyncTypeBloodPressure)
+            else if (syncType == FCSyncTypeGetBloodPressureData)
             {
                 // 血压
                 [ws didReceivedBloodPressureData:data];
             }
-            else if (hdSyncType == FCHistoryDataSyncTypeBreathingRate)
+            else if (syncType == FCSyncTypeGetBreathingRateData)
             {
                 // 呼吸频率
                 [ws didReceivedBreathingRateData:data];
             }
-            else if (hdSyncType == FCHistoryDataSyncTypeUltraviolet)
+            else if (syncType == FCSyncTypeGetUltravioletData)
             {
                 // 紫外线，暂无
             }
-            else if (hdSyncType == FCHistoryDataSyncTypeSevenDaysSleepData)
+            else if (syncType == FCSyncTypeGetSevenDaysSleepData)
             {
                 // 7日睡眠
-                NSArray *servenDaysArray = [FitCloudUtils getSleepTotalDataOfSevenDaysFromData:data];
+                NSArray *servenDaysArray = [FCSyncUtils getDetailsOfTotalSleepDataWithinSevenDays:data];
                 NSLog(@"---servenDaysArray--%@",servenDaysArray);
             }
         });
-    } result:^(FCSyncType syncType, FCHistoryDataSyncType hdSyncType, FCSyncResponseState state) {
+    } result:^(FCSyncType syncType, FCSyncResponseState state) {
         if (state == FCSyncResponseStateSuccess)
         {
             [ws hideLoadingHUDWithSuccess:@"同步完成"];
@@ -412,7 +406,7 @@ void systemAudioCallback()
         {
             [ws hideLoadingHUDWithFailure:@"同步超时"];
         }
-        else if (state == KRSyncResponseStateSynchronizing)
+        else if (state == FCSyncResponseStateSynchronizing)
         {
             NSLog(@"--正在同步[%@]--",@([FitCloud shared].syncType));
         }
@@ -434,7 +428,7 @@ void systemAudioCallback()
     if (!data) {
         return;
     }
-    NSDictionary *params = [FitCloudUtils getDetailsOfCurrentDayFromData:data];
+    NSDictionary *params = [FCSyncUtils getDetailsOfDailyTotalData:data];
     NSLog(@"--params--%@",params);
     
     // 如果需要对每日步数进行累加，请自行累加处理，每次手环重新绑定都会从0开始重新计算
@@ -469,7 +463,7 @@ void systemAudioCallback()
         return;
     }
     // 获取运动详细记录 （每五分钟一个记录）
-    NSArray *detailsArray = [FitCloudUtils getExerciseDetailsFromData:data];
+    NSArray *detailsArray = [FCSyncUtils getRecordsOfExercise:data];
     NSLog(@"--detailsArray--%@",detailsArray);
     // 存储详细记录，如果有需要，可以对记录按天统计求和
     
@@ -484,7 +478,7 @@ void systemAudioCallback()
         return;
     }
     // 获取运动详细记录 （每五分钟一个记录）
-    NSArray *detailsArray = [FitCloudUtils getSleepDetailsFromData:data];
+    NSArray *detailsArray = [FCSyncUtils getRecordsOfSleep:data];
     NSLog(@"--detailsArray--%@",detailsArray);
     // 存储详细记录，如果有需要，可以对记录按天统计求和
     
@@ -498,7 +492,7 @@ void systemAudioCallback()
         return;
     }
     // 获取运动详细记录 （每五分钟一个记录）
-    NSArray *detailsArray = [FitCloudUtils getHeartRateDetailsFromData:data];
+    NSArray *detailsArray = [FCSyncUtils getRecordsOfHeartRate:data];
     NSLog(@"--detailsArray--%@",detailsArray);
     // 存储详细记录，如果有需要，可以对记录按天统计平均值
     
@@ -512,7 +506,7 @@ void systemAudioCallback()
         return;
     }
     // 获取运动详细记录 （每五分钟一个记录）
-    NSArray *detailsArray = [FitCloudUtils getBloodOxygenDetailsFromData:data];
+    NSArray *detailsArray = [FCSyncUtils getRecordsOfBloodOxygen:data];
     NSLog(@"--detailsArray--%@",detailsArray);
     // 存储详细记录，如果有需要，可以对记录按天统计平均值
     
@@ -528,7 +522,7 @@ void systemAudioCallback()
     FCUserConfig *userConfig = [FCUserConfigDB getUserFromDB];
     
     // 获取运动详细记录 （每五分钟一个记录）
-    NSArray *detailsArray = [FitCloudUtils getBloodPressureDetailsFromData:data systolicBP:userConfig.systolicBP diastolicBP:userConfig.diastolicBP];
+    NSArray *detailsArray = [FCSyncUtils getRecordsOfBloodPressure:data systolicBP:userConfig.systolicBP diastolicBP:userConfig.diastolicBP];
     NSLog(@"--detailsArray--%@",detailsArray);
     // 存储详细记录，如果有需要，可以对记录按天统计平均值
     
@@ -542,7 +536,7 @@ void systemAudioCallback()
         return;
     }
     // 获取运动详细记录 （每五分钟一个记录）
-    NSArray *detailsArray = [FitCloudUtils getBreathingRateDetailsFromData:data];
+    NSArray *detailsArray = [FCSyncUtils getRecordsOfBreathingRate:data];
     NSLog(@"--detailsArray--%@",detailsArray);
     // 存储详细记录，如果有需要，可以对记录按天统计平均值
     

@@ -54,7 +54,8 @@
     // 重新排序id号
     [[FCAlarmConfigManager manager]redistributeAlarmID];
     
-    NSData *alarmConfigData = [FitCloudUtils getAlarmClockDataFromObjects:[FCAlarmConfigManager manager].listArray];
+    
+    NSData *alarmConfigData = [FCSysConfigUtils getAlarmClockConfigDataFromArray:[FCAlarmConfigManager manager].listArray];
     if (!alarmConfigData) {
         return;
     }
@@ -111,14 +112,13 @@
 {
     __weak __typeof(self) ws = self;
     [self showLoadingHUDWithMessage:@"正在同步"];
-    [[FitCloud shared]fcGetAlarmList:^(FCSyncType syncType, NSData *data) {
-        NSArray *alarmListArray = [FitCloudUtils getAlarmClocksFromData:data];
-        NSLog(@"--闹钟列表--%@",alarmListArray);
-        [[FCAlarmConfigManager manager]addAlarmClockFromArray:alarmListArray];
-        
-    } result:^(FCSyncType syncType, FCSyncResponseState state) {
+    [[FitCloud shared]fcGetAlarmList:^(NSData *data, FCSyncType syncType, FCSyncResponseState state) {
         if (state == FCSyncResponseStateSuccess)
         {
+            NSArray *alarmListArray = [FCSysConfigUtils getAlarmClockListFromData:data];
+            NSLog(@"--闹钟列表--%@",alarmListArray);
+            [[FCAlarmConfigManager manager]addAlarmClockFromArray:alarmListArray];
+            
             [ws hideLoadingHUDWithSuccess:@"同步完成"];
         }
         else

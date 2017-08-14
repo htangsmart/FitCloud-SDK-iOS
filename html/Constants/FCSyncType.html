@@ -97,39 +97,39 @@
                             
                             &nbsp;&nbsp; <a href="">FCSyncTypeBindDevice</a> = 3,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeFindTheWatch</a> = 4,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeUpdateWatchTime</a> = 4,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeGetAlarmList</a> = 5,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeSetFeatures</a> = 5,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeSetAlarmData</a> = 6,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeSetWearingStyle</a> = 6,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeGetBatteryLevelAndState</a> = 7,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeSetUserProfile</a> = 7,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeGetSystemSettings</a> = 8,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeSetDefaultBloodPressure</a> = 8,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeUpdateDisplaySettings</a> = 9,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeGetWatchConfig</a> = 9,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeUpdateFeaturesSettings</a> = 10,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeFindTheWatch</a> = 10,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeUpdateNotificationSettings</a> = 11,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeGetAlarmList</a> = 11,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeSetSedentaryReminder</a> = 12,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeSetAlarmData</a> = 12,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeSetHealthMonitoring</a> = 13,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeGetBatteryLevelAndState</a> = 13,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeSetDrinkReminder</a> = 14,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeSetScreenDisplay</a> = 14,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeSetWearingStyle</a> = 15,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeSetNotification</a> = 15,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeSetCameraState</a> = 16,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeSetSedentaryReminder</a> = 16,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeSetDefaultBloodPressure</a> = 17,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeSetHealthMonitoring</a> = 17,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeUpdateWeather</a> = 18,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeSetDrinkReminder</a> = 18,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeSetUserProfile</a> = 19,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeSetCameraState</a> = 19,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeGetHistoryData</a> = 20,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeUpdateWeather</a> = 20,<br>
                             
                             &nbsp;&nbsp; <a href="">FCSyncTypeOpenRealtimeSync</a> = 21,<br>
                             
@@ -139,13 +139,29 @@
                             
                             &nbsp;&nbsp; <a href="">FCSyncTypeGetFirmwareVersion</a> = 24,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeFoundPhoneReplay</a> = 25,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeGetMacAddress</a> = 25,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeGetMacAddress</a> = 26,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeFoundPhoneReplay</a> = 26,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeOpenSleepMonitoring</a> = 27,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeSetANCSLanguage</a> = 27,<br>
                             
-                            &nbsp;&nbsp; <a href="">FCSyncTypeCloseSleepMonitoring</a> = 28,<br>
+                            &nbsp;&nbsp; <a href="">FCSyncTypeGetDayTotalData</a> = 29,<br>
+                            
+                            &nbsp;&nbsp; <a href="">FCSyncTypeGetExerciseData</a> = 30,<br>
+                            
+                            &nbsp;&nbsp; <a href="">FCSyncTypeGetSleepData</a> = 31,<br>
+                            
+                            &nbsp;&nbsp; <a href="">FCSyncTypeGetBloodOxygenData</a> = 32,<br>
+                            
+                            &nbsp;&nbsp; <a href="">FCSyncTypeGetBloodPressureData</a> = 33,<br>
+                            
+                            &nbsp;&nbsp; <a href="">FCSyncTypeGetBreathingRateData</a> = 34,<br>
+                            
+                            &nbsp;&nbsp; <a href="">FCSyncTypeGetHeartRateData</a> = 35,<br>
+                            
+                            &nbsp;&nbsp; <a href="">FCSyncTypeGetUltravioletData</a> = 36,<br>
+                            
+                            &nbsp;&nbsp; <a href="">FCSyncTypeGetSevenDaysSleepData</a> = 37,<br>
                             
                             &nbsp;&nbsp; <a href="">FCSyncTypeEnd</a> = 100,<br>
                             
@@ -213,6 +229,108 @@
 
 
 <p>绑定设备</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">FCDefine.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="FCSyncTypeUpdateWatchTime"></a><code>FCSyncTypeUpdateWatchTime</code></dt>
+<dd>
+
+
+<p>设置系统时间</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">FCDefine.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="FCSyncTypeSetFeatures"></a><code>FCSyncTypeSetFeatures</code></dt>
+<dd>
+
+
+<p>更新功能开关</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">FCDefine.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="FCSyncTypeSetWearingStyle"></a><code>FCSyncTypeSetWearingStyle</code></dt>
+<dd>
+
+
+<p>更新佩戴方式</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">FCDefine.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="FCSyncTypeSetUserProfile"></a><code>FCSyncTypeSetUserProfile</code></dt>
+<dd>
+
+
+<p>更新用户资料</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">FCDefine.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="FCSyncTypeSetDefaultBloodPressure"></a><code>FCSyncTypeSetDefaultBloodPressure</code></dt>
+<dd>
+
+
+<p>更新默认参考血压</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">FCDefine.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="FCSyncTypeGetWatchConfig"></a><code>FCSyncTypeGetWatchConfig</code></dt>
+<dd>
+
+
+<p>获取手表配置</p>
 
 
 
@@ -293,24 +411,7 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncTypeGetSystemSettings"></a><code>FCSyncTypeGetSystemSettings</code></dt>
-<dd>
-
-
-<p>系统设置同步</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">FCDefine.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="FCSyncTypeUpdateDisplaySettings"></a><code>FCSyncTypeUpdateDisplaySettings</code></dt>
+                            <dt><a name="" title="FCSyncTypeSetScreenDisplay"></a><code>FCSyncTypeSetScreenDisplay</code></dt>
 <dd>
 
 
@@ -327,24 +428,7 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncTypeUpdateFeaturesSettings"></a><code>FCSyncTypeUpdateFeaturesSettings</code></dt>
-<dd>
-
-
-<p>功能开关设置</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">FCDefine.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="FCSyncTypeUpdateNotificationSettings"></a><code>FCSyncTypeUpdateNotificationSettings</code></dt>
+                            <dt><a name="" title="FCSyncTypeSetNotification"></a><code>FCSyncTypeSetNotification</code></dt>
 <dd>
 
 
@@ -412,23 +496,6 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncTypeSetWearingStyle"></a><code>FCSyncTypeSetWearingStyle</code></dt>
-<dd>
-
-
-<p>佩戴方式</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">FCDefine.h</code>.
-	</p>
-	
-</dd>
-                            
                             <dt><a name="" title="FCSyncTypeSetCameraState"></a><code>FCSyncTypeSetCameraState</code></dt>
 <dd>
 
@@ -446,62 +513,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncTypeSetDefaultBloodPressure"></a><code>FCSyncTypeSetDefaultBloodPressure</code></dt>
-<dd>
-
-
-<p>默认血压设置</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">FCDefine.h</code>.
-	</p>
-	
-</dd>
-                            
                             <dt><a name="" title="FCSyncTypeUpdateWeather"></a><code>FCSyncTypeUpdateWeather</code></dt>
 <dd>
 
 
 <p>天气更新</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">FCDefine.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="FCSyncTypeSetUserProfile"></a><code>FCSyncTypeSetUserProfile</code></dt>
-<dd>
-
-
-<p>同步用户资料</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">FCDefine.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="FCSyncTypeGetHistoryData"></a><code>FCSyncTypeGetHistoryData</code></dt>
-<dd>
-
-
-<p>历史数据同步</p>
 
 
 
@@ -582,23 +598,6 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncTypeFoundPhoneReplay"></a><code>FCSyncTypeFoundPhoneReplay</code></dt>
-<dd>
-
-
-<p>发现手机回复</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">FCDefine.h</code>.
-	</p>
-	
-</dd>
-                            
                             <dt><a name="" title="FCSyncTypeGetMacAddress"></a><code>FCSyncTypeGetMacAddress</code></dt>
 <dd>
 
@@ -616,11 +615,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncTypeOpenSleepMonitoring"></a><code>FCSyncTypeOpenSleepMonitoring</code></dt>
+                            <dt><a name="" title="FCSyncTypeFoundPhoneReplay"></a><code>FCSyncTypeFoundPhoneReplay</code></dt>
 <dd>
 
 
-<p>打开睡眠监测设定监测时间</p>
+<p>发现手机回复</p>
 
 
 
@@ -633,11 +632,164 @@
 	
 </dd>
                             
-                            <dt><a name="" title="FCSyncTypeCloseSleepMonitoring"></a><code>FCSyncTypeCloseSleepMonitoring</code></dt>
+                            <dt><a name="" title="FCSyncTypeSetANCSLanguage"></a><code>FCSyncTypeSetANCSLanguage</code></dt>
 <dd>
 
 
-<p>关闭睡眠监测</p>
+<p>设置ANCS语言</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">FCDefine.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="FCSyncTypeGetDayTotalData"></a><code>FCSyncTypeGetDayTotalData</code></dt>
+<dd>
+
+
+<p>获取日总数据包括运动总步数、总距离、总卡路里等</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">FCDefine.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="FCSyncTypeGetExerciseData"></a><code>FCSyncTypeGetExerciseData</code></dt>
+<dd>
+
+
+<p>获取运动量详细记录</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">FCDefine.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="FCSyncTypeGetSleepData"></a><code>FCSyncTypeGetSleepData</code></dt>
+<dd>
+
+
+<p>获取睡眠详细记录</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">FCDefine.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="FCSyncTypeGetBloodOxygenData"></a><code>FCSyncTypeGetBloodOxygenData</code></dt>
+<dd>
+
+
+<p>获取血氧记录</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">FCDefine.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="FCSyncTypeGetBloodPressureData"></a><code>FCSyncTypeGetBloodPressureData</code></dt>
+<dd>
+
+
+<p>获取血压记录</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">FCDefine.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="FCSyncTypeGetBreathingRateData"></a><code>FCSyncTypeGetBreathingRateData</code></dt>
+<dd>
+
+
+<p>获取呼吸频率记录</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">FCDefine.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="FCSyncTypeGetHeartRateData"></a><code>FCSyncTypeGetHeartRateData</code></dt>
+<dd>
+
+
+<p>获取心率记录</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">FCDefine.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="FCSyncTypeGetUltravioletData"></a><code>FCSyncTypeGetUltravioletData</code></dt>
+<dd>
+
+
+<p>获取紫外线记录</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">FCDefine.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="FCSyncTypeGetSevenDaysSleepData"></a><code>FCSyncTypeGetSevenDaysSleepData</code></dt>
+<dd>
+
+
+<p>获取七日睡眠总数据</p>
 
 
 
@@ -691,7 +843,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 H.Tang. All rights reserved. Updated: 2017-05-28</p>
+						<p class="copyright">Copyright &copy; 2017 H.Tang. All rights reserved. Updated: 2017-08-14</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

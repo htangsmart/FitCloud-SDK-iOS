@@ -1,67 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/FCHealthRTSyncType.html">
+	<File path="Classes/FitCloudAPI.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/FCHealthRTSyncType</TokenIdentifier>
-			<Abstract type="html">健康实时同步操作类型</Abstract>
-			<DeclaredIn>FCDefine.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/FitCloudAPI</TokenIdentifier>
+			<Abstract type="html">网络API接口类</Abstract>
+			<DeclaredIn>FitCloudAPI.h</DeclaredIn>
             
 			
 			<NodeRef refid="20"/>
 		</Token>
 		
 		
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCHealthRTSyncTypeUnKnown</TokenIdentifier>
-            <Abstract type="html">未知健康同步操作</Abstract>
-            <Declaration>FCHealthRTSyncTypeUnKnown</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FitCloudAPI/getNewFirmwareFromServer:result:</TokenIdentifier>
+			<Abstract type="html">固件升级检测API接口，此结果返回新固件下载链接和固件信息说明
+{
+     &quot;msg&quot;: &quot;请求成功&quot;,
+     &quot;object&quot;: {
+         &quot;compulsion_tag&quot;: &quot;0&quot;, // 是否需要强制更新
+         &quot;hardwareInfo&quot;: &quot;0000000000200000004D002200330000110131170000000000000D0212345678&quot;, // 固件版本信息
+         &quot;hardwareName&quot;: &quot;X40020170518&quot;, // 固件名称
+         &quot;hardwareUrl&quot;: &quot;http://dl.hetangsmart.com:8380/upload/bin/64c30979522841dd9731174b4e18f510.bin&quot;, //固件下载链接
+         &quot;note&quot;: &quot;&quot; // 备注信息
+     },
+    &quot;status&quot;: 1
+}
+注：部分固件可能需要进行两次升级，所以每次升级成功都需要再查询一次新固件信息</Abstract>
+			<DeclaredIn>FitCloudAPI.h</DeclaredIn>
+			
+			<Declaration>+ (NSURLSessionDataTask *)getNewFirmwareFromServer:(NSString *)versionInfoString result:(void ( ^ ) ( id responseObject , NSError *error ))retHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>versionInfoString</Name>
+					<Abstract type="html">固件版本信息字符串</Abstract>
+				</Parameter><Parameter>
+					<Name>retHandler</Name>
+					<Abstract type="html">请求结果回调</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">请求任务</Abstract></ReturnValue>
+			<Anchor>//api/name/getNewFirmwareFromServer:result:</Anchor>
             <NodeRef refid="20"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCHealthRTSyncTypeOpenRTSync</TokenIdentifier>
-            <Abstract type="html">打开健康实时同步</Abstract>
-            <Declaration>FCHealthRTSyncTypeOpenRTSync</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="20"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCHealthRTSyncTypeCloseRTSync</TokenIdentifier>
-            <Abstract type="html">关闭健康实时同步</Abstract>
-            <Declaration>FCHealthRTSyncTypeCloseRTSync</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="20"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCHealthRTSyncTypeOpenECG</TokenIdentifier>
-            <Abstract type="html">打开心电检测</Abstract>
-            <Declaration>FCHealthRTSyncTypeOpenECG</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="20"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCHealthRTSyncTypeCloseECG</TokenIdentifier>
-            <Abstract type="html">关闭心电检测</Abstract>
-            <Declaration>FCHealthRTSyncTypeCloseECG</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="20"/>
-        </Token>
+		</Token>
+		
         
         
 	</File>

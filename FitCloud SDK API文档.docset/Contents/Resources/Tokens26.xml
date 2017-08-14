@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/FCSyncType.html">
+	<File path="Constants/FCRTSyncType.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/FCSyncType</TokenIdentifier>
-			<Abstract type="html">手环数据同步标志</Abstract>
+			<TokenIdentifier>//apple_ref/c/tdef/FCRTSyncType</TokenIdentifier>
+			<Abstract type="html">实时同步类型</Abstract>
 			<DeclaredIn>FCDefine.h</DeclaredIn>
             
 			
@@ -14,9 +14,9 @@
 		
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeUnknown</TokenIdentifier>
-            <Abstract type="html">默认类型</Abstract>
-            <Declaration>FCSyncTypeUnknown</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeUnknown</TokenIdentifier>
+            <Abstract type="html">默认</Abstract>
+            <Declaration>FCRTSyncTypeUnknown</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -24,9 +24,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeUnBindDevice</TokenIdentifier>
-            <Abstract type="html">解绑设备</Abstract>
-            <Declaration>FCSyncTypeUnBindDevice</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeHeartRate</TokenIdentifier>
+            <Abstract type="html">心率</Abstract>
+            <Declaration>FCRTSyncTypeHeartRate</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -34,9 +34,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeLoginDevice</TokenIdentifier>
-            <Abstract type="html">登录设备</Abstract>
-            <Declaration>FCSyncTypeLoginDevice</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeBloodOxygen</TokenIdentifier>
+            <Abstract type="html">实时血氧</Abstract>
+            <Declaration>FCRTSyncTypeBloodOxygen</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -44,9 +44,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeBindDevice</TokenIdentifier>
-            <Abstract type="html">绑定设备</Abstract>
-            <Declaration>FCSyncTypeBindDevice</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeBloodPressure</TokenIdentifier>
+            <Abstract type="html">血压e</Abstract>
+            <Declaration>FCRTSyncTypeBloodPressure</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -54,9 +54,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeFindTheWatch</TokenIdentifier>
-            <Abstract type="html">查找手表</Abstract>
-            <Declaration>FCSyncTypeFindTheWatch</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeBreathingRate</TokenIdentifier>
+            <Abstract type="html">呼吸频率</Abstract>
+            <Declaration>FCRTSyncTypeBreathingRate</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             
@@ -64,249 +64,9 @@
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeGetAlarmList</TokenIdentifier>
-            <Abstract type="html">获取闹钟列表</Abstract>
-            <Declaration>FCSyncTypeGetAlarmList</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeSetAlarmData</TokenIdentifier>
-            <Abstract type="html">闹钟设置</Abstract>
-            <Declaration>FCSyncTypeSetAlarmData</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeGetBatteryLevelAndState</TokenIdentifier>
-            <Abstract type="html">电量和充电状态获取</Abstract>
-            <Declaration>FCSyncTypeGetBatteryLevelAndState</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeGetSystemSettings</TokenIdentifier>
-            <Abstract type="html">系统设置同步</Abstract>
-            <Declaration>FCSyncTypeGetSystemSettings</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeUpdateDisplaySettings</TokenIdentifier>
-            <Abstract type="html">屏幕显示设置</Abstract>
-            <Declaration>FCSyncTypeUpdateDisplaySettings</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeUpdateFeaturesSettings</TokenIdentifier>
-            <Abstract type="html">功能开关设置</Abstract>
-            <Declaration>FCSyncTypeUpdateFeaturesSettings</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeUpdateNotificationSettings</TokenIdentifier>
-            <Abstract type="html">通知开关设置</Abstract>
-            <Declaration>FCSyncTypeUpdateNotificationSettings</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeSetSedentaryReminder</TokenIdentifier>
-            <Abstract type="html">久坐提醒</Abstract>
-            <Declaration>FCSyncTypeSetSedentaryReminder</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeSetHealthMonitoring</TokenIdentifier>
-            <Abstract type="html">健康监测</Abstract>
-            <Declaration>FCSyncTypeSetHealthMonitoring</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeSetDrinkReminder</TokenIdentifier>
-            <Abstract type="html">喝水提醒</Abstract>
-            <Declaration>FCSyncTypeSetDrinkReminder</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeSetWearingStyle</TokenIdentifier>
-            <Abstract type="html">佩戴方式</Abstract>
-            <Declaration>FCSyncTypeSetWearingStyle</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeSetCameraState</TokenIdentifier>
-            <Abstract type="html">相机状态设置</Abstract>
-            <Declaration>FCSyncTypeSetCameraState</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeSetDefaultBloodPressure</TokenIdentifier>
-            <Abstract type="html">默认血压设置</Abstract>
-            <Declaration>FCSyncTypeSetDefaultBloodPressure</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeUpdateWeather</TokenIdentifier>
-            <Abstract type="html">天气更新</Abstract>
-            <Declaration>FCSyncTypeUpdateWeather</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeSetUserProfile</TokenIdentifier>
-            <Abstract type="html">同步用户资料</Abstract>
-            <Declaration>FCSyncTypeSetUserProfile</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeGetHistoryData</TokenIdentifier>
-            <Abstract type="html">历史数据同步</Abstract>
-            <Declaration>FCSyncTypeGetHistoryData</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeOpenRealtimeSync</TokenIdentifier>
-            <Abstract type="html">打开健康实时同步</Abstract>
-            <Declaration>FCSyncTypeOpenRealtimeSync</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeCloseRealtimeSync</TokenIdentifier>
-            <Abstract type="html">关闭健康实时同步</Abstract>
-            <Declaration>FCSyncTypeCloseRealtimeSync</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeFirmwareUpgrade</TokenIdentifier>
-            <Abstract type="html">请求固件升级</Abstract>
-            <Declaration>FCSyncTypeFirmwareUpgrade</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeGetFirmwareVersion</TokenIdentifier>
-            <Abstract type="html">获取固件版本</Abstract>
-            <Declaration>FCSyncTypeGetFirmwareVersion</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeFoundPhoneReplay</TokenIdentifier>
-            <Abstract type="html">发现手机回复</Abstract>
-            <Declaration>FCSyncTypeFoundPhoneReplay</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeGetMacAddress</TokenIdentifier>
-            <Abstract type="html">获取手表mac地址</Abstract>
-            <Declaration>FCSyncTypeGetMacAddress</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeOpenSleepMonitoring</TokenIdentifier>
-            <Abstract type="html">打开睡眠监测设定监测时间</Abstract>
-            <Declaration>FCSyncTypeOpenSleepMonitoring</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeCloseSleepMonitoring</TokenIdentifier>
-            <Abstract type="html">关闭睡眠监测</Abstract>
-            <Declaration>FCSyncTypeCloseSleepMonitoring</Declaration>
-            
-            <DeclaredIn>FCDefine.h</DeclaredIn>
-            
-            <NodeRef refid="26"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/FCSyncTypeEnd</TokenIdentifier>
-            <Abstract type="html">结束</Abstract>
-            <Declaration>FCSyncTypeEnd</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeECG</TokenIdentifier>
+            <Abstract type="html">心电图</Abstract>
+            <Declaration>FCRTSyncTypeECG</Declaration>
             
             <DeclaredIn>FCDefine.h</DeclaredIn>
             

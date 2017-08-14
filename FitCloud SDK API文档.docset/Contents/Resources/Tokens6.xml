@@ -229,38 +229,38 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationObject/setHeartRateMonitoringEnabled:</TokenIdentifier>
-			<Abstract type="html">心率实时监测，打开此开关，手表会持续采集用户心率数据</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationObject/setKakaoMessage:</TokenIdentifier>
+			<Abstract type="html">kakao消息通知</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL heartRateMonitoringEnabled</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL kakaoMessage</Declaration>
 			
 			
-			<Anchor>//api/name/heartRateMonitoringEnabled</Anchor>
+			<Anchor>//api/name/kakaoMessage</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationObject/heartRateMonitoringEnabled</TokenIdentifier>
-			<Abstract type="html">心率实时监测，打开此开关，手表会持续采集用户心率数据</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/FCNotificationObject/kakaoMessage</TokenIdentifier>
+			<Abstract type="html">kakao消息通知</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL heartRateMonitoringEnabled</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL kakaoMessage</Declaration>
 			
 			
-			<Anchor>//api/name/heartRateMonitoringEnabled</Anchor>
+			<Anchor>//api/name/kakaoMessage</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCNotificationObject/heartRateMonitoringEnabled</TokenIdentifier>
-			<Abstract type="html">心率实时监测，打开此开关，手表会持续采集用户心率数据</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/FCNotificationObject/kakaoMessage</TokenIdentifier>
+			<Abstract type="html">kakao消息通知</Abstract>
 			<DeclaredIn>FCObject.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL heartRateMonitoringEnabled</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL kakaoMessage</Declaration>
 			
 			
-			<Anchor>//api/name/heartRateMonitoringEnabled</Anchor>
+			<Anchor>//api/name/kakaoMessage</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		

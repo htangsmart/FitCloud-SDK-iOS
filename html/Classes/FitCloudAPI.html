@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>FitCloudAPI Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">FitCloud </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">H.Tang</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/getNewFirmwareFromServer:result:">+ getNewFirmwareFromServer:result:</option>
+		
+	</optgroup>
+	
+
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">FitCloudAPI Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>FitCloudAPI.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>网络API接口类</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/getNewFirmwareFromServer:result:" title="getNewFirmwareFromServer:result:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getNewFirmwareFromServer:result:">+&nbsp;getNewFirmwareFromServer:result:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>固件升级检测API接口，此结果返回新固件下载链接和固件信息说明
+{
+     &ldquo;msg&rdquo;: &ldquo;请求成功&rdquo;,
+     &ldquo;object&rdquo;: {
+         &ldquo;compulsion_tag&rdquo;: &ldquo;0&rdquo;, // 是否需要强制更新
+         &ldquo;hardwareInfo&rdquo;: &ldquo;0000000000200000004D002200330000110131170000000000000D0212345678&rdquo;, // 固件版本信息
+         &ldquo;hardwareName&rdquo;: &ldquo;X40020170518&rdquo;, // 固件名称
+         &ldquo;hardwareUrl&rdquo;: &ldquo;<a href="http://dl.hetangsmart.com:8380/upload/bin/64c30979522841dd9731174b4e18f510.bin">http://dl.hetangsmart.com:8380/upload/bin/64c30979522841dd9731174b4e18f510.bin</a>&rdquo;, //固件下载链接
+         &ldquo;note&rdquo;: &ldquo;&rdquo; // 备注信息
+     },
+    &ldquo;status&rdquo;: 1
+}
+注：部分固件可能需要进行两次升级，所以每次升级成功都需要再查询一次新固件信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSURLSessionDataTask *)getNewFirmwareFromServer:(NSString *)<em>versionInfoString</em> result:(void ( ^ ) ( id responseObject , NSError *error ))<em>retHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>versionInfoString</code></th>
+						<td><p>固件版本信息字符串</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retHandler</code></th>
+						<td><p>请求结果回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>请求任务</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FitCloudAPI.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 H.Tang. All rights reserved. Updated: 2017-08-14</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/FCVersionDataObject.html">
+	<File path="Classes/FCSyncUtils.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/FCVersionDataObject</TokenIdentifier>
-			<Abstract type="html">手表系统版本信息</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/FCSyncUtils</TokenIdentifier>
+			<Abstract type="html">运动数据同步结果解析</Abstract>
+			<DeclaredIn>FCSyncUtils.h</DeclaredIn>
             
 			
 			<NodeRef refid="12"/>
@@ -13,308 +13,158 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCVersionDataObject/setFwNumberData:</TokenIdentifier>
-			<Abstract type="html">项目的编号</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/FCSyncUtils/getDetailsOfDailyTotalData:</TokenIdentifier>
+			<Abstract type="html">获取当日多项总数据记录，包括总步数、总距离、总卡路里、深睡眠时长、浅睡眠时长、平均心率
+返回结果：{
+     &quot;stepCount&quot;: 0, // 步数,单位 步
+     &quot;distance&quot;: 0, // 距离，单位 m
+     &quot;calorie&quot;: 0, // 卡路里， 单位 cal
+     &quot;deepSleep&quot;: 0, // 深睡眠， 单位 min
+     &quot;lightSleep&quot;: 0,// 浅睡眠， 单位 min
+     &quot;avgHeartRate&quot;: 0, // 评价心率， 单位 次/分
+}</Abstract>
+			<DeclaredIn>FCSyncUtils.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *fwNumberData</Declaration>
-			
-			
-			<Anchor>//api/name/fwNumberData</Anchor>
+			<Declaration>+ (NSDictionary *)getDetailsOfDailyTotalData:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">手表返回的日总数据</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">日总数据详细记录</Abstract></ReturnValue>
+			<Anchor>//api/name/getDetailsOfDailyTotalData:</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCVersionDataObject/fwNumberData</TokenIdentifier>
-			<Abstract type="html">项目的编号</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/FCSyncUtils/getDetailsOfTotalSleepDataWithinSevenDays:</TokenIdentifier>
+			<Abstract type="html">获取七日内的睡眠总数据，手表返回七天或者少于7天的睡眠时长数据
+注意：只返回睡眠总时长（深睡眠时长+浅睡眠时长）大于0的日总睡眠记录
+返回结果：[{
+     @&quot;timeStamp&quot;:时间戳,
+     @&quot;deepSleep&quot;:深睡眠,
+     @&quot;lightSleep&quot;:浅睡眠
+},....];</Abstract>
+			<DeclaredIn>FCSyncUtils.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *fwNumberData</Declaration>
-			
-			
-			<Anchor>//api/name/fwNumberData</Anchor>
+			<Declaration>+ (NSArray *)getDetailsOfTotalSleepDataWithinSevenDays:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">睡眠总数据</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">七日睡眠记录</Abstract></ReturnValue>
+			<Anchor>//api/name/getDetailsOfTotalSleepDataWithinSevenDays:</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCVersionDataObject/fwNumberData</TokenIdentifier>
-			<Abstract type="html">项目的编号</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/FCSyncUtils/getRecordsOfExercise:</TokenIdentifier>
+			<Abstract type="html">获取运动量的详细记录（每五分钟一个数据）</Abstract>
+			<DeclaredIn>FCSyncUtils.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) NSData *fwNumberData</Declaration>
-			
-			
-			<Anchor>//api/name/fwNumberData</Anchor>
+			<Declaration>+ (NSArray *)getRecordsOfExercise:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">运动同步返回数据</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">包含&lt;i&gt;FCDataObject&lt;/i&gt;对象的数组</Abstract></ReturnValue>
+			<Anchor>//api/name/getRecordsOfExercise:</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCVersionDataObject/setSensorTagData:</TokenIdentifier>
-			<Abstract type="html">硬件号亦为手环传感器或功能标志位，组成的32bit，每个bit代表某一传感器或功能在该项目是否存在，手机APP根据该硬件号判断在手机APP上是否显示该功能和是否同步该项数据，</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/FCSyncUtils/getRecordsOfSleep:</TokenIdentifier>
+			<Abstract type="html">获取睡眠详细记录（每五分钟一个数据）</Abstract>
+			<DeclaredIn>FCSyncUtils.h</DeclaredIn>
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/FCSensorFlagObject</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>@property (nonatomic, strong) NSData *sensorTagData</Declaration>
-			
-			
-			<Anchor>//api/name/sensorTagData</Anchor>
+			<Declaration>+ (NSArray *)getRecordsOfSleep:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">睡眠同步返回数据</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">包含&lt;i&gt;FCDataObject&lt;/i&gt;对象的数组</Abstract></ReturnValue>
+			<Anchor>//api/name/getRecordsOfSleep:</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCVersionDataObject/sensorTagData</TokenIdentifier>
-			<Abstract type="html">硬件号亦为手环传感器或功能标志位，组成的32bit，每个bit代表某一传感器或功能在该项目是否存在，手机APP根据该硬件号判断在手机APP上是否显示该功能和是否同步该项数据，</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/FCSyncUtils/getRecordsOfHeartRate:</TokenIdentifier>
+			<Abstract type="html">获取心率详细记录（每五分钟一个数据）</Abstract>
+			<DeclaredIn>FCSyncUtils.h</DeclaredIn>
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/FCSensorFlagObject</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>@property (nonatomic, strong) NSData *sensorTagData</Declaration>
-			
-			
-			<Anchor>//api/name/sensorTagData</Anchor>
+			<Declaration>+ (NSArray *)getRecordsOfHeartRate:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">心率同步返回数据</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">包含&lt;i&gt;FCDataObject&lt;/i&gt;对象的数组</Abstract></ReturnValue>
+			<Anchor>//api/name/getRecordsOfHeartRate:</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCVersionDataObject/sensorTagData</TokenIdentifier>
-			<Abstract type="html">硬件号亦为手环传感器或功能标志位，组成的32bit，每个bit代表某一传感器或功能在该项目是否存在，手机APP根据该硬件号判断在手机APP上是否显示该功能和是否同步该项数据，</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/FCSyncUtils/getRecordsOfBloodOxygen:</TokenIdentifier>
+			<Abstract type="html">获取血氧详细记录（每五分钟一个数据）</Abstract>
+			<DeclaredIn>FCSyncUtils.h</DeclaredIn>
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/FCSensorFlagObject</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>@property (nonatomic, strong) NSData *sensorTagData</Declaration>
-			
-			
-			<Anchor>//api/name/sensorTagData</Anchor>
+			<Declaration>+ (NSArray *)getRecordsOfBloodOxygen:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">血氧同步返回数据</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">包含&lt;i&gt;FCDataObject&lt;/i&gt;对象的数组</Abstract></ReturnValue>
+			<Anchor>//api/name/getRecordsOfBloodOxygen:</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCVersionDataObject/setPageDisplayData:</TokenIdentifier>
-			<Abstract type="html">手环页面标号为该项目手环上能显示的所有页面的标志，共32bit，每个bit代表一个页面，手机APP上根据该标号来确定有哪些显示页面可以给用户设置。此处数据暂不使用，可以通过&lt;i&gt;FCSystemSettingObject&lt;/i&gt; 的 &lt;i&gt;wsdisplayData&lt;/i&gt;获取设置信息  4byte</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/FCSyncUtils/getRecordsOfBloodPressure:systolicBP:diastolicBP:</TokenIdentifier>
+			<Abstract type="html">获取血压详细记录（每五分钟一个数据）</Abstract>
+			<DeclaredIn>FCSyncUtils.h</DeclaredIn>
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/FCScreenDisplayConfigObject</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>@property (nonatomic, strong) NSData *pageDisplayData</Declaration>
-			
-			
-			<Anchor>//api/name/pageDisplayData</Anchor>
+			<Declaration>+ (NSArray *)getRecordsOfBloodPressure:(NSData *)data systolicBP:(UInt16)systolicBP diastolicBP:(UInt16)diastolicBP</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">血压同步数据返回</Abstract>
+				</Parameter><Parameter>
+					<Name>systolicBP</Name>
+					<Abstract type="html">收缩压参考值</Abstract>
+				</Parameter><Parameter>
+					<Name>diastolicBP</Name>
+					<Abstract type="html">舒张压参考值</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">包含&lt;i&gt;FCDataObject&lt;/i&gt;对象的数组</Abstract></ReturnValue>
+			<Anchor>//api/name/getRecordsOfBloodPressure:systolicBP:diastolicBP:</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCVersionDataObject/pageDisplayData</TokenIdentifier>
-			<Abstract type="html">手环页面标号为该项目手环上能显示的所有页面的标志，共32bit，每个bit代表一个页面，手机APP上根据该标号来确定有哪些显示页面可以给用户设置。此处数据暂不使用，可以通过&lt;i&gt;FCSystemSettingObject&lt;/i&gt; 的 &lt;i&gt;wsdisplayData&lt;/i&gt;获取设置信息  4byte</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/FCSyncUtils/getRecordsOfBreathingRate:</TokenIdentifier>
+			<Abstract type="html">获取呼吸频率详细记录（每五分钟一个数据）</Abstract>
+			<DeclaredIn>FCSyncUtils.h</DeclaredIn>
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/FCScreenDisplayConfigObject</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>@property (nonatomic, strong) NSData *pageDisplayData</Declaration>
-			
-			
-			<Anchor>//api/name/pageDisplayData</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCVersionDataObject/pageDisplayData</TokenIdentifier>
-			<Abstract type="html">手环页面标号为该项目手环上能显示的所有页面的标志，共32bit，每个bit代表一个页面，手机APP上根据该标号来确定有哪些显示页面可以给用户设置。此处数据暂不使用，可以通过&lt;i&gt;FCSystemSettingObject&lt;/i&gt; 的 &lt;i&gt;wsdisplayData&lt;/i&gt;获取设置信息  4byte</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/FCScreenDisplayConfigObject</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>@property (nonatomic, strong) NSData *pageDisplayData</Declaration>
-			
-			
-			<Anchor>//api/name/pageDisplayData</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCVersionDataObject/setPatchData:</TokenIdentifier>
-			<Abstract type="html">手环底层patch的版本号 6byte</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSData *patchData</Declaration>
-			
-			
-			<Anchor>//api/name/patchData</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCVersionDataObject/patchData</TokenIdentifier>
-			<Abstract type="html">手环底层patch的版本号 6byte</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSData *patchData</Declaration>
-			
-			
-			<Anchor>//api/name/patchData</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCVersionDataObject/patchData</TokenIdentifier>
-			<Abstract type="html">手环底层patch的版本号 6byte</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSData *patchData</Declaration>
-			
-			
-			<Anchor>//api/name/patchData</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCVersionDataObject/setFlashData:</TokenIdentifier>
-			<Abstract type="html">flash文件版本号 4byte</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSData *flashData</Declaration>
-			
-			
-			<Anchor>//api/name/flashData</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCVersionDataObject/flashData</TokenIdentifier>
-			<Abstract type="html">flash文件版本号 4byte</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSData *flashData</Declaration>
-			
-			
-			<Anchor>//api/name/flashData</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCVersionDataObject/flashData</TokenIdentifier>
-			<Abstract type="html">flash文件版本号 4byte</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSData *flashData</Declaration>
-			
-			
-			<Anchor>//api/name/flashData</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCVersionDataObject/setFwAppData:</TokenIdentifier>
-			<Abstract type="html">固件app版本号 4byte</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSData *fwAppData</Declaration>
-			
-			
-			<Anchor>//api/name/fwAppData</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCVersionDataObject/fwAppData</TokenIdentifier>
-			<Abstract type="html">固件app版本号 4byte</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSData *fwAppData</Declaration>
-			
-			
-			<Anchor>//api/name/fwAppData</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCVersionDataObject/fwAppData</TokenIdentifier>
-			<Abstract type="html">固件app版本号 4byte</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSData *fwAppData</Declaration>
-			
-			
-			<Anchor>//api/name/fwAppData</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCVersionDataObject/setTimeSeqNumData:</TokenIdentifier>
-			<Abstract type="html">固件版本时间序号 4byte</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSData *timeSeqNumData</Declaration>
-			
-			
-			<Anchor>//api/name/timeSeqNumData</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCVersionDataObject/timeSeqNumData</TokenIdentifier>
-			<Abstract type="html">固件版本时间序号 4byte</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSData *timeSeqNumData</Declaration>
-			
-			
-			<Anchor>//api/name/timeSeqNumData</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FCVersionDataObject/timeSeqNumData</TokenIdentifier>
-			<Abstract type="html">固件版本时间序号 4byte</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSData *timeSeqNumData</Declaration>
-			
-			
-			<Anchor>//api/name/timeSeqNumData</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCVersionDataObject/sensorTagObject</TokenIdentifier>
-			<Abstract type="html">通过系统版本数据获取传感器标志位对象</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>- (FCSensorFlagObject *)sensorTagObject</Declaration>
-			
-			<ReturnValue><Abstract type="html">传感器标志对象</Abstract></ReturnValue>
-			<Anchor>//api/name/sensorTagObject</Anchor>
-            <NodeRef refid="12"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FCVersionDataObject/pageDisplayFlagObject</TokenIdentifier>
-			<Abstract type="html">手环页面显示标志，如果某个属性存在，手表屏幕才能显示某个功能，否则就不显示。&lt;i&gt;FCScreenDisplayConfigObject&lt;/i&gt;中的部分属性如果不需要显示，则必须设置为NO,其余属性根据需要动态配置</Abstract>
-			<DeclaredIn>FCObject.h</DeclaredIn>
-			
-			<Declaration>- (FCPageDisplayFlagObject *)pageDisplayFlagObject</Declaration>
-			
-			<ReturnValue><Abstract type="html">页面显示标志对象</Abstract></ReturnValue>
-			<Anchor>//api/name/pageDisplayFlagObject</Anchor>
+			<Declaration>+ (NSArray *)getRecordsOfBreathingRate:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">呼吸频率同步返回数据</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">包含&lt;i&gt;FCDataObject&lt;/i&gt;对象的数组</Abstract></ReturnValue>
+			<Anchor>//api/name/getRecordsOfBreathingRate:</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		

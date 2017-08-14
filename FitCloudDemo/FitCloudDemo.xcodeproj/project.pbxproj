@@ -1261,7 +1261,7 @@
 				DEVELOPMENT_TEAM = K4VY4M94L6;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/lib",
+					"$(PROJECT_DIR)/lib/**",
 				);
 				INFOPLIST_FILE = FitCloudDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1284,7 +1284,7 @@
 				DEVELOPMENT_TEAM = K4VY4M94L6;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/lib",
+					"$(PROJECT_DIR)/lib/**",
 				);
 				INFOPLIST_FILE = FitCloudDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

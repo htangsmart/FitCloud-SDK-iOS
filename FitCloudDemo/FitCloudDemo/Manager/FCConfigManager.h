@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <FitCloudKit.h>
+#import "FitCloudKit.h"
+
 
 // 用于手表配置信息管理
 @interface FCConfigManager : NSObject
