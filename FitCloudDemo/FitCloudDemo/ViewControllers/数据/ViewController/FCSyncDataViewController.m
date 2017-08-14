@@ -216,6 +216,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self startMeasuringHeartRate];
+    
     if (indexPath.row < [self.sensorFlag itemNameArray].count)
     {
         NSString *itemName = self.sensorFlag.itemNameArray[indexPath.row];
@@ -233,7 +235,7 @@
         }
         else if ([itemName isEqualToString:@"心率"])
         {
-
+            [self startMeasuringHeartRate];
         }
         else if ([itemName isEqualToString:@"血氧"])
         {
@@ -255,6 +257,30 @@
 
 }
 
+
+- (void)startMeasuringHeartRate
+{
+    [[FitCloud shared]fcOpenRealTimeSync:FCRTSyncTypeHeartRate dataCallback:^(FCSyncType syncType, NSData *data) {
+        NSLog(@"--data--%@",data);
+        if (data && data.length > 5)
+        {
+            Byte byte[1] = {0};
+            [data getBytes:byte range:NSMakeRange(data.length-5, 1)];
+            NSNumber *realTimeValue = @(byte[0]);
+            NSLog(@"---value--%@",realTimeValue);
+        }
+    } result:^(FCSyncType syncType, FCSyncResponseState state) {
+        NSLog(@"--state--%@",@(state));
+        if (state == FCSyncResponseStateSuccess)
+        {
+            NSLog(@"--响应成功--");
+        }
+        else if (state == FCSyncResponseStateRTTimeOut)
+        {
+            NSLog(@"--响应超时--");
+        }
+    }];
+}
 
 #pragma mark - Getter
 

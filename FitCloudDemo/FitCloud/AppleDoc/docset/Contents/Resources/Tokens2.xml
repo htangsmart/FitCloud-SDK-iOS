@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FCAlarmClockObject.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FCAlarmClockObject</TokenIdentifier>
+			<Abstract type="html">闹钟对象</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+            
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmClockObject/ringTime</TokenIdentifier>
+			<Abstract type="html">响铃时间</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)ringTime</Declaration>
+			
+			<ReturnValue><Abstract type="html">响铃时间字符串 格式：&quot;HH: mm&quot;</Abstract></ReturnValue>
+			<Anchor>//api/name/ringTime</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

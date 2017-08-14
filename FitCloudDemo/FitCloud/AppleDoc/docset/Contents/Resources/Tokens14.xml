@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FCWeather.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FCWeather</TokenIdentifier>
+			<Abstract type="html">天气</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+            
+			
+			<NodeRef refid="14"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWeather/setTemperature:</TokenIdentifier>
+			<Abstract type="html">当前温度</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSInteger temperature</Declaration>
+			
+			
+			<Anchor>//api/name/temperature</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWeather/temperature</TokenIdentifier>
+			<Abstract type="html">当前温度</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSInteger temperature</Declaration>
+			
+			
+			<Anchor>//api/name/temperature</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCWeather/temperature</TokenIdentifier>
+			<Abstract type="html">当前温度</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSInteger temperature</Declaration>
+			
+			
+			<Anchor>//api/name/temperature</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWeather/setMaxTemperature:</TokenIdentifier>
+			<Abstract type="html">最高温度</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSInteger maxTemperature</Declaration>
+			
+			
+			<Anchor>//api/name/maxTemperature</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWeather/maxTemperature</TokenIdentifier>
+			<Abstract type="html">最高温度</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSInteger maxTemperature</Declaration>
+			
+			
+			<Anchor>//api/name/maxTemperature</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCWeather/maxTemperature</TokenIdentifier>
+			<Abstract type="html">最高温度</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSInteger maxTemperature</Declaration>
+			
+			
+			<Anchor>//api/name/maxTemperature</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWeather/setMinTemperature:</TokenIdentifier>
+			<Abstract type="html">最低温度</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSInteger minTemperature</Declaration>
+			
+			
+			<Anchor>//api/name/minTemperature</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWeather/minTemperature</TokenIdentifier>
+			<Abstract type="html">最低温度</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSInteger minTemperature</Declaration>
+			
+			
+			<Anchor>//api/name/minTemperature</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCWeather/minTemperature</TokenIdentifier>
+			<Abstract type="html">最低温度</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSInteger minTemperature</Declaration>
+			
+			
+			<Anchor>//api/name/minTemperature</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWeather/setWeatherState:</TokenIdentifier>
+			<Abstract type="html">天气状况，从服务器获取天气状态后，你需要转换为枚举值对应的天气</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) FCWeatherState weatherState</Declaration>
+			
+			
+			<Anchor>//api/name/weatherState</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWeather/weatherState</TokenIdentifier>
+			<Abstract type="html">天气状况，从服务器获取天气状态后，你需要转换为枚举值对应的天气</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) FCWeatherState weatherState</Declaration>
+			
+			
+			<Anchor>//api/name/weatherState</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCWeather/weatherState</TokenIdentifier>
+			<Abstract type="html">天气状况，从服务器获取天气状态后，你需要转换为枚举值对应的天气</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) FCWeatherState weatherState</Declaration>
+			
+			
+			<Anchor>//api/name/weatherState</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWeather/setCity:</TokenIdentifier>
+			<Abstract type="html">当前天气所在城市</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *city</Declaration>
+			
+			
+			<Anchor>//api/name/city</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCWeather/city</TokenIdentifier>
+			<Abstract type="html">当前天气所在城市</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *city</Declaration>
+			
+			
+			<Anchor>//api/name/city</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCWeather/city</TokenIdentifier>
+			<Abstract type="html">当前天气所在城市</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *city</Declaration>
+			
+			
+			<Anchor>//api/name/city</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/FCHealthRTSyncType.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/FCHealthRTSyncType</TokenIdentifier>
+			<Abstract type="html">健康实时同步操作类型</Abstract>
+			<DeclaredIn>FCDefine.h</DeclaredIn>
+            
+			
+			<NodeRef refid="20"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCHealthRTSyncTypeUnKnown</TokenIdentifier>
+            <Abstract type="html">未知健康同步操作</Abstract>
+            <Declaration>FCHealthRTSyncTypeUnKnown</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCHealthRTSyncTypeOpenRTSync</TokenIdentifier>
+            <Abstract type="html">打开健康实时同步</Abstract>
+            <Declaration>FCHealthRTSyncTypeOpenRTSync</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCHealthRTSyncTypeCloseRTSync</TokenIdentifier>
+            <Abstract type="html">关闭健康实时同步</Abstract>
+            <Declaration>FCHealthRTSyncTypeCloseRTSync</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCHealthRTSyncTypeOpenECG</TokenIdentifier>
+            <Abstract type="html">打开心电检测</Abstract>
+            <Declaration>FCHealthRTSyncTypeOpenECG</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCHealthRTSyncTypeCloseECG</TokenIdentifier>
+            <Abstract type="html">关闭心电检测</Abstract>
+            <Declaration>FCHealthRTSyncTypeCloseECG</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

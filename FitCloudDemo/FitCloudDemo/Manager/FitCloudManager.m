@@ -49,6 +49,7 @@ static inline void st_dispatch_async_main(dispatch_block_t block) {
     return instance;
 }
 
+
 - (void)startService
 {
     [self registerNotification];
@@ -213,6 +214,7 @@ void systemAudioCallback()
 }
 
 #pragma mark - 登录设备
+
 - (void)loginDevice
 {
     FCUserConfig *userConfig = [FCUserConfigDB getUserFromDB];
@@ -237,13 +239,16 @@ void systemAudioCallback()
         NSLog(@"--登陆流程回调--%@",@(syncType));
         
     } result:^(FCSyncType syncType, FCLoginSyncType loginSyncType, FCSyncResponseState state) {
-        if (loginSyncType == FCLoginSyncTypeLogin) {
+        if (loginSyncType == FCLoginSyncTypeLogin)
+        {
             if (state == FCSyncResponseStateError)
             {
                 // 登陆失败
                 [ws hideLoadingHUDWithFailure:@"登录失败,请重新绑定"];
+                
                 BOOL ret = [[FitCloud shared]removeBondDevice];
-                if (ret) {
+                if (ret)
+                {
                     // 断开当前蓝牙外设的连接
                     ret = [[FitCloud shared]disconnect];
                     if(ret)
@@ -303,14 +308,16 @@ void systemAudioCallback()
 - (void)pullDownToSyncHistoryData
 {
     BOOL ret = [[FitCloud shared]deviceIsBond];
-    if (!ret) {
+    if (!ret)
+    {
         NSLog(@"--蓝牙未绑定--");
         [self showWarningWithMessage:@"设备未绑定"];
         return;
     }
     
     ret = [[FitCloud shared]isConnected];
-    if (!ret) {
+    if (!ret)
+    {
         NSLog(@"--蓝牙未连接--");
         [self showWarningWithMessage:@"蓝牙未连接"];
         // 扫描连接以及绑定的蓝牙

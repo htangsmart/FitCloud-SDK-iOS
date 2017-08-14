@@ -24,6 +24,8 @@
 		6B5DD2761DC8A4E200788BDA /* FitCloudDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DD2751DC8A4E200788BDA /* FitCloudDemoUITests.m */; };
 		6B5DD2C41DC8A97A00788BDA /* FitCloud+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DD2BE1DC8A97A00788BDA /* FitCloud+Category.m */; };
 		6B5DD2C61DC8A97A00788BDA /* NSObject+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DD2C21DC8A97A00788BDA /* NSObject+HUD.m */; };
+		6B8BD56F1F3DB38100CF3B77 /* HFLocalFirmwareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8BD56E1F3DB38100CF3B77 /* HFLocalFirmwareViewController.m */; };
+		6B8D7FC61F415DCE0074F6D6 /* libFitCloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8D7FC31F415C100074F6D6 /* libFitCloud.a */; };
 		6BCF1C6A1DE57FD600B99A21 /* FitCloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCF1C691DE57FD600B99A21 /* FitCloudManager.m */; };
 		6BDEB8681EDA9410002A6DD3 /* FCConnectStateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDEB8671EDA9410002A6DD3 /* FCConnectStateCell.m */; };
 		6BE5715C1EDD386F00CE46C7 /* FCBindDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE5715B1EDD386F00CE46C7 /* FCBindDeviceViewController.m */; };
@@ -68,7 +70,6 @@
 		6BF31A721ED9A7B1000454EB /* FCAlarmConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF31A711ED9A7B1000454EB /* FCAlarmConfigViewController.m */; };
 		6BF31A761ED9A7C7000454EB /* FCOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF31A751ED9A7C7000454EB /* FCOtherViewController.m */; };
 		6BF31A7A1ED9A7E6000454EB /* FCDeviceInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF31A791ED9A7E6000454EB /* FCDeviceInfoViewController.m */; };
-		6BFE92711DD4C02500685350 /* libFitCloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFE92701DD4C02500685350 /* libFitCloud.a */; };
 		CB7CB9E6F4E6054DD7B94E79 /* libPods-FitCloudDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2577CFEC4DEBAB49E54AAD7 /* libPods-FitCloudDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 6B5DD24C1DC8A4E100788BDA;
 			remoteInfo = FitCloudDemo;
+		};
+		6B8D7FC21F415C100074F6D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B8D7FBD1F415C0F0074F6D6 /* FitCloud.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6B224B0A1F35F386009C0057;
+			remoteInfo = FitCloud;
+		};
+		6B8D7FC41F415C1C0074F6D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B8D7FBD1F415C0F0074F6D6 /* FitCloud.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B224B091F35F386009C0057;
+			remoteInfo = FitCloud;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -126,6 +141,9 @@
 		6B5DD2BE1DC8A97A00788BDA /* FitCloud+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FitCloud+Category.m"; sourceTree = "<group>"; };
 		6B5DD2C11DC8A97A00788BDA /* NSObject+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HUD.h"; sourceTree = "<group>"; };
 		6B5DD2C21DC8A97A00788BDA /* NSObject+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HUD.m"; sourceTree = "<group>"; };
+		6B8BD56D1F3DB38100CF3B77 /* HFLocalFirmwareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFLocalFirmwareViewController.h; sourceTree = "<group>"; };
+		6B8BD56E1F3DB38100CF3B77 /* HFLocalFirmwareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFLocalFirmwareViewController.m; sourceTree = "<group>"; };
+		6B8D7FBD1F415C0F0074F6D6 /* FitCloud.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FitCloud.xcodeproj; path = FitCloud/FitCloud.xcodeproj; sourceTree = "<group>"; };
 		6BCF1C681DE57FD600B99A21 /* FitCloudManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitCloudManager.h; sourceTree = "<group>"; };
 		6BCF1C691DE57FD600B99A21 /* FitCloudManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitCloudManager.m; sourceTree = "<group>"; };
 		6BDEB8661EDA9410002A6DD3 /* FCConnectStateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCConnectStateCell.h; sourceTree = "<group>"; };
@@ -221,7 +239,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BFE92711DD4C02500685350 /* libFitCloud.a in Frameworks */,
+				6B8D7FC61F415DCE0074F6D6 /* libFitCloud.a in Frameworks */,
 				CB7CB9E6F4E6054DD7B94E79 /* libPods-FitCloudDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +314,7 @@
 		6B5DD2441DC8A4E100788BDA = {
 			isa = PBXGroup;
 			children = (
+				6B8D7FBD1F415C0F0074F6D6 /* FitCloud.xcodeproj */,
 				6B5DD24F1DC8A4E100788BDA /* FitCloudDemo */,
 				6B5DD2691DC8A4E200788BDA /* FitCloudDemoTests */,
 				6B5DD2741DC8A4E200788BDA /* FitCloudDemoUITests */,
@@ -410,6 +429,14 @@
 				6BE571AA1EDEE8F500CE46C7 /* NSObject+FCObject.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		6B8D7FBE1F415C0F0074F6D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B8D7FC31F415C100074F6D6 /* libFitCloud.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		6BCF1C671DE57FC700B99A21 /* Manager */ = {
@@ -757,6 +784,8 @@
 		6BF31A6B1ED9A773000454EB /* 固件升级 */ = {
 			isa = PBXGroup;
 			children = (
+				6B8BD56D1F3DB38100CF3B77 /* HFLocalFirmwareViewController.h */,
+				6B8BD56E1F3DB38100CF3B77 /* HFLocalFirmwareViewController.m */,
 				6BF31A6C1ED9A79B000454EB /* FCFrimwareViewController.h */,
 				6BF31A6D1ED9A79B000454EB /* FCFrimwareViewController.m */,
 			);
@@ -823,6 +852,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6B8D7FC51F415C1C0074F6D6 /* PBXTargetDependency */,
 			);
 			name = FitCloudDemo;
 			productName = FitCloudDemo;
@@ -908,6 +938,12 @@
 			mainGroup = 6B5DD2441DC8A4E100788BDA;
 			productRefGroup = 6B5DD24E1DC8A4E100788BDA /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6B8D7FBE1F415C0F0074F6D6 /* Products */;
+					ProjectRef = 6B8D7FBD1F415C0F0074F6D6 /* FitCloud.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6B5DD24C1DC8A4E100788BDA /* FitCloudDemo */,
@@ -916,6 +952,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6B8D7FC31F415C100074F6D6 /* libFitCloud.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFitCloud.a;
+			remoteRef = 6B8D7FC21F415C100074F6D6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6B5DD24B1DC8A4E100788BDA /* Resources */ = {
@@ -1015,6 +1061,7 @@
 				6BE746DE1ED95C8D0085E16E /* FCHomeViewController.m in Sources */,
 				6BF31A7A1ED9A7E6000454EB /* FCDeviceInfoViewController.m in Sources */,
 				6BE571AB1EDEE8F500CE46C7 /* NSObject+FCObject.m in Sources */,
+				6B8BD56F1F3DB38100CF3B77 /* HFLocalFirmwareViewController.m in Sources */,
 				6BE5715C1EDD386F00CE46C7 /* FCBindDeviceViewController.m in Sources */,
 				6BE571651EDD4F6600CE46C7 /* FCWatchConfigDB.m in Sources */,
 				6BE571B31EDF21E100CE46C7 /* HFDatePickerView.m in Sources */,
@@ -1084,6 +1131,11 @@
 			isa = PBXTargetDependency;
 			target = 6B5DD24C1DC8A4E100788BDA /* FitCloudDemo */;
 			targetProxy = 6B5DD2721DC8A4E200788BDA /* PBXContainerItemProxy */;
+		};
+		6B8D7FC51F415C1C0074F6D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FitCloud;
+			targetProxy = 6B8D7FC41F415C1C0074F6D6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1208,8 +1260,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K4VY4M94L6;
 				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/lib/include",
 					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
 				);
 				INFOPLIST_FILE = FitCloudDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1231,8 +1283,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K4VY4M94L6;
 				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/lib/include",
 					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
 				);
 				INFOPLIST_FILE = FitCloudDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

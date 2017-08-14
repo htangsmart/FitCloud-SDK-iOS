@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FCAlarmClockCycleObject.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FCAlarmClockCycleObject</TokenIdentifier>
+			<Abstract type="html">闹钟周期, 如果周一到周日无设置，则表示闹钟当日有效</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+            
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCAlarmClockCycleObject/cycleWithValue:</TokenIdentifier>
+			<Abstract type="html">通过闹钟周期&lt;i&gt;cycleValue&lt;/i&gt;初始化&lt;i&gt;FCCycleOfAlarmClockObject&lt;/i&gt;对象</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)cycleWithValue:(NSNumber *)cycleValue</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cycleValue</Name>
+					<Abstract type="html">闹钟周期数值</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">&lt;i&gt;FCCycleOfAlarmClockObject&lt;/i&gt; 实例对象</Abstract></ReturnValue>
+			<Anchor>//api/name/cycleWithValue:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmClockCycleObject/cycleValue</TokenIdentifier>
+			<Abstract type="html">获取闹钟周期数值（7 bits），从低位到高位表示周一到周日；如果所有字节为0，则表示闹钟当日有效.</Abstract>
+			<DeclaredIn>FCObject.h</DeclaredIn>
+			
+			<Declaration>- (NSNumber *)cycleValue</Declaration>
+			
+			<ReturnValue><Abstract type="html">闹钟周期数值</Abstract></ReturnValue>
+			<Anchor>//api/name/cycleValue</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

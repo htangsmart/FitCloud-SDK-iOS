@@ -32,7 +32,7 @@
         //    NSString *createSQL = @"CREATE TABLE IF NOT EXISTS DayDetails (timeStamp REAL, stepCount, calorie, distance, deepSleep, lightSleep, avgHeartRate)";
         NSString *createSQL = @"CREATE TABLE IF NOT EXISTS DayDetails (timeStamp REAL, jsonData BLOB)";
         if ([dbEngine.dataBase executeUpdate:createSQL]) {
-            NSLog(@"--创建db失败--");
+//            NSLog(@"--创建db失败--");
             
             FCDayDetailsObject *dayDetailsObj = (FCDayDetailsObject*)dayDetails;
             NSData *data = [dayDetailsObj yy_modelToJSONData];
@@ -46,6 +46,7 @@
                 NSString *insertSQL = @"INSERT INTO DayDetails VALUES (?,?)";
                 ret = [db executeUpdate:insertSQL,dayDetailsObj.timeStamp,data];
             }
+            [rs close];
         };
     }];
     
@@ -70,6 +71,7 @@
                 NSData *jsonData = [rs dataForColumnIndex:1];
                 dayDetailsObj = [FCDayDetailsObject yy_modelWithJSON:jsonData];
             }
+            [rs close];
         }
     }];
     

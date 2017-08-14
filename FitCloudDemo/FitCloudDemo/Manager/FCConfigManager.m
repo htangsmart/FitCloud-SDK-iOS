@@ -7,10 +7,11 @@
 //
 
 #import "FCConfigManager.h"
-#import <FitCloudKit.h>
 #import "FitCloud+Category.h"
 #import "FCWatchConfigDB.h"
 #import <YYModel.h>
+#import "FitCloudKit.h"
+
 
 @interface FCConfigManager ()
 
@@ -46,9 +47,9 @@
     _watchSetting = [FCWatchConfigDB getWatchConfigFromDBWithUUID:uuidString];
     NSLog(@"---_watchSetting--%@",_watchSetting.yy_modelDescription);
     
-    [FitCloudUtils getNewFirmwareFromServer:@"0000000000200000004D00220033000011013117000000000000010012345678" result:^(id responseObject, NSError *error) {
-        NSLog(@"---responseObject---%@",responseObject);
-    }];
+//    [FitCloudAPI getNewFirmwareFromServer:@"0000000000200000004D00220033000011013117000000000000010012345678" result:^(id responseObject, NSError *error) {
+//        NSLog(@"---responseObject---%@",responseObject);
+//    }];
 }
 
 

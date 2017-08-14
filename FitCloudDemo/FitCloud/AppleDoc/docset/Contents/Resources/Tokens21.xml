@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/FCHistoryDataSyncType.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/FCHistoryDataSyncType</TokenIdentifier>
+			<Abstract type="html">历史数据同步流程（部分同步功能是否执行由传感器标志决定</Abstract>
+			<DeclaredIn>FCDefine.h</DeclaredIn>
+            
+			
+			<NodeRef refid="21"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeUnknown</TokenIdentifier>
+            <Abstract type="html">默认类型</Abstract>
+            <Declaration>FCHistoryDataSyncTypeUnknown</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeFeatures</TokenIdentifier>
+            <Abstract type="html">同步时间制式</Abstract>
+            <Declaration>FCHistoryDataSyncTypeFeatures</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeTime</TokenIdentifier>
+            <Abstract type="html">同步系统时间</Abstract>
+            <Declaration>FCHistoryDataSyncTypeTime</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeTotalData</TokenIdentifier>
+            <Abstract type="html">同步各类型的日志数据（包括运动总步数、总距离、总卡路里等）</Abstract>
+            <Declaration>FCHistoryDataSyncTypeTotalData</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeExercise</TokenIdentifier>
+            <Abstract type="html">同步运动量详细记录</Abstract>
+            <Declaration>FCHistoryDataSyncTypeExercise</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeSleep</TokenIdentifier>
+            <Abstract type="html">同步睡眠详细记录</Abstract>
+            <Declaration>FCHistoryDataSyncTypeSleep</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeBloodOxygen</TokenIdentifier>
+            <Abstract type="html">同步血氧详细记录</Abstract>
+            <Declaration>FCHistoryDataSyncTypeBloodOxygen</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeBloodPressure</TokenIdentifier>
+            <Abstract type="html">同步血压详细记录</Abstract>
+            <Declaration>FCHistoryDataSyncTypeBloodPressure</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeBreathingRate</TokenIdentifier>
+            <Abstract type="html">同步呼吸频率详细记录</Abstract>
+            <Declaration>FCHistoryDataSyncTypeBreathingRate</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeHeartRate</TokenIdentifier>
+            <Abstract type="html">同步心率详细记录</Abstract>
+            <Declaration>FCHistoryDataSyncTypeHeartRate</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeUltraviolet</TokenIdentifier>
+            <Abstract type="html">同步紫外线详细记录</Abstract>
+            <Declaration>FCHistoryDataSyncTypeUltraviolet</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeSevenDaysSleepData</TokenIdentifier>
+            <Abstract type="html">同步睡眠总数据（包含七天以内的深睡眠和浅睡眠时长）</Abstract>
+            <Declaration>FCHistoryDataSyncTypeSevenDaysSleepData</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCHistoryDataSyncTypeEnd</TokenIdentifier>
+            <Abstract type="html">结束</Abstract>
+            <Declaration>FCHistoryDataSyncTypeEnd</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>
