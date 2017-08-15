@@ -263,13 +263,10 @@
     // 蓝牙连接操作自动处理，确保发送指令前蓝牙处于连接状态
     [[FitCloud shared]fcOpenRealTimeSync:FCRTSyncTypeBloodOxygen dataCallback:^(FCSyncType syncType, NSData *data) {
         NSLog(@"--data--%@",data);
-        if (data && data.length > 5)
-        {
-            Byte byte[1] = {0};
-            [data getBytes:byte range:NSMakeRange(data.length-5, 1)];
-            NSNumber *realTimeValue = @(byte[0]);
-            NSLog(@"---value--%@",realTimeValue);
-        }
+        
+        NSNumber *realTimeValue = [FCRTSyncUtils getRTBloodOxygenValue:data];
+        NSLog(@"---value--%@",realTimeValue);
+        
     } result:^(FCSyncType syncType, FCSyncResponseState state) {
         NSLog(@"--state--%@",@(state));
         if (state == FCSyncResponseStateSuccess)
