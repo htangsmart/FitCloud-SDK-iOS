@@ -1,4 +1,0 @@
-Documentation set was installed to Xcode!
-
-Path: /Users/myz/Library/Developer/Shared/Documentation/DocSets/com.topstep.FitCloud.docset
-Time: 2017-05-28 04:52:56 +0000
