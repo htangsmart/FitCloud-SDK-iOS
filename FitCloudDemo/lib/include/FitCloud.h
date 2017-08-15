@@ -434,8 +434,8 @@
 /**
  获取心率详细数据，此项需要判断传感器标志，如果存在心率标志，则可以进行心率同步
 
- @see <code>isSyncEnable:</code>
- @see <i>FCSensorFlagType</i>
+ @see isSyncEnable:
+ @see FCSensorFlagType
  @param retHandler 同步结果回调
  */
 - (void)fcGetHeartRateData:(FCSyncDataResultHandler)retHandler;
@@ -443,8 +443,8 @@
 /**
  获取血氧详细数据，此项需要判断传感器标志，如果存在标志，则可以进行同步
  
- @see <code>isSyncEnable:</code>
- @see <i>FCSensorFlagType</i>
+ @see isSyncEnable:
+ @see FCSensorFlagType
  @param retHandler 同步结果回调
  */
 - (void)fcGetBloodOxygenData:(FCSyncDataResultHandler)retHandler;
@@ -452,8 +452,8 @@
 /**
  获取紫外线详细数据，此项需要判断传感器标志，如果存在标志，则可以进行同步
  
- @see <code>isSyncEnable:</code>
- @see <i>FCSensorFlagType</i>
+ @see isSyncEnable:
+ @see FCSensorFlagType
  @param retHandler 同步结果回调
  */
 - (void)fcGetUltravioletData:(FCSyncDataResultHandler)retHandler;
@@ -461,8 +461,8 @@
 /**
  获取血压详细数据，此项需要判断传感器标志，如果存在标志，则可以进行同步
  
- @see <code>isSyncEnable:</code>
- @see <i>FCSensorFlagType</i>
+ @see isSyncEnable:
+ @see FCSensorFlagType
  @param retHandler 同步结果回调
  */
 - (void)fcGetBloodPressureData:(FCSyncDataResultHandler)retHandler;
@@ -470,8 +470,8 @@
 /**
  获取呼吸频率详细数据，此项需要判断传感器标志，如果存在标志，则可以进行同步
  
- @see <code>isSyncEnable:</code>
- @see <i>FCSensorFlagType</i>
+ @see isSyncEnable:
+ @see FCSensorFlagType
  @param retHandler 同步结果回调
  */
 - (void)fcGetBreathingRateData:(FCSyncDataResultHandler)retHandler;
@@ -479,8 +479,8 @@
 /**
  获取七日睡眠总数据，此项需要判断传感器标志，如果存在标志，则可以进行同步
  
- @see <code>isSyncEnable:</code>
- @see <i>FCSensorFlagType</i>
+ @see isSyncEnable:
+ @see FCSensorFlagType
  @param retHandler 同步结果回调
  */
 - (void)fcGetSevenDaysSleepTotalData:(FCSyncDataResultHandler)retHandler;

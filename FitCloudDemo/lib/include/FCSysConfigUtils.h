@@ -10,6 +10,9 @@
 #import "FCObject.h"
 
 
+/**
+ 手表系统配置管理类
+ */
 @interface FCSysConfigUtils : NSObject
 
 #pragma mark - 系统设置

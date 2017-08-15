@@ -260,7 +260,8 @@
 
 - (void)startMeasuringHeartRate
 {
-    [[FitCloud shared]fcOpenRealTimeSync:FCRTSyncTypeHeartRate dataCallback:^(FCSyncType syncType, NSData *data) {
+    // 蓝牙连接操作自动处理，确保发送指令前蓝牙处于连接状态
+    [[FitCloud shared]fcOpenRealTimeSync:FCRTSyncTypeBloodOxygen dataCallback:^(FCSyncType syncType, NSData *data) {
         NSLog(@"--data--%@",data);
         if (data && data.length > 5)
         {
@@ -274,6 +275,22 @@
         if (state == FCSyncResponseStateSuccess)
         {
             NSLog(@"--响应成功--");
+        }
+        else if (state == FCSyncResponseStateError)
+        {
+            NSLog(@"--打开实时同步错误--");
+        }
+        else if (state == FCSyncResponseStateNotConnected)
+        {
+            NSLog(@"--蓝牙未连接--");
+        }
+        else if (state == FCSyncResponseStateSynchronizing)
+        {
+            NSLog(@"---蓝牙正在同步--");
+        }
+        else if (state == FCSyncResponseStateDisconnect)
+        {
+            NSLog(@"---蓝牙中途断开连接--");
         }
         else if (state == FCSyncResponseStateRTTimeOut)
         {

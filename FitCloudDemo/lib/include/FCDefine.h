@@ -31,6 +31,9 @@ typedef NS_ENUM(NSInteger, FCManagerState) {
 };
 
 
+/**
+ 传感器标志，如果存在某个标志可以进行某项数据同步
+ */
 typedef NS_OPTIONS(UInt32, FCSensorFlagType)
 {
     /*! 心率*/
@@ -80,32 +83,6 @@ typedef NS_ENUM(NSInteger, FCDataType)
     FCDataTypeSevenDaysSleepData,
 };
 
-
-
-/**
- 绑定设备同步流程
- */
-typedef NS_ENUM(NSInteger, FCBindSyncType)
-{
-    /*! 默认类型*/
-    FCBindSyncTypeUnknown = 0,
-    /*! 绑定设备*/
-    FCBindSyncTypeBond = 1,
-    /*! 同步功能开关设置到手表*/
-    FCBindSyncTypeFeatures = 2,
-    /*! 同步系统时间到手表*/
-    FCBindSyncTypeTime = 3,
-    /*! 同步用户资料到手表*/
-    FCBindSyncTypeUserInfo = 4,
-    /*! 同步佩戴方式到手表*/
-    FCBindSyncTypeWearingStyle = 5,
-    /*! 同步默认血压到手表*/
-    FCBindSyncTypeDefaultBloodPressure = 6,
-    /*! 同步手表系统设置到手机*/
-    FCBindSyncTypeSystemSetting = 7,
-    /*! 结束*/
-    FCBindSyncTypeEnd = 8,
-};
 
 /**
  手环数据同步标志
