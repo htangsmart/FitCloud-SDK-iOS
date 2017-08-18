@@ -261,12 +261,13 @@
 - (void)startMeasuringHeartRate
 {
     // 蓝牙连接操作自动处理，确保发送指令前蓝牙处于连接状态
-    [[FitCloud shared]fcOpenRealTimeSync:FCRTSyncTypeBloodOxygen dataCallback:^(FCSyncType syncType, NSData *data) {
+    [[FitCloud shared]fcOpenRealTimeSync:FCRTSyncTypeHeartRate dataCallback:^(FCSyncType syncType, NSData *data) {
         NSLog(@"--data--%@",data);
-        
-        NSNumber *realTimeValue = [FCRTSyncUtils getRTBloodOxygenValue:data];
-        NSLog(@"---value--%@",realTimeValue);
-        
+        if (syncType == FCSyncTypeOpenRealtimeSync)
+        {
+            NSNumber *realTimeValue = [FCRTSyncUtils getRTHeartRateValue:data];
+            NSLog(@"---value--%@",realTimeValue);
+        }
     } result:^(FCSyncType syncType, FCSyncResponseState state) {
         NSLog(@"--state--%@",@(state));
         if (state == FCSyncResponseStateSuccess)
@@ -276,6 +277,10 @@
         else if (state == FCSyncResponseStateError)
         {
             NSLog(@"--打开实时同步错误--");
+        }
+        else if (state == FCSyncResponseStateNoSensorFlag)
+        {
+            NSLog(@"--当前手表没有此功能--");
         }
         else if (state == FCSyncResponseStateNotConnected)
         {
