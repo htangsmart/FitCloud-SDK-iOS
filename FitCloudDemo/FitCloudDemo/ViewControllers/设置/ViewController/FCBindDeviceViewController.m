@@ -112,17 +112,17 @@
     
     FCUserConfig *userConfig = [FCUserConfigDB getUserFromDB];
     
-    FCUserObject *user = [[FCUserObject alloc]init];
-    user.guestId = 100;
-    user.phoneModel = [[FitCloudUtils getPhoneModel]unsignedIntValue];
-    user.osVersion = [[FitCloudUtils getOsVersion]unsignedIntValue];
-    user.age = userConfig.age;
-    user.sex = userConfig.sex;
-    user.weight = userConfig.weight;
-    user.height = userConfig.height;
-    user.systolicBP = userConfig.systolicBP;
-    user.diastolicBP = userConfig.diastolicBP;
-    user.isLeftHandWearEnabled = userConfig.isLeftHandWearEnabled;
+    FCWatchConfig *watchConfig = [[FCWatchConfig alloc]init];
+    watchConfig.guestId = 100;
+    watchConfig.phoneModel = [[FitCloudUtils getPhoneModel]unsignedIntValue];
+    watchConfig.osVersion = [[FitCloudUtils getOsVersion]unsignedIntValue];
+    watchConfig.age = userConfig.age;
+    watchConfig.sex = userConfig.sex;
+    watchConfig.weight = userConfig.weight;
+    watchConfig.height = userConfig.height;
+    watchConfig.systolicBP = userConfig.systolicBP;
+    watchConfig.diastolicBP = userConfig.diastolicBP;
+    watchConfig.isLeftHandWearEnabled = userConfig.isLeftHandWearEnabled;
     
     FCFeaturesObject *feature = [[FCConfigManager manager]featuresObject];
     // 时间显示制式，可以跟随手机时间制式显示
@@ -130,10 +130,10 @@
     // 单位，根据需要选择
     feature.isImperialUnits = userConfig.isImperialUnits;
     
-    user.featuresData = feature.writeData;
+    watchConfig.featuresData = feature.writeData;
     
     [self showLoadingHUDWithMessage:@"正在绑定设备"];
-    [[FitCloud shared]bindWithUser:user stepCallback:^(NSInteger syncType) {
+    [[FitCloud shared]bindDevice:watchConfig stepCallback:^(NSInteger syncType) {
         NSLog(@"--绑定流程更新--%@",@(syncType));
     } result:^(NSData *data, FCSyncType syncType, FCSyncResponseState state) {
         if (state == FCSyncResponseStateSuccess) {

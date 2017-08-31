@@ -42,14 +42,14 @@ typedef NS_OPTIONS(UInt32, FCSensorFlagType)
     FCSensorFlagTypeUV = 1 << 1,
     /*! 天气预报*/
     FCSensorFlagTypeWeather = 1 << 2,
-    /*! 血氧*/
+    /*! 血氧，有此标志则存在血氧功能*/
     FCSensorFlagTypeBloodOxygen = 1 << 3,
-    /*! 血压*/
+    /*! 血压，有此标志则存在血压功能*/
     FCSensorFlagTypeBloodPressure = 1 << 4,
     /*! 呼吸频率*/
     FCSensorFlagTypeBreathingRate = 1 << 5,
-    /*! 佩戴检测*/
-    FCSensorFlagTypeWearStyle = 1 << 6,
+    /*! 加强检测*/
+    FCSensorFlagTypeEnhanceMeasurement = 1 << 6,
     /*! 睡眠七天历史数据*/
     FCSensorFlagTypeSevenDaysSleep = 1 << 7,
     /*! 心电*/
@@ -58,6 +58,8 @@ typedef NS_OPTIONS(UInt32, FCSensorFlagType)
     FCSensorFlagTypeFlashOTA = 1 << 9,
     /*! 手机系统语言设置*/
     FCSensorFlagTypeANCS = 1 << 10,
+    /*! 喝水提醒和翻腕亮屏新设置*/
+    FCSensorFlagTypeDinkRemindAndFWLS = 1 << 11,
 };
 
 /**
@@ -200,6 +202,9 @@ typedef NS_ENUM(NSInteger, FCSyncType) {
     /*! 获取七日睡眠总数据*/
     FCSyncTypeGetSevenDaysSleepData = 37,
     
+    /*! 翻腕亮屏设置*/
+    FCSyncTypeSetFlipWristToLightScreen = 38,
+    
     /*! 结束*/
     FCSyncTypeEnd = 100,
 };
@@ -243,7 +248,7 @@ typedef NS_ENUM(NSInteger, FCHealthRTSyncType)
 };
 
 /**
- 同步响应结果
+ 同步响应结果，如果蓝牙在通讯过程中centralManager发生状态变化，部分蓝牙相关状态被回调
  */
 typedef NS_ENUM(NSInteger, FCSyncResponseState) {
 

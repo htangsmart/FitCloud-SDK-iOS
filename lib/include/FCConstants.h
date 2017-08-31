@@ -12,17 +12,17 @@
 // This notification is issued when the central manager's status changes
 FOUNDATION_EXTERN NSString *const EVENT_CENTRALMANAGER_UPDATE_STATE_NOTIFY;
 
-// This notification is issued when the peripheral is connected successfully
+// 外设连接成功通知
 FOUNDATION_EXTERN NSString *const EVENT_CONNECT_PERIPHERAL_NOTIFY;
 
-// This notification is issued when a peripheral connection fails
+// 外设连接失败通知
 FOUNDATION_EXTERN NSString *const EVENT_FAIL_CONNECT_PERIPHERAL_NOTIFY;
 
-// This notification is issued by a peripheral disconnect
+// 外设断开连接通知
 FOUNDATION_EXTERN NSString *const EVENT_DISCONNECT_PERIPHERAL_NOTIFY;
 
-// Discover the service characteristic value of the peripheral,After receiving this notice, you can write value.
+// 发现服务特征,接到此通知，你可以进行蓝牙写数据
 FOUNDATION_EXTERN NSString *const EVENT_DISCOVER_CHARACTERISTICS_NOTIFY;
 
-// This notification is issued when the firmware upgrade is successful or disconnected
+// 固件升级成功断开连接通知
 FOUNDATION_EXTERN NSString *const EVENT_FIRMWARE_UPDATE_DISCONNECT_PERIPHERAL_NOTIFY;

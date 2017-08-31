@@ -57,21 +57,21 @@
         [self showErrorWithMessage:@"保存失败"];
     }
     
-    FCUserObject *userObject = [[FCUserObject alloc]init];
-    userObject.age = self.userConfig.age;
-    userObject.sex = self.userConfig.sex;
-    userObject.weight = self.userConfig.weight;
-    userObject.height = self.userConfig.height;
-    userObject.systolicBP = self.userConfig.systolicBP;
-    userObject.diastolicBP = self.userConfig.diastolicBP;
+    FCWatchConfig *watchConfig = [[FCWatchConfig alloc]init];
+    watchConfig.age = self.userConfig.age;
+    watchConfig.sex = self.userConfig.sex;
+    watchConfig.weight = self.userConfig.weight;
+    watchConfig.height = self.userConfig.height;
+    watchConfig.systolicBP = self.userConfig.systolicBP;
+    watchConfig.diastolicBP = self.userConfig.diastolicBP;
     
     __weak __typeof(self) ws = self;
     [self showLoadingHUDWithMessage:@"正在同步资料"];
-    [[FitCloud shared]fcSetUserProfile:userObject result:^(FCSyncType syncType, FCSyncResponseState state) {
+    [[FitCloud shared]fcSetUserProfile:watchConfig result:^(FCSyncType syncType, FCSyncResponseState state) {
         if (state == FCSyncResponseStateSuccess) {
             
             [ws changeLoadingWithMessage:@"正在同步默认血压"];
-            [[FitCloud shared]fcSetBloodPressure:userObject.systolicBP dbp:userObject.diastolicBP result:^(FCSyncType syncType, FCSyncResponseState state) {
+            [[FitCloud shared]fcSetBloodPressure:watchConfig.systolicBP dbp:watchConfig.diastolicBP result:^(FCSyncType syncType, FCSyncResponseState state) {
                 if (state == FCSyncResponseStateSuccess)
                 {
                     [ws hideLoadingHUDWithSuccess:@"同步成功"];

@@ -70,6 +70,7 @@
  */
 + (NSArray*)getRecordsOfSleep:(NSData*)data;
 
+
 #pragma mark - 获取心率详细记录
 
 /**
@@ -80,6 +81,7 @@
  */
 + (NSArray*)getRecordsOfHeartRate:(NSData*)data;
 
+
 #pragma mark - 获取血氧详细记录
 /**
  获取血氧详细记录（每五分钟一个数据）
@@ -88,6 +90,7 @@
  @return 包含<i>FCDataObject</i>对象的数组
  */
 + (NSArray*)getRecordsOfBloodOxygen:(NSData*)data;
+
 
 #pragma mark - 获取血压详细记录
 
@@ -100,6 +103,7 @@
  @return 包含<i>FCDataObject</i>对象的数组
  */
 + (NSArray*)getRecordsOfBloodPressure:(NSData*)data systolicBP:(UInt16)systolicBP diastolicBP:(UInt16)diastolicBP;
+
 
 #pragma mark - 获取呼吸频率详细记录
 

@@ -219,10 +219,10 @@ void systemAudioCallback()
 {
     FCUserConfig *userConfig = [FCUserConfigDB getUserFromDB];
     
-    FCUserObject *user = [[FCUserObject alloc]init];
-    user.guestId = 100;
-    user.phoneModel = [[FitCloudUtils getPhoneModel]unsignedIntValue];
-    user.osVersion = [[FitCloudUtils getOsVersion]unsignedIntValue];
+    FCWatchConfig *watchConfig = [[FCWatchConfig alloc]init];
+    watchConfig.guestId = 100;
+    watchConfig.phoneModel = [[FitCloudUtils getPhoneModel]unsignedIntValue];
+    watchConfig.osVersion = [[FitCloudUtils getOsVersion]unsignedIntValue];
     
     // 如果需要同步手机制式或者单位等到手机需要配置此项
     FCFeaturesObject *feature = [[FCConfigManager manager]featuresObject];
@@ -230,11 +230,11 @@ void systemAudioCallback()
     feature.twelveHoursSystem = [FitCloudUtils is12HourSystem];
     // 单位，根据需要选择
     feature.isImperialUnits = userConfig.isImperialUnits;
-    user.featuresData = feature.writeData;
+    watchConfig.featuresData = feature.writeData;
     
     __weak __typeof(self) ws = self;
     [self showLoadingHUDWithMessage:@"正在登录"];
-    [[FitCloud shared]loginWithUser:user stepCallback:^(NSInteger syncType) {
+    [[FitCloud shared]loginDevice:watchConfig stepCallback:^(NSInteger syncType) {
         NSLog(@"--登陆流程回调--%@",@(syncType));
     } result:^(FCSyncType syncType, FCSyncResponseState state) {
         if (syncType == FCSyncTypeLoginDevice)
@@ -340,12 +340,12 @@ void systemAudioCallback()
     // 单位，根据需要选择
     feature.isImperialUnits = userConfig.isImperialUnits;
     
-    FCUserObject *userObj = [[FCUserObject alloc]init];
-    userObj.featuresData =  feature.writeData;
+    FCWatchConfig *watchConfig = [[FCWatchConfig alloc]init];
+    watchConfig.featuresData =  feature.writeData;
     
     [ws hideAllHUDs];
     [ws showLoadingHUDWithMessage:@"正在同步"];
-    [[FitCloud shared]fcGetHistoryDataWithUser:userObj stepCallback:^(NSInteger syncType) {
+    [[FitCloud shared]fcGetHistoryData:watchConfig stepCallback:^(NSInteger syncType) {
         FCSyncType dataSyncType = (FCSyncType)syncType;
         NSLog(@"---同步步骤--%@",@(dataSyncType));
     } dataCallback:^(FCSyncType syncType, NSData *data) {

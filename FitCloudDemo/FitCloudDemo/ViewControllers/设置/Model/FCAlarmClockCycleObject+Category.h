@@ -6,7 +6,7 @@
 //  Copyright © 2017年 马远征. All rights reserved.
 //
 
-#import "FCObject.h"
+#import "FitCloudKit.h"
 
 @interface FCAlarmClockCycleObject (Category)
 - (NSString*)cycleDescription;

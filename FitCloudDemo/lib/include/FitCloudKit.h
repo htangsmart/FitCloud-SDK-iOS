@@ -11,12 +11,28 @@
 
 #import "FitCloud.h"
 #import "FCConstants.h"
-#import "FCObject.h"
 #import "FCDefine.h"
+
+
 #import "FitCloudUtils.h"
 #import "FitCloudAPI.h"
 #import "FCSysConfigUtils.h"
 #import "FCRTSyncUtils.h"
 #import "FCSyncUtils.h"
+
+// 对象模型
+#import "FCDataObject.h"
+#import "FCWatchSettingsObject.h"
+#import "FCSedentaryReminderObject.h"
+#import "FCHealthMonitoringObject.h"
+#import "FCVersionDataObject.h"
+#import "FCPageDisplayFlagObject.h"
+#import "FCScreenDisplayConfigObject.h"
+#import "FCSensorFlagObject.h"
+#import "FCFeaturesObject.h"
+#import "FCNotificationObject.h"
+#import "FCAlarmClock.h"
+#import "FCWeather.h"
+#import "FCWatchConfig.h"
 
 #endif /* FitCloudKit_h */

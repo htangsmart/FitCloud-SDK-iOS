@@ -7,7 +7,34 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FCObject.h"
+#import "FCDataObject.h"
+#import "FCWatchSettingsObject.h"
+#import "FCSedentaryReminderObject.h"
+#import "FCHealthMonitoringObject.h"
+#import "FCVersionDataObject.h"
+#import "FCPageDisplayFlagObject.h"
+#import "FCScreenDisplayConfigObject.h"
+#import "FCSensorFlagObject.h"
+#import "FCFeaturesObject.h"
+#import "FCNotificationObject.h"
+#import "FCAlarmClock.h"
+#import "FCWeather.h"
+#import "FCWatchConfig.h"
+
+
+typedef NS_ENUM(NSInteger, SCDataType)
+{
+    SCDataTypeUnKnown,
+    SCDataTypeNotification,
+    SCDataTypeScreenDisplay,
+    SCDataTypeHealthMonitoring,
+    SCDataTypeSedentaryReminder,
+    SCDataTypeDefaultBloodPressure,
+    SCDataTypeDrinkReminder,
+    SCDataTypeDrinkReminderWithTime,
+    SCDataTypeFlipWristToLightUpScreenWithTime,
+};
+
 
 
 /**
@@ -15,7 +42,19 @@
  */
 @interface FCSysConfigUtils : NSObject
 
-#pragma mark - 系统设置
+
+/**
+ 更新系统配置 (暂未实现)
+
+ @param sysConfigData 系统配置数据
+ @param data 系统设置分段数据
+ @param dataType 数据类型
+ @return 更新后的系统配置数据
+ */
++ (NSData*)updateSysConfig:(NSData*)sysConfigData withData:(NSData*)data type:(SCDataType)dataType;
+
+
+
 
 /**
  获取系统设置，系统设置数据包括消息通知开关配置、手环显示配置、手环功能开关配置、手环软硬件版本信息、健康定时检测开关、久坐提醒配置、默认血压、喝水提醒开关
@@ -24,6 +63,7 @@
  @return 系统设置详细数据,value为<i>NSData</i>类型
  */
 + (NSDictionary*)getWatchSettingsFromSysConfig:(NSData*)data;
+
 
 
 
@@ -37,6 +77,7 @@
 
 
 
+
 /**
  获取系统功能开关设置
 
@@ -44,6 +85,7 @@
  @return 功能开关设置对象模型
  */
 + (FCFeaturesObject*)getFeaturesFromSysConfig:(NSData*)data;
+
 
 
 
@@ -57,6 +99,7 @@
 
 
 
+
 /**
  获取手表页面显示标志
 
@@ -64,6 +107,7 @@
  @return 页面显示标志对象模型
  */
 + (FCPageDisplayFlagObject*)getPageDisplayFromSysConfig:(NSData*)data;
+
 
 
 
@@ -84,7 +128,7 @@
  
  @param data 系统配置数据
  @return {
-     @"systolicBP":120,
+     @"systolicBP":125,
      @"diastolicBP":80
  }
  */
@@ -95,6 +139,7 @@
 
 #pragma mark - 固件版本
 
+
 /**
  获取固件版本号信息字符串 eg。 01.3457.11
  注：此字符串用户固件版本显示
@@ -103,6 +148,7 @@
  @return 固件版本号信息字符串
  */
 + (NSString*)getFirmwareVersionNumFromSysConfig:(NSData*)data;
+
 
 
 
@@ -118,6 +164,7 @@
 
 
 
+
 /**
  获取固件信息字符串 eg。 003020000203040540020020
  注：此字符串用户固件升级新版本检查
@@ -126,6 +173,7 @@
  @return 固件信息字符串
  */
 + (NSString*)getFirmwareVersionInfoStringFromSysConfig:(NSData*)data;
+
 
 
 
@@ -144,6 +192,7 @@
  }
  */
 + (NSDictionary*)getFirmwareVersionDetailedDataFromVersionData:(NSData*)data;
+
 
 
 
@@ -167,6 +216,7 @@
 
 #pragma mark - 闹钟
 
+
 /**
  获取闹钟列表，最多可以设置8个无重复的闹钟
 
@@ -174,6 +224,7 @@
  @return 包含<i>FCAlarmClockObject</i>对象闹钟列表
  */
 + (NSArray*)getAlarmClockListFromData:(NSData*)data;
+
 
 
 
