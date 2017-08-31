@@ -463,8 +463,9 @@ void systemAudioCallback()
         return;
     }
     // 获取运动详细记录 （每五分钟一个记录）
+    
     NSArray *detailsArray = [FCSyncUtils getRecordsOfExercise:data];
-    NSLog(@"--detailsArray--%@",detailsArray);
+    NSLog(@"--运动量-【%@】-%@",data,detailsArray);
     // 存储详细记录，如果有需要，可以对记录按天统计求和
     
     // 服务器需要保持记录的可以将详细记录上传给服务器
@@ -479,7 +480,7 @@ void systemAudioCallback()
     }
     // 获取运动详细记录 （每五分钟一个记录）
     NSArray *detailsArray = [FCSyncUtils getRecordsOfSleep:data];
-    NSLog(@"--detailsArray--%@",detailsArray);
+    NSLog(@"--睡眠-【%@】-%@",data,detailsArray);
     // 存储详细记录，如果有需要，可以对记录按天统计求和
     
     // 服务器需要保持记录的可以将详细记录上传给服务器
@@ -493,7 +494,7 @@ void systemAudioCallback()
     }
     // 获取运动详细记录 （每五分钟一个记录）
     NSArray *detailsArray = [FCSyncUtils getRecordsOfHeartRate:data];
-    NSLog(@"--detailsArray--%@",detailsArray);
+    NSLog(@"--心率-【%@】-%@",data,detailsArray);
     // 存储详细记录，如果有需要，可以对记录按天统计平均值
     
     // 服务器需要保持记录的可以将详细记录上传给服务器
@@ -507,7 +508,7 @@ void systemAudioCallback()
     }
     // 获取运动详细记录 （每五分钟一个记录）
     NSArray *detailsArray = [FCSyncUtils getRecordsOfBloodOxygen:data];
-    NSLog(@"--detailsArray--%@",detailsArray);
+    NSLog(@"--血氧-【%@】-%@",data,detailsArray);
     // 存储详细记录，如果有需要，可以对记录按天统计平均值
     
     // 服务器需要保持记录的可以将详细记录上传给服务器
@@ -523,7 +524,7 @@ void systemAudioCallback()
     
     // 获取运动详细记录 （每五分钟一个记录）
     NSArray *detailsArray = [FCSyncUtils getRecordsOfBloodPressure:data systolicBP:userConfig.systolicBP diastolicBP:userConfig.diastolicBP];
-    NSLog(@"--detailsArray--%@",detailsArray);
+    NSLog(@"--血压-【%@】-%@",data,detailsArray);
     // 存储详细记录，如果有需要，可以对记录按天统计平均值
     
     // 服务器需要保持记录的可以将详细记录上传给服务器
@@ -535,9 +536,10 @@ void systemAudioCallback()
     if (!data) {
         return;
     }
+    
     // 获取运动详细记录 （每五分钟一个记录）
     NSArray *detailsArray = [FCSyncUtils getRecordsOfBreathingRate:data];
-    NSLog(@"--detailsArray--%@",detailsArray);
+    NSLog(@"--呼吸频率-【%@】-%@",data,detailsArray);
     // 存储详细记录，如果有需要，可以对记录按天统计平均值
     
     // 服务器需要保持记录的可以将详细记录上传给服务器
