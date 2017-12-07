@@ -2,7 +2,7 @@
 //  FCSedentaryReminderObject.h
 //  FitCloud
 //
-//  Created by 远征 马 on 2017/8/29.
+//  Created by 远征 马 on 2017/9/17.
 //  Copyright © 2017年 马远征. All rights reserved.
 //
 
@@ -12,8 +12,7 @@
 /**
  久坐提醒,手表会在长时间不运动时发出提醒，通知用户起身运动
  */
-@interface FCSedentaryReminderObject : NSObject <FCObjectProtocal>
-
+@interface FCSedentaryReminderObject : NSObject <NSCopying>
 /**
  久坐提醒开关
  */
@@ -34,6 +33,9 @@
  */
 @property (nonatomic, assign) NSUInteger edMinute;
 
+
++ (instancetype)objectWithData:(NSData *)data;
+- (NSData*)writeData;
 /**
  判断是否处于午休时间，午休时间为12:00-14:00,如果处于这个范围则为午休时间。
  

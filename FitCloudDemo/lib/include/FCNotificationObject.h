@@ -13,7 +13,7 @@
 /**
  手表通知开关对象
  */
-@interface FCNotificationObject : NSObject <FCObjectProtocal>
+@interface FCNotificationObject : NSObject <NSCopying>
 
 /**
  手机来电通知，有新来电时手表会震动提醒
@@ -59,5 +59,9 @@
  kakao消息通知
  */
 @property (nonatomic, assign) BOOL kakaoMessage;
+@property (nonatomic, assign) BOOL skype;
+
++ (instancetype)objectWithData:(NSData*)data;
+- (NSData*)writeData;
 @end
 

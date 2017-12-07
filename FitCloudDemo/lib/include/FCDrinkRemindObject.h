@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FCObjectProtocol.h"
 
-// 喝水提醒配置
-@interface FCDrinkRemindObject : NSObject <FCObjectProtocal>
+/**
+ 喝水提醒配置
+ */
+@interface FCDrinkRemindObject : NSObject
 
 @property (nonatomic, assign) BOOL isOn;
 // 时间间隔 分钟
@@ -19,4 +20,13 @@
 @property (nonatomic, assign) NSUInteger stMinute;
 // 结束时间 （从0开始的分钟数）
 @property (nonatomic, assign) NSUInteger edMinute;
+
+/**
+ 初始化方法
+
+ @param data 配置数据，如果为nil则使用默认配置初始化
+ @return 初始化对象
+ */
++ (instancetype)objectWithData:(NSData*)data;
+- (NSData*)writeData;
 @end

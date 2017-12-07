@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/WatchConfigType.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/WatchConfigType</TokenIdentifier>
+			<Abstract type="html">手表数据配置类型</Abstract>
+			<DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+            
+			
+			<NodeRef refid="35"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/WatchConfigTypeUnknown</TokenIdentifier>
+            <Abstract type="html">未知类型</Abstract>
+            <Declaration>WatchConfigTypeUnknown</Declaration>
+            
+            <DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+            
+            <NodeRef refid="35"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/WatchConfigTypeNotification</TokenIdentifier>
+            <Abstract type="html">消息通知</Abstract>
+            <Declaration>WatchConfigTypeNotification</Declaration>
+            
+            <DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+            
+            <NodeRef refid="35"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/WatchConfigTypeScreenDisplayConfig</TokenIdentifier>
+            <Abstract type="html">屏幕显示配置</Abstract>
+            <Declaration>WatchConfigTypeScreenDisplayConfig</Declaration>
+            
+            <DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+            
+            <NodeRef refid="35"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/WatchConfigTypeFeatures</TokenIdentifier>
+            <Abstract type="html">功能开关配置</Abstract>
+            <Declaration>WatchConfigTypeFeatures</Declaration>
+            
+            <DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+            
+            <NodeRef refid="35"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/WatchConfigTypeHealthMonitoring</TokenIdentifier>
+            <Abstract type="html">健康监测</Abstract>
+            <Declaration>WatchConfigTypeHealthMonitoring</Declaration>
+            
+            <DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+            
+            <NodeRef refid="35"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/WatchConfigTypeSendentaryReminder</TokenIdentifier>
+            <Abstract type="html">久坐提醒</Abstract>
+            <Declaration>WatchConfigTypeSendentaryReminder</Declaration>
+            
+            <DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+            
+            <NodeRef refid="35"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/WatchConfigTypeDefaultBloodPressure</TokenIdentifier>
+            <Abstract type="html">默认血压</Abstract>
+            <Declaration>WatchConfigTypeDefaultBloodPressure</Declaration>
+            
+            <DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+            
+            <NodeRef refid="35"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/WatchConfigTypeDrinkWaterReminder</TokenIdentifier>
+            <Abstract type="html">喝水提醒</Abstract>
+            <Declaration>WatchConfigTypeDrinkWaterReminder</Declaration>
+            
+            <DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+            
+            <NodeRef refid="35"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/WatchConfigTypeDrinkWaterReminderWithTime</TokenIdentifier>
+            <Abstract type="html">带时间设置的喝水提醒</Abstract>
+            <Declaration>WatchConfigTypeDrinkWaterReminderWithTime</Declaration>
+            
+            <DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+            
+            <NodeRef refid="35"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/WatchConfigTypeTurnWristToLightUpScreen</TokenIdentifier>
+            <Abstract type="html">翻腕亮屏</Abstract>
+            <Declaration>WatchConfigTypeTurnWristToLightUpScreen</Declaration>
+            
+            <DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+            
+            <NodeRef refid="35"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/WatchConfigTypeFirmwareVersion</TokenIdentifier>
+            <Abstract type="html">固件版本</Abstract>
+            <Declaration>WatchConfigTypeFirmwareVersion</Declaration>
+            
+            <DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+            
+            <NodeRef refid="35"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

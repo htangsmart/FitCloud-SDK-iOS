@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FCRunTotalData.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FCRunTotalData</TokenIdentifier>
+			<Abstract type="html">跑步总数据，app配合手表跑步时需要定时获取一次手表的跑步</Abstract>
+			<DeclaredIn>FCRunObject.h</DeclaredIn>
+            
+			
+			<NodeRef refid="13"/>
+		</Token>
+		
+		
+        
+        
+	</File>
+</Tokens>

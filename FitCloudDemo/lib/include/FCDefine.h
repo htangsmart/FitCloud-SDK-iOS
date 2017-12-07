@@ -60,6 +60,10 @@ typedef NS_OPTIONS(UInt32, FCSensorFlagType)
     FCSensorFlagTypeANCS = 1 << 10,
     /*! 喝水提醒和翻腕亮屏新设置*/
     FCSensorFlagTypeDinkRemindAndFWLS = 1 << 11,
+    /*! 跑步*/
+    FCSensorFlagTypeRuning = 1 << 12,
+    /*! 日语ANCS字库*/
+    FCSensorFlagTypeANCSJapanese = 1 << 13,
 };
 
 /**
@@ -205,6 +209,22 @@ typedef NS_ENUM(NSInteger, FCSyncType) {
     /*! 翻腕亮屏设置*/
     FCSyncTypeSetFlipWristToLightScreen = 38,
     
+    /*! 跑步指令设置*/
+    FCSyncTypeSetRuningSwitchData = 39,
+    
+    /*! 跑步指令开关状态设置*/
+    FCSyncTypeSetRuningSwitchStateData = 40,
+    
+    /*! 获取跑步状态*/
+    FCSyncTypeGetRuningState = 41,
+    
+    /*! 获取跑步数据*/
+    FCSyncTypeGetRuningData = 42,
+    
+    /*! 获取跑步详细数据*/
+    FCSyncTypeGetRuningDetailData = 43,
+    /*! 重启手表*/
+    FCSyncTypeRestartWatch,
     /*! 结束*/
     FCSyncTypeEnd = 100,
 };
@@ -304,38 +324,5 @@ typedef NS_ENUM(NSInteger, FCSyncResponseState) {
     FCSyncResponseStateLowPower = 16,
 };
 
-
-/**
- 天气状态，你需要把自己获取的天气转换成以下状态同步到手表，手表才能显示正确的天气状态
- */
-typedef NS_ENUM(NSInteger, FCWeatherState)
-{
-    /*! 未知天气*/
-    FCWeatherStateUnknown = 0xFF,
-    /*! 晴天*/
-    FCWeatherStateSunnyDay = 0x01,
-    /*! 多云*/
-    FCWeatherStateCloudy = 0x02,
-    /*! 阴天*/
-    FCWeatherStateOvercast = 0x03,
-    /*! 阵雨*/
-    FCWeatherStateShower = 0x04,
-    /*! 雷阵雨、雷阵雨伴有冰雹*/
-    FCWeatherStateThunderyShower = 0x05,
-    /*! 小雨*/
-    FCWeatherStateDrizzle = 0x06,
-    /*! 中雨、大雨、暴雨*/
-    FCWeatherStateHeavyRain = 0x07,
-    /*! 雨夹雪、冻雨*/
-    FCWeatherStateSleet = 0x08,
-    /*! 小雪*/
-    FCWeatherStateLightSnow = 0x09,
-    /*! 大雪、暴雪*/
-    FCWeatherStateHeavySnow = 0x0a,
-    /*! 沙尘暴、浮尘*/
-    FCWeatherStateSandstorm = 0x0b,
-    /*! 雾、雾霾*/
-    FCWeatherStateFogOrHaze = 0x0c,
-};
 
 #endif /* FCDefine_h */

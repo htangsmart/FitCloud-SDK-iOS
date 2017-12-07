@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "FCObjectProtocol.h"
 
-@interface FCFlipWristToLightUpScreenObject : NSObject <FCObjectProtocal>
+@interface FCFlipWristToLightUpScreenObject : NSObject
 @property (nonatomic, assign) BOOL isOn;
-@property (nonatomic, assign) NSUInteger stMinute;
-@property (nonatomic, assign) NSUInteger edMinute;
+@property (nonatomic, assign) NSUInteger stMinutes;
+@property (nonatomic, assign) NSUInteger edMinutes;
++ (instancetype)objectWithData:(NSData *)data;
+- (NSData*)writeData;
 @end

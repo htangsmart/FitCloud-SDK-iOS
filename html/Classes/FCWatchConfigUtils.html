@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>FCWatchConfigUtils Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">FitCloud </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">H.Tang</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/defaultBloodPressureFromWatchConfig:">+ defaultBloodPressureFromWatchConfig:</option>
+		
+		<option value="//api/name/drinkWatchReminderEnableFromWatchConfig:">+ drinkWatchReminderEnableFromWatchConfig:</option>
+		
+		<option value="//api/name/drinkWaterReminderFromWatchConfig:">+ drinkWaterReminderFromWatchConfig:</option>
+		
+		<option value="//api/name/featuresFromWatchConfig:">+ featuresFromWatchConfig:</option>
+		
+		<option value="//api/name/flipWristToLightUpScreenFromWatchConfig:">+ flipWristToLightUpScreenFromWatchConfig:</option>
+		
+		<option value="//api/name/getFirmwareAppVersionFromWatchConfig:">+ getFirmwareAppVersionFromWatchConfig:</option>
+		
+		<option value="//api/name/getFirmwareDisplayVersionFromWatchConfig:">+ getFirmwareDisplayVersionFromWatchConfig:</option>
+		
+		<option value="//api/name/getFlashVersionFromWatchConfig:">+ getFlashVersionFromWatchConfig:</option>
+		
+		<option value="//api/name/getPageDisplayFlagFromWatchConfig:">+ getPageDisplayFlagFromWatchConfig:</option>
+		
+		<option value="//api/name/getPatchAppVersionFromWatchConfig:">+ getPatchAppVersionFromWatchConfig:</option>
+		
+		<option value="//api/name/getScreenDisplayConfigFromWatchConfig:">+ getScreenDisplayConfigFromWatchConfig:</option>
+		
+		<option value="//api/name/hardwareVersionFromWatchConfig:">+ hardwareVersionFromWatchConfig:</option>
+		
+		<option value="//api/name/healthMonitoringFromWatchConfig:">+ healthMonitoringFromWatchConfig:</option>
+		
+		<option value="//api/name/notificationFromWatchConfig:">+ notificationFromWatchConfig:</option>
+		
+		<option value="//api/name/sendentaryReminderFromWatchConfig:">+ sendentaryReminderFromWatchConfig:</option>
+		
+		<option value="//api/name/sensorFlagFromWatchConfig:">+ sensorFlagFromWatchConfig:</option>
+		
+		<option value="//api/name/updateWatchConfig:withData:andDataType:">+ updateWatchConfig:withData:andDataType:</option>
+		
+	</optgroup>
+	
+
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">FCWatchConfigUtils Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>FCWatchConfigUtils.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>手表配置解析与更新</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/updateWatchConfig:withData:andDataType:" title="updateWatchConfig:withData:andDataType:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateWatchConfig:withData:andDataType:">+&nbsp;updateWatchConfig:withData:andDataType:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>更新手环系统配置
+注：为了适应后续的协议变化使用时直接将手表系统配置Data以BLOB的方式存储到数据库，如果配置有更新，则通过此接口更新配置并保存新的系统配置到数据库</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSData *)updateWatchConfig:(NSData *)<em>watchConfigData</em> withData:(NSData *)<em>data</em> andDataType:(WatchConfigType)<em>dataType</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>watchConfigData</code></th>
+						<td><p>待更新的手环系统配置</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>新的数据配置</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dataType</code></th>
+						<td><p>更新数据类型</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>更新后的手环系统配置（如果更新异常，则返回watchConfigData）</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCWatchConfigUtils.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/notificationFromWatchConfig:" title="notificationFromWatchConfig:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/notificationFromWatchConfig:">+&nbsp;notificationFromWatchConfig:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取消息通知开关</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (FCNotificationObject *)notificationFromWatchConfig:(NSData *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>手表系统设置</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><i>FCNotificationObject</i>对象</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCWatchConfigUtils.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getScreenDisplayConfigFromWatchConfig:" title="getScreenDisplayConfigFromWatchConfig:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getScreenDisplayConfigFromWatchConfig:">+&nbsp;getScreenDisplayConfigFromWatchConfig:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取手环当前屏幕显示配置</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (FCScreenDisplayConfigObject *)getScreenDisplayConfigFromWatchConfig:(NSData *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>手表系统设置</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><i>FCScreenDisplayConfigObject</i>对象</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCWatchConfigUtils.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/featuresFromWatchConfig:" title="featuresFromWatchConfig:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/featuresFromWatchConfig:">+&nbsp;featuresFromWatchConfig:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取手环功能开关配置</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (FCFeaturesObject *)featuresFromWatchConfig:(NSData *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>手环系统配置</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><i>FCFeaturesObject</i>对象</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCWatchConfigUtils.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sensorFlagFromWatchConfig:" title="sensorFlagFromWatchConfig:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sensorFlagFromWatchConfig:">+&nbsp;sensorFlagFromWatchConfig:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取传感器标志位配置</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (FCSensorFlagObject *)sensorFlagFromWatchConfig:(NSData *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>手环系统社会组</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><i>FCSensorFlagObject</i>对象</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCWatchConfigUtils.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getPageDisplayFlagFromWatchConfig:" title="getPageDisplayFlagFromWatchConfig:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getPageDisplayFlagFromWatchConfig:">+&nbsp;getPageDisplayFlagFromWatchConfig:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取手环页面标号配置（此页面标号决定手环屏幕显示设置）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (FCPageDisplayFlagObject *)getPageDisplayFlagFromWatchConfig:(NSData *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>手环系统配置</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><i>FCPageDisplayFlagObject</i>对象</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCWatchConfigUtils.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hardwareVersionFromWatchConfig:" title="hardwareVersionFromWatchConfig:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hardwareVersionFromWatchConfig:">+&nbsp;hardwareVersionFromWatchConfig:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取固件信息字符串 eg。 003020000203040540020020&hellip;
+注：此字符串用户固件升级新版本检查</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)hardwareVersionFromWatchConfig:(NSData *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>手环系统设置</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>固件信息字符串</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCWatchConfigUtils.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getFirmwareDisplayVersionFromWatchConfig:" title="getFirmwareDisplayVersionFromWatchConfig:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getFirmwareDisplayVersionFromWatchConfig:">+&nbsp;getFirmwareDisplayVersionFromWatchConfig:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取固件版本号 eg。 01.3457.11
+注：此字符串用于固件版本显示</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)getFirmwareDisplayVersionFromWatchConfig:(NSData *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>手环系统设置</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>格式化的固件版本号</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCWatchConfigUtils.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getPatchAppVersionFromWatchConfig:" title="getPatchAppVersionFromWatchConfig:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getPatchAppVersionFromWatchConfig:">+&nbsp;getPatchAppVersionFromWatchConfig:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取手表patchApp版本号</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)getPatchAppVersionFromWatchConfig:(NSData *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>手环系统设置</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>patchApp Version 字符串</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCWatchConfigUtils.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getFlashVersionFromWatchConfig:" title="getFlashVersionFromWatchConfig:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getFlashVersionFromWatchConfig:">+&nbsp;getFlashVersionFromWatchConfig:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取手环的flash版本号</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)getFlashVersionFromWatchConfig:(NSData *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>手环系统设置</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>flash version</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCWatchConfigUtils.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getFirmwareAppVersionFromWatchConfig:" title="getFirmwareAppVersionFromWatchConfig:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getFirmwareAppVersionFromWatchConfig:">+&nbsp;getFirmwareAppVersionFromWatchConfig:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取固件app版本号</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)getFirmwareAppVersionFromWatchConfig:(NSData *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>手环系统配置</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>firmware version</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCWatchConfigUtils.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/healthMonitoringFromWatchConfig:" title="healthMonitoringFromWatchConfig:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/healthMonitoringFromWatchConfig:">+&nbsp;healthMonitoringFromWatchConfig:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取健康定时检测配置</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (FCHealthMonitoringObject *)healthMonitoringFromWatchConfig:(NSData *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>手环系统配置</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><i>FCHealthMonitoringObject</i>对象</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCWatchConfigUtils.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sendentaryReminderFromWatchConfig:" title="sendentaryReminderFromWatchConfig:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sendentaryReminderFromWatchConfig:">+&nbsp;sendentaryReminderFromWatchConfig:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取手环久坐提醒配置</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (FCSedentaryReminderObject *)sendentaryReminderFromWatchConfig:(NSData *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>手环系统配置</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><i>FCSedentaryReminderObject</i>对象</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCWatchConfigUtils.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/defaultBloodPressureFromWatchConfig:" title="defaultBloodPressureFromWatchConfig:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/defaultBloodPressureFromWatchConfig:">+&nbsp;defaultBloodPressureFromWatchConfig:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取手环默认血压配置</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSDictionary *)defaultBloodPressureFromWatchConfig:(NSData *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>系统配置数据
+@return
+{
+    @&ldquo;systolicBP&rdquo;:125,
+    @&ldquo;diastolicBP&rdquo;:80
+}
+注：如果解析出错，则返回默认值</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCWatchConfigUtils.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/drinkWatchReminderEnableFromWatchConfig:" title="drinkWatchReminderEnableFromWatchConfig:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/drinkWatchReminderEnableFromWatchConfig:">+&nbsp;drinkWatchReminderEnableFromWatchConfig:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取喝水提醒开关配置</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BOOL)drinkWatchReminderEnableFromWatchConfig:(NSData *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>手环系统配置</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>YES/NO</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCWatchConfigUtils.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/drinkWaterReminderFromWatchConfig:" title="drinkWaterReminderFromWatchConfig:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/drinkWaterReminderFromWatchConfig:">+&nbsp;drinkWaterReminderFromWatchConfig:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取喝水提醒配置
+注：此处的喝水提醒配置带时间设置，部分低版本固件或旧硬件没有此功能，将会返回空数据
+UI应该根据<i>FCSensorFlagObject</i>的drinkRemindAndFWTLS来判断是否支持新的喝水提醒协议</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (FCDrinkRemindObject *)drinkWaterReminderFromWatchConfig:(NSData *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>手表系统设置</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><i>FCDrinkRemindObject</i>对象</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCWatchConfigUtils.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/flipWristToLightUpScreenFromWatchConfig:" title="flipWristToLightUpScreenFromWatchConfig:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/flipWristToLightUpScreenFromWatchConfig:">+&nbsp;flipWristToLightUpScreenFromWatchConfig:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取翻腕亮屏配置
+注：此功能在部分低版本固件或旧硬件上不可用，将会返回空数据
+UI应该根据<i>FCSensorFlagObject</i>的drinkRemindAndFWTLS来判断是否支持新的翻腕亮屏协议</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (FCFlipWristToLightUpScreenObject *)flipWristToLightUpScreenFromWatchConfig:(NSData *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>手表系统设置</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><i>FCFlipWristToLightUpScreenObject</i>对象</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">FCWatchConfigUtils.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 H.Tang. All rights reserved. Updated: 2017-12-07</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/FCSyncResponseState.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/FCSyncResponseState</TokenIdentifier>
+			<Abstract type="html">同步响应结果，如果蓝牙在通讯过程中centralManager发生状态变化，部分蓝牙相关状态被回调</Abstract>
+			<DeclaredIn>FCDefine.h</DeclaredIn>
+            
+			
+			<NodeRef refid="32"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateUnKnown</TokenIdentifier>
+            <Abstract type="html">未知类型</Abstract>
+            <Declaration>FCSyncResponseStateUnKnown</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="32"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateUnsupported</TokenIdentifier>
+            <Abstract type="html">当前设备不支持蓝牙4.0</Abstract>
+            <Declaration>FCSyncResponseStateUnsupported</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="32"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateUnauthorized</TokenIdentifier>
+            <Abstract type="html">蓝牙未授权</Abstract>
+            <Declaration>FCSyncResponseStateUnauthorized</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="32"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateResetting</TokenIdentifier>
+            <Abstract type="html">蓝牙重置状态</Abstract>
+            <Declaration>FCSyncResponseStateResetting</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="32"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateNotConnected</TokenIdentifier>
+            <Abstract type="html">蓝牙未连接</Abstract>
+            <Declaration>FCSyncResponseStateNotConnected</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="32"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStatePowerOff</TokenIdentifier>
+            <Abstract type="html">蓝牙关闭，主动关闭蓝牙时回调</Abstract>
+            <Declaration>FCSyncResponseStatePowerOff</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="32"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStatePowerOn</TokenIdentifier>
+            <Abstract type="html">蓝牙打开，主动打开蓝牙时回调</Abstract>
+            <Declaration>FCSyncResponseStatePowerOn</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="32"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateDisconnect</TokenIdentifier>
+            <Abstract type="html">蓝牙断开连接，主动或者被动断开都会调用</Abstract>
+            <Declaration>FCSyncResponseStateDisconnect</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="32"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateParameterError</TokenIdentifier>
+            <Abstract type="html">同步参数错误</Abstract>
+            <Declaration>FCSyncResponseStateParameterError</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="32"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateNoSensorFlag</TokenIdentifier>
+            <Abstract type="html">无传感器同步标志,不能同步数据</Abstract>
+            <Declaration>FCSyncResponseStateNoSensorFlag</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="32"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateSynchronizing</TokenIdentifier>
+            <Abstract type="html">正在同步，蓝牙正在同步时发起同步操作会返回此结果</Abstract>
+            <Declaration>FCSyncResponseStateSynchronizing</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="32"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateSuccess</TokenIdentifier>
+            <Abstract type="html">同步响应成功</Abstract>
+            <Declaration>FCSyncResponseStateSuccess</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="32"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateError</TokenIdentifier>
+            <Abstract type="html">同步响应失败</Abstract>
+            <Declaration>FCSyncResponseStateError</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="32"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateTimeOut</TokenIdentifier>
+            <Abstract type="html">同步响应超时</Abstract>
+            <Declaration>FCSyncResponseStateTimeOut</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="32"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateRTTimeOut</TokenIdentifier>
+            <Abstract type="html">健康实时同步超时</Abstract>
+            <Declaration>FCSyncResponseStateRTTimeOut</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="32"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateECGTimeOut</TokenIdentifier>
+            <Abstract type="html">心电检测数据同步超时</Abstract>
+            <Declaration>FCSyncResponseStateECGTimeOut</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="32"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSyncResponseStateLowPower</TokenIdentifier>
+            <Abstract type="html">低电量模式，固件升级时低电量提示</Abstract>
+            <Declaration>FCSyncResponseStateLowPower</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="32"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/FCRTSyncType.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/FCRTSyncType</TokenIdentifier>
+			<Abstract type="html">实时同步类型</Abstract>
+			<DeclaredIn>FCDefine.h</DeclaredIn>
+            
+			
+			<NodeRef refid="30"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeUnknown</TokenIdentifier>
+            <Abstract type="html">默认</Abstract>
+            <Declaration>FCRTSyncTypeUnknown</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="30"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeHeartRate</TokenIdentifier>
+            <Abstract type="html">心率</Abstract>
+            <Declaration>FCRTSyncTypeHeartRate</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="30"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeBloodOxygen</TokenIdentifier>
+            <Abstract type="html">实时血氧</Abstract>
+            <Declaration>FCRTSyncTypeBloodOxygen</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="30"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeBloodPressure</TokenIdentifier>
+            <Abstract type="html">血压e</Abstract>
+            <Declaration>FCRTSyncTypeBloodPressure</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="30"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeBreathingRate</TokenIdentifier>
+            <Abstract type="html">呼吸频率</Abstract>
+            <Declaration>FCRTSyncTypeBreathingRate</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="30"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCRTSyncTypeECG</TokenIdentifier>
+            <Abstract type="html">心电图</Abstract>
+            <Declaration>FCRTSyncTypeECG</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="30"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

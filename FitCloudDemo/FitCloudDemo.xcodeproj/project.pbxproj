@@ -127,13 +127,30 @@
 		6B5DD2BE1DC8A97A00788BDA /* FitCloud+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FitCloud+Category.m"; sourceTree = "<group>"; };
 		6B5DD2C11DC8A97A00788BDA /* NSObject+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HUD.h"; sourceTree = "<group>"; };
 		6B5DD2C21DC8A97A00788BDA /* NSObject+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HUD.m"; sourceTree = "<group>"; };
+		6B637F931FD8F627001BB27C /* FCNotificationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCNotificationObject.h; sourceTree = "<group>"; };
+		6B637F941FD8F627001BB27C /* FCScreenDisplayConfigObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCScreenDisplayConfigObject.h; sourceTree = "<group>"; };
+		6B637F951FD8F627001BB27C /* FCSyncUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCSyncUtils.h; sourceTree = "<group>"; };
+		6B637F961FD8F627001BB27C /* FCWatchConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCWatchConfig.h; sourceTree = "<group>"; };
+		6B637F971FD8F627001BB27C /* FCWatchConfigUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCWatchConfigUtils.h; sourceTree = "<group>"; };
+		6B637F981FD8F628001BB27C /* FCVersionDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCVersionDataObject.h; sourceTree = "<group>"; };
+		6B637F991FD8F628001BB27C /* FCFlipWristToLightUpScreenObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCFlipWristToLightUpScreenObject.h; sourceTree = "<group>"; };
+		6B637F9A1FD8F628001BB27C /* FCObjectProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCObjectProtocol.h; sourceTree = "<group>"; };
+		6B637F9B1FD8F628001BB27C /* FCWeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCWeather.h; sourceTree = "<group>"; };
+		6B637F9C1FD8F628001BB27C /* FCPageDisplayFlagObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCPageDisplayFlagObject.h; sourceTree = "<group>"; };
+		6B637F9D1FD8F628001BB27C /* FCDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCDataObject.h; sourceTree = "<group>"; };
+		6B637F9E1FD8F628001BB27C /* FCWatchSettingsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCWatchSettingsObject.h; sourceTree = "<group>"; };
+		6B637F9F1FD8F628001BB27C /* FCDrinkRemindObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCDrinkRemindObject.h; sourceTree = "<group>"; };
+		6B637FA01FD8F628001BB27C /* FCHealthMonitoringObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCHealthMonitoringObject.h; sourceTree = "<group>"; };
+		6B637FA11FD8F628001BB27C /* FCFeaturesObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCFeaturesObject.h; sourceTree = "<group>"; };
+		6B637FA21FD8F628001BB27C /* FCSedentaryReminderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCSedentaryReminderObject.h; sourceTree = "<group>"; };
+		6B637FA31FD8F628001BB27C /* FCSensorFlagObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCSensorFlagObject.h; sourceTree = "<group>"; };
+		6B637FA41FD8F628001BB27C /* FCRunObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCRunObject.h; sourceTree = "<group>"; };
+		6B637FA51FD8F629001BB27C /* FCAlarmClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCAlarmClock.h; sourceTree = "<group>"; };
 		6B8BD56D1F3DB38100CF3B77 /* HFLocalFirmwareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFLocalFirmwareViewController.h; sourceTree = "<group>"; };
 		6B8BD56E1F3DB38100CF3B77 /* HFLocalFirmwareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFLocalFirmwareViewController.m; sourceTree = "<group>"; };
 		6B8D7FD61F42957A0074F6D6 /* FCConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCConstants.h; sourceTree = "<group>"; };
 		6B8D7FD71F42957A0074F6D6 /* FCDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCDefine.h; sourceTree = "<group>"; };
-		6B8D7FD81F42957A0074F6D6 /* FCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCObject.h; sourceTree = "<group>"; };
 		6B8D7FD91F42957A0074F6D6 /* FCRTSyncUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCRTSyncUtils.h; sourceTree = "<group>"; };
-		6B8D7FDA1F42957A0074F6D6 /* FCSysConfigUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCSysConfigUtils.h; sourceTree = "<group>"; };
 		6B8D7FDB1F42957A0074F6D6 /* FitCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitCloud.h; sourceTree = "<group>"; };
 		6B8D7FDC1F42957A0074F6D6 /* FitCloudAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitCloudAPI.h; sourceTree = "<group>"; };
 		6B8D7FDD1F42957A0074F6D6 /* FitCloudBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitCloudBlock.h; sourceTree = "<group>"; };
@@ -335,13 +352,11 @@
 			children = (
 				6BDEB8651EDA822B002A6DD3 /* DataBase */,
 				6BE746FA1ED95ECB0085E16E /* View */,
-				6BE746D31ED95AA90085E16E /* Define */,
 				6BE746D21ED95A990085E16E /* Utils */,
 				6BE746D01ED954D40085E16E /* Model */,
 				6BCF1C671DE57FC700B99A21 /* Manager */,
 				6B5DD2BA1DC8A97A00788BDA /* Category */,
 				6B5DD29F1DC8A95600788BDA /* Marco */,
-				6B5DD2A21DC8A95600788BDA /* Verdor */,
 				6B5DD2A51DC8A95600788BDA /* ViewControllers */,
 				6B5DD2531DC8A4E100788BDA /* AppDelegate.h */,
 				6B5DD2541DC8A4E200788BDA /* AppDelegate.m */,
@@ -389,13 +404,6 @@
 			path = Marco;
 			sourceTree = "<group>";
 		};
-		6B5DD2A21DC8A95600788BDA /* Verdor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Verdor;
-			sourceTree = "<group>";
-		};
 		6B5DD2A51DC8A95600788BDA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,11 +447,28 @@
 		6B8D7FD51F42957A0074F6D6 /* include */ = {
 			isa = PBXGroup;
 			children = (
+				6B637FA51FD8F629001BB27C /* FCAlarmClock.h */,
+				6B637F9D1FD8F628001BB27C /* FCDataObject.h */,
+				6B637F9F1FD8F628001BB27C /* FCDrinkRemindObject.h */,
+				6B637FA11FD8F628001BB27C /* FCFeaturesObject.h */,
+				6B637F991FD8F628001BB27C /* FCFlipWristToLightUpScreenObject.h */,
+				6B637FA01FD8F628001BB27C /* FCHealthMonitoringObject.h */,
+				6B637F931FD8F627001BB27C /* FCNotificationObject.h */,
+				6B637F9A1FD8F628001BB27C /* FCObjectProtocol.h */,
+				6B637F9C1FD8F628001BB27C /* FCPageDisplayFlagObject.h */,
+				6B637FA41FD8F628001BB27C /* FCRunObject.h */,
+				6B637F941FD8F627001BB27C /* FCScreenDisplayConfigObject.h */,
+				6B637FA21FD8F628001BB27C /* FCSedentaryReminderObject.h */,
+				6B637FA31FD8F628001BB27C /* FCSensorFlagObject.h */,
+				6B637F951FD8F627001BB27C /* FCSyncUtils.h */,
+				6B637F981FD8F628001BB27C /* FCVersionDataObject.h */,
+				6B637F961FD8F627001BB27C /* FCWatchConfig.h */,
+				6B637F971FD8F627001BB27C /* FCWatchConfigUtils.h */,
+				6B637F9E1FD8F628001BB27C /* FCWatchSettingsObject.h */,
+				6B637F9B1FD8F628001BB27C /* FCWeather.h */,
 				6B8D7FD61F42957A0074F6D6 /* FCConstants.h */,
 				6B8D7FD71F42957A0074F6D6 /* FCDefine.h */,
-				6B8D7FD81F42957A0074F6D6 /* FCObject.h */,
 				6B8D7FD91F42957A0074F6D6 /* FCRTSyncUtils.h */,
-				6B8D7FDA1F42957A0074F6D6 /* FCSysConfigUtils.h */,
 				6B8D7FDB1F42957A0074F6D6 /* FitCloud.h */,
 				6B8D7FDC1F42957A0074F6D6 /* FitCloudAPI.h */,
 				6B8D7FDD1F42957A0074F6D6 /* FitCloudBlock.h */,
@@ -562,13 +587,6 @@
 				6BE5715E1EDD4B8C00CE46C7 /* FCUIConstants.m */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		6BE746D31ED95AA90085E16E /* Define */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Define;
 			sourceTree = "<group>";
 		};
 		6BE746D81ED95C6B0085E16E /* 首页 */ = {

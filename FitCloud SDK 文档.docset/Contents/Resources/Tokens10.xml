@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FCRunConfig.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FCRunConfig</TokenIdentifier>
+			<Abstract type="html">(1) APP通过此配置来控制手表跑步模式和跑步状态
+(2) 手表启动跑步指令，会将此配置发送给APP</Abstract>
+			<DeclaredIn>FCRunObject.h</DeclaredIn>
+            
+			
+			<NodeRef refid="10"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCRunConfig/setRunState:</TokenIdentifier>
+			<Abstract type="html">跑步状态 0 结束,1 开始,2 暂停,3 恢复</Abstract>
+			<DeclaredIn>FCRunObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UInt8 runState</Declaration>
+			
+			
+			<Anchor>//api/name/runState</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCRunConfig/runState</TokenIdentifier>
+			<Abstract type="html">跑步状态 0 结束,1 开始,2 暂停,3 恢复</Abstract>
+			<DeclaredIn>FCRunObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UInt8 runState</Declaration>
+			
+			
+			<Anchor>//api/name/runState</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCRunConfig/runState</TokenIdentifier>
+			<Abstract type="html">跑步状态 0 结束,1 开始,2 暂停,3 恢复</Abstract>
+			<DeclaredIn>FCRunObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UInt8 runState</Declaration>
+			
+			
+			<Anchor>//api/name/runState</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCRunConfig/setRunId:</TokenIdentifier>
+			<Abstract type="html">跑步的id号码</Abstract>
+			<DeclaredIn>FCRunObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UInt32 runId</Declaration>
+			
+			
+			<Anchor>//api/name/runId</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCRunConfig/runId</TokenIdentifier>
+			<Abstract type="html">跑步的id号码</Abstract>
+			<DeclaredIn>FCRunObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UInt32 runId</Declaration>
+			
+			
+			<Anchor>//api/name/runId</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCRunConfig/runId</TokenIdentifier>
+			<Abstract type="html">跑步的id号码</Abstract>
+			<DeclaredIn>FCRunObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UInt32 runId</Declaration>
+			
+			
+			<Anchor>//api/name/runId</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

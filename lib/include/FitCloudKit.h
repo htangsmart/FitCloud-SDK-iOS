@@ -16,14 +16,14 @@
 
 #import "FitCloudUtils.h"
 #import "FitCloudAPI.h"
-#import "FCSysConfigUtils.h"
 #import "FCRTSyncUtils.h"
 #import "FCSyncUtils.h"
+#import "FCWatchConfigUtils.h"
+
 
 // 对象模型
 #import "FCDataObject.h"
 #import "FCWatchSettingsObject.h"
-#import "FCSedentaryReminderObject.h"
 #import "FCHealthMonitoringObject.h"
 #import "FCVersionDataObject.h"
 #import "FCPageDisplayFlagObject.h"
@@ -34,5 +34,9 @@
 #import "FCAlarmClock.h"
 #import "FCWeather.h"
 #import "FCWatchConfig.h"
+#import "FCSedentaryReminderObject.h"
+#import "FCRunObject.h"
+#import "FCFlipWristToLightUpScreenObject.h"
+#import "FCDrinkRemindObject.h"
 
 #endif /* FitCloudKit_h */

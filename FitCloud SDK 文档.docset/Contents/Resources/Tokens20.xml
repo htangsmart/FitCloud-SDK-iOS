@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FCWatchConfigUtils.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FCWatchConfigUtils</TokenIdentifier>
+			<Abstract type="html">手表配置解析与更新</Abstract>
+			<DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+            
+			
+			<NodeRef refid="20"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCWatchConfigUtils/updateWatchConfig:withData:andDataType:</TokenIdentifier>
+			<Abstract type="html">更新手环系统配置
+注：为了适应后续的协议变化使用时直接将手表系统配置Data以BLOB的方式存储到数据库，如果配置有更新，则通过此接口更新配置并保存新的系统配置到数据库</Abstract>
+			<DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+			
+			<Declaration>+ (NSData *)updateWatchConfig:(NSData *)watchConfigData withData:(NSData *)data andDataType:(WatchConfigType)dataType</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>watchConfigData</Name>
+					<Abstract type="html">待更新的手环系统配置</Abstract>
+				</Parameter><Parameter>
+					<Name>data</Name>
+					<Abstract type="html">新的数据配置</Abstract>
+				</Parameter><Parameter>
+					<Name>dataType</Name>
+					<Abstract type="html">更新数据类型</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">更新后的手环系统配置（如果更新异常，则返回watchConfigData）</Abstract></ReturnValue>
+			<Anchor>//api/name/updateWatchConfig:withData:andDataType:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCWatchConfigUtils/notificationFromWatchConfig:</TokenIdentifier>
+			<Abstract type="html">获取消息通知开关</Abstract>
+			<DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+			
+			<Declaration>+ (FCNotificationObject *)notificationFromWatchConfig:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">手表系统设置</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">&lt;i&gt;FCNotificationObject&lt;/i&gt;对象</Abstract></ReturnValue>
+			<Anchor>//api/name/notificationFromWatchConfig:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCWatchConfigUtils/getScreenDisplayConfigFromWatchConfig:</TokenIdentifier>
+			<Abstract type="html">获取手环当前屏幕显示配置</Abstract>
+			<DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+			
+			<Declaration>+ (FCScreenDisplayConfigObject *)getScreenDisplayConfigFromWatchConfig:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">手表系统设置</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">&lt;i&gt;FCScreenDisplayConfigObject&lt;/i&gt;对象</Abstract></ReturnValue>
+			<Anchor>//api/name/getScreenDisplayConfigFromWatchConfig:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCWatchConfigUtils/featuresFromWatchConfig:</TokenIdentifier>
+			<Abstract type="html">获取手环功能开关配置</Abstract>
+			<DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+			
+			<Declaration>+ (FCFeaturesObject *)featuresFromWatchConfig:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">手环系统配置</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">&lt;i&gt;FCFeaturesObject&lt;/i&gt;对象</Abstract></ReturnValue>
+			<Anchor>//api/name/featuresFromWatchConfig:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCWatchConfigUtils/sensorFlagFromWatchConfig:</TokenIdentifier>
+			<Abstract type="html">获取传感器标志位配置</Abstract>
+			<DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+			
+			<Declaration>+ (FCSensorFlagObject *)sensorFlagFromWatchConfig:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">手环系统社会组</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">&lt;i&gt;FCSensorFlagObject&lt;/i&gt;对象</Abstract></ReturnValue>
+			<Anchor>//api/name/sensorFlagFromWatchConfig:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCWatchConfigUtils/getPageDisplayFlagFromWatchConfig:</TokenIdentifier>
+			<Abstract type="html">获取手环页面标号配置（此页面标号决定手环屏幕显示设置）</Abstract>
+			<DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+			
+			<Declaration>+ (FCPageDisplayFlagObject *)getPageDisplayFlagFromWatchConfig:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">手环系统配置</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">&lt;i&gt;FCPageDisplayFlagObject&lt;/i&gt;对象</Abstract></ReturnValue>
+			<Anchor>//api/name/getPageDisplayFlagFromWatchConfig:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCWatchConfigUtils/hardwareVersionFromWatchConfig:</TokenIdentifier>
+			<Abstract type="html">获取固件信息字符串 eg。 003020000203040540020020...
+注：此字符串用户固件升级新版本检查</Abstract>
+			<DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)hardwareVersionFromWatchConfig:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">手环系统设置</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">固件信息字符串</Abstract></ReturnValue>
+			<Anchor>//api/name/hardwareVersionFromWatchConfig:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCWatchConfigUtils/getFirmwareDisplayVersionFromWatchConfig:</TokenIdentifier>
+			<Abstract type="html">获取固件版本号 eg。 01.3457.11
+注：此字符串用于固件版本显示</Abstract>
+			<DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)getFirmwareDisplayVersionFromWatchConfig:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">手环系统设置</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">格式化的固件版本号</Abstract></ReturnValue>
+			<Anchor>//api/name/getFirmwareDisplayVersionFromWatchConfig:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCWatchConfigUtils/getPatchAppVersionFromWatchConfig:</TokenIdentifier>
+			<Abstract type="html">获取手表patchApp版本号</Abstract>
+			<DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)getPatchAppVersionFromWatchConfig:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">手环系统设置</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">patchApp Version 字符串</Abstract></ReturnValue>
+			<Anchor>//api/name/getPatchAppVersionFromWatchConfig:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCWatchConfigUtils/getFlashVersionFromWatchConfig:</TokenIdentifier>
+			<Abstract type="html">获取手环的flash版本号</Abstract>
+			<DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)getFlashVersionFromWatchConfig:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">手环系统设置</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">flash version</Abstract></ReturnValue>
+			<Anchor>//api/name/getFlashVersionFromWatchConfig:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCWatchConfigUtils/getFirmwareAppVersionFromWatchConfig:</TokenIdentifier>
+			<Abstract type="html">获取固件app版本号</Abstract>
+			<DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)getFirmwareAppVersionFromWatchConfig:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">手环系统配置</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">firmware version</Abstract></ReturnValue>
+			<Anchor>//api/name/getFirmwareAppVersionFromWatchConfig:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCWatchConfigUtils/healthMonitoringFromWatchConfig:</TokenIdentifier>
+			<Abstract type="html">获取健康定时检测配置</Abstract>
+			<DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+			
+			<Declaration>+ (FCHealthMonitoringObject *)healthMonitoringFromWatchConfig:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">手环系统配置</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">&lt;i&gt;FCHealthMonitoringObject&lt;/i&gt;对象</Abstract></ReturnValue>
+			<Anchor>//api/name/healthMonitoringFromWatchConfig:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCWatchConfigUtils/sendentaryReminderFromWatchConfig:</TokenIdentifier>
+			<Abstract type="html">获取手环久坐提醒配置</Abstract>
+			<DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+			
+			<Declaration>+ (FCSedentaryReminderObject *)sendentaryReminderFromWatchConfig:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">手环系统配置</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">&lt;i&gt;FCSedentaryReminderObject&lt;/i&gt;对象</Abstract></ReturnValue>
+			<Anchor>//api/name/sendentaryReminderFromWatchConfig:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCWatchConfigUtils/defaultBloodPressureFromWatchConfig:</TokenIdentifier>
+			<Abstract type="html">获取手环默认血压配置</Abstract>
+			<DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+			
+			<Declaration>+ (NSDictionary *)defaultBloodPressureFromWatchConfig:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">系统配置数据
+@return
+{
+    @&quot;systolicBP&quot;:125,
+    @&quot;diastolicBP&quot;:80
+}
+注：如果解析出错，则返回默认值</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/defaultBloodPressureFromWatchConfig:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCWatchConfigUtils/drinkWatchReminderEnableFromWatchConfig:</TokenIdentifier>
+			<Abstract type="html">获取喝水提醒开关配置</Abstract>
+			<DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+			
+			<Declaration>+ (BOOL)drinkWatchReminderEnableFromWatchConfig:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">手环系统配置</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES/NO</Abstract></ReturnValue>
+			<Anchor>//api/name/drinkWatchReminderEnableFromWatchConfig:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCWatchConfigUtils/drinkWaterReminderFromWatchConfig:</TokenIdentifier>
+			<Abstract type="html">获取喝水提醒配置
+注：此处的喝水提醒配置带时间设置，部分低版本固件或旧硬件没有此功能，将会返回空数据
+UI应该根据&lt;i&gt;FCSensorFlagObject&lt;/i&gt;的drinkRemindAndFWTLS来判断是否支持新的喝水提醒协议</Abstract>
+			<DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+			
+			<Declaration>+ (FCDrinkRemindObject *)drinkWaterReminderFromWatchConfig:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">手表系统设置</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">&lt;i&gt;FCDrinkRemindObject&lt;/i&gt;对象</Abstract></ReturnValue>
+			<Anchor>//api/name/drinkWaterReminderFromWatchConfig:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCWatchConfigUtils/flipWristToLightUpScreenFromWatchConfig:</TokenIdentifier>
+			<Abstract type="html">获取翻腕亮屏配置
+注：此功能在部分低版本固件或旧硬件上不可用，将会返回空数据
+UI应该根据&lt;i&gt;FCSensorFlagObject&lt;/i&gt;的drinkRemindAndFWTLS来判断是否支持新的翻腕亮屏协议</Abstract>
+			<DeclaredIn>FCWatchConfigUtils.h</DeclaredIn>
+			
+			<Declaration>+ (FCFlipWristToLightUpScreenObject *)flipWristToLightUpScreenFromWatchConfig:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">手表系统设置</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">&lt;i&gt;FCFlipWristToLightUpScreenObject&lt;/i&gt;对象</Abstract></ReturnValue>
+			<Anchor>//api/name/flipWristToLightUpScreenFromWatchConfig:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

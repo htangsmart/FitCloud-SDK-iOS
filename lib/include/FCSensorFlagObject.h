@@ -13,7 +13,7 @@
 /**
  传感器标志。硬件号亦为手环传感器或功能标志位，组成的32bit，每个bit代表某一传感器或功能在该项目是否存在，手机APP根据该硬件号判断在手机APP上是否显示该功能和是否同步该项数据，详细请看下面定义
  */
-@interface FCSensorFlagObject : NSObject <FCObjectProtocal>
+@interface FCSensorFlagObject : NSObject <NSCopying>
 @property (nonatomic, assign) BOOL heartRate;
 @property (nonatomic, assign) BOOL ultraviolet;
 @property (nonatomic, assign) BOOL weather;
@@ -45,5 +45,26 @@
  ANCS语言支持标识，此标志的固件可以把app系统语言发送到手表，手表ancs消息通知会显示对应的语言
  */
 @property (nonatomic, assign) BOOL ancsLanguage;
+
+/**
+ 喝水提醒和翻腕亮屏标志位
+ */
+@property (nonatomic, assign) BOOL drinkRemindAndFWTLS;
+
+/**
+ 运动模式标志
+ */
+@property (nonatomic, assign) BOOL runingEnable;
+
+/**
+ 日语字库
+ */
+@property (nonatomic, assign) BOOL ancsJapanese;
+
+/**
+ 温度单位设置标志
+ */
+@property (nonatomic, assign) BOOL temperatureUnit;
++ (instancetype)objectWithData:(NSData*)data;
 @end
 

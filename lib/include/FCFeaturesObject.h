@@ -12,7 +12,7 @@
 /**
  手表功能开关设置对象
  */
-@interface FCFeaturesObject : NSObject <FCObjectProtocal>
+@interface FCFeaturesObject : NSObject
 
 /**
  翻动手腕时点亮手表屏幕
@@ -34,5 +34,14 @@
  距离和重量单位，0 为公制单位  1 英制单位
  */
 @property (nonatomic, assign) BOOL isImperialUnits;
+
+
+/**
+ 温度单位，0：摄氏温度 1：华氏温度
+ */
+@property (nonatomic, assign) BOOL isFahrenheitTemperatureUnit;
+
++ (instancetype)objectWithData:(NSData*)data;
+- (NSData*)writeData;
 @end
 

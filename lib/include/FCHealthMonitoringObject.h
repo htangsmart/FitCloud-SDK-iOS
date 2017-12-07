@@ -13,8 +13,7 @@
 /**
  手表健康定时监测
  */
-@interface FCHealthMonitoringObject : NSObject <FCObjectProtocal>
-
+@interface FCHealthMonitoringObject : NSObject <NSCopying>
 /**
  健康监测开关状态
  */
@@ -29,4 +28,7 @@
  健康监测结束时间（从0点开始的分钟数）.
  */
 @property (nonatomic, assign) NSUInteger edMinute;
+
++ (instancetype)objectWithData:(NSData *)data;
+- (NSData*)writeData;
 @end

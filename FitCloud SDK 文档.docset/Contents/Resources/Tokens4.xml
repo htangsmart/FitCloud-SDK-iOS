@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FCDrinkRemindObject.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FCDrinkRemindObject</TokenIdentifier>
+			<Abstract type="html">喝水提醒配置</Abstract>
+			<DeclaredIn>FCDrinkRemindObject.h</DeclaredIn>
+            
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/FCDrinkRemindObject/objectWithData:</TokenIdentifier>
+			<Abstract type="html">初始化方法</Abstract>
+			<DeclaredIn>FCDrinkRemindObject.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)objectWithData:(NSData *)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">配置数据，如果为nil则使用默认配置初始化</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">初始化对象</Abstract></ReturnValue>
+			<Anchor>//api/name/objectWithData:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

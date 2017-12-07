@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/FCSensorFlagType.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/FCSensorFlagType</TokenIdentifier>
+			<Abstract type="html">传感器标志，如果存在某个标志可以进行某项数据同步</Abstract>
+			<DeclaredIn>FCDefine.h</DeclaredIn>
+            
+			
+			<NodeRef refid="31"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeHeartRate</TokenIdentifier>
+            <Abstract type="html">心率</Abstract>
+            <Declaration>FCSensorFlagTypeHeartRate</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="31"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeUV</TokenIdentifier>
+            <Abstract type="html">紫外线</Abstract>
+            <Declaration>FCSensorFlagTypeUV</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="31"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeWeather</TokenIdentifier>
+            <Abstract type="html">天气预报</Abstract>
+            <Declaration>FCSensorFlagTypeWeather</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="31"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeBloodOxygen</TokenIdentifier>
+            <Abstract type="html">血氧，有此标志则存在血氧功能</Abstract>
+            <Declaration>FCSensorFlagTypeBloodOxygen</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="31"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeBloodPressure</TokenIdentifier>
+            <Abstract type="html">血压，有此标志则存在血压功能</Abstract>
+            <Declaration>FCSensorFlagTypeBloodPressure</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="31"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeBreathingRate</TokenIdentifier>
+            <Abstract type="html">呼吸频率</Abstract>
+            <Declaration>FCSensorFlagTypeBreathingRate</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="31"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeEnhanceMeasurement</TokenIdentifier>
+            <Abstract type="html">加强检测</Abstract>
+            <Declaration>FCSensorFlagTypeEnhanceMeasurement</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="31"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeSevenDaysSleep</TokenIdentifier>
+            <Abstract type="html">睡眠七天历史数据</Abstract>
+            <Declaration>FCSensorFlagTypeSevenDaysSleep</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="31"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeECG</TokenIdentifier>
+            <Abstract type="html">心电</Abstract>
+            <Declaration>FCSensorFlagTypeECG</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="31"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeFlashOTA</TokenIdentifier>
+            <Abstract type="html">外部Flash OTA</Abstract>
+            <Declaration>FCSensorFlagTypeFlashOTA</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="31"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeANCS</TokenIdentifier>
+            <Abstract type="html">手机系统语言设置</Abstract>
+            <Declaration>FCSensorFlagTypeANCS</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="31"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeDinkRemindAndFWLS</TokenIdentifier>
+            <Abstract type="html">喝水提醒和翻腕亮屏新设置</Abstract>
+            <Declaration>FCSensorFlagTypeDinkRemindAndFWLS</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="31"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeRuning</TokenIdentifier>
+            <Abstract type="html">跑步</Abstract>
+            <Declaration>FCSensorFlagTypeRuning</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="31"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FCSensorFlagTypeANCSJapanese</TokenIdentifier>
+            <Abstract type="html">日语ANCS字库</Abstract>
+            <Declaration>FCSensorFlagTypeANCSJapanese</Declaration>
+            
+            <DeclaredIn>FCDefine.h</DeclaredIn>
+            
+            <NodeRef refid="31"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

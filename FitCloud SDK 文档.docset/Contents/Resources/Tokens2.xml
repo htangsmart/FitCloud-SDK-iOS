@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FCAlarmClockObject.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FCAlarmClockObject</TokenIdentifier>
+			<Abstract type="html">闹钟对象</Abstract>
+			<DeclaredIn>FCAlarmClock.h</DeclaredIn>
+            
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmClockObject/ringTime</TokenIdentifier>
+			<Abstract type="html">响铃时间</Abstract>
+			<DeclaredIn>FCAlarmClock.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)ringTime</Declaration>
+			
+			<ReturnValue><Abstract type="html">响铃时间字符串 格式：&quot;HH: mm&quot;</Abstract></ReturnValue>
+			<Anchor>//api/name/ringTime</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCAlarmClockObject/writeData</TokenIdentifier>
+			<Abstract type="html">经过协议编码的蓝牙数据</Abstract>
+			<DeclaredIn>FCAlarmClock.h</DeclaredIn>
+			
+			<Declaration>- (NSData *)writeData</Declaration>
+			
+			<ReturnValue><Abstract type="html">&lt;i&gt;NSData&lt;/i&gt;类型的二进制数据</Abstract></ReturnValue>
+			<Anchor>//api/name/writeData</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

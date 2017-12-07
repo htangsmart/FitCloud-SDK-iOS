@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FCScreenDisplayConfigObject.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FCScreenDisplayConfigObject</TokenIdentifier>
+			<Abstract type="html">手表屏幕显示配置，此配置用于发送到手表控制手表屏幕显示，屏幕显示设置项需要先根据传感器标志来判断，如果传感器标志功能不存在，则屏幕设置项需要设置为无效</Abstract>
+			<DeclaredIn>FCScreenDisplayConfigObject.h</DeclaredIn>
+            
+			
+			<NodeRef refid="14"/>
+		</Token>
+		
+		
+        
+        
+	</File>
+</Tokens>

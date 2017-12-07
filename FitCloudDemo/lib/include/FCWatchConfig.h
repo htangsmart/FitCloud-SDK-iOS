@@ -14,7 +14,7 @@
  */
 
 
-@interface FCWatchConfig : NSObject <FCObjectProtocal>
+@interface FCWatchConfig : NSObject <NSCopying>
 /**
  用户id，由自己服务器为每个用户分配。登录、绑定都需要此参数
  */

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "FCAlarmClock.h"
 
 /**
  运动数据同步结果解析
@@ -31,7 +31,8 @@
  @param data 手表返回的日总数据
  @return 日总数据详细记录
  */
-+ (NSDictionary*)getDetailsOfDailyTotalData:(NSData*)data;
+
++ (NSDictionary*)getDaySummary:(NSData*)data;
 
 
 #pragma mark - 七日睡眠总数据详细
@@ -46,7 +47,8 @@
  @param data 睡眠总数据
  @return 七日睡眠记录
  */
-+ (NSArray*)getDetailsOfTotalSleepDataWithinSevenDays:(NSData*)data;
+
++ (NSArray*)getSevenDaysSleepTotalData:(NSData*)data;
 
 
 #pragma mark - 获取运动量详细记录
@@ -71,6 +73,7 @@
 + (NSArray*)getRecordsOfSleep:(NSData*)data;
 
 
+
 #pragma mark - 获取心率详细记录
 
 /**
@@ -82,7 +85,10 @@
 + (NSArray*)getRecordsOfHeartRate:(NSData*)data;
 
 
+
 #pragma mark - 获取血氧详细记录
+
+
 /**
  获取血氧详细记录（每五分钟一个数据）
  
@@ -114,4 +120,25 @@
  @return 包含<i>FCDataObject</i>对象的数组
  */
 + (NSArray*)getRecordsOfBreathingRate:(NSData*)data;
+
+
+
+#pragma mark - 闹钟
+
+/**
+ 获取闹钟列表，最多可以设置8个无重复的闹钟
+ 
+ @param data 闹钟配置数据
+ @return 包含<i>FCAlarmClockObject</i>对象闹钟列表
+ */
++ (NSArray*)getAlarmClockListFromData:(NSData*)data;
+
+
+/**
+ 将闹钟列表转换为闹钟配置数据。用户闹钟同步
+ 
+ @param array 包含<i>FCAlarmClockObject</i>对象的闹钟数组
+ @return 闹钟配置数据
+ */
++ (NSData*)alarmClockDataFromAlarmList:(NSArray<FCAlarmClockObject*>*)array;
 @end

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FCDataObject.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FCDataObject</TokenIdentifier>
+			<Abstract type="html">手表同步数据模型</Abstract>
+			<DeclaredIn>FCDataObject.h</DeclaredIn>
+            
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDataObject/setDataType:</TokenIdentifier>
+			<Abstract type="html">数据类型，用于区分不同的数据，详细见&lt;i&gt;FCDataType&lt;/i&gt;</Abstract>
+			<DeclaredIn>FCDataObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) FCDataType DataType</Declaration>
+			
+			
+			<Anchor>//api/name/DataType</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDataObject/DataType</TokenIdentifier>
+			<Abstract type="html">数据类型，用于区分不同的数据，详细见&lt;i&gt;FCDataType&lt;/i&gt;</Abstract>
+			<DeclaredIn>FCDataObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) FCDataType DataType</Declaration>
+			
+			
+			<Anchor>//api/name/DataType</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCDataObject/DataType</TokenIdentifier>
+			<Abstract type="html">数据类型，用于区分不同的数据，详细见&lt;i&gt;FCDataType&lt;/i&gt;</Abstract>
+			<DeclaredIn>FCDataObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) FCDataType DataType</Declaration>
+			
+			
+			<Anchor>//api/name/DataType</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDataObject/setTimeStamp:</TokenIdentifier>
+			<Abstract type="html">自1970开始的时间戳</Abstract>
+			<DeclaredIn>FCDataObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *timeStamp</Declaration>
+			
+			
+			<Anchor>//api/name/timeStamp</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDataObject/timeStamp</TokenIdentifier>
+			<Abstract type="html">自1970开始的时间戳</Abstract>
+			<DeclaredIn>FCDataObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *timeStamp</Declaration>
+			
+			
+			<Anchor>//api/name/timeStamp</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCDataObject/timeStamp</TokenIdentifier>
+			<Abstract type="html">自1970开始的时间戳</Abstract>
+			<DeclaredIn>FCDataObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *timeStamp</Declaration>
+			
+			
+			<Anchor>//api/name/timeStamp</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDataObject/setValue:</TokenIdentifier>
+			<Abstract type="html">运动和健康数据，dataType为一下类型时分别对应一下数据
+&lt;i&gt;FCDataTypeExercise&lt;/i&gt;：value为运动的步数；
+&lt;i&gt;FCDataTypeSleep&lt;/i&gt;：value为睡眠状态（1：深睡眠 2：浅睡眠 3：清醒）；
+&lt;i&gt;FCDataTypeHeartRate&lt;/i&gt;：value为平均心率；
+&lt;i&gt;FCDataTypeBloodOxygen&lt;/i&gt;：value为血氧数值；
+&lt;i&gt;FCDataTypeBloodPressure&lt;/i&gt;：value为收缩压，extravalue为舒张压；
+&lt;i&gt;FCDataTypeBreathingRate&lt;/i&gt;：value为呼吸频率</Abstract>
+			<DeclaredIn>FCDataObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *value</Declaration>
+			
+			
+			<Anchor>//api/name/value</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCDataObject/value</TokenIdentifier>
+			<Abstract type="html">运动和健康数据，dataType为一下类型时分别对应一下数据
+&lt;i&gt;FCDataTypeExercise&lt;/i&gt;：value为运动的步数；
+&lt;i&gt;FCDataTypeSleep&lt;/i&gt;：value为睡眠状态（1：深睡眠 2：浅睡眠 3：清醒）；
+&lt;i&gt;FCDataTypeHeartRate&lt;/i&gt;：value为平均心率；
+&lt;i&gt;FCDataTypeBloodOxygen&lt;/i&gt;：value为血氧数值；
+&lt;i&gt;FCDataTypeBloodPressure&lt;/i&gt;：value为收缩压，extravalue为舒张压；
+&lt;i&gt;FCDataTypeBreathingRate&lt;/i&gt;：value为呼吸频率</Abstract>
+			<DeclaredIn>FCDataObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *value</Declaration>
+			
+			
+			<Anchor>//api/name/value</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCDataObject/value</TokenIdentifier>
+			<Abstract type="html">运动和健康数据，dataType为一下类型时分别对应一下数据
+&lt;i&gt;FCDataTypeExercise&lt;/i&gt;：value为运动的步数；
+&lt;i&gt;FCDataTypeSleep&lt;/i&gt;：value为睡眠状态（1：深睡眠 2：浅睡眠 3：清醒）；
+&lt;i&gt;FCDataTypeHeartRate&lt;/i&gt;：value为平均心率；
+&lt;i&gt;FCDataTypeBloodOxygen&lt;/i&gt;：value为血氧数值；
+&lt;i&gt;FCDataTypeBloodPressure&lt;/i&gt;：value为收缩压，extravalue为舒张压；
+&lt;i&gt;FCDataTypeBreathingRate&lt;/i&gt;：value为呼吸频率</Abstract>
+			<DeclaredIn>FCDataObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSNumber *value</Declaration>
+			
+			
+			<Anchor>//api/name/value</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

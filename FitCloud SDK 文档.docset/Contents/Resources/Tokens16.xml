@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FCSensorFlagObject.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FCSensorFlagObject</TokenIdentifier>
+			<Abstract type="html">传感器标志。硬件号亦为手环传感器或功能标志位，组成的32bit，每个bit代表某一传感器或功能在该项目是否存在，手机APP根据该硬件号判断在手机APP上是否显示该功能和是否同步该项数据，详细请看下面定义</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+            
+			
+			<NodeRef refid="16"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/setEnhanceMeasurement:</TokenIdentifier>
+			<Abstract type="html">心率加强监测，对于一些测不出心率的特殊人群，开启加强检测有助于心率测量</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL enhanceMeasurement</Declaration>
+			
+			
+			<Anchor>//api/name/enhanceMeasurement</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/enhanceMeasurement</TokenIdentifier>
+			<Abstract type="html">心率加强监测，对于一些测不出心率的特殊人群，开启加强检测有助于心率测量</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL enhanceMeasurement</Declaration>
+			
+			
+			<Anchor>//api/name/enhanceMeasurement</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSensorFlagObject/enhanceMeasurement</TokenIdentifier>
+			<Abstract type="html">心率加强监测，对于一些测不出心率的特殊人群，开启加强检测有助于心率测量</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL enhanceMeasurement</Declaration>
+			
+			
+			<Anchor>//api/name/enhanceMeasurement</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/setSleepHistoryOfSevenDays:</TokenIdentifier>
+			<Abstract type="html">七天历史睡眠总数据,如果有此标志位，可以同步七天睡眠总数据</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL sleepHistoryOfSevenDays</Declaration>
+			
+			
+			<Anchor>//api/name/sleepHistoryOfSevenDays</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/sleepHistoryOfSevenDays</TokenIdentifier>
+			<Abstract type="html">七天历史睡眠总数据,如果有此标志位，可以同步七天睡眠总数据</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL sleepHistoryOfSevenDays</Declaration>
+			
+			
+			<Anchor>//api/name/sleepHistoryOfSevenDays</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSensorFlagObject/sleepHistoryOfSevenDays</TokenIdentifier>
+			<Abstract type="html">七天历史睡眠总数据,如果有此标志位，可以同步七天睡眠总数据</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL sleepHistoryOfSevenDays</Declaration>
+			
+			
+			<Anchor>//api/name/sleepHistoryOfSevenDays</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/setECG:</TokenIdentifier>
+			<Abstract type="html">心电功能标志</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL ECG</Declaration>
+			
+			
+			<Anchor>//api/name/ECG</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/ECG</TokenIdentifier>
+			<Abstract type="html">心电功能标志</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL ECG</Declaration>
+			
+			
+			<Anchor>//api/name/ECG</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSensorFlagObject/ECG</TokenIdentifier>
+			<Abstract type="html">心电功能标志</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL ECG</Declaration>
+			
+			
+			<Anchor>//api/name/ECG</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/setFlashOTA:</TokenIdentifier>
+			<Abstract type="html">判断手表是否支持flashOTA升级</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL flashOTA</Declaration>
+			
+			
+			<Anchor>//api/name/flashOTA</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/flashOTA</TokenIdentifier>
+			<Abstract type="html">判断手表是否支持flashOTA升级</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL flashOTA</Declaration>
+			
+			
+			<Anchor>//api/name/flashOTA</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSensorFlagObject/flashOTA</TokenIdentifier>
+			<Abstract type="html">判断手表是否支持flashOTA升级</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL flashOTA</Declaration>
+			
+			
+			<Anchor>//api/name/flashOTA</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/setAncsLanguage:</TokenIdentifier>
+			<Abstract type="html">ANCS语言支持标识，此标志的固件可以把app系统语言发送到手表，手表ancs消息通知会显示对应的语言</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL ancsLanguage</Declaration>
+			
+			
+			<Anchor>//api/name/ancsLanguage</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/ancsLanguage</TokenIdentifier>
+			<Abstract type="html">ANCS语言支持标识，此标志的固件可以把app系统语言发送到手表，手表ancs消息通知会显示对应的语言</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL ancsLanguage</Declaration>
+			
+			
+			<Anchor>//api/name/ancsLanguage</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSensorFlagObject/ancsLanguage</TokenIdentifier>
+			<Abstract type="html">ANCS语言支持标识，此标志的固件可以把app系统语言发送到手表，手表ancs消息通知会显示对应的语言</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL ancsLanguage</Declaration>
+			
+			
+			<Anchor>//api/name/ancsLanguage</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/setDrinkRemindAndFWTLS:</TokenIdentifier>
+			<Abstract type="html">喝水提醒和翻腕亮屏标志位</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL drinkRemindAndFWTLS</Declaration>
+			
+			
+			<Anchor>//api/name/drinkRemindAndFWTLS</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/drinkRemindAndFWTLS</TokenIdentifier>
+			<Abstract type="html">喝水提醒和翻腕亮屏标志位</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL drinkRemindAndFWTLS</Declaration>
+			
+			
+			<Anchor>//api/name/drinkRemindAndFWTLS</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSensorFlagObject/drinkRemindAndFWTLS</TokenIdentifier>
+			<Abstract type="html">喝水提醒和翻腕亮屏标志位</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL drinkRemindAndFWTLS</Declaration>
+			
+			
+			<Anchor>//api/name/drinkRemindAndFWTLS</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/setRuningEnable:</TokenIdentifier>
+			<Abstract type="html">运动模式标志</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL runingEnable</Declaration>
+			
+			
+			<Anchor>//api/name/runingEnable</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/runingEnable</TokenIdentifier>
+			<Abstract type="html">运动模式标志</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL runingEnable</Declaration>
+			
+			
+			<Anchor>//api/name/runingEnable</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSensorFlagObject/runingEnable</TokenIdentifier>
+			<Abstract type="html">运动模式标志</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL runingEnable</Declaration>
+			
+			
+			<Anchor>//api/name/runingEnable</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/setAncsJapanese:</TokenIdentifier>
+			<Abstract type="html">日语字库</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL ancsJapanese</Declaration>
+			
+			
+			<Anchor>//api/name/ancsJapanese</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/ancsJapanese</TokenIdentifier>
+			<Abstract type="html">日语字库</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL ancsJapanese</Declaration>
+			
+			
+			<Anchor>//api/name/ancsJapanese</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSensorFlagObject/ancsJapanese</TokenIdentifier>
+			<Abstract type="html">日语字库</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL ancsJapanese</Declaration>
+			
+			
+			<Anchor>//api/name/ancsJapanese</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/setTemperatureUnit:</TokenIdentifier>
+			<Abstract type="html">温度单位设置标志</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL temperatureUnit</Declaration>
+			
+			
+			<Anchor>//api/name/temperatureUnit</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FCSensorFlagObject/temperatureUnit</TokenIdentifier>
+			<Abstract type="html">温度单位设置标志</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL temperatureUnit</Declaration>
+			
+			
+			<Anchor>//api/name/temperatureUnit</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FCSensorFlagObject/temperatureUnit</TokenIdentifier>
+			<Abstract type="html">温度单位设置标志</Abstract>
+			<DeclaredIn>FCSensorFlagObject.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL temperatureUnit</Declaration>
+			
+			
+			<Anchor>//api/name/temperatureUnit</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -56,7 +56,7 @@
 @property (nonatomic, strong) NSNumber *hour;
 @property (nonatomic, strong) NSNumber *minute;
 @property (nonatomic, assign) BOOL isOn;
-
+// 如果cycle或者cycleObject有一个赋值，另外一个就会根据赋值调用的时候自动初始化
 @property (nonatomic, strong) NSNumber *cycle;
 @property (nonatomic, strong) FCAlarmClockCycleObject *cycleObject;
 
@@ -66,5 +66,7 @@
  @return 响铃时间字符串 格式："HH: mm"
  */
 - (NSString*)ringTime;
+
+- (NSData*)writeData;
 @end
 
