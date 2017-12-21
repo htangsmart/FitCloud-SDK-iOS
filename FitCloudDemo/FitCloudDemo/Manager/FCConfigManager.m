@@ -89,7 +89,9 @@
 - (NSArray*)getPageDisplayItems
 {
     NSMutableArray *tmpArray = [NSMutableArray array];
-    FCPageDisplayFlagObject *pageDisplayFlag = [self pageDisplayFlagObject];
+    // 从数据库加载手表配置
+    NSData *watchConfigData = nil;
+    FCPageDisplayFlagObject *pageDisplayFlag = [FCWatchConfigUtils getPageDisplayFlagFromWatchConfig:watchConfigData];
     if (pageDisplayFlag.dateTime)
     {
         [tmpArray addObject:@"时间和日期"];
@@ -132,7 +134,30 @@
     }
     [tmpArray addObject:@"ID"];
     
+    // 将tmpArray 数据展示到屏幕显示设置列表中
+    
+    // e.g. [@"时间和日期",@"步数",@"距离",@"卡路里",@"睡眠"];
+    FCScreenDisplayConfigObject *screenDisplayConfig = [FCWatchConfigUtils getScreenDisplayConfigFromWatchConfig:watchConfigData];
+    // 判断对应的cell是哪一项
+    NSString *item = nil; // 这里获取对应的item
+    if ([item isEqualToString:@"时间和日期"]) {
+//        screenDisplayConfig.dateTime = !screenDisplayConfig.dateTime;
+        screenDisplayConfig.dateTime = YES;
+    }
+    else if ([item isEqualToString:@"步数"])
+    {
+        screenDisplayConfig.stepCount = !screenDisplayConfig.stepCount;
+    }
+
+    NSData *screenDisplayData = [screenDisplayConfig writeData];
+    // 发送数据到蓝牙
+    
+    
     return [NSArray arrayWithArray:tmpArray];
+    
+    
+    
+    
 }
 
 - (NSDictionary*)defaultBloodPressure
