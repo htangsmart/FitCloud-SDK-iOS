@@ -122,6 +122,15 @@
 + (NSArray*)getRecordsOfBreathingRate:(NSData*)data;
 
 
+#pragma mark - 获取跑步详细记录
+
+/**
+  获取跑步详细记录（每五分钟一个数据）
+
+ @param data 跑步详细数据
+ @return 跑步数据
+ */
++ (NSArray*)getRuningDetails:(NSData*)data;
 
 #pragma mark - 闹钟
 

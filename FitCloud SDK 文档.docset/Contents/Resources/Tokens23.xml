@@ -164,6 +164,18 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/isCentralManagerStatePoweredOn</TokenIdentifier>
+			<Abstract type="html">蓝牙状态</Abstract>
+			<DeclaredIn>FitCloud.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isCentralManagerStatePoweredOn</Declaration>
+			
+			<ReturnValue><Abstract type="html">YES/NO</Abstract></ReturnValue>
+			<Anchor>//api/name/isCentralManagerStatePoweredOn</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FitCloud/fcSetListenTakePicturesCMDFromWatch:</TokenIdentifier>
 			<Abstract type="html">app监听来自手表的拍照控制命令</Abstract>
 			<DeclaredIn>FitCloud.h</DeclaredIn>

@@ -14,6 +14,9 @@
  */
 @interface FitCloudUtils : NSObject
 
++ (UInt32)runDateFromDate:(NSDate*)date;
+
+
 #pragma mark - 时间制式
 /*!
  判断手机是否是12小时制

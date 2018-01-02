@@ -36,8 +36,10 @@
  */
 @property (nonatomic, strong) NSNumber *value;
 @property (nonatomic, strong) NSNumber *extraValue;
+
+
 // 下面两个属性在FCDataTypeExercise类型时有效
-@property (nonatomic, strong, readonly) NSNumber *calorie; // 小卡
-@property (nonatomic, strong, readonly) NSNumber *distance; // 米
+@property (nonatomic, strong) NSNumber *calorie; // 小卡
+@property (nonatomic, strong) NSNumber *distance; // 米
 @end
 

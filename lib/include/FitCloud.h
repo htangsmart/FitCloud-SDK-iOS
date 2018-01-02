@@ -25,7 +25,7 @@
 @interface FitCloud : NSObject
 @property (nonatomic, strong, readonly) CBCentralManager *centralManager;
 @property (nonatomic, strong, readonly) CBPeripheral *servicePeripheral;
-@property (nonatomic, assign, readonly) FCSyncType syncType;
+@property (nonatomic, assign) FCSyncType syncType;
 @property (nonatomic, assign, readonly, getter=isSynchronizing) BOOL synchronizing;
 // 登录或者注册设置参数后有此值
 @property (nonatomic, strong) FCWatchConfig *watchConfig;
@@ -104,6 +104,13 @@
  */
 - (BOOL)disconnect;
 
+
+/**
+ 蓝牙状态
+
+ @return YES/NO
+ */
+- (BOOL)isCentralManagerStatePoweredOn;
 
 
 #pragma mark - 控制监听

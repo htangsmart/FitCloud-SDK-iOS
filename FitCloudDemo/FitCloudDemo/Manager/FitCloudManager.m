@@ -234,9 +234,7 @@ void systemAudioCallback()
     
     __weak __typeof(self) ws = self;
     [self showLoadingHUDWithMessage:@"正在登录"];
-    [[FitCloud shared]loginDevice:watchConfig stepCallback:^(NSInteger syncType) {
-        NSLog(@"--登陆流程回调--%@",@(syncType));
-    } result:^(FCSyncType syncType, FCSyncResponseState state) {
+    [[FitCloud shared]loginDevice:watchConfig result:^(NSData *data, FCSyncType syncType, FCSyncResponseState state) {
         if (syncType == FCSyncTypeLoginDevice)
         {
             if (state == FCSyncResponseStateError)
@@ -258,6 +256,7 @@ void systemAudioCallback()
             }
             else if (state == FCSyncResponseStateTimeOut)
             {
+                // 登录指令超时则断开重连重新登录
                 [ws hideLoadingHUD];
                 BOOL ret = [[FitCloud shared]disconnect];
                 if(ret)
@@ -269,13 +268,16 @@ void systemAudioCallback()
             {
                 [ws hideLoadingHUDWithFailure:@"登录失败"];
             }
-
+            
         }
         else
         {
-            // 登陆成功，这里可以做自定义操作，比如同步天气或者同步数据，等等操作
+            // 登陆成功，将执行其他操作，
+            // data 为手表系统配置，你需要把此数据存储到数据库
             NSLog(@"--登录成功---");
             [ws hideLoadingHUDWithSuccess:@"登录成功"];
+            
+            // 如果你需要自己定义登录浏览，可以不使用此组合接口，直接使用分步的接口操作
         }
     }];
 }
@@ -393,8 +395,8 @@ void systemAudioCallback()
             else if (syncType == FCSyncTypeGetSevenDaysSleepData)
             {
                 // 7日睡眠
-                NSArray *servenDaysArray = [FCSyncUtils getDetailsOfTotalSleepDataWithinSevenDays:data];
-                NSLog(@"---servenDaysArray--%@",servenDaysArray);
+                NSArray *servenDaySleepArray = [FCSyncUtils getSevenDaysSleepTotalData:data];
+                NSLog(@"---servenDaysArray--%@",servenDaySleepArray);
             }
         });
     } result:^(FCSyncType syncType, FCSyncResponseState state) {
@@ -428,7 +430,7 @@ void systemAudioCallback()
     if (!data) {
         return;
     }
-    NSDictionary *params = [FCSyncUtils getDetailsOfDailyTotalData:data];
+    NSDictionary *params = [FCSyncUtils getDaySummary:data];
     NSLog(@"--params--%@",params);
     
     // 如果需要对每日步数进行累加，请自行累加处理，每次手环重新绑定都会从0开始重新计算

@@ -89,3 +89,19 @@
 + (instancetype)runTotalDataWithData:(NSData*)data;
 @end
 
+
+
+@interface FCRunSummary : NSObject
+@property (nonatomic, assign) UInt32 date;
+@property (nonatomic, assign) NSInteger runType;
+// 秒
+@property (nonatomic, assign) NSInteger time;
+@property (nonatomic, assign) NSInteger stepCount;
+// 米
+@property (nonatomic, assign) NSInteger distance;
+// 卡
+@property (nonatomic, assign) NSInteger calorie;
+// 分/公里
+@property (nonatomic, assign) NSInteger avgPace;
+@end
+
