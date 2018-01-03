@@ -20,6 +20,7 @@
 
 /**
  手表配置
+ 注：此对象可以弃用，存储时直接存储系统配置二进制数据
  */
 @interface FCWatchSettingsObject : NSObject <FCObjectProtocal>
 

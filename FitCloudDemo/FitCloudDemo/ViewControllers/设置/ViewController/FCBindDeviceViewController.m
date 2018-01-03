@@ -133,12 +133,9 @@
     watchConfig.featuresData = feature.writeData;
     
     [self showLoadingHUDWithMessage:@"正在绑定设备"];
-    [[FitCloud shared]bindDevice:watchConfig stepCallback:^(NSInteger syncType) {
-        NSLog(@"--绑定流程更新--%@",@(syncType));
-    } result:^(NSData *data, FCSyncType syncType, FCSyncResponseState state) {
+    [[FitCloud shared]bindDevice:watchConfig result:^(NSData *data, FCSyncType syncType, FCSyncResponseState state) {
         if (state == FCSyncResponseStateSuccess) {
             NSLog(@"--绑定成功返回手表配置--");
-            
             // 存储被绑定设备的uuid,下次自动扫描登录
             BOOL ret = [[FitCloud shared]storeBondDevice];
             if (ret)

@@ -17,6 +17,7 @@
 #import "FCUIConstants.h"
 #import "FCEditAlarmViewController.h"
 
+
 @interface FCAlarmConfigViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -54,8 +55,7 @@
     // 重新排序id号
     [[FCAlarmConfigManager manager]redistributeAlarmID];
     
-    
-    NSData *alarmConfigData = [FCSysConfigUtils getAlarmClockConfigDataFromArray:[FCAlarmConfigManager manager].listArray];
+    NSData *alarmConfigData = [FCSyncUtils alarmClockDataFromAlarmList:[FCAlarmConfigManager manager].listArray];
     if (!alarmConfigData) {
         return;
     }
@@ -115,7 +115,7 @@
     [[FitCloud shared]fcGetAlarmList:^(NSData *data, FCSyncType syncType, FCSyncResponseState state) {
         if (state == FCSyncResponseStateSuccess)
         {
-            NSArray *alarmListArray = [FCSysConfigUtils getAlarmClockListFromData:data];
+            NSArray *alarmListArray = [FCSyncUtils getAlarmClockListFromData:data];
             NSLog(@"--闹钟列表--%@",alarmListArray);
             [[FCAlarmConfigManager manager]addAlarmClockFromArray:alarmListArray];
             

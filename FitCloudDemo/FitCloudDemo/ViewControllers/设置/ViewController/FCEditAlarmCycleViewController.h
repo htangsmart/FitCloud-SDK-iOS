@@ -11,5 +11,5 @@
 @class FCAlarmClockCycleObject;
 @interface FCEditAlarmCycleViewController : UIViewController
 @property (nonatomic, strong) FCAlarmClockCycleObject *cycleObj;
-@property (nonatomic, copy) void(^didRefreshWorkModeBlock)();
+@property (nonatomic, copy) void(^didRefreshWorkModeBlock)(void);
 @end

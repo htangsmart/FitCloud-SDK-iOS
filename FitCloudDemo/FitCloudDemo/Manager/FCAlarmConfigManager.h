@@ -10,7 +10,7 @@
 
 @interface FCAlarmConfigManager : NSObject
 @property (nonatomic, strong, readonly) NSMutableArray *listArray;
-@property (nonatomic, copy) void(^didUpdateAlarmClockListBlock)();
+@property (nonatomic, copy) void(^didUpdateAlarmClockListBlock)(void);
 + (instancetype)manager;
 /*!
  清理缓存的闹钟
