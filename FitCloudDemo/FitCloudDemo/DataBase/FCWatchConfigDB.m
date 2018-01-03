@@ -58,7 +58,8 @@
 
 + (FCWatchSettingsObject*)getWatchConfigFromDBWithUUID:(NSString *)uuidString
 {
-    if (!uuidString) {
+    if (!uuidString)
+    {
         NSLog(@"--uuid不存在--");
         return nil;
     }

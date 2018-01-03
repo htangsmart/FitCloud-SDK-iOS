@@ -206,6 +206,8 @@ typedef NS_ENUM(NSInteger, WatchConfigType)
 + (NSDictionary*)defaultBloodPressureFromWatchConfig:(NSData*)data;
 
 
+
+
 #pragma mark - 喝水提醒
 
 /**
@@ -217,6 +219,7 @@ typedef NS_ENUM(NSInteger, WatchConfigType)
 + (BOOL)drinkWatchReminderEnableFromWatchConfig:(NSData*)data;
 
 
+
 /**
  获取喝水提醒配置
  注：此处的喝水提醒配置带时间设置，部分低版本固件或旧硬件没有此功能，将会返回空数据
@@ -226,6 +229,7 @@ typedef NS_ENUM(NSInteger, WatchConfigType)
  @return <i>FCDrinkRemindObject</i>对象
  */
 + (FCDrinkRemindObject*)drinkWaterReminderFromWatchConfig:(NSData*)data;
+
 
 
 #pragma mark - 翻腕亮屏

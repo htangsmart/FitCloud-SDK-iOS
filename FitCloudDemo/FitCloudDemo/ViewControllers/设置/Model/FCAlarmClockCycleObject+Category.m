@@ -41,10 +41,13 @@
         [tmpArray addObject:@"周日"];
     }
     
-    if (tmpArray.count == 0) {
+    if (tmpArray.count == 0)
+    {
         return @"暂无";
     }
-    if (tmpArray.count >= 7) {
+    
+    if (tmpArray.count >= 7)
+    {
         return @"每天";
     }
     NSString *cycle = [tmpArray componentsJoinedByString:@"、"];
