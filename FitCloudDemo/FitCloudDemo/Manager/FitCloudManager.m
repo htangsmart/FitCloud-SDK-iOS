@@ -145,7 +145,6 @@ void systemAudioCallback()
     {
         // 扫描连接外设
         [[FitCloud shared]scanForPeripherals:boundUUIDString result:^(NSArray<CBPeripheral *> *retArray, CBPeripheral *aPeripheral) {
-            // 扫描连接外设
             [[FitCloud shared]connectPeripheral:aPeripheral];
         }];
     }
