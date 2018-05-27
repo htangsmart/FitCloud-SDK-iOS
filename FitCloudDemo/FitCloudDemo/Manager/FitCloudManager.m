@@ -145,7 +145,6 @@ void systemAudioCallback()
     {
         // 扫描连接外设
         [[FitCloud shared]scanForPeripherals:boundUUIDString result:^(NSArray<CBPeripheral *> *retArray, CBPeripheral *aPeripheral) {
-            // 扫描连接外设
             [[FitCloud shared]connectPeripheral:aPeripheral];
         }];
     }
@@ -466,7 +465,7 @@ void systemAudioCallback()
     }
     // 获取运动详细记录 （每五分钟一个记录）
     
-    NSArray *detailsArray = [FCSyncUtils getRecordsOfExercise:data];
+    NSArray <FCDataObject*>*detailsArray = [FCSyncUtils getRecordsOfExercise:data];
     NSLog(@"--运动量-【%@】-%@",data,detailsArray);
     // 存储详细记录，如果有需要，可以对记录按天统计求和
     

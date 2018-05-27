@@ -25,5 +25,6 @@
 @property (nonatomic, assign) BOOL weatherForecast;
 @property (nonatomic, assign) BOOL findPhone;
 @property (nonatomic, assign) BOOL displayId;
+
 + (instancetype)objectWithData:(NSData*)data;
 @end

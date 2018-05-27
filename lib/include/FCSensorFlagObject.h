@@ -65,6 +65,11 @@
  温度单位设置标志
  */
 @property (nonatomic, assign) BOOL temperatureUnit;
+
+/**
+ 微信运动标志位
+ */
+@property (nonatomic, assign) BOOL weRun;
 + (instancetype)objectWithData:(NSData*)data;
 @end
 
