@@ -496,6 +496,14 @@ void systemAudioCallback()
     // 获取运动详细记录 （每五分钟一个记录）
     NSArray *detailsArray = [FCSyncUtils getRecordsOfHeartRate:data];
     NSLog(@"--心率-【%@】-%@",data,detailsArray);
+    NSArray *detailsArray = [FCSyncUtils getRecordsOfBloodOxygen:data];
+    NSLog(@"--血氧-【%@】-%@",data,detailsArray);
+    FCUserConfig *userConfig = [FCUserConfigDB getUserFromDB];
+    NSArray *detailsArray = [FCSyncUtils getRecordsOfBloodPressure:data systolicBP:userConfig.systolicBP diastolicBP:userConfig.diastolicBP];
+    NSLog(@"--血压-【%@】-%@",data,detailsArray);
+    
+    NSArray *detailsArray = [FCSyncUtils getRecordsOfBreathingRate:data];
+    NSLog(@"--呼吸频率-【%@】-%@",data,detailsArray);
     // 存储详细记录，如果有需要，可以对记录按天统计平均值
     
     // 服务器需要保持记录的可以将详细记录上传给服务器
